@@ -1,0 +1,8 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The application may access untrusted files from the external storage",
+  "references": {
+    "Do not store sensitive information on external storage (SD card) unless encrypted first": "https://www.securecoding.cert.org/confluence/display/android/DRD00.+Do+not+store+sensitive+information+on+external+storage+%28SD+card%29+unless+encrypted+first"
+  },
+  "title": "Untrusted External Storage File Access"
+}

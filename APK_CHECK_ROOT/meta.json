@@ -1,0 +1,8 @@
+{
+  "risk_rating": "info",
+  "short_description": "Presence of strings and methods indicating potential check for rooted device",
+  "references": {
+    "Root detection & evasion": "http://resources.infosecinstitute.com/android-hacking-security-part-8-root-detection-evasion/#gref"
+  },
+  "title": "Application checks rooted device"
+}

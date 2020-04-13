@@ -1,0 +1,8 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Expired application signing certificate",
+  "references": {
+    "Signing Your Applications": "http://developer.android.com/tools/publishing/app-signing.html"
+  },
+  "title": "Application signed with an expired certificate"
+}

@@ -1,0 +1,8 @@
+{
+  "risk_rating": "info",
+  "short_description": "List application's components",
+  "references": {
+    "Security tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html#IPC"
+  },
+  "title": "Application components list"
+}

@@ -1,0 +1,10 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Application do not enforce binary protections (ASLR, NX, RELRO, Stack canaries)",
+  "references": {
+    "Address Space Layout Randomization (ASLR)": "https://en.wikipedia.org/wiki/Address_space_layout_randomization",
+    "No Execute (NX/DEP)": "https://en.wikipedia.org/wiki/NX_bit",
+    "Buffer Overflow Protection": "https://en.wikipedia.org/wiki/Buffer_overflow_protection"
+  },
+  "title": "ELF binaries do not enforce secure binary properties"
+}

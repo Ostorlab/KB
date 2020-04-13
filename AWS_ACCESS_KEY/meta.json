@@ -1,0 +1,9 @@
+{
+  "risk_rating": "high",
+  "short_description": "Passwords and other AWS sensitive information hardcoded in the application.",
+  "references": {
+    "CWE-259: Use of Hard-coded Password": "https://cwe.mitre.org/data/definitions/259.html",
+    "What Is AWS Secrets Manager?": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"
+  },
+  "title": "AWS sensitive information hardcoded in the application"
+}

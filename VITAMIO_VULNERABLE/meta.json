@@ -1,0 +1,8 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Vitamio below version 5.0.0 suffers from multiple vulnerabilties",
+  "references": {
+    "How to fix apps with the Vitamio vulnerability": "https://support.google.com/faqs/answer/6365106?hl=en"
+  },
+  "title": "Vitamio < 5.0.0 suffers from multiple vulnerabilities"
+}

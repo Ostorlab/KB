@@ -1,0 +1,8 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The client uses a non random hardcoded initialization vector.",
+  "references": {
+    "CWE-329: Not Using a Random IV with CBC Mode": "https://cwe.mitre.org/data/definitions/329.html"
+  },
+  "title": "Use non-random initialization vector (IV)"
+}

@@ -1,0 +1,8 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Dynamic load code from insecure storage",
+  "references": {
+    "Dynamically Loading Code Securely with Android": "http://tech.co/android-security-2014-07"
+  },
+  "title": "Android Class Load Hijacking"
+}

@@ -1,0 +1,8 @@
+{
+  "risk_rating": "info",
+  "short_description": "Application is built using ExtJS Framework",
+  "references": {
+    "Ext Js : Security Vulnerabilities": "https://www.cvedetails.com/vulnerability-list/vendor_id-6498/product_id-10971/Jack-Slocum-Ext-Js.html"
+  },
+  "title": "Ext JS Framework detected"
+}

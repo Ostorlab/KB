@@ -1,0 +1,8 @@
+{
+  "risk_rating": "high",
+  "short_description": "ImageMagick below version 7.0.1-0 suffers from multiple vulnerabilties",
+  "references": {
+    "ImageMagick CVE list": "https://www.cvedetails.com/vulnerability-list/vendor_id-1749/Imagemagick.html"
+  },
+  "title": "ImageMagick < 7.0.1-0 suffers from multiple vulnerabilities"
+}

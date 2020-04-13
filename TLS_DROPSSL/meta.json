@@ -1,0 +1,9 @@
+{
+  "risk_rating": "medium",
+  "short_description": "List of all files shipped in the application.",
+  "references": {
+    "title2": "url2",
+    "title": "url"
+  },
+  "title": "Drops SSL connections vulnerability"
+}

@@ -1,0 +1,9 @@
+{
+  "risk_rating": "high",
+  "short_description": "Insecure STARTTLS in SMTP.",
+  "references": {
+    "title2": "url2",
+    "title": "url"
+  },
+  "title": "Suppress STARTTLS in SMTP"
+}

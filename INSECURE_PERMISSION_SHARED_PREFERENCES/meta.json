@@ -1,0 +1,8 @@
+{
+  "risk_rating": "high",
+  "short_description": "Shared Preferences are set with insecure permissions (WORLD_READABLE or WORLD_WRITABLE)",
+  "references": {
+    "Shared Preferences (Android Developer)": "http://developer.android.com/reference/android/content/SharedPreferences.html"
+  },
+  "title": "Insecure Shared Preferences Permissions"
+}

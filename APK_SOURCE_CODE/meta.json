@@ -1,0 +1,8 @@
+{
+  "risk_rating": "important",
+  "short_description": "Retrieved source using open-source decompilers",
+  "references": {
+    "Proguard (Android developer)": "http://developer.android.com/tools/help/proguard.html"
+  },
+  "title": "Decompiled source code"
+}

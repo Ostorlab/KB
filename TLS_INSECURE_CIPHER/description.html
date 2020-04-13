@@ -1,0 +1,22 @@
+<p>Sockets Layer / Transport Layer Security (SSL/TLS) starts by the client requesting a secure connection and presenting
+    a list of suppored cipher suites.</p>
+<p>Cipher suite is a list of authentication, encryption, message authentication code (MAC) and key exchange algorithms.
+    Each algorithm serve a specific role during the protocol negotiation. Use of a week algorithm might ciriticaly
+    impact the security of the whole channel.</p>
+<p>It was identified that the endpoint supports a combination of cipher suites and Secure Sockets Layer / Transport
+    Layer Security (SSL/TLS) protocols that suffer from known cryptographic weaknesses.
+    Therefore they should not be relied upon for effective transport layer security. An attacker with the ability to
+    eavesdrop the connection could influence or even decrypt the traffic that is passing by.</p>
+<p>Cryptographic weaknesses have been demonstrated for all the following configurations:</p>
+<ul>
+    <li>Support for deprecated SSL protocol (v2 or v3)</li>
+    <li>Support of cipher suites offering keys smaller than 128bit</li>
+    <li>Support of cipher suites offering <code>CBC</code> mode in combination with TLS protocol lower than version 1.1
+        vulnerable to the BEAST attack
+    </li>
+    <li>Use of compression within TLS vulnerable to the CRIME attack</li>
+    <li>Support of cipher suites offering <code>RC4</code> as cipher</li>
+    <li>Support of cipher suites offering <code>DES</code> as cipher</li>
+    <li>Support of cipher suites offering <code>MD5</code> as signature algorithm</li>
+</ul>
+            

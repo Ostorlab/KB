@@ -1,0 +1,8 @@
+{
+  "risk_rating": "info",
+  "short_description": "VirusTotal Malware analysis",
+  "references": {
+    "Virustotal": "https://www.virustotal.com/"
+  },
+  "title": "Virustotal malware analysis (MD5 based search)"
+}

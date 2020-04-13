@@ -1,0 +1,9 @@
+{
+  "risk_rating": "high",
+  "short_description": "App Transport Security (ATS) has unsafe setting allowing the retrieval of content over potentially insecure channels.",
+  "references": {
+    "Announcement of App Transport Security in iOS 9": "https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html",
+    "Cocoa Keys (Apple Developer)": "https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html"
+  },
+  "title": "Insecure App Transport Security (ATS) Settings"
+}

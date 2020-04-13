@@ -1,0 +1,7 @@
+{
+  "title": "Android Class Loading Hijacking",
+  "short_description": "Android class loaded from an insecure path.",
+  "risk_rating": "high",
+  "references": {
+  }
+}

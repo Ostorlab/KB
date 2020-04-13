@@ -1,0 +1,8 @@
+{
+  "risk_rating": "high",
+  "short_description": "Application accepts valid certificate with invalid hostname making it vulnerable to man-in-the-middle (MITM) attacks",
+  "references": {
+    "Properly verify server certificate on SSL/TLS (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=134807561"
+  },
+  "title": "Insecure TLS certificate domain name validation"
+}

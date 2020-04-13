@@ -1,0 +1,1 @@
+Sencha Touch is a JavaScript framework for building cross-platform mobile web applications.

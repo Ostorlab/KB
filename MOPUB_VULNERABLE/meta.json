@@ -1,0 +1,8 @@
+{
+  "risk_rating": "medium",
+  "short_description": "MoPub below version 4.4.0 suffers from multiple vulnerabilties",
+  "references": {
+    "How to address MoPub vulnerabilities in your apps": "https://support.google.com/faqs/answer/6345928?hl=en"
+  },
+  "title": "MoPub < 4.4.0 suffers from multiple vulnerabilities"
+}

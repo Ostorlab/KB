@@ -1,0 +1,53 @@
+<p>Ostorlab Mobile Application Security Scanner checks multiple privacy features: </p><p><b>Telephony identifiers
+    leakage</b>: </p>
+<ul>
+    <li>The application reads the Location Area Code value.</li>
+    <li>The application reads the Cell ID value.</li>
+    <li>The application reads the phone's current state.</li>
+    <li>The application reads the current location of the device.</li>
+    <li>The application reads the type of activity on a data connection.</li>
+    <li>The application reads the current data connection state.</li>
+    <li>The application reads the unique device ID, i.e the IMEI for GSM and the MEID or ESN for CDMA phones.</li>
+    <li>The application reads the software version number for the device, for example, the IMEI/SV for GSM phones.</li>
+    <li>The application reads the phone number string for line 1, for example, the MSISDN for a GSM phone.</li>
+    <li>The application reads the neighboring cell information of the device.</li>
+    <li>The application reads the ISO country code equivalent of the current registered operator's MCC (Mobile Country
+        Code).
+    </li>
+    <li>The application reads the numeric name (MCC+MNC) of current registered operator.</li>
+    <li>The application reads the operator name.</li>
+    <li>The application reads the radio technology (network type) currently in use on the device for data
+        transmission.
+    </li>
+    <li>The application reads the device phone type value.</li>
+    <li>The application reads the ISO country code equivalent for the SIM provider's country code.</li>
+    <li>The application reads the MCC+MNC of the provider of the SIM.</li>
+    <li>The application reads the Service Provider Name (SPN).</li>
+    <li>The application reads the SIM's serial number.</li>
+    <li>The application reads the constant indicating the state of the device SIM card.</li>
+    <li>The application reads the unique subscriber ID, for example, the IMSI for a GSM phone.</li>
+    <li>The application reads the alphabetic identifier associated with the voice mail number.</li>
+    <li>The application reads the voice mail number.</li>
+</ul><p><b>Location lookup</b>: </p>
+<ul>
+    <li>The application reads location information from all available providers (WiFi, GPS etc.).</li>
+</ul><p><b>Connection interfaces exfiltration</b>: </p>
+<ul>
+    <li>The application reads details about the currently active data network.</li>
+    <li>The application tries to find out if the currently active data network is metered.</li>
+    <li>The application reads the WiFi credentials.</li>
+</ul><p><b>Telephony services abuse</b>: </p>
+<ul>
+    <li>The application sends SMS messages.</li>
+    <li>The application intercepts the incoming SMS.</li>
+    <li>The application disables incoming SMS notifications.</li>
+    <li>The application makes phone calls.</li>
+</ul><p><b>Audio video eavesdropping</b>: </p>
+<ul>
+    <li>The application records audio from mobile sources.</li>
+    <li>The application captures video from mobile sources.</li>
+</ul><p><b>Personal information manager data leakage</b>: </p>
+<ul>
+    <li>The application reads or edits contact data.</li>
+    <li>The application reads the SMS inbox.</li>
+</ul>

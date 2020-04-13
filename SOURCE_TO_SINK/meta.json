@@ -1,0 +1,7 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "Sink method called using potentially user controlled parameters.",
+  "references": {
+  },
+  "title": "Source to Sink"
+}

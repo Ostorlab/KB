@@ -1,0 +1,9 @@
+{
+  "risk_rating": "info",
+  "short_description": "List of logging API calls",
+  "references": {
+    "DRD04-J. Do not log sensitive information": "https://www.securecoding.cert.org/confluence/display/android/DRD04-J.+Do+not+log+sensitive+information",
+    "ERR02-J. Prevent exceptions while logging data": "https://www.securecoding.cert.org/confluence/display/java/ERR02-J.+Prevent+exceptions+while+logging+data"
+  },
+  "title": "Call to logging API"
+}

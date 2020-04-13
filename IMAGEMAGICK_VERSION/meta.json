@@ -1,0 +1,8 @@
+{
+  "risk_rating": "info",
+  "short_description": "Application is using ImageMagick library",
+  "references": {
+    "MoPub": "http://www.imagemagick.org"
+  },
+  "title": "ImageMagick is a software suite to create, edit, compose, or convert bitmap images"
+}

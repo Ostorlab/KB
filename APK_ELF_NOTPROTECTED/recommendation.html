@@ -1,0 +1,22 @@
+<!--
+<p>If <code>RELRO</code> is missing:</p>
+
+<p>If <code>ASLR</code> is missing:</p>
+
+<p>If <code>No eXecute</code> is missing:</p>
+-->
+
+<p>If <code>Stack canary</code> is missing, Compilers such as GCC enable this feature if requested through compiler
+    options:</p>
+<ul>
+    <li><code>-fstack-protector</code>: Check for stack smashing in functions with vulnerable objects. This includes
+        functions with buffers larger than 8 bytes or calls to alloca.
+    </li>
+    <li><code>-fstack-protector-strong</code>: Like <code>-fstack-protector</code>, but also includes functions with
+        local arrays or references to local frame addresses.
+    </li>
+    <li><code>-fstack-protector-all</code>: Check for stack smashing in every function.</li>
+</ul>
+
+
+

@@ -1,0 +1,40 @@
+<p>Design the application to add the following protections and slow reverse engineering of the application:</p>
+<ul>
+    <li>Obfuscate Java source code with tools like Proguard or Dexguard</li>
+    <pre class="language-yaml"><code class="gradle">buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+            'proguard-rules.pro'
+        }
+    }</code></pre>
+    <li>Verification application signing certificate during runtime by checking <code>context.getPackageManager().signature</code>
+    </li>
+    <li>Check application installer to ensure it matches the Android Market by calling <code>context.getPackageManager().getInstallerPackageName</code>
+    </li>
+    <li>Check running environment at runtime</li>
+    <pre class="language-java"><code class="java, jsp">private static String getSystemProperty(String name) throws Exception {
+    Class systemPropertyClazz = Class.forName("android.os.SystemProperties");
+    return (String) systemPropertyClazz.getMethod("get", new Class[] { String.class }).invoke(systemPropertyClazz, new Object[] { name });
+}
+
+public static boolean checkEmulator() {
+
+    try {
+        boolean goldfish = getSystemProperty("ro.hardware").contains("goldfish");
+        boolean qemu = getSystemProperty("ro.kernel.qemu").length() > 0;
+        boolean sdk = getSystemProperty("ro.product.model").equals("sdk");
+
+        if (qemu || goldfish || sdk) {
+            return true;
+        }
+
+    } catch (Exception e) {
+    }
+
+    return false;
+  }</code></pre>
+    <li>Check debug flag at runtime</li>
+    <pre class="language-java"><code
+            class="java, jsp">context.getApplicationInfo().applicationInfo.flags & ApplicationInfo.FLAG_DEBUGGABLE;</code></pre>
+</ul>

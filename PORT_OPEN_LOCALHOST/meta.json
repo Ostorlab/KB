@@ -1,0 +1,7 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "The application open sockets listening on localhost and accessible to other apps on the phone.",
+  "references": {
+  },
+  "title": "port open on localhost"
+}

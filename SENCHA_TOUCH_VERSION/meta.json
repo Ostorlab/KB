@@ -1,0 +1,9 @@
+{
+  "risk_rating": "info",
+  "short_description": "Application is built using Sencha Touch Framework",
+  "references": {
+    "HTML5 Security Cheat Sheet": "https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet",
+    "3rd Party Javascript Management Cheat Sheet": "https://www.owasp.org/index.php/3rd_Party_Javascript_Management_Cheat_Sheet"
+  },
+  "title": "Sencha Touch Framework detected"
+}

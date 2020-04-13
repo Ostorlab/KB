@@ -1,0 +1,9 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Application do not enforce Stack Smashing Protection (SSP)",
+  "references": {
+    "Stack Smashing Protection (OSdev)": "http://wiki.osdev.org/Stack_Smashing_Protector",
+    "Xcode 3 supports Stack Canaries": "http://lists.apple.com/archives/xcode-users/2007/Dec/msg00055.html"
+  },
+  "title": "Stack smashing protection not enforced"
+}
