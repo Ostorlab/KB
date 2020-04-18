@@ -1,0 +1,1 @@
+The OpenSSL version your are using in you app (or in a 3rd party library) contains a security vulnerability wich allows attackers to launch a Man-in-the-middle (MITM) attack to decrypt and modify traffic from the attacked client and server

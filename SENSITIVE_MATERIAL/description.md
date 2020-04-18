@@ -1,0 +1,1 @@
+The application may expose unintentionally sensitive material like API keys, secret keys, etc.

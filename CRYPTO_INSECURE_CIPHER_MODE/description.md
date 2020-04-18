@@ -1,0 +1,1 @@
+The algorithm used to encrypt the data is vulnerable. If AES is used without specifying the mode, the default mode is the insecure ECB mode.

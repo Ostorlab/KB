@@ -1,0 +1,3 @@
+User-controlled parameters has resulted in triggering a server side DNS request. The ability to control server-side is not a vulnerability, however it is a serious indication of potential high risk vulnerability.
+
+An attacked may leverage this functionality to send requests to remote systems for denial of service attacks or to remotely exploit potential vulnerabilities. It is also potentially possible to access internal systems protected with external network filtering.

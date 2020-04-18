@@ -1,0 +1,1 @@
+Validate input before accessing sink method.

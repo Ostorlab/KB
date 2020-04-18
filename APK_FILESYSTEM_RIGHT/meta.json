@@ -2,7 +2,6 @@
   "risk_rating": "high",
   "short_description": "List of insecure file system permissions.",
   "references": {
-    "TODO": "TODO"
   },
   "title": "Insecure file system permissions"
 }

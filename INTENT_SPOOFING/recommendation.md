@@ -1,0 +1,1 @@
+It is recommended to apply proper input validation and parameter filtering on intent action.

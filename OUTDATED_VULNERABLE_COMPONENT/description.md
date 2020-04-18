@@ -1,0 +1,1 @@
+The application is using an outdated component with publicly known vulnerabilities. Exploitation of this issue varies from easily accessbile off the shelf exploit to requiring custom exploit.

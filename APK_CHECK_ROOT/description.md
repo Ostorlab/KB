@@ -1,0 +1,1 @@
+Presence of strings and methods indicating potential check for rooted device

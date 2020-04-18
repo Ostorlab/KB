@@ -1,0 +1,1 @@
+List of all logging API calls in the application.

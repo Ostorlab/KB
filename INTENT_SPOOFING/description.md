@@ -1,0 +1,1 @@
+The application is vulnerable to intent spoofing which could result in the access and exploitation of unauthorized components.

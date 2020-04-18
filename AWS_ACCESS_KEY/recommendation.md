@@ -1,0 +1,1 @@
+Instead of hardcoding credentials in your apps, apply procedures to securely encrypt, store, and retrieve credentials for your services. You can for example use AWS Secrets Manager to encrypt and retrieve your credentials whenever needed

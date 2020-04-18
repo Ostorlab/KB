@@ -1,0 +1,1 @@
+The application does not perform proper SSL/TLS certificate validation which makes it vulnerable to man-in-the-middle attacks.

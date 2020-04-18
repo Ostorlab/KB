@@ -1,0 +1,1 @@
+Use of world access permissions should be used only when strictly required. Other means of sharing data between applications are recommended instead of sharing file using insecure permissions.

@@ -1,0 +1,1 @@
+Migrate the application to Cordova 3.5.1 or higher.

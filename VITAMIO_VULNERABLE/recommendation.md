@@ -1,0 +1,1 @@
+Migrate the application to Vitamio 5.0.0 or higher.

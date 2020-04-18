@@ -1,0 +1,3 @@
+We recommend AES for general-purpose use. If you're willing to go against the grain and are paranoid, you can use Serpent, which isn't quite as fast as AES but is believed to have a much higher security margin.
+
+If you really feel that you need the fastest possible secure solution, consider the SNOW 2.0 stream cipher, which currently looks very good. It appears to have a much better security margin than the popular favorite, RC4, and is even faster. However, it is fairly new. If you're highly risk-adverse, we recommend AES or Serpent. Although popular, RC4 would never be the best available choice.

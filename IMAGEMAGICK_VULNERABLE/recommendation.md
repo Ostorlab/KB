@@ -1,0 +1,1 @@
+Migrate the application to ImageMagick 7.0.1-1 or higher.

@@ -1,5 +1,5 @@
 {
-  "risk_rating": "hardening",
+  "risk_rating": "medium",
   "short_description": "Application's source code is not obfuscated and could be decompiled to retrieve the initial source code",
   "references": {
     "Lack of Binary Protections (OWASP Mobile Top 10)": "https://www.owasp.org/index.php/Mobile_Top_10_2014-M10",

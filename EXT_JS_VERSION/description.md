@@ -1,0 +1,1 @@
+ExtJS is a JavaScript framework for building rich UI application.

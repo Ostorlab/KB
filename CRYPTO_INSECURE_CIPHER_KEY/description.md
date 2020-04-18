@@ -1,0 +1,1 @@
+The data is encrypted using a weak key

@@ -2,7 +2,6 @@
   "risk_rating": "medium",
   "short_description": "List of all user inputs exposed in the logs .",
   "references": {
-    "TODO": "TODO"
   },
   "title": "Keywords exposed in logs"
 }

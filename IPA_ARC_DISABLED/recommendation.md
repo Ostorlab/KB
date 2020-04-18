@@ -1,0 +1,1 @@
+Automatic Reference Counting (ARC) may be explicitly enabled with the compiler flag `-fobjc-arc`.

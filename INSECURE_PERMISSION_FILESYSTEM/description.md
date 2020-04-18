@@ -1,0 +1,5 @@
+The application handles files using insecure permissions (world readable or world writable).
+
+World readable may present a risk if they store sensitive information that may present a risk if access by unauthorised party, like bank account statement or session key storage file.
+
+World writable may present a risk if it is to perform sensitive actions, like URL list or session parameters.

@@ -2,7 +2,6 @@
   "risk_rating": "medium",
   "short_description": "List of potential insecure file system persistence.",
   "references": {
-    "TODO": "TODO"
   },
   "title": "Insecure file system persistence"
 }
