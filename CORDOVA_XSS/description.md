@@ -7,12 +7,13 @@ Mobile Cross-Site Scripting (XSS) attacks are a type of injection, in which mali
 
 Example script to test presence of XSS
 
-```javascript
+```html
 <script>alert("Ostorlab XSS!")</script>
 ```
 
-```javascript
-<img src="http://ostorlab.co/js_xss2" onerror=alert(document.cookie);>
+```html
+<img src="http://ostorlab.co/js_xss2" onerror=alert(document.cookie)>
 ```
 
-XSS vulnerabilties for Cordova applications are critical as they allow access to native functionality on the target phone and could lead to unauthorized access to contacts, messages, camera, audio and location.
+XSS vulnerabilities for Cordova applications are critical as they allow access to native functionality on the target
+phone and could lead to unauthorized access to contacts, messages, camera, audio and location.
