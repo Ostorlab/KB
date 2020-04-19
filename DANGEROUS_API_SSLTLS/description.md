@@ -1,1 +1,1 @@
-List of all files shipped in the application.
+List of all SSL/TLS methods used in the application.
