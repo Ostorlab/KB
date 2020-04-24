@@ -1,0 +1,17 @@
+<p>Add missing security attributes to the cookies. Adding the flag depends on the framework used and can either be
+    a global setting or be done manually by adding the flags to the request.</p>
+
+<p>For session cookies managed by PHP, the flag is set either in <code>php.ini</code>:</p>
+
+<pre><code class="language-php">
+session.cookie_secure = True
+</code></pre>
+
+<p>or in code:</p>
+
+<pre><code class="language-php">
+setcookie ( string $name [, string $value = "" [, int $expires = 0 [, string $path = "" [, string $domain = "" [, bool $secure = FALSE [, bool $httponly = FALSE ]]]]]] ) : bool
+setcookie ( string $name [, string $value = "" [, array $options = [] ]] ) : bool
+</code></pre>
+
+<p>For accurate details on how to add the flag, check the documentation of your framework.</p>

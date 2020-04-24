@@ -1,0 +1,9 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Cookie is missing security attributes like HttpOnly or Secure",
+  "references": {
+    "Secure Flag (OWASP)": "https://owasp.org/www-community/controls/SecureFlag",
+    "HttpOnly Flag (OWASP)": "https://owasp.org/www-community/HttpOnly"
+  },
+  "title": "Cookie missing security attributes"
+}
