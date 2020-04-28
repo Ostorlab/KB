@@ -1,6 +1,6 @@
 {
   "risk_rating": "high",
-  "short_description": "Protected Health Information were detected on the system.",
+  "short_description": "Protected Health Information was detected on the system",
   "references": {
     "HIPAA Security Rules": "http://www.access.gpo.gov/nara/cfr/waisidx_07/45cfr160_07.html",
     "Practices for Protecting Electronic Restricted Data: A Quick Reference": "http://its.ucsc.edu/policies/rd.html",
