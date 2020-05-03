@@ -1,5 +1,5 @@
 {
-  "risk_rating": "medium",
+  "risk_rating": "high",
   "short_description": "The application does not specify a network security configuration or sets insecure settings",
   "references": {
     "Network Security Configuration (Android developer)": "https://developer.android.com/training/articles/security-config"
