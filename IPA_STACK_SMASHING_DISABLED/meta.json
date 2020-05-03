@@ -1,5 +1,5 @@
 {
-  "risk_rating": "medium",
+  "risk_rating": "hardening",
   "short_description": "Application do not enforce Stack Smashing Protection (SSP)",
   "references": {
     "Stack Smashing Protection (OSdev)": "http://wiki.osdev.org/Stack_Smashing_Protector",

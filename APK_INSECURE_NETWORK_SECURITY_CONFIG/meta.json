@@ -4,5 +4,6 @@
   "references": {
     "Network Security Configuration (Android developer)": "https://developer.android.com/training/articles/security-config"
   },
-  "title": "Insecure Network Configuration Settings"
+  "title": "Insecure Network Configuration Settings",
+  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
 }
