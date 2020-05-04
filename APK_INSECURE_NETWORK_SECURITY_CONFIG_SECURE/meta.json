@@ -1,0 +1,8 @@
+{
+  "risk_rating": "secure",
+  "short_description": "The application specifies a secure network security config",
+  "references": {
+    "Network Security Configuration (Android developer)": "https://developer.android.com/training/articles/security-config"
+  },
+  "title": "Secure Network Configuration Settings"
+}
