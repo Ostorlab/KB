@@ -1,9 +1,9 @@
 {
   "risk_rating": "high",
-  "short_description": "Passwords, Tokens or other sensitive information hardcoded in the application.",
+  "short_description": "Passwords, Tokens or other sensitive information are stored in the application.",
   "references": {
     "CWE-259: Use of Hard-coded Password": "https://cwe.mitre.org/data/definitions/259.html",
     "What Is AWS Secrets Manager?": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"
   },
-  "title": "Secret information hardcoded in the application"
+  "title": "Secret information stored in the application"
 }
