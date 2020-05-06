@@ -1,7 +1,0 @@
-{
-  "risk_rating": "medium",
-  "short_description": "List of all user inputs exposed in the logs.",
-  "references": {
-  },
-  "title": "Sensitive information exposed in logs"
-}

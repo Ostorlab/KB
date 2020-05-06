@@ -1,0 +1,7 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The application exposes sensitive information in logs which can be accessed by malicious applications",
+  "references": {
+  },
+  "title": "Sensitive information exposed in logs"
+}
