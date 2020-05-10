@@ -1,5 +1,5 @@
 {
-  "risk_rating": "medium",
+  "risk_rating": "high",
   "short_description": "The application is accessing data over unencrypted channel, undermining the confidentiality and integrity of data in transit.",
   "references": {
     "Missing Encryption of Sensitive Data (CWE-311)": "http://cwe.mitre.org/data/definitions/311.html",
