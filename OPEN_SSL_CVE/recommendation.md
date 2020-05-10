@@ -1,1 +1,0 @@
-Migrate your app to an updated version of OpenSSL as soon as possible and increment the version number of the upgraded APK
