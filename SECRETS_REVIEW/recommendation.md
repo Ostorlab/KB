@@ -1,1 +1,2 @@
-Instead of hardcoding credentials in your apps, apply procedures to securely encrypt, store, and retrieve credentials for your services. You can for example use AWS Secrets Manager to encrypt and retrieve your credentials whenever needed
+Sensitive data must not be package with the application. If access to this data is required, apply procedures to securely encrypt, store, and retrieve credentials for your services.
+You can for example use AWS Secrets Manager to encrypt and retrieve your credentials whenever needed

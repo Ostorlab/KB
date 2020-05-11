@@ -1,8 +1,0 @@
-{
-  "risk_rating": "potentially",
-  "short_description": "Sensitive material (secret keys, API keys ...) detected",
-  "references": {
-    "CWE-200: Data Exposure": "https://cwe.mitre.org/data/definitions/200.htmll"
-  },
-  "title": "Sensitive material exposed"
-}
