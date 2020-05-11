@@ -1,1 +1,0 @@
-Class, categories and protocols declarations.
