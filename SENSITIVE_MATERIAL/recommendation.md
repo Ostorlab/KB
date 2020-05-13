@@ -1,1 +1,0 @@
-Sensitive data must not be package with the application. If access to this data is required, it must protected with proper on the server backend with proper mechanisms and must be packaged with the final application.

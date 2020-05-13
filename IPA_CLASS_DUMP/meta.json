@@ -1,9 +1,0 @@
-{
-  "risk_rating": "info",
-  "short_description": "Mach-o file objective C class definitions",
-  "references": {
-    "iOS Runtime Headers (limneos)": "http://developer.limneos.net/",
-    "iOS Runtime Headers (nst Git)": "https://github.com/nst/iOS-Runtime-Headers"
-  },
-  "title": "Mach-o files class dump"
-}
