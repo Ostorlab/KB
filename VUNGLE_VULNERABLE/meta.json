@@ -1,8 +1,0 @@
-{
-  "risk_rating": "medium",
-  "short_description": "Vungle below version 3.3.0 suffers from multiple vulnerabilties",
-  "references": {
-    "Vungle Arbitrary Write Vulnerability": "https://gist.github.com/Fuzion24/6535f8b9dc2a51745173"
-  },
-  "title": "Vungle < 3.3.0 suffers from multiple vulnerabilities"
-}

@@ -1,1 +1,0 @@
-MoPub is an ad server for mobile application publishers
