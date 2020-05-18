@@ -1,1 +1,0 @@
-Vitamio is an open multimedia framework for Android and iOSThe vulnerability is due to the Vitamio SDK containing world-writable code.
