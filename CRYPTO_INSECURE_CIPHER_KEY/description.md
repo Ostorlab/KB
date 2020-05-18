@@ -1,2 +1,1 @@
-The application uses a hardcoded key to perform cryptographic operations. Hardcoded keys used to encrypt data
-on the device can be leveraged by an attacker to decrypt data in case of stolen device.
+The use of a hard-coded cryptographic key for encrypting data increases the possibility of remote hackers to get access to information and, thus, being recovered.
