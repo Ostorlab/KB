@@ -1,9 +1,10 @@
 {
   "risk_rating": "info",
-  "short_description": "List of logging API calls",
+  "short_description": "Logging API calls in the application",
   "references": {
     "DRD04-J. Do not log sensitive information": "https://www.securecoding.cert.org/confluence/display/android/DRD04-J.+Do+not+log+sensitive+information",
-    "ERR02-J. Prevent exceptions while logging data": "https://www.securecoding.cert.org/confluence/display/java/ERR02-J.+Prevent+exceptions+while+logging+data"
+    "ERR02-J. Prevent exceptions while logging data": "https://www.securecoding.cert.org/confluence/display/java/ERR02-J.+Prevent+exceptions+while+logging+data",
+    "[3]: Logging methods ( Log sparingly )": "https://source.android.com/setup/contribute/code-style#log-sparingly"
   },
   "title": "Call to logging API"
 }
