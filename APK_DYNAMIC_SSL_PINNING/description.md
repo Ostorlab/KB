@@ -1,1 +1,1 @@
-List of all SSL Pinning methods used in the application.
+List of all TLS Pinning methods used in the application.

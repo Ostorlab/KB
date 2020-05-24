@@ -1,1 +1,1 @@
-List of all SSL/TLS methods used in the application.
+List of all TLS methods used in the application.

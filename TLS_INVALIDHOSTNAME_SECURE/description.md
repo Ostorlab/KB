@@ -1,1 +1,1 @@
-The application performs proper SSL/TLS certificate validation.
+The application performs proper TLS certificate validation.

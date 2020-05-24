@@ -1,4 +1,4 @@
-The recommended SSL/TLS configuration should enforce the following recommendations:
+The recommended TLS configuration should enforce the following recommendations:
 
 *   Restrict to `TLSv1` and above, with `TLS1.2` being preferred
 *   If `SSLv3` is required, it is advised to implement the `TLS Fallback SCSV` feature to prevent protocol downgrade attacks
@@ -18,7 +18,7 @@ The recommended SSL/TLS configuration should enforce the following recommendatio
 *   Implement the HTTP Strict Transport Security header field
 *   Implement `OSCP stapling`
 
-Sample of a secure SSL/TLS configuration for Nginx generated with [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+Sample of a secure TLS configuration for Nginx generated with [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 ```nginx
     server {
         listen 443 ssl;

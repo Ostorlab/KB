@@ -1,6 +1,6 @@
 {
   "risk_rating": "info",
-  "short_description": "List of all SSL/TLS methods used in the application.",
+  "short_description": "List of all TLS methods used in the application.",
   "references": {},
-  "title": "Recorded calls to SSL/TLS API"
+  "title": "Recorded calls to TLS API"
 }

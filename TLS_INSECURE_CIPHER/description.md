@@ -1,4 +1,4 @@
-Sockets Layer / Transport Layer Security (SSL/TLS) starts by the client requesting a secure connection and presenting a list of suppored cipher suites.
+Transport Layer Security (TLS) starts by the client requesting a secure connection and presenting a list of suppored cipher suites.
 
 Cipher suite is a list of authentication, encryption, message authentication code (MAC) and key exchange algorithms. Each algorithm serve a specific role during the protocol negotiation. Use of a week algorithm might ciriticaly impact the security of the whole channel.
 

@@ -1,4 +1,4 @@
-<p>The recommended SSL/TLS configuration should enforce the following recommendations:</p>
+<p>The recommended TLS configuration should enforce the following recommendations:</p>
 <ul>
     <li>Restrict to <code>TLSv1</code> and above, with <code>TLS1.2</code> being preferred</li>
     <li>If <code>SSLv3</code> is required, it is advised to implement the <code>TLS Fallback SCSV</code> feature to
@@ -22,7 +22,7 @@
     <li>Implement the HTTP Strict Transport Security header field</li>
     <li>Implement <code>OSCP stapling</code></li>
 </ul>
-<p>Sample of a secure SSL/TLS configuration for Nginx generated with <a
+<p>Sample of a secure TLS configuration for Nginx generated with <a
         href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">Mozilla SSL Configuration Generator</a>
 </p>
 <pre class="language-nginx"><code class="nginx">server {

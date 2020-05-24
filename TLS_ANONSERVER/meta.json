@@ -1,9 +1,7 @@
 {
   "risk_rating": "high",
-  "short_description": "SSL Server accepts anonymous authentication",
+  "short_description": "Server accepts anonymous authentication",
   "references": {
-    "title2": "url2",
-    "title": "url"
   },
   "title": "Anonymous unauthenticated server accepted"
 }
