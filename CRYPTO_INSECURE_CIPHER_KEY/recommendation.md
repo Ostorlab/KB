@@ -1,5 +1,4 @@
-The application must avoid whenever possible to store sensitive data on the device. In case the application
-needs to store sensitive data, the application must implement secure encryption, preferably using vetted
-third-party libraries.
-
-Keys use to encrypt data must be unique to the device and may use input from the user to compute the key.
+*    Keys must be unique to the device and may use input from the user to compute the key. 
+*    When generating a key from password, use salt. 
+*    When generating a key from password, specify an appropriate hash iteration count. 
+*    Use a key of length sufficient to guarantee this strength of encryption.
