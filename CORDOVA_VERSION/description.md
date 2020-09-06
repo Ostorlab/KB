@@ -1,3 +1,0 @@
-Apache Cordova is an open-source mobile development framework that uses web technologies such as HTML5, CSS3, and JavaScript to build cross-platform mobile applications.
-
-Cordova Framework allows access of most functionnalities through Javascript and could be extended thorough native plugins to add more complex features.

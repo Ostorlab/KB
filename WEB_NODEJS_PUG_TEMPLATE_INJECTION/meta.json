@@ -3,5 +3,7 @@
   "short_description": "",
   "references": {
   },
-  "title": "NodeJs Pug template injection"
+  "title": "NodeJs Pug template injection",
+  "privacy_issue": false,
+  "security_issue": true
 }

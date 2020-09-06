@@ -3,5 +3,7 @@
   "short_description": "",
   "references": {
   },
-  "title": "Javascript code injection"
+  "title": "Javascript code injection",
+  "privacy_issue": false,
+  "security_issue": true
 }

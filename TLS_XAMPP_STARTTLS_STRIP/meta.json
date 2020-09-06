@@ -5,5 +5,7 @@
     "title2": "url2",
     "title": "url"
   },
-  "title": "Suppress STARTTLS in XMPP streams"
+  "title": "Suppress STARTTLS in XMPP streams",
+  "privacy_issue": true,
+  "security_issue": true
 }

@@ -4,5 +4,7 @@
   "references": {
     "ServerSocket (Android developer)": "http://developer.android.com/reference/java/net/ServerSocket.html"
   },
-  "title": "Call to Socket API"
+  "title": "Call to Socket API",
+  "privacy_issue": false,
+  "security_issue": true
 }

@@ -6,5 +6,7 @@
     "Webview loadurl (Android documentation)": "https://developer.android.com/reference/android/webkit/WebView#loadUrl(java.lang.String,%2520java.util.Map%253Cjava.lang.String,%2520java.lang.String%253E)",
     "Websettings (Android documentation)": "https://developer.android.com/reference/android/webkit/WebSettings"
   },
-  "title": "Webview loadurl injection"
+  "title": "Webview loadurl injection",
+  "privacy_issue": false,
+  "security_issue": true
 }

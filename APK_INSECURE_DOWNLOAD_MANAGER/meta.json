@@ -3,5 +3,7 @@
   "short_description": "The application forces the use of mobile network connection",
   "references": {
   },
-  "title": "Abuse of mobile network connection"
+  "title": "Abuse of mobile network connection",
+  "privacy_issue": true,
+  "security_issue": true
 }

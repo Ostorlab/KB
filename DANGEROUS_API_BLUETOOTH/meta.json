@@ -4,5 +4,7 @@
   "references": {
     "BLE Security: Bridging the gap": "https://medium.com/@kbabcockuf/bridging-the-gap-bluetooth-le-security-aab27232a767"
   },
-  "title": "Call to Bluetooth and BLE API"
+  "title": "Call to Bluetooth and BLE API",
+  "privacy_issue": false,
+  "security_issue": true
 }

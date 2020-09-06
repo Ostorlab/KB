@@ -4,5 +4,7 @@
   "references": {
     "The plist manual page": "https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man5/plist.5.html"
   },
-  "title": "Strings Bplist files"
+  "title": "Strings Bplist files",
+  "privacy_issue": false,
+  "security_issue": false
 }

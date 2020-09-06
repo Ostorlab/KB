@@ -5,5 +5,7 @@
     "Unintended Data Leakage (OWASP Mobile Top 10)": "https://www.owasp.org/index.php/Mobile_Top_10_2014-M4",
     "Security tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html#StoringData"
   },
-  "title": "Call to delete file API"
+  "title": "Call to delete file API",
+  "privacy_issue": false,
+  "security_issue": true
 }

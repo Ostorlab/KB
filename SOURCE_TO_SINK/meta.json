@@ -3,5 +3,7 @@
   "short_description": "Sink method called using potentially user controlled parameters.",
   "references": {
   },
-  "title": "Source to Sink"
+  "title": "Source to Sink",
+  "privacy_issue": false,
+  "security_issue": true
 }

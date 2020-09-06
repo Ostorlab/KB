@@ -2,5 +2,7 @@
   "risk_rating": "info",
   "short_description": "Disassembly of listed binaries",
   "references": {},
-  "title": "Binary disassembly"
+  "title": "Binary disassembly",
+  "privacy_issue": false,
+  "security_issue": true
 }

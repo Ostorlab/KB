@@ -6,5 +6,7 @@
     "XML Injection (OWASP)": "https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008)",
     "Parsing XML (Android developer)": "http://developer.android.com/training/basics/network-ops/xml.html"
   },
-  "title": "Call to XML parsing API"
+  "title": "Call to XML parsing API",
+  "privacy_issue": false,
+  "security_issue": true
 }

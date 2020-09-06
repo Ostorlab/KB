@@ -5,5 +5,7 @@
     "Lack of Binary Protections (OWASP Mobile Top 10)": "https://www.owasp.org/index.php/Mobile_Top_10_2014-M10",
     "Proguard (Android developer)": "http://developer.android.com/tools/help/proguard.html"
   },
-  "title": "Obfuscated methods"
+  "title": "Obfuscated methods",
+  "privacy_issue": false,
+  "security_issue": true
 }

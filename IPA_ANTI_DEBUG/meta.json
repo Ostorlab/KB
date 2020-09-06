@@ -5,5 +5,7 @@
     "iOS Runtime Headers (limneos)": "http://developer.limneos.net/",
     "iOS Runtime Headers (nst Git)": "https://github.com/nst/iOS-Runtime-Headers"
   },
-  "title": "Application implements anti-debug techniques"
+  "title": "Application implements anti-debug techniques",
+  "privacy_issue": false,
+  "security_issue": true
 }

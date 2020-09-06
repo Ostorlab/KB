@@ -4,5 +4,7 @@
   "references": {
     "Properly verify server certificate on SSL/TLS (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=134807561"
   },
-  "title": "Secure TLS certificate validation"
+  "title": "Secure TLS certificate validation",
+  "privacy_issue": true,
+  "security_issue": true
 }

@@ -7,5 +7,7 @@
     "Activity (Android Developper Documentation)": "http://developer.android.com/reference/android/app/Activity.html",
     "Broadcast Receiver (Android Developper Documentation)": "http://developer.android.com/reference/android/content/BroadcastReceiver.html"
   },
-  "title": "APK attack surface"
+  "title": "APK attack surface",
+  "privacy_issue": false,
+  "security_issue": false
 }

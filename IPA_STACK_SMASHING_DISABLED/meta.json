@@ -6,5 +6,7 @@
     "Xcode 3 supports Stack Canaries": "http://lists.apple.com/archives/xcode-users/2007/Dec/msg00055.html"
   },
   "title": "Stack smashing protection not enforced",
-  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H"
+  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
+  "privacy_issue": false,
+  "security_issue": true
 }

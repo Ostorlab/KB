@@ -4,5 +4,7 @@
   "references": {
     "APK Expansion Files": "http://developer.android.com/google/play/expansion-files.html"
   },
-  "title": "Expansion APK enabled"
+  "title": "Expansion APK enabled",
+  "privacy_issue": false,
+  "security_issue": true
 }

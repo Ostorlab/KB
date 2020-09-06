@@ -9,5 +9,7 @@
     "Insecure Data Storage (OWASP Mobile Top 10)": "https://www.owasp.org/index.php/Mobile_Top_10_2014-M2",
     "Security tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html#StoringData"
   },
-  "title": "Call to Android Security API"
+  "title": "Call to Android Security API",
+  "privacy_issue": false,
+  "security_issue": true
 }

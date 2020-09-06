@@ -4,5 +4,7 @@
   "references": {
     "Signing Your Applications": "http://developer.android.com/tools/publishing/app-signing.html"
   },
-  "title": "Application signed with an expired certificate"
+  "title": "Application signed with an expired certificate",
+  "privacy_issue": false,
+  "security_issue": true
 }

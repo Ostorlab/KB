@@ -4,5 +4,7 @@
   "references": {
     "Network Security Configuration (Android developer)": "https://developer.android.com/training/articles/security-config"
   },
-  "title": "Secure Network Configuration Settings"
+  "title": "Secure Network Configuration Settings",
+  "privacy_issue": true,
+  "security_issue": true
 }

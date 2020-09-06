@@ -3,5 +3,7 @@
   "short_description": "",
   "references": {
   },
-  "title": "PHP Mustach template injection"
+  "title": "PHP Mustach template injection",
+  "privacy_issue": false,
+  "security_issue": true
 }

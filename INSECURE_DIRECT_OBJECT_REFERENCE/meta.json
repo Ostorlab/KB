@@ -4,5 +4,7 @@
   "risk_rating": "high",
   "references": {
     "Insecure Direct Object Reference Prevention Cheat Sheet (OWASP)": "https://owasp.org/www-project-cheat-sheets/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet"
-  }
+  },
+  "privacy_issue": false,
+  "security_issue": true
 }

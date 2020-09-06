@@ -5,5 +5,7 @@
     "title2": "url2",
     "title": "url"
   },
-  "title": "Call to TLS API"
+  "title": "Call to TLS API",
+  "privacy_issue": false,
+  "security_issue": true
 }

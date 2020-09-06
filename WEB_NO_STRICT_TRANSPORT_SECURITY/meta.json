@@ -3,5 +3,7 @@
   "short_description": "The application do no enforce strict transport security in HTTP responses.",
   "references": {
   },
-  "title": "Strict-Transport-Security (HSTS) not enforced"
+  "title": "Strict-Transport-Security (HSTS) not enforced",
+  "privacy_issue": false,
+  "security_issue": true
 }

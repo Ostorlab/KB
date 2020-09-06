@@ -1,9 +1,0 @@
-{
-  "risk_rating": "high",
-  "short_description": "Apache Cordova below version 4.1.1 suffers from multiple vulnerabilties",
-  "references": {
-    "Apache Cordova CVE-2015-5256": "https://cordova.apache.org/announcements/2015/11/20/security.html",
-    "Apache Cordova CVE-2015-1835": "http://cordova.apache.org/announcements/2015/05/26/android-402.html"
-  },
-  "title": "Apache Cordova < 4.1.1 suffers from multiple vulnerabilities"
-}

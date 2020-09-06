@@ -4,5 +4,7 @@
   "references": {
     "Root detection & evasion": "http://resources.infosecinstitute.com/android-hacking-security-part-8-root-detection-evasion/#gref"
   },
-  "title": "Application checks rooted device"
+  "title": "Application checks rooted device",
+  "privacy_issue": false,
+  "security_issue": false
 }

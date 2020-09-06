@@ -5,5 +5,7 @@
     "Firebase - Understand Firebase Realtime Database Rules": "https://firebase.google.com/docs/database/security",
     "Firebase - Secure Your Data": "https://firebase.google.com/docs/database/security/securing-data"
   },
-  "title": "Secure Firebase Database Permissions"
+  "title": "Secure Firebase Database Permissions",
+  "privacy_issue": false,
+  "security_issue": true
 }

@@ -8,5 +8,7 @@
     "CWE-285: Improper Authorization": "https://cwe.mitre.org/data/definitions/285.html",
     "CWE-639: Authorization Bypass Through User-Controlled Key": "CWE-639: Authorization Bypass Through User-Controlled Key"
   },
-  "title": "Insecure Access Control"
+  "title": "Insecure Access Control",
+  "privacy_issue": false,
+  "security_issue": true
 }

@@ -3,5 +3,7 @@
   "short_description": "List of insecure file system permissions.",
   "references": {
   },
-  "title": "Insecure file system permissions"
+  "title": "Insecure file system permissions",
+  "privacy_issue": true,
+  "security_issue": true
 }

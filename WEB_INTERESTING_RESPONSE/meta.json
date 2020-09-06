@@ -3,5 +3,7 @@
   "short_description": "Detected an intersting response.",
   "references": {
   },
-  "title": "Intersting response"
+  "title": "Intersting response",
+  "privacy_issue": false,
+  "security_issue": true
 }

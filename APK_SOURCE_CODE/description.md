@@ -1,1 +1,0 @@
-Decompiled source of the application using standard open-source applications.

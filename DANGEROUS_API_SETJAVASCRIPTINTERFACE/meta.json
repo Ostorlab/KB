@@ -7,5 +7,7 @@
     "MWR Labs Advisory": "https://labs.mwrinfosecurity.com/advisories/webview-addjavascriptinterface-remote-code-execution/",
     "Metasploit Public Exploit": "https://www.exploit-db.com/exploits/31519/"
   },
-  "title": "addJavaScriptInterface Remote Code Execution."
+  "title": "addJavaScriptInterface Remote Code Execution.",
+  "privacy_issue": false,
+  "security_issue": true
 }

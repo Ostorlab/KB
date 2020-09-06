@@ -7,5 +7,7 @@
     "CWE-200: Information Exposure": "http://cwe.mitre.org/data/definitions/200.html",
     "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "http://cwe.mitre.org/data/definitions/359.html"
   },
-  "title": "Protected Health Information were detected on the system"
+  "title": "Protected Health Information were detected on the system",
+  "privacy_issue": true,
+  "security_issue": false
 }

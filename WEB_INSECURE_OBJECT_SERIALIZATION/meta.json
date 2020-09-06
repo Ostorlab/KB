@@ -7,5 +7,7 @@
     "Java deserialization cheat sheet": "https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet",
     "CWE-502: Deserialization of Untrusted Data": "https://cwe.mitre.org/data/definitions/502.html"
   },
-  "title": "Insecure Object Serialization"
+  "title": "Insecure Object Serialization",
+  "privacy_issue": false,
+  "security_issue": true
 }

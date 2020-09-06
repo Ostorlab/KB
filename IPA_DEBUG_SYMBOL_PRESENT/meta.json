@@ -4,5 +4,7 @@
   "references": {
 
   },
-  "title": "Debug Symbols Present in the Application"
+  "title": "Debug Symbols Present in the Application",
+  "privacy_issue": false,
+  "security_issue": true
 }

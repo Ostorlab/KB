@@ -3,5 +3,7 @@
   "short_description": "",
   "references": {
   },
-  "title": "Python Object Serialization injection"
+  "title": "Python Object Serialization injection",
+  "privacy_issue": false,
+  "security_issue": true
 }

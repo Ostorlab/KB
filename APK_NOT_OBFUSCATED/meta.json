@@ -6,5 +6,7 @@
     "Proguard (Android developer)": "http://developer.android.com/tools/help/proguard.html"
   },
   "title": "Application code not obfuscated",
-  "cvss_v3_vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+  "cvss_v3_vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+  "privacy_issue": false,
+  "security_issue": true
 }

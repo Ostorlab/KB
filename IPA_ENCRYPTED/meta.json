@@ -7,5 +7,7 @@
     "lldb-dumpdecrypted": "https://github.com/BlueCocoa/dumpdecrypted-lldb",
     "Clutch": "https://github.com/KJCracks/Clutch"
   },
-  "title": "Mach-O encrypted"
+  "title": "Mach-O encrypted",
+  "privacy_issue": false,
+  "security_issue": false
 }

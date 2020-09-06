@@ -1,0 +1,11 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "Application is not explicitly setting the attribute hasFragileUserData",
+  "references": {
+    "": "https://developer.android.com/guide/topics/manifest/application-element#fragileuserdata"
+  },
+  "title": "Attribute hasFragileUserData not set",
+  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+  "privacy_issue": true,
+  "security_issue": false
+}

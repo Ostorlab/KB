@@ -4,5 +4,7 @@
   "references": {
     "Port Scanner": "https://en.wikipedia.org/wiki/Port_scanner"
   },
-  "title": "Network Port Scan"
+  "title": "Network Port Scan",
+  "privacy_issue": false,
+  "security_issue": true
 }

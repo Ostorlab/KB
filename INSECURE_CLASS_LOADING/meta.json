@@ -3,5 +3,7 @@
   "short_description": "Android class loaded from an insecure path.",
   "risk_rating": "high",
   "references": {
-  }
+  },
+  "privacy_issue": false,
+  "security_issue": true
 }

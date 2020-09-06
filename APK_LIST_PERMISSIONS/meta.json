@@ -5,5 +5,7 @@
     "Working with System Permissions": "http://developer.android.com/training/permissions/index.html",
     "System Permissions": "http://developer.android.com/guide/topics/security/permissions.html"
   },
-  "title": "Declared permissions list"
+  "title": "Declared permissions list",
+  "privacy_issue": false,
+  "security_issue": false
 }

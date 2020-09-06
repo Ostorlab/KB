@@ -1,1 +1,0 @@
-List of technologies used in the backend

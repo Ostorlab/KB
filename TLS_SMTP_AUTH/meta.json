@@ -5,5 +5,7 @@
     "title2": "url2",
     "title": "url"
   },
-  "title": "Authentication credentials in SMTP traffic"
+  "title": "Authentication credentials in SMTP traffic",
+  "privacy_issue": true,
+  "security_issue": true
 }

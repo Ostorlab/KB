@@ -4,5 +4,7 @@
   "references": {
     "Cross-Origin Resource Sharing (Mozilla Developer)": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"
   },
-  "title": "Insecure Cross-Origin Resource Sharing (CORS) policy"
+  "title": "Insecure Cross-Origin Resource Sharing (CORS) policy",
+  "privacy_issue": false,
+  "security_issue": true
 }

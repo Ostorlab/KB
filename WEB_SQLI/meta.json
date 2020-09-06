@@ -3,5 +3,7 @@
   "short_description": "",
   "references": {
   },
-  "title": "SQL Injection"
+  "title": "SQL Injection",
+  "privacy_issue": false,
+  "security_issue": true
 }

@@ -1,1 +1,0 @@
-Migrate the application to Cordova 4.1.1 or higher.

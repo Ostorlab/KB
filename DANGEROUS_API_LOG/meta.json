@@ -6,5 +6,7 @@
     "ERR02-J. Prevent exceptions while logging data": "https://www.securecoding.cert.org/confluence/display/java/ERR02-J.+Prevent+exceptions+while+logging+data",
     "Logging methods ( Log sparingly )": "https://source.android.com/setup/contribute/code-style#log-sparingly"
   },
-  "title": "Call to logging API"
+  "title": "Call to logging API",
+  "privacy_issue": false,
+  "security_issue": true
 }

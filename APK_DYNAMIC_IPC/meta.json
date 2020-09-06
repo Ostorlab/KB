@@ -7,5 +7,7 @@
     "Security tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html#UserData",
     "Intents (Android developer)": "http://developer.android.com/reference/android/content/Intent.html"
   },
-  "title": "Recorded calls to Inter-Process-Communication (IPC) API"
+  "title": "Recorded calls to Inter-Process-Communication (IPC) API",
+  "privacy_issue": false,
+  "security_issue": true
 }

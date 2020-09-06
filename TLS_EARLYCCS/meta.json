@@ -5,5 +5,7 @@
     "title2": "url2",
     "title": "url"
   },
-  "title": "Early CCS vulnerability (CVE-2014-0224)"
+  "title": "Early CCS vulnerability (CVE-2014-0224)",
+  "privacy_issue": true,
+  "security_issue": true
 }

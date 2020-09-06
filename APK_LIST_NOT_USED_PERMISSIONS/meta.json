@@ -5,5 +5,7 @@
     "Android InSecurity: Understanding Permissions": "https://www.infsec.cs.uni-saarland.de/wp-content/uploads/sites/2/2014/10/04_AndroidInsecurity.pdf",
     "Underestimated Privacy Implications of the ACCESS_WIFI_STATE": "https://hal.inria.fr/hal-00994926v2/document"
   },
-  "title": "Unused permissions (overprivileged)"
+  "title": "Unused permissions (overprivileged)",
+  "privacy_issue": false,
+  "security_issue": true
 }

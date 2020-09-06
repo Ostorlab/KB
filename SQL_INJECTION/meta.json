@@ -7,5 +7,7 @@
     "Improper Neutralization of Special Elements used in an SQL Command (CWE-89)": "https://cwe.mitre.org/data/definitions/89.html"
   },
   "title": "SQL injection",
-  "cvss_v3_vector": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+  "cvss_v3_vector": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N",
+  "privacy_issue": true,
+  "security_issue": true
 }

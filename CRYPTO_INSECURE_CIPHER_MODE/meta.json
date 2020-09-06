@@ -8,5 +8,7 @@
     "AES Default mode discussion": "https://security.stackexchange.com/questions/54848/what-is-default-mode-for-aes-encryption"
   },
   "title": "Cryptographic Vulnerability: Insecure mode",
-  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+  "privacy_issue": true,
+  "security_issue": true
 }

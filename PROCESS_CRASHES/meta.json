@@ -6,5 +6,7 @@
     "CWE-209: Information Exposure Through an Error Message": "http://cwe.mitre.org/data/definitions/209.html",
     "CWE-20: Improper Input Validation": "http://cwe.mitre.org/data/definitions/20.html"
   },
-  "title": "Process crashes"
+  "title": "Process crashes",
+  "privacy_issue": false,
+  "security_issue": false
 }

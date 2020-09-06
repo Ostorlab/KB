@@ -7,5 +7,7 @@
     "CWE-116: Improper Encoding or Escaping of Output": "https://cwe.mitre.org/data/definitions/116.html",
     "CWE-159: Failure to Sanitize Special Element": "https://cwe.mitre.org/data/definitions/159.html"
   },
-  "title": "Cross-Site Scripting (XSS)"
+  "title": "Cross-Site Scripting (XSS)",
+  "privacy_issue": false,
+  "security_issue": true
 }

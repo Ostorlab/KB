@@ -5,5 +5,7 @@
     "Shared Preferences (Android Developer)": "http://developer.android.com/reference/android/content/SharedPreferences.html"
   },
   "title": "Insecure Shared Preferences Permissions",
-  "cvss_v3_vector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+  "cvss_v3_vector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+  "privacy_issue": true,
+  "security_issue": true
 }

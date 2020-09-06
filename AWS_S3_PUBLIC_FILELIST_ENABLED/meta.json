@@ -4,5 +4,7 @@
   "references": {
     "AWS S3 bucket - another layer of protection": "https://aws.amazon.com/blogs/aws/amazon-s3-block-public-access-another-layer-of-protection-for-your-accounts-and-buckets/"
   },
-  "title": "Public AWS S3 bucket with file listing enabled"
+  "title": "Public AWS S3 bucket with file listing enabled",
+  "privacy_issue": false,
+  "security_issue": true
 }

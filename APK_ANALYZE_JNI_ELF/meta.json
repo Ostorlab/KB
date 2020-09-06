@@ -5,5 +5,7 @@
     "JNI Tips": "https://developer.android.com/training/articles/perf-jni.html",
     "Best practices for using the Java Native Interface": "https://www.ibm.com/developerworks/library/j-jni/"
   },
-  "title": "List of JNI methods"
+  "title": "List of JNI methods",
+  "privacy_issue": false,
+  "security_issue": false
 }
