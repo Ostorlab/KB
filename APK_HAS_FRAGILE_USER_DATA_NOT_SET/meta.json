@@ -1,5 +1,5 @@
 {
-  "risk_rating": "hardening",
+  "risk_rating": "low",
   "short_description": "Application is not explicitly setting the attribute hasFragileUserData",
   "references": {
     "": "https://developer.android.com/guide/topics/manifest/application-element#fragileuserdata"
