@@ -1,0 +1,11 @@
+{
+  "risk_rating": "low",
+  "short_description": "Application sets the requestLegacyExternalStorage attribute",
+  "references": {
+    "Storage updates in Android 11": "https://developer.android.com/preview/privacy/storage"
+  },
+  "title": "Attribute requestLegacyExternalStorage set",
+  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+  "privacy_issue": true,
+  "security_issue": true
+}
