@@ -1,9 +1,7 @@
 {
   "risk_rating": "info",
-  "short_description": "List of all files shipped in the application.",
+  "short_description": "List of TLS API calls",
   "references": {
-    "title2": "url2",
-    "title": "url"
   },
   "title": "Call to TLS API",
   "privacy_issue": false,
