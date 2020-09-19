@@ -1,0 +1,13 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Inclusion of Sensitive Information in URLs",
+  "references": {
+    "CWE-200: Information Exposure": "http://cwe.mitre.org/data/definitions/200.html",
+    "CWE-598: Information Exposure Through Query Strings in GET Request": "https://cwe.mitre.org/data/definitions/598.html",
+    "CWE-384: Session Fixation": "https://cwe.mitre.org/data/definitions/384.html",
+    "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "http://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Credentials exposed in URLs",
+  "privacy_issue": true,
+  "security_issue": true
+}
