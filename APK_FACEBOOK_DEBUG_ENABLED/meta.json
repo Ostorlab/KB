@@ -1,0 +1,11 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Application is compiled with Facebook Sdk debug mode enabled",
+  "references": {
+    "Facebook Sdk Debug Logs": "https://developers.facebook.com/docs/app-events/getting-started-app-events-android/"
+  },
+  "title": "Facebook Sdk debug mode enabled",
+  "cvss_v3_vector": "CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+  "privacy_issue": true,
+  "security_issue": true
+}
