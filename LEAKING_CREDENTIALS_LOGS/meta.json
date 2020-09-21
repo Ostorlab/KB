@@ -1,0 +1,15 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Inclusion of Sensitive Information in Log Files",
+  "references": {
+    "Practices for Protecting Electronic Restricted Data: A Quick Reference": "http://its.ucsc.edu/policies/rd.html",
+    "CWE-200: Information Exposure": "http://cwe.mitre.org/data/definitions/200.html",
+    "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "http://cwe.mitre.org/data/definitions/359.html",
+    "DRD04-J. Do not log sensitive information": "https://www.securecoding.cert.org/confluence/display/android/DRD04-J.+Do+not+log+sensitive+information",
+    "ERR02-J. Prevent exceptions while logging data": "https://www.securecoding.cert.org/confluence/display/java/ERR02-J.+Prevent+exceptions+while+logging+data",
+    "Logging methods ( Log sparingly )": "https://source.android.com/setup/contribute/code-style#log-sparingly"
+  },
+  "title": "Credentials exposed in logs",
+  "privacy_issue": true,
+  "security_issue": true
+}
