@@ -1,0 +1,1 @@
+It is recommended that you use secure means of connection and information exchange with Bluetooth, which is possible with the createRfcommSocketToServiceRecord, listenUsingRfcommWithServiceRecord and similar methods.
