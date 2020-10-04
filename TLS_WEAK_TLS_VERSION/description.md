@@ -1,1 +1,1 @@
-List of all files shipped in the application.
+The application accepts insecure TLS Ciphers.

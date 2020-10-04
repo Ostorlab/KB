@@ -1,1 +1,1 @@
-List of all files shipped in the application.
+Server accepts anonymous authentication.

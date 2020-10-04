@@ -1,6 +1,6 @@
 {
   "risk_rating": "info",
-  "short_description": "List of <code>FileObserver</code> implementation",
+  "short_description": "List of FileObserver implementation",
   "references": {
     "Security tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html#IPC"
   },
