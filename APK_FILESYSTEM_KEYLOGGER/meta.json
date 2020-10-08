@@ -1,9 +1,0 @@
-{
-  "risk_rating": "medium",
-  "short_description": "List of potential insecure file system persistence.",
-  "references": {
-  },
-  "title": "Insecure file system persistence",
-  "privacy_issue": true,
-  "security_issue": true
-}

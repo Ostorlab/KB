@@ -1,9 +1,0 @@
-{
-  "risk_rating": "potentially",
-  "short_description": "Generic web vulnerability",
-  "references": {
-  },
-  "title": "Generic web vulnerability",
-  "privacy_issue": false,
-  "security_issue": false
-}

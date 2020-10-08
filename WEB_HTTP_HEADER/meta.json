@@ -1,9 +1,0 @@
-{
-  "risk_rating": "info",
-  "short_description": "List of HTTP headers checks",
-  "references": {
-  },
-  "title": "HTTP headers checks",
-  "privacy_issue": false,
-  "security_issue": false
-}

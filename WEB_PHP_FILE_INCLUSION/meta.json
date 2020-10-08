@@ -1,9 +1,0 @@
-{
-  "risk_rating": "high",
-  "short_description": "",
-  "references": {
-  },
-  "title": "PHP file inclusion",
-  "privacy_issue": false,
-  "security_issue": true
-}

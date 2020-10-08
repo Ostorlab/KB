@@ -1,8 +1,0 @@
-{
-  "risk_rating": "important",
-  "short_description": "Trace for calls from input source to dangerous methods",
-  "references": {},
-  "title": "Trace call from source to sinks",
-  "privacy_issue": false,
-  "security_issue": false
-}
