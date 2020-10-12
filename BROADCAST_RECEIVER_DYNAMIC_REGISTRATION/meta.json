@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "potentially",
   "short_description": "Broadcast receiver dynamic registration",
   "references": {
     "CWE-926: Improper Export of Android Application Components": "https://cwe.mitre.org/data/definitions/926.html"
