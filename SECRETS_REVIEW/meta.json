@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "potentially",
   "short_description": "Passwords, Tokens or other sensitive information are stored in the application.",
   "references": {
     "CWE-200: Data Exposure": "https://cwe.mitre.org/data/definitions/200.html",
