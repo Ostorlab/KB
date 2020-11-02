@@ -1,5 +1,5 @@
 {
-  "risk_rating": "low",
+  "risk_rating": "hardening",
   "short_description": "The application do no enforce strict transport security in HTTP responses.",
   "references": {
   },
