@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "low",
   "short_description": "PhoneGap is compiled with debug mode enabled",
   "references": {},
   "title": "Cordova debug mode enabled",

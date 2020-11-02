@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "medium",
   "short_description": "The application accepts insecure TLS Ciphers.",
   "references": {
   },

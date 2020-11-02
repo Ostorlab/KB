@@ -1,7 +1,7 @@
 {
   "title": "Insecure password storage",
   "short_description": "Password is stored in cleartext or trivially encoded which could lead to user's account compromise.",
-  "risk_rating": "high",
+  "risk_rating": "medium",
   "references": {
     "OWASP Insecure Cryptographic Storage": "https://www.owasp.org/index.php/Top_10_2010-A7-Insecure_Cryptographic_Storage",
     "OWASP Insecure Storage": "https://www.owasp.org/index.php/Insecure_Storage",

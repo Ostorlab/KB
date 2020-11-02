@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "medium",
   "short_description": "Filesystem access using weak permissions",
   "references": {
     "Ensure sensitive data are kept secret(CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/display/android/DRD11.+Ensure+that+sensitive+data+is+kept+secure"
