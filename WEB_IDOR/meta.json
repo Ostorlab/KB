@@ -1,0 +1,10 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The application suffers from an access control vulnerability caused by an Insecure Direct Object Refenrece (IDOR)",
+  "references": {
+    "CWE-639: Authorization Bypass Through User-Controlled Key": "https://cwe.mitre.org/data/definitions/639.html"
+  },
+  "title": "Insecure Direct Object Reference (IDOR)",
+  "privacy_issue": false,
+  "security_issue": true
+}
