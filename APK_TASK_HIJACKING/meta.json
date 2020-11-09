@@ -1,0 +1,10 @@
+{
+  "risk_rating": "high",
+  "short_description": "Application is vulnerable to Task Hijacking",
+  "references": {
+    "Towards Discovering and Understanding Task Hijacking in Android": "https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-ren-chuangang.pdf"
+  },
+  "title": "Application vulnerable to Task Hijacking",
+  "privacy_issue": true,
+  "security_issue": true
+}

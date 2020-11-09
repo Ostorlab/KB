@@ -1,0 +1,1 @@
+- Set the task affinity of all the application activities to “”(empty string) in the application tag of AndroidManifest.xml to force the activities to not have any affinity to any task.
