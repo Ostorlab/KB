@@ -5,10 +5,11 @@ manipulating the following parameters:
  - Task affinity
  - allowTaskReparenting
  
+ 
  Task Affinity is an activity attribute defined in each <activity> tag in AndroidManifest.xml. It specifies which task that the activity desires
 to join. By default, all activities in an app have the same affinity (the app package name)
 
-```javas
+```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 package="co.secureApp.app“ >
 <application>
