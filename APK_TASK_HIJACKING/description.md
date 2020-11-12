@@ -1,32 +1,41 @@
-In Android, a task is a collection of activities that users interact with when performing a certain job. 
-
-Activities from different apps can reside in the same task which might be used to relocate a malicious activity to your application's task by
+An Android task is a collection of activities that users interact with when performing a certain job. Activities from 
+different apps can reside in the same task which might be used to relocate a malicious activity to your application's task by
 manipulating the following parameters:
- - Task affinity
- - allowTaskReparenting
+
+* __Task Affinity__ controlled by attribute `taskAffinity`
+* __Task Reparenting__ controlled by attribute `allowTaskReparenting`
  
- 
- Task Affinity is an activity attribute defined in each <activity> tag in AndroidManifest.xml. It specifies which task that the activity desires
-to join. By default, all activities in an app have the same affinity (the app package name)
+Task Affinity is an activity attribute defined in the `<activity>` tag in the `AndroidManifest.xml` file.
+Task Affinity specifies which task that the activity desires to join. By default, all activities in an app have the
+same affinity, which is the app package name.
 
 ```xml
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="co.secureApp.app“ >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="co.secureApp.app" >
 <application>
-<activity android:name=".ActivityA “/>
-<activity android:name=".ActivityB“ android:taskAffinity="co.ostorlab.Myapp:taskB “/>
+    <activity android:name=".ActivityA"></activity>
+    <activity android:name=".ActivityB" android:taskAffinity="co.ostorlab.Myapp:taskB"></activity>
 </application>
 </manifest>
 ``` 
 
-allowTaskReparenting when set to `true` for an activity A, and when a new task with the same affinity is brought to the front, the
-system would move the “relocatable” activity A from its original hosting task to this new foreground task.
+`allowTaskReparenting` when set to `true` for an activity A, and when a new task with the same affinity is brought to
+the front, the system moves the __relocatable__ activity A from its original hosting task to the new foreground task
+stack.
 
-Task Hijacking attack:
+Task Hijacking attacks comes in different flavors:
 
-- Case1:
+* __Task Affinity Control__: application has a  package name `com.mySecureApp.app` and activity __A1__. A malicious application
+has two activities __M1__ and __M2__ where `M2.taskAffinity = com.mySecureApp.app` and `M2.allowTaskReparenting = true`. If
+the malicious app is open on __M2__, once you start your application, __M2__ is relocated to the front and the user
+will interact with the malicious application.  
 
-My application has a  packagename `com.mySecureApp.app` and an activity A1.
-A malicious application has two activities M1 and M2 where M2.taskAffinity =  `com.mySecureApp.app` and M2.allowTaskReparenting = `true`
+* __Single Task Mode__: application has set launch mode to `singleTask`. A malicious application with `M2.taskAffinity = com.mySecureApp.app`
+can hijack target application task stack.
 
-If the malicious app is open on M2, once you start your application, M2 is relocated to the front and the user will interact with the malicious application.  
+* __Task Reparenting__: application has set `taskReparenting` to `true`. A malicious application can move the target application
+task to the malicious application stack.
+
+Task hijacking can be used to perform phishing, denial of use attack and has been exploited in the past by banking malware
+trojans.
+
+New flavors of the attacks (StandHogg 2.0) are extremely hard to detect, as are code based attacks.
