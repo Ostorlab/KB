@@ -1,6 +1,6 @@
 {
   "risk_rating": "medium",
-  "short_description": "Application does not protect against task hijacking, malicious application on the device can takeover the application foreground task",
+  "short_description": "The application does not protect against task hijacking, malicious application on the device can takeover the application foreground task",
   "references": {
     "Understand Tasks and Back Stack - Android Documentation": "https://developer.android.com/guide/components/activities/tasks-and-back-stack",
     "Towards Discovering and Understanding Task Hijacking in Android": "https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-ren-chuangang.pdf",

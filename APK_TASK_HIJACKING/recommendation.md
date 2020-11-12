@@ -1,4 +1,4 @@
-Different forms of Task Hijacking vulnerabilities requires different fixes:
+Different forms of Task Hijacking vulnerabilities require different fixes:
 
 * Set the task affinity of the application activity to `""`(empty string) in the `<activity>` tag of
 the `AndroidManifest.xml` to force the activities to use a randomly generated task affinity.
@@ -18,5 +18,5 @@ startActivity(i);
 * Do not specify `allowReparenting` with `taskAffinity` or add support a monitoring service to detect the presence of
 malicious foreground tasks.
 
-* Prefer the use Explicit intent, which specify which application will satisfy the intent, by supplying the target application
-package name or a fully-qualified component class name. Implicit intent only specify the a general action.
+* Prefer the use of Explicit intent, which specify which application will satisfy the intent, by supplying the target application
+package name or a fully-qualified component class name. Implicit intent only specifies the general action.

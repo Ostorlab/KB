@@ -22,18 +22,18 @@ same affinity, which is the app package name.
 the front, the system moves the __relocatable__ activity A from its original hosting task to the new foreground task
 stack.
 
-Task Hijacking attacks comes in different flavors:
+Task Hijacking attacks come in different flavors:
 
 * __Task Affinity Control__: application has a  package name `com.mySecureApp.app` and activity __A1__. A malicious application
 has two activities __M1__ and __M2__ where `M2.taskAffinity = com.mySecureApp.app` and `M2.allowTaskReparenting = true`. If
 the malicious app is open on __M2__, once you start your application, __M2__ is relocated to the front and the user
 will interact with the malicious application.  
 
-* __Single Task Mode__: application has set launch mode to `singleTask`. A malicious application with `M2.taskAffinity = com.mySecureApp.app`
-can hijack target application task stack.
+* __Single Task Mode__: the application has set launch mode to `singleTask`. A malicious application with `M2.taskAffinity = com.mySecureApp.app`
+can hijack the target application task stack.
 
 * __Task Reparenting__: application has set `taskReparenting` to `true`. A malicious application can move the target application
 task to the malicious application stack.
 
-Task hijacking can be used to perform phishing, denial of use attack and has been exploited in the past by banking malware
-trojans. New flavors of the attacks (StandHogg 2.0) are extremely hard to detect, as they are code based attacks.
+Task hijacking can be used to perform phishing, denial of use attack, and has been exploited in the past by banking malware
+trojans. New flavors of the attacks (StandHogg 2.0) are extremely hard to detect, as they are code-based attacks.
