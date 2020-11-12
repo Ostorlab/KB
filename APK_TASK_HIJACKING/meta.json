@@ -9,7 +9,7 @@
     "Task Hijacking exploited by Mobile Banking Malware": "https://arstechnica.com/information-technology/2019/12/vulnerability-in-fully-patched-android-phones-under-active-attack-by-bank-thieves/"
 
   },
-  "title": "Application does not protect against task hijacking, malicious application on the device takeover the application foreground task",
+  "title": "Application does not protect against task hijacking, malicious application on the device can takeover the application foreground task",
   "privacy_issue": true,
   "security_issue": true
 }
