@@ -36,6 +36,4 @@ can hijack target application task stack.
 task to the malicious application stack.
 
 Task hijacking can be used to perform phishing, denial of use attack and has been exploited in the past by banking malware
-trojans.
-
-New flavors of the attacks (StandHogg 2.0) are extremely hard to detect, as are code based attacks.
+trojans. New flavors of the attacks (StandHogg 2.0) are extremely hard to detect, as they are code based attacks.
