@@ -1,1 +1,1 @@
-Validate input before accessing sink method.
+Recommendation varies on the class of vulnerability identified.
