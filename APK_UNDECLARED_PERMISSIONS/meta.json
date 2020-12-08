@@ -1,5 +1,5 @@
 {
-  "risk_rating": "medium",
+  "risk_rating": "info",
   "short_description": "Custom permissions used in <activity> <service> <provider> <receiver> tags, but not declared  in <permission> tag",
   "references": {
     "Typo in permission name allows to write contacts without user knowledge": "https://hackerone.com/reports/440749"
@@ -7,5 +7,5 @@
   },
   "title": "Undeclared Permissions",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": false
 }
