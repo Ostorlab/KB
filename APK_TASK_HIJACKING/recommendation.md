@@ -1,7 +1,8 @@
 Different forms of Task Hijacking vulnerabilities require different fixes:
 
-* Set the task affinity of the application activity to `""`(empty string) in the `<activity>` tag of
-the `AndroidManifest.xml` to force the activities to use a randomly generated task affinity.
+* Set the task affinity of the application activities to `""`(empty string) in the `<activity>` tag of 
+  the `AndroidManifest.xml` to force the activities to use a randomly generated task affinity, or set it at the
+  `<application>` tag to enforce on all activities in the application.
 
 * Do not specify launch mode set to `singleTask` or add support for a monitoring service to detect the presence of malicious
 foreground tasks.
