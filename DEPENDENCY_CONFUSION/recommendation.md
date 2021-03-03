@@ -1,4 +1,4 @@
-NPM packages offer the possibility to set scope to packages. Scoped packages on the public npm registry may only be
+NPM packages offer the possibility to set scopes to packages. Scoped packages on the public npm registry may only be
 published by the user or organization associated with it, and packages within that scope may be made private. Also,
 scope names can be linked to a given registry.
 
