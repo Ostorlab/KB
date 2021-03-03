@@ -1,6 +1,6 @@
 {
   "risk_rating": "high",
-  "short_description": "Dependency Injection is a new attack type that can lead to full compromise of application building environment, CI/CD pipelines or developers workstations.",
+  "short_description": "Dependency Confusion is a new attack type that can lead to full compromise of application building environment, CI/CD pipelines or developers workstations.",
   "references": {
     "Microsoft warns enterprises of new 'dependency confusion' attack technique": "https://www.zdnet.com/article/microsoft-warns-enterprises-of-new-dependency-confusion-attack-technique/",
     "Dependency Confusion: How I Hacked Into Apple, Microsoft and Dozens of Other Companies": "https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610",
