@@ -1,0 +1,11 @@
+{
+  "risk_rating": "high",
+  "short_description": "The application uses Wifi API known to contain or leak sensitive PII used for tracking or monitoring",
+  "references": {
+    "On the (Un)Reliability of Privacy Policies in Android Apps": "https://arxiv.org/pdf/2004.08559.pdf",
+    "WifiLeaks: Underestimated Privacy Implications of the ACCESS_WIFI_STATE Android Permission": "https://hal.inria.fr/hal-00994926v1/document"
+  },
+  "title": "Use of Wifi API that contains or leaks sensitive PII",
+  "privacy_issue": true,
+  "security_issue": false
+}
