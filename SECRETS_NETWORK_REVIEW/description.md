@@ -1,4 +1,4 @@
-The application is detected to contain secret credentials, like SSH keys, private certificate or private API keys.
+The application is detected to transmit secret credentials, like SSH keys, private certificate or private API keys over the network.
 
 Secrets can be split into 3 categories with different risk profiles:
 
