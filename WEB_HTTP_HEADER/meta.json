@@ -1,0 +1,9 @@
+{
+  "risk_rating": "low",
+  "short_description": "The application header setting is either missing or setting insecure or unsafe header values.",
+  "references": {
+  },
+  "title": "Insecure HTTP Header Setting",
+  "privacy_issue": false,
+  "security_issue": true
+}
