@@ -1,0 +1,10 @@
+{
+  "risk_rating": "high",
+  "short_description": "Application exposes a URL scheme that doesn't perform proper input validation.",
+  "references": {
+
+  },
+  "title": "iOS URL Scheme Injection",
+  "privacy_issue": false,
+  "security_issue": true
+}
