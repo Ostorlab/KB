@@ -1,0 +1,11 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Application registers a customer URL scheme vulnerable to scheme hijacking",
+  "references": {
+    "MITRE ATT&CK - URI Hijacking": "https://attack.mitre.org/techniques/T1416/",
+    "iOS URL Scheme Susceptible to Hijacking": "https://blog.trendmicro.com/trendlabs-security-intelligence/ios-url-scheme-susceptible-to-hijacking/"
+  },
+  "title": "iOS URL Scheme Hijacking",
+  "privacy_issue": false,
+  "security_issue": true
+}
