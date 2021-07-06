@@ -1,0 +1,1 @@
+Add referer policy

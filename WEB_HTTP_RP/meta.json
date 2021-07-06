@@ -1,0 +1,10 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "Insecure HTTP Header Setting: Insecure Referrer Policy.",
+  "references": {
+    "Referrer-Policy": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy"
+  },
+  "title": "Insecure HTTP Header Setting: Insecure Referrer Policy",
+  "privacy_issue": false,
+  "security_issue": true
+}
