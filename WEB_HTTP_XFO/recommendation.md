@@ -1,0 +1,5 @@
+- Sending the proper X-Frame-Options in HTTP response headers that instruct the browser to not allow framing from other domains.
+    - `X-Frame-Options: DENY`  It completely denies to be loaded in frame/iframe.
+    - `X-Frame-Options: SAMEORIGIN` It allows only if the site which wants to load has a same origin.
+    - `X-Frame-Options`: ALLOW-FROM` URL It grants a specific URL to load itself in a iframe. However please pay attention to that, not all browsers support this.
+- Employing defensive code in the UI to ensure that the current frame is the most top level window.
