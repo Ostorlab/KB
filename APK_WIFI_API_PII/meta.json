@@ -1,0 +1,8 @@
+{
+  "risk_rating": "high",
+  "short_description": "The application uses Wifi API known to contain or leak sensitive PII used for tracking or monitoring",
+  "references": {},
+  "title": "Use of Wifi API that contains or leaks sensitive PII",
+  "privacy_issue": true,
+  "security_issue": false
+}
