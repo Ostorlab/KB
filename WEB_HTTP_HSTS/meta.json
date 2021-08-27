@@ -1,5 +1,5 @@
 {
-  "risk_rating": "medium",
+  "risk_rating": "hardening",
   "short_description": "Insecure HTTP Header Setting: HTTP Strict Transport Security (HSTS).",
   "references": {
     "Strict-Transport-Security": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"

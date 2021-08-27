@@ -37,3 +37,5 @@ task to the malicious application stack.
 
 Task hijacking can be used to perform phishing, denial of use attack, and has been exploited in the past by banking malware
 trojans. New flavors of the attacks (StandHogg 2.0) are extremely hard to detect, as they are code-based attacks.
+
+Task hijacking has been addressed in Android version 11 as a part of a fix of `CVE-2020-0267` `WindowManager` confused deputy.

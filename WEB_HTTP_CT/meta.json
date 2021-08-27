@@ -1,5 +1,5 @@
 {
-  "risk_rating": "low",
+  "risk_rating": "hardening",
   "short_description": "Insecure HTTP Header Setting: Content-Type.",
   "references": {
     "Content-Type": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type"
