@@ -1,0 +1,10 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The application suffers from unintentional memory leak that may cause a DoS or Malicious Code Execution",
+  "references": {
+
+  },
+  "title": "Memory Leak",
+  "privacy_issue": false,
+  "security_issue": true
+}
