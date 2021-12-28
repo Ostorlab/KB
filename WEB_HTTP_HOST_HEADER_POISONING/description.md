@@ -7,8 +7,6 @@ header:
 ```http request
 GET / HTTP/1.1
 Host: www.ostorlab.co
-
-
 ```
 
 The `Host` header is important to enable routing traffic to virtual hosts.
