@@ -1,0 +1,3 @@
+- remove the dns record for the subdomain
+- regularly check you inventory and make sur the subdomain is still in use, and you still in control of everything your subdomains point to.
+- choose your service provider wisely, and make sure they provide enough security measures to protect your subdomains.
