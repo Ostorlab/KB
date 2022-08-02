@@ -2,10 +2,10 @@
   "risk_rating": "medium",
   "short_description": "The subdomain is vulnerable to subdomain Takeover",
   "references": {
-    "Subdomain takeover\n": "https://developer.mozilla.org/en-US/docs/Web/Security/Subdomain_takeovers",
+    "Subdomain takeover": "https://developer.mozilla.org/en-US/docs/Web/Security/Subdomain_takeovers",
     "CWE-16": "https://cwe.mitre.org/data/definitions/16.html"
   },
   "title": "subdomain takeover",
-  "privacy_issue": false,
+  "privacy_issue": true,
   "security_issue": true
 }
