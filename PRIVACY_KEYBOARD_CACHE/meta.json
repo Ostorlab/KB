@@ -1,0 +1,9 @@
+{
+  "title": "Continuous collection of GPS location",
+  "short_description": "The application continuously collects device GPS location",
+  "risk_rating": "potentially",
+  "references": {
+  },
+  "privacy_issue": true,
+  "security_issue": false
+}
