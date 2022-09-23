@@ -7,5 +7,10 @@
   },
   "title": "Enforcer proper authentication",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1_1": [
+      "MSTG-ARCH-2"
+    ]
+  }
 }
