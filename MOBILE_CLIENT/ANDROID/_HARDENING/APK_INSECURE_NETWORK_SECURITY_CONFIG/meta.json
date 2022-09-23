@@ -7,5 +7,8 @@
   "title": "Insecure Network Configuration Settings",
   "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1_1.4": []
+  }
 }
