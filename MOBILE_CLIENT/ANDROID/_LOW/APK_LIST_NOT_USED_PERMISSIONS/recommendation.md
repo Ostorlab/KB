@@ -1,1 +1,1 @@
-Remove unused permissions
+Remove unused permissions.
