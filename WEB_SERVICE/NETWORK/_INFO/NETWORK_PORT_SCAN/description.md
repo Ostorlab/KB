@@ -1,1 +1,1 @@
-List of identified open ports which corresponds to the application internet facing attack surface.
+A list of identified open ports corresponds to the application's internet-facing attack surface.

@@ -5,7 +5,7 @@ subdomain via cloud services like GitHub, AWS, or Azure. They commonly happen wh
 anymore, but the subdomain DNS entries are not cleaned.
 
 If an attacker can control one of your subdomains,
-they can perform multiple types of attacks. depending on the third-party service provider's capabilities.
+they can perform multiple types of attacks. Depending on the third-party service provider's capabilities.
 
 - Perform cross-site scripting
 - Phishing attacks
