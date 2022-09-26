@@ -31,5 +31,6 @@ for f, c in zip(files, content):
         o.write(c)
 ```
 
-Leaking source code can help attackers easily forge malicious applications or understand the internals of the application
+Leaking source code can help attackers easily forge malicious applications or understand the internals of the
+application
 to identify vulnerabilities.

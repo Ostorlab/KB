@@ -14,7 +14,7 @@
   "security_issue": true,
   "targeted_by_malware": true,
   "has_public_exploit": true,
-    "categories": {
+  "categories": {
     "OWASP_MASVS_L2": [
       "MSTG_PLATFORM_9"
     ]

@@ -1,9 +1,10 @@
-Mobile Cross-Site Scripting (XSS) attacks are an injection type in which malicious scripts are injected into otherwise benign and trusted content. XSS attacks occur when an attacker can inject malicious code through:
+Mobile Cross-Site Scripting (XSS) attacks are an injection type in which malicious scripts are injected into otherwise
+benign and trusted content. XSS attacks occur when an attacker can inject malicious code through:
 
-*   Untrusted Inter-Process Communication (IPC) input
-*   Man-in-the-Middle attack
-*   Untrusted content stored on the webserver application
-*   Untrusted local file input
+* Untrusted Inter-Process Communication (IPC) input
+* Man-in-the-Middle attack
+* Untrusted content stored on the webserver application
+* Untrusted local file input
 
 Example script to test presence of XSS
 

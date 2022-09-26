@@ -1,5 +1,6 @@
 Compilers, Operating Systems and Processors provide a set of techniques to protect and mitigate the risk of memory
-corruption vulnerabilities like Buffer Overflow or memory exploitation techniques like ROP (Return-Oriented-Programming).
+corruption vulnerabilities like Buffer Overflow or memory exploitation techniques like ROP (Return-Oriented-Programming)
+.
 
 Native code can easily benefit from protections like:
 

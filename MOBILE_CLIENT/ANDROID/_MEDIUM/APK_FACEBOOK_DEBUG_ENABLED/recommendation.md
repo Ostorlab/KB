@@ -5,6 +5,7 @@ FacebookSdk.setIsDebugEnabled(false);
 ```
 
 Method signature:
+
 ```java
 public static void setIsDebugEnabled(boolean enabled)
 ```

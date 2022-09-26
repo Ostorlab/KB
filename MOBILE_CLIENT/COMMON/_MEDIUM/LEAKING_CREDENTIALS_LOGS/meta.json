@@ -12,7 +12,7 @@
   "title": "Credentials exposed in logs",
   "privacy_issue": true,
   "security_issue": true,
-    "categories": {
+  "categories": {
     "OWASP_MASVS_L1": [
       "MSTG_STORAGE_3"
     ],
