@@ -23,7 +23,7 @@ The features enable configuring:
     </domain-config>
 </network-security-config>
 ```
-*   Declartive setting of certificate pinning keys
+*   Declarative setting of certificate pinning keys
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>

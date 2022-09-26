@@ -1,6 +1,6 @@
 {
   "risk_rating": "hardening",
-  "short_description": "Application do not enforce binary protections (ASLR, NX, RELRO, Stack canaries)",
+  "short_description": "Application do not enforce binary protections (ASLR, NX, RELRO, Stack canaries).",
   "references": {
     "Address Space Layout Randomization (ASLR)": "https://en.wikipedia.org/wiki/Address_space_layout_randomization",
     "No Execute (NX/DEP)": "https://en.wikipedia.org/wiki/NX_bit",

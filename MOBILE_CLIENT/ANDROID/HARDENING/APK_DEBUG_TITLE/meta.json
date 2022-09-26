@@ -1,6 +1,6 @@
 {
   "risk_rating": "hardening",
-  "short_description": "Application is compiled with debug mode enabled",
+  "short_description": "Application is compiled with debug mode enabled.",
   "references": {
     "DRD10-J Do not release apps that are debuggable (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/display/android/DRD10-X.+Do+not+release+apps+that+are+debuggable"
   },
