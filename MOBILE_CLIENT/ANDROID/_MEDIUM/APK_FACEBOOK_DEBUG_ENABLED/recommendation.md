@@ -8,9 +8,5 @@ Method signature:
 ```java
 public static void setIsDebugEnabled(boolean enabled)
 ```
-Documentation:
 
-Used to enable or disable logging, and other debug features. Defaults to BuildConfig.DEBUG.
-
-Parameters:
-enabled - Debug features (like logging) are enabled if true, disabled if false.
+If the API defaults to `BuildConfig.DEBUG`.

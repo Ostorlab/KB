@@ -1,6 +1,6 @@
 {
   "risk_rating": "medium",
-  "short_description": "Application is using Redis library",
+  "short_description": "Application is using Redis library without proper authentication.",
   "references": {},
   "title": "Redis Library detected",
   "privacy_issue": false,

@@ -1,1 +1,2 @@
-The download manager is a system service that handles long-running HTTP downloads. The application should not force using only the mobile network connection
+The download manager is a system service that handles long-running HTTP downloads. The application should not force
+using only the mobile network connection

@@ -1,6 +1,6 @@
 {
   "risk_rating": "medium",
-  "short_description": "The application forces the use of mobile network connection",
+  "short_description": "The application forces the use of mobile network connection.",
   "references": {
   },
   "title": "Abuse of mobile network connection",
