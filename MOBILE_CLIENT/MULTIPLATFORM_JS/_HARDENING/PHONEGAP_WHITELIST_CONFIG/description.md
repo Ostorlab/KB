@@ -1,1 +1,1 @@
-The application's whitelist allows unrestricted access to all ressources `*`.
+The application's whitelist allows unrestricted access to all resources`*`.
