@@ -12,7 +12,7 @@
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [
-      "MSTG-CODE-9"
+      "MSTG_CODE_9"
     ]
   }
 }

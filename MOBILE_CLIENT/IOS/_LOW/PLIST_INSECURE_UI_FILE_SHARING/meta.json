@@ -10,7 +10,7 @@
   "security_issue": false,
   "categories": {
     "OWASP_MASVS_L1": [
-      "MSTG-STORAGE-6"
+      "MSTG_STORAGE_6"
     ]
   }
 }

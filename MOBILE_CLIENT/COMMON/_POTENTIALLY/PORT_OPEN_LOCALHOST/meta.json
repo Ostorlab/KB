@@ -8,8 +8,8 @@
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [
-      "MSTG-NETWORK-1",
-      "MSTG-NETWORK-2"
+      "MSTG_NETWORK_1",
+      "MSTG_NETWORK_2"
     ]
   }
 }
