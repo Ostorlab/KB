@@ -1,1 +1,1 @@
-"Phonegap application log is set to DEBUG, this may cause it to leak too much information to Android logs"
+"Phonegap application log is set to DEBUG. This may cause it to leak too much information to Android logs."
