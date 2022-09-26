@@ -7,5 +7,8 @@
   },
   "title": "Notification Spoofing",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "OWASP_MASVS_L2": [
+      "MSTG_AUTH_12"
+    ]
 }
