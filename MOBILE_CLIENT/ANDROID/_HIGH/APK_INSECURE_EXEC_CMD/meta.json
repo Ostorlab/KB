@@ -5,5 +5,10 @@
   },
   "title": "Command Injection",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+    "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_2"
+    ]
+  }
 }
