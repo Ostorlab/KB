@@ -1,1 +1,0 @@
-Switch to an up-to-date component/library which has security fixes for newly identified vulnerabilities.

@@ -1,1 +1,0 @@
-Consider setting Referrer-Policy header to 'strict-origin-when-cross-origin' or a stricter value

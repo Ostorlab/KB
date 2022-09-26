@@ -1,1 +1,0 @@
-Address Space Layout Randomization (ASLR) is a memory protection that randomizes the layout space to to mitigate memory exploitation techniques.

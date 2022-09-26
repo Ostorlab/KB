@@ -1,8 +1,0 @@
-{
-  "risk_rating": "medium",
-  "short_description": "Application is using Redis library",
-  "references": {},
-  "title": "Redis Library detected",
-  "privacy_issue": false,
-  "security_issue": false
-}

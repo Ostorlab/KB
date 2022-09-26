@@ -1,2 +1,0 @@
-Bitcode refers to the type of code that is sent to iTunes Connect which allows Apple to use certain calculations to re-optimize apps further. 
-Bitcode applications are impossible to analyze dynamically and will limit the scan results of Ostorlab.

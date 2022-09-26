@@ -1,1 +1,0 @@
-Automatic Reference Counting (ARC) is a memory managment that autmates objects managemnt by the compiler to unburden the developer.
