@@ -9,7 +9,7 @@
   "title": "Personally Information were detected on the system",
   "privacy_issue": true,
   "security_issue": false,
-    "categories": {
+  "categories": {
     "OWASP_MASVS_L1": [
       "MSTG_ARCH_12"
     ],

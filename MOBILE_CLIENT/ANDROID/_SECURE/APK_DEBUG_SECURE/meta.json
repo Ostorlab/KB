@@ -7,7 +7,7 @@
   "title": "Debug mode disabled",
   "privacy_issue": false,
   "security_issue": true,
-    "categories": {
+  "categories": {
     "OWASP_MASVS_L1": [
       "MSTG_CODE_2"
     ],

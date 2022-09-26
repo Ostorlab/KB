@@ -2,7 +2,6 @@
   "risk_rating": "high",
   "short_description": "Application source code leaks through the source map, exposing sensitive information about the application internals.",
   "references": {
-
   },
   "title": "Source Map Code Leak",
   "privacy_issue": false,

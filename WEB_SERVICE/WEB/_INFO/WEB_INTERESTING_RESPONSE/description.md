@@ -1,1 +1,2 @@
-The backend response is considered as interesting. This is not necessarily a vulnerability, but is worth investigating the cause of the response.
+The backend response is considered as interesting. This is not necessarily a vulnerability, but is worth investigating
+the cause of the response.

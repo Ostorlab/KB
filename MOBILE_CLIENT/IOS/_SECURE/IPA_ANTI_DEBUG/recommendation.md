@@ -4,6 +4,7 @@ To implement anti-debugging techniques, use several of these techniques:
 prevent debuggers from attaching to the process. The system call is not
 part of iOS public API and requires using the `dlsym` function to obtain
 a function pointer to call it.
+
 ```c
 #import <dlfcn.h>
 #import <sys/types.h>
@@ -14,7 +15,6 @@ void anti_debug() {
   ptrace_ptr(31, 0, 0, 0); // PTRACE_DENY_ATTACH = 31
 }
 ```
-
 
 `sysctl`: The function can be used to retrieve information about the
 current process, including determining if the application is being
@@ -61,6 +61,6 @@ static bool AmIBeingDebugged(void)
 }
    
 ```
-    
+
 `getppid`: iOS application can check the parent `PID` to detect if the
 application has been started with a debugger.

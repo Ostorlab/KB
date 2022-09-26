@@ -1,11 +1,11 @@
 A memory leak is an unintentional form of memory consumption whereby the application fails to free an allocated block of
-memory when no longer needed. The consequences of such an issue depend on the application itself. 
+memory when no longer needed. The consequences of such an issue depend on the application itself.
 
 Consider the following general three cases:
 
 * Short Lived User*land Application: Little if any noticeable effect. Modern operating system recollects lost memory
 * after program termination.
-* Long Lived User*land Application:  Application	Potentially dangerous. These applications continue to waste memory
+* Long Lived User*land Application:  Application Potentially dangerous. These applications continue to waste memory
 * over time, eventually consuming all RAM resources. Leads to abnormal system behavior.
 * Kernel*land Process: Very dangerous. Memory leaks in the kernel level lead to serious system stability issues. Kernel
 * memory is very limited compared to user land memory and should be handled cautiously.
