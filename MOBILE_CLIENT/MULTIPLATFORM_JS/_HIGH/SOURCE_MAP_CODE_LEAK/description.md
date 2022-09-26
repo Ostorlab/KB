@@ -1,10 +1,10 @@
-Application should provide as little explanatory information as possible with the compiled code. Metadata such as
-debugging information, line numbers, and descriptive function or method names makes the binary or byte-code
+The application should provide as little explanatory information as possible with the compiled code. Metadata such as
+debugging information, line numbers, and descriptive function or method names make the binary or byte-code
 easier to reverse engineer.
 
-The application leaks source code through source map files, used solely for debugging and development.
+The application leaks the source code through source map files used solely for debugging and development.
 
-Source code can be fully retrieved with the following sample script
+Source code can be fully retrieved with the following sample script:
 
 ```python
 
