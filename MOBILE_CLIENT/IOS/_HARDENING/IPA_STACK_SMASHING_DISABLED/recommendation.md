@@ -1,1 +1,1 @@
-Eanble Stack Smashing Protection (SSP) by specifying the `-fstack-protector-all` compiler flag.
+Enable Stack Smashing Protection (SSP) by specifying the `-fstack-protector-all` compiler flag.
