@@ -1,10 +1,15 @@
 {
   "title": "No sensitive data stored outside App",
-  "short_description": "The application do not store sensitive data outside the application container or system credential storage facilities.",
+  "short_description": "The application does not store sensitive data outside the application container or system credential storage facilities.",
   "risk_rating": "secure",
   "references": {
     "OWASP Mobile Application Security Verification Standard - Data Storage and Privacy": "https://github.com/OWASP/owasp-masvs/blob/master/Document/0x07-V2-Data_Storage_and_Privacy_requirements.md"
   },
   "privacy_issue": true,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_MASVS_L1_1.4": [
+      "MSTG-STORAGE-2"
+    ]
+  }
 }
