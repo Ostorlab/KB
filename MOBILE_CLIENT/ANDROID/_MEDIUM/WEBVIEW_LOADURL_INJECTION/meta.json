@@ -1,0 +1,20 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Insecure use of Webview.loadurl leading to insecure content loading or potential code injection.",
+  "references": {
+    "DRD02-J. Do not allow WebView to access sensitive local resource through file scheme": "https://wiki.sei.cmu.edu/confluence/display/android/DRD02-J.+Do+not+allow+WebView+to+access+sensitive+local+resource+through+file+scheme",
+    "Webview loadurl (Android documentation)": "https://developer.android.com/reference/android/webkit/WebView#loadUrl(java.lang.String,%2520java.util.Map%253Cjava.lang.String,%2520java.lang.String%253E)",
+    "Websettings (Android documentation)": "https://developer.android.com/reference/android/webkit/WebSettings"
+  },
+  "title": "Webview loadurl injection",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_7"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_7"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Application sets deprecated SSL/TLS protocols with known security and privacy issues.",
+  "references": {
+    "TLSv1.0 and TLSv1.1 deprecation": "https://blog.qualys.com/ssllabs/2018/11/19/grade-change-for-tls-1-0-and-tls-1-1-protocols",
+    "SSL and TLS deployment best practices": "https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices"
+  },
+  "title": "Use of deprecated TLS/SSL protocol version",
+  "privacy_issue": true,
+  "security_issue": true
+}

@@ -1,0 +1,15 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The application does not enforce Address Space Layout Randomization (ASLR) binary protection.",
+  "references": {
+    "Address Space Layout Randomization (Wikipedia)": "https://en.wikipedia.org/wiki/Address_space_layout_randomization#iOS_.28iPhone.2C_iPod_touch.2C_iPad.29"
+  },
+  "title": "Address Space Layout Randomization (ASLR) not enforced",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_9"
+    ]
+  }
+}

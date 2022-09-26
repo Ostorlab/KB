@@ -1,0 +1,15 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "The application opens sockets that are listening on localhost and are accessible to other apps on the phone.",
+  "references": {
+  },
+  "title": "port open on localhost",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_NETWORK_1",
+      "MSTG_NETWORK_2"
+    ]
+  }
+}

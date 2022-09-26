@@ -1,0 +1,14 @@
+{
+  "risk_rating": "high",
+  "short_description": "Application source code leaks through the source map, exposing sensitive information about the application internals.",
+  "references": {
+  },
+  "title": "Source Map Code Leak",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_3"
+    ]
+  }
+}

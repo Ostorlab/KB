@@ -1,0 +1,1 @@
+It is recommended to apply proper TLS certificate validation. A compliant solution depends on actual implementation.

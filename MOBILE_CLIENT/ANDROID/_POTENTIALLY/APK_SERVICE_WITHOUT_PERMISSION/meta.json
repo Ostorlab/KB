@@ -1,0 +1,21 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "Declared services are not protected with global permissions.",
+  "references": {
+    "Security Decisions Via Untrusted Inputs (OWASP Mobile Top 10)": "https://www.owasp.org/index.php/Mobile_Top_10_2014-M8",
+    "Service (Android Developer Documentation)": "http://developer.android.com/reference/android/app/Service.html",
+    "CWE-280: Improper Handling of Insufficient Permissions or Privileges": "http://cwe.mitre.org/data/definitions/280.html"
+  },
+  "title": "Services declared without permissions",
+  "cvss_v3_vector": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_2"
+    ]
+  }
+}

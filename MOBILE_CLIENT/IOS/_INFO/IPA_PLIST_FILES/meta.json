@@ -1,0 +1,10 @@
+{
+  "risk_rating": "info",
+  "short_description": "Content of all Plist files shipped in the application.",
+  "references": {
+    "The plist manual page": "https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man5/plist.5.html"
+  },
+  "title": "IPA Plist files",
+  "privacy_issue": false,
+  "security_issue": false
+}

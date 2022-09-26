@@ -1,0 +1,11 @@
+{
+  "risk_rating": "info",
+  "short_description": "List of crypto API calls",
+  "references": {
+    "SER03-J. Do not serialize unencrypted sensitive data (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/display/java/SER03-J.+Do+not+serialize+unencrypted+sensitive+data",
+    "DRD18. Do not use the default behavior in a cryptographic library if it does not use recommended practices (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/display/android/DRD18.+Do+not+use+the+default+behavior+in+a+cryptographic+library+if+it+does+not+use+recommended+practices"
+  },
+  "title": "Recorded calls to Crypto API",
+  "privacy_issue": true,
+  "security_issue": true
+}

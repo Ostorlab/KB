@@ -1,0 +1,9 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "Dangerous Sink method is called using potentially user controlled parameters or untrusted Source method.",
+  "references": {
+  },
+  "title": "Source to Sink",
+  "privacy_issue": false,
+  "security_issue": true
+}

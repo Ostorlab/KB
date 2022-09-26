@@ -1,0 +1,19 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The application uses a hardcoded to perform cryptographic operations.",
+  "references": {
+    "Use of Hard-coded Credentials (CWE-798)": "https://cwe.mitre.org/data/definitions/798.html"
+  },
+  "title": "Cryptographic Vulnerability: Hardcoded Key",
+  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CRYPTO_1"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CRYPTO_1"
+    ]
+  }
+}

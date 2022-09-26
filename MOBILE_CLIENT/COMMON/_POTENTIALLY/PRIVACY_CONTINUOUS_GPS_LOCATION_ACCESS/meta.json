@@ -1,0 +1,14 @@
+{
+  "title": "Continuous collection of GPS location",
+  "short_description": "The application continuously collects the device's GPS location.\n",
+  "risk_rating": "potentially",
+  "references": {
+  },
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_NETWORK_1"
+    ]
+  }
+}

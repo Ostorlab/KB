@@ -1,0 +1,17 @@
+{
+  "risk_rating": "high",
+  "short_description": "A remote command execution vulnerability affects the application.",
+  "references": {
+  },
+  "title": "Command Injection",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_2"
+    ]
+  }
+}

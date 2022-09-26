@@ -1,0 +1,13 @@
+{
+  "risk_rating": "info",
+  "short_description": "List of Interp-Process Communication (IPC) calls",
+  "references": {
+    "Binders (Android developer)": "http://developer.android.com/reference/android/os/Binder.html",
+    "Bundle (Android developer)": "http://developer.android.com/reference/android/os/Bundle.html",
+    "Security tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html#UserData",
+    "Intents (Android developer)": "http://developer.android.com/reference/android/content/Intent.html"
+  },
+  "title": "Call to Inter-Process-Communication (IPC) API",
+  "privacy_issue": false,
+  "security_issue": true
+}

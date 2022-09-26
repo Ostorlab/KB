@@ -1,0 +1,10 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "Insecure HTTP Header Setting: X-Frame-Options.",
+  "references": {
+    "X-Frame-Options": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
+  },
+  "title": "Insecure HTTP Header Setting: X-Frame-Options",
+  "privacy_issue": false,
+  "security_issue": true
+}

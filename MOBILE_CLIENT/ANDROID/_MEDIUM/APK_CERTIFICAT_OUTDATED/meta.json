@@ -1,0 +1,18 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Expired application signing certificate.",
+  "references": {
+    "Signing Your Applications": "http://developer.android.com/tools/publishing/app-signing.html"
+  },
+  "title": "Application signed with an expired certificate",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_1"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_1"
+    ]
+  }
+}

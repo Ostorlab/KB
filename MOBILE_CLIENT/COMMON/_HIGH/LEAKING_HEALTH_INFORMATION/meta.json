@@ -1,0 +1,21 @@
+{
+  "risk_rating": "high",
+  "short_description": "Protected Health Information was detected on the system.",
+  "references": {
+    "HIPAA Security Rules": "http://www.access.gpo.gov/nara/cfr/waisidx_07/45cfr160_07.html",
+    "Practices for Protecting Electronic Restricted Data: A Quick Reference": "http://its.ucsc.edu/policies/rd.html",
+    "CWE-200: Information Exposure": "http://cwe.mitre.org/data/definitions/200.html",
+    "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "http://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Protected Health Information were detected on the system",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_ARCH_12"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_ARCH_12"
+    ]
+  }
+}

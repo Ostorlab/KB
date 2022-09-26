@@ -1,0 +1,10 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The application doesn't restrict uploaded file based on file metadata or content.",
+  "references": {
+    "Unrestricted File Upload (OWASP)": "https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload"
+  },
+  "title": "Unrestricted file upload",
+  "privacy_issue": false,
+  "security_issue": true
+}

@@ -1,0 +1,18 @@
+{
+  "risk_rating": "low",
+  "short_description": "The application uses an outdated component or library with publicly known vulnerabilities.",
+  "references": {
+    "Top 10 A9-Using Components with Known Vulnerabilities": "https://owasp.org/www-pdf-archive/OWASP_Top_10-2017_%28en%29.pdf.pdf"
+  },
+  "title": "Use of Outdated Vulnerable Component",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_5"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_5"
+    ]
+  }
+}

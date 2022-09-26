@@ -1,0 +1,18 @@
+{
+  "risk_rating": "medium",
+  "short_description": "App Transport Security (ATS) is missing or using unsafe settings allowing the retrieval of content over potentially insecure channels.",
+  "references": {
+    "Preventing Insecure Network Connections": "https://developer.apple.com/documentation/security/preventing_insecure_network_connections",
+    "Announcement of App Transport Security in iOS 9": "https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html",
+    "Cocoa Keys (Apple Developer)": "https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html"
+  },
+  "title": "Insecure App Transport Security (ATS) Settings",
+  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_NETWORK_2"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The application suffers from unintentional memory leak that may cause a DoS or Malicious Code Execution.",
+  "references": {
+  },
+  "title": "Memory Leak",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_8"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_8"
+    ]
+  }
+}

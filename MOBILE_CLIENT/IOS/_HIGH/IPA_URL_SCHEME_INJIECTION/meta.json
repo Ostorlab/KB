@@ -1,0 +1,14 @@
+{
+  "risk_rating": "high",
+  "short_description": "The application exposes a URL scheme that doesn't perform proper input validation.",
+  "references": {
+  },
+  "title": "iOS URL Scheme Injection",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_2"
+    ]
+  }
+}

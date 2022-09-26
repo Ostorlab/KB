@@ -1,0 +1,9 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The application accepts insecure TLS Ciphers.",
+  "references": {
+  },
+  "title": "Insecure TLS Ciphers supported",
+  "privacy_issue": true,
+  "security_issue": true
+}

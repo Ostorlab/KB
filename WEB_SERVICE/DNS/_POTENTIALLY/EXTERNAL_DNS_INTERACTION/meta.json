@@ -1,0 +1,11 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "Control of arbitrary server-side DNS lookups.",
+  "references": {
+    "CWE-918: Server-Side Request Forgery (SSRF)": "https://cwe.mitre.org/data/definitions/918.html",
+    "CWE-406: Insufficient Control of Network Message Volume (Network Amplification)": "https://cwe.mitre.org/data/definitions/406.html"
+  },
+  "title": "External DNS interaction",
+  "privacy_issue": false,
+  "security_issue": true
+}
