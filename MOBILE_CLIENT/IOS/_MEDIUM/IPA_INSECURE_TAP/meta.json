@@ -11,8 +11,8 @@
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
-    "OWASP_MASVS_L1_1.4": [
-      "MSTG-NETWORK-2"
+    "OWASP_MASVS_L1": [
+      "MSTG_NETWORK_2"
     ]
   }
 }

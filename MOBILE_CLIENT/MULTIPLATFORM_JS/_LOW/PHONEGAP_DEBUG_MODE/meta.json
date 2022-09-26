@@ -7,8 +7,8 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "OWASP_MASVS_L1_1.4": [
-      "MSTG-CODE-2"
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_2"
     ]
   }
 }
