@@ -1,6 +1,6 @@
 {
   "risk_rating": "low",
-  "short_description": "The application does not disable caching by the keyboard of sensitive data.\n",
+  "short_description": "The application does not disable caching by the keyboard of sensitive data.",
   "references": {
     "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor": "https://cwe.mitre.org/data/definitions/200.html",
     "OWASP: Finding Sensitive Data in Keyboard Cache": "https://mobile-security.gitbook.io/mobile-security-testing-guide/ios-testing-guide/0x06d-testing-data-storage#finding-sensitive-data-in-the-keyboard-cache-mstg-storage-5"

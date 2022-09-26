@@ -8,5 +8,10 @@
   },
   "title": "Secret information stored in the application",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1_1.4": [
+      "MSTG-STORAGE-1"
+    ]
+  }
 }

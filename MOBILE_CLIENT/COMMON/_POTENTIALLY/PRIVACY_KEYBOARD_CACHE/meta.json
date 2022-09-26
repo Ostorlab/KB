@@ -1,9 +1,15 @@
 {
-  "title": "Continuous collection of GPS location",
-  "short_description": "The application continuously collects device GPS location.",
-  "risk_rating": "potentially",
+  "risk_rating": "low",
+  "short_description": "The application does not disable caching by the keyboard of sensitive data.",
   "references": {
+    "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor": "https://cwe.mitre.org/data/definitions/200.html"
   },
+  "title": "Sensitive data stored in keyboard cache",
   "privacy_issue": true,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_MASVS_L1_1.4": [
+      "MSTG-STORAGE-5"
+    ]
+  }
 }
