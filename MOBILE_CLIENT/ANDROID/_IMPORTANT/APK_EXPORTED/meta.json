@@ -1,6 +1,6 @@
 {
   "risk_rating": "important",
-  "short_description": "List of all exported components (activities, services, broadcast receivers, content providers)",
+  "short_description": "List of all exported components (activities, services, broadcast receivers, content providers).",
   "references": {
     "Service (Android developer)": "http://developer.android.com/reference/android/app/Service.html",
     "Activity (Android developer)": "http://developer.android.com/reference/android/app/Activity.html",
