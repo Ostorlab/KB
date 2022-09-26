@@ -1,6 +1,6 @@
 {
   "risk_rating": "info",
-  "short_description": "VirusTotal Malware analysis",
+  "short_description": "VirusTotal Malware analysis.",
   "references": {
     "Virustotal": "https://www.virustotal.com/"
   },

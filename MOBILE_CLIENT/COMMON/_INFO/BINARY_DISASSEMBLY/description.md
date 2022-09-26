@@ -1,1 +1,0 @@
-Disassmbly of listed binaries.

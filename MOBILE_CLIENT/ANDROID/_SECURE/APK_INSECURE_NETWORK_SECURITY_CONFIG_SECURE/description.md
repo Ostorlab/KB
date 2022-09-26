@@ -2,7 +2,8 @@ Android Network Security Configuration enables a declarative setting of the appl
 
 The features enable configuring:
 
-*   Custom Certificate Authority with support for debug only settings
+* Custom Certificate Authority with support for debug only settings
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
@@ -14,7 +15,8 @@ The features enable configuring:
 </network-security-config>
 ```
 
-*   Declarative opt-out for cleartext traffic
+* Declarative opt-out for cleartext traffic
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
@@ -23,7 +25,9 @@ The features enable configuring:
     </domain-config>
 </network-security-config>
 ```
-*   Declartive setting of certificate pinning keys
+
+* Declartive setting of certificate pinning keys
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>

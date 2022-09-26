@@ -8,5 +8,13 @@
   },
   "title": "Dependency Confusion",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_5"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_5"
+    ]
+  }
 }
