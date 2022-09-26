@@ -1,7 +1,7 @@
 Webview exposes remote debugging using the `setWebContentsDebuggingEnabled` API. The API was introduced in API 19.
 
-Webview debugging uses the Chrome Debug Protocol and is exposed using an abstract named unix socket. The socket is either
-name `webview_devtools_remote` or `webview_devtools_remote_<pid>`.
+Webview debugging uses the Chrome Debug Protocol and is exposed using an abstract named unix socket. The socket is
+either name `webview_devtools_remote` or `webview_devtools_remote_<pid>`.
 
 To confirm that socket is exposed on your device, you may use the `netstat -untapexW` command and search for your target
 application or the `@` sign, used to denote abstract sockets.
@@ -27,7 +27,7 @@ To access the remote protocol, use the Chrome Debug Protocol client, like `pychr
 import pychrome
 
 # connect to webview on the exposed port.
-browser = pychrome.Browser(url="http://127.0.0.1:9999") 
+browser = pychrome.Browser(url="http://127.0.0.1:9999")
 t = browser.list_tab()[0]
 t.start()
 t.DOM.enable()

@@ -1,10 +1,18 @@
 {
   "risk_rating": "medium",
-  "short_description": "Dynamic load code from insecure storage",
+  "short_description": "Dynamic load code from insecure storage.",
   "references": {
     "Dynamically Loading Code Securely with Android": "http://tech.co/android-security-2014-07"
   },
   "title": "Android Class Load Hijacking",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_2"
+    ]
+  }
 }
