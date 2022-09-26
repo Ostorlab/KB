@@ -8,8 +8,11 @@
   "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
   "privacy_issue": true,
   "security_issue": false,
-    "categories": {
+  "categories": {
     "OWASP_MASVS_L1": [
+      "MSTG_ARCH_12"
+    ],
+    "OWASP_MASVS_L2": [
       "MSTG_ARCH_12"
     ]
   }
