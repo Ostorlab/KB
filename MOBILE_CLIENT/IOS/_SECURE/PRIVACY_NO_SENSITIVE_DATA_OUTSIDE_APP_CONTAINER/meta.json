@@ -8,7 +8,7 @@
   "privacy_issue": true,
   "security_issue": false,
   "categories": {
-    "OWASP_MASVS_L1_1.4": [
+    "OWASP_MASVS_L1": [
       "MSTG-STORAGE-2"
     ]
   }
