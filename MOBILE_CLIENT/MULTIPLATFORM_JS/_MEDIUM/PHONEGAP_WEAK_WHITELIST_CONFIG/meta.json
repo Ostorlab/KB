@@ -9,5 +9,10 @@
     "Apache Cordova CVE-2015-1835": "http://cordova.apache.org/announcements/2015/05/26/android-402.html"
   },
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1_1.4": [
+      "MSTG-PLATFORM-1"
+    ]
+  }
 }
