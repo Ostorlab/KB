@@ -1,6 +1,6 @@
 {
   "risk_rating": "low",
-  "short_description": "User enumeration flaws provide attackers with a method to determine whether a specified username exists",
+  "short_description": "User enumeration flaws provide attackers with a method to determine whether a specified username exists.",
   "references": {
     "Username Enumeration": "https://guides.codepath.com/websecurity/Username-Enumeration"
   },

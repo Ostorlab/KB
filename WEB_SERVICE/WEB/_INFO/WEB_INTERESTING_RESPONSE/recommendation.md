@@ -1,1 +1,1 @@
-This entry is informative, no recommendations applicable.
+This entry is informative, but no recommendations are applicable.

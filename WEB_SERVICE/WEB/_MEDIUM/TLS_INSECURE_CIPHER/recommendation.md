@@ -10,7 +10,7 @@ The recommended TLS configuration should enforce the following recommendations:
 * Remove `DES` support
 * Remove `MD5` support
 * Prefere `SHA256` over `SHA1`
-* Prefer `AES128` over `AES256` as 256 offer little security advantages and is less robust to timing attacks
+* Prefer `AES128` over `AES256` as 256 offers little security advantages and is less robust to timing attacks
 * Disable Client-Initiated Renegotiation
 * Disable TLS compression
 * Offer only ciphers with a key length of greater than 128bit

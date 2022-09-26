@@ -1,6 +1,6 @@
 {
   "risk_rating": "medium",
-  "short_description": "Application accepts valid certificate with invalid hostname making it vulnerable to man-in-the-middle (MITM) attacks",
+  "short_description": "The application accepts valid certificates with invalid hostnames making it vulnerable to man-in-the-middle (MITM) attacks.",
   "references": {
     "Properly verify server certificate on SSL/TLS (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=134807561"
   },

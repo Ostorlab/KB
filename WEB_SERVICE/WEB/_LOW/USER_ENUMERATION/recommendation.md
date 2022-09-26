@@ -4,9 +4,9 @@ valid and invalid username
 - Login:
 
   Make sure to return a generic "No such username or password" message
-  when a login failure occurs. Make sure the HTTP response, and the
+  when a login fails. In addition, make sure the HTTP response and the
   time taken to respond are no different when a username does not
-  exist, and an incorrect password is entered.
+  exist and an incorrect password is entered.
 
 - Password Reset:
 
@@ -19,7 +19,7 @@ valid and invalid username
 
   Avoid having your site tell people that a supplied username is
   already taken. If your usernames are email addresses, send a
-  password reset email if a user tries to sign-up with an existing
+  password reset email if a user tries to sign-up with a current
   address. If usernames are not email addresses, protect your sign-up
   page with a CAPTCHA.
 

@@ -1,6 +1,6 @@
 {
   "risk_rating": "high",
-  "short_description": "Application suffers from heartbleed (CVE-2014-0160) vulnerability",
+  "short_description": "Application suffers from heartbleed (CVE-2014-0160) vulnerability.",
   "references": {
     "title2": "url2",
     "title": "url"

@@ -1,6 +1,6 @@
 {
   "risk_rating": "medium",
-  "short_description": "Server accepts anonymous authentication",
+  "short_description": "Server accepts anonymous authentication.",
   "references": {
   },
   "title": "Anonymous unauthenticated server accepted",

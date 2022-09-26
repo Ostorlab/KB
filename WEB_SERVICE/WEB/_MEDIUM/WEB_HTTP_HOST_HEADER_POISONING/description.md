@@ -1,7 +1,7 @@
-The HTTP Host is specifies the domain name the HTTP Client would like to access. It is mandatory as part of the HTTP/1.1
+The HTTP Host specifies the domain name the HTTP Client would like to access. It is mandatory as part of the HTTP/1.1
 standard.
 
-For instance to access the domain `www.ostorlab.co`, the HTTP client would send the following request with the `Host`
+For instance, to access the domain `www.ostorlab.co`, the HTTP client would send the following request with the `Host`
 header:
 
 ```http request
@@ -9,7 +9,7 @@ GET / HTTP/1.1
 Host: www.ostorlab.co
 ```
 
-The `Host` header is important to enable routing traffic to virtual hosts.
+The `Host` header is important to enabling routing traffic to virtual hosts.
 
 Applications that handle the `Host` header insecurely are vulnerable to multiple classes of vulnerabilities, like:
 

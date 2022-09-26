@@ -1,6 +1,6 @@
 {
   "risk_rating": "hardening",
-  "short_description": "The application do no enforce strict transport security in HTTP responses.",
+  "short_description": "The application does not enforce strict transport security in HTTP responses.\n",
   "references": {
   },
   "title": "Strict-Transport-Security (HSTS) not enforced",

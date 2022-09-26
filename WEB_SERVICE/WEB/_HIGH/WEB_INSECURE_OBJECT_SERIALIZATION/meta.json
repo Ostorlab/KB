@@ -1,6 +1,6 @@
 {
   "risk_rating": "high",
-  "short_description": "The application uses an insecure object deserialization format that can be exploited by an attacked to cause a remote code execution.",
+  "short_description": "The application uses an insecure object deserialization format that attackers can exploit to cause remote code execution.",
   "references": {
     "Java unmarsheller security": "https://github.com/mbechler/marshalsec/raw/master/marshalsec.pdf",
     "Deserialization of untrusted data (OWASP)": "https://www.owasp.org/index.php/Deserialization_of_untrusted_data",

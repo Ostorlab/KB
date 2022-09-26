@@ -1,1 +1,1 @@
-TLS scan listing supported ciphers, protocols and checks for known vulnerabilities.
+TLS scan listing supported ciphers, protocols, and checks for known vulnerabilities.

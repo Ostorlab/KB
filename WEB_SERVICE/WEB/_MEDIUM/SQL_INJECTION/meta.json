@@ -1,6 +1,6 @@
 {
   "risk_rating": "medium",
-  "short_description": "Insecure use of SQL query API vulnerable to SQL injection",
+  "short_description": "Insecure use of SQL query API vulnerable to SQL injection.",
   "references": {
     "SQL Injection (OWASP)": "https://www.owasp.org/index.php/SQL_Injection",
     "Security Tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html",
