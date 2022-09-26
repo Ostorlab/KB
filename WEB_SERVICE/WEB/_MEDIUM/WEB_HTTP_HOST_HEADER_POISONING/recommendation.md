@@ -6,4 +6,5 @@ The recommendations to protect against these attacks are:
 
 * Avoid using `Host` header value in application logic.
 * Implement a whitelist check of accepted values, this is commonly supported by most web frameworks.
-* Disable host override headers, this depends on the intermediary components deployed in your architecture. Common places to check are reverse-proxies, Kubernetes ingress controllers.
+* Disable host override headers, this depends on the intermediary components deployed in your architecture. Common
+  places to check are reverse-proxies, Kubernetes ingress controllers.

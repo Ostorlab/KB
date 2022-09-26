@@ -1,3 +1,6 @@
-Server-side triggered DNS requests might be an intended behavior, it is recommended to review the purpose of the service and evaluate the potential risks, like the participation in distributed denial of service (DDoS) attack, and interaction with remote services,
+Server-side triggered DNS requests might be an intended behavior, it is recommended to review the purpose of the service
+and evaluate the potential risks, like the participation in distributed denial of service (DDoS) attack, and interaction
+with remote services,
 
-If this functionality is not an intended behavior, it is recommended to disable the service if possible or enforce whitelist-based filtering blocking all unauthorized domains.
+If this functionality is not an intended behavior, it is recommended to disable the service if possible or enforce
+whitelist-based filtering blocking all unauthorized domains.

@@ -3,6 +3,7 @@ on the framework used and can either be a global setting or be done
 manually by adding the flags to the request.
 
 For session cookies managed by PHP, the flag is set either in `php.ini`:
+
 ```http request
 session.cookie_secure = True
 ```
