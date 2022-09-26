@@ -1,6 +1,6 @@
 {
   "risk_rating": "medium",
-  "short_description": "Inclusion of Sensitive Information in Log Files",
+  "short_description": "Inclusion of Sensitive Information in Log Files.",
   "references": {
     "Practices for Protecting Electronic Restricted Data: A Quick Reference": "http://its.ucsc.edu/policies/rd.html",
     "CWE-200: Information Exposure": "http://cwe.mitre.org/data/definitions/200.html",
@@ -11,5 +11,13 @@
   },
   "title": "Credentials exposed in logs",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+    "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_STORAGE_3"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_STORAGE_3"
+    ]
+  }
 }

@@ -1,6 +1,6 @@
 {
   "risk_rating": "medium",
-  "short_description": "Inclusion of Sensitive Information in URLs",
+  "short_description": "Inclusion of Sensitive Information in URLs.",
   "references": {
     "CWE-200: Information Exposure": "http://cwe.mitre.org/data/definitions/200.html",
     "CWE-598: Information Exposure Through Query Strings in GET Request": "https://cwe.mitre.org/data/definitions/598.html",
