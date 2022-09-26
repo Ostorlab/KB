@@ -1,6 +1,6 @@
 {
   "risk_rating": "high",
-  "short_description": "A remote command execution vulnerability affects the application",
+  "short_description": "A remote command execution vulnerability affects the application.",
   "references": {
   },
   "title": "Command Injection",
