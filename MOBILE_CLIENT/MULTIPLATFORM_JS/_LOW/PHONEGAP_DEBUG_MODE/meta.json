@@ -9,6 +9,9 @@
   "categories": {
     "OWASP_MASVS_L1": [
       "MSTG_CODE_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_2"
     ]
   }
 }

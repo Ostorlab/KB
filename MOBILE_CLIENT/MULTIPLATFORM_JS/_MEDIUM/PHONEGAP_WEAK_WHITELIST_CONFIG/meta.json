@@ -12,7 +12,10 @@
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [
-      "MSTG_PLATFORM_1"
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_2"
     ]
   }
 }
