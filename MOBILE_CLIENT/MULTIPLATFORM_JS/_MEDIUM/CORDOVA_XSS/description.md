@@ -9,6 +9,7 @@ benign and trusted content. XSS attacks occur when an attacker can inject malici
 Example script to test presence of XSS
 
 ```html
+
 <script>alert("Ostorlab XSS!")</script>
 ```
 

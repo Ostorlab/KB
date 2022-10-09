@@ -12,6 +12,9 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_PLATFORM_2"
+    ],
+    "CWE_TOP_25": [
+      "CWE_20"
     ]
   }
 }

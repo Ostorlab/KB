@@ -15,6 +15,9 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_STORAGE_1"
+    ],
+    "CWE_TOP_25": [
+      "CWE_798"
     ]
   }
 }

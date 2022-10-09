@@ -7,42 +7,48 @@ file.
 Android defines multiple paths types:
 
 ```xml
-<files-path name="name" path="path" />
+
+<files-path name="name" path="path"/>
 ```
 
 * Represent files in the files/ subdirectory of your app's internal storage area. This subdirectory is the same as the
   value returned by `Context.getFilesDir()`.
 
 ```xml
-<cache-path name="name" path="path" />
+
+<cache-path name="name" path="path"/>
 ```
 
 * Represent files in the cache subdirectory of your app's internal storage area. The root path of this subdirectory is
   the same as the value returned by `getCacheDir()`.
 
 ```xml
-<external-path name="name" path="path" />
+
+<external-path name="name" path="path"/>
 ```
 
 * Represent files in the root of the external storage area. The root path of this subdirectory is the same as the value
   returned by `Environment.getExternalStorageDirectory()`.
 
 ```xml
-<external-files-path name="name" path="path" />
+
+<external-files-path name="name" path="path"/>
 ```
 
 * Represent files in the root of your app's external storage area. The root path of this subdirectory is the same as the
   value returned by `Context.getExternalFilesDir(null)`.
 
 ```xml
-<external-cache-path name="name" path="path" />
+
+<external-cache-path name="name" path="path"/>
 ```
 
 * files in the root of your app's external cache area. The root path of this subdirectory is the same as the
   value returned by `Context.getExternalCacheDir()`.
 
 ```xml
-<external-media-path name="name" path="path" />
+
+<external-media-path name="name" path="path"/>
 ```
 
 * Represent files in the root of your app's external media area. The root path of this subdirectory is the same as the

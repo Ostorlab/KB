@@ -10,5 +10,10 @@
   "title": "Intent Spoofing",
   "cvss_v3_vector": "CVSS:3.0/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_276"
+    ]
+  }
 }

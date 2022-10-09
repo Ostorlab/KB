@@ -1,5 +1,6 @@
 HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying
-user agents (such as a web browser) are to interact with it using only secure (HTTPS) connections. The server communicates the HSTS Policy to the user agent via an HTTP response header field named "Strict-Transport-Security". HSTS
+user agents (such as a web browser) are to interact with it using only secure (HTTPS) connections. The server
+communicates the HSTS Policy to the user agent via an HTTP response header field named "Strict-Transport-Security". HSTS
 The policy specifies a period during which the user agent shall access the server in only a secure fashion.
 
 When a web application issues HSTS Policy to user agents, conformant user agents behave as follows:

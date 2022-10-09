@@ -12,6 +12,9 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_CODE_8"
+    ],
+    "CWE_TOP_25": [
+      "CWE_400"
     ]
   }
 }

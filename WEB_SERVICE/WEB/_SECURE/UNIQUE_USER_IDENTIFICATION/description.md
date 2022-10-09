@@ -2,7 +2,8 @@ Maintaining separate credentials for each user of information systems is critica
 and easing investigation of potential data breaches.
 
 The HIPAA Security Rule requires Covered Entities to implement a “Unique User Identification” standard for systems
-holding electronically protected health information (EPHI). Unique User Identification is a “required” specification under
+holding electronically protected health information (EPHI). Unique User Identification is a “required” specification
+under
 the Access Control standard and should be employed for all EPHI systems.
 
 As the name implies, unique user identification refers to using a unique name or number to identify and track

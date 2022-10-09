@@ -3,7 +3,8 @@ Cross-Site Scripting (XSS), clickjacking, and other client-side attacks that rel
 context of a trusted web resource.
 
 You can selectively specify which data sources should be
-permitted in your web application using appropriate CSP directives in HTTP response headers. This article shows how to use CSP headers to protect websites against XSS attacks and
+permitted in your web application using appropriate CSP directives in HTTP response headers. This article shows how to
+use CSP headers to protect websites against XSS attacks and
 other attempts to bypass the same-origin policy.
 
 CSP can be enabled by instructing the browser with a Content-Security-Policy directive in a response header;
