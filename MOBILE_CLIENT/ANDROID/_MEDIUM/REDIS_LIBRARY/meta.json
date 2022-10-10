@@ -4,5 +4,11 @@
   "references": {},
   "title": "Redis Library detected",
   "privacy_issue": false,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_287",
+      "CWE_862"
+    ]
+  }
 }

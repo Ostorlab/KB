@@ -1,2 +1,3 @@
-Android stores non-numeric words in the keyboard cache. Sensitive information like login or passwords may leak if the auto-correction 
+Android stores non-numeric words in the keyboard cache. Sensitive information like login or passwords may leak if the
+auto-correction
 the feature is not disabled.

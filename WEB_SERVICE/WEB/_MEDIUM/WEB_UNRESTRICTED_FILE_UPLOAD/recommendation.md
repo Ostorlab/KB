@@ -7,9 +7,11 @@ Recommendation to limit and prevent unrestricted file upload:
   should be thoroughly scanned and validated before being made available to other users. If in doubt, the file should be
   discarded.
 * It is necessary to have a list of only permitted extensions on the web application. And file extensions can be
-  selected from the list. For instance, it can be a “select case” syntax (in the case of having VBScript) to choose the file
+  selected from the list. For instance, it can be a “select case” syntax (in the case of having VBScript) to choose the
+  file
   extension regarding the actual file extension.
-* All control and Unicode characters should be removed from the filenames and extensions. Also, the special characters such as `;`, `:`, `>`, `<`, `/` ,`\`, additional `.`, `*`, `%`, `$`, and so
+* All control and Unicode characters should be removed from the filenames and extensions. Also, the special characters
+  such as `;`, `:`, `>`, `<`, `/` ,`\`, additional `.`, `*`, `%`, `$`, and so
   on should be discarded as well. If it is applicable and there is no need to have Unicode characters, it is highly
   recommended only to accept Alpha-Numeric characters and only one dot as an input for the file name and the extension;
   in which the file name and also the extension should not be empty at all (regular
@@ -27,7 +29,8 @@ Recommendation to limit and prevent unrestricted file upload:
 * Use Cross-Site Request Forgery protection methods.
 * Prevent overwriting a file in case of having the same hash for both.
 * Use a virus scanner on the server (if applicable). Or, if the contents of files are not confidential, a free
-  virus scanner website can be used. In this case, the file should be stored with a random name and without any extension
+  virus scanner website can be used. In this case, the file should be stored with a random name and without any
+  extension
   on the server first. Then, after the virus checking (uploading to a free virus scanner website and getting the
   result), it can be renamed to its specific name and extension.
 * Use the `POST` method instead of `PUT` or `GET`

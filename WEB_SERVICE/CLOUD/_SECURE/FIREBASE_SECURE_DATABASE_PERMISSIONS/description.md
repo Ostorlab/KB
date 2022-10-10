@@ -1,4 +1,5 @@
-Firebase Realtime Database Rules determine who has read and written access to your database, how your data is structured,
+Firebase Realtime Database Rules determine who has read and written access to your database, how your data is
+structured,
 and what indexes exist.
 
 Insecure Database permissions are a common issue, leading to unauthorized access to your database. Firebase

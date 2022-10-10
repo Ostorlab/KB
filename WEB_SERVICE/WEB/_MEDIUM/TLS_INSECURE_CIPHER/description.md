@@ -2,12 +2,13 @@ Transport Layer Security (TLS) starts with the client requesting a secure connec
 cipher suites.
 
 A cipher suite is a list of authentication, encryption, message authentication code (MAC), and key exchange algorithms.
-Each algorithm serves a specific role during the protocol negotiation. For example, using a week algorithm might critically impact
+Each algorithm serves a specific role during the protocol negotiation. For example, using a week algorithm might
+critically impact
 the security of the whole channel.
 
 It was identified that the endpoint supports a combination of cipher suites and Secure Sockets Layer / Transport Layer
 Security (SSL/TLS) protocols that suffer from known cryptographic weaknesses. Therefore they should not be relied upon
-for effective transport layer security. An attacker who can eavesdrop on the connection could influence or 
+for effective transport layer security. An attacker who can eavesdrop on the connection could influence or
 decrypt the traffic passing by.
 
 Cryptographic weaknesses have been demonstrated for all the following configurations:

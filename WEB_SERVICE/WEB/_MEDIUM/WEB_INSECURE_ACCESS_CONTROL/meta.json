@@ -10,5 +10,10 @@
   },
   "title": "Insecure Access Control",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_276"
+    ]
+  }
 }

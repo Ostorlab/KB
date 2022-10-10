@@ -4,5 +4,10 @@
   "references": {},
   "title": "Recorded calls to Serialization API",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_502"
+    ]
+  }
 }
