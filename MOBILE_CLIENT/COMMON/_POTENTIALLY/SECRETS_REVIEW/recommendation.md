@@ -1,13 +1,7 @@
-Sensitive data must not be packaged with the application. If access to this data is required, apply procedures to
-securely encrypt, store, and retrieve credentials for your services.
+Sensitive data should never be included with the application itself. Instead, secure methods for encrypting, storing, and retrieving credentials for your services should be used to access this data as needed.
 
-For keys that have a risk of over-billing, ensure the API Key is implementing key pinning or is exposing the service
-through authenticated APIs.
+To prevent the risk of overbilling, consider implementing API key pinning or using authenticated APIs for services with potentially high usage costs. API key pinning helps to restrict the use of a key to a specific application by requiring a cryptographic signature, and it can be enabled by the service provider (e.g., Google Maps).
 
-Key-pinning restricts usage of the key to the application through a cryptographic signature and is a setting to enable
-by the service provider, like Google Maps.
+For keys that may allow unauthorized access, it is important to restrict permissions and roles to non-critical functions, or to expose the service through an authenticated API.
 
-For keys that may cause unauthorized access, restrict the permissions and roles to non-critical or expose
-the service through an authenticated API.
-
-The API must implement proper access control and rate-limiting, and keys should be rotated periodically.
+To further enhance security, the API should also have proper access controls and rate-limiting in place, and keys should be rotated regularly to prevent unauthorized use.
