@@ -2,7 +2,7 @@
   "risk_rating": "high",
   "short_description": "The application exposes a file provider with insecure path settings.",
   "references": {
-    "Exploiting Path Traversal in PSPDFKit": "https://xerosecurity.com/wordpress/exploiting-path-traversal-in-pspdfkit-for-android-2-3-3-2-8-0/",
+    "Exploiting content providers": "https://erev0s.com/blog/exploiting-content-providers-through-an-insecure-setresult-implementation/",
     "Security Tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html",
     "FileProvider (Android developer)": "https://developer.android.com/reference/androidx/core/content/FileProvider"
   },
