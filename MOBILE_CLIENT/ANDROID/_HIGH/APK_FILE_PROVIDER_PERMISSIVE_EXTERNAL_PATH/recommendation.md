@@ -1,10 +1,10 @@
-* Avoid permissive settings when using `external-path`, like `'.'`.
+* When using external-path, avoid using permissive settings like '.' as the path.
 * Avoid using `root-path`.
-* Avoid assign the root path to path attribute `path='/.'`in all paths types.
-* You should make sure that you're only sharing files that are necessary and appropriate to share.
-* Avoid sharing sensitive files or files that contain sensitive information.
-* Ensure that you use the `<grant-uri-permission>` tag to control access to the shared files.
-* Prefer `external-files-path`.
+* Don't assign the root path '/.' to the path attribute in any type of path.
+* Be cautious about what files you share and only share files that are necessary and appropriate.
+* Don't share sensitive files or files that contain sensitive information.
+* Use the <grant-uri-permission> tag to control access to shared files.
+* Prefer using `external-files-path` path type.
 * use specific folders for path attribute:
 
 ```xml
