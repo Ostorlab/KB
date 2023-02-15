@@ -1,2 +1,3 @@
-Improper SQL query construction could lead to SQL injection. An SQL injection attack consists of injecting an SQL
-query via the input data from the client to the application
+Improper use of SQL query construction can result in SQL injection, a type of security vulnerability that can allow attackers to execute malicious SQL statements. This can be achieved by injecting SQL commands via user-controlled inputs, allowing attackers to manipulate or retrieve data that they should not have access to. SQL injection attacks can be particularly devastating, as they can provide attackers with full access to a database or system.
+
+To mitigate this vulnerability, it is important to properly sanitize and validate user input. This means removing any potentially dangerous characters or data from user input and ensuring that only valid data is used to construct SQL queries. Failure to properly sanitize and validate user input can result in SQL injection attacks
