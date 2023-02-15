@@ -69,4 +69,4 @@ In the example below , we observe the provider has the root folder configuration
 </paths>
 ```
 This misconfiguration can be chained with other vulnerabilities like `Intent Redirection` to steal sensitive data
-or `Overwriting arbitrary files` to achieve arbitrary code execution by Overwriting native libraries.
+or `Remote Code Execution` by overwriting native libraries.
