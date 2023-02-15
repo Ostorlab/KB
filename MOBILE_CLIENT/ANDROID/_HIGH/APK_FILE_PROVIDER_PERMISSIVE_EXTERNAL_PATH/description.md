@@ -11,7 +11,7 @@ Android defines multiple paths types:
 
 * Checking the documentation of the [FileProvider](https://developer.android.com/reference/androidx/core/content/FileProvider) , you will not find the `<root-path...>` among the available paths.
 This path although not documented is available and can be used to provide access to internal storage of the app along with `/data` and `sdcard`.
-This path grants access to protected parts of the app and of the device.
+This path grants access to protected parts of the app and of the device and thus exposes the application filesystem.
 
 ```xml
 
