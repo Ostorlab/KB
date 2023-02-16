@@ -9,8 +9,7 @@ vulnerability, here are some recommendations:
 * Don't assign the root path '/.' to the path attribute in any type of path.
 * Use the <grant-uri-permission> tag to control access to shared files.
 * Prefer using `external-files-path` path type.
-* use specific folders for path attribute:
-
+* Use specific folders for path attributes, check the following example:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
