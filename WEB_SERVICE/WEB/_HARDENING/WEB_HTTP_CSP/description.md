@@ -74,3 +74,28 @@ can see the violations of the CSP policy in the current state of your web site w
 ```html
 Content-Security-Policy-Report-Only: script-src 'self'; report-uri: https://ostorlab.com;
 ```
+
+## CSP Browser Support
+Content Security Policy is supported by all the major modern browsers, and has been for many years. It is not supported in Internet Explorer.
+
+- ### Chrome:
+  - Content-Security-Policy CSP `Level 3` - `Chrome 59+` **Partial Support**
+  - Content-Security-Policy CSP `Level 2` - `Chrome 40+` **Full Support Since January 2015**
+  - Content-Security-Policy CSP `1.0` - `Chrome 25+`
+  - X-Webkit-CSP **Deprecated** - `Chrome 14-24`
+- ### Firefox:
+  - Content-Security-Policy CSP `Level 3` - `Firefox 58+` **Partial Support**
+  - Content-Security-Policy CSP `Level 2` - `Firefox 31+` **Partial Support since July 2014**
+  - Content-Security-Policy CSP `1.0` - `Firefox 23+` **Full Support**
+  - X-Content-Security-Policy **Deprecated** - `Firefox 4-22`
+- ### Safari:
+  - Content-Security-Policy CSP `Level 3` - `Safari 15.4+` **Partial Support**
+  - Content-Security-Policy CSP `Level 2` - `Safari 10+`
+  - Content-Security-Policy CSP `1.0` - `Safari 7+`
+  - X-Webkit-CSP **Deprecated** `Safari 6`
+- ### Edge:
+  - Content-Security-Policy CSP `Level 3` - `Edge 79+` **Partial Support**
+  - Content-Security-Policy CSP `Level 2` - `Edge 15+` **Partial, 76+ Full**
+  - Content-Security-Policy CSP `1.0` - `Edge 12+`
+- ### Internet Explorer:
+  - X-Content-Security-Policy **Deprecated** - `IE 10-11` support sandbox only
