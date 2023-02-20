@@ -7,3 +7,6 @@ credit card numbers, medical records, and other sensitive data.
 
 This value should be set explicitly in the application to indicate whether the application is handling important user
 data or not.
+
+If its value is true, then when the user uninstalls the app, a prompt will be shown to the user asking him whether to keep the app's data.
+
