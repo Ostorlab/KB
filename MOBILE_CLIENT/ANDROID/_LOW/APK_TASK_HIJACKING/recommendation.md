@@ -10,8 +10,7 @@ OR
   the same task.
 
 * Do not specify launch mode set to `singleTask` or add support for a monitoring service to detect the presence of
-  malicious
-  foreground tasks.
+  malicious foreground tasks.
 
 * Do not set the flag `FLAG_ACTIVITY_NEW_TASK` in activity launch intents, or use with the `FLAG_ACTIVITY_CLEAR_TASK`:
 
@@ -26,5 +25,4 @@ startActivity(i);
   malicious foreground tasks.
 
 * Prefer the use of Explicit intent, which specify which application will satisfy the intent, by supplying the target
-  application
-  package name or a fully-qualified component class name. Implicit intent only specifies the general action.
+  application package name or a fully-qualified component class name. Implicit intent only specifies the general action.

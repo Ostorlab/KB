@@ -1,6 +1,5 @@
 The HTTP `Strict-Transport-Security` response header ( abbreviated HSTS)
-lets a website tell browsers that it should only be accessed using
-HTTPS, instead of using HTTP.
+lets a website tell browsers that it should only be accessed using HTTPS, instead of using HTTP.
 
 To exploit this vulnerability, an attacker must intercept and modify the
 network traffic from the target.

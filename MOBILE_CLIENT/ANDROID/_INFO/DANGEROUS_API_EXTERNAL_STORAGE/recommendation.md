@@ -76,8 +76,7 @@ We can distinguish four types of files based on the access permission and storag
 
 
 * External memory (Read Write Public) files:
-    * It's supposed to be used when storing huge files, or when there is a need to bring out data to outside (e.g.
-      backup, ...)
+    * It's supposed to be used when storing huge files, or when there is a need to bring out data to outside (e.g. backup, ...)
     * In addition to having the equal characteristics of "Read Write Public file" to unspecified large number of
       applications, it has also the same characteristics of "Read Write Public file" to applications which
       declare `android.permission.WRITE.EXTERNAL.STORAGE` permission

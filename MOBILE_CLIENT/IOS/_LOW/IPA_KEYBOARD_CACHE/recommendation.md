@@ -1,5 +1,4 @@
-Keyboard caching is caused by the `UITextInputTraits` protocol supported
-by `UITextField`, `UITextView` and `UISearchBar`.
+Keyboard caching is caused by the `UITextInputTraits` protocol supported by `UITextField`, `UITextView` and `UISearchBar`.
 
 - `var autocorrectionType: UITextAutocorrectionType` determines whether auto-correction is enabled during typing.
   When auto-correction is enabled, the text object tracks unknown words and suggests suitable replacements, replacing
