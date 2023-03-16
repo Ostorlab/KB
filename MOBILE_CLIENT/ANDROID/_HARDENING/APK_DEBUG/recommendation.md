@@ -1,5 +1,4 @@
-Disable debug mode by setting the attribute `android:debuggeable` to false in the `Application` tag in the Android
-Manifest.
+Disable debug mode by setting the attribute `android:debuggeable` to false in the `Application` tag in the Android Manifest.
 
 ```xml
 

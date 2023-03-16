@@ -30,8 +30,7 @@ Recommendation to limit and prevent unrestricted file upload:
 * Prevent overwriting a file in case of having the same hash for both.
 * Use a virus scanner on the server (if applicable). Or, if the contents of files are not confidential, a free
   virus scanner website can be used. In this case, the file should be stored with a random name and without any
-  extension
-  on the server first. Then, after the virus checking (uploading to a free virus scanner website and getting the
+  extension on the server first. Then, after the virus checking (uploading to a free virus scanner website and getting the
   result), it can be renamed to its specific name and extension.
 * Use the `POST` method instead of `PUT` or `GET`
 * Log users’ activities. However, the logging mechanism should be secured against log forgery and code injection.

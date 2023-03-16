@@ -1,6 +1,5 @@
 Firebase Realtime Database Rules determine who has read and written access to your database, how your data is
-structured,
-and what indexes exist.
+structured, and what indexes exist.
 
 Insecure Database permissions are a common issue, leading to unauthorized access to your database. Firebase
 provides tools to enforce Authentication, Authorization, and even Data Validation.

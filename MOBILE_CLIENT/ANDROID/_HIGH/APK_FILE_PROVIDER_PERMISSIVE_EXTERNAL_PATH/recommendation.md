@@ -2,6 +2,7 @@ An insecure file path provider is a vulnerability in Android apps where a file p
 which could potentially compromise sensitive data or allow unauthorized access to system resources. 
 By making your app more secure, you help preserve user trust and device integrity, so to protect your app from this 
 vulnerability, here are some recommendations:
+
 * Be cautious about what files you share and only share files that are necessary and appropriate.
 * Don't share sensitive files or files that contain sensitive information.
 * When using external-path, avoid using permissive settings like '.' as the path.

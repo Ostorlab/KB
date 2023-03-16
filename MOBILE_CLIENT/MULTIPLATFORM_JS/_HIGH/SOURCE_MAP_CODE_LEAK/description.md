@@ -32,5 +32,4 @@ for f, c in zip(files, content):
 ```
 
 Leaking source code can help attackers easily forge malicious applications or understand the internals of the
-application
-to identify vulnerabilities.
+application to identify vulnerabilities.
