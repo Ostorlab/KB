@@ -1,13 +1,10 @@
 Webview exposes remote debugging using the `setWebContentsDebuggingEnabled` API. The API was introduced in API 19.
 
-Webview debugging uses the Chrome Debug Protocol and is exposed using an abstract named unix socket. The socket is
-either name `webview_devtools_remote` or `webview_devtools_remote_<pid>`.
+Webview debugging uses the Chrome Debug Protocol and is exposed using an abstract named unix socket. The socket is either name `webview_devtools_remote` or `webview_devtools_remote_<pid>`.
 
-To confirm that socket is exposed on your device, you may use the `netstat -untapexW` command and search for your target
-application or the `@` sign, used to denote abstract sockets.
+To confirm that socket is exposed on your device, you may use the `netstat -untapexW` command and search for your target application or the `@` sign, used to denote abstract sockets.
 
-Abstract sockets do not use file system permissions to enforce access and are therefore accessible to all applications
-on the device.
+Abstract sockets do not use file system permissions to enforce access and are therefore accessible to all applications on the device.
 
 To demonstrate access to the socket, you may use the `socat` binary to expose the abstract socket:
 

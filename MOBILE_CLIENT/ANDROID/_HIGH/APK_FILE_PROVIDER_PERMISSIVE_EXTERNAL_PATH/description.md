@@ -18,48 +18,42 @@ This path grants access to protected parts of the app and of the device and thus
 <files-path name="name" path="path"/>
 ```
 
-* Represent files in the files/ subdirectory of your app's internal storage area. This subdirectory is the same as the
-  value returned by `Context.getFilesDir()`.
+* Represent files in the files/ subdirectory of your app's internal storage area. This subdirectory is the same as the value returned by `Context.getFilesDir()`.
 
 ```xml
 
 <cache-path name="name" path="path"/>
 ```
 
-* Represent files in the cache subdirectory of your app's internal storage area. The root path of this subdirectory is
-  the same as the value returned by `getCacheDir()`.
+* Represent files in the cache subdirectory of your app's internal storage area. The root path of this subdirectory is the same as the value returned by `getCacheDir()`.
 
 ```xml
 
 <external-path name="name" path="path"/>
 ```
 
-* Represent files in the root of the external storage area. The root path of this subdirectory is the same as the value
-  returned by `Environment.getExternalStorageDirectory()`.
+* Represent files in the root of the external storage area. The root path of this subdirectory is the same as the value returned by `Environment.getExternalStorageDirectory()`.
 
 ```xml
 
 <external-files-path name="name" path="path"/>
 ```
 
-* Represent files in the root of your app's external storage area. The root path of this subdirectory is the same as the
-  value returned by `Context.getExternalFilesDir(null)`.
+* Represent files in the root of your app's external storage area. The root path of this subdirectory is the same as the value returned by `Context.getExternalFilesDir(null)`.
 
 ```xml
 
 <external-cache-path name="name" path="path"/>
 ```
 
-* files in the root of your app's external cache area. The root path of this subdirectory is the same as the
-  value returned by `Context.getExternalCacheDir()`.
+* files in the root of your app's external cache area. The root path of this subdirectory is the same as the value returned by `Context.getExternalCacheDir()`.
 
 ```xml
 
 <external-media-path name="name" path="path"/>
 ```
 
-* Represent files in the root of your app's external media area. The root path of this subdirectory is the same as the
-  value returned by the first result of `Context.getExternalMediaDirs()`.
+* Represent files in the root of your app's external media area. The root path of this subdirectory is the same as the value returned by the first result of `Context.getExternalMediaDirs()`.
 
 In the example below , we observe the provider has the root folder configuration that allows us to access home directory (which also includes /data and /sdcard directory).
 ```xml
@@ -68,5 +62,4 @@ In the example below , we observe the provider has the root folder configuration
     <root-path name="root" path="/"/>
 </paths>
 ```
-This misconfiguration can be chained with other vulnerabilities like `Intent Redirection` to steal sensitive data
-or `Remote Code Execution` by overwriting native libraries.
+This misconfiguration can be chained with other vulnerabilities like `Intent Redirection` to steal sensitive data or `Remote Code Execution` by overwriting native libraries.

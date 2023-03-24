@@ -7,8 +7,7 @@ buildTypes { release { minifyEnabled true proguardFiles getDefaultProguardFile('
 ```
 
 * Verification application signing certificate during runtime by checking `context.getPackageManager().signature`
-* Check application installer to ensure it matches the Android Market by
-  calling `context.getPackageManager().getInstallerPackageName`
+* Check application installer to ensure it matches the Android Market by calling `context.getPackageManager().getInstallerPackageName`
 * Check running environment at runtime
 
 ```java
