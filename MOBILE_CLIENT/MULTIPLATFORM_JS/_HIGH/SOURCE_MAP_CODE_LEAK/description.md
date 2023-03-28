@@ -1,6 +1,4 @@
-The application should provide as little explanatory information as possible with the compiled code. Metadata such as
-debugging information, line numbers, and descriptive function or method names make the binary or byte-code
-easier to reverse engineer.
+The application should provide as little explanatory information as possible with the compiled code. Metadata such as debugging information, line numbers, and descriptive function or method names make the binary or byte-code easier to reverse engineer.
 
 The application leaks the source code through source map files used solely for debugging and development.
 
@@ -31,5 +29,4 @@ for f, c in zip(files, content):
         o.write(c)
 ```
 
-Leaking source code can help attackers easily forge malicious applications or understand the internals of the
-application to identify vulnerabilities.
+Leaking source code can help attackers easily forge malicious applications or understand the internals of the application to identify vulnerabilities.

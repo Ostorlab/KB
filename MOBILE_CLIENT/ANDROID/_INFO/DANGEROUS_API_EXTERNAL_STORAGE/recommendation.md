@@ -6,8 +6,7 @@ We can distinguish four types of files based on the access permission and storag
     * Can store sensitive information and must use encryption when storing PII
     * Can be used for files that can be read/written only in the same application
     * The access privilege must be set to private mode in order to restrict access from other applications
-    * Content Provider, Service or other inter-application linkage system are recommended to exchange information
-      between applications
+    * Content Provider, Service or other inter-application linkage system are recommended to exchange information between applications
 
     ```java
         public void onCreateFileClick(View view) {
@@ -38,8 +37,7 @@ We can distinguish four types of files based on the access permission and storag
     * Used to disclose content to unspecified number of applications
     * The access privilege must be set to read only
     * Must not contain sensitive information
-    * Using the `MODE_WORLD_READABLE` variable to create a public file is deprecated in API Level 17 and later versions,
-      and will trigger a security exception in API Level 24 and later versions
+    * Using the `MODE_WORLD_READABLE` variable to create a public file is deprecated in API Level 17 and later versions, and will trigger a security exception in API Level 24 and later versions
     * File-sharing methods using Content Provider are preferable
 
     ```java
@@ -77,11 +75,8 @@ We can distinguish four types of files based on the access permission and storag
 
 * External memory (Read Write Public) files:
     * It's supposed to be used when storing huge files, or when there is a need to bring out data to outside (e.g. backup, ...)
-    * In addition to having the equal characteristics of "Read Write Public file" to unspecified large number of
-      applications, it has also the same characteristics of "Read Write Public file" to applications which
-      declare `android.permission.WRITE.EXTERNAL.STORAGE` permission
-    * In applications that output backup, some contrivances to minimize risks in terms of application spec or designing
-      like displaying a caution “Copy Backup files to the safety location like PC etc., a.s.a.p.”, are necessary
+    * In addition to having the equal characteristics of "Read Write Public file" to unspecified large number of applications, it has also the same characteristics of "Read Write Public file" to applications which declare `android.permission.WRITE.EXTERNAL.STORAGE` permission
+    * In applications that output backup, some contrivances to minimize risks in terms of application spec or designing like displaying a caution “Copy Backup files to the safety location like PC etc., a.s.a.p.”, are necessary
     * Using external memory devices should be avoided, unless necessary, and encryption must be used
     * When reading in files in external memory device, validate the input data read from external memory device
     * Applications should be designed supposing that files in external memory device can be deleted

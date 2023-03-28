@@ -1,5 +1,4 @@
-APK files are an archive file in `ZIP` format based on the JAR file format. The APK file usually contains the following
-directories:
+APK files are an archive file in `ZIP` format based on the JAR file format. The APK file usually contains the following directories:
 
 * `META-INF` directory:
     * `MANIFEST.MF`: the manifest file

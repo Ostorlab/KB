@@ -1,8 +1,6 @@
-Android provides mechanisms to enforce biometric authentication to protect sensitive information. Biometric authentication
-has evolved over time to provide improved user experience, developer experience and improved security.
+Android provides mechanisms to enforce biometric authentication to protect sensitive information. Biometric authentication has evolved over time to provide improved user experience, developer experience and improved security.
 
-Previous implementation using `FingerprintManager` is deprecated and must not be used. Proper implementation must use
-`BiometricManager` with `BiometricPrompt` and `CryptoObject`.
+Previous implementation using `FingerprintManager` is deprecated and must not be used. Proper implementation must use`BiometricManager` with `BiometricPrompt` and `CryptoObject`.
 
 `CryptoObject` provides cryptographic primitives for encryption, decryption and signature validation.
 

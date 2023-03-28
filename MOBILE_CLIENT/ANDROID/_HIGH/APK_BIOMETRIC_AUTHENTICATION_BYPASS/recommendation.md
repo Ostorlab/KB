@@ -38,9 +38,7 @@ val paramsBuilder = KeyGenParameterSpec.Builder(keyName, KeyProperties.PURPOSE_S
 
 * The keystore key must be used to encrypt information that is authenticating the user, like session information or authentication token.
 
-* Biometrics are presented before the key is accessed from the KeyStore to decrypt the data. The biometric is validated
-  with `authenticate` method and the `CryptoObject`. This solution cannot be bypassed, even on rooted devices as the
-  keystore key can only be used after successful biometric authentication.
+* Biometrics are presented before the key is accessed from the KeyStore to decrypt the data. The biometric is validated with `authenticate` method and the `CryptoObject`. This solution cannot be bypassed, even on rooted devices as the keystore key can only be used after successful biometric authentication.
 
 ```kotlin
 fun showBiometricPrompt(
@@ -62,5 +60,4 @@ fun showBiometricPrompt(
     }
 ```
 
-* If `CryptoObject` is not used as part of the authenticate method, it can be bypassed by using dynamic instrumentation
-  with a debugger or with tools like Frida.
+* If `CryptoObject` is not used as part of the authenticate method, it can be bypassed by using dynamic instrumentation with a debugger or with tools like Frida.

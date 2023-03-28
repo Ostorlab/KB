@@ -27,17 +27,12 @@ file in the app's "app" directory to configure the obfuscation rules.
             }
         }
 ```
-This tells Gradle to use DexGuard for code obfuscation in the release build. You can create a
-"dexguard-project.txt" file in the app's "app" directory to configure the DexGuard project, and a
-"dexguard-release.cfg" file to configure the obfuscation for the release build.
+This tells Gradle to use DexGuard for code obfuscation in the release build. You can create a"dexguard-project.txt" file in the app's "app" directory to configure the DexGuard project, and a"dexguard-release.cfg" file to configure the obfuscation for the release build.
 
-By default, when you enable code obfuscation using DexGuard, it will use its own obfuscation rules in addition to
-any rules specified in the ProGuard configuration file. However, you can disable the use of ProGuard's rules by
-setting the `useProguard` option to false.
+By default, when you enable code obfuscation using DexGuard, it will use its own obfuscation rules in addition to any rules specified in the ProGuard configuration file. However, you can disable the use of ProGuard's rules by setting the `useProguard` option to false.
 
 * Verification application signing certificate during runtime by checking `context.getPackageManager().signature`
-* Check application installer to ensure it matches the Android Market by
-  calling `context.getPackageManager().getInstallerPackageName`
+* Check application installer to ensure it matches the Android Market by calling `context.getPackageManager().getInstallerPackageName`
 * Check running environment at runtime
 
 ```java
