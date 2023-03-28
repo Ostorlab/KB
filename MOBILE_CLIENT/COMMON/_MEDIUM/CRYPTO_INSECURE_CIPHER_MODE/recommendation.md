@@ -1,7 +1,8 @@
-We recommend AES for general-purpose use. If you're willing to go against the grain and are paranoid, you can use
-Serpent, which isn't quite as fast as AES but is believed to have a much higher security margin.
+When using AES encryption, it is important to choose the correct mode of operation to ensure the confidentiality and integrity of the encrypted data. The choice of mode can depend on the specific use case and security requirements. Here are some common encryption modes to consider:
 
-If you really feel that you need the fastest possible secure solution, consider the SNOW 2.0 stream cipher, which
-currently looks very good. It appears to have a much better security margin than the popular favorite, RC4, and is even
-faster. However, it is fairly new. If you're highly risk-adverse, we recommend AES or Serpent. Although popular, RC4
-would never be the best available choice.
+* `Electronic Codebook (ECB)`: This is the simplest mode and involves dividing the plaintext into blocks and encrypting each block separately using the same key. However, this mode is vulnerable to attacks as identical plaintext blocks will produce identical ciphertext blocks.
+* `Cipher Block Chaining (CBC)`: In this mode, each plaintext block is XORed with the previous ciphertext block before encryption. This adds randomness and makes it harder to identify patterns in the encrypted data. However, this mode is vulnerable to attacks if the same IV (initialization vector) is used multiple times.
+* `Counter (CTR)`: This mode involves encrypting a counter value and XORing it with the plaintext to generate the ciphertext. This is a popular mode for streaming applications as it allows for parallel encryption and decryption. However, it requires unique counter values and can be vulnerable if an attacker can guess the counter values.
+* `Galois/Counter Mode (GCM)`: This mode provides both confidentiality and integrity protection by using a combination of CTR mode and a message authentication code (MAC). It uses a unique IV and incorporates additional data such as a sequence number to prevent replay attacks. This mode is commonly used in applications that require both confidentiality and integrity protection.
+
+* In general, it is recommended to use GCM mode for AES encryption as it provides both confidentiality and integrity protection. However, it is important to properly manage the key and IV to ensure security. It is also recommended to use authenticated encryption modes such as GCM to prevent attacks such as padding oracle attacks.

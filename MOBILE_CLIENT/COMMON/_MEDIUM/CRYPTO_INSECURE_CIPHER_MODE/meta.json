@@ -1,6 +1,6 @@
 {
   "risk_rating": "medium",
-  "short_description": "The client supports combinations of cipher suites that suffer from known cryptographic weaknesses.",
+  "short_description": "The client supports combinations of cipher modes that suffer from known cryptographic weaknesses.",
   "references": {
     "Cryptographic Vulnerability (OWASP)": "https://www.owasp.org/index.php/Category:Cryptographic_Vulnerability",
     "CWE-327: Use of a Broken or Risky Cryptographic Algorithm": "https://cwe.mitre.org/data/definitions/327.html",
