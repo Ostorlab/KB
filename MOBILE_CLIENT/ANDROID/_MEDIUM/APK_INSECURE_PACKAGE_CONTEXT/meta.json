@@ -1,0 +1,15 @@
+{
+    "risk_rating": "medium",
+    "short_description": "Android Package Context created without security restrictions",
+    "references": {
+      "CVE-2023-0460 Detail": "https://nvd.nist.gov/vuln/detail/CVE-2023-0460",
+      "CWE-470: Use of Externally-Controlled Input to Select Classes or Code": "https://cwe.mitre.org/data/definitions/470.html"
+    },
+    "title": "Android Package Context created without security restrictions",
+    "privacy_issue": false,
+    "security_issue": true,
+    "categories": {
+      
+    }
+  }
+  

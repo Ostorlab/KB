@@ -1,0 +1,3 @@
+Avoid using the CONTEXT_INCLUDE_CODE and CONTEXT_IGNORE_SECURITY flags unless absolutely necessary. These flags bypass important security checks and can allow the execution of arbitrary code from untrusted sources. Instead, use more restrictive flags that limit access to system resources and prevent the execution of untrusted code.
+
+Implement proper code review and testing procedures to identify and fix any insecure use of context flags in the application code. This can help detect and mitigate potential security vulnerabilities before they can be exploited by attackers.
