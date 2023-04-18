@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "potentially",
   "short_description": "Biometric authentication is done without CryptoObject, making it vulnerable to biometric authentication bypass.",
   "references": {
     "Bypass Biometric Authentication": "https://book.hacktricks.xyz/mobile-pentesting/android-app-pentesting/bypass-biometric-authentication-android",
