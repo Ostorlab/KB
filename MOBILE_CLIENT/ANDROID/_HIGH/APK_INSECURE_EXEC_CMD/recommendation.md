@@ -1,6 +1,4 @@
-
-Command injection is a vulnerability that allows attackers to execute arbitrary commands on the Android OS through a vulnerable app by passing unsafe user data to the system shell. This can happen when input validation is insufficient, and the commands are usually executed with the app's privileges.
- To mitigate this vulnerability, here are some recommendations:
+To mitigate the command injection vulnerability, here are some recommendations:
 - Use input validation to ensure user-supplied data is sanitized and contains only expected values.
 - Use parameterized queries to pass parameters to a query or command string in a secure manner.
 - Design your app to run with the least privilege necessary to perform its intended functions.
