@@ -40,4 +40,12 @@ ProcessResult result = await Process.run(
 in this example we accept the path from user somewhere,
 First, we remove any special characters and prevent command injection. Then we split it into words and check each word again to prevent any malicious commands or arguments. Finally, we construct the 'ls' command using the sanitized input words.
 
+```javascript
+const { exec } = require('child_process');
+const command = quote(["ls",arg1, arg1]);
+ // Execute the external program and send the response back
+execFile(command, args, (err, output) => {
+      //...
+});
+```
 By implementing these recommendations, you can help protect your app from command injection attacks, ensuring the security and integrity of your application and its users.
