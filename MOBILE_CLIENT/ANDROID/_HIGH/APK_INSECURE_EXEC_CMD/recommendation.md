@@ -48,7 +48,7 @@ execFile(command, args, (err, output) => {
       //...
 });
 ```
-in this example we are using shell-quote to parse and quote the shell command.
+In this example we are using shell-quote to parse and quote the shell command.
 
 
 By implementing these recommendations, you can help protect your app from command injection attacks, ensuring the security and integrity of your application and its users.
