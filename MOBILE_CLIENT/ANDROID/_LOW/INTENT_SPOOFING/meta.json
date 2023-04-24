@@ -1,5 +1,5 @@
 {
-  "risk_rating": "low",
+  "risk_rating": "medium",
   "short_description": "The application is vulnerable to intent spoofing which may lead to inappropriate access like data modification, information disclosure and data injection.",
   "references": {
     "Do not act on malicious intent (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/display/android/DRD06.+Do+not+act+on+malicious+intents",
