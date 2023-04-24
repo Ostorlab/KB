@@ -37,7 +37,7 @@ ProcessResult result = await Process.run(
       includeParentEnvironment: false,
       environment: {});
 ```
-in this example we accept the path from user somewhere,
+In this example we accept the path from user somewhere,
 First, we remove any special characters and prevent command injection. Then we split it into words and check each word again to prevent any malicious commands or arguments. Finally, we construct the 'ls' command using the sanitized input words.
 
 ```javascript
