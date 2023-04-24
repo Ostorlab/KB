@@ -17,7 +17,7 @@ val process = pb.start()
 ```
 In this example, the ProcessBuilder class is used to create a secure command with the ls command, the -al flag, and the /path/to/directory parameter.
 
-```flutter
+```dart
 path = ProcessManager.instance.sanitizeInput(path);
 
 // Split the input into words and sanitize each word
