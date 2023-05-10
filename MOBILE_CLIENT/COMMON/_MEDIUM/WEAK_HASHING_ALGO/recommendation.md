@@ -1,0 +1,2 @@
+We recommend `SHA-256` to verify file signatures and certificates.
+For password hashing we suggest using a dedicated strong algorithm like `Argon2` or `Bcrypt`, these algorithms are slower which makes them better at serving this purpose, slower algorithms makes bruteforcing the passwords hash value even more computationally infeasible.

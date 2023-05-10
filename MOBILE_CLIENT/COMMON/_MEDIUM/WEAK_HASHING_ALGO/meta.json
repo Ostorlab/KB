@@ -1,0 +1,24 @@
+{
+    "risk_rating": "medium",
+    "short_description": "The client uses weak hashing functions that suffer from known cryptographic weaknesses.",
+    "references": {
+      "Deprecating MD5 and SHA-1 signature hashes in (D)TLS 1.2": "https://www.ietf.org/archive/id/draft-ietf-tls-md5-sha1-deprecate-09.html",
+      "Deprecation of SHA-1 (NIST)": "https://www.nist.gov/news-events/news/2022/12/nist-retires-sha-1-cryptographic-algorithm"
+    },
+    "title": "Cryptographic Vulnerability: Weak Hashing Algorithm",
+    "privacy_issue": true,
+    "security_issue": true,
+    "categories": {
+      "OWASP_MASVS_L1": [
+        "MSTG_CRYPTO_2",
+        "MSTG_CRYPTO_3",
+        "MSTG_CRYPTO_4"
+      ],
+      "OWASP_MASVS_L2": [
+        "MSTG_CRYPTO_2",
+        "MSTG_CRYPTO_3",
+        "MSTG_CRYPTO_4"
+      ]
+    }
+  }
+  
