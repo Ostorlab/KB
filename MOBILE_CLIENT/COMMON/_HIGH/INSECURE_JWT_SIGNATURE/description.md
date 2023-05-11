@@ -1,4 +1,4 @@
-WT is a widely used standard for authentication and authorization in web applications, but it's important to be aware of the potential risks and vulnerabilities involved. Here are some common JWT vulnerabilities:
+JWT is a widely used standard for authentication and authorization in web applications, but it's important to be aware of the potential risks and vulnerabilities involved. Here are some common JWT vulnerabilities:
 
 * Weak Signature Algorithms: JWTs typically use a signature to ensure the integrity and authenticity of the token. However, if a weak signature algorithm is used or if the secret key used for signing is compromised, an attacker can forge or tamper with the token. It is crucial to use strong cryptographic algorithms and properly secure the keys.
 * Insecure Key Management: JWTs rely on secret keys to verify the authenticity of tokens. If the keys are not properly managed or protected, they can be stolen, leaked, or compromised. It is important to store keys securely, use strong encryption, and follow best practices for key management, such as regularly rotating keys and limiting access to them.
