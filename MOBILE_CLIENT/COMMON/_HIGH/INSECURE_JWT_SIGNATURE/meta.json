@@ -1,0 +1,19 @@
+{
+  "risk_rating": "high",
+  "short_description": "The application uses weak or outdated signature algorithms, insufficient secret key management, or flawed validation logic, which can be exploited by attackers to forge or tamper with JWTs and gain unauthorized access.",
+  "references": {
+    "Insecure JWT Attacks": "https://www.thehacker.recipes/web/inputs/jwt",
+    "JWT Attacks explained": "https://portswigger.net/web-security/jwt"
+  },
+  "title": "Insecure JWT Signature Validation",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+    ],
+    "OWASP_MASVS_L2": [
+    ],
+    "CWE_TOP_25": [
+    ]
+  }
+}
