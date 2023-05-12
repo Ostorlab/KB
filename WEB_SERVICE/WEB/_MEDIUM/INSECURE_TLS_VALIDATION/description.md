@@ -1,4 +1,4 @@
-Insecure TLS certificate validation is a vulnerability in the way secure connections are established between a client and a server. TLS (Transport Layer Security) is a cryptographic protocol that provides secure communication over the internet. When a client connects to a server over TLS, it checks the server's digital certificate to verify its identity and ensure that the connection is secure.
+Insecure TLS certificate validation is a vulnerability in establishing secure connections between a client and a server. TLS (Transport Layer Security) is a cryptographic protocol that provides secure communication over the Internet. When a client connects to a server over TLS, it checks the server's digital certificate to verify its identity and ensure the connection is secure.
 
 Insecure TLS certificate validation occurs when the client fails to properly validate the server's certificate, allowing an attacker to impersonate the server and intercept or modify the communication between the client and the server. This can lead to sensitive information being stolen, modified, or exposed.
 
@@ -8,9 +8,9 @@ The following are some common weaknesses in TLS certificate validation:
 
 - **Self-Signed Certificates:** A self-signed certificate is a certificate that has been signed by the same entity that issued the certificate. Since there is no independent third party to verify the certificate's authenticity, a client that trusts a self-signed certificate could be vulnerable to a man-in-the-middle attack.
 
-- **Wrong-Host Certificates:** A certificate is issued for a specific domain name or IP address. If a client connects to a server with a certificate that does not match the host name or IP address, the client could be vulnerable to a man-in-the-middle attack.
+- **Wrong-Host Certificates:** A certificate is issued for a specific domain name or IP address. If a client connects to a server with a certificate that does not match the hostname or IP address, the client could be vulnerable to a man-in-the-middle attack.
 
-- **Untrusted Root Certificates:** A root certificate is the top-level certificate in a certificate chain, and it is used to validate the authenticity of all certificates in the chain. If a client does not trust the root certificate used by the server, it may accept a fraudulent certificate that has been signed by a different, untrusted root certificate.
+- **Untrusted Root Certificates:** A root certificate is the top-level certificate in a certificate chain, and it is used to validate the authenticity of all certificates in the chain. If a client does not trust the root certificate used by the server, it may accept a fraudulent certificate that a different, untrusted root certificate has signed.
 
 - **Revoked Certificates:** A certificate can be revoked if it has been compromised or is no longer considered trustworthy. A client that does not check the certificate's revocation status could accept a revoked certificate, which could be used to perform a man-in-the-middle attack.
 
