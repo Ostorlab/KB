@@ -1,6 +1,6 @@
 {
   "risk_rating": "low",
-  "short_description": "Application is compiled with the developer options menu enabled.",
+  "short_description": "Application is compiled with `DevSettingsActivity` developer activity exposed.",
   "references": {
     "Facebook Sdk Debug Logs": "https://www.appsloveworld.com/react-native/100/11/react-native-whats-com-facebook-react-devsupport-devsettingsactivity"
   },
