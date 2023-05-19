@@ -1,0 +1,21 @@
+{
+  "risk_rating": "low",
+  "short_description": "Application is compiled with `DevSettingsActivity` developer activity exposed.",
+  "references": {
+    "Facebook SDK Debug Logs": "https://www.appsloveworld.com/react-native/100/11/react-native-whats-com-facebook-react-devsupport-devsettingsactivity"
+  },
+  "title": "Facebook React development settings exposed",
+  "cvss_v3_vector": "",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG-ARCH-1",
+      "MSTG-CODE-4"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG-ARCH-1",
+      "MSTG-CODE-4"
+    ]
+  }
+}
