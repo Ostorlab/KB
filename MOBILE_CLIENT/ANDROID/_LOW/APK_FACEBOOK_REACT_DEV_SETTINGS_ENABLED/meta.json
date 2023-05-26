@@ -10,12 +10,12 @@
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [
-      "MSTG-ARCH-1",
-      "MSTG-CODE-4"
+      "MSTG_ARCH_1",
+      "MSTG_CODE_4"
     ],
     "OWASP_MASVS_L2": [
-      "MSTG-ARCH-1",
-      "MSTG-CODE-4"
+      "MSTG_ARCH_1",
+      "MSTG_CODE_4"
     ]
   }
 }
