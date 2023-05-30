@@ -1,10 +1,10 @@
 {
   "risk_rating": "medium",
-  "short_description": "Path traversal vulnerabilities occur when an attacker can control part of the path that is then passed to the filesystem APIs without validation.",
+  "short_description": "The presence of a path traversal in the application signifies a vulnerability, whereby an attacker gains the ability to manipulate a portion of the file path. This manipulated path is subsequently utilized by the filesystem APIs without undergoing proper validation or scrutiny.",
   "references": {
     "Improper Limitation of a Pathname to a Restricted Directory": "https://cwe.mitre.org/data/definitions/22.html"
   },
-  "title": "Path Traversal",
+  "title": "File Path Traversal",
   "privacy_issue": false,
   "security_issue": true
 }

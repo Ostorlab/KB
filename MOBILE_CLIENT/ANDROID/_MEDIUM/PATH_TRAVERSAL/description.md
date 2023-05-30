@@ -1,4 +1,4 @@
-Application can allows the attacker to navigate through the file system beyond the intended 
+An application can allow an attacker to navigate through the file system beyond the intended 
 boundaries. This can lead to unauthorized access to sensitive files or directories. 
 By manipulating file paths, an attacker can bypass access controls and retrieve or modify critical data, 
 such as configuration files, user credentials, or confidential documents. This vulnerability poses 
