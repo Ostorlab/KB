@@ -1,6 +1,6 @@
 Account takeover vulnerability refers to technical weaknesses in authentication or authorization mechanisms that directly lead to unauthorized individuals gaining control over user accounts on various online platforms. These vulnerabilities, when exploited by malicious actors, bypass legitimate user credentials and grant unauthorized access to accounts. Account takeover attacks pose significant risks, including financial loss, identity theft, data breaches, and reputational damage. Understanding these vulnerabilities is crucial for individuals and organizations to implement effective security measures and protect against such attacks.
 
-### Common Technical Vulnerabilities:
+Common Technical Vulnerabilities:
 
 - Cross-Site Scripting (XSS): XSS vulnerabilities allow attackers to inject malicious scripts into web pages, which are then executed by users' browsers.
 By exploiting XSS vulnerabilities, attackers can steal session cookies or capture user input, leading to account takeover.
