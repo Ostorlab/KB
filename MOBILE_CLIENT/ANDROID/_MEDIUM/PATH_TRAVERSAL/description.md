@@ -6,7 +6,7 @@ a significant threat as it enables the attacker to escalate privileges, execute 
 or launch further attacks on the system.
 
 
-Can expose the content of the passwords file using the following code:
+#### The following code in `Dart` enables the exposure of the content stored in the passwords file:
 
 ```dart
 import 'package:file/local.dart';
@@ -30,4 +30,53 @@ void main() {
   const LocalFileSystem(),
   root,
 );
+```
+
+#### This is a `Kotlin` example that suffer from Path Traversal vulnerability:
+```kotlin
+import java.io.File
+
+fun readFile(filePath: String): String {
+    val file = File("/var/www/files/$filePath")
+    return file.readText()
+}
+
+fun main() {
+    println("Enter the file name:")
+    val fileName = readLine()
+
+    try {
+        val content = readFile(fileName!!)
+        println("File content: $content")
+    } catch (e: Exception) {
+        println("Error: ${e.message}")
+    }
+}
+```
+
+#### Here is another example in `Swift`:
+```swift
+import Foundation
+
+func readSensitiveFile(fileURL: URL) -> String? {
+    let fileManager = FileManager.default
+    let fileContents = fileManager.contents(atPath: fileURL.path)
+    
+    return String(data: fileContents!, encoding: .utf8)
+}
+
+func main() {
+    let userDirectory = FileManager.default.homeDirectoryForCurrentUser
+    let userInput = "/path/to/user/input.txt"
+    let fileURL = userDirectory.appendingPathComponent(userInput)
+    
+    if let contents = readSensitiveFile(fileURL: fileURL) {
+        print("File contents: \(contents)")
+    } else {
+        print("Failed to read file.")
+    }
+}
+
+main()
+
 ```
