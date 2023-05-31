@@ -6,7 +6,7 @@ a significant threat as it enables the attacker to escalate privileges, execute 
 or launch further attacks on the system.
 
 
-#### The following code in `Dart` enables the exposure of the content stored in the passwords file:
+The following code in `Dart` enables the exposure of the content stored in the passwords file:
 
 ```dart
 import 'package:file/local.dart';
@@ -17,7 +17,9 @@ void main() {
   f.copy("pass.txt");
 }
 ```
+
 Or changing the root of the current running process:
+
 ```dart
 import 'package:file/file.dart';
 import 'package:file/chroot.dart';
@@ -32,7 +34,8 @@ void main() {
 );
 ```
 
-#### This is a `Kotlin` example that suffer from Path Traversal vulnerability:
+This is a `Kotlin` example that suffer from Path Traversal vulnerability:
+
 ```kotlin
 import java.io.File
 
@@ -54,7 +57,8 @@ fun main() {
 }
 ```
 
-#### Here is another example in `Swift`:
+Here is another example in `Swift`:
+
 ```swift
 import Foundation
 
