@@ -8,7 +8,7 @@ or launch further attacks on the system.
 
 Can expose the content of the passwords file using the following code:
 
-```python
+```dart
 import 'package:file/local.dart';
 
 void main() {
@@ -18,7 +18,7 @@ void main() {
 }
 ```
 Or changing the root of the current running process:
-```python
+```dart
 import 'package:file/file.dart';
 import 'package:file/chroot.dart';
 import 'package:file/local.dart';
