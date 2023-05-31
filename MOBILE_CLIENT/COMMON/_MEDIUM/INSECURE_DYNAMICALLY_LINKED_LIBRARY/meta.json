@@ -1,0 +1,11 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Loading Dynamic Libraries without proper input sanitization and verifications.",
+  "references": {
+    "CWE-426: Untrusted Search Path":"https://cwe.mitre.org/data/definitions/426.html",
+    "WIN00-C. Be specific when dynamically loading libraries":"https://wiki.sei.cmu.edu/confluence/display/c/WIN00-C.+Be+specific+when+dynamically+loading+libraries"
+  },
+  "title": "Insecure Dynamic Library Loading",
+  "privacy_issue": true,
+  "security_issue": true
+}
