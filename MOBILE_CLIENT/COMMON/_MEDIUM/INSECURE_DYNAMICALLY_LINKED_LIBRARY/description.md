@@ -1,7 +1,6 @@
-Dynamicaly Linking libraries if not handled properly gives room for a range of potential vulnerabilities including:
+Dynamicaly loading libraries if not handled properly gives room for a range of potential vulnerabilities including:
 
-**`Insecure DLL loading`**  : occurs when the application loads from an untrusted location, which could be hosting malicious libraries.
-**`DLL hijacking`** : involves replacing a legitimate DLL with a malicious one.
-**`DLL injection`** : happens when an attacker injects the malicious DLL directly into the allocated memory of the targeted process (application).
+**`Insecure Loading Path`**  : occurs when the application loads from an untrusted location or is manipulated to do so, An untrusted location could be hosting malicious libraries.
+**`Library Hijacking`** : involves replacing the legitimate Library with a malicious one.
 
-These attacks have the potential to allow code execution, privilege escalation and unauthorized access to sensitive resources.
+These vulnerabilities have the potential to allow code injection and execution, privilege escalation and unauthorized access to sensitive resources.
