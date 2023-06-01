@@ -1,4 +1,6 @@
 When dealing with dynamic library loading, A developer should:
-* Apply robust input validation and sanitization techniques to all input parameters used during library loading.
-* Avoid loading libraries from untrusted or unknown sources.
-* Employ digital signatures or cryptographic hashes to verify the authenticity and integrity of dynamically loaded libraries.
+* Implement robust input validation and sanitization techniques to prevent directory traversal and injection attacks.
+* Only load libraries from trusted and verified sources, ensuring the integrity and authenticity of the libraries.
+* Enforce strict access controls to prevent unauthorized library loading.
+* Regularly update and patch libraries to address known vulnerabilities.
+* Employ strong code signing and integrity verification mechanisms to ensure the integrity of dynamically loaded libraries.
