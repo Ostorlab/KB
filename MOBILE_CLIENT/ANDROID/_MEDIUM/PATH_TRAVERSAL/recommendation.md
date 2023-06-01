@@ -1,7 +1,9 @@
 **Input Validation:** Thoroughly validate user-supplied input to ensure it conforms to the expected format and does
 not contain any malicious characters or sequences. Sanitize and normalize file paths to prevent any 
 unauthorized navigation.
-**Example in `Dart`:**
+
+Example in `Dart`:
+
 ```dart
 import 'package:file/local.dart';
 import 'dart:io';
@@ -33,7 +35,8 @@ bool isWithinDirectory(FileSystemEntity file, String directoryPath) {
 
 
 ```
-**Example in `Kotlin`:**
+
+Example in `Kotlin`:
 
 ```kotlin
 import java.io.File
@@ -57,7 +60,7 @@ fun main() {
 }
 ```
 
-**Example in `Swift`:**
+Example in `Swift`:
 
 ```swift
 import Foundation
@@ -92,7 +95,8 @@ main()
 
 **Absolute Path Usage:** Prefer using absolute paths instead of relative paths whenever possible. By using absolute paths, the application explicitly specifies the exact location of the file or directory, leaving no room for interpretation.
 
-**Example in `Dart`**
+Example in `Dart`:
+
 ```dart
 import 'dart:io';
 import 'package:path/path.dart' as path;
@@ -106,7 +110,8 @@ void main() {
 }
 ```
 
-**Example in `Kotlin`**
+Example in `Kotlin`:
+
 ```kotlin
 import java.io.File
 
@@ -124,8 +129,9 @@ fun main() {
 
 ```
 
-**Example in `Swift`**
-```kotlin
+Example in `Swift`:
+
+```swift
 import Foundation
 
 func main() {
