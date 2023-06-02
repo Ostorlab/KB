@@ -9,8 +9,6 @@
   "security_issue": true,
   "categories": {
     "CWE_TOP_25": [
-      "CWE_639",
-      "CWE_642",
       "CWE_862"
     ]
   }
