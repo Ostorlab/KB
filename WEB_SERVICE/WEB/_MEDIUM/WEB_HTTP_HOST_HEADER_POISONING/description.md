@@ -1,8 +1,6 @@
-The HTTP Host specifies the domain name the HTTP Client would like to access. It is mandatory as part of the HTTP/1.1
-standard.
+The HTTP Host specifies the domain name the HTTP Client would like to access. It is mandatory as part of the HTTP/1.1 standard.
 
-For instance, to access the domain `www.ostorlab.co`, the HTTP client would send the following request with the `Host`
-header:
+For instance, to access the domain `www.ostorlab.co`, the HTTP client would send the following request with the `Host` header:
 
 ```http request
 GET / HTTP/1.1

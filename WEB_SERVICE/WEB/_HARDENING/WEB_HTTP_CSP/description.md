@@ -1,11 +1,6 @@
-Content Security Policy (CSP) is a computer security standard that provides an added layer of protection against
-Cross-Site Scripting (XSS), clickjacking, and other client-side attacks that rely on executing malicious content in the
-context of a trusted web resource.
+Content Security Policy (CSP) is a computer security standard that provides an added layer of protection against Cross-Site Scripting (XSS), clickjacking, and other client-side attacks that rely on executing malicious content in the context of a trusted web resource.
 
-You can selectively specify which data sources should be
-permitted in your web application using appropriate CSP directives in HTTP response headers. This article shows how to
-use CSP headers to protect websites against XSS attacks and
-other attempts to bypass the same-origin policy.
+You can selectively specify which data sources should be permitted in your web application using appropriate CSP directives in HTTP response headers. This article shows how to use CSP headers to protect websites against XSS attacks and other attempts to bypass the same-origin policy.
 
 CSP can be enabled by instructing the browser with a Content-Security-Policy directive in a response header;
 
@@ -23,15 +18,9 @@ You can restrict script loading only to the same domain in the above example. It
 executions in the element attributes and the event handlers. There are various directives that you can use by
 declaring CSP:
 
-- script-src: Restricts the script loading resources to the ones you declared. By default, it disables inline script
-  executions unless you permit the evaluation functions and inline scripts by the unsafe-eval and unsafe-inline
-  keywords.
-- base-uri: The base element is used to resolve a relative URL to an absolute one. By using this CSP directive, you can
-  define all possible URLs which could be assigned to the base-href attribute of the document.
-  frame-ancestors: It is very similar to X-Frame-Options HTTP header. It defines the URLs by which the page can be
-  loaded in an iframe.
-- frame-src / child-src: frame-src is the deprecated version of child-src. Both define the sources that can be loaded by
-  iframe on the page. (Please note that frame-src was brought back in CSP 3)
+- script-src: Restricts the script loading resources to the ones you declared. By default, it disables inline script executions unless you permit the evaluation functions and inline scripts by the unsafe-eval and unsafe-inline keywords.
+- base-uri: The base element is used to resolve a relative URL to an absolute one. By using this CSP directive, you can define all possible URLs which could be assigned to the base-href attribute of the document. frame-ancestors: It is very similar to X-Frame-Options HTTP header. It defines the URLs by which the page can be loaded in an iframe.
+- frame-src / child-src: frame-src is the deprecated version of child-src. Both define the sources that can be loaded by iframe on the page. (Please note that frame-src was brought back in CSP 3)
 - object-src : Defines the resources that can be loaded by embedding such as Flash files, Java Applets.
 - img-src: As its name implies, it defines the resources from which the images can be loaded.
 - connect-src: Defines the whitelisted targets for XMLHttpRequest and WebSocket objects.
@@ -68,8 +57,7 @@ Content-Security-Policy: script-src https://ostorlab.com:*;
 Content-Security-Policy: script-src https://ostorlab.com:*;
 ```
 
-It is also possible to set a CSP in Report-Only mode instead of forcing it immediately in the migration period. Thus you
-can see the violations of the CSP policy in the current state of your web site while migrating to CSP:
+It is also possible to set a CSP in Report-Only mode instead of forcing it immediately in the migration period. Thus you can see the violations of the CSP policy in the current state of your web site while migrating to CSP:
 
 ```html
 Content-Security-Policy-Report-Only: script-src 'self'; report-uri: https://ostorlab.com;

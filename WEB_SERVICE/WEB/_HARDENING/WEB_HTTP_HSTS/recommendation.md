@@ -1,7 +1,6 @@
 Configure your webserver to redirect HTTP requests to HTTPS.
 
-i.e. for Apache, you should have modification in the httpd.conf. For more configurations, please refer to External
-References section.
+i.e. for Apache, you should have modification in the httpd.conf. For more configurations, please refer to External References section.
 
 ```shell
 # load module

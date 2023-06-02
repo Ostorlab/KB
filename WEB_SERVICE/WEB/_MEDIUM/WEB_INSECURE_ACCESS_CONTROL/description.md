@@ -1,5 +1,4 @@
-The application does not enforce proper access control, allowing an attacker to access unauthorized data or perform
-unauthorized business functions.
+The application does not enforce proper access control, allowing an attacker to access unauthorized data or perform unauthorized business functions.
 
 Access control vulnerabilities may be caused by:
 

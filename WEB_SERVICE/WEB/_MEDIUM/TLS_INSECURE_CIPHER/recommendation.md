@@ -1,26 +1,24 @@
 The recommended TLS configuration should enforce the following recommendations:
 
 * Restrict to `TLSv1` and above, with `TLS1.2` being preferred
-* If `SSLv3` is required, it is advised to implement the `TLS Fallback SCSV` feature to prevent protocol downgrade
-  attacks
+* If `SSLv3` is required, it is advised to implement the `TLS Fallback SCSV` feature to prevent protocol downgrade attacks.
 * Disable Anonymous Diffie-Hellman (`ADH`)
 * Disable `aNULL` and `eNull` cipher suites
 * Disable Export key exchange suites
 * Remove `RC4` support
 * Remove `DES` support
 * Remove `MD5` support
-* Prefere `SHA256` over `SHA1`
-* Prefer `AES128` over `AES256` as 256 offers little security advantages and is less robust to timing attacks
-* Disable Client-Initiated Renegotiation
-* Disable TLS compression
-* Offer only ciphers with a key length of greater than 128bit
-* Offer cipher suites with Perfect-Forward Secrecy protocol properties (`DHE`, `ECDHE`)
-* Use custom Diffie-Hellman group to protect against Logjam attack
-* Implement the HTTP Strict Transport Security header field
-* Implement `OSCP stapling`
+* Prefere `SHA256` over `SHA1`.
+* Prefer `AES128` over `AES256` as 256 offers little security advantages and is less robust to timing attacks.
+* Disable Client-Initiated Renegotiation.
+* Disable TLS compression.
+* Offer only ciphers with a key length of greater than 128bit.
+* Offer cipher suites with Perfect-Forward Secrecy protocol properties (`DHE`, `ECDHE`).
+* Use custom Diffie-Hellman group to protect against Logjam attack.
+* Implement the HTTP Strict Transport Security header field.
+* Implement `OSCP stapling`.
 
-Sample of a secure TLS configuration for Nginx generated
-with [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+Sample of a secure TLS configuration for Nginx generated with [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 
 ```nginx
     server {

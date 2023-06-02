@@ -5,31 +5,19 @@ the `Secure Enclave Processor` (SEP) to provide secure cryptographic processing 
 
 Files can be assigned a protection class that offers different levels of protection:
 
-* __Complete Protection__ (`NSFileProtectionComplete`): A key derived from the user passcode and the device UID protects
-  this class key. The derived key is wiped from memory shortly after the device is locked, making the data inaccessible
-  until the user unlocks the device.
+* __Complete Protection__ (`NSFileProtectionComplete`): A key derived from the user passcode and the device UID protects this class key. The derived key is wiped from memory shortly after the device is locked, making the data inaccessible until the user unlocks the device.
 
-* __Protected Unless Open__ (`NSFileProtectionCompleteUnlessOpen`): This protection class is similar to Complete
-  Protection, but if the file is opened when unlocked, the app can continue to access the file even if the user locks
-  the device. This protection class is used when, for example, a mail attachment is downloading in the background.
+* __Protected Unless Open__ (`NSFileProtectionCompleteUnlessOpen`): This protection class is similar to Complete Protection, but if the file is opened when unlocked, the app can continue to access the file even if the user locks the device. This protection class is used when, for example, a mail attachment is downloading in the background.
 
-* __Protected Until First User Authentication__ (`NSFileProtectionCompleteUntilFirstUserAuthentication`): The file can
-  be accessed as soon as the user unlocks the device for the first time after booting. It can be accessed even if the
-  user subsequently locks the device and the class key is not removed from memory.
+* __Protected Until First User Authentication__ (`NSFileProtectionCompleteUntilFirstUserAuthentication`): The file can be accessed as soon as the user unlocks the device for the first time after booting. It can be accessed even if the user subsequently locks the device and the class key is not removed from memory.
 
-* __No Protection__ (`NSFileProtectionNone`): The key for this protection class is protected with the UID only. The
-  class key is stored in "Effaceable Storage", which is a region of flash memory on the iOS device that allows the
-  storage of small amounts of data. This protection class exists for fast remote wiping (immediate deletion of the class
-  key, which makes the data inaccessible).
+* __No Protection__ (`NSFileProtectionNone`): The key for this protection class is protected with the UID only. The class key is stored in "Effaceable Storage", which is a region of flash memory on the iOS device that allows the storage of small amounts of data. This protection class exists for fast remote wiping (immediate deletion of the class key, which makes the data inaccessible).
 
-All class keys except `NSFileProtectionNone` are encrypted with a key derived from the device UID and the user's
-passcode.
-As a result, decryption can happen only on the device itself and requires the correct passcode.
+All class keys except `NSFileProtectionNone` are encrypted with a key derived from the device UID and the user's passcode. As a result, decryption can happen only on the device itself and requires the correct passcode.
 
 Since iOS 7, the default data protection class is "Protected Until First User Authentication".
 
-The Keychain can also store small data bits, like encryption keys and session tokens. Access to the keychain is done
-using a custom API like:
+The Keychain can also store small data bits, like encryption keys and session tokens. Access to the keychain is done using a custom API like:
 
 * `SecItemAdd`
 * `SecItemUpdate`
@@ -41,9 +29,7 @@ Items added to the Keychain are encoded as a binary plist and encrypted with a 1
 Galois/Counter Mode (GCM). Note that larger blobs of data aren't meant to be saved directly in the Keychain-that's the
 purpose of the Data Protection API. You can configure data protection for Keychain items by setting
 the `kSecAttrAccessible` key in the call to `SecItemAdd` or `SecItemUpdate`.
-The following
-configurable [accessibility values for kSecAttrAccessible](https://developer.apple.com/documentation/security/keychain_services/keychain_items/item_attribute_keys_and_values#1679100 "Accessibility Values for kSecAttrAccessible")
-are the Keychain Data Protection classes:
+The following configurable [accessibility values for kSecAttrAccessible](https://developer.apple.com/documentation/security/keychain_services/keychain_items/item_attribute_keys_and_values#1679100 "Accessibility Values for kSecAttrAccessible")are the Keychain Data Protection classes:
 
 - `kSecAttrAccessibleAlways`: The data in the Keychain item can always be accessed, regardless of whether the device is
   locked.
@@ -54,8 +40,7 @@ are the Keychain Data Protection classes:
 - `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`: The data in the Keychain item can't be accessed after a restart
   until the device has been unlocked once by the user. Items with this attribute do not migrate to a new device. Thus,
   these items will not be present after restoring from a backup of a different device.
-- `kSecAttrAccessibleWhenUnlocked`: The data in the Keychain item can be accessed only while the user unlocks the
-  device.
+- `kSecAttrAccessibleWhenUnlocked`: The data in the Keychain item can be accessed only while the user unlocks the device.
 - `kSecAttrAccessibleWhenUnlockedThisDeviceOnly`: The data in the Keychain item can be accessed only while the user
   unlocks the device. The data won't be included in an iCloud or local backup.
 - `kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly`: The data in the Keychain can be accessed only when the device is

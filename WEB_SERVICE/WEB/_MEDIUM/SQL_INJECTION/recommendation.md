@@ -1,3 +1,1 @@
-Without sufficient removal or quoting of SQL syntax in user-controllable inputs, the generated SQL query can cause those
-inputs to be interpreted as SQL instead of ordinary user data. This can be used to alter query logic to bypass security
-checks or unauthorized access content.
+Without sufficient removal or quoting of SQL syntax in user-controllable inputs, the generated SQL query can cause those inputs to be interpreted as SQL instead of ordinary user data. This can be used to alter query logic to bypass security checks or unauthorized access content.

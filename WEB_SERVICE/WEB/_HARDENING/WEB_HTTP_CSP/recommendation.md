@@ -1,5 +1,4 @@
-- Enable CSP on your website by sending the Content-Security-Policy in HTTP response headers that instruct the browser
-  to apply the policies you specified.
+- Enable CSP on your website by sending the Content-Security-Policy in HTTP response headers that instruct the browser to apply the policies you specified.
 - Apply the whitelist and policies as strictly as possible.
 - Rescan your application to see if Ostorlab identifies any weaknesses in your policies.
 - Use frame-src to prevent iFrames from loading on your site: `Content-Security-Policy:frame-src 'none'`
