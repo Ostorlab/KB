@@ -1,3 +1,4 @@
+"""fixtures for kb generator tests"""
 import pytest
 
 

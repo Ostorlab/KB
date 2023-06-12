@@ -1,4 +1,4 @@
-import pytest
+"""unittests for kb generator"""
 
 
 def test_generate_kb(json_output):
@@ -65,7 +65,11 @@ def test_generate_kb(json_output):
     assert isinstance(recommendation, dict)
     assert (
         recommendation["Details"]
-        == "To prevent HTML Injection vulnerabilities, all user input should be properly sanitized and validated before being displayed on a web page. This can be done by using a server-side templating engine or by using a client-side library that automatically sanitizes user input."
+        == "To prevent HTML Injection vulnerabilities, all user input "
+        "should be properly sanitized and validated before being "
+        "displayed on a web page. This can be done by using a server-side"
+        " templating engine or by using a client-side library that "
+        "automatically sanitizes user input."
     )
 
     code_fixes = recommendation.get("Code Fixes", [])
