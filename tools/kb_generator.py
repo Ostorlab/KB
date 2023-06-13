@@ -9,11 +9,12 @@ import openai
 from openai.api_resources import chat_completion
 from openai import openai_object
 
-if "OPENAI_API_KEY" not in os.environ:
-    raise ValueError("OPENAI_API_KEY is not defined")
+if os.getenv("DEV") is not None:
+    if "OPENAI_API_KEY" not in os.environ:
+        raise ValueError("OPENAI_API_KEY is not defined")
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
-MODEL_NAME = "gpt-3.5-turbo"
+    openai.api_key = os.getenv("OPENAI_API_KEY")
+    MODEL_NAME = "gpt-3.5-turbo"
 
 
 def _write_to_md(data: dict[str, Any]) -> None:
@@ -29,7 +30,7 @@ def _write_to_md(data: dict[str, Any]) -> None:
         f.write(f"{vulnerability_description}\n\n")
 
         # Sub-vulnerabilities
-        sub_vulnerabilities = vulnerability["Sub-vulnerabilities"]
+        sub_vulnerabilities = vulnerability.get("Sub-vulnerabilities", [])
         for sub_vulnerability in sub_vulnerabilities:
             sub_vulnerability_name = sub_vulnerability["Name"]
             sub_vulnerability_description = sub_vulnerability["Description"]
@@ -58,7 +59,7 @@ def _write_to_md(data: dict[str, Any]) -> None:
         f.write(f"{recommendation_details}\n\n")
 
         # Code Fixes
-        code_fixes = recommendation["Code Fixes"]
+        code_fixes = recommendation.get("Code Fixes", [])
         for code_fix in code_fixes:
             code_fix_name = code_fix["Name"]
             examples = code_fix["Examples"]
@@ -82,7 +83,7 @@ def _write_to_md(data: dict[str, Any]) -> None:
 def _ask_the_wizard(
     prompts: list[dict[str, str]], temperature: float = 0.0, max_tokens: int = 3000
 ) -> openai_object.OpenAIObject:
-    """Send a prompt to an OpenAI bot."""
+    """Send a prompt to OpenAI API."""
     wizard_answer: openai_object.OpenAIObject = chat_completion.ChatCompletion.create(
         model=MODEL_NAME,
         temperature=temperature,
@@ -98,7 +99,7 @@ def _ask_the_wizard(
     retry=tenacity.retry_if_exception_type(),
 )
 def generate_kb(vulnerability_name: str) -> dict[str, Any]:
-    """Send a prompt to the OpenAI API.
+    """Send a prompt to the OpenAI API and generate KB.
 
     Args:
         vulnerability_name: vulnerability name
@@ -106,15 +107,13 @@ def generate_kb(vulnerability_name: str) -> dict[str, Any]:
 
     """
     prompt_message = (
-        f"Markdon KB entry for {vulnerability_name}, include vulnerable applications "
-        "(complete code with imports) in Dart, Swift and Kotlin, reply as Markdown, use the following template\n"
+        f"KB entry for {vulnerability_name}, include vulnerable applications "
+        "(complete code with imports) in Dart, Swift and Kotlin, reply as JSON\n"
         """
         {
             "Vulnerability": {
                 "Name": "[Vulnerability Name]",
-                "Description": "[Vulnerability Name], also known as [alternative name if applicable], " 
-                        "is a [brief description of the vulnerability]. This vulnerability arises when "
-                        "[describe the root cause or condition that leads to the vulnerability]".,
+                "Description": "[Vulnerability Description]".,
                 "Sub-vulnerabilities": [
                     {
                         "Name": "[Sub-vulnerability Name]",
