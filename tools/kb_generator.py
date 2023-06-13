@@ -4,6 +4,9 @@ import os
 from typing import Any
 
 import tenacity
+import dataclasses
+import dataclass_csv
+import io
 
 import openai
 from openai.api_resources import chat_completion
@@ -17,71 +20,22 @@ if os.getenv("DEV") is not None:
     MODEL_NAME = "gpt-3.5-turbo"
 
 
-def _write_to_md(data: dict[str, Any]) -> None:
-    """Write to Markdown file"""
+@dataclasses.dataclass
+class Vulnerability:
+    name: str
+    risk_rating: str
+    platform: str
 
-    # Vulnerability
-    vulnerability = data["Vulnerability"]
-    vulnerability_name = vulnerability["Name"]
-    vulnerability_description = vulnerability["Description"]
 
-    with open("description.md", "w") as f:
-        f.write(f"# {vulnerability_name}\n\n")
-        f.write(f"{vulnerability_description}\n\n")
-
-        # Sub-vulnerabilities
-        sub_vulnerabilities = vulnerability.get("Sub-vulnerabilities", [])
-        for sub_vulnerability in sub_vulnerabilities:
-            sub_vulnerability_name = sub_vulnerability["Name"]
-            sub_vulnerability_description = sub_vulnerability["Description"]
-
-            f.write(f"## {sub_vulnerability_name}\n\n")
-            f.write(f"{sub_vulnerability_description}\n\n")
-
-            # Examples
-            examples = sub_vulnerability["Examples"]
-            f.write("### Examples\n\n")
-            for example in examples:
-                language = example["Language"]
-                code = example["Code"]
-
-                f.write(f"#### {language}\n\n")
-                f.write("```{language}\n")
-                f.write(f"{code}\n")
-                f.write("```\n\n")
-
-    # Recommendation
-    recommendation = data["Recommendation"]
-    recommendation_details = recommendation["Details"]
-
-    with open("recommendation.md", "w") as f:
-        f.write("# Recommendation\n\n")
-        f.write(f"{recommendation_details}\n\n")
-
-        # Code Fixes
-        code_fixes = recommendation.get("Code Fixes", [])
-        for code_fix in code_fixes:
-            code_fix_name = code_fix["Name"]
-            examples = code_fix["Examples"]
-
-            f.write(f"## {code_fix_name}\n\n")
-            for example in examples:
-                language = example["Language"]
-                code = example["Code"]
-
-                f.write(f"### {language}\n\n")
-                f.write("```{language}\n")
-                f.write(f"{code}\n")
-                f.write("```\n\n")
-
-    meta = data["Meta"]
-
-    with open("meta.json", "w") as file:
-        file.write(str(meta))
+@dataclasses.dataclass
+class KBEntry:
+    description: str
+    recommendation: str
+    meta: str
 
 
 def _ask_the_wizard(
-    prompts: list[dict[str, str]], temperature: float = 0.0, max_tokens: int = 3000
+    prompts: list[dict[str, str]], temperature: float = 0.0, max_tokens: int = 3200
 ) -> openai_object.OpenAIObject:
     """Send a prompt to OpenAI API."""
     wizard_answer: openai_object.OpenAIObject = chat_completion.ChatCompletion.create(
@@ -93,12 +47,12 @@ def _ask_the_wizard(
     return wizard_answer
 
 
-@tenacity.retry(
-    stop=tenacity.stop_after_attempt(3),
-    wait=tenacity.wait_fixed(2),
-    retry=tenacity.retry_if_exception_type(),
-)
-def generate_kb(vulnerability_name: str) -> dict[str, Any]:
+# @tenacity.retry(
+#     stop=tenacity.stop_after_attempt(3),
+#     wait=tenacity.wait_fixed(2),
+#     retry=tenacity.retry_if_exception_type(),
+# )
+def generate_kb(vulnerability_name: str) -> KBEntry:
     """Send a prompt to the OpenAI API and generate KB.
 
     Args:
@@ -214,23 +168,81 @@ def generate_kb(vulnerability_name: str) -> dict[str, Any]:
         }
         """
     )
-
     prompts = [
         {
             "role": "user",
             "content": prompt_message,
         },
     ]
+    wizard_answer = _ask_the_wizard(prompts=prompts)
+    response = json.loads(wizard_answer.choices[0].message["content"])
+    # Vulnerability Description
+    description_buffer = io.StringIO()
+    vulnerability_data = response["Vulnerability"]
+    vulnerability_name = vulnerability_data["Name"]
+    vulnerability_description = vulnerability_data["Description"]
+    description_buffer.write(f"# {vulnerability_name}\n\n")
+    description_buffer.write(f"{vulnerability_description}\n\n")
 
-    wizard_answer = _ask_the_wizard(prompts=prompts).choices[0].message["content"]
+    # Sub-vulnerabilities
+    sub_vulnerabilities = vulnerability_data.get("Sub-vulnerabilities", [])
+    for sub_vulnerability in sub_vulnerabilities:
+        sub_vulnerability_name = sub_vulnerability["Name"]
+        sub_vulnerability_description = sub_vulnerability["Description"]
+        description_buffer.write(f"## {sub_vulnerability_name}\n\n")
+        description_buffer.write(f"{sub_vulnerability_description}\n\n")
+        # Code Examples
+        examples = sub_vulnerability["Examples"]
+        description_buffer.write("### Examples\n\n")
+        for example in examples:
+            language = example["Language"]
+            code = example["Code"]
+            description_buffer.write(f"#### {language}\n\n")
+            description_buffer.write("```{language}\n")
+            description_buffer.write(f"{code}\n")
+            description_buffer.write("```\n\n")
 
-    return json.loads(wizard_answer)
+    description_md = description_buffer.getvalue()
+
+    # Recommendation
+    recommendation_buffer = io.StringIO()
+    recommendation_data = response["Recommendation"]
+    recommendation_buffer.write("# Recommendation\n\n")
+    recommendation_buffer.write(f"{recommendation_data}\n\n")
+    code_fixes = recommendation_data.get("Code Fixes", [])
+    for code_fix in code_fixes:
+        code_fix_name = code_fix["Name"]
+        examples = code_fix["Examples"]
+
+        recommendation_buffer.write(f"## {code_fix_name}\n\n")
+        for example in examples:
+            language = example["Language"]
+            code = example["Code"]
+
+            recommendation_buffer.write(f"### {language}\n\n")
+            recommendation_buffer.write("```{language}\n")
+            recommendation_buffer.write(f"{code}\n")
+            recommendation_buffer.write("```\n\n")
+
+    recommendation_md = recommendation_buffer.getvalue()
+
+    # Vulnerability metadata
+    meta = response["Meta"]
+
+    # KB Entry
+    kbentry = KBEntry(description_md, recommendation_md, meta)
+
+    return kbentry
 
 
 def main() -> None:
-    vulnerability = input("Enter vulnerability name: ")
-    kb = generate_kb(vulnerability)
-    _write_to_md(kb)
+    with open("vulnerabilities.csv", "r") as file:
+        reader = dataclass_csv.DataclassReader(file, Vulnerability)
+        vulnerabilities = list(reader)
+
+    for vulnerability in vulnerabilities:
+        kbentry = generate_kb(vulnerability.name)
+        print(kbentry)  # TODO (BlueSquare1): Validate path and output to files
 
 
 if __name__ == "__main__":
