@@ -1,8 +1,8 @@
 """Unittests for KB generator."""
-from typing import Any
 from pytest_mock import plugin
-from tools import kb_generator
+
 from tests.tools import conftest
+from tools import kb_generator
 
 
 def testGenerateKB_whenVulnerabilityProvided_returnskbentry(

@@ -1,6 +1,7 @@
 """Fixtures for KB generator tests."""
 import dataclasses
 from typing import Any
+
 import pytest
 
 

@@ -1,7 +1,6 @@
 """Module responsible for interacting with the OpenAI API to generate KB entries."""
 import json
 import os
-from typing import Any
 
 import tenacity
 import dataclasses
@@ -47,11 +46,11 @@ def _ask_the_wizard(
     return wizard_answer
 
 
-# @tenacity.retry(
-#     stop=tenacity.stop_after_attempt(3),
-#     wait=tenacity.wait_fixed(2),
-#     retry=tenacity.retry_if_exception_type(),
-# )
+@tenacity.retry(
+    stop=tenacity.stop_after_attempt(3),
+    wait=tenacity.wait_fixed(2),
+    retry=tenacity.retry_if_exception_type(),
+)
 def generate_kb(vulnerability_name: str) -> KBEntry:
     """Send a prompt to the OpenAI API and generate KB.
 
