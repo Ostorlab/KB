@@ -8,11 +8,11 @@ The Ostorlab Knowledge Base Repository is designed to provide comprehensive deta
 
 This repository includes the following files for each vulnerability KB entry:
 
-description.md: This file provides a detailed description of the vulnerability, including its impact, attack vector, and any relevant technical information reinforced with code examples. It aims to help users understand the nature of the vulnerability and its potential implications.
+`description.md`: This file provides a detailed description of the vulnerability, including its impact, attack vector, and any relevant technical information reinforced with code examples. It aims to help users understand the nature of the vulnerability and its potential implications.
 
-recommendation.md: This file contains actionable recommendations and best practices for mitigating or fixing the vulnerability. It offers guidance on secure coding practices, configuration changes, or other measures to prevent or address the identified vulnerability.
+`recommendation.md`: This file contains actionable recommendations and best practices for mitigating or fixing the vulnerability. It offers guidance on secure coding practices, configuration changes, or other measures to prevent or address the identified vulnerability.
 
-meta.json: This JSON file provides additional metadata about the vulnerability, such as its risk rating, categories and references to relevant external resources. It offers a structured representation of the vulnerability's characteristics, allowing for easy integration into other tools or systems.
+`meta.json`: This JSON file provides additional metadata about the vulnerability, such as its risk rating, categories and references to relevant external resources. It offers a structured representation of the vulnerability's characteristics, allowing for easy integration into other tools or systems.
 
 ### Contributing
 
