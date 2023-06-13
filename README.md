@@ -1,10 +1,4 @@
 # Ostorlab Knowledge Base Repository
- 
-- Table of Contents
-- Introduction
-- File Descriptions
-- Contributing
-- Disclaimer
 
 ### Introduction
 
@@ -36,3 +30,9 @@ We welcome contributions to the Ostorlab Knowledge Base Repository. If you have 
 Please note that while this repository aims to provide accurate and up-to-date information, it is always essential to verify the information and perform your own assessments based on your specific use cases and requirements. Ostorlab cannot be held responsible for any misuse or misinterpretation of the information provided in this repository.
 
 If you have any questions or concerns, please contact us at support@ostorlab.co.
+
+### License
+
+The Ostorlab Knowledge Base Repository is licensed under the Apache License, Version 2.0. By contributing to this repository, you agree to license your contributions under the same license.
+
+For more details, please refer to the [LICENSE](https://github.com/Ostorlab/KB/blob/master/LICENSE) file.
