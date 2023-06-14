@@ -1,11 +1,13 @@
 """Module responsible for interacting with the OpenAI API to generate KB entries."""
+import enum
 import json
 import os
 
 import tenacity
 import dataclasses
-import dataclass_csv
+import click
 import io
+import pathlib
 
 import openai
 from openai.api_resources import chat_completion
@@ -20,10 +22,28 @@ if os.getenv("DEV") is not None:
 
 
 @dataclasses.dataclass
+class RiskRating(enum.Enum):
+    info = "INFO"
+    hardening = "HARDENING"
+    low = "LOW"
+    medium = "MEDIUM"
+    high = "HIGH"
+
+
+@dataclasses.dataclass
+class Platform(enum.Enum):
+    ios = "IOS"
+    android = "ANDROID"
+    multi = "MULTIPLATFORM"
+    common = "COMMON"
+    web = "WEB"
+
+
+@dataclasses.dataclass
 class Vulnerability:
     name: str
-    risk_rating: str
-    platform: str
+    risk_rating: RiskRating
+    platform: Platform
 
 
 @dataclasses.dataclass
@@ -31,19 +51,32 @@ class KBEntry:
     description: str
     recommendation: str
     meta: str
+    vulnerability: Vulnerability | None = None
 
 
-def _ask_the_wizard(
-    prompts: list[dict[str, str]], temperature: float = 0.0, max_tokens: int = 3200
-) -> openai_object.OpenAIObject:
-    """Send a prompt to OpenAI API."""
-    wizard_answer: openai_object.OpenAIObject = chat_completion.ChatCompletion.create(
-        model=MODEL_NAME,
-        temperature=temperature,
-        max_tokens=max_tokens,
-        messages=prompts,
+PLATFORM_TO_PATH = {
+    "IOS": "MOBILE_CLIENT/IOS/",
+    "ANDROID": "MOBILE_CLIENT/ANDROID/",
+    "COMMON": "MOBILE_CLIENT/COMMON/",
+    "MULTIPLATFORM": "MOBILE_CLIENT/MULTIPLATFORM_JS/",
+    "WEB": "WEB_SERVICE/WEB/",
+}
+
+
+def _dump_kb(kbentry: KBEntry) -> None:
+    path_prefix = pathlib.Path(
+        PLATFORM_TO_PATH[kbentry.vulnerability.platform],
+        f"_{kbentry.vulnerability.risk_rating}",
     )
-    return wizard_answer
+
+    with open(pathlib.Path(path_prefix, "description.md"), "w") as description_md:
+        description_md.write(kbentry.description)
+
+    with open(pathlib.Path(path_prefix, "recommendation.md"), "w") as recommendation_md:
+        recommendation_md.write(kbentry.recommendation)
+
+    with open(pathlib.Path(path_prefix, "meta.json"), "w") as meta_json:
+        meta_json.write(kbentry.meta)
 
 
 @tenacity.retry(
@@ -51,16 +84,30 @@ def _ask_the_wizard(
     wait=tenacity.wait_fixed(2),
     retry=tenacity.retry_if_exception_type(),
 )
-def generate_kb(vulnerability_name: str) -> KBEntry:
+def _ask_the_wizard(
+    prompts: list[dict[str, str]], temperature: float = 0.0, max_tokens: int = 3200
+) -> openai_object.OpenAIObject:
+    """Send a prompt to OpenAI API."""
+    wizard_response: openai_object.OpenAIObject = chat_completion.ChatCompletion.create(
+        model=MODEL_NAME,
+        temperature=temperature,
+        max_tokens=max_tokens,
+        messages=prompts,
+    )
+    return wizard_response
+
+
+def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     """Send a prompt to the OpenAI API and generate KB.
 
     Args:
-        vulnerability_name: vulnerability name
+        vulnerability: Vulnerability object
     Returns:
+        KBEntry
 
     """
     prompt_message = (
-        f"KB entry for {vulnerability_name}, include vulnerable applications "
+        f"KB entry for {vulnerability.name}, include vulnerable applications "
         "(complete code with imports) in Dart, Swift and Kotlin, reply as JSON\n"
         """
         {
@@ -173,8 +220,8 @@ def generate_kb(vulnerability_name: str) -> KBEntry:
             "content": prompt_message,
         },
     ]
-    wizard_answer = _ask_the_wizard(prompts=prompts)
-    response = json.loads(wizard_answer.choices[0].message["content"])
+    wizard_response = _ask_the_wizard(prompts=prompts)
+    response = json.loads(wizard_response.choices[0].message["content"])
     # Vulnerability Description
     description_buffer = io.StringIO()
     vulnerability_data = response["Vulnerability"]
@@ -229,19 +276,29 @@ def generate_kb(vulnerability_name: str) -> KBEntry:
     meta = response["Meta"]
 
     # KB Entry
-    kbentry = KBEntry(description_md, recommendation_md, meta)
+    kbentry = KBEntry(description_md, recommendation_md, meta, vulnerability)
 
     return kbentry
 
 
-def main() -> None:
-    with open("vulnerabilities.csv", "r") as file:
-        reader = dataclass_csv.DataclassReader(file, Vulnerability)
-        vulnerabilities = list(reader)
-
-    for vulnerability in vulnerabilities:
-        kbentry = generate_kb(vulnerability.name)
-        print(kbentry)  # TODO (BlueSquare1): Validate path and output to files
+@click.command()
+@click.option("--name", prompt="Enter vulnerability name", help="Vulnerability name")
+@click.option(
+    "--risk",
+    prompt="Enter risk rating",
+    help="Risk rating",
+    type=click.Choice([risk.value for risk in RiskRating], case_sensitive=False),
+)
+@click.option(
+    "--platform",
+    prompt="Enter platform",
+    help="Platform",
+    type=click.Choice([platform.value for platform in Platform], case_sensitive=False),
+)
+def main(name: str, risk: str, platform: str) -> None:
+    vulnerability = Vulnerability(name, risk, platform)
+    kbentry = generate_kb(vulnerability)
+    _dump_kb(kbentry)
 
 
 if __name__ == "__main__":

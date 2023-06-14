@@ -1,3 +1,0 @@
-name, risk_rating, platform
-XSS, medium, Web
-Java deserialization, high, Android
