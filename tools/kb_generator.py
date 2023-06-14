@@ -68,6 +68,8 @@ def _dump_kb(kbentry: KBEntry) -> None:
         f"_{kbentry.vulnerability.risk_rating}",
     )
 
+    path_prefix.mkdir(exist_ok=True, parents=True)
+
     with open(pathlib.Path(path_prefix, "description.md"), "w") as description_md:
         description_md.write(kbentry.description)
 
@@ -78,11 +80,6 @@ def _dump_kb(kbentry: KBEntry) -> None:
         meta_json.write(kbentry.meta)
 
 
-@tenacity.retry(
-    stop=tenacity.stop_after_attempt(3),
-    wait=tenacity.wait_fixed(2),
-    retry=tenacity.retry_if_exception_type(),
-)
 def _ask_the_wizard(
     prompts: list[dict[str, str]], temperature: float = 0.0, max_tokens: int = 3200
 ) -> openai_object.OpenAIObject:
@@ -96,6 +93,11 @@ def _ask_the_wizard(
     return wizard_response
 
 
+@tenacity.retry(
+    stop=tenacity.stop_after_attempt(3),
+    wait=tenacity.wait_fixed(2),
+    retry=tenacity.retry_if_exception_type(),
+)
 def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     """Send a prompt to the OpenAI API and generate KB.
 
@@ -106,8 +108,8 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
 
     """
     prompt_message = (
-        f"KB entry for {vulnerability.name}, include vulnerable applications "
-        "(complete code with imports) in Dart, Swift and Kotlin, reply as JSON\n"
+        f"KB entry for {vulnerability.name}, include vulnerable applications"
+        "(complete code with imports) in Dart, Swift and Kotlin, reply strictly as valid JSON\n"
         """
         {
             "Vulnerability": {
