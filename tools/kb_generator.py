@@ -1,17 +1,16 @@
 """Module responsible for interacting with the OpenAI API to generate KB entries."""
+import dataclasses
 import enum
+import io
 import json
 import os
-
-import tenacity
-import dataclasses
-import click
-import io
 import pathlib
 
+import click
 import openai
-from openai.api_resources import chat_completion
+import tenacity
 from openai import openai_object
+from openai.api_resources import chat_completion
 
 if os.getenv("DEV") is not None:
     if "OPENAI_API_KEY" not in os.environ:
