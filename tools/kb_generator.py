@@ -14,11 +14,12 @@ from openai import openai_object
 from openai.api_resources import chat_completion
 
 
-if "OPENAI_API_KEY" not in os.environ:
-    raise ValueError("OPENAI_API_KEY is not defined")
+if "PROD" in os.environ:
+    if "OPENAI_API_KEY" not in os.environ:
+        raise ValueError("OPENAI_API_KEY is not defined")
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
-MODEL_NAME = "gpt-3.5-turbo"
+    openai.api_key = os.getenv("OPENAI_API_KEY")
+    MODEL_NAME = "gpt-3.5-turbo"
 
 
 @dataclasses.dataclass
