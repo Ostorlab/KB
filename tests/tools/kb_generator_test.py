@@ -1,18 +1,21 @@
 """Unittests for KB generator."""
+import pytest
 from pytest_mock import plugin
 
 from tests.tools import conftest
 from tools import kb_generator
 
+import pathlib
+
 
 def testGenerateKB_whenVulnerabilityProvided_returnskbentry(
-    mocker: plugin.MockerFixture, wizard_response: conftest.WizardResponse
+    mocker: plugin.MockerFixture, gpt_response: conftest.GptResponse
 ):
     """generate_kb is responsible for generating KB entries from a vulnerability name.
     when provided with a valid vulnerability name, this function should return a dict
     representing a KB entry
     """
-    mocker.patch("tools.kb_generator._ask_the_wizard", return_value=wizard_response)
+    mocker.patch("tools.kb_generator._ask_gpt", return_value=gpt_response)
     vulnerability = kb_generator.Vulnerability("XSS", "HIGH", "WEB")
     kbentry = kb_generator.generate_kb(vulnerability)
 
@@ -57,3 +60,34 @@ def testGenerateKB_whenVulnerabilityProvided_returnskbentry(
         "OWASP_MASVS_L1": ["V2: Authentication and Session Management"],
         "OWASP_MASVS_L2": ["V2: Authentication and Session Management"],
     }
+
+
+def testDumpKB_whenPathIsValid_writesFiles(mocker: plugin.MockerFixture):
+    # Mocking the necessary objects for testing
+    vulnerability = kb_generator.Vulnerability(name="XSS", platform="WEB", risk_rating="HIGH")
+    kbentry = kb_generator.KBEntry(vulnerability=vulnerability,
+                      description="Description",
+                      recommendation="Recommendation",
+                      meta="Meta")
+
+    mock_open = mocker.patch.object(pathlib.Path, 'open', mocker.MagicMock())
+
+    kb_generator.dump_kb(kbentry)
+
+    assert mock_open.call_count == 3
+
+
+def testDumpKB_whenPathIsInvalid_RaisesException(mocker: plugin.MockerFixture):
+    # Mocking the necessary objects for testing
+    vulnerability = kb_generator.Vulnerability(name="XSS", platform="Xbox360", risk_rating="Unrated")
+    kbentry = kb_generator.KBEntry(vulnerability=vulnerability,
+                      description="Description",
+                      recommendation="Recommendation",
+                      meta="Meta")
+
+    mock_open = mocker.patch.object(pathlib.Path, 'open', mocker.MagicMock())
+
+    with pytest.raises(KeyError):
+        kb_generator.dump_kb(kbentry)
+
+    assert mock_open.call_count == 0

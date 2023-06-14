@@ -5,6 +5,7 @@ import io
 import json
 import os
 import pathlib
+from typing import Any
 
 import click
 import openai
@@ -12,12 +13,12 @@ import tenacity
 from openai import openai_object
 from openai.api_resources import chat_completion
 
-if os.getenv("DEV") is not None:
-    if "OPENAI_API_KEY" not in os.environ:
-        raise ValueError("OPENAI_API_KEY is not defined")
 
-    openai.api_key = os.getenv("OPENAI_API_KEY")
-    MODEL_NAME = "gpt-3.5-turbo"
+if "OPENAI_API_KEY" not in os.environ:
+    raise ValueError("OPENAI_API_KEY is not defined")
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+MODEL_NAME = "gpt-3.5-turbo"
 
 
 @dataclasses.dataclass
@@ -49,7 +50,7 @@ class Vulnerability:
 class KBEntry:
     description: str
     recommendation: str
-    meta: str
+    meta: dict[str, Any]
     vulnerability: Vulnerability | None = None
 
 
@@ -62,7 +63,7 @@ PLATFORM_TO_PATH = {
 }
 
 
-def _dump_kb(kbentry: KBEntry) -> None:
+def dump_kb(kbentry: KBEntry) -> None:
     path_prefix = pathlib.Path(
         PLATFORM_TO_PATH[kbentry.vulnerability.platform],
         f"_{kbentry.vulnerability.risk_rating}",
@@ -70,27 +71,27 @@ def _dump_kb(kbentry: KBEntry) -> None:
 
     path_prefix.mkdir(exist_ok=True, parents=True)
 
-    with open(pathlib.Path(path_prefix, "description.md"), "w") as description_md:
+    with pathlib.Path(path_prefix, "description.md").open("w") as description_md:
         description_md.write(kbentry.description)
 
-    with open(pathlib.Path(path_prefix, "recommendation.md"), "w") as recommendation_md:
+    with pathlib.Path(path_prefix, "recommendation.md").open("w") as recommendation_md:
         recommendation_md.write(kbentry.recommendation)
 
-    with open(pathlib.Path(path_prefix, "meta.json"), "w") as meta_json:
+    with pathlib.Path(path_prefix, "meta.json").open("w") as meta_json:
         meta_json.write(kbentry.meta)
 
 
-def _ask_the_wizard(
+def _ask_gpt(
     prompts: list[dict[str, str]], temperature: float = 0.0, max_tokens: int = 3200
 ) -> openai_object.OpenAIObject:
     """Send a prompt to OpenAI API."""
-    wizard_response: openai_object.OpenAIObject = chat_completion.ChatCompletion.create(
+    gpt_response: openai_object.OpenAIObject = chat_completion.ChatCompletion.create(
         model=MODEL_NAME,
         temperature=temperature,
         max_tokens=max_tokens,
         messages=prompts,
     )
-    return wizard_response
+    return gpt_response
 
 
 @tenacity.retry(
@@ -221,8 +222,8 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
             "content": prompt_message,
         },
     ]
-    wizard_response = _ask_the_wizard(prompts=prompts)
-    response = json.loads(wizard_response.choices[0].message["content"])
+    gpt_response = _ask_gpt(prompts=prompts)
+    response = json.loads(gpt_response.choices[0].message["content"])
     # Vulnerability Description
     description_buffer = io.StringIO()
     vulnerability_data = response["Vulnerability"]
@@ -299,7 +300,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
 def main(name: str, risk: str, platform: str) -> None:
     vulnerability = Vulnerability(name, risk, platform)
     kbentry = generate_kb(vulnerability)
-    _dump_kb(kbentry)
+    dump_kb(kbentry)
 
 
 if __name__ == "__main__":

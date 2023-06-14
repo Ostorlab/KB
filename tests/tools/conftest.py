@@ -11,7 +11,7 @@ class Message:
 
 
 @dataclasses.dataclass
-class WizardResponse:
+class GptResponse:
     choices: list[Message]
 
 
@@ -19,5 +19,5 @@ CONTENT = '{"Vulnerability": {"Name": "Cross-Site Scripting (XSS)", "Description
 
 
 @pytest.fixture
-def wizard_response():
-    return WizardResponse(choices=[Message({"content": CONTENT})])
+def gpt_response():
+    return GptResponse(choices=[Message({"content": CONTENT})])
