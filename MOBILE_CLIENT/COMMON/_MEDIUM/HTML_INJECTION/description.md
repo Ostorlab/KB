@@ -1,6 +1,6 @@
 ### HTML Injection
 
-HTML injection is a security vulnerability that occurs when user-manipulated input in a mobile application can be used to insert arbitrary HTML code into a vulnerable webview. This vulnerability can be exploited to launch various attacks, such as stealing a user's session cookies, which can then be used for further malicious activities. Additionally, it allows attackers to modify the content displayed to victims, giving them the ability to insert malicious code or deface the page with their own message.
+HTML injection is a security vulnerability that occurs when user-manipulated input in a mobile application can be used to insert arbitrary HTML code into a vulnerable webview. This vulnerability can be exploited to launch various attacks, such as stealing a user's session tokens or CSRF tokens, which can then be used for further malicious activities. Additionally, it allows attackers to modify the content displayed to victims, giving them the ability to insert malicious code or deface the page with their own message.
 
 **Code Examples:**
 

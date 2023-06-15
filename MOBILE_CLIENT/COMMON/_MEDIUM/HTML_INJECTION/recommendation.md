@@ -15,6 +15,7 @@ To mitigate the risks associated with HTML injection vulnerabilities, the follow
 ```dart
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:sanitize_html/sanitize_html.dart' show sanitizeHtml;
 
 void main() => runApp(MyApp());
 
@@ -57,19 +58,13 @@ class _WebViewScreenState extends State<WebViewScreen> {
 
   void _injectHtml() async {
     if (htmlInput != null) {
-      final sanitizedHtml = _sanitizeHtml(htmlInput!);
+      final sanitizedHtml = sanitizeHtml(htmlInput);
       await _webViewController.loadUrl(
         Uri.dataFromString(sanitizedHtml, mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))!.toString(),
       );
     }
   }
 
-  String _sanitizeHtml(String html) {
-    // Perform necessary sanitization on the HTML string
-    // Here's a basic example using the html package:
-    final sanitized = html.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-    return sanitized;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -110,6 +105,13 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var webView: WebView
 
+    PolicyFactory policy = new HtmlPolicyBuilder()
+        .allowElements("a")
+        .allowUrlProtocols("https")
+        .allowAttributes("href").onElements("a")
+        .requireRelNofollowOnLinks()
+        .build();
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -117,7 +119,7 @@ class MainActivity : AppCompatActivity() {
         webView = findViewById(R.id.webView)
 
         val name = intent.getStringExtra("name")
-        val sanitizedName = sanitizeHtml(name ?: "")
+        val sanitizedName = policy.sanitize(name)   
 
         val html = "<html><body><h1>Hello, $sanitizedName!</h1></body></html>"
         webView.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null)
@@ -126,12 +128,6 @@ class MainActivity : AppCompatActivity() {
         webSettings.javaScriptEnabled = false
     }
 
-    private fun sanitizeHtml(html: String): String {
-        // Perform necessary sanitization on the HTML string
-        // Here's a basic example using simple replacements:
-        val sanitized = html.replace("<", "&lt;").replace(">", "&gt;")
-        return sanitized
-    }
 }
 ```
 
@@ -139,6 +135,7 @@ class MainActivity : AppCompatActivity() {
 ```Swift
 import UIKit
 import WebKit
+import DOMPurify
 
 class ViewController: UIViewController, WKNavigationDelegate {
     
@@ -159,11 +156,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     
     private func sanitizeHTML(_ html: String) -> String {
-        // Perform necessary sanitization on the HTML string
-        // Here's a basic example using replacing occurrences:
-        let sanitized = html.replacingOccurrences(of: "<", with: "&lt;")
-                           .replacingOccurrences(of: ">", with: "&gt;")
-                           .replacingOccurrences(of: "&", with: "&amp;")
+        guard let sanitized = DOMPurify.sanitize(html) else {
+            return ""
+        }
         return sanitized
     }
 }
