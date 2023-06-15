@@ -1,10 +1,12 @@
 """Module responsible for interacting with the OpenAI API to generate KB entries."""
+import ast
 import dataclasses
 import enum
 import io
 import json
 import os
 import pathlib
+import tempfile
 from typing import Any
 
 import click
@@ -79,7 +81,7 @@ def dump_kb(kbentry: KBEntry) -> None:
         recommendation_md.write(kbentry.recommendation)
 
     with pathlib.Path(path_prefix, "meta.json").open("w") as meta_json:
-        meta_json.write(kbentry.meta)
+        json.dump(kbentry.meta, meta_json)
 
 
 def _ask_gpt(
@@ -110,8 +112,9 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
 
     """
     prompt_message = (
-        f"KB entry for {vulnerability.name}, include vulnerable applications"
-        "(complete code with imports) in Dart, Swift and Kotlin, reply strictly as valid JSON\n"
+        f"KB entry for {vulnerability.name}, include vulnerable applications "
+        "in Dart, Swift and Kotlin, reply strictly as valid JSON"
+        "only use single quotes in code examples\n"
         """
         {
             "Vulnerability": {
@@ -224,7 +227,11 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
         },
     ]
     gpt_response = _ask_gpt(prompts=prompts)
-    response = json.loads(gpt_response.choices[0].message["content"])
+    content = gpt_response.choices[0].message["content"]
+    try:
+        response = json.loads(content)
+    except ValueError:
+        response = ast.literal_eval(content)
     # Vulnerability Description
     description_buffer = io.StringIO()
     vulnerability_data = response["Vulnerability"]
@@ -257,7 +264,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     recommendation_buffer = io.StringIO()
     recommendation_data = response["Recommendation"]
     recommendation_buffer.write("# Recommendation\n\n")
-    recommendation_buffer.write(f"{recommendation_data}\n\n")
+    recommendation_buffer.write(f"{recommendation_data['Details']}\n\n")
     code_fixes = recommendation_data.get("Code Fixes", [])
     for code_fix in code_fixes:
         code_fix_name = code_fix["Name"]
