@@ -6,7 +6,6 @@ import io
 import json
 import os
 import pathlib
-import tempfile
 from typing import Any
 
 import click
