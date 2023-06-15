@@ -9,7 +9,7 @@ import pathlib
 
 
 def testGenerateKB_whenVulnerabilityProvided_returnskbentry(
-    mocker: plugin.MockerFixture, gpt_response: conftest.GptResponse, monkeypatch
+    mocker: plugin.MockerFixture, gpt_response: conftest.GptResponse
 ):
     """generate_kb is responsible for generating KB entries from a vulnerability name.
     when provided with a valid vulnerability name, this function should return a dict
