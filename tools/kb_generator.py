@@ -21,24 +21,30 @@ MODEL_NAME = "gpt-3.5-turbo"
 
 @dataclasses.dataclass
 class RiskRating(enum.Enum):
-    info = "INFO"
-    hardening = "HARDENING"
-    low = "LOW"
-    medium = "MEDIUM"
-    high = "HIGH"
+    """RiskRating dataclass"""
+
+    INFO = "INFO"
+    HARDENING = "HARDENING"
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
 
 
 @dataclasses.dataclass
 class Platform(enum.Enum):
-    ios = "IOS"
-    android = "ANDROID"
-    multi = "MULTIPLATFORM"
-    common = "COMMON"
-    web = "WEB"
+    """Platform dataclass"""
+
+    IOS = "IOS"
+    ANDROID = "ANDROID"
+    MULTI = "MULTIPLATFORM"
+    COMMON = "COMMON"
+    WEB = "WEB"
 
 
 @dataclasses.dataclass
 class Vulnerability:
+    """Vulnerability dataclass"""
+
     name: str
     risk_rating: RiskRating
     platform: Platform
@@ -46,6 +52,7 @@ class Vulnerability:
 
 @dataclasses.dataclass
 class KBEntry:
+    """KBEntry dataclass"""
     description: str
     recommendation: str
     meta: dict[str, Any]
@@ -76,13 +83,19 @@ def dump_kb(kbentry: KBEntry) -> str:
 
     path_prefix.mkdir(exist_ok=True, parents=True)
 
-    with pathlib.Path(path_prefix, "description.md").open("w") as description_md:
+    with pathlib.Path(path_prefix, "description.md").open(
+        "w", encoding="utf-8"
+    ) as description_md:
         description_md.write(kbentry.description)
 
-    with pathlib.Path(path_prefix, "recommendation.md").open("w") as recommendation_md:
+    with pathlib.Path(path_prefix, "recommendation.md").open(
+        "w", encoding="utf-8"
+    ) as recommendation_md:
         recommendation_md.write(kbentry.recommendation)
 
-    with pathlib.Path(path_prefix, "meta.json").open("w") as meta_json:
+    with pathlib.Path(path_prefix, "meta.json").open(
+        "w", encoding="utf-8"
+    ) as meta_json:
         json.dump(kbentry.meta, meta_json)
 
     return path_prefix
