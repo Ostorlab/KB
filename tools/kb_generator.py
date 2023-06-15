@@ -1,4 +1,5 @@
 """Module responsible for interacting with the OpenAI API to generate KB entries."""
+import logging
 import ast
 import dataclasses
 import enum
@@ -14,13 +15,8 @@ import tenacity
 from openai import openai_object
 from openai.api_resources import chat_completion
 
-
-if "PROD" in os.environ:
-    if "OPENAI_API_KEY" not in os.environ:
-        raise ValueError("OPENAI_API_KEY is not defined")
-
-    openai.api_key = os.getenv("OPENAI_API_KEY")
-    MODEL_NAME = "gpt-3.5-turbo"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+MODEL_NAME = "gpt-3.5-turbo"
 
 
 @dataclasses.dataclass
@@ -65,7 +61,14 @@ PLATFORM_TO_PATH = {
 }
 
 
-def dump_kb(kbentry: KBEntry) -> None:
+def dump_kb(kbentry: KBEntry) -> str:
+    """Dump KB entry into files.
+
+    Args:
+        kbentry: KBEntry object
+    Returns:
+
+    """
     path_prefix = pathlib.Path(
         PLATFORM_TO_PATH[kbentry.vulnerability.platform],
         f"_{kbentry.vulnerability.risk_rating}",
@@ -82,11 +85,17 @@ def dump_kb(kbentry: KBEntry) -> None:
     with pathlib.Path(path_prefix, "meta.json").open("w") as meta_json:
         json.dump(kbentry.meta, meta_json)
 
+    return path_prefix
+
 
 def _ask_gpt(
     prompts: list[dict[str, str]], temperature: float = 0.0, max_tokens: int = 3200
 ) -> openai_object.OpenAIObject:
     """Send a prompt to OpenAI API."""
+    if OPENAI_API_KEY is None:
+        raise ValueError
+
+    openai.api_key = OPENAI_API_KEY
     gpt_response: openai_object.OpenAIObject = chat_completion.ChatCompletion.create(
         model=MODEL_NAME,
         temperature=temperature,
@@ -307,7 +316,8 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
 def main(name: str, risk: str, platform: str) -> None:
     vulnerability = Vulnerability(name, risk, platform)
     kbentry = generate_kb(vulnerability)
-    dump_kb(kbentry)
+    output_path = dump_kb(kbentry)
+    logging.info(output_path)
 
 
 if __name__ == "__main__":

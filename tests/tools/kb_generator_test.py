@@ -9,7 +9,7 @@ import pathlib
 
 
 def testGenerateKB_whenVulnerabilityProvided_returnskbentry(
-    mocker: plugin.MockerFixture, gpt_response: conftest.GptResponse
+    mocker: plugin.MockerFixture, gpt_response: conftest.GptResponse, monkeypatch
 ):
     """generate_kb is responsible for generating KB entries from a vulnerability name.
     when provided with a valid vulnerability name, this function should return a dict
@@ -64,28 +64,37 @@ def testGenerateKB_whenVulnerabilityProvided_returnskbentry(
 
 def testDumpKB_whenPathIsValid_writesFiles(mocker: plugin.MockerFixture):
     # Mocking the necessary objects for testing
-    vulnerability = kb_generator.Vulnerability(name="XSS", platform="WEB", risk_rating="HIGH")
-    kbentry = kb_generator.KBEntry(vulnerability=vulnerability,
-                      description="Description",
-                      recommendation="Recommendation",
-                      meta="Meta")
+    vulnerability = kb_generator.Vulnerability(
+        name="XSS", platform="WEB", risk_rating="HIGH"
+    )
+    kbentry = kb_generator.KBEntry(
+        vulnerability=vulnerability,
+        description="Description",
+        recommendation="Recommendation",
+        meta="Meta",
+    )
 
-    mock_open = mocker.patch.object(pathlib.Path, 'open', mocker.MagicMock())
+    mock_open = mocker.patch.object(pathlib.Path, "open", mocker.MagicMock())
 
-    kb_generator.dump_kb(kbentry)
+    output_path = kb_generator.dump_kb(kbentry)
 
     assert mock_open.call_count == 3
+    assert output_path == pathlib.Path("WEB_SERVICE/WEB/_HIGH")
 
 
 def testDumpKB_whenPathIsInvalid_RaisesException(mocker: plugin.MockerFixture):
     # Mocking the necessary objects for testing
-    vulnerability = kb_generator.Vulnerability(name="XSS", platform="Xbox360", risk_rating="Unrated")
-    kbentry = kb_generator.KBEntry(vulnerability=vulnerability,
-                      description="Description",
-                      recommendation="Recommendation",
-                      meta="Meta")
+    vulnerability = kb_generator.Vulnerability(
+        name="XSS", platform="Xbox360", risk_rating="Unrated"
+    )
+    kbentry = kb_generator.KBEntry(
+        vulnerability=vulnerability,
+        description="Description",
+        recommendation="Recommendation",
+        meta={"Meta": "data"},
+    )
 
-    mock_open = mocker.patch.object(pathlib.Path, 'open', mocker.MagicMock())
+    mock_open = mocker.patch.object(pathlib.Path, "open", mocker.MagicMock())
 
     with pytest.raises(KeyError):
         kb_generator.dump_kb(kbentry)
