@@ -8,8 +8,8 @@ import logging
 import os
 import pathlib
 from typing import Any
-import bs4
 
+import bs4
 import click
 import openai
 import tenacity
