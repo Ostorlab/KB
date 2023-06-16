@@ -6,7 +6,7 @@ To prevent XML Injection attacks, applications should validate all input data an
 
 ### Swift
 
-```{language}
+```Swift
 import Foundation
 func main() {
     print("Enter XML data:")
@@ -31,7 +31,7 @@ func main() {
 
 ### Kotlin
 
-```{language}
+```Kotlin
 import javax.xml.parsers.DocumentBuilderFactory
 fun main() {
     println("Enter XML data:")
@@ -50,7 +50,7 @@ fun main() {
 
 ### Dart
 
-```{language}
+```Dart
 import 'package:flutter/material.dart';
 import 'package:xml/xml.dart' as xml;
 void main() {
@@ -112,7 +112,7 @@ class MyApp extends StatelessWidget {
 
 ### Swift
 
-```{language}
+```Swift
 import Foundation
 func searchBooks(title: String) {
     let xmlData = """
@@ -147,7 +147,7 @@ if let searchTerm = readLine() {
 
 ### Kotlin
 
-```{language}
+```Kotlin
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.xpath.XPathConstants
 import javax.xml.xpath.XPathFactory

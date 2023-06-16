@@ -1,6 +1,6 @@
 # XML Injection
 
-XML Injection is a type of attack where an attacker injects malicious XML code into an application, which can then be executed by the application. This can lead to a variety of attacks, including denial of service, data theft, and remote code execution.
+XML injection is a security vulnerability that occurs when user-supplied input in an application is not properly validated and is included in dynamically generated XML documents. This vulnerability allows an attacker to manipulate the structure or content of the XML document, leading to various malicious activities. By injecting malicious XML code, an attacker can execute arbitrary commands, read sensitive data, or modify the behavior of the application.
 
 ## External Entity Injection
 
@@ -11,7 +11,7 @@ External Entity Injection is a type of XML Injection where an attacker injects a
 
 #### Swift
 
-```{language}
+```Swift
 import Foundation
 func main() {
     print("Enter XML data:")
@@ -27,7 +27,7 @@ func main() {
 
 #### Kotlin
 
-```{language}
+```Kotlin
 import javax.xml.parsers.DocumentBuilderFactory
 fun main() {
     println("Enter XML data:")
@@ -49,7 +49,7 @@ XPath Injection is a type of XML Injection where an attacker injects malicious X
 
 #### Dart
 
-```{language}
+```Dart
 import 'package:flutter/material.dart';
 import 'package:xml/xml.dart' as xml;
 void main() {
@@ -110,7 +110,7 @@ class MyApp extends StatelessWidget {
 
 #### Swift
 
-```{language}
+```Swift
 import Foundation
 func searchBooks(title: String) {
     let xmlData = """
@@ -144,7 +144,7 @@ if let searchTerm = readLine() {
 
 #### Kotlin
 
-```{language}
+```Kotlin
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.xpath.XPathConstants
 import javax.xml.xpath.XPathFactory
