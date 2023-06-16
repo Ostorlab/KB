@@ -3,7 +3,7 @@
    "short_description":"HTML injection is a vulnerability where untrusted user input is improperly handled and rendered as part of HTML code, allowing attackers to inject malicious code or manipulate the content and structure of a webpage.",
    "references":{
       "HTML Injection (Acunetix)":"https://www.acunetix.com/vulnerabilities/web/html-injection/",
-      "HTML Injection (Imperva)":"https://www.imperva.com/learn/application-security/html-injection",
+      "HTML Injection (Imperva)":"https://www.imperva.com/learn/application-security/html-injection"
    },
    "title":"HTML Injection Vulnerability",
    "privacy_issue":false,
