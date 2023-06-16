@@ -91,8 +91,8 @@ KB_JSON_TEMPLATE = """
                 "[Sub-vulnerability 3] (source name)": "[URL]"
               },
               "title": "[vulnerability title]",
-              "privacy_issue": [true/false],
-              "security_issue": [true/false],
+              "privacy_issue": true if privacy_issue else false,
+              "security_issue": true if security_issue else false,
               "categories": {
                 "OWASP_MASVS_L1": [],
                 "OWASP_MASVS_L2": []
