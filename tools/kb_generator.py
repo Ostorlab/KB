@@ -1,10 +1,10 @@
 """Module responsible for interacting with the OpenAI API to generate KB entries."""
-import logging
 import ast
 import dataclasses
 import enum
 import io
 import json
+import logging
 import os
 import pathlib
 from typing import Any
@@ -134,9 +134,8 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
 
     """
     prompt_message = (
-        f"KB entry for {vulnerability.name}, include vulnerable applications "
-        "in Dart, Swift and Kotlin, reply strictly as valid JSON"
-        "only use single quotes in code examples\n"
+        f"KB entry for {vulnerability.name} "
+        "in Dart, Swift and Kotlin, reply strictly as valid JSON "
         """
         {
             "Vulnerability": {
@@ -149,15 +148,15 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
                         "Examples": [
                             {
                                 "Language": "Dart",
-                                "Code": "[Dart vulnerable application]"
+                                "Code": "[TODO]"
                             },
                             {
                                 "Language": "Swift",
-                                "Code": "[Swift vulnerable application]"
+                                "Code": "[TODO]"
                             },
                             {
                                 "Language": "Kotlin",
-                                "Code": "[Kotlin vulnerable application]"
+                                "Code": "[TODO]"
                             }
                         ]
                     },
@@ -167,15 +166,15 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
                         "Examples": [
                             {
                                 "Language": "Dart",
-                                "Code": "[Dart vulnerable application]"
+                                "Code": "[TODO]"
                             },
                             {
                                 "Language": "Swift",
-                                "Code": "[Swift vulnerable application]"
+                                "Code": "[TODO]"
                             },
                             {
                                 "Language": "Kotlin",
-                                "Code": "[Kotlin vulnerable application]"
+                                "Code": "[TODO]"
                             }
                         ]
                     },
@@ -185,15 +184,15 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
                         "Examples": [
                             {
                                 "Language": "Dart",
-                                "Code": "[Dart vulnerable application]"
+                                "Code": "[TODO]"
                             },
                             {
                                 "Language": "Swift",
-                                "Code": "[Swift vulnerable application]"
+                                "Code": "[TODO]"
                             },
                             {
                                 "Language": "Kotlin",
-                                "Code": "[Kotlin vulnerable application]"
+                                "Code": "[TODO]"
                             }
                         ]
                     }
@@ -217,7 +216,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
               }
             },
             "Recommendation": {
-                "Details": "[General Details]",
+                "Details": "[Recommendation Details]",
                 "Code Fixes": [
                     {
                         "Name": "[Sub-vulnerability Name]",
