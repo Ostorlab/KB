@@ -1,12 +1,10 @@
 name: JSON Validation
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - ["*"]
+    branches: [ "*" ]
+  push:
+    branches: [ master ]
 
 jobs:
   validate_json:
