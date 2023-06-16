@@ -1,6 +1,6 @@
 {
   "title": "Account Takeover Vulnerability",
-  "short_description": "Technical vulnerabilities leading to unauthorized individuals gaining control over user accounts.",
+  "short_description": "Application is vulnerable to technical vulnerabilities leading unauthorized control over user accounts.",
   "risk_rating": "high",
   "references": {
     "Rapid7: Account Takeover": "https://docs.rapid7.com/tcell/account-takeover/"
@@ -9,8 +9,6 @@
   "security_issue": true,
   "categories": {
     "CWE_TOP_25": [
-      "CWE_639",
-      "CWE_642",
       "CWE_862"
     ]
   }

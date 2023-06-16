@@ -1,0 +1,11 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "An attack can control the URL used by an application to fetch content, it poses a security risk as the attacker can manipulate the content, leading to the execution of malicious code or the theft of sensitive information.",
+  "references": {
+  },
+  "title": "URL Manipulation",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+  }
+}
