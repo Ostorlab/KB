@@ -22,4 +22,4 @@ jobs:
       - name: JSON validation.
         run: |
           set -o pipefail
-          find -type f -name "*.json" -exec python -m json.tool {} 1>/dev/null \;
+          find . -name "*.json" -exec python -m json.tool {} 1>/dev/null \;
