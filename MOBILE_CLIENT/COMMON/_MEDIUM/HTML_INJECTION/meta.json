@@ -1,0 +1,25 @@
+{
+   "risk_rating":"medium",
+   "short_description":"HTML injection is a vulnerability where untrusted user input is improperly handled and rendered as part of HTML code, allowing attackers to inject malicious code or manipulate the content and structure of a webpage.",
+   "references":{
+      "HTML Injection (Acunetix)":"https://www.acunetix.com/vulnerabilities/web/html-injection/",
+      "HTML Injection (Imperva)":"https://www.imperva.com/learn/application-security/html-injection"
+   },
+   "title":"HTML Injection Vulnerability",
+   "privacy_issue":false,
+   "security_issue":true,
+   "categories":{
+      "OWASP_TOP_10":[
+         "A3:2017-Sensitive Data Exposure",
+         "A7:2017-Cross-Site Scripting (XSS)"
+      ],
+      "OWASP_MASVS_L1":[
+         "MSTG_PLATFORM_5",
+         "MSTG_PLATFORM_7"
+      ],
+      "OWASP_MASVS_L2":[
+         "MSTG_PLATFORM_5",
+         "MSTG_PLATFORM_7"
+      ]
+   }
+}
