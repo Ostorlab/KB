@@ -91,8 +91,8 @@ KB_JSON_TEMPLATE = """
                 "[Sub-vulnerability 3] (source name)": "[URL]"
               },
               "title": "[vulnerability title]",
-              "privacy_issue": true if privacy_issue else false,
-              "security_issue": true if security_issue else false,
+              "privacy_issue": [true/false],
+              "security_issue": [true/false],
               "categories": {
                 "OWASP_MASVS_L1": [],
                 "OWASP_MASVS_L2": []
@@ -255,7 +255,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
 
     """
     prompt_message = (
-        f"KB entry for {vulnerability.name}, reply strictly as valid JSON"
+        f"knowledge base entry for {vulnerability.name}, reply strictly as valid JSON"
         f"{KB_JSON_TEMPLATE}"
     )
     prompts = [
