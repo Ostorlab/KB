@@ -39,4 +39,4 @@ jobs:
           pylint --rcfile=.pylintrc -d C0103,W0613 tests/
       - name: Running static types checker.
         run: |
-          mypy
+          mypy .
