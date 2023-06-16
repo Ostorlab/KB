@@ -7,17 +7,19 @@ on:
     branches: [ master ]
 
 jobs:
-  validate_json:
+  build:
     runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
+    strategy:
+      fail-fast: false
+      matrix:
         python-version: [ "3.10" ]
-
-    - name: Execute JSON validation
-      run: find -type f -name "*.json" -exec python -m json.tool {} 1>/dev/null \;
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: JSON validation.
+        run: |
+          set -o pipefail
+          find -type f -name "*.json" -exec python -m json.tool {} 1>/dev/null \;
