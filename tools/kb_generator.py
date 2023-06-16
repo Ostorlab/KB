@@ -53,10 +53,11 @@ class Vulnerability:
 @dataclasses.dataclass
 class KBEntry:
     """KBEntry dataclass"""
+
     description: str
     recommendation: str
     meta: dict[str, Any]
-    vulnerability: Vulnerability | None = None
+    vulnerability: Vulnerability
 
 
 PLATFORM_TO_PATH = {
@@ -68,7 +69,7 @@ PLATFORM_TO_PATH = {
 }
 
 
-def dump_kb(kbentry: KBEntry) -> str:
+def dump_kb(kbentry: KBEntry) -> pathlib.Path:
     """Dump KB entry into files.
 
     Args:
@@ -77,8 +78,8 @@ def dump_kb(kbentry: KBEntry) -> str:
 
     """
     path_prefix = pathlib.Path(
-        PLATFORM_TO_PATH[kbentry.vulnerability.platform],
-        f"_{kbentry.vulnerability.risk_rating}",
+        PLATFORM_TO_PATH[kbentry.vulnerability.platform.value],
+        f"_{kbentry.vulnerability.risk_rating.value}",
     )
 
     path_prefix.mkdir(exist_ok=True, parents=True)
@@ -96,7 +97,7 @@ def dump_kb(kbentry: KBEntry) -> str:
     with pathlib.Path(path_prefix, "meta.json").open(
         "w", encoding="utf-8"
     ) as meta_json:
-        json.dump(kbentry.meta, meta_json)
+        json.dump(kbentry.meta, meta_json, indent=4)
 
     return path_prefix
 
@@ -127,9 +128,9 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     """Send a prompt to the OpenAI API and generate KB.
 
     Args:
-        vulnerability: Vulnerability object
+        vulnerability: a vulnerability object
     Returns:
-        KBEntry
+        KB entry
 
     """
     prompt_message = (
@@ -327,7 +328,21 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     type=click.Choice([platform.value for platform in Platform], case_sensitive=False),
 )
 def main(name: str, risk: str, platform: str) -> None:
-    vulnerability = Vulnerability(name, risk, platform)
+    """
+    Entry point of the program.
+
+    This function executes the main logic of the program, including initialization,
+    user interactions, and finalization steps. It serves as the starting point for
+    running the application.
+
+    Args:
+        name: vulnerability name
+        risk: vulnerability risk rating
+        platform: vulnerability target platform
+    Returns:
+
+    """
+    vulnerability = Vulnerability(name, RiskRating(risk), Platform(platform))
     kbentry = generate_kb(vulnerability)
     output_path = dump_kb(kbentry)
     logging.info(output_path)
