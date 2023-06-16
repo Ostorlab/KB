@@ -5,7 +5,7 @@ import typing
 import pytest
 from pytest_mock import plugin
 
-from tests.tools import conftest
+from tests import conftest
 from tools import kb_generator
 
 
