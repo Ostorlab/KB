@@ -8,6 +8,7 @@ import logging
 import os
 import pathlib
 from typing import Any
+import bs4
 
 import click
 import openai
@@ -17,6 +18,126 @@ from openai.api_resources import chat_completion
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL_NAME = "gpt-3.5-turbo"
+
+KB_JSON_TEMPLATE = """
+        {
+            "Vulnerability": {
+                "Name": "[Vulnerability Name]",
+                "Description": "[Vulnerability Description]".,
+                "Sub-vulnerabilities": [
+                    {
+                        "Name": "[Sub-vulnerability Name]",
+                        "Description": "[Description of the sub-vulnerability]"
+                        "Examples": [
+                            {
+                                "Language": "Dart",
+                                "Code": "[TODO]"
+                            },
+                            {
+                                "Language": "Swift",
+                                "Code": "[TODO]"
+                            },
+                            {
+                                "Language": "Kotlin",
+                                "Code": "[TODO]"
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "[Sub-vulnerability Name]",
+                        "Description": "[Description of the sub-vulnerability]"
+                        "Examples": [
+                            {
+                                "Language": "Dart",
+                                "Code": "[TODO]"
+                            },
+                            {
+                                "Language": "Swift",
+                                "Code": "[TODO]"
+                            },
+                            {
+                                "Language": "Kotlin",
+                                "Code": "[TODO]"
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "[Sub-vulnerability Name]",
+                        "Description": "[Description of the sub-vulnerability]"
+                        "Examples": [
+                            {
+                                "Language": "Dart",
+                                "Code": "[TODO]"
+                            },
+                            {
+                                "Language": "Swift",
+                                "Code": "[TODO]"
+                            },
+                            {
+                                "Language": "Kotlin",
+                                "Code": "[TODO]"
+                            }
+                        ]
+                    }
+                    ...
+                ]
+            },
+            "Meta": {
+              "risk_rating": "[info/hardening/low/medium/high]",
+              "short_description": "[short_description]",
+              "references": {
+                "[Sub-vulnerability 1] (source name)": "[URL]",
+                "[Sub-vulnerability 2] (source name)": "[URL]",
+                "[Sub-vulnerability 3] (source name)": "[URL]"
+              },
+              "title": "[vulnerability title]",
+              "privacy_issue": [true/false],
+              "security_issue": [true/false],
+              "categories": {
+                "OWASP_MASVS_L1": [],
+                "OWASP_MASVS_L2": []
+              }
+            },
+            "Recommendation": {
+                "Details": "[Recommendation Details]",
+                "Code Fixes": [
+                    {
+                        "Name": "[Sub-vulnerability Name]",
+                        "Examples": [
+                            {
+                                "Language": "Dart",
+                                "Code": "[Dart vulnerable application]"
+                            },
+                            {
+                                "Language": "Swift",
+                                "Code": "[Swift vulnerable application]"
+                            },
+                            {
+                                "Language": "Kotlin",
+                                "Code": "[Kotlin vulnerable application]"
+                            }
+                        ]
+                    }
+                    ...
+                ]
+            }
+        }
+        """
+
+CODE_XML_TEMPLATE = """
+<data>
+  <vulnerable_code>
+    <Dart>Dart vulnerable application Code</Dart>
+    <Swift>Swift vulnerable application code</Swift>
+    <Kotlin>Kotlin vulnerable application code</Kotlin>
+  </vulnerable_code>
+  <patched_code>
+    <Dart>Dart patched application Code</Dart>
+    <Swift>Swift patched application code</Swift>
+    <Kotlin>Kotlin patched application code</Kotlin>
+  </patched_code>
+</data>
+"""
 
 
 @dataclasses.dataclass
@@ -134,112 +255,8 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
 
     """
     prompt_message = (
-        f"KB entry for {vulnerability.name} "
-        "in Dart, Swift and Kotlin, reply strictly as valid JSON "
-        """
-        {
-            "Vulnerability": {
-                "Name": "[Vulnerability Name]",
-                "Description": "[Vulnerability Description]".,
-                "Sub-vulnerabilities": [
-                    {
-                        "Name": "[Sub-vulnerability Name]",
-                        "Description": "[Description of the sub-vulnerability]"
-                        "Examples": [
-                            {
-                                "Language": "Dart",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Swift",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Kotlin",
-                                "Code": "[TODO]"
-                            }
-                        ]
-                    },
-                    {
-                        "Name": "[Sub-vulnerability Name]",
-                        "Description": "[Description of the sub-vulnerability]"
-                        "Examples": [
-                            {
-                                "Language": "Dart",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Swift",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Kotlin",
-                                "Code": "[TODO]"
-                            }
-                        ]
-                    },
-                    {
-                        "Name": "[Sub-vulnerability Name]",
-                        "Description": "[Description of the sub-vulnerability]"
-                        "Examples": [
-                            {
-                                "Language": "Dart",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Swift",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Kotlin",
-                                "Code": "[TODO]"
-                            }
-                        ]
-                    }
-                    ...
-                ]
-            },
-            "Meta": {
-              "risk_rating": "[info/hardening/low/medium/high]",
-              "short_description": "[short_description]",
-              "references": {
-                "[Sub-vulnerability 1] (source name)": "[URL]",
-                "[Sub-vulnerability 2] (source name)": "[URL]",
-                "[Sub-vulnerability 3] (source name)": "[URL]"
-              },
-              "title": "[vulnerability title]",
-              "privacy_issue": [true/false],
-              "security_issue": [true/false],
-              "categories": {
-                "OWASP_MASVS_L1": [],
-                "OWASP_MASVS_L2": []
-              }
-            },
-            "Recommendation": {
-                "Details": "[Recommendation Details]",
-                "Code Fixes": [
-                    {
-                        "Name": "[Sub-vulnerability Name]",
-                        "Examples": [
-                            {
-                                "Language": "Dart",
-                                "Code": "[Dart vulnerable application]"
-                            },
-                            {
-                                "Language": "Swift",
-                                "Code": "[Swift vulnerable application]"
-                            },
-                            {
-                                "Language": "Kotlin",
-                                "Code": "[Kotlin vulnerable application]"
-                            }
-                        ]
-                    }
-                    ...
-                ]
-            }
-        }
-        """
+        f"KB entry for {vulnerability.name}, reply strictly as valid JSON"
+        f"{KB_JSON_TEMPLATE}"
     )
     prompts = [
         {
@@ -253,6 +270,66 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
         response = json.loads(content)
     except ValueError:
         response = ast.literal_eval(content)
+
+    subvulnz = response["Vulnerability"].get("Sub-vulnerabilities", [])
+    recommendations = response["Recommendation"]
+    if vulnerability.platform == Platform.WEB:
+        target = "Web"
+    else:
+        target = "Mobile"
+    for idx in range(len(subvulnz)):
+        subvuln_name = subvulnz[idx]["Name"]
+        prompt_message = (
+            f"Complete {target} application code that is vulnerable to {subvuln_name} in Dart, Swift, Kotlin "
+            f"use the following template {CODE_XML_TEMPLATE}"
+        )
+
+        prompts = [
+            {
+                "role": "user",
+                "content": prompt_message,
+            },
+        ]
+        gpt_response = _ask_gpt(prompts=prompts)
+        content = gpt_response.choices[0].message["content"]
+
+        parsed_content = bs4.BeautifulSoup(content, features="lxml")
+        vulnerable_code = parsed_content.find("vulnerable_code")
+        patched_code = parsed_content.find("patched_code")
+
+        if vulnerable_code is None or patched_code is None:
+            continue
+
+        dart_code = vulnerable_code.find("dart")
+        subvulnz[idx]["Examples"][0]["Code"] = (
+            dart_code.text if dart_code and hasattr(dart_code, "text") else "[TODO]"
+        )
+        swift_code = vulnerable_code.find("swift")
+        subvulnz[idx]["Examples"][1]["Code"] = (
+            swift_code.text if swift_code and hasattr(swift_code, "text") else "[TODO]"
+        )
+        kotlin_code = vulnerable_code.find("kotlin")
+        subvulnz[idx]["Examples"][2]["Code"] = (
+            kotlin_code.text
+            if kotlin_code and hasattr(kotlin_code, "text")
+            else "[TODO]"
+        )
+
+        dart_code = patched_code.find("dart")
+        recommendations["Code Fixes"][idx]["Examples"][0]["Code"] = (
+            dart_code.text if dart_code and hasattr(dart_code, "text") else "[TODO]"
+        )
+        swift_code = patched_code.find("swift")
+        recommendations["Code Fixes"][idx]["Examples"][1]["Code"] = (
+            swift_code.text if swift_code and hasattr(swift_code, "text") else "[TODO]"
+        )
+        kotlin_code = patched_code.find("kotlin")
+        recommendations["Code Fixes"][idx]["Examples"][2]["Code"] = (
+            kotlin_code.text
+            if kotlin_code and hasattr(kotlin_code, "text")
+            else "[TODO]"
+        )
+
     # Vulnerability Description
     description_buffer = io.StringIO()
     vulnerability_data = response["Vulnerability"]
@@ -275,7 +352,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
             language = example["Language"]
             code = example["Code"]
             description_buffer.write(f"#### {language}\n\n")
-            description_buffer.write("```{language}\n")
+            description_buffer.write(f"```{language}\n")
             description_buffer.write(f"{code}\n")
             description_buffer.write("```\n\n")
 

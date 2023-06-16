@@ -29,7 +29,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r tools/requirements.txt
           python -m pip install -r tests/test-requirements.txt
-          python -m pip install mypy pylint black
+          python -m pip install mypy pylint black types-beautifulsoup4
       - name: Running Black.
         uses: psf/black@stable
         with:

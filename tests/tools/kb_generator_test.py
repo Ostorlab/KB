@@ -10,7 +10,7 @@ from tools import kb_generator
 
 
 def testGenerateKB_whenVulnerabilityProvided_returnsKBEntry(
-    mocker: plugin.MockerFixture, gpt_response: conftest.GptResponse, monkeypatch
+    mocker: plugin.MockerFixture,
 ):
     """generate_kb is responsible for generating KB entries from a vulnerability name.
     when provided with a valid vulnerability name, this function should return a dict
@@ -18,7 +18,7 @@ def testGenerateKB_whenVulnerabilityProvided_returnsKBEntry(
     """
     mocker.patch(
         "openai.api_resources.chat_completion.ChatCompletion.create",
-        return_value=gpt_response,
+        side_effect=conftest.mock_chat_completion_create,
     )
     vulnerability = kb_generator.Vulnerability(
         "XSS", kb_generator.RiskRating.HIGH, kb_generator.Platform.WEB
@@ -46,6 +46,9 @@ def testGenerateKB_whenVulnerabilityProvided_returnsKBEntry(
         "DOM-based XSS occurs when user input is used to modify the DOM in a way that allows an attacker to inject "
         "malicious code" in kbentry.description
     )
+    assert "import 'package:mysql1/mysql1.dart';" in kbentry.description
+    assert "import MySQL" in kbentry.description
+    assert "import java.sql.DriverManager" in kbentry.description
     assert (
         "To prevent XSS, user input should be properly sanitized before being displayed on a web page"
         in kbentry.recommendation

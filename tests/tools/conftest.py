@@ -3,8 +3,6 @@ import dataclasses
 import os
 from typing import Any
 
-import pytest
-
 
 @dataclasses.dataclass
 class Message:
@@ -16,7 +14,7 @@ class GptResponse:
     choices: list[Message]
 
 
-CONTENT = {
+KB_CONTENT = {
     "Vulnerability": {
         "Name": "Cross-Site Scripting (XSS)",
         "Description": "XSS is a type of security vulnerability that allows an attacker to inject malicious code into "
@@ -263,11 +261,167 @@ CONTENT = {
     },
 }
 
+CODE_CONTENT = """
+<data>
+  <vulnerable_code>
+    <Dart>
+      import 'dart:io';
+      import 'package:mysql1/mysql1.dart';
 
-@pytest.fixture
-def gpt_response():
-    return GptResponse(choices=[Message({"content": str(CONTENT)})])
+      Future<void> main() async {
+        final conn = await MySqlConnection.connect(
+          ConnectionSettings(
+            host: 'localhost',
+            port: 3306,
+            user: 'root',
+            password: 'password',
+            db: 'test_db',
+          ),
+        );
+
+        final userInput = stdin.readLineSync();
+        final query = 'SELECT * FROM users WHERE id = $userInput';
+        final results = await conn.query(query);
+
+        for (final row in results) {
+          print(row);
+        }
+
+        await conn.close();
+      }
+    </Dart>
+    <Swift>
+      import Foundation
+      import MySQL
+
+      let conn = try MySQL.Connection(
+        host: "localhost",
+        user: "root",
+        password: "password",
+        database: "test_db"
+      )
+
+      print("Enter user ID:")
+      let userInput = readLine()!
+      let query = "SELECT * FROM users WHERE id = (userInput)"
+      let results = try conn.query(query)
+
+      for row in results {
+        print(row)
+      }
+
+      conn.close()
+    </Swift>
+    <Kotlin>
+      import java.sql.DriverManager
+
+      fun main() {
+        val conn = DriverManager.getConnection(
+          "jdbc:mysql://localhost:3306/test_db",
+          "root",
+          "password"
+        )
+
+        print("Enter user ID:")
+        val userInput = readLine()!!
+        val query = "SELECT * FROM users WHERE id = $userInput"
+        val stmt = conn.createStatement()
+        val results = stmt.executeQuery(query)
+
+        while (results.next()) {
+          println(results.getString("username"))
+        }
+
+        conn.close()
+      }
+    </Kotlin>
+  </vulnerable_code>
+  <patched_code>
+    <Dart>
+      import 'dart:io';
+      import 'package:mysql1/mysql1.dart';
+
+      Future<void> main() async {
+        final conn = await MySqlConnection.connect(
+          ConnectionSettings(
+            host: 'localhost',
+            port: 3306,
+            user: 'root',
+            password: 'password',
+            db: 'test_db',
+          ),
+        );
+
+        final userInput = stdin.readLineSync();
+        final query = 'SELECT * FROM users WHERE id = ?';
+        final results = await conn.query(query, [userInput]);
+
+        for (final row in results) {
+          print(row);
+        }
+
+        await conn.close();
+      }
+    </Dart>
+    <Swift>
+      import Foundation
+      import MySQL
+
+      let conn = try MySQL.Connection(
+        host: "localhost",
+        user: "root",
+        password: "password",
+        database: "test_db"
+      )
+
+      print("Enter user ID:")
+      let userInput = readLine()!
+      let query = "SELECT * FROM users WHERE id = ?"
+      let results = try conn.query(query, [userInput])
+
+      for row in results {
+        print(row)
+      }
+
+      conn.close()
+    </Swift>
+    <Kotlin>
+      import java.sql.DriverManager
+
+      fun main() {
+        val conn = DriverManager.getConnection(
+          "jdbc:mysql://localhost:3306/test_db",
+          "root",
+          "password"
+        )
+
+        print("Enter user ID:")
+        val userInput = readLine()!!
+        val query = "SELECT * FROM users WHERE id = ?"
+        val pstmt = conn.prepareStatement(query)
+        pstmt.setString(1, userInput)
+        val results = pstmt.executeQuery()
+
+        while (results.next()) {
+          println(results.getString("username"))
+        }
+
+        conn.close()
+      }
+    </Kotlin>
+  </patched_code>
+</data>
+"""
 
 
 def pytest_configure():
     os.environ["OPENAI_API_KEY"] = "mocked_value"
+
+
+def mock_chat_completion_create(**kwargs):
+    prompt = kwargs["messages"][0]["content"]
+
+    if prompt.startswith("KB entry for"):
+        return GptResponse(choices=[Message({"content": str(KB_CONTENT)})])
+    else:
+        return GptResponse(choices=[Message({"content": CODE_CONTENT})])
