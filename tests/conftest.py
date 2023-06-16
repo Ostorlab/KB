@@ -421,10 +421,12 @@ def pytest_configure():
 def mock_chat_completion_create(**kwargs):
     prompt = kwargs["messages"][0]["content"]
 
-    if prompt.startswith("KB entry for"):
+    if prompt.startswith("knowledge base entry for"):
         return GptResponse(choices=[Message({"content": str(KB_CONTENT)})])
-    else:
+    elif "application code that is vulnerable" in prompt:
         return GptResponse(choices=[Message({"content": CODE_CONTENT})])
+    else:
+        raise ValueError("Invalid Prompt")
 
 
 def validate_json_format(json_data):
