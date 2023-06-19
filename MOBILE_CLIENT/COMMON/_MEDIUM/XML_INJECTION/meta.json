@@ -1,9 +1,8 @@
 {
-	"risk_rating": "high",
-	"short_description": "XML Injection is a type of attack where an attacker injects malicious XML code into an application, which can then be executed by the application.",
+	"risk_rating": "medium",
+	"short_description": "XML injection is a vulnerability that occurs when untrusted user input is not properly validated or sanitized before being incorporated into XML data. Attackers can exploit this vulnerability by injecting malicious XML content, which can lead to unauthorized access, data manipulation, or denial of service attacks.",
 	"references": {
-		"External Entity Injection (OWASP)": "https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing",
-		"XPath Injection (OWASP)": "https://owasp.org/www-community/attacks/XPATH_Injection"
+		"Testing for XML Injection (OWASP)": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection"
 	},
 	"title": "XML Injection",
 	"privacy_issue": false,
