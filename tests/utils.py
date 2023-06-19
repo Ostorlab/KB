@@ -226,7 +226,7 @@ META = {
 }
 
 
-def mock_chat_completion_create(**kwargs):
+def mock_chat_completion_create(**kwargs: Any) -> GptResponse:
     prompt = kwargs["messages"][-1]["content"]
 
     if "Vulnerability description for" in prompt:

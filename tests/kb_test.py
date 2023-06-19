@@ -6,7 +6,7 @@ import pathlib
 import pytest
 
 
-def testJsonFiles_allFilesAreValid_testPasses():
+def testJsonFiles_allFilesAreValid_testPasses() -> None:
     json_files = glob.glob("**/*.json", recursive=True)
 
     for json_file in json_files:
