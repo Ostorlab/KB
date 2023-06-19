@@ -216,8 +216,10 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     description_md = DESCRIPTION_TEMPLATE.replace(
         "%%VULNERABILITY_NAME%%", vulnerability.name.title()
     )
-    prompt_message = f"Vulnerability description for {vulnerability.name}, reply as one short paragraph without " \
-                     f"mitigation details "
+    prompt_message = (
+        f"Vulnerability description for {vulnerability.name}, reply as one short paragraph without "
+        f"mitigation details "
+    )
     prompts = [
         {
             "role": "user",
