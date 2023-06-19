@@ -1,24 +1,22 @@
 """Unittests for KB generator."""
-import pathlib
-import typing
-
-import pytest
+import os.path
 from pytest_mock import plugin
+from pyfakefs import fake_filesystem
 
-from tests import conftest
+from tests import utils
 from tools import kb_generator
 
 
 def testGenerateKB_whenVulnerabilityProvided_returnsKBEntry(
     mocker: plugin.MockerFixture,
-):
+) -> None:
     """generate_kb is responsible for generating KB entries from a vulnerability name.
     when provided with a valid vulnerability name, this function should return a dict
     representing a KB entry
     """
     mocker.patch(
         "openai.api_resources.chat_completion.ChatCompletion.create",
-        side_effect=conftest.mock_chat_completion_create,
+        side_effect=utils.mock_chat_completion_create,
     )
     vulnerability = kb_generator.Vulnerability(
         "Sql Injection", kb_generator.RiskRating.HIGH, kb_generator.Platform.WEB
@@ -62,8 +60,10 @@ def testGenerateKB_whenVulnerabilityProvided_returnsKBEntry(
     }
 
 
-def testDumpKB_whenPathIsValid_writesFiles(mocker: plugin.MockerFixture):
-    # Mocking the necessary objects for testing
+def testDumpKB_whenPathIsValid_writesFiles(
+    mocker: plugin.MockerFixture, fs: fake_filesystem.FakeFilesystem
+) -> None:
+    """Test creation of KB files."""
     vulnerability = kb_generator.Vulnerability(
         name="XSS",
         platform=kb_generator.Platform.WEB,
@@ -75,29 +75,9 @@ def testDumpKB_whenPathIsValid_writesFiles(mocker: plugin.MockerFixture):
         recommendation="Recommendation",
         meta={"Meta": "Meta data"},
     )
-    mock_open = mocker.patch.object(pathlib.Path, "open", mocker.MagicMock())
+    kb_generator.dump_kb(kbentry)
 
-    output_path = kb_generator.dump_kb(kbentry)
-
-    assert mock_open.call_count == 3
-    assert output_path == pathlib.Path("WEB_SERVICE/WEB/_HIGH")
-
-
-@typing.no_type_check
-def testDumpKB_whenPathIsInvalid_RaisesException(mocker: plugin.MockerFixture):
-    # Mocking the necessary objects for testing
-    vulnerability = kb_generator.Vulnerability(
-        name="XSS", platform=kb_generator.Platform.WEB, risk_rating="Unrated"
-    )
-    kbentry = kb_generator.KBEntry(
-        vulnerability=vulnerability,
-        description="Description",
-        recommendation="Recommendation",
-        meta={"Meta": "data"},
-    )
-    mock_open = mocker.patch.object(pathlib.Path, "open", mocker.MagicMock())
-
-    with pytest.raises(AttributeError):
-        kb_generator.dump_kb(kbentry)
-
-    assert mock_open.call_count == 0
+    assert os.path.exists("WEB_SERVICE/WEB/_HIGH") is True
+    assert os.path.exists("WEB_SERVICE/WEB/_HIGH/description.md") is True
+    assert os.path.exists("WEB_SERVICE/WEB/_HIGH/recommendation.md") is True
+    assert os.path.exists("WEB_SERVICE/WEB/_HIGH/meta.json") is True

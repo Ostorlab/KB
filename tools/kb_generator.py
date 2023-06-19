@@ -14,6 +14,8 @@ import tenacity
 from openai import openai_object
 from openai.api_resources import chat_completion
 
+DEMO_LANGS = ["Flutter", "Swift", "Kotlin"]
+
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
@@ -149,11 +151,11 @@ PLATFORM_TO_PATH = {
 }
 
 
-def dump_kb(kbentry: KBEntry) -> pathlib.Path:
+def dump_kb(kbentry: KBEntry) -> None:
     """Dump KB entry into files.
 
     Args:
-        kbentry: KBEntry object
+        kbentry: Knowledge entry object.
     Returns:
 
     """
@@ -161,6 +163,8 @@ def dump_kb(kbentry: KBEntry) -> pathlib.Path:
         PLATFORM_TO_PATH[kbentry.vulnerability.platform.value],
         f"_{kbentry.vulnerability.risk_rating.value}",
     )
+
+    logging.info("KB generated successfully, path is %s", path_prefix)
 
     path_prefix.mkdir(exist_ok=True, parents=True)
 
@@ -178,8 +182,6 @@ def dump_kb(kbentry: KBEntry) -> pathlib.Path:
         "w", encoding="utf-8"
     ) as meta_json:
         json.dump(kbentry.meta, meta_json, indent=4)
-
-    return path_prefix
 
 
 def _ask_gpt(
@@ -244,7 +246,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     content = gpt_response.choices[0].message["content"]
     recommendation_md = recommendation_md.replace("%%RECOMMENDATION%%", content)
 
-    for language in ["Flutter", "Swift", "Kotlin"]:
+    for language in DEMO_LANGS:
         prompt_message = (
             f"Demo {language} application that is vulnerable to {vulnerability.name}, "
             "vulnerability has to depend on user input, "
@@ -343,8 +345,7 @@ def main(name: str, risk: str, platform: str) -> None:
     """
     vulnerability = Vulnerability(name, RiskRating(risk), Platform(platform))
     kbentry = generate_kb(vulnerability)
-    output_path = dump_kb(kbentry)
-    logging.info("KB generated successfully, path is %s", output_path)
+    dump_kb(kbentry)
 
 
 if __name__ == "__main__":
