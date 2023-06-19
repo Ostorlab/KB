@@ -1,5 +1,6 @@
 """Fixtures for KB generator tests."""
 import dataclasses
+import json
 import os
 from typing import Any
 
@@ -14,404 +15,216 @@ class GptResponse:
     choices: list[Message]
 
 
-KB_CONTENT = {
-    "Vulnerability": {
-        "Name": "Cross-Site Scripting (XSS)",
-        "Description": "XSS is a type of security vulnerability that allows an attacker to inject malicious code into "
-        "a web page viewed by other users. This can lead to theft of sensitive information, "
-        "session hijacking, and other attacks.",
-        "Sub-vulnerabilities": [
-            {
-                "Name": "Reflected XSS",
-                "Description": "Reflected XSS occurs when user input is immediately returned to the user without being "
-                "properly sanitized, allowing an attacker to inject malicious code that is executed in the "
-                "user's browser.",
-                "Examples": [
-                    {
-                        "Language": "Dart",
-                        "Code": "import 'dart:html';\n\nvoid main() {\n  querySelector('#output').innerHtml = "
-                        "window.location.search.substring(1);\n} ",
-                    },
-                    {
-                        "Language": "Swift",
-                        "Code": "import UIKit\nimport WebKit\n\nclass ViewController: UIViewController {\n    "
-                        "@IBOutlet weak "
-                        "var webView: WKWebView!\n    @IBOutlet weak var textField: UITextField!\n    \n    @IBAction "
-                        "func goButtonPressed(_ sender: Any) {\n        let url = URL(string: "
-                        '"https://example.com/search?q=\\(textField.text!)")!\n        let request = URLRequest('
-                        "url: url)\n        webView.load(request)\n    }\n} ",
-                    },
-                    {
-                        "Language": "Kotlin",
-                        "Code": "import android.os.Bundle\nimport android.webkit.WebView\nimport "
-                        "androidx.appcompat.app.AppCompatActivity\n\nclass MainActivity : AppCompatActivity() {\n    "
-                        "override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate("
-                        "savedInstanceState)\n        setContentView(R.layout.activity_main)\n        \n        val "
-                        "webView = findViewById<WebView>(R.id.webView)\n        val searchQuery = "
-                        'intent.getStringExtra("search_query")\n        webView.loadUrl('
-                        '"https://example.com/search?q=$searchQuery")\n    }\n} ',
-                    },
-                ],
-            },
-            {
-                "Name": "Stored XSS",
-                "Description": "Stored XSS occurs when user input is stored on the server and then displayed to other "
-                "users without being properly sanitized, allowing an attacker to inject malicious code "
-                "that is executed in the user's browser.",
-                "Examples": [
-                    {
-                        "Language": "Dart",
-                        "Code": "import 'dart:html';\n\nvoid main() {\n  querySelector('#submit').onClick.listen(("
-                        "event) {\n "
-                        "  final input = (querySelector('#input') as InputElement).value;\n    querySelector("
-                        "'#output').innerHtml = input;\n  });\n} ",
-                    },
-                    {
-                        "Language": "Swift",
-                        "Code": "import UIKit\nimport WebKit\n\nclass ViewController: UIViewController {\n    "
-                        "@IBOutlet weak "
-                        "var webView: WKWebView!\n    @IBOutlet weak var textField: UITextField!\n    @IBOutlet weak "
-                        "var submitButton: UIButton!\n    \n    @IBAction func submitButtonPressed(_ sender: Any) {\n "
-                        '       let input = textField.text!\n        let script = "document.getElementById('
-                        "'output').innerHTML = '\\(input)';\"\n        webView.evaluateJavaScript(script)\n    }\n} ",
-                    },
-                    {
-                        "Language": "Kotlin",
-                        "Code": "import android.os.Bundle\nimport android.webkit.WebView\nimport "
-                        "androidx.appcompat.app.AppCompatActivity\n\nclass MainActivity : AppCompatActivity() {\n    "
-                        "override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate("
-                        "savedInstanceState)\n        setContentView(R.layout.activity_main)\n        \n        val "
-                        "webView = findViewById<WebView>(R.id.webView)\n        val submitButton = "
-                        "findViewById<Button>(R.id.submitButton)\n        val input = findViewById<EditText>("
-                        "R.id.input)\n        \n        submitButton.setOnClickListener {\n            val inputText "
-                        '= input.text.toString()\n            val script = "document.getElementById('
-                        "'output').innerHTML = '$inputText';\"\n            webView.evaluateJavascript(script, "
-                        "null)\n        }\n    }\n} ",
-                    },
-                ],
-            },
-            {
-                "Name": "DOM-based XSS",
-                "Description": "DOM-based XSS occurs when user input is used to modify the DOM in a way that allows an "
-                "attacker to inject malicious code that is executed in the user's browser.",
-                "Examples": [
-                    {
-                        "Language": "Dart",
-                        "Code": "import 'dart:html';\n\nvoid main() {\n  querySelector('#submit').onClick.listen(("
-                        "event) {\n "
-                        "  final input = (querySelector('#input') as InputElement).value;\n    querySelector("
-                        "'#output').innerHtml = '<script>document.write(\"$input\")</script>';\n  });\n} ",
-                    },
-                    {
-                        "Language": "Swift",
-                        "Code": "import UIKit\nimport WebKit\n\nclass ViewController: UIViewController {\n    "
-                        "@IBOutlet weak "
-                        "var webView: WKWebView!\n    @IBOutlet weak var textField: UITextField!\n    @IBOutlet weak "
-                        "var submitButton: UIButton!\n    \n    @IBAction func submitButtonPressed(_ sender: Any) {\n "
-                        '       let input = textField.text!\n        let script = "document.getElementById('
-                        "'output').innerHTML = '<script>document.write(\\\"\\(input)\\\")</script>';\"\n        "
-                        "webView.evaluateJavaScript(script)\n    }\n} ",
-                    },
-                    {
-                        "Language": "Kotlin",
-                        "Code": "import android.os.Bundle\nimport android.webkit.WebView\nimport "
-                        "androidx.appcompat.app.AppCompatActivity\n\nclass MainActivity : AppCompatActivity() {\n    "
-                        "override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate("
-                        "savedInstanceState)\n        setContentView(R.layout.activity_main)\n        \n        val "
-                        "webView = findViewById<WebView>(R.id.webView)\n        val submitButton = "
-                        "findViewById<Button>(R.id.submitButton)\n        val input = findViewById<EditText>("
-                        "R.id.input)\n        \n        submitButton.setOnClickListener {\n            val inputText "
-                        '= input.text.toString()\n            val script = "document.getElementById('
-                        "'output').innerHTML = '<script>document.write(\\\\\"$inputText\\\\\")</script>';\"\n         "
-                        "   webView.evaluateJavascript(script, null)\n        }\n    }\n} ",
-                    },
-                ],
-            },
-        ],
-    },
-    "Meta": {
-        "risk_rating": "high",
-        "short_description": "XSS allows an attacker to inject malicious code into a web page viewed by other users.",
-        "references": {
-            "Reflected XSS (OWASP)": "https://owasp.org/www-community/attacks/xss/#reflected-xss",
-            "Stored XSS (OWASP)": "https://owasp.org/www-community/attacks/xss/#stored-xss-attacks",
-            "DOM-based XSS (OWASP)": "https://owasp.org/www-community/attacks/DOM_Based_XSS/",
-        },
-        "title": "Cross-Site Scripting (XSS)",
-        "privacy_issue": False,
-        "security_issue": True,
-        "categories": {
-            "OWASP_MASVS_L1": ["V2: Authentication and Session Management"],
-            "OWASP_MASVS_L2": ["V2: Authentication and Session Management"],
-        },
-    },
-    "Recommendation": {
-        "Details": "To prevent XSS, user input should be properly sanitized before being displayed on a web page. "
-        "This can be done by using a library or framework that automatically sanitizes user input, "
-        "or by manually sanitizing user input using a whitelist of allowed characters.",
-        "Code Fixes": [
-            {
-                "Name": "Reflected XSS",
-                "Examples": [
-                    {
-                        "Language": "Dart",
-                        "Code": "import 'package:html_unescape/html_unescape.dart';\nimport 'dart:html';\n\nvoid "
-                        "main() {\n "
-                        "querySelector('#output').innerHtml = HtmlUnescape().convert("
-                        "window.location.search.substring(1));\n} ",
-                    },
-                    {
-                        "Language": "Swift",
-                        "Code": "import UIKit\nimport WebKit\n\nclass ViewController: UIViewController {\n    "
-                        "@IBOutlet weak "
-                        "var webView: WKWebView!\n    @IBOutlet weak var textField: UITextField!\n    \n    @IBAction "
-                        "func goButtonPressed(_ sender: Any) {\n        let unescapedQuery = "
-                        "textField.text!.removingPercentEncoding!\n        let url = URL(string: "
-                        '"https://example.com/search?q=\\(unescapedQuery)")!\n        let request = URLRequest(url: '
-                        "url)\n        webView.load(request)\n    }\n} ",
-                    },
-                    {
-                        "Language": "Kotlin",
-                        "Code": "import android.os.Bundle\nimport android.webkit.WebView\nimport "
-                        "androidx.appcompat.app.AppCompatActivity\n\nclass MainActivity : AppCompatActivity() {\n    "
-                        "override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate("
-                        "savedInstanceState)\n        setContentView(R.layout.activity_main)\n        \n        val "
-                        "webView = findViewById<WebView>(R.id.webView)\n        val searchQuery = "
-                        'intent.getStringExtra("search_query")?.replace("[^\u0000-\uffff]", "")\n        '
-                        'webView.loadUrl("https://example.com/search?q=$searchQuery")\n    }\n} ',
-                    },
-                ],
-            },
-            {
-                "Name": "Stored XSS",
-                "Examples": [
-                    {
-                        "Language": "Dart",
-                        "Code": "import 'package:html_unescape/html_unescape.dart';\nimport 'dart:html';\n\nvoid "
-                        "main() {\n "
-                        "querySelector('#submit').onClick.listen((event) {\n    final input = (querySelector("
-                        "'#input') as InputElement).value;\n    querySelector('#output').innerHtml = HtmlEscape("
-                        ").convert(input);\n  });\n} ",
-                    },
-                    {
-                        "Language": "Swift",
-                        "Code": "import UIKit\nimport WebKit\n\nclass ViewController: UIViewController {\n    "
-                        "@IBOutlet weak "
-                        "var webView: WKWebView!\n    @IBOutlet weak var textField: UITextField!\n    @IBOutlet weak "
-                        "var submitButton: UIButton!\n    \n    @IBAction func submitButtonPressed(_ sender: Any) {\n "
-                        '       let input = textField.text!.replacingOccurrences(of: "<", '
-                        'with: "&lt;").replacingOccurrences(of: ">", with: "&gt;")\n        let script = '
-                        "\"document.getElementById('output').innerHTML = '\\(input)';\"\n        "
-                        "webView.evaluateJavaScript(script)\n    }\n} ",
-                    },
-                    {
-                        "Language": "Kotlin",
-                        "Code": "import android.os.Bundle\nimport android.webkit.WebView\nimport "
-                        "androidx.appcompat.app.AppCompatActivity\n\nclass MainActivity : AppCompatActivity() {\n    "
-                        "override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate("
-                        "savedInstanceState)\n        setContentView(R.layout.activity_main)\n        \n        val "
-                        "webView = findViewById<WebView>(R.id.webView)\n        val submitButton = "
-                        "findViewById<Button>(R.id.submitButton)\n        val input = findViewById<EditText>("
-                        "R.id.input)\n        \n        submitButton.setOnClickListener {\n            val inputText "
-                        '= input.text.toString().replace("<", "&lt;").replace(">", "&gt;")\n            val '
-                        "script = \"document.getElementById('output').innerHTML = '$inputText';\"\n            "
-                        "webView.evaluateJavascript(script, null)\n        }\n    }\n} ",
-                    },
-                ],
-            },
-            {
-                "Name": "DOM-based XSS",
-                "Examples": [
-                    {
-                        "Language": "Dart",
-                        "Code": "import 'package:html_unescape/html_unescape.dart';\nimport 'dart:html';\n\nvoid "
-                        "main() {\n "
-                        "querySelector('#submit').onClick.listen((event) {\n    final input = (querySelector("
-                        "'#input') as InputElement).value;\n    querySelector('#output').innerHtml = "
-                        "'<script>document.write(\"' + HtmlEscape().convert(input) + '\")</script>';\n  });\n} ",
-                    },
-                    {
-                        "Language": "Swift",
-                        "Code": "import UIKit\nimport WebKit\n\nclass ViewController: UIViewController {\n    "
-                        "@IBOutlet weak "
-                        "var webView: WKWebView!\n    @IBOutlet weak var textField: UITextField!\n    @IBOutlet weak "
-                        "var submitButton: UIButton!\n    \n    @IBAction func submitButtonPressed(_ sender: Any) {\n "
-                        '       let input = textField.text!.replacingOccurrences(of: "<", '
-                        'with: "&lt;").replacingOccurrences(of: ">", with: "&gt;")\n        let script = '
-                        "\"document.getElementById('output').innerHTML = '<script>document.write(\\\"' + '\\(input)' "
-                        "+ '\\\")</script>';\"\n        webView.evaluateJavaScript(script)\n    }\n} ",
-                    },
-                    {
-                        "Language": "Kotlin",
-                        "Code": "import android.os.Bundle\nimport android.webkit.WebView\nimport "
-                        "androidx.appcompat.app.AppCompatActivity\n\nclass MainActivity : AppCompatActivity() {\n    "
-                        "override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate("
-                        "savedInstanceState)\n        setContentView(R.layout.activity_main)\n        \n        val "
-                        "webView = findViewById<WebView>(R.id.webView)\n        val submitButton = "
-                        "findViewById<Button>(R.id.submitButton)\n        val input = findViewById<EditText>("
-                        "R.id.input)\n        \n        submitButton.setOnClickListener {\n            val inputText "
-                        '= input.text.toString().replace("<", "&lt;").replace(">", "&gt;")\n            val '
-                        "script = \"document.getElementById('output').innerHTML = '<script>document.write(\\\\\"' + "
-                        "'$inputText' + '\\\\\")</script>';\"\n            webView.evaluateJavascript(script, "
-                        "null)\n        }\n    }\n} ",
-                    },
-                ],
-            },
-        ],
-    },
+DESCRIPTION = (
+    "SQL injection is a type of security vulnerability that allows an attacker to inject malicious SQL "
+    "statements into an application's database, potentially giving them access to sensitive data or "
+    "allowing them to modify or delete data. This vulnerability can occur when an application does not "
+    "properly validate user input before using it in SQL queries, allowing an attacker to manipulate the "
+    "input to execute their own SQL commands."
+)
+
+MITIGATION = (
+    "To mitigate SQL injection vulnerabilities, it is important to use parameterized queries or prepared "
+    "statements instead of concatenating user input directly into SQL statements. This ensures that user "
+    "input is treated as data rather than executable code. Additionally, input validation and sanitization "
+    "should be implemented to ensure that only expected data types and formats are accepted. Access "
+    "controls and permissions should also be enforced to limit the scope of potential attacks. Regular "
+    "security audits and updates to software and frameworks can also help to identify and address "
+    "vulnerabilities. "
+)
+
+DART_VULNERABLE_CODE = """
+```
+import 'package:flutter/material.dart';
+import 'package:sqflite/sqflite.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'SQL Injection Demo',
+      home: MyHomePage(),
+    );
+  }
 }
 
-CODE_CONTENT = """
-<data>
-  <vulnerable_code>
-    <Dart>
-      import 'dart:io';
-      import 'package:mysql1/mysql1.dart';
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
 
-      Future<void> main() async {
-        final conn = await MySqlConnection.connect(
-          ConnectionSettings(
-            host: 'localhost',
-            port: 3306,
-            user: 'root',
-            password: 'password',
-            db: 'test_db',
-          ),
+class _MyHomePageState extends State<MyHomePage> {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  Future<void> _login() async {
+    final Database db = await openDatabase(
+      'my_db.db',
+      version: 1,
+      onCreate: (Database db, int version) async {
+        await db.execute(
+          'CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, password TEXT)',
         );
+      },
+    );
 
-        final userInput = stdin.readLineSync();
-        final query = 'SELECT * FROM users WHERE id = $userInput';
-        final results = await conn.query(query);
+    final String name = _nameController.text;
+    final String password = _passwordController.text;
 
-        for (final row in results) {
-          print(row);
-        }
+    await db.rawQuery(
+      'SELECT * FROM users WHERE name = "$name" AND password = "$password"',
+    );
+  }
 
-        await conn.close();
-      }
-    </Dart>
-    <Swift>
-      import Foundation
-      import MySQL
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('SQL Injection Demo'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            TextField(
+              controller: _nameController,
+              decoration: InputDecoration(
+                labelText: 'Name',
+              ),
+            ),
+            TextField(
+              controller: _passwordController,
+              decoration: InputDecoration(
+                labelText: 'Password',
+              ),
+            ),
+            SizedBox(height: 16.0),
+            RaisedButton(
+              child: Text('Login'),
+              onPressed: _login,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
 
-      let conn = try MySQL.Connection(
-        host: "localhost",
-        user: "root",
-        password: "password",
-        database: "test_db"
-      )
-
-      print("Enter user ID:")
-      let userInput = readLine()!
-      let query = "SELECT * FROM users WHERE id = (userInput)"
-      let results = try conn.query(query)
-
-      for row in results {
-        print(row)
-      }
-
-      conn.close()
-    </Swift>
-    <Kotlin>
-      import java.sql.DriverManager
-
-      fun main() {
-        val conn = DriverManager.getConnection(
-          "jdbc:mysql://localhost:3306/test_db",
-          "root",
-          "password"
-        )
-
-        print("Enter user ID:")
-        val userInput = readLine()!!
-        val query = "SELECT * FROM users WHERE id = $userInput"
-        val stmt = conn.createStatement()
-        val results = stmt.executeQuery(query)
-
-        while (results.next()) {
-          println(results.getString("username"))
-        }
-
-        conn.close()
-      }
-    </Kotlin>
-  </vulnerable_code>
-  <patched_code>
-    <Dart>
-      import 'dart:io';
-      import 'package:mysql1/mysql1.dart';
-
-      Future<void> main() async {
-        final conn = await MySqlConnection.connect(
-          ConnectionSettings(
-            host: 'localhost',
-            port: 3306,
-            user: 'root',
-            password: 'password',
-            db: 'test_db',
-          ),
-        );
-
-        final userInput = stdin.readLineSync();
-        final query = 'SELECT * FROM users WHERE id = ?';
-        final results = await conn.query(query, [userInput]);
-
-        for (final row in results) {
-          print(row);
-        }
-
-        await conn.close();
-      }
-    </Dart>
-    <Swift>
-      import Foundation
-      import MySQL
-
-      let conn = try MySQL.Connection(
-        host: "localhost",
-        user: "root",
-        password: "password",
-        database: "test_db"
-      )
-
-      print("Enter user ID:")
-      let userInput = readLine()!
-      let query = "SELECT * FROM users WHERE id = ?"
-      let results = try conn.query(query, [userInput])
-
-      for row in results {
-        print(row)
-      }
-
-      conn.close()
-    </Swift>
-    <Kotlin>
-      import java.sql.DriverManager
-
-      fun main() {
-        val conn = DriverManager.getConnection(
-          "jdbc:mysql://localhost:3306/test_db",
-          "root",
-          "password"
-        )
-
-        print("Enter user ID:")
-        val userInput = readLine()!!
-        val query = "SELECT * FROM users WHERE id = ?"
-        val pstmt = conn.prepareStatement(query)
-        pstmt.setString(1, userInput)
-        val results = pstmt.executeQuery()
-
-        while (results.next()) {
-          println(results.getString("username"))
-        }
-
-        conn.close()
-      }
-    </Kotlin>
-  </patched_code>
-</data>
+Please note that this code is intentionally vulnerable, as a responsible AI something something...
 """
+
+DART_PATCHED_CODE = """
+```
+import 'package:flutter/material.dart';
+import 'package:sqflite/sqflite.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'SQL Injection Demo',
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  Future<void> _login() async {
+    final Database db = await openDatabase(
+      'my_db.db',
+      version: 1,
+      onCreate: (Database db, int version) async {
+        await db.execute(
+          'CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, password TEXT)',
+        );
+      },
+    );
+
+    final String name = _nameController.text;
+    final String password = _passwordController.text;
+
+    await db.rawQuery(
+      'SELECT * FROM users WHERE name = ? AND password = ?',
+      [name, password],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('SQL Injection Demo'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            TextField(
+              controller: _nameController,
+              decoration: InputDecoration(
+                labelText: 'Name',
+              ),
+            ),
+            TextField(
+              controller: _passwordController,
+              decoration: InputDecoration(
+                labelText: 'Password',
+              ),
+            ),
+            SizedBox(height: 16.0),
+            RaisedButton(
+              child: Text('Login'),
+              onPressed: _login,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+extra useless text..
+"""
+
+META = {
+    "risk_rating": "high",
+    "short_description": "SQL Injection vulnerability allows an attacker to execute malicious SQL queries to the "
+    "database,potentially gaining access to sensitive data or performing unauthorized actions.",
+    "references": {
+        "OWASP ": "https: //owasp.org/www-community/attacks/SQL_Injection",
+        "NIST": "https://nvd.nist.gov/vuln/detail/CVE-2019-16759",
+        "SANS": "https://www.sans.org/top-25-software-errors/#cat3",
+    },
+    "title": "SQL Injection Vulnerability",
+    "privacy_issue": False,
+    "security_issue": True,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "V2: Authentication and Session Management",
+            "V3: Cryptography",
+            "V4: Network Communication",
+            "V5: Platform Interaction",
+            "V6: Code Quality and Build Settings",
+        ],
+        "OWASP_MASVS_L2": ["V7: Data Protection", "V8: Resilience Against Attack"],
+    },
+}
 
 
 def pytest_configure():
@@ -419,33 +232,17 @@ def pytest_configure():
 
 
 def mock_chat_completion_create(**kwargs):
-    prompt = kwargs["messages"][0]["content"]
+    prompt = kwargs["messages"][-1]["content"]
 
-    if prompt.startswith("knowledge base entry for"):
-        return GptResponse(choices=[Message({"content": str(KB_CONTENT)})])
-    elif "application code that is vulnerable" in prompt:
-        return GptResponse(choices=[Message({"content": CODE_CONTENT})])
+    if "Vulnerability description for" in prompt:
+        return GptResponse(choices=[Message({"content": DESCRIPTION})])
+    elif "Vulnerability mitigation for" in prompt:
+        return GptResponse(choices=[Message({"content": MITIGATION})])
+    elif "application that is vulnerable to" in prompt:
+        return GptResponse(choices=[Message({"content": DART_VULNERABLE_CODE})])
+    elif "code below is vulnerable to" in prompt:
+        return GptResponse(choices=[Message({"content": DART_PATCHED_CODE})])
+    elif "Generate a metadata" in prompt:
+        return GptResponse(choices=[Message({"content": json.dumps(META)})])
     else:
         raise ValueError("Invalid Prompt")
-
-
-def validate_json_format(json_data):
-    # Check if the JSON data is a dictionary
-    assert isinstance(json_data, dict), "JSON data must be a dictionary."
-
-    # Check if the required keys are present
-    required_keys = ["risk_rating", "short_description", "references", "title"]
-    for key in required_keys:
-        assert key in json_data, f"Required key '{key}' is missing in JSON data."
-
-    # Check the data types and formats of the keys
-    assert isinstance(json_data["risk_rating"], str), "risk_rating must be a string."
-    assert isinstance(
-        json_data["short_description"], str
-    ), "short_description must be a string."
-    assert isinstance(json_data["references"], dict), "references must be a dictionary."
-    assert isinstance(json_data["title"], str), "title must be a string."
-
-    # Check the format of the references
-    references = json_data["references"]
-    assert isinstance(references, dict), "references must be a dictionary."

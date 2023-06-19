@@ -1,143 +1,102 @@
 """Module responsible for interacting with the OpenAI API to generate KB entries."""
-import ast
 import dataclasses
 import enum
-import io
 import json
 import logging
 import os
 import pathlib
+import re
 from typing import Any
 
-import bs4
 import click
 import openai
 import tenacity
 from openai import openai_object
 from openai.api_resources import chat_completion
 
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL_NAME = "gpt-3.5-turbo"
 
-KB_JSON_TEMPLATE = """
-        {
-            "Vulnerability": {
-                "Name": "[Vulnerability Name]",
-                "Description": "[Vulnerability Description]".,
-                "Sub-vulnerabilities": [
-                    {
-                        "Name": "[Sub-vulnerability Name]",
-                        "Description": "[Description of the sub-vulnerability]"
-                        "Examples": [
-                            {
-                                "Language": "Dart",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Swift",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Kotlin",
-                                "Code": "[TODO]"
-                            }
-                        ]
-                    },
-                    {
-                        "Name": "[Sub-vulnerability Name]",
-                        "Description": "[Description of the sub-vulnerability]"
-                        "Examples": [
-                            {
-                                "Language": "Dart",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Swift",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Kotlin",
-                                "Code": "[TODO]"
-                            }
-                        ]
-                    },
-                    {
-                        "Name": "[Sub-vulnerability Name]",
-                        "Description": "[Description of the sub-vulnerability]"
-                        "Examples": [
-                            {
-                                "Language": "Dart",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Swift",
-                                "Code": "[TODO]"
-                            },
-                            {
-                                "Language": "Kotlin",
-                                "Code": "[TODO]"
-                            }
-                        ]
-                    }
-                    ...
-                ]
-            },
-            "Meta": {
-              "risk_rating": "[info/hardening/low/medium/high]",
-              "short_description": "[short_description]",
-              "references": {
-                "[Sub-vulnerability 1] (source name)": "[URL]",
-                "[Sub-vulnerability 2] (source name)": "[URL]",
-                "[Sub-vulnerability 3] (source name)": "[URL]"
-              },
-              "title": "[vulnerability title]",
-              "privacy_issue": [true/false],
-              "security_issue": [true/false],
-              "categories": {
-                "OWASP_MASVS_L1": [],
-                "OWASP_MASVS_L2": []
-              }
-            },
-            "Recommendation": {
-                "Details": "[Recommendation Details]",
-                "Code Fixes": [
-                    {
-                        "Name": "[Sub-vulnerability Name]",
-                        "Examples": [
-                            {
-                                "Language": "Dart",
-                                "Code": "[Dart vulnerable application]"
-                            },
-                            {
-                                "Language": "Swift",
-                                "Code": "[Swift vulnerable application]"
-                            },
-                            {
-                                "Language": "Kotlin",
-                                "Code": "[Kotlin vulnerable application]"
-                            }
-                        ]
-                    }
-                    ...
-                ]
-            }
-        }
-        """
+DESCRIPTION_TEMPLATE = """
+# %%VULNERABILITY_NAME%%
 
-CODE_XML_TEMPLATE = """
-<data>
-  <vulnerable_code>
-    <Dart>Dart vulnerable application Code</Dart>
-    <Swift>Swift vulnerable application code</Swift>
-    <Kotlin>Kotlin vulnerable application code</Kotlin>
-  </vulnerable_code>
-  <patched_code>
-    <Dart>Dart patched application Code</Dart>
-    <Swift>Swift patched application code</Swift>
-    <Kotlin>Kotlin patched application code</Kotlin>
-  </patched_code>
-</data>
+%%VULNERABILITY_DESCRIPTION%%
+
+### Examples
+
+#### Dart
+
+```dart
+%%FLUTTER_CODE%%
+```
+
+#### Swift
+
+```swift
+%%SWIFT_CODE%%
+```
+
+#### Kotlin
+
+```kotlin
+%%KOTLIN_CODE%%
+```
 """
+
+
+RECOMMENDATION_TEMPLATE = """
+# %%VULNERABILITY_NAME%%
+
+%%RECOMMENDATION%%
+
+# Code Examples:
+
+### Dart
+
+```dart
+%%FLUTTER_CODE%%
+```
+
+### Swift
+
+```swift
+%%SWIFT_CODE%%
+```
+
+### Kotlin
+
+```kotlin
+%%KOTLIN_CODE%%
+```
+"""
+
+META_TEMPLATE = """
+{
+   "risk_rating":"[hardening/info/low/medium/high]",
+   "short_description":"[short description of the vulnerability]",
+   "references":{
+      "Vulnerability (SOURCE)":"[SOURCE LINK]",
+      ...
+   },
+   "title":"[Vulnerability title]",
+   "privacy_issue":[true/false],
+   "security_issue":[true/false],
+   "categories":{
+       "OWASP_MASVS_L1":[
+         "MSTG reference" 
+      ],
+      "OWASP_MASVS_L2":[
+         "MSTG reference"
+      ]
+   }
+}
+"""
+
+PATTERN = "```(.*)```"
 
 
 @dataclasses.dataclass
@@ -254,10 +213,11 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
         KB entry
 
     """
-    prompt_message = (
-        f"knowledge base entry for {vulnerability.name}, reply strictly as valid JSON"
-        f"{KB_JSON_TEMPLATE}"
+    description_md = DESCRIPTION_TEMPLATE.replace(
+        "%%VULNERABILITY_NAME%%", vulnerability.name.title()
     )
+    prompt_message = f"Vulnerability description for {vulnerability.name}, reply as one short paragraph without " \
+                     f"mitigation details "
     prompts = [
         {
             "role": "user",
@@ -266,25 +226,34 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     ]
     gpt_response = _ask_gpt(prompts=prompts)
     content = gpt_response.choices[0].message["content"]
-    try:
-        response = json.loads(content)
-    except ValueError:
-        response = ast.literal_eval(content)
+    description_md = description_md.replace("%%VULNERABILITY_DESCRIPTION%%", content)
 
-    subvulnz = response["Vulnerability"].get("Sub-vulnerabilities", [])
-    recommendations = response["Recommendation"]
-    if vulnerability.platform == Platform.WEB:
-        target = "Web"
-    else:
-        target = "Mobile"
-    for idx in range(len(subvulnz)):
-        subvuln_name = subvulnz[idx]["Name"]
+    recommendation_md = RECOMMENDATION_TEMPLATE.replace(
+        "%%VULNERABILITY_NAME%%", vulnerability.name.title()
+    )
+    prompt_message = f"Vulnerability mitigation for {vulnerability.name}, reply as one short paragraph"
+    prompts = [
+        {
+            "role": "user",
+            "content": prompt_message,
+        },
+    ]
+    gpt_response = _ask_gpt(prompts=prompts)
+    content = gpt_response.choices[0].message["content"]
+    recommendation_md = recommendation_md.replace("%%RECOMMENDATION%%", content)
+
+    for language in ["Flutter", "Swift", "Kotlin"]:
         prompt_message = (
-            f"Complete {target} application code that is vulnerable to {subvuln_name} in Dart, Swift, Kotlin "
-            f"use the following template {CODE_XML_TEMPLATE}"
+            f"Demo {language} application that is vulnerable to {vulnerability.name}, "
+            "vulnerability has to depend on user input, "
+            "application code has to include imports and main function"
+            "your response need to consist of the code alone without any extra text"
         )
-
         prompts = [
+            {
+                "role": "system",
+                "content": "act as a code generator, only reply with code, nothing else",
+            },
             {
                 "role": "user",
                 "content": prompt_message,
@@ -292,98 +261,50 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
         ]
         gpt_response = _ask_gpt(prompts=prompts)
         content = gpt_response.choices[0].message["content"]
+        match = re.search(PATTERN, content, re.DOTALL | re.MULTILINE)
+        code = match.group(1).strip() if match else "[TODO]"
+        description_md = description_md.replace(f"%%{language.upper()}_CODE%%", code)
 
-        parsed_content = bs4.BeautifulSoup(content, features="lxml")
-        vulnerable_code = parsed_content.find("vulnerable_code")
-        patched_code = parsed_content.find("patched_code")
-
-        if vulnerable_code is None or patched_code is None:
-            continue
-
-        dart_code = vulnerable_code.find("dart")
-        subvulnz[idx]["Examples"][0]["Code"] = (
-            dart_code.text if dart_code and hasattr(dart_code, "text") else "[TODO]"
+        prompt_message = (
+            f"The {language} code below is vulnerable to {vulnerability.name}, generate a patched version of it:"
+            f"{content}"
         )
-        swift_code = vulnerable_code.find("swift")
-        subvulnz[idx]["Examples"][1]["Code"] = (
-            swift_code.text if swift_code and hasattr(swift_code, "text") else "[TODO]"
-        )
-        kotlin_code = vulnerable_code.find("kotlin")
-        subvulnz[idx]["Examples"][2]["Code"] = (
-            kotlin_code.text
-            if kotlin_code and hasattr(kotlin_code, "text")
-            else "[TODO]"
-        )
-
-        dart_code = patched_code.find("dart")
-        recommendations["Code Fixes"][idx]["Examples"][0]["Code"] = (
-            dart_code.text if dart_code and hasattr(dart_code, "text") else "[TODO]"
-        )
-        swift_code = patched_code.find("swift")
-        recommendations["Code Fixes"][idx]["Examples"][1]["Code"] = (
-            swift_code.text if swift_code and hasattr(swift_code, "text") else "[TODO]"
-        )
-        kotlin_code = patched_code.find("kotlin")
-        recommendations["Code Fixes"][idx]["Examples"][2]["Code"] = (
-            kotlin_code.text
-            if kotlin_code and hasattr(kotlin_code, "text")
-            else "[TODO]"
+        prompts = [
+            {
+                "role": "system",
+                "content": "act as a code generator, only reply with code, nothing else",
+            },
+            {
+                "role": "user",
+                "content": prompt_message,
+            },
+        ]
+        gpt_response = _ask_gpt(prompts=prompts)
+        content = gpt_response.choices[0].message["content"]
+        match = re.search(PATTERN, content, re.DOTALL | re.MULTILINE)
+        code = match.group(1).strip() if match else "[TODO]"
+        recommendation_md = recommendation_md.replace(
+            f"%%{language.upper()}_CODE%%", code
         )
 
-    # Vulnerability Description
-    description_buffer = io.StringIO()
-    vulnerability_data = response["Vulnerability"]
-    vulnerability_name = vulnerability_data["Name"]
-    vulnerability_description = vulnerability_data["Description"]
-    description_buffer.write(f"# {vulnerability_name}\n\n")
-    description_buffer.write(f"{vulnerability_description}\n\n")
+    prompt_message = (
+        f"Generate a metadata for {vulnerability.name} vulnerability, use the following template: "
+        f"{META_TEMPLATE}"
+    )
+    prompts = [
+        {
+            "role": "system",
+            "content": "act as a json metadata generator, only reply with json, nothing else",
+        },
+        {
+            "role": "user",
+            "content": prompt_message,
+        },
+    ]
+    gpt_response = _ask_gpt(prompts=prompts)
+    content = gpt_response.choices[0].message["content"]
+    meta = json.loads(content)
 
-    # Sub-vulnerabilities
-    sub_vulnerabilities = vulnerability_data.get("Sub-vulnerabilities", [])
-    for sub_vulnerability in sub_vulnerabilities:
-        sub_vulnerability_name = sub_vulnerability["Name"]
-        sub_vulnerability_description = sub_vulnerability["Description"]
-        description_buffer.write(f"## {sub_vulnerability_name}\n\n")
-        description_buffer.write(f"{sub_vulnerability_description}\n\n")
-        # Code Examples
-        examples = sub_vulnerability["Examples"]
-        description_buffer.write("### Examples\n\n")
-        for example in examples:
-            language = example["Language"]
-            code = example["Code"]
-            description_buffer.write(f"#### {language}\n\n")
-            description_buffer.write(f"```{language}\n")
-            description_buffer.write(f"{code}\n")
-            description_buffer.write("```\n\n")
-
-    description_md = description_buffer.getvalue()
-
-    # Recommendation
-    recommendation_buffer = io.StringIO()
-    recommendation_data = response["Recommendation"]
-    recommendation_buffer.write("# Recommendation\n\n")
-    recommendation_buffer.write(f"{recommendation_data['Details']}\n\n")
-    code_fixes = recommendation_data.get("Code Fixes", [])
-    for code_fix in code_fixes:
-        code_fix_name = code_fix["Name"]
-        examples = code_fix["Examples"]
-
-        recommendation_buffer.write(f"## {code_fix_name}\n\n")
-        for example in examples:
-            language = example["Language"]
-            code = example["Code"]
-
-            recommendation_buffer.write(f"### {language}\n\n")
-            recommendation_buffer.write("```{language}\n")
-            recommendation_buffer.write(f"{code}\n")
-            recommendation_buffer.write("```\n\n")
-
-    recommendation_md = recommendation_buffer.getvalue()
-
-    # Vulnerability metadata
-    meta = response["Meta"]
-
-    # KB Entry
     kbentry = KBEntry(description_md, recommendation_md, meta, vulnerability)
 
     return kbentry
@@ -421,7 +342,7 @@ def main(name: str, risk: str, platform: str) -> None:
     vulnerability = Vulnerability(name, RiskRating(risk), Platform(platform))
     kbentry = generate_kb(vulnerability)
     output_path = dump_kb(kbentry)
-    logging.info(output_path)
+    logging.info("KB generated successfully, path is %s", output_path)
 
 
 if __name__ == "__main__":
