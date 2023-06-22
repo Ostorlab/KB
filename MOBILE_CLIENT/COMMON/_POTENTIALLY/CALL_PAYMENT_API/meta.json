@@ -1,0 +1,15 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "The payment API is a critical component of an application that handles financial transactions and interacts with payment gateways or processors.",
+  "references": {
+  },
+  "title": "Call Payment API",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+    ],
+    "OWASP_MASVS_L2": [
+    ]
+  }
+}
