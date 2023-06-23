@@ -1,7 +1,7 @@
 
 # Server Side Template Injection
 
-Server Side Template Injection (SSTI) is a serious vulnerability that can allow attackers to execute arbitrary code on a server. To mitigate this vulnerability, it is important to ensure that all user input is properly sanitized and validated before being passed to the server-side template engine. Additionally, it is recommended to use a template engine that has built-in protections against SSTI, such as Jinja2's autoescaping feature. Regularly updating the template engine and web application framework can also help to prevent SSTI attacks by patching any known vulnerabilities. Finally, implementing a web application firewall (WAF) can provide an additional layer of protection against SSTI and other types of attacks.
+Server Side Template Injection (SSTI) is a vulnerability that can allow attackers to execute arbitrary code on a server. To mitigate this vulnerability, it is important to ensure that all user input is properly sanitized and validated before being passed to the server-side template engine. Additionally, it is recommended to use a template engine that has built-in protections against SSTI, such as Jinja2's autoescaping feature. Regularly updating the template engine and web application framework can also help to prevent SSTI attacks by patching any known vulnerabilities. Finally, implementing a web application firewall (WAF) can provide an additional layer of protection against SSTI and other types of attacks.
 
 # Code Examples:
 
