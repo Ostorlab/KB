@@ -66,26 +66,35 @@ func main() {
 ### Kotlin
 
 ```kotlin
-import javax.xml.parsers.DocumentBuilderFactory
-import org.xml.sax.InputSource
-import java.io.StringReader
-
 fun main() {
-    val userInput = readLine() ?: ""
-    val factory = DocumentBuilderFactory.newInstance()
-    val builder = factory.newDocumentBuilder()
-    val document = builder.newDocument()
-    val usersElement = document.createElement("users")
-    val userElement = document.createElement("user")
-    val nameElement = document.createElement("name")
-    // parse user input as a text node
-    val nameText = document.createTextNode(userInput)
-  
-    nameElement.appendChild(nameText)
-    userElement.appendChild(nameElement)
-    usersElement.appendChild(userElement)
-    document.appendChild(usersElement)
-    val name = document.getElementsByTagName("name").item(0).textContent
-    println("Hello, $name!")
+    val userInput = readLine() ?: return
+
+    val xmlData = """
+        <users>
+            <user>
+                <username>Alice</username>
+                <password>pass123</password>
+            </user>
+            <user>
+                <username>Bob</username>
+                <password>pass456</password>
+            </user>
+        </users>
+    """.trimIndent()
+
+    val xpathQuery = "//*[username/text()='${userInput}']"
+
+    val xpath = XPathFactory.newInstance().newXPath()
+    val expression = xpath.compile(xpathQuery)
+
+    val result = expression.evaluate(xmlData, XPathConstants.NODESET)
+
+    val nodeList = result as? List<*> ?: emptyList<Any>()
+
+    val matchedUsers = nodeList.filterIsInstance<org.w3c.dom.Node>()
+        .map { node -> node.textContent }
+        .joinToString(", ")
+
+    println("Matched users: $matchedUsers")
 }
 ```
