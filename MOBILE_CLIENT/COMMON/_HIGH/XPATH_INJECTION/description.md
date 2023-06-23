@@ -47,16 +47,25 @@ func main() {
 
 ```kotlin
 import javax.xml.parsers.DocumentBuilderFactory
-import org.xml.sax.InputSource
-import java.io.StringReader
 
 fun main() {
-    val userInput = readLine() ?: ""
-    val factory = DocumentBuilderFactory.newInstance()
-    val builder = factory.newDocumentBuilder()
-    val inputSource = InputSource(StringReader(xml))
-    val document = builder.parse(inputSource)
-    val name = document.getElementsByTagName("name").item(0).textContent
-    println("Hello, $name!")
+    val userInput = readLine() ?: return
+    val xpathQuery = "//*[username/text()='${userInput}']"
+
+    val xmlData = """
+        <users>
+            <user>
+                <username>Alice</username>
+                <password>pass123</password>
+            </user>
+            <user>
+                <username>Bob</username>
+                <password>pass456</password>
+            </user>
+        </users>
+    """.trimIndent()
+
+    val xpath = XPathFactory.newInstance().newXPath()
+    val result = xpath.evaluate(xpathQuery, xmlData)
 }
 ```
