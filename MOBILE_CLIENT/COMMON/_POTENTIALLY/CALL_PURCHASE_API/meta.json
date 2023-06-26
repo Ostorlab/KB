@@ -1,0 +1,23 @@
+{
+    "risk_rating": "potentially",
+    "short_description": "Call Payment API allows unauthorized access to gain unauthorized access to paid features",
+    "references": {
+        "Learn how secure online payment processing": "https://www.rapyd.net/blog/secure-online-payment-processing/",
+        "Security at Stripe": "https://stripe.com/docs/security",
+        "Secure Payment Confirmation": "https://www.w3.org/TR/secure-payment-confirmation/"
+    },
+    "title": "Call Payment API",
+    "privacy_issue": true,
+    "security_issue": true,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG-STORAGE-1",
+            "MSTG-STORAGE-2",
+            "MSTG-STORAGE-3"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG-STORAGE-4",
+            "MSTG-STORAGE-5"
+        ]
+    }
+}
