@@ -65,7 +65,21 @@ func main() {
 
 ### Kotlin
 
+Unfortunately, the standard XPath library in Java (and therefore in Kotlin) does not support parameters, which would have been the ideal solution.
+
+A possible workaround for this problem is to manually escape the user input to prevent injection. We can create a method that replaces all XPath special characters from the input string:
+
 ```kotlin
+
+fun sanitize(input: String): String {
+    // Replace all XPath special characters with their HTML entities
+    return input.replace("&", "&amp;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace("\"", "&quot;")
+                .replace("'", "&apos;")
+}
+
 fun main() {
     val userInput = readLine() ?: return
 
@@ -82,7 +96,8 @@ fun main() {
         </users>
     """.trimIndent()
 
-    val xpathQuery = "//*[username/text()='${userInput}']"
+    val sanitizedInput = sanitize(userInput)
+    val xpathQuery = "//*[username/text()='${sanitizedInput}']"
 
     val xpath = XPathFactory.newInstance().newXPath()
     val expression = xpath.compile(xpathQuery)
