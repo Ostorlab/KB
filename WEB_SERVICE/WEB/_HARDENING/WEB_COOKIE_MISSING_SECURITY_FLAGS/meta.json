@@ -10,8 +10,14 @@
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
-    "OWASP_TOP_10": [
-      "A6:Security Misconfiguration"
+    "OWASP_ASVS_L1": [
+      "V3_4_2"
+    ],
+    "OWASP_ASVS_L2": [
+      "V3_4_2"
+    ],
+    "OWASP_ASVS_L3": [
+      "V3_4_2"
     ]
   }
 }

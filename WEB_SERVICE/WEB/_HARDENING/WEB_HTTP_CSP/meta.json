@@ -8,8 +8,8 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "OWASP_TOP_10": [
-      "A6: Security Misconfiguration"
+    "OWASP_ASVS_L3": [
+      "V2_2_5"
     ]
   }
 }

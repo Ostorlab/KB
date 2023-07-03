@@ -10,9 +10,6 @@
   "categories": {
     "CWE_TOP_25": [
       "CWE_862"
-    ],
-    "OWASP_TOP_10": [
-      "WSTG-ATHZ-04"
     ]
   }
 }

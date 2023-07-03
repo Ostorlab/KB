@@ -8,8 +8,17 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "OWASP_TOP_10": [
-      "WSTG-ATHZ-04"
+    "OWASP_ASVS_L1": [
+      "V4_1_2",
+      "V4_2_1"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_2",
+      "V4_2_1"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_2",
+      "V4_2_1"
     ]
   }
 }

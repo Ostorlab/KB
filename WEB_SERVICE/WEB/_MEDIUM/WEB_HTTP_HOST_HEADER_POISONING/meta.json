@@ -6,10 +6,5 @@
   },
   "title": "HTTP Host Header Poisoning",
   "privacy_issue": false,
-  "security_issue": true,
-  "categories": {
-    "OWASP_WSTG": [
-      "WSTG-INPV-17"
-    ]
-  }
+  "security_issue": true
 }

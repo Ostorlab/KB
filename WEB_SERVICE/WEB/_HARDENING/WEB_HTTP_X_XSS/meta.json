@@ -6,10 +6,5 @@
   },
   "title": "Insecure HTTP Header Setting: X-XSS-Protection Header",
   "privacy_issue": false,
-  "security_issue": true,
-  "categories": {
-    "OWASP_TOP_10": [
-      "A6: Security Misconfiguration"
-    ]
-  }
+  "security_issue": true
 }

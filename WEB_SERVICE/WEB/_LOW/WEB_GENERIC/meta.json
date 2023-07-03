@@ -5,10 +5,5 @@
   },
   "title": "Generic Web Entry",
   "privacy_issue": false,
-  "security_issue": true,
-  "categories": {
-    "OWASP_TOP_10": [
-      "A3:2017-Sensitive Data Exposure"
-    ]
-  }
+  "security_issue": true
 }

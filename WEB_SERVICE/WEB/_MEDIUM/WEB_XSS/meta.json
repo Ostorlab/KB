@@ -11,11 +11,22 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "CWE_TOP_25": [
-      "CWE_79"
+    "OWASP_ASVS_L1": [
+      "V5_2_1",
+      "V5_3_1",
+      "V13_1_1"
     ],
-    "OWASP_TOP_10": [
-      "A7:2017-Cross-Site Scripting (XSS)"
+    "OWASP_ASVS_L2": [
+      "V5_2_1",
+      "V1_5_4",
+      "V5_3_1",
+      "V13_1_1"
+    ],
+    "OWASP_ASVS_L3": [
+      "V5_2_1",
+      "V1_5_4",
+      "V5_3_1",
+      "V13_1_1"
     ]
   }
 }

@@ -13,8 +13,16 @@
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
-    "OWASP_TOP_10": [
-      "A3:2017-Sensitive Data Exposure"
+    "OWASP_ASVS_L1": [
+      "V9_1_1"
+    ],
+    "OWASP_ASVS_L2": [
+      "V1_9_1",
+      "V9_1_1"
+    ],
+    "OWASP_ASVS_L3": [
+      "V1_9_1",
+      "V9_1_1"
     ]
   }
 }

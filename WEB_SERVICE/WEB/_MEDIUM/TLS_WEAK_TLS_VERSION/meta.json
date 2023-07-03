@@ -7,8 +7,14 @@
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
-    "OWASP_WSTG": [
-      "WSTG-CRYP-01"
+    "OWASP_ASVS_L1": [
+      "V9_1_1"
+    ],
+    "OWASP_ASVS_L2": [
+      "V9_1_1"
+    ],
+    "OWASP_ASVS_L3": [
+      "V9_1_1"
     ]
   }
 }
