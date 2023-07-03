@@ -6,5 +6,16 @@
   },
   "title": "Insecure HTTP Header Setting: HTTP Strict Transport Security (HSTS)",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V14_4_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V14_4_5"
+    ],
+    "OWASP_ASVS_L3": [
+      "V14_4_5"
+    ]
+  }
 }

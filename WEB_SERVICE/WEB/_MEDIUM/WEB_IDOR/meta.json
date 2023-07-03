@@ -6,5 +6,19 @@
   },
   "title": "Insecure Direct Object Reference (IDOR)",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V4_1_2",
+      "V4_2_1"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_2",
+      "V4_2_1"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_2",
+      "V4_2_1"
+    ]
+  }
 }

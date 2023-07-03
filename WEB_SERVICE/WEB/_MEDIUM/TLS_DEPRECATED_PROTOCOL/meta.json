@@ -7,5 +7,16 @@
   },
   "title": "Use of deprecated TLS/SSL protocol version",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V9_1_3"
+    ],
+    "OWASP_ASVS_L2": [
+      "V9_1_3"
+    ],
+    "OWASP_ASVS_L3": [
+      "V9_1_3"
+    ]
+  }
 }

@@ -8,5 +8,13 @@
   },
   "title": "Insecure TLS Ciphers supported",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L2": [
+      "V6_2_3"
+    ],
+    "OWASP_ASVS_L3": [
+      "V6_2_3"
+    ]
+  }
 }

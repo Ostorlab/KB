@@ -13,6 +13,15 @@
   "categories": {
     "CWE_TOP_25": [
       "CWE_89"
+    ],
+    "OWASP_ASVS_L1": [
+      "V5_3_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V5_3_5"
+    ],
+    "OWASP_ASVS_L3": [
+      "V5_3_5"
     ]
   }
 }
