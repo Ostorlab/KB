@@ -11,5 +11,10 @@
   "title": "Clear text HTTP request",
   "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_TOP_10": [
+      "A3:2017-Sensitive Data Exposure"
+    ]
+  }
 }

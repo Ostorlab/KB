@@ -13,6 +13,9 @@
   "categories": {
     "CWE_TOP_25": [
       "CWE_502"
+    ],
+    "OWASP_TOP_10": [
+      "A8:2017-Insecure Deserialization"
     ]
   }
 }

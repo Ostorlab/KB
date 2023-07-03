@@ -14,6 +14,9 @@
   "categories": {
     "CWE_TOP_25": [
       "CWE_276"
+    ],
+    "CWE_TOP_10": [
+      "A01:2021 – Broken Access Control"
     ]
   }
 }

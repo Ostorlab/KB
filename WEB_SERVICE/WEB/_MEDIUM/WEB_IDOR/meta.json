@@ -6,5 +6,10 @@
   },
   "title": "Insecure Direct Object Reference (IDOR)",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_TOP_10": [
+      "WSTG-ATHZ-04"
+    ]
+  }
 }

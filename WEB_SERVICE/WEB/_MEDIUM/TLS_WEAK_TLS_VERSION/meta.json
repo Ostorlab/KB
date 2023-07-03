@@ -5,5 +5,10 @@
   },
   "title": "Insecure TLS Ciphers supported",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_WSTG": [
+      "WSTG-CRYP-01"
+    ]
+  }
 }
