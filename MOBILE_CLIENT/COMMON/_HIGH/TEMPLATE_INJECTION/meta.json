@@ -5,7 +5,7 @@
     "OWASP": "https://owasp.org/www-community/attacks/Server_Side_Template_Injection",
     "PortSwigger": "https://portswigger.net/knowledgebase/issues/Details/00600500_server-side-template-injection-(ssti)"
   },
-  "title": " Template Injection",
+  "title": "Template Injection",
   "privacy_issue": false,
   "security_issue": true,
   "categories": {

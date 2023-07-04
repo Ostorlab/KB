@@ -10,8 +10,14 @@
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [
+      "MSTG_CRYPTO_2",
+      "MSTG_CRYPTO_3",
+      "MSTG_CRYPTO_4"
     ],
     "OWASP_MASVS_L2": [
+      "MSTG_CRYPTO_2",
+      "MSTG_CRYPTO_3",
+      "MSTG_CRYPTO_4"
     ],
     "CWE_TOP_25": [
     ]
