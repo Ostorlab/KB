@@ -5,5 +5,10 @@
   "references": {
   },
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+  "OWASP_MASVS_L2": [
+    "MSTG_PLATFORM_9"
+    ]
+  }
 }

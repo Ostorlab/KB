@@ -8,5 +8,10 @@
   },
   "title": "Application prevents taking screenshots",
   "privacy_issue": false,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_4"
+      ]
+  }
 }

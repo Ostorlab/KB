@@ -9,5 +9,10 @@
   },
   "title": "Exported activites, services and broadcast receivers list",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_4"
+      ]
+  }
 }
