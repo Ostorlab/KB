@@ -9,5 +9,17 @@
   },
   "title": "Call to Inter-Process-Communication (IPC) API",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_1",
+      "MSTG_PLATFORM_2",
+      "MSTG_PLATFORM_3"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_1",
+      "MSTG_PLATFORM_2",
+      "MSTG_PLATFORM_3"
+    ]
+  }
 }

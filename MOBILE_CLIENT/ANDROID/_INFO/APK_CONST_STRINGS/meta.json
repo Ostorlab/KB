@@ -6,5 +6,11 @@
   },
   "title": "Hardcoded strings list",
   "privacy_issue": false,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+  "OWASP_MASVS_L2": [
+    "MSTG_CODE_1",
+    "MSTG_CODE_2"
+    ]
+  }
 }
