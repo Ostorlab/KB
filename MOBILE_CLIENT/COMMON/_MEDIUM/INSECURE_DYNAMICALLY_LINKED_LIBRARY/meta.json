@@ -9,8 +9,11 @@
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
-  "OWASP_MASVS_L2": [
-    "MSTG_PLATFORM_3"
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_3"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_3"
     ]
   }
 }
