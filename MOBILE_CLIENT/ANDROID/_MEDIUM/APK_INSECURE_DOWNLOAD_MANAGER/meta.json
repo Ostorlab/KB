@@ -5,5 +5,13 @@
   },
   "title": "Abuse of mobile network connection",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_NETWORK_4"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_NETWORK_4"
+    ]
+  }
 }

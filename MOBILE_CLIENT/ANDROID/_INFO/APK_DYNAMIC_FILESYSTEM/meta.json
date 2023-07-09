@@ -4,5 +4,17 @@
   "references": {},
   "title": "Recorded calls to FileSystem API",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+  "OWASP_MASVS_L1": [
+    "MSTG_STORAGE_1",
+    "MSTG_STORAGE_2",
+    "MSTG_STORAGE_3"
+    ],
+  "OWASP_MASVS_L2": [
+    "MSTG_STORAGE_1",
+    "MSTG_STORAGE_2",
+    "MSTG_STORAGE_3"
+    ]
+  }
 }

@@ -9,5 +9,13 @@
   },
   "title": "Credentials exposed in URLs",
   "privacy_issue": true,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_AUTH_3"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_AUTH_3"
+    ]
+  }
 }

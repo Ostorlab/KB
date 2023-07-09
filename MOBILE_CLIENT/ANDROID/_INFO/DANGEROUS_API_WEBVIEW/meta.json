@@ -7,5 +7,15 @@
   },
   "title": "Call to dangerous WebView settings API",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_3",
+      "MSTG_PLATFORM_5"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_3",
+      "MSTG_PLATFORM_5"
+    ]
+  }
 }

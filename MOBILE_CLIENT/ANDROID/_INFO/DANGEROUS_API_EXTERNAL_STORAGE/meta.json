@@ -9,5 +9,13 @@
   },
   "title": "Call to External Storage API",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_STORAGE_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_STORAGE_2"
+    ]
+  }
 }
