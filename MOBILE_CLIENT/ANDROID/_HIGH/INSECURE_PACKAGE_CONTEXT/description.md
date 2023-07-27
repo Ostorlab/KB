@@ -1,5 +1,4 @@
 
-# Insecure Package Context Creation with CONTEXT_INCLUDE_CODE And CONTEXT_IGNORE_SECURITY flags
 
 The vulnerability associated with using `createPackageContext` with `CONTEXT_INCLUDE_CODE` and `CONTEXT_IGNORE_SECURITY` in Android can allow an attacker to execute arbitrary code in the context of the vunlerable application by exploiting the interprocess communication (IPC) mechanism.
 
