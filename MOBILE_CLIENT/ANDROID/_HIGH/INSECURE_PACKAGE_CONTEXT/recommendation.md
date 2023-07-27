@@ -1,6 +1,4 @@
 
-# Insecure Package Context Creation Using createPackageContext
-
 To mitigate the vulnerability associated with insecure package context creation using createPackageContext with CONTEXT_INCLUDE_CODE and CONTEXT_IGNORE_SECURITY flags, developers should: 
 
 1- Avoid using createPackageContext by baking any necessary components into the app itself rather than using separate apk files.
