@@ -1,6 +1,6 @@
 {
   "risk_rating": "important",
-  "short_description": "The application code is obfuscated which is limiting detection capabilities.",
+  "short_description": "The flutter code is obfuscated, which limits detection capabilities.",
   "references": {
     "Lack of Binary Protections (OWASP Mobile Top 10)": "https://www.owasp.org/index.php/Mobile_Top_10_2014-M10",
     "Proguard (Android developer)": "http://developer.android.com/tools/help/proguard.html",

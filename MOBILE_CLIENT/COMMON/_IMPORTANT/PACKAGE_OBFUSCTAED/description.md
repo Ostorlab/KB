@@ -1,1 +1,1 @@
-The application code is obfuscated which is limiting detection capabilities.
+The flutter code is obfuscated, which limits detection capabilities.
