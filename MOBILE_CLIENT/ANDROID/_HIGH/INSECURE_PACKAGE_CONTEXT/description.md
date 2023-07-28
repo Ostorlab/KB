@@ -1,5 +1,3 @@
-
-
 The vulnerability associated with using `createPackageContext` with `CONTEXT_INCLUDE_CODE` and `CONTEXT_IGNORE_SECURITY` in Android can allow an attacker to execute arbitrary code in the context of the vunlerable application by exploiting the interprocess communication (IPC) mechanism.
 
 In Android, each app is sandboxed to prevent unauthorized access to resources and system functionality. However, apps can interact with each other through IPC mechanisms such as `createPackageContext`. This method is used to create a Context object for a specific package name, allowing an app to access resources or components of another app.
