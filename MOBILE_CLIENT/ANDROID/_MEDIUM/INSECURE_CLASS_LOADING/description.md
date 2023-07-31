@@ -1,6 +1,6 @@
 Android provides APIs that allow an application to dynamically load code to be executed. For example, an application may support plug-ins that are downloaded and then loaded at a later time. Unfortunately, if these plug-ins are stored in an insecure location, this process can be hijacked, allowing access to private data and unexpected arbitrary code execution by malicious applications.
 
-Two classes allow the loading of additional code in Android:
+**Example code in Android:**
 
 ```java
     DexClassLoader (String dexPath, String dexOutputDir, String libPath, ClassLoader parent)
@@ -10,7 +10,7 @@ Two classes allow the loading of additional code in Android:
     PathClassLoader (String path, String libPath, ClassLoader parent)
 ```
 
-**code in kotlin.**
+**code in kotlin:**
 ```kotlin
 fun main() {
     val userInput = readLine()
