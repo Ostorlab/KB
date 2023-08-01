@@ -4,7 +4,7 @@
   "risk_rating": "medium",
   "references": {
     "CWE-209: Information Exposure Through an Error Message": "https://cwe.mitre.org/data/definitions/209.html",
-    "OWASP Error Handling, Auditing and Logging": "https://www.owasp.org/index.php/Error_Handling,_Auditing_and_Logging",
+    "OWASP Error Handling, Auditing and Logging": "https://www.owasp.org/index.php/Error_Handling,_Auditing_and_Logging"
   },
   "privacy_issue": false,
   "security_issue": true,
