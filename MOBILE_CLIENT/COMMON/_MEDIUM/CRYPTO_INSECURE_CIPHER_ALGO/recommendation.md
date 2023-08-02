@@ -29,7 +29,6 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:crypto/crypto.dart';
 import 'package:pointycastle/export.dart' as pc;
 
 void main() {
@@ -60,12 +59,12 @@ class _EncryptionWidgetState extends State<EncryptionWidget> {
   String _encryptedText = '';
 
   void _encryptText() {
-    final key = utf8.encode('securekey123456789012345678901234'); // 32 bytes for AES-256
-    final iv = Uint8List(16); // 16 bytes for AES
-    final s = pc.SICStreamCipher(pc.AESFastEngine())
-      ..init(true, pc.ParametersWithIV(pc.KeyParameter(key), iv));
+    final key = pc.KeyParameter(Uint8List.fromList(utf8.encode('securekey123456789012345678901234'))); // 32 bytes for AES-256
+    final iv = Uint8List(12); // 12 bytes for GCM IV
+    final cipher = pc.GCMBlockCipher(pc.AESFastEngine())
+      ..init(true, pc.AEADParameters(key, 128, iv));
     final input = utf8.encode(_controller.text);
-    final output = s.process(input);
+    final output = cipher.process(Uint8List.fromList(input));
     setState(() {
       _encryptedText = base64.encode(output);
     });
@@ -98,55 +97,64 @@ class _EncryptionWidgetState extends State<EncryptionWidget> {
 import Foundation
 import CommonCrypto
 
-func AES_Encrypt(input: String, key: String) -> String {
-    let data = input.data(using: String.Encoding.utf8)!
-    let keyData = key.data(using: String.Encoding.utf8)!
-    let keyBytes = keyData.withUnsafeBytes { (bytes: UnsafePointer<UInt8>) -> UnsafePointer<UInt8> in
-        return bytes
+func AES_GCM_Encrypt(input: String, key: String) -> String {
+    let data = input.data(using: .utf8)!
+    let keyData = key.data(using: .utf8)!
+    
+    let iv = Data(count: kCCBlockSizeAES128)
+    var numBytesEncrypted: size_t = 0
+    
+    let encryptedData = NSMutableData(length: data.count + kCCBlockSizeAES128)!
+    
+    let cryptStatus = keyData.withUnsafeBytes { keyBytes in
+        iv.withUnsafeBytes { ivBytes in
+            data.withUnsafeBytes { dataBytes in
+                encryptedData.mutableBytes.assumingMemoryBound(to: UInt8.self).withUnsafeMutableBytes { encryptedBytes in
+                    CCCrypt(CCOperation(kCCEncrypt),
+                            CCAlgorithm(kCCAlgorithmAES),
+                            CCOptions(kCCOptionGCM),
+                            keyBytes.baseAddress,
+                            kCCKeySizeAES256,
+                            ivBytes.baseAddress,
+                            dataBytes.baseAddress,
+                            data.count,
+                            encryptedBytes.baseAddress,
+                            encryptedData.length,
+                            &numBytesEncrypted)
+                }
+            }
+        }
     }
-    let dataLength = Int(data.count)
-    let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: dataLength + kCCBlockSizeAES128)
-    let bufferPtr = UnsafeMutableRawPointer(buffer)
-    let bufferPtrBytes = bufferPtr.bindMemory(to: Void.self, capacity: dataLength)
-    let iv = [UInt8](repeating: 0, count: kCCBlockSizeAES128)
-    var numBytesEncrypted :size_t = 0
-    let cryptStatus = CCCrypt(CCOperation(kCCEncrypt), CCAlgorithm(kCCAlgorithmAES), CCOptions(kCCOptionPKCS7Padding), keyBytes, kCCKeySizeAES128, iv, data.bytes, dataLength, bufferPtrBytes, dataLength + kCCBlockSizeAES128, &numBytesEncrypted)
+    
     if UInt32(cryptStatus) == UInt32(kCCSuccess) {
-        let encryptedData = Data(bytes: UnsafePointer<UInt8>(buffer), count: numBytesEncrypted)
-        buffer.deallocate()
         return encryptedData.base64EncodedString()
     } else {
-        buffer.deallocate()
         return ""
     }
 }
 
-func main() {
-    print("Enter text to encrypt:")
-    let input = readLine() ?? ""
+print("Enter text to encrypt:")
+if let input = readLine() {
     print("Enter encryption key:")
-    let key = readLine() ?? ""
-    let encrypted = AES_Encrypt(input: input, key: key)
-    print("Encrypted text: \(encrypted)")
+    if let key = readLine() {
+        let encrypted = AES_GCM_Encrypt(input: input, key: key)
+        print("Encrypted text: \(encrypted)")
+    }
 }
-
-main()
 ```
 
 ### Kotlin
 
 ```kotlin
+import java.security.SecureRandom
 import javax.crypto.Cipher
 import javax.crypto.SecretKey
 import javax.crypto.SecretKeyFactory
+import javax.crypto.spec.GCMParameterSpec
 import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
-import java.util.*
-import javax.crypto.spec.IvParameterSpec
 import java.security.spec.KeySpec
-import javax.crypto.SecretKeyFactory
-import javax.crypto.spec.PBEKeySpec
-import java.security.SecureRandom
+import java.util.*
 
 fun main(args: Array<String>) {
     val scanner = Scanner(System.`in`)
@@ -170,20 +178,25 @@ fun main(args: Array<String>) {
 }
 
 fun encrypt(text: String, key: SecretKey): String {
-    val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
-    val iv = ByteArray(16)
+    val cipher = Cipher.getInstance("AES/GCM/NoPadding")
+    val iv = ByteArray(12)
     SecureRandom().nextBytes(iv)
-    val ivSpec = IvParameterSpec(iv)
-    cipher.init(Cipher.ENCRYPT_MODE, key, ivSpec)
-    return Base64.getEncoder().encodeToString(cipher.doFinal(text.toByteArray()))
+    val gcmSpec = GCMParameterSpec(128, iv)
+    cipher.init(Cipher.ENCRYPT_MODE, key, gcmSpec)
+    val encryptedBytes = cipher.doFinal(text.toByteArray())
+    val encryptedTextAndIV = ByteArray(iv.size + encryptedBytes.size)
+    System.arraycopy(iv, 0, encryptedTextAndIV, 0, iv.size)
+    System.arraycopy(encryptedBytes, 0, encryptedTextAndIV, iv.size, encryptedBytes.size)
+    return Base64.getEncoder().encodeToString(encryptedTextAndIV)
 }
 
 fun decrypt(text: String, key: SecretKey): String {
-    val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
-    val iv = ByteArray(16)
-    SecureRandom().nextBytes(iv)
-    val ivSpec = IvParameterSpec(iv)
-    cipher.init(Cipher.DECRYPT_MODE, key, ivSpec)
-    return String(cipher.doFinal(Base64.getDecoder().decode(text)))
+    val cipher = Cipher.getInstance("AES/GCM/NoPadding")
+    val decodedText = Base64.getDecoder().decode(text)
+    val iv = decodedText.copyOfRange(0, 12)
+    val encryptedBytes = decodedText.copyOfRange(12, decodedText.size)
+    val gcmSpec = GCMParameterSpec(128, iv)
+    cipher.init(Cipher.DECRYPT_MODE, key, gcmSpec)
+    return String(cipher.doFinal(encryptedBytes))
 }
 ```
