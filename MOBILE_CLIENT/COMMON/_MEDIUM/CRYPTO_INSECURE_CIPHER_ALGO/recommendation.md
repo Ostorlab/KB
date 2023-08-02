@@ -95,40 +95,21 @@ class _EncryptionWidgetState extends State<EncryptionWidget> {
 
 ```swift
 import Foundation
-import CommonCrypto
+import CryptoKit
 
 func AES_GCM_Encrypt(input: String, key: String) -> String {
-    let data = input.data(using: .utf8)!
-    let keyData = key.data(using: .utf8)!
-    
-    let iv = Data(count: kCCBlockSizeAES128)
-    var numBytesEncrypted: size_t = 0
-    
-    let encryptedData = NSMutableData(length: data.count + kCCBlockSizeAES128)!
-    
-    let cryptStatus = keyData.withUnsafeBytes { keyBytes in
-        iv.withUnsafeBytes { ivBytes in
-            data.withUnsafeBytes { dataBytes in
-                encryptedData.mutableBytes.assumingMemoryBound(to: UInt8.self).withUnsafeMutableBytes { encryptedBytes in
-                    CCCrypt(CCOperation(kCCEncrypt),
-                            CCAlgorithm(kCCAlgorithmAES),
-                            CCOptions(kCCOptionGCM),
-                            keyBytes.baseAddress,
-                            kCCKeySizeAES256,
-                            ivBytes.baseAddress,
-                            dataBytes.baseAddress,
-                            data.count,
-                            encryptedBytes.baseAddress,
-                            encryptedData.length,
-                            &numBytesEncrypted)
-                }
-            }
-        }
+    guard let data = input.data(using: .utf8),
+          let keyData = key.data(using: .utf8) else {
+        return ""
     }
     
-    if UInt32(cryptStatus) == UInt32(kCCSuccess) {
-        return encryptedData.base64EncodedString()
-    } else {
+    let iv = Data(count: AES.GCM.nonceSize)
+    
+    do {
+        let sealedData = try! AES.GCM.seal(plainData!, using: key, nonce: AES.GCM.Nonce(data:nonce!))
+        let encryptedContent = try! sealedData.combined!
+        return sealedData.ciphertext.base64EncodedString()
+    } catch {
         return ""
     }
 }
