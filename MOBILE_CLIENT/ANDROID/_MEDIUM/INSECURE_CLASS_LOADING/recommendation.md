@@ -86,46 +86,36 @@ class MyCustomFormState extends State<MyCustomForm> {
 ```
 
 
-### Kotlin
+### Java
 
-```kotlin
-kotlin
-import android.app.Activity
-import android.os.Bundle
-import android.widget.Toast
-import android.content.Intent
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
+```java
+public final class DexClassLoaderCall extends Loader {
 
-class MainActivity : Activity() {
+    private static final String TAG = DexClassLoaderCall.class.toString();
 
-    private lateinit var userInput: EditText
-    private lateinit var loadButton: Button
+    @Override
+    public String getDescription() {
+        return "Use of dex class load";
+    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    @Override
+    public void run() throws Exception {
+        Context context = getContext(); 
+        File apkFile = new File(context.getFilesDir(), "app.apk");
+        DexClassLoader classLoader1 = new DexClassLoader(
+                apkFile.getAbsolutePath(),
+                context.getCacheDir().getAbsolutePath(),
+                null,
+                context.getClassLoader());
+        classLoader1.loadClass("a.b.c");
 
-        userInput = findViewById(R.id.userInput)
-        loadButton = findViewById(R.id.loadButton)
-
-        loadButton.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View) {
-                try {
-                    val className = userInput.text.toString()
-                    val clazz = Class.forName(className)
-                    if (clazz.classLoader == this@MainActivity.classLoader) {
-                        val intent = Intent(this@MainActivity, clazz)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(this@MainActivity, "Invalid class", Toast.LENGTH_SHORT).show()
-                    }
-                } catch (e: ClassNotFoundException) {
-                    Toast.makeText(this@MainActivity, "Class not found", Toast.LENGTH_SHORT).show()
-                }
-            }
-        })
+        DexClassLoader classLoader2 = new DexClassLoader(
+                context.getPackageCodePath(),
+                context.getCacheDir().getAbsolutePath(),
+                null,
+                context.getClassLoader());
+        classLoader2.loadClass("a.b.c");
     }
 }
+
 ```

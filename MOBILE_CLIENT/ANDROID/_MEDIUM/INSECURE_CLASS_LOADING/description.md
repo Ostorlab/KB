@@ -92,48 +92,42 @@ class MyCustomFormState extends State<MyCustomForm> {
 }
 ```
 
-#### Swift
+#### Java
 
-```swift
-[TODO]
-```
 
-#### Kotlin
+```java
+public final class DexClassLoaderCall extends Loader {
 
-```kotlin
-kotlin
-import android.app.Activity
-import android.os.Bundle
-import android.widget.Toast
-import android.content.Intent
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
+    private static final String TAG = DexClassLoaderCall.class.toString();
 
-class MainActivity : Activity() {
+    @Override
+    public String getDescription() {
+        return "Use of dex class load";
+    }
 
-    private lateinit var userInput: EditText
-    private lateinit var loadButton: Button
+    @Override
+    public void run() throws Exception {
+        /*
+            Dex class loading from external storage
+         */
+        String apkFile = Environment.getExternalStorageDirectory().getAbsolutePath() + "/app.apk";
+        DexClassLoader classLoader1 = new DexClassLoader(
+                apkFile,
+                apkFile,
+                apkFile,
+                ClassLoader.getSystemClassLoader());
+        classLoader1.loadClass("a.b.c");
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        /*
+            Dex class loading from hard-coded sdcard path
+         */
+        DexClassLoader classLoader2 = new DexClassLoader(
+                "/sdcard/test.apk",
+                "/sdcard/test.apk",
+                "/sdcard/test.apk",
+                ClassLoader.getSystemClassLoader());
+        classLoader2.loadClass("a.b.c");
 
-        userInput = findViewById(R.id.userInput)
-        loadButton = findViewById(R.id.loadButton)
-
-        loadButton.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View) {
-                try {
-                    val className = userInput.text.toString()
-                    val clazz = Class.forName(className)
-                    val intent = Intent(this@MainActivity, clazz)
-                    startActivity(intent)
-                } catch (e: ClassNotFoundException) {
-                    Toast.makeText(this@MainActivity, "Class not found", Toast.LENGTH_SHORT).show()
-                }
-            }
-        })
     }
 }
 ```
