@@ -9,7 +9,7 @@ To mitigate the risk of Android Class Loading Hijacking, developers should avoid
 ### Java
 
 ```java
-public final class DexClassLoaderCall extends Loader {
+public final class DexClassLoaderCall {
 
     private static final String TAG = DexClassLoaderCall.class.toString();
 
