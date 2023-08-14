@@ -21,7 +21,7 @@ logging.basicConfig(
 )
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-MODEL_NAME = "gpt-4"
+MODEL_NAME = "gpt-3.5-turbo"
 
 DESCRIPTION_TEMPLATE = """
 # %%VULNERABILITY_NAME%%
