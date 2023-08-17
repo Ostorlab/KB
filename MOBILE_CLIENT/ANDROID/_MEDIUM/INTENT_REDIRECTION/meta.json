@@ -1,0 +1,18 @@
+{
+	"risk_rating": "high",
+	"short_description": "An intent redirection occurs when an attacker can partly or fully control the contents of an intent used to launch a new component in the context of a vulnerable app.",
+	"references": {
+		"Android Developer": "https://developer.android.com/topic/security/risks/intent-redirection"
+	},
+	"title": "Intent Redirection",
+	"privacy_issue": false,
+	"security_issue": true,
+	"categories": {
+		"OWASP_MASVS_L1": [
+			"MSTG_PLATFORM_2"
+		],
+		"OWASP_MASVS_L2": [
+			"MSTG_PLATFORM_2"
+		]
+	}
+}
