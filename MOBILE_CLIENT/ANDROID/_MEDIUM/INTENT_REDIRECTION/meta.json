@@ -8,14 +8,11 @@
 	"privacy_issue": false,
 	"security_issue": true,
 	"categories": {
-		"OWASP_TOP_10": [
-			""
-		],
 		"OWASP_MASVS_L1": [
-			""
+			"MSTG_PLATFORM_2"
 		],
 		"OWASP_MASVS_L2": [
-			""
+			"MSTG_PLATFORM_2"
 		]
 	}
 }
