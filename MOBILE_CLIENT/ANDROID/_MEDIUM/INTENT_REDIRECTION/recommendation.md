@@ -4,6 +4,8 @@ As a rule of thumb, it's best to avoid exposing functionality related to redirec
 - Use PendingIntent objects. This prevents your component from being exported and makes the target action intent immutable.
 - Use [IntentSanitizer](https://developer.android.com/reference/kotlin/androidx/core/content/IntentSanitizer) to make a sanitized copy of an Intent
 
+### Java
+
 ```java
 import android.content.Intent;
 import android.os.Bundle;
