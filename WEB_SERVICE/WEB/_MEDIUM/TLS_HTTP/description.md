@@ -6,10 +6,7 @@ Additionally, clear text HTTP traffic can compromise user privacy. Mobile apps o
 
 Mobile apps that fail to implement secure communication protocols also face the risk of impersonation attacks. Attackers can create fake Wi-Fi networks or use other techniques to intercept traffic, pretending to be the legitimate backend server. Users unknowingly send their data to the attacker, who can then misuse it for malicious purposes.
 
-
-### Examples
-
-#### Dart
+### Dart
 
 ```dart
 import 'dart:convert';
@@ -104,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
 }
 ```
 
-#### Swift
+### Swift
 
 ```swift
 import UIKit
@@ -170,7 +167,7 @@ class LoginViewController: UIViewController {
 }
 ```
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 import android.os.Bundle

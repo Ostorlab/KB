@@ -13,7 +13,6 @@ To mitigate the risks associated with clear text HTTP traffic in mobile apps, it
 - Sensitive Data Encryption: Encrypt sensitive data stored on the device or transmitted to the server. Utilize strong encryption algorithms and securely manage encryption keys, this can add an extra layer of security to data transmission.
 
 - Secure Data Transmission for All APIs: Evaluate all APIs used by the app and ensure that they also use HTTPS for data transmission. This includes third-party APIs and services integrated into the app.
-# Code Examples:
 
 ### Dart
 

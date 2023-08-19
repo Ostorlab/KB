@@ -1,4 +1,4 @@
-## iOS
+### iOS
 
 On iOS, developers can leverage the iOS Data Protection API to protect sensitive data. The API relies on
 the `Secure Enclave Processor` (SEP) to provide secure cryptographic processing and key management.
@@ -72,7 +72,7 @@ are the Keychain Data Protection classes:
 - `kSecAccessControlUserPresence`: Access the item via either one of the registered fingerprints (using Touch ID) or
   default to the passcode.
 
-## Android
+### Android
 
 On Android, developers can leverage several capabilities to store data, like Shared Preferences, SQLite, Internal and
 External Storage but can also leak data through a mechanism like logging, backup, cache ...

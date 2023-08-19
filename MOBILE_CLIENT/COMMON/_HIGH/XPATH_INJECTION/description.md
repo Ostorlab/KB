@@ -1,11 +1,6 @@
-
-# Xpath Injection
-
 XPath Injection is a type of injection attack targeting applications that use XPath to query XML data. It occurs when an attacker injects malicious input into an XPath query, which can lead to unauthorized access to sensitive data, modification of data, or even complete system compromise. This vulnerability can be exploited by attackers to bypass authentication mechanisms, execute arbitrary code, and gain access to sensitive information.
 
-### Examples
-
-#### Dart
+### Dart
 
 ```dart
 void _fetch_data(String _searchQuery) {
@@ -24,7 +19,7 @@ void _fetch_data(String _searchQuery) {
   }
 ```
 
-#### Swift
+### Swift
 
 ```swift
 import Foundation
@@ -43,7 +38,7 @@ func main() {
 }
 ```
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 import javax.xml.parsers.DocumentBuilderFactory

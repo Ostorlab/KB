@@ -75,7 +75,8 @@ can see the violations of the CSP policy in the current state of your web site w
 Content-Security-Policy-Report-Only: script-src 'self'; report-uri: https://ostorlab.com;
 ```
 
-## CSP Browser Support
+### CSP Browser Support
+
 Content Security Policy is supported by all the major modern browsers, and has been for many years. It is not supported in Internet Explorer.
 
 - ### Chrome:

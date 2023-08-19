@@ -8,7 +8,7 @@ These vulnerabilities, if left unaddressed, can have severe consequences. Attack
 
 Examples of vulnerable implementations:
 
-`Kotlin`:
+### Kotlin
 
 ```kotlin
 fun loadDependency(unsanitized_user_input : String) {
@@ -22,7 +22,7 @@ fun loadDependency(unsanitized_user_input : String) {
 
 ```
 
-`Dart`:
+### Dart
 
 ```dart
 void loadDependency(String unsanitized_user_input) {

@@ -4,11 +4,9 @@ In Android, each app is sandboxed to prevent unauthorized access to resources an
 
 By requesting the `android.permission.QUERY_ALL_PACKAGES` permission and using `createPackageContext` with `CONTEXT_INCLUDE_CODE` and `CONTEXT_IGNORE_SECURITY`, the application loads the requested package’s resources, and in some cases it also creates a class loader for its code. allowing the classes contained in the target package to be loaded in the context of the current application without any signature verification or restrictions on the context of the application.
 
-`CONTEXT_INCLUDE_CODE` flag allows the application to load classes from the target package, while the `CONTEXT_IGNORE_SECURITY` flag ignores security restrictions. Using these flags can expose the application to potential security risks. 
+`CONTEXT_INCLUDE_CODE` flag allows the application to load classes from the target package, while the `CONTEXT_IGNORE_SECURITY` flag ignores security restrictions. Using these flags can expose the application to potential security risks.
 
-### Examples
-
-#### Java
+### Java
 
 ```java
 import android.content.Context;

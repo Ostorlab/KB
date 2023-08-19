@@ -1,12 +1,10 @@
-### Path Traversal
 - Implement proper input validation and sanitization to prevent user-supplied input from containing directory traversal sequences.
 - Use whitelisting or allowlisting approaches to validate and restrict input for file paths.
 - Ensure that the extracted file paths are constructed based on trusted and validated information rather than relying solely on user-provided data.
 - Restrict the extraction process to a specific directory or set of allowed directories.
 
-**Code Examples:**
+### Dart
 
-- Dart
 ```dart
 import 'dart:io';
 import 'archive/archive.dart';
@@ -38,7 +36,8 @@ bool isPathWithinAllowedDirectory(String filePath) {
 }
 ```
 
-- Kotlin
+### Kotlin
+
 ```kotlin
 import java.io.File
 import java.util.zip.ZipEntry
@@ -78,7 +77,8 @@ fun isPathWithinAllowedDirectory(filePath: String): Boolean {
 }
 ```
 
-- Swift
+### Swift
+
 ```Swift
 import Foundation
 
@@ -123,9 +123,9 @@ func isPathWithinAllowedDirectory(_ filePath: String) -> Bool {
 - Limit the extraction process to known-safe locations and avoid allowing symbolic links to be created outside of those boundaries.
 - Ignore symlinks
 
-**Code Examples:**
 
-- Dart
+### Dart
+
 ```dart
 import 'dart:io';
 import 'archive/archive.dart';
@@ -152,7 +152,8 @@ bool isSymbolicLink(ArchiveFile archiveFile) {
 } 
 ```
 
-- Kotlin
+### Kotlin
+
 ```Kotlin
 import java.io.File
 import java.nio.file.FileSystems
@@ -183,7 +184,8 @@ fun isSymbolicLink(entry: ZipEntry): Boolean {
 }
 ```
 
-- Swift
+### Swift
+
 ```Swift
 import Foundation
 import ZIPFoundation
@@ -216,7 +218,6 @@ func isSymbolicLink(_ entry: Entry) -> Bool {
 - Implement file type verification based on both the extension and the file header to ensure consistency.
 - Consider using third-party libraries or tools specifically designed to handle ZIP files securely, as they may provide built-in protection against extension spoofing attacks.
 
-**Code Examples:**
 
 ```Dart
 import 'dart:io';
@@ -252,7 +253,8 @@ bool isFileHeaderValid(ArchiveFile archiveFile) {
 }
 ```
 
-- Kotlin
+### Kotlin
+
 ```kotlin
 import java.io.File
 import java.nio.file.FileSystems
@@ -291,7 +293,8 @@ fun isFileHeaderValid(entry: ZipEntry): Boolean {
 }
 ```
 
-- Swift
+### Swift
+
 ```Swift
 import Foundation
 import ZIPFoundation
