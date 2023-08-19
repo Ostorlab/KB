@@ -6,8 +6,6 @@ To mitigate the vulnerability associated with insecure package context creation 
 
 3- When checking if the package is in the list of installed packages, avoid loose comparisons like `startsWith` or `endsWith`, instead try matching the package name exactly
 
-# Code Examples:
-
 ### Java
 
 ```java

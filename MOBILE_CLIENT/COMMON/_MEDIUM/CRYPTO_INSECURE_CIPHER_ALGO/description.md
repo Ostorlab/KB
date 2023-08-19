@@ -33,9 +33,7 @@ Common cipher algorithms:
 `DES`, `Triple DES` are insecure and must not be used. Other algorithms suffer from some weaknesses caused by insecure
 cipher mode settings, key size or special key cases.
 
-### Examples
-
-#### Dart
+### Dart
 
 ```dart
 import 'dart:convert';
@@ -105,7 +103,7 @@ class _EncryptionWidgetState extends State<EncryptionWidget> {
 }
 ```
 
-#### Swift
+### Swift
 
 ```swift
 import Foundation
@@ -146,7 +144,7 @@ func main() {
 main()
 ```
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 import javax.crypto.Cipher

@@ -1,10 +1,6 @@
-# XML Injection
-
 XML injection is a vulnerability that arises from a lack of proper validation and sanitization of user input before incorporating it into the XML configuration files or streams. This oversight allows an attacker to exploit the application by injecting malicious XML content. By manipulating the XML structure or introducing malicious entities, an attacker can potentially disrupt the application logic, tamper with data, or extract sensitive information.
 
-### Examples
-
-#### Dart
+### Dart
 
 ```dart
 import 'dart:convert';
@@ -107,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-#### Swift
+### Swift
 
 ```swift
 import SwiftUI
@@ -170,7 +166,7 @@ struct XMLInjectionApp: App {
 }
 ```
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 import android.os.Bundle

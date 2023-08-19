@@ -3,8 +3,6 @@ being passed to the server-side template engine.
 
 Template engine will typically have a `render` method that takes a context that will be safely embedded in the text.
 
-# Code Examples:
-
 ### Dart
 
 ```dart

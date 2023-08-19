@@ -20,8 +20,6 @@ To ensure the utmost security when using any cryptographic algorithm, it is esse
 
 By adhering to these best practices and adopting secure algorithms like AES and ECC, you can significantly enhance the security of your cryptographic operations and safeguard sensitive information from unauthorized access. Avoiding the use of insecure algorithms, such as DES and Triple DES, is crucial to maintaining a strong security posture in today's rapidly evolving threat landscape.
 
-# Code Examples:
-
 ### Dart
 
 ```dart

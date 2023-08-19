@@ -1,4 +1,3 @@
-# HTML Injection
 To mitigate the risks associated with HTML injection vulnerabilities, the following recommendations should be implemented:
 
 - Sanitize User Input: Perform proper input validation and sanitization on user-supplied data that will be rendered as part of HTML code. Use encoding techniques to ensure that user input is treated as data and not executable code.
@@ -9,9 +8,8 @@ To mitigate the risks associated with HTML injection vulnerabilities, the follow
 
 - Contextual Output Encoding: Encode user-generated content based on its context. Different contexts, such as HTML attributes, JavaScript code, or CSS styles, require specific encoding techniques to prevent HTML injection attacks. Use appropriate encoding functions or libraries based on the context.
 
-**Code Examples:**
+### Dart
 
-- Dart
 ```dart
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -93,7 +91,8 @@ class _WebViewScreenState extends State<WebViewScreen> {
 }
 ```
 
-- Kotlin
+### Kotlin
+
 ```kotlin
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -131,7 +130,8 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-- Swift
+### Swift
+
 ```Swift
 import UIKit
 import WebKit

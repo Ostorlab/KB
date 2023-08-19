@@ -1,5 +1,3 @@
-# Subdomain Takeover
-
 Subdomain takeover attacks are a class of security issues where an attacker can seize control of an organization's
 subdomain via cloud services like GitHub, AWS, or Azure. They commonly happen when the third-party service is not needed
 anymore, but the subdomain DNS entries are not cleaned.

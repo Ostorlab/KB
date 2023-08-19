@@ -14,9 +14,7 @@ The following are some common weaknesses in TLS certificate validation:
 
 - **Revoked Certificates:** A certificate can be revoked if it has been compromised or is no longer considered trustworthy. A client that does not check the certificate's revocation status could accept a revoked certificate, which could be used to perform a man-in-the-middle attack.
 
-### Examples:
-
-**Java**
+### Java
 
 ```
 import java.net.HttpURLConnection;
@@ -52,7 +50,7 @@ public class HttpsRequestWithoutTlsVerification {
 }
 ```
 
-**Dart**
+### Dart
 
 ```
 import 'dart:io';
