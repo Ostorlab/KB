@@ -10,7 +10,7 @@ Before you declare permissions in your app, consider whether you need the permis
   * Step 2: I apply the permission `com.example.myapp.permission.DEADLY_ACTIVITY` on my activity
 
 
-=== "Xml"
+=== "XML"
 	```xml
 	
 	<manifest

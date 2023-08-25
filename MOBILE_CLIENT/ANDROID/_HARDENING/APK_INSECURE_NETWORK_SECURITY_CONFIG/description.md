@@ -4,7 +4,7 @@ The features enable configuring:
 
 * Custom Certificate Authority with support for debug only settings
 
-=== "Xml"
+=== "XML"
 	```xml
 	<?xml version="1.0" encoding="utf-8"?>
 	<network-security-config>
@@ -18,7 +18,7 @@ The features enable configuring:
 
 * Declarative opt-out for cleartext traffic
 
-=== "Xml"
+=== "XML"
 	```xml
 	<?xml version="1.0" encoding="utf-8"?>
 	<network-security-config>
@@ -31,7 +31,7 @@ The features enable configuring:
 
 * Declarative setting of certificate pinning keys
 
-=== "Xml"
+=== "XML"
 	```xml
 	<?xml version="1.0" encoding="utf-8"?>
 	<network-security-config>

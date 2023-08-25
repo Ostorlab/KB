@@ -3,7 +3,7 @@ method using the method `checkPermission`.
 
 It is also possible to separate services and restrict access by enforcing permissions in the manifest's `<service>` tag.
 
-=== "Xml"
+=== "XML"
 	```xml
 	
 	<permission android:name="co.ostorlab.custom_permission" android:label="custom_permission"

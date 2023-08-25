@@ -10,7 +10,7 @@ Task Affinity specifies which task that the activity desires to join. By default
 same affinity, which is the app package name.
 
 
-=== "Xml"
+=== "XML"
 	```xml
 	
 	<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="co.secureApp.app">

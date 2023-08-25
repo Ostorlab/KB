@@ -12,7 +12,7 @@ By making your app more secure, you help preserve user trust and device integrit
 * Use specific folders for path attributes, check the following example:
 
 
-=== "Xml"
+=== "XML"
 	```xml
 	<?xml version="1.0" encoding="utf-8"?>
 	<paths>

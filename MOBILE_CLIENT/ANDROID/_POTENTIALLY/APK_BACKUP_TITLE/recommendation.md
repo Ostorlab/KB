@@ -2,7 +2,7 @@ In your app manifest file, set the attribute `android:allowBackup` to enable or 
 true but to make your intentions clear, it is recommended to explicitly set the attribute in the application's manifest
 as shown below:
 
-=== "Xml"
+=== "XML"
 	```xml
 	    <manifest>
 	        <application android:allowBackup="true">
@@ -14,7 +14,7 @@ as shown below:
 If the application contains sensitive data that you don't want to be backed up or restored, you can disable backup mode
 by setting the attribute `android:allowBackup` to false as shown below:
 
-=== "Xml"
+=== "XML"
 	```xml
 	    <manifest>
 	        <application android:allowBackup="false">

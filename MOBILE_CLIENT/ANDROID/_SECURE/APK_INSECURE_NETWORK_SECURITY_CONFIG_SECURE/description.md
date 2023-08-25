@@ -20,7 +20,7 @@ The features enable configuring:
 
 * Declarative opt-out for cleartext traffic
 
-=== "Xml"
+=== "XML"
 	```xml
 	<?xml version="1.0" encoding="utf-8"?>
 	<network-security-config>
@@ -34,7 +34,7 @@ The features enable configuring:
 
 * Declartive setting of certificate pinning keys
 
-=== "Xml"
+=== "XML"
 	```xml
 	<?xml version="1.0" encoding="utf-8"?>
 	<network-security-config>
