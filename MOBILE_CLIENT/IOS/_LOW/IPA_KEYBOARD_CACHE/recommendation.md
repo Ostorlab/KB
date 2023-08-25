@@ -8,7 +8,9 @@ Keyboard caching is caused by the `UITextInputTraits` protocol supported by `UIT
 - `var secureTextEntry: BOOL` determines whether text copying and caching are disabled and hides the text being
   entered for `UITextField`. The default value of this property is `NO`.
 
-```c
-textInput.autocorrectionType = UITextAutocorrectionTypeNo;
-textInput.secureTextEntry = YES;
-```
+=== "C"
+	```c
+	textInput.autocorrectionType = UITextAutocorrectionTypeNo;
+	textInput.secureTextEntry = YES;
+	```
+

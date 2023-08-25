@@ -1,110 +1,105 @@
 To mitigate XPath Injection vulnerabilities, it is important to properly validate and sanitize user input before using it in XPath queries. This can be done by using parameterized queries or prepared statements, which separate the user input from the query logic. Additionally, limiting the privileges of the user executing the query can help prevent unauthorized access to sensitive data. Regularly updating and patching software and libraries can also help prevent known vulnerabilities from being exploited. Finally, implementing logging and monitoring can help detect and respond to any attempted attacks.
 
-### Dart
+=== "Dart"
+	```dart
+	
+	bool _validate_query(String _searchQuery){
+	  // check for special characters
+	  for(var i = 0; i < tokens.length; i++){
+	      if (string.contains(new RegExp(r'[A-Z]')) == false){
+	        return false;
+	      }
+	    }
+	  return true;
+	}
+	
+	void _fetch_data(String _searchQuery) {
+	  
+	  // validate user input
+	  if (_validate_query(_searchQuery) == false){
+	    // raise error
+	    return ;
+	  }
+	  final content = XmlDocument.parse(xmlFileContent);
+	  final xml_node = XmlXPath.node(content);
+	  final xpath = xml_node.query('//book[author=$_searchQuery');
+	
+	  showDialog(
+	    context: context,
+	    builder: (context) => AlertDialog(
+	      title: Text('Search Result'),
+	      content: Text(result),
+	    ),
+	  );
+	  }
+	```
 
-```dart
 
-bool _validate_query(String _searchQuery){
-  // check for special characters
-  for(var i = 0; i < tokens.length; i++){
-      if (string.contains(new RegExp(r'[A-Z]')) == false){
-        return false;
-      }
-    }
-  return true;
-}
+=== "Swift"
+	```swift
+	import Foundation
+	import SWXMLHash
+	
+	func main() {
+	    print("Enter search term:")
+	    guard let searchTerm = readLine()?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+	        print("Invalid search term")
+	        return
+	    }
+	    
+	    let xml = SWXMLHash.parse(xmlString)
+	    let results = xml["books"]["book"].all(withAttribute: "title", matchingXPath: "//title[contains(text(), '\(searchTerm)')]")
+	    
+	    for result in results {
+	        print(result["title"].element!.text)
+	        print(result["author"].element!.text)
+	    }
+	}
+	```
 
-void _fetch_data(String _searchQuery) {
-  
-  // validate user input
-  if (_validate_query(_searchQuery) == false){
-    // raise error
-    return ;
-  }
-  final content = XmlDocument.parse(xmlFileContent);
-  final xml_node = XmlXPath.node(content);
-  final xpath = xml_node.query('//book[author=$_searchQuery');
 
-  showDialog(
-    context: context,
-    builder: (context) => AlertDialog(
-      title: Text('Search Result'),
-      content: Text(result),
-    ),
-  );
-  }
-```
-
-### Swift
-
-```swift
-import Foundation
-import SWXMLHash
-
-func main() {
-    print("Enter search term:")
-    guard let searchTerm = readLine()?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-        print("Invalid search term")
-        return
-    }
-    
-    let xml = SWXMLHash.parse(xmlString)
-    let results = xml["books"]["book"].all(withAttribute: "title", matchingXPath: "//title[contains(text(), '\(searchTerm)')]")
-    
-    for result in results {
-        print(result["title"].element!.text)
-        print(result["author"].element!.text)
-    }
-}
-```
-
-### Kotlin
-
-Unfortunately, the standard XPath library in Java (and therefore in Kotlin) does not support parameters, which would have been the ideal solution.
-
-A possible workaround for this problem is to manually escape the user input to prevent injection. We can create a method that replaces all XPath special characters from the input string:
-
-```kotlin
-
-fun sanitize(input: String): String {
-    // Replace all XPath special characters with their HTML entities
-    return input.replace("&", "&amp;")
-                .replace("<", "&lt;")
-                .replace(">", "&gt;")
-                .replace("\"", "&quot;")
-                .replace("'", "&apos;")
-}
-
-fun main() {
-    val userInput = readLine() ?: return
-
-    val xmlData = """
-        <users>
-            <user>
-                <username>Alice</username>
-                <password>pass123</password>
-            </user>
-            <user>
-                <username>Bob</username>
-                <password>pass456</password>
-            </user>
-        </users>
-    """.trimIndent()
-
-    val sanitizedInput = sanitize(userInput)
-    val xpathQuery = "//*[username/text()='${sanitizedInput}']"
-
-    val xpath = XPathFactory.newInstance().newXPath()
-    val expression = xpath.compile(xpathQuery)
-
-    val result = expression.evaluate(xmlData, XPathConstants.NODESET)
-
-    val nodeList = result as? List<*> ?: emptyList<Any>()
-
-    val matchedUsers = nodeList.filterIsInstance<org.w3c.dom.Node>()
-        .map { node -> node.textContent }
-        .joinToString(", ")
-
-    println("Matched users: $matchedUsers")
-}
-```
+=== "Kotlin"
+	```kotlin
+	
+	fun sanitize(input: String): String {
+	    // Replace all XPath special characters with their HTML entities
+	    return input.replace("&", "&amp;")
+	                .replace("<", "&lt;")
+	                .replace(">", "&gt;")
+	                .replace(""", "&quot;")
+	                .replace("'", "&apos;")
+	}
+	
+	fun main() {
+	    val userInput = readLine() ?: return
+	
+	    val xmlData = """
+	        <users>
+	            <user>
+	                <username>Alice</username>
+	                <password>pass123</password>
+	            </user>
+	            <user>
+	                <username>Bob</username>
+	                <password>pass456</password>
+	            </user>
+	        </users>
+	    """.trimIndent()
+	
+	    val sanitizedInput = sanitize(userInput)
+	    val xpathQuery = "//*[username/text()='${sanitizedInput}']"
+	
+	    val xpath = XPathFactory.newInstance().newXPath()
+	    val expression = xpath.compile(xpathQuery)
+	
+	    val result = expression.evaluate(xmlData, XPathConstants.NODESET)
+	
+	    val nodeList = result as? List<*> ?: emptyList<Any>()
+	
+	    val matchedUsers = nodeList.filterIsInstance<org.w3c.dom.Node>()
+	        .map { node -> node.textContent }
+	        .joinToString(", ")
+	
+	    println("Matched users: $matchedUsers")
+	}
+	```

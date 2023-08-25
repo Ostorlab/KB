@@ -8,12 +8,13 @@ For session cookies managed by PHP, the flag is set either in `php.ini`:
 session.cookie_secure = True
 ```
 
-or in code:
+Or in code:
 
-```php
-setcookie ( string $name [, string $value = "" [, int $expires = 0 [, string $path = "" [, string $domain = "" [, bool $secure = FALSE [, bool $httponly = FALSE ]]]]]] ) : bool
-setcookie ( string $name [, string $value = "" [, array $options = [] ]] ) : bool
-```
+=== "PHP"
+	```php
+	setcookie ( string $name [, string $value = "" [, int $expires = 0 [, string $path = "" [, string $domain = "" [, bool $secure = FALSE [, bool $httponly = FALSE ]]]]]] ) : bool
+	setcookie ( string $name [, string $value = "" [, array $options = [] ]] ) : bool
+	```
 
 For accurate details on how to add the flag, check the documentation of
 your framework.
