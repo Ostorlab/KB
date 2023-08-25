@@ -4,7 +4,7 @@
   "references": {
     "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor": "https://cwe.mitre.org/data/definitions/200.html"
   },
-  "title": "Sensitive data stored in keyboard cache",
+  "title": "Android Sensitive data stored in keyboard cache",
   "privacy_issue": true,
   "security_issue": false,
   "categories": {
