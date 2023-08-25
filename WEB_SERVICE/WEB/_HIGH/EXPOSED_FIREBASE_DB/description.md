@@ -10,9 +10,11 @@ The security impact of publicly exposing a Firebase database can be severe, as i
 
 To check if a Firebase database is publicly exposed, you can use the following curl command:
 
-```shell
-curl -X GET 'https://<project-id>.firebaseio.com/.json'
-```
+=== "Bash"
+	```shell
+	curl -X GET 'https://<project-id>.firebaseio.com/.json'
+	```
+
 
 Replace `<project-id>` with the ID of the Firebase project you want to check. This command will attempt to retrieve the root node of the Firebase database in JSON format.
 
