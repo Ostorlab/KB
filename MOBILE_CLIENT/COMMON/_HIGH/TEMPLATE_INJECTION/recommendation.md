@@ -1,4 +1,4 @@
-**To mitigate this vulnerability, it is important to ensure that all user input is properly sanitized and validated before
+To mitigate this vulnerability, it is important to ensure that all user input is properly sanitized and validated before
 being passed to the server-side template engine. 
 
 Template engine will typically have a `render` method that takes a context that will be safely embedded in the text.
