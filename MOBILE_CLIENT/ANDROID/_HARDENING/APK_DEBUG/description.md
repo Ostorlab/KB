@@ -14,7 +14,7 @@ $adb jdwp
 
 * Create a communication channel using `adb` and attach to it using `jdb`:
 
- ```bash
+```bash
 $adb forward tcp:7777 jdwp:$(adb shell ps | grep "package-id")
 $jdb -attach localhost:7777
 ```

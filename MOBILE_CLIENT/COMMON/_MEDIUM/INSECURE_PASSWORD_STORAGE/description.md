@@ -3,6 +3,7 @@ insecure methods that are susceptible to unauthorized access or compromise.
 
 The following example shows insecure storage of password credentials in cookies:
 
-```javascript
-response.addCookie(new Cookie("password", password));
-```
+=== "Javascript"
+	```javascript
+	response.addCookie(new Cookie("password", password));
+	```

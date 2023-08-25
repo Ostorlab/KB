@@ -8,50 +8,50 @@ These vulnerabilities, if left unaddressed, can have severe consequences. Attack
 
 Examples of vulnerable implementations:
 
-### Kotlin
 
-```kotlin
-fun loadDependency(unsanitized_user_input : String) {
+=== "Dart"
+	```dart
+	void loadDependency(String unsanitized_user_input) {
+	  // Dynamically load the library without sanitizing the input
+	  final dylib = DynamicLibrary.open(unsanitized_user_input);
+	
+	  // Resolve and call a function from the loaded library that contains malicous code
+	  final libraryMethod =
+	      dylib.lookupFunction<Pointer<Utf8> Function(), Pointer<Utf8> Function()>(
+	          'getSensitiveData');
+	  final result = libraryMethod();
+	}
+	
+	```
 
-    // Load the library dynamically without sanitizing the input
-    System.load(unsanitized_user_input)
 
-    // Perform some operation using the dynamically loaded library
-    val result = libraryMethod()
-}
+=== "Swift"
+	```swift
+	func loadDynamicLibrary(unsanitized_user_input: String) {
+	
+	    // Attempt to dynamically load the library without sanitizing user input 
+	    if let libraryHandle = dlopen(unsanitized_user_input, RTLD_NOW) {
+	        // Library loaded successfully, resolve a function that could contain malicous code
+	        if let method = dlsym(libraryHandle, "libraryMethod") {
+	            typealias FunctionType = @convention(c) () -> String
+	            let function = unsafeBitCast(libraryMethod, to: FunctionType.self)
+	            let result = function()
+	        }
+	        dlclose(libraryHandle)
+	    }
+	}
+	```
 
-```
+=== "Kotlin"
+	```kotlin
+	fun loadDependency(unsanitized_user_input : String) {
+	
+	    // Load the library dynamically without sanitizing the input
+	    System.load(unsanitized_user_input)
+	
+	    // Perform some operation using the dynamically loaded library
+	    val result = libraryMethod()
+	}
+	
+	```
 
-### Dart
-
-```dart
-void loadDependency(String unsanitized_user_input) {
-  // Dynamically load the library without sanitizing the input
-  final dylib = DynamicLibrary.open(unsanitized_user_input);
-
-  // Resolve and call a function from the loaded library that contains malicous code
-  final libraryMethod =
-      dylib.lookupFunction<Pointer<Utf8> Function(), Pointer<Utf8> Function()>(
-          'getSensitiveData');
-  final result = libraryMethod();
-}
-
-```
-
-`Swift`:
-
-```swift
-func loadDynamicLibrary(unsanitized_user_input: String) {
-
-    // Attempt to dynamically load the library without sanitizing user input 
-    if let libraryHandle = dlopen(unsanitized_user_input, RTLD_NOW) {
-        // Library loaded successfully, resolve a function that could contain malicous code
-        if let method = dlsym(libraryHandle, "libraryMethod") {
-            typealias FunctionType = @convention(c) () -> String
-            let function = unsafeBitCast(libraryMethod, to: FunctionType.self)
-            let result = function()
-        }
-        dlclose(libraryHandle)
-    }
-}
-```

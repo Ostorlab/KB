@@ -9,15 +9,19 @@ Task Affinity is an activity attribute defined in the `<activity>` tag in the `A
 Task Affinity specifies which task that the activity desires to join. By default, all activities in an app have the
 same affinity, which is the app package name.
 
-```xml
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="co.secureApp.app">
-    <application>
-        <activity android:name=".ActivityA"></activity>
-        <activity android:name=".ActivityB" android:taskAffinity="co.ostorlab.Myapp:taskB"></activity>
-    </application>
-</manifest>
-``` 
+=== "Xml"
+	```xml
+	
+	<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="co.secureApp.app">
+	    <application>
+	        <activity android:name=".ActivityA"></activity>
+	        <activity android:name=".ActivityB" android:taskAffinity="co.ostorlab.Myapp:taskB"></activity>
+	    </application>
+	</manifest>
+	```
+
+
 
 `allowTaskReparenting` when set to `true` for an activity A, and when a new task with the same affinity is brought to
 the front, the system moves the __relocatable__ activity A from its original hosting task to the new foreground task stack.

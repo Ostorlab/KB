@@ -1,39 +1,41 @@
 To mitigate these vulnerabilities, it is crucial to implement robust security measures, including using strong encryption and secure algorithms, practicing secure key management, properly validating and verifying tokens, and following best practices for secure token transmission and storage.
 
-```kotlin
-import io.jsonwebtoken.JwtException
-import io.jsonwebtoken.Jwts
-import io.jsonwebtoken.SignatureAlgorithm
-import io.jsonwebtoken.security.Keys
-import java.security.Key
+=== "Kotlin"
+	```kotlin
+	import io.jsonwebtoken.JwtException
+	import io.jsonwebtoken.Jwts
+	import io.jsonwebtoken.SignatureAlgorithm
+	import io.jsonwebtoken.security.Keys
+	import java.security.Key
+	
+	// Secure JWT validation
+	fun validateJwt(token: String, secretKey: Key): Boolean {
+	    try {
+	        Jwts.parserBuilder()
+	            .setSigningKey(secretKey)
+	            .build()
+	            .parseClaimsJws(token)
+	        return true // Token is considered valid
+	    } catch (e: JwtException) {
+	        return false // Token validation failed
+	    }
+	}
+	
+	fun main() {
+	    val token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyfQ.4x6fOGYwfFYIQgZepgK1AnbDDr2-TvAp6im0kKk52Es"
+	    val secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256) // Generate a secure secret key
+	
+	    val isValid = validateJwt(token, secretKey)
+	    if (isValid) {
+	        println("Token is valid")
+	        // Proceed with further processing
+	    } else {
+	        println("Token validation failed")
+	        // Handle invalid token
+	    }
+	}
+	```
 
-// Secure JWT validation
-fun validateJwt(token: String, secretKey: Key): Boolean {
-    try {
-        Jwts.parserBuilder()
-            .setSigningKey(secretKey)
-            .build()
-            .parseClaimsJws(token)
-        return true // Token is considered valid
-    } catch (e: JwtException) {
-        return false // Token validation failed
-    }
-}
-
-fun main() {
-    val token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyfQ.4x6fOGYwfFYIQgZepgK1AnbDDr2-TvAp6im0kKk52Es"
-    val secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256) // Generate a secure secret key
-
-    val isValid = validateJwt(token, secretKey)
-    if (isValid) {
-        println("Token is valid")
-        // Proceed with further processing
-    } else {
-        println("Token validation failed")
-        // Handle invalid token
-    }
-}
-```
 
 In this example, the validateJwt function takes a JWT token and a secure secret key as input. The `Keys.secretKeyFor` method from the jjwt library is used to generate a secure secret key using the `HS256` algorithm.
 

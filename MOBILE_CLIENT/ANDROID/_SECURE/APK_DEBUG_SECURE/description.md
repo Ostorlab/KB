@@ -3,7 +3,7 @@ and attach a debugger to access sensitive data or perform malicious actions.
 
 For instance attach a Java (JDWP) debugger:
 
- ```bash
+```bash
 $adb forward tcp:7777 jdwp:$(adb shell ps | grep "package-id")
 $jdb -attach localhost:7777
 ```

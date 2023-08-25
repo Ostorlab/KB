@@ -6,41 +6,40 @@ To mitigate the vulnerability associated with insecure package context creation 
 
 3- When checking if the package is in the list of installed packages, avoid loose comparisons like `startsWith` or `endsWith`, instead try matching the package name exactly
 
-### Java
-
-```java
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import java.lang.reflect.Method;
-import java.util.List;
-
-public final class InsecurePackageContext {
-
-    public static void main(String[] args) {
-        Context context = getContext();
-        PackageManager packageManager = context.getPackageManager();
-
-        List<PackageInfo> installedPackages = packageManager.getInstalledPackages(PackageManager.GET_META_DATA);
-
-        for (PackageInfo info : installedPackages) {
-            String packageName = info.packageName;
-
-            if (packageName.equals("co.ostorlab.plugins.camera")) {
-                try {
-                    Context packageContext = context.createPackageContext(packageName,
-                            Context.CONTEXT_RESTRICTED);
-
-                    Class<?> loaderClass = packageContext.getClassLoader().loadClass("co.ostorlab.plugins.camera.Main");
-                    Method updateMethod = loaderClass.getMethod("Update", Context.class);
-                    updateMethod.invoke(null, context);
-
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
-    }
-}
-
-```
+=== "Java"
+	```java
+	import android.content.Context;
+	import android.content.pm.PackageInfo;
+	import android.content.pm.PackageManager;
+	import java.lang.reflect.Method;
+	import java.util.List;
+	
+	public final class InsecurePackageContext {
+	
+	    public static void main(String[] args) {
+	        Context context = getContext();
+	        PackageManager packageManager = context.getPackageManager();
+	
+	        List<PackageInfo> installedPackages = packageManager.getInstalledPackages(PackageManager.GET_META_DATA);
+	
+	        for (PackageInfo info : installedPackages) {
+	            String packageName = info.packageName;
+	
+	            if (packageName.equals("co.ostorlab.plugins.camera")) {
+	                try {
+	                    Context packageContext = context.createPackageContext(packageName,
+	                            Context.CONTEXT_RESTRICTED);
+	
+	                    Class<?> loaderClass = packageContext.getClassLoader().loadClass("co.ostorlab.plugins.camera.Main");
+	                    Method updateMethod = loaderClass.getMethod("Update", Context.class);
+	                    updateMethod.invoke(null, context);
+	
+	                } catch (Exception e) {
+	                    throw new RuntimeException(e);
+	                }
+	            }
+	        }
+	    }
+	}
+	
+	```

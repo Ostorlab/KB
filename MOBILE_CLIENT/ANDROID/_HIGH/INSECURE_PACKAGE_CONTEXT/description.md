@@ -6,41 +6,40 @@ By requesting the `android.permission.QUERY_ALL_PACKAGES` permission and using `
 
 `CONTEXT_INCLUDE_CODE` flag allows the application to load classes from the target package, while the `CONTEXT_IGNORE_SECURITY` flag ignores security restrictions. Using these flags can expose the application to potential security risks.
 
-### Java
-
-```java
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import java.lang.reflect.Method;
-import java.util.List;
-
-public final class InsecurePackageContext {
-
-    public static void main(String[] args) {
-        Context context = getContext();
-        PackageManager packageManager = context.getPackageManager();
-
-        List<PackageInfo> installedPackages = packageManager.getInstalledPackages(PackageManager.GET_META_DATA);
-
-        for (PackageInfo info : installedPackages) {
-            String packageName = info.packageName;
-
-            if (packageName.startsWith("co.ostorlab.")) {
-                try {
-                    Context packageContext = context.createPackageContext(packageName,
-                            Context.CONTEXT_INCLUDE_CODE | Context.CONTEXT_IGNORE_SECURITY);
-
-                    Class<?> loaderClass = packageContext.getClassLoader().loadClass("co.ostorlab.payload");
-                    Method updateMethod = loaderClass.getMethod("Update", Context.class);
-                    updateMethod.invoke(null, context);
-
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
-    }
-}
-
-```
+=== "Java"
+	```java
+	import android.content.Context;
+	import android.content.pm.PackageInfo;
+	import android.content.pm.PackageManager;
+	import java.lang.reflect.Method;
+	import java.util.List;
+	
+	public final class InsecurePackageContext {
+	
+	    public static void main(String[] args) {
+	        Context context = getContext();
+	        PackageManager packageManager = context.getPackageManager();
+	
+	        List<PackageInfo> installedPackages = packageManager.getInstalledPackages(PackageManager.GET_META_DATA);
+	
+	        for (PackageInfo info : installedPackages) {
+	            String packageName = info.packageName;
+	
+	            if (packageName.startsWith("co.ostorlab.")) {
+	                try {
+	                    Context packageContext = context.createPackageContext(packageName,
+	                            Context.CONTEXT_INCLUDE_CODE | Context.CONTEXT_IGNORE_SECURITY);
+	
+	                    Class<?> loaderClass = packageContext.getClassLoader().loadClass("co.ostorlab.payload");
+	                    Method updateMethod = loaderClass.getMethod("Update", Context.class);
+	                    updateMethod.invoke(null, context);
+	
+	                } catch (Exception e) {
+	                    throw new RuntimeException(e);
+	                }
+	            }
+	        }
+	    }
+	}
+	
+	```

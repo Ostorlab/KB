@@ -10,11 +10,14 @@ By making your app more secure, you help preserve user trust and device integrit
 * Use the <grant-uri-permission> tag to control access to shared files.
 * Prefer using `external-files-path` path type.
 * Use specific folders for path attributes, check the following example:
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<paths>
-    <external-path
-        name="downloads"
-        path="Download/" />
-</paths>
-```
+
+
+=== "Xml"
+	```xml
+	<?xml version="1.0" encoding="utf-8"?>
+	<paths>
+	    <external-path
+	        name="downloads"
+	        path="Download/" />
+	</paths>
+	```

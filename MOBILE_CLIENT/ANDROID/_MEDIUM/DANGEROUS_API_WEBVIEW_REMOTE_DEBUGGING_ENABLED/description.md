@@ -20,15 +20,18 @@ adb forward tcp:9999 tcp:9999
 
 To access the remote protocol, use the Chrome Debug Protocol client, like `pychrome`:
 
-```python
-import pychrome
 
-# connect to webview on the exposed port.
-browser = pychrome.Browser(url="http://127.0.0.1:9999")
-t = browser.list_tab()[0]
-t.start()
-t.DOM.enable()
+=== "Python"
+	```python
+	import pychrome
+	
+	# connect to webview on the exposed port.
+	browser = pychrome.Browser(url="http://127.0.0.1:9999")
+	t = browser.list_tab()[0]
+	t.start()
+	t.DOM.enable()
+	
+	# Access document.
+	t.DOM.getDocument()
+	```
 
-# Access document.
-t.DOM.getDocument()
-```

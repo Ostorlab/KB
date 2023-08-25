@@ -13,23 +13,25 @@ user\'s credentials.
 The following is an example a vulnerable Java code accepting untrusted
 URL from an intent:
 
-```java
-public class VulnerableBrowserActivity extends Activity {
-      @override
-      public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+=== "Java"
+	```java
+	public class VulnerableBrowserActivity extends Activity {
+	      @override
+	      public void onCreate(Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
+	        setContentView(R.layout.main);
+	
+	        // Create a new wevbiew session.
+	        WebView webView = (WebView) findViewById(R.id.webview);
+	
+	        // Enable javascript.
+	        WebSettings settings = webView.getSettings();
+	        settings.setJavaScriptEnabled(true);
+	
+	        // Accept url from untrusted intent.
+	        String url = getIntent().getStringExtra("URL");
+	        webView.loadUrl(url);
+	      }
+	    }
+	```
 
-        // Create a new wevbiew session.
-        WebView webView = (WebView) findViewById(R.id.webview);
-
-        // Enable javascript.
-        WebSettings settings = webView.getSettings();
-        settings.setJavaScriptEnabled(true);
-
-        // Accept url from untrusted intent.
-        String url = getIntent().getStringExtra("URL");
-        webView.loadUrl(url);
-      }
-    }
-```

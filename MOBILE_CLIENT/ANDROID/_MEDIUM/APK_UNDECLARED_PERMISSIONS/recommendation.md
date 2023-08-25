@@ -9,24 +9,28 @@ Before you declare permissions in your app, consider whether you need the permis
   * Step 1 : I declare a permission with the name `com.example.myapp.permission.DEADLY_ACTIVITY` and fill the necessary attributes
   * Step 2: I apply the permission `com.example.myapp.permission.DEADLY_ACTIVITY` on my activity
 
-```xml
 
-<manifest
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.example.myapp">
+=== "Xml"
+	```xml
+	
+	<manifest
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        package="com.example.myapp">
+	
+	    <permission
+	            android:name="com.example.myapp.permission.DEADLY_ACTIVITY"
+	            android:label="@string/permlab_deadlyActivity"
+	            android:description="@string/permdesc_deadlyActivity"
+	            android:permissionGroup="android.permission-group.COST_MONEY"
+	            android:protectionLevel="dangerous"/>
+	    ...
+	    <activity android:exported="true" android:name="com.important.PushActivity"
+	              android:permission="com.example.myapp.permission.DEADLY_ACTIVITY"/>
+	
+	</manifest>
+	```
 
-    <permission
-            android:name="com.example.myapp.permission.DEADLY_ACTIVITY"
-            android:label="@string/permlab_deadlyActivity"
-            android:description="@string/permdesc_deadlyActivity"
-            android:permissionGroup="android.permission-group.COST_MONEY"
-            android:protectionLevel="dangerous"/>
-    ...
-    <activity android:exported="true" android:name="com.important.PushActivity"
-              android:permission="com.example.myapp.permission.DEADLY_ACTIVITY"/>
 
-</manifest>
-```
 
 2. Only use the minimum set of permissions necessary for your app's functionality. This can be achieved by reviewing your app's code and identifying the specific resources or data that the app requires to function properly.
    For each permission that your app requests, make sure that it offers clear benefits to users and that the request is done in a way that's obvious to them.

@@ -10,12 +10,15 @@ OR
 
 * Do not set the flag `FLAG_ACTIVITY_NEW_TASK` in activity launch intents, or use with the `FLAG_ACTIVITY_CLEAR_TASK`:
 
-```java
-Intent i = new Intent(this, AnActivity.class);
-i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-startActivity(i);
-```
+=== "Java"
+	```java
+	Intent i = new Intent(this, AnActivity.class);
+	i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+	startActivity(i);
+	```
+
+
 
 * Do not specify `allowReparenting` with `taskAffinity` or add support a monitoring service to detect the presence of malicious foreground tasks.
 
