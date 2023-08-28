@@ -1,6 +1,6 @@
 `CORS` misconfiguration refers to a vulnerability where Cross-Origin Resource Sharing (`CORS`) policies are not properly configured on a web server. This allows unauthorized cross-origin requests to be made, potentially leading to information leakage or unauthorized access to sensitive data.
 
-### Examples
+Below are examples of incorrect CORS configuration on different popular frameworks:
 
 === "Django"
 
