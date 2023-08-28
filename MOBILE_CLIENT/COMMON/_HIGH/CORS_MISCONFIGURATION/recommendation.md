@@ -3,7 +3,7 @@
 
 To mitigate `CORS` misconfiguration vulnerabilities, it is important to follow best practices. This includes properly configuring the `Access-Control-Allow-Origin` header to only allow trusted origins, rather than using the wildcard (`*`) value. Additionally, it is crucial to implement proper authentication and authorization mechanisms to ensure that only authorized users can access sensitive resources. Regularly monitoring and auditing `CORS` configurations can help identify and address any potential misconfigurations or vulnerabilities.
 
-# Code Examples:
+Below are examples of secure settings of CORS:
 
 === "Django"
 
