@@ -16,6 +16,9 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_PLATFORM_2"
+    ],
+    "GDPR_Chapter_IV": [
+      "Article 32 - Security of processing"
     ]
   }
 }

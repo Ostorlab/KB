@@ -6,5 +6,11 @@
   },
   "title": "File Path Traversal",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "GDPR_Chapter_IV": [
+      "Article 32 - Security of processing",
+      "Article 25 - protection by design and by default"
+    ]
+  }
 }

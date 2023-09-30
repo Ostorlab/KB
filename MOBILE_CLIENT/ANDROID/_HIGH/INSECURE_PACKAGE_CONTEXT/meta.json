@@ -16,7 +16,11 @@
         "MSTG_PLATFORM_2"
       ],
       "CWE_TOP_25": [
-      ]      
+      ],
+      "GDPR_Chapter_IV": [
+        "Article 32 - Security of processing",
+        "Article 25 - protection by design and by default"
+      ]
     }
   }
   
