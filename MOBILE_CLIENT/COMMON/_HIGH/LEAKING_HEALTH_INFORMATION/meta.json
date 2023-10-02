@@ -16,6 +16,9 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_ARCH_12"
+    ],
+    "GDPR_Chapter_IV": [
+      "Article 35 - Data protection impact assessment"
     ]
   }
 }
