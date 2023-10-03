@@ -16,11 +16,9 @@
     "CWE_TOP_25": [
       "CWE_20"
     ],
-    "GDPRControllerAndProcessor": [
-      "SecurityOfProcessing"
-    ],
-    "GDPRPrinciples": [
-      "PrinciplesRelatingToProcessingOfPersonalData"
+    "GDPR": [
+      "art_5",
+      "art_32"
     ]
   }
 }

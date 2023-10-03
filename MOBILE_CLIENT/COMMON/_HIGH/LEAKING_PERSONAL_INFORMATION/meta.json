@@ -16,13 +16,9 @@
     "OWASP_MASVS_L2": [
       "MSTG_ARCH_12"
     ],
-    "GDPRControllerAndProcessor": [
-      "SecurityOfProcessing",
-      "DataProtectionByDesignAndByDefault"
-    ],
-    "GDPRPrinciples": [
-      "PrinciplesRelatingToProcessingOfPersonalData",
-      "DataProtectionImpactAssessment"
+    "GDPR": [
+      "art_32",
+      "art_25"
     ]
   }
 }
