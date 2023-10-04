@@ -9,8 +9,8 @@
   "security_issue": true,
   "categories": {
     "GDPR": [
-      "art_5",
-      "art_32"
+      "ART_5",
+      "ART_32"
     ]
   }
 }
