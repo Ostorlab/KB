@@ -5,7 +5,7 @@
     "Danielfett": "https://danielfett.de/2020/11/27/improving-app2app/",
     "PortSwigger": "https://portswigger.net/web-security/oauth"
   },
-  "title": "OAuth Account Takeover",
+  "title": "OAuth Account Takeover by hijacking custom schemes",
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
