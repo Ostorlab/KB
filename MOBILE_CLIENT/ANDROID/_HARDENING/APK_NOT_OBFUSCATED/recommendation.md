@@ -2,31 +2,38 @@ Design the application to add the following protections and slow reverse enginee
 
 * Obfuscate Java source code with tools like Proguard.
 
-```gradle
+=== "Gradle"
+	```gradle
     buildTypes {
             release {
                 minifyEnabled true
                 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             }
         }
-```
+    ```
+
+
+
 This tells Gradle to use ProGuard for code obfuscation in the release build. You can then create a "proguard-rules.pro"
 file in the app's "app" directory to configure the obfuscation rules.
 
 * Obfuscate Java source code with tools like Dexguard.
 
-```gradle
+=== "Gradle"
+	```gradle
     buildTypes {
             release {
                 minifyEnabled true
                 useProguard false
                 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
                 dexguard {
-                  config 'dexguard-release.cfg'
+                    config 'dexguard-release.cfg'
                 }
             }
         }
-```
+	```
+
+
 This tells Gradle to use DexGuard for code obfuscation in the release build. You can create a"dexguard-project.txt" file in the app's "app" directory to configure the DexGuard project, and a"dexguard-release.cfg" file to configure the obfuscation for the release build.
 
 By default, when you enable code obfuscation using DexGuard, it will use its own obfuscation rules in addition to any rules specified in the ProGuard configuration file. However, you can disable the use of ProGuard's rules by setting the `useProguard` option to false.
@@ -35,7 +42,8 @@ By default, when you enable code obfuscation using DexGuard, it will use its own
 * Check application installer to ensure it matches the Android Market by calling `context.getPackageManager().getInstallerPackageName`
 * Check running environment at runtime
 
-```java
+=== "Java"
+	```java
     private static String getSystemProperty(String name) throws Exception {
         Class systemPropertyClazz = Class.forName("android.os.SystemProperties");
         return (String) systemPropertyClazz.getMethod("get", new Class[] { String.class }).invoke(systemPropertyClazz, new Object[] { name });
@@ -52,15 +60,17 @@ By default, when you enable code obfuscation using DexGuard, it will use its own
                 return true;
             }
     
-        } catch (Exception e) {
-        }
-    
+        } catch (Exception e) {}
+
         return false;
-      }
-```
+    }
+	```
+
+
 
 * Check debug flag at runtime
 
-```java
-    context.getApplicationInfo().applicationInfo.flags & ApplicationInfo.FLAG_DEBUGGABLE;
-```
+=== "Java"
+	```java
+	    context.getApplicationInfo().applicationInfo.flags & ApplicationInfo.FLAG_DEBUGGABLE;
+	```

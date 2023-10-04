@@ -1,6 +1,6 @@
 {
     "risk_rating": "high",
-    "short_description": "The vulnerability associated with using createPackageContext with CONTEXT_INCLUDE_CODE and CONTEXT_IGNORE_SECURITY in Android allows an attacker to access private data and execute arbitrary code in the context of the vulerable application by exploiting the interprocess communication (IPC) mechanism.",
+    "short_description": "The vulnerability associated with using createPackageContext with CONTEXT_INCLUDE_CODE and CONTEXT_IGNORE_SECURITY in Android allows an attacker to access private data and execute arbitrary code in the context of the vulnerable application by exploiting the interprocess communication (IPC) mechanism.",
     "references": {
       "CVE-2023-0460 Detail": "https://nvd.nist.gov/vuln/detail/CVE-2023-0460",
       "CWE-470: Use of Externally-Controlled Input to Select Classes or Code": "https://cwe.mitre.org/data/definitions/470.html"

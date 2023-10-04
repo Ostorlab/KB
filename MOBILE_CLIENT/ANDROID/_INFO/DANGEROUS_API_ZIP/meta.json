@@ -7,5 +7,13 @@
   },
   "title": "Call to ZIP API",
   "privacy_issue": false,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_2"
+    ]
+  }
 }

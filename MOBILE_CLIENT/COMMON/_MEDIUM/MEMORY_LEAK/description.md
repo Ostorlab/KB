@@ -12,27 +12,30 @@ Consider the following general three cases:
 
 The following example is basic memory leak in `C`:
 
-```c
-#include <stdlib.h>
-#include <stdio.h>
+=== "C"
+	```c
+	#include <stdlib.h>
+	#include <stdio.h>
+	
+	#define  LOOPS    10
+	#define  MAXSIZE  256
+	
+	int main(int argc, char **argv)
+	{
+	     int count = 0;
+	     char *pointer = NULL;
+	
+	     for(count=0; count<LOOPS; count++) {
+	          pointer = (char *)malloc(sizeof(char) * MAXSIZE);
+	     }
+	
+	     free(pointer);
+	
+	     return count;
+	}
+	```
 
-#define  LOOPS    10
-#define  MAXSIZE  256
 
-int main(int argc, char **argv)
-{
-     int count = 0;
-     char *pointer = NULL;
-
-     for(count=0; count<LOOPS; count++) {
-          pointer = (char *)malloc(sizeof(char) * MAXSIZE);
-     }
-
-     free(pointer);
-
-     return count;
-}
-```
 
 In this example, we have 10 allocations of size MAXSIZE. Every allocation, except the last, is lost. If
 no pointer is pointed to the allocated block, it is unrecoverable during program execution. A simple fix to this trivial

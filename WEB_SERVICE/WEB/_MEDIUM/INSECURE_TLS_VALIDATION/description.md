@@ -14,60 +14,59 @@ The following are some common weaknesses in TLS certificate validation:
 
 - **Revoked Certificates:** A certificate can be revoked if it has been compromised or is no longer considered trustworthy. A client that does not check the certificate's revocation status could accept a revoked certificate, which could be used to perform a man-in-the-middle attack.
 
-### Examples:
+=== "Java"
+	```java
+	import java.net.HttpURLConnection;
+	import java.net.URL;
+	import javax.net.ssl.HttpsURLConnection;
+	import javax.net.ssl.SSLContext;
+	import javax.net.ssl.TrustManager;
+	import javax.net.ssl.X509TrustManager;
+	import java.security.cert.X509Certificate;
+	import java.security.SecureRandom;
+	
+	public class HttpsRequestWithoutTlsVerification {
+	    public static void main(String[] args) throws Exception {
+	        // Disable SSL/TLS verification
+	        TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
+	            public X509Certificate[] getAcceptedIssuers() { return null; }
+	            public void checkClientTrusted(X509Certificate[] certs, String authType) {}
+	            public void checkServerTrusted(X509Certificate[] certs, String authType) {}
+	        }};
+	        SSLContext sslContext = SSLContext.getInstance("TLS");
+	        sslContext.init(null, trustAllCerts, new SecureRandom());
+	
+	        // Create connection and set SSL context
+	        URL url = new URL("https://example.com");
+	        HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+	        conn.setSSLSocketFactory(sslContext.getSocketFactory());
+	
+	        // Send HTTP request
+	        conn.setRequestMethod("GET");
+	        int responseCode = conn.getResponseCode();
+	        System.out.println("Response code: " + responseCode);
+	    }
+	}
+	```
 
-**Java**
 
-```
-import java.net.HttpURLConnection;
-import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
-import java.security.cert.X509Certificate;
-import java.security.SecureRandom;
 
-public class HttpsRequestWithoutTlsVerification {
-    public static void main(String[] args) throws Exception {
-        // Disable SSL/TLS verification
-        TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
-            public X509Certificate[] getAcceptedIssuers() { return null; }
-            public void checkClientTrusted(X509Certificate[] certs, String authType) {}
-            public void checkServerTrusted(X509Certificate[] certs, String authType) {}
-        }};
-        SSLContext sslContext = SSLContext.getInstance("TLS");
-        sslContext.init(null, trustAllCerts, new SecureRandom());
+=== "Dart"
+	```dart
+	import 'dart:io';
+	
+	void main() async {
+	  var client = HttpClient();
+	
+	  // Disable SSL certificate validation
+	  client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+	
+	  // Make HTTP request
+	  var request = await client.getUrl(Uri.parse('https://example.com'));
+	  var response = await request.close();
+	  print('Response code: ${response.statusCode}');
+	  client.close();
+	}
+	
+	```
 
-        // Create connection and set SSL context
-        URL url = new URL("https://example.com");
-        HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
-        conn.setSSLSocketFactory(sslContext.getSocketFactory());
-
-        // Send HTTP request
-        conn.setRequestMethod("GET");
-        int responseCode = conn.getResponseCode();
-        System.out.println("Response code: " + responseCode);
-    }
-}
-```
-
-**Dart**
-
-```
-import 'dart:io';
-
-void main() async {
-  var client = HttpClient();
-
-  // Disable SSL certificate validation
-  client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
-
-  // Make HTTP request
-  var request = await client.getUrl(Uri.parse('https://example.com'));
-  var response = await request.close();
-  print('Response code: ${response.statusCode}');
-  client.close();
-}
-
-```

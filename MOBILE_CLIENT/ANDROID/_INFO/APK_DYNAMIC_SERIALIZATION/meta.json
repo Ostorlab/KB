@@ -8,6 +8,10 @@
   "categories": {
     "CWE_TOP_25": [
       "CWE_502"
+    ],
+    "OWASP_MASVS_L1": [
+    ],
+    "OWASP_MASVS_L2": [
     ]
   }
 }

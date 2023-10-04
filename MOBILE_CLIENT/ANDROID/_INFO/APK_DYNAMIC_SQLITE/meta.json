@@ -12,6 +12,12 @@
   "categories": {
     "CWE_TOP_25": [
       "CWE_89"
+    ],
+    "OWASP_MASVS_L1": [
+      "MSTG_STORAGE_3"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_STORAGE_3"
     ]
   }
 }

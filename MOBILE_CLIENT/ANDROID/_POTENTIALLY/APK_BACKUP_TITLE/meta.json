@@ -8,5 +8,13 @@
   "title": "Backup mode enabled",
   "cvss_v3_vector": "CVSS:3.0/AV:P/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
   "privacy_issue": true,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_STORAGE_6"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_STORAGE_6"
+    ]
+  }
 }

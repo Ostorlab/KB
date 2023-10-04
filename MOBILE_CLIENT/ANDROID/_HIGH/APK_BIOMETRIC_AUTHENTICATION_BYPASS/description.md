@@ -6,32 +6,33 @@ Previous implementation using `FingerprintManager` is deprecated and must not be
 
 In the example below, calling the `authenticate` method without `cryptoObject` is vulnerable to authentication bypass:
 
-```kotlin
-fun showBiometricPrompt(
-    title: String = "Biometric Authentication",
-    subtitle: String = "Enter biometric credentials to proceed.",
-    description: String = "Input your Fingerprint or FaceID to ensure it's you!",
-    activity: AppCompatActivity,
-    listener: BiometricAuthListener,
-    cryptoObject: BiometricPrompt.CryptoObject? = null,
-    allowDeviceCredential: Boolean = false
-) {
-  // 1
-  val promptInfo = setBiometricPromptInfo(
-      title,
-      subtitle,
-      description,
-      allowDeviceCredential
-  )
-
-  // 2
-  val biometricPrompt = initBiometricPrompt(activity, listener)
-
-  // 3
-  biometricPrompt.apply {
-    if (cryptoObject == null) authenticate(promptInfo)
-    else authenticate(promptInfo, cryptoObject)
-  }
-}
-```
+=== "Kotlin"
+	```kotlin
+	fun showBiometricPrompt(
+	    title: String = "Biometric Authentication",
+	    subtitle: String = "Enter biometric credentials to proceed.",
+	    description: String = "Input your Fingerprint or FaceID to ensure it's you!",
+	    activity: AppCompatActivity,
+	    listener: BiometricAuthListener,
+	    cryptoObject: BiometricPrompt.CryptoObject? = null,
+	    allowDeviceCredential: Boolean = false
+	) {
+	  // 1
+	  val promptInfo = setBiometricPromptInfo(
+	      title,
+	      subtitle,
+	      description,
+	      allowDeviceCredential
+	  )
+	
+	  // 2
+	  val biometricPrompt = initBiometricPrompt(activity, listener)
+	
+	  // 3
+	  biometricPrompt.apply {
+	    if (cryptoObject == null) authenticate(promptInfo)
+	    else authenticate(promptInfo, cryptoObject)
+	  }
+	}
+	```
 

@@ -8,13 +8,14 @@ We can distinguish four types of files based on the access permission and storag
     * The access privilege must be set to private mode in order to restrict access from other applications
     * Content Provider, Service or other inter-application linkage system are recommended to exchange information between applications
 
-    ```java
+    === "Java"
+        ```java
         public void onCreateFileClick(View view) {
             FileOutputStream fos = null;
             try {
                 fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
 
-                fos.write(new String("Not sensitive information (File Activity)\n").getBytes());
+                fos.write(new String("Not sensitive information (File Activity)").getBytes());
             } catch (FileNotFoundException e) {
                 mFileView.setText(R.string.file_view);
             } catch (IOException e) {
@@ -29,9 +30,9 @@ We can distinguish four types of files based on the access permission and storag
                 }
             }
             finish();
-        }
-  
-    ```
+        }        
+        ```
+
 
 * Public Read Only files:
     * Used to disclose content to unspecified number of applications
@@ -40,15 +41,14 @@ We can distinguish four types of files based on the access permission and storag
     * Using the `MODE_WORLD_READABLE` variable to create a public file is deprecated in API Level 17 and later versions, and will trigger a security exception in API Level 24 and later versions
     * File-sharing methods using Content Provider are preferable
 
-    ```java
+    === "Java"
+        ```java
         public void onCreateFileClick(View view) {
             FileOutputStream fos = null;
             try {
-
                 fos = openFileOutput(FILE_NAME, MODE_WORLD_READABLE);
 
-                fos.write(new String("Not sensitive information (Public File Activity)\n").getBytes());
-
+                fos.write(new String("Not sensitive information (Public File Activity)").getBytes());
 
             } catch (FileNotFoundException e) {
                 mFileView.setText(R.string.file_view);
@@ -65,7 +65,9 @@ We can distinguish four types of files based on the access permission and storag
             }
             finish();
         }
-    ```
+        ```
+
+
 
 * Public Read/Write files:
     * Used to permit Read/Write access to unspecified number of applications
@@ -81,13 +83,14 @@ We can distinguish four types of files based on the access permission and storag
     * When reading in files in external memory device, validate the input data read from external memory device
     * Applications should be designed supposing that files in external memory device can be deleted
 
-    ```java
+    === "Java"
+        ```java
         public void onCreateFileClick(View view) {
             FileOutputStream fos = null;
             try {
                 File file = new File(getExternalFilesDir(TARGET_TYPE), FILE_NAME);
                 fos = new FileOutputStream(file, false);
-                fos.write(new String("Non-Sensitive Information(ExternalFileActivity)\n").getBytes());
+                fos.write(new String("Non-Sensitive Information(ExternalFileActivity)").getBytes());
             } catch (FileNotFoundException e) {
                 mFileView.setText(R.string.file_view);
             } catch (IOException e) {
@@ -103,4 +106,4 @@ We can distinguish four types of files based on the access permission and storag
             }
             finish();
         }
-    ```
+        ```
