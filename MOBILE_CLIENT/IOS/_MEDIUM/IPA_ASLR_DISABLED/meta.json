@@ -13,6 +13,10 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_CODE_9"
+    ],
+    "GDPR": [
+      "ART_5",
+      "ART_32"
     ]
   }
 }

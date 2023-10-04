@@ -16,6 +16,10 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_PLATFORM_2"
-    ]
+    ],
+      "GDPR": [
+        "ART_5",
+        "ART_32"
+      ]
   }
 }

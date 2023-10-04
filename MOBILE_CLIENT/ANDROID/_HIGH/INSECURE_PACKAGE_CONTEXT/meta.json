@@ -16,7 +16,13 @@
         "MSTG_PLATFORM_2"
       ],
       "CWE_TOP_25": [
-      ]      
+      ],
+      "GDPR": [
+        "ART_5",
+        "ART_25",
+        "ART_32",
+        "ART_35"
+      ]
     }
   }
   
