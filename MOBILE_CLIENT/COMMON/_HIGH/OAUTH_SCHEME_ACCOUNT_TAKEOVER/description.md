@@ -1,6 +1,6 @@
 The vulnerability arises from the application's use of a custom scheme in the `redirect_uri` parameter during OAuth authentication. 
 
-In a typical OAuth scenario, `redirect_uri` should be guaranteed to belong to the client application (identified by `client_id`) that requests data from an identity provider (Google, Facebook, Github...), using a custom scheme breaks that premise as it can be claimed by application on the user device.
+In a typical OAuth scenario, `redirect_uri` should be guaranteed to belong to the client application (identified by `client_id`) that requests data from an identity provider (Google, Facebook, Github...). Using a custom scheme breaks that premise as it can be claimed by the application on the user's device.
 
 An example attack scenario is when a malicious app claims the custom scheme used by some OAuth client application and triggers an OAuth authentication flow to the target app, once the user successfully performs login and consents they'll be redirected to the malicious app with the authentication token generated from the OAuth flow, allowing the malicious app to take over their account. 
 
