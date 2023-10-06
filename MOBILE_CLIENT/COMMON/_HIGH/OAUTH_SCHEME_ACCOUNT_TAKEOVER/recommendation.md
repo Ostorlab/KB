@@ -6,6 +6,8 @@ Developers should instead consider one of the following options:
 - Android's verifiable AppLinks  
 - iOS associated domains.
 
+
+
 ## Kotlin
 
 === "AndroidManifest.xml"
