@@ -4,7 +4,7 @@ In a typical OAuth scenario, `redirect_uri` should be guaranteed to belong to th
 
 An example attack scenario is when a malicious app claims the custom scheme used by some OAuth client application and triggers an OAuth authentication flow to the target app, once the user successfully performs login and consents they'll be redirected to the malicious app with the authentication token generated from the OAuth flow, allowing the malicious app to take over their account. 
 
-Attackers can bypass user interaction by leveraging certain techniques like express authentication flow or OAuth parameters that are meant to skip consent prompt if the user gave their consent before.
+Attackers can **bypass user interaction** by leveraging certain techniques like express authentication flow or use OAuth parameters that are meant to skip the consent prompt if the user gave their consent before.
 
 ## Kotlin
 
