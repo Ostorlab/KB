@@ -3,12 +3,30 @@ To address the vulnerability, it is recommended to not use the custom scheme to 
 Developers should instead consider one of the following options:
 
 - App to app integration like Google Identity Services and Facebook Express Login for Android
-- Android's verifiable AppLinks  
-- iOS associated domains.
-
-
+- [Android's verifiable AppLinks](https://developer.android.com/training/app-links/verify-android-applinks)  
+- [iOS associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains)
 
 ## Kotlin
+
+you need to have `/.well-known/assetlinks.json` hosted on your backend with a format like this:
+
+```json
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.myapplication.android",
+      "sha256_cert_fingerprints": [
+        "APPLICATION_CERT_FINGERPRINT"
+      ]
+    }
+  }
+]
+```
 
 === "AndroidManifest.xml"
 	```xml
@@ -44,6 +62,29 @@ Developers should instead consider one of the following options:
 	```
 
 ## iOS
+
+For iOS, you need to have `/.well-known/apple-app-site-association` hosted on your backend with format like this:
+
+```json
+{
+    "applinks": {
+        "details": [{
+            "appID": "ABCDE12345.com.myapplication.ios",
+            "paths": ["/oauth/redirect/*"]
+        }]
+    },
+    "appclips":{
+        "apps":[
+            "ABCDE12345.com.myapplication.ios"
+        ]
+    },
+    "webcredentials":{
+        "apps":[
+            "ABCDE12345.com.myapplication.ios"
+        ]
+    }
+}
+```
 
 === "release.entitlements"
 	```xml
