@@ -5,7 +5,8 @@
     "Danielfett": "https://danielfett.de/2020/11/27/improving-app2app/",
     "PortSwigger": "https://portswigger.net/web-security/oauth",
     "Android Developer": "https://developer.android.com/training/app-links/verify-android-applinks",
-    "Apple Developer": "https://developer.apple.com/documentation/xcode/supporting-associated-domains"
+    "Apple Developer": "https://developer.apple.com/documentation/xcode/supporting-associated-domains",
+    "Google Developer": "https://developers.googleblog.com/2023/10/enhancing-oauth-app-impersonation-protections.html"
   },
   "title": "OAuth Account Takeover by hijacking custom schemes",
   "privacy_issue": true,
