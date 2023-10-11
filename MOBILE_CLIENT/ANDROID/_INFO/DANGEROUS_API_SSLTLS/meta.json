@@ -5,5 +5,12 @@
   },
   "title": "Call to TLS API",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "PCI_STANDARDS":[
+      "REQUIREMENT_3_6",
+      "REQUIREMENT_3_7",
+      "REQUIREMENT_4_2"
+    ]
+  }
 }

@@ -21,6 +21,13 @@
       "MSTG_PLATFORM_4",
       "MSTG_NETWORK_5",
       "MSTG_STORAGE_6"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_2_2",
+      "REQUIREMENT_6_2",
+      "REQUIREMENT_6_3",
+      "REQUIREMENT_8_3",
+      "REQUIREMENT_11_3"
     ]
   }
 }

@@ -16,6 +16,11 @@
       "CWE_190",
       "CWE_190",
       "CWE_400"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_6_2",
+      "REQUIREMENT_6_3",
+      "REQUIREMENT_11_3"
     ]
   }
 }

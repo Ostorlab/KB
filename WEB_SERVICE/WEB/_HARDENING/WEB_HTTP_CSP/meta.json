@@ -10,6 +10,12 @@
   "categories": {
     "OWASP_ASVS_L3": [
       "V2_2_5"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_6_2",
+      "REQUIREMENT_6_3",
+      "REQUIREMENT_6_4",
+      "REQUIREMENT_11_3"
     ]
   }
 }

@@ -27,6 +27,14 @@
       "V4_1_5",
       "V1_4_4",
       "V1_10_1"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_2_2",
+      "REQUIREMENT_6_2",
+      "REQUIREMENT_6_3",
+      "REQUIREMENT_6_4",
+      "REQUIREMENT_7_3",
+      "REQUIREMENT_11_3"
     ]
   }
 }

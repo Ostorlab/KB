@@ -7,5 +7,10 @@
   },
   "title": "Call to command execution API",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "PCI_STANDARDS":[
+      "REQUIREMENT_6_2"
+    ]
+  }
 }

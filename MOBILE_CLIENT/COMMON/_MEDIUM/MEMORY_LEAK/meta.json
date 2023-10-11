@@ -15,6 +15,9 @@
     ],
     "CWE_TOP_25": [
       "CWE_400"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_6_2"
     ]
   }
 }

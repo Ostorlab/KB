@@ -16,6 +16,9 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_CODE_9"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_2_2"
     ]
   }
 }

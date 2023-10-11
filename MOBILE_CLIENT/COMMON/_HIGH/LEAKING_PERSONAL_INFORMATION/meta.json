@@ -19,6 +19,15 @@
     "GDPR": [
       "ART_32",
       "ART_25"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_3_2",
+      "REQUIREMENT_3_3",
+      "REQUIREMENT_3_5",
+      "REQUIREMENT_3_6",
+      "REQUIREMENT_3_7",
+      "REQUIREMENT_4_2",
+      "REQUIREMENT_6_2"
     ]
   }
 }

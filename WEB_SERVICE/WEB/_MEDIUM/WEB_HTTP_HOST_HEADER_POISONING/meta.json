@@ -6,5 +6,13 @@
   },
   "title": "HTTP Host Header Poisoning",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "PCI_STANDARDS":[
+      "REQUIREMENT_6_2",
+      "REQUIREMENT_6_3",
+      "REQUIREMENT_6_4",
+      "REQUIREMENT_11_3"
+    ]
+  }
 }
