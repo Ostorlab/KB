@@ -7,5 +7,14 @@
   },
   "title": "External DNS interaction",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "PCI_STANDARDS":[
+      "REQUIREMENT_1_2",
+      "REQUIREMENT_2_2",
+      "REQUIREMENT_6_2",
+      "REQUIREMENT_6_3",
+      "REQUIREMENT_11_3"
+    ]
+  }
 }

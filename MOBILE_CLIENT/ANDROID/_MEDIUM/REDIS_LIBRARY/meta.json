@@ -9,6 +9,12 @@
     "CWE_TOP_25": [
       "CWE_287",
       "CWE_862"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_2_2",
+      "REQUIREMENT_3_5",
+      "REQUIREMENT_6_2",
+      "REQUIREMENT_7_3"
     ]
   }
 }

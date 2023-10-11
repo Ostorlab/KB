@@ -13,6 +13,9 @@
     "OWASP_MASVS_RESILIENCE": [
       "MSTG_RESILIENCE_9",
       "MSTG_RESILIENCE_12"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_2_2"
     ]
   }
 }

@@ -17,6 +17,12 @@
       "ART_25",
       "ART_32",
       "ART_35"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_2_2",
+      "REQUIREMENT_6_2",
+      "REQUIREMENT_6_3",
+      "REQUIREMENT_7_3"
     ]
   }
 }

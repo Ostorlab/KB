@@ -7,5 +7,15 @@
     },
     "title": "CORS Misconfiguration Vulnerability",
     "privacy_issue": false,
-    "security_issue": true
+    "security_issue": true,
+  "categories": {
+    "PCI_STANDARDS":[
+      "REQUIREMENT_2_2",
+      "REQUIREMENT_6_2",
+      "REQUIREMENT_6_3",
+      "REQUIREMENT_7_3",
+      "REQUIREMENT_8_3",
+      "REQUIREMENT_11_3"
+    ]
+  }
 }

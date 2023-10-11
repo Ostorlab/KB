@@ -11,6 +11,9 @@
   "categories": {
     "OWASP_RESILIENCE": [
       "MSTG_RESILIENCE_1"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_6_2"
     ]
   }
 }

@@ -13,6 +13,12 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_STORAGE_5"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_2_2",
+      "REQUIREMENT_3_2",
+      "REQUIREMENT_3_5",
+      "REQUIREMENT_6_2"
     ]
   }
 }

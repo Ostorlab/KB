@@ -9,6 +9,14 @@
   "categories": {
     "CWE_TOP_25": [
       "CWE_287"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_1_2",
+      "REQUIREMENT_2_2",
+      "REQUIREMENT_4_2",
+      "REQUIREMENT_6_4",
+      "REQUIREMENT_8_3",
+      "REQUIREMENT_11_3"
     ]
   }
 }

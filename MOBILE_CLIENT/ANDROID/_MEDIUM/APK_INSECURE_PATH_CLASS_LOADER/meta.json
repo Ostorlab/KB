@@ -16,6 +16,13 @@
     ],
     "CWE_TOP_25": [
       "CWE_22"
+    ],
+    "PCI_STANDARDS":[
+      "REQUIREMENT_2_2",
+      "REQUIREMENT_3_5",
+      "REQUIREMENT_6_2",
+      "REQUIREMENT_6_3",
+      "REQUIREMENT_11_3"
     ]
   }
 }
