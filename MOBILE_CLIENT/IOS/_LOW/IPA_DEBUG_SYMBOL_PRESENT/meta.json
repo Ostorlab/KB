@@ -13,7 +13,7 @@
     "OWASP_MASVS_L2": [
       "MSTG_CODE_3"
     ],
-    "PCI_STANDARDS":[
+    "PCI":[
       "REQUIREMENT_2_2",
       "REQUIREMENT_6_2"
     ]

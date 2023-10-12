@@ -12,7 +12,7 @@
     "OWASP_RESILIENCE": [
       "MSTG_RESILIENCE_1"
     ],
-    "PCI_STANDARDS":[
+    "PCI":[
       "REQUIREMENT_6_2"
     ]
   }

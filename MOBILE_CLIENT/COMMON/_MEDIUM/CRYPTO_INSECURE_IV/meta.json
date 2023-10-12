@@ -19,7 +19,7 @@
       "MSTG_CRYPTO_3",
       "MSTG_CRYPTO_4"
     ],
-    "PCI_STANDARDS":[
+    "PCI":[
       "REQUIREMENT_2_2",
       "REQUIREMENT_3_6",
       "REQUIREMENT_3_7",

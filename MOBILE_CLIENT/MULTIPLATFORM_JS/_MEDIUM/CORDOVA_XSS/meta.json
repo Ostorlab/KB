@@ -20,7 +20,7 @@
       "CWE_79",
       "CWE_20"
     ],
-    "PCI_STANDARDS":[
+    "PCI":[
       "REQUIREMENT_2_2",
       "REQUIREMENT_6_2",
       "REQUIREMENT_6_3",

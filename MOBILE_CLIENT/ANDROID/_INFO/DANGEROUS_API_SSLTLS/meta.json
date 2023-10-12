@@ -7,7 +7,7 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "PCI_STANDARDS":[
+    "PCI":[
       "REQUIREMENT_3_6",
       "REQUIREMENT_3_7",
       "REQUIREMENT_4_2"
