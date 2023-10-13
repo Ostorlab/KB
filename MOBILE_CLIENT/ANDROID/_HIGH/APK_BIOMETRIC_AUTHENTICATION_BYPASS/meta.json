@@ -17,10 +17,10 @@
       "ART_5",
       "ART_32"
     ],
-    "PCI":[
-      "REQUIREMENT_6_2",
-      "REQUIREMENT_6_3",
-      "REQUIREMENT_8_3"
+    "PCI_STANDARDS":[
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_8_3"
     ]
   }
 }

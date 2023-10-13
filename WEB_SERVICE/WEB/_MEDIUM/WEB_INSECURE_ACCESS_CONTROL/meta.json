@@ -28,13 +28,13 @@
       "V1_4_4",
       "V1_10_1"
     ],
-    "PCI":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_6_2",
-      "REQUIREMENT_6_3",
-      "REQUIREMENT_6_4",
-      "REQUIREMENT_7_3",
-      "REQUIREMENT_11_3"
+    "PCI_STANDARDS":[
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_7_3",
+      "REQ_11_3"
     ]
   }
 }

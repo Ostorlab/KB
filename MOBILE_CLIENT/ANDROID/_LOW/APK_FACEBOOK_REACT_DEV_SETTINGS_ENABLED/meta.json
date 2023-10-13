@@ -17,9 +17,9 @@
       "MSTG_ARCH_1",
       "MSTG_CODE_4"
     ],
-    "PCI":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_6_2"
+    "PCI_STANDARDS":[
+      "REQ_2_2",
+      "REQ_6_2"
     ]
   }
 }

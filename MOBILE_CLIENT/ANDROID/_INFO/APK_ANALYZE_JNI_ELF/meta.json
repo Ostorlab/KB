@@ -9,8 +9,8 @@
   "privacy_issue": false,
   "security_issue": false,
   "categories": {
-    "PCI":[
-      "REQUIREMENT_6_2"
+    "PCI_STANDARDS":[
+      "REQ_6_2"
     ]
   }
 }
