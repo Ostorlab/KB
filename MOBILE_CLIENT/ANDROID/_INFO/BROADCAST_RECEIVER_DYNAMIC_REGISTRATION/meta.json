@@ -6,13 +6,5 @@
   },
   "title": "Broadcast receiver dynamic registration",
   "privacy_issue": false,
-  "security_issue": true,
-  "categories": {
-    "PCI_STANDARDS": [
-      "REQ_2_2",
-      "REQ_6_2",
-      "REQ_6_3",
-      "REQ_11_3"
-    ]
-  }
+  "security_issue": true
 }

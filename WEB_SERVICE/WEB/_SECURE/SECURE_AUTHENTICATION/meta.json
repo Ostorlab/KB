@@ -14,8 +14,6 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_ARCH_2"
-    ], "PCI_STANDARDS":[
-      "REQ_8_3"
     ]
   }
 }

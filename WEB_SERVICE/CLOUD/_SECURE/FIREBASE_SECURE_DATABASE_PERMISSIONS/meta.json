@@ -7,11 +7,5 @@
   },
   "title": "Secure Firebase Database Permissions",
   "privacy_issue": false,
-  "security_issue": true,
-  "categories": {
-    "PCI_STANDARDS":[
-      "REQ_2_2",
-      "REQ_7_3"
-    ]
-  }
+  "security_issue": true
 }
