@@ -16,8 +16,8 @@
     "MSTG_CODE_5",
     "MSTG_CODE_7"
     ],
-    "PCI":[
-      "REQUIREMENT_6_2"
+    "PCI_STANDARDS":[
+      "REQ_6_2"
     ]
   }
 }

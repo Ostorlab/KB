@@ -14,8 +14,8 @@
       "MSTG_RESILIENCE_9",
       "MSTG_RESILIENCE_12"
     ],
-    "PCI":[
-      "REQUIREMENT_2_2"
+    "PCI_STANDARDS":[
+      "REQ_2_2"
     ]
   }
 }

@@ -15,11 +15,11 @@
     "OWASP_MASVS_L2": [
       "MSTG_PLATFORM_2"
     ],
-    "PCI":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_6_2",
-      "REQUIREMENT_6_3",
-      "REQUIREMENT_11_3"
+    "PCI_STANDARDS":[
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_11_3"
     ]
   }
 }

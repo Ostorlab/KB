@@ -18,9 +18,9 @@
     "CWE_TOP_25": [
       "CWE_276"
     ],
-    "PCI":[
-      "REQUIREMENT_6_2",
-      "REQUIREMENT_7_3"
+    "PCI_STANDARDS":[
+      "REQ_6_2",
+      "REQ_7_3"
     ]
   }
 }

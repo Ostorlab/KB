@@ -18,9 +18,9 @@
       "ART_5",
       "ART_32"
     ],
-    "PCI":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_6_2"
+    "PCI_STANDARDS":[
+      "REQ_2_2",
+      "REQ_6_2"
     ]
   }
 }

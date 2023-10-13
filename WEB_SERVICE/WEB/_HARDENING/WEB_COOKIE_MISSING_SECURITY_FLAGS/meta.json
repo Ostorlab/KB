@@ -20,14 +20,14 @@
       "V3_4_2"
     ],
   "categories": {
-    "PCI":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_3_6",
-      "REQUIREMENT_3_7",
-      "REQUIREMENT_6_2",
-      "REQUIREMENT_6_3",
-      "REQUIREMENT_6_4",
-      "REQUIREMENT_11_3"
+    "PCI_STANDARDS":[
+      "REQ_2_2",
+      "REQ_3_6",
+      "REQ_3_7",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_11_3"
     ]
   }
   }

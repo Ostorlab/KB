@@ -23,12 +23,12 @@
       "MSTG_NETWORK_5",
       "MSTG_STORAGE_6"
     ],
-    "PCI":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_6_2",
-      "REQUIREMENT_6_3",
-      "REQUIREMENT_8_3",
-      "REQUIREMENT_11_3"
+    "PCI_STANDARDS":[
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_8_3",
+      "REQ_11_3"
     ]
   }
 }

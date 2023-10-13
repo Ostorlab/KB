@@ -18,11 +18,11 @@
     "OWASP_ASVS_L3": [
       "V9_1_3"
     ],
-    "PCI":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_4_2",
-      "REQUIREMENT_6_4",
-      "REQUIREMENT_11_3"
+    "PCI_STANDARDS":[
+      "REQ_2_2",
+      "REQ_4_2",
+      "REQ_6_4",
+      "REQ_11_3"
     ]
   }
 }
