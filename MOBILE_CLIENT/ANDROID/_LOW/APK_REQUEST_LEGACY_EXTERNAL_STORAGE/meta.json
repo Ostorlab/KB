@@ -16,8 +16,8 @@
       "MSTG_STORAGE_4"
     ],
     "PCI_STANDARDS":[
-      "REQUIREMENT_3_5",
-      "REQUIREMENT_6_2"
+      "REQ_3_5",
+      "REQ_6_2"
     ]
   }
 }

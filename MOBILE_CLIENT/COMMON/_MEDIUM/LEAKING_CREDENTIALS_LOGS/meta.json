@@ -20,11 +20,11 @@
       "MSTG_STORAGE_3"
     ],
     "PCI_STANDARDS":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_3_2",
-      "REQUIREMENT_3_3",
-      "REQUIREMENT_6_2",
-      "REQUIREMENT_10_3"
+      "REQ_2_2",
+      "REQ_3_2",
+      "REQ_3_3",
+      "REQ_6_2",
+      "REQ_10_3"
     ]
   }
 }

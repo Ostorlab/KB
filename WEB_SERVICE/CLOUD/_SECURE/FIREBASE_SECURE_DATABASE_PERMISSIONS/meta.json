@@ -10,8 +10,8 @@
   "security_issue": true,
   "categories": {
     "PCI_STANDARDS":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_7_3"
+      "REQ_2_2",
+      "REQ_7_3"
     ]
   }
 }

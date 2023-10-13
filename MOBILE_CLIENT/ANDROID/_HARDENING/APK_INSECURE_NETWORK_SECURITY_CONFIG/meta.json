@@ -16,8 +16,8 @@
       "MSTG_NETWORK_1"
     ],
     "PCI_STANDARDS":[
-      "REQUIREMENT_1_2",
-      "REQUIREMENT_2_2"
+      "REQ_1_2",
+      "REQ_2_2"
     ]
   }
 }

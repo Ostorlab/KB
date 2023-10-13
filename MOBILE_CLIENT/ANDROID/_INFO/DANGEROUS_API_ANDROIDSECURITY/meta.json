@@ -24,11 +24,11 @@
       "MSTG_CRYPTO_3"
     ],
     "PCI_STANDARDS":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_3_6",
-      "REQUIREMENT_3_7",
-      "REQUIREMENT_4_2",
-      "REQUIREMENT_6_2"
+      "REQ_2_2",
+      "REQ_3_6",
+      "REQ_3_7",
+      "REQ_4_2",
+      "REQ_6_2"
     ]
   }
 }

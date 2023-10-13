@@ -29,12 +29,12 @@
       "V1_10_1"
     ],
     "PCI_STANDARDS":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_6_2",
-      "REQUIREMENT_6_3",
-      "REQUIREMENT_6_4",
-      "REQUIREMENT_7_3",
-      "REQUIREMENT_11_3"
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_7_3",
+      "REQ_11_3"
     ]
   }
 }

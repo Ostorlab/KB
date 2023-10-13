@@ -18,10 +18,10 @@
       "CWE_276"
     ],
     "PCI_STANDARDS":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_6_2",
-      "REQUIREMENT_7_3",
-      "REQUIREMENT_11_3"
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_7_3",
+      "REQ_11_3"
     ]
   }
 }

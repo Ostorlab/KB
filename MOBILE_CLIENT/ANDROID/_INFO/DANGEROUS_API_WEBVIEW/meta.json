@@ -18,8 +18,8 @@
       "MSTG_PLATFORM_5"
     ],
     "PCI_STANDARDS":[
-      "REQUIREMENT_2_2",
-      "REQUIREMENT_6_2"
+      "REQ_2_2",
+      "REQ_6_2"
     ]
   }
 }
