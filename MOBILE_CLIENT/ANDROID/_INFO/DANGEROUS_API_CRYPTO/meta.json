@@ -24,13 +24,6 @@
     "MSTG_CRYPTO_4",
     "MSTG_CRYPTO_5",
     "MSTG_CRYPTO_6"
-  ],
-    "PCI_STANDARDS":[
-      "REQ_2_2",
-      "REQ_3_6",
-      "REQ_3_7",
-      "REQ_4_2",
-      "REQ_6_2"
-    ]
+  ]
   }
 }

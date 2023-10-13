@@ -7,10 +7,5 @@
   },
   "title": "List of JNI methods",
   "privacy_issue": false,
-  "security_issue": false,
-  "categories": {
-    "PCI_STANDARDS":[
-      "REQ_6_2"
-    ]
-  }
+  "security_issue": false
 }

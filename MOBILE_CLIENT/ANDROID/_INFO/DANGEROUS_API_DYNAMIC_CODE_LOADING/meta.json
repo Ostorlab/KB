@@ -6,12 +6,5 @@
   },
   "title": "Call to dynamic code loading API",
   "privacy_issue": false,
-  "security_issue": true,
-  "categories": {
-    "PCI_STANDARDS":[
-      "REQ_6_2",
-      "REQ_6_3",
-      "REQ_11_3"
-    ]
-  }
+  "security_issue": true
 }

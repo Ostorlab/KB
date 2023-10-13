@@ -14,10 +14,6 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_CRYPTO_1"
-    ],
-    "PCI_STANDARDS":[
-      "REQ_2_2",
-      "REQ_6_2"
     ]
   }
 }

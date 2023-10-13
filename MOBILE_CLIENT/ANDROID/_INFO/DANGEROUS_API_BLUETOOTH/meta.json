@@ -6,10 +6,5 @@
   },
   "title": "Call to Bluetooth and BLE API",
   "privacy_issue": false,
-  "security_issue": true,
-  "categories": {
-    "PCI_STANDARDS":[
-      "REQ_6_2"
-    ]
-  }
+  "security_issue": true
 }
