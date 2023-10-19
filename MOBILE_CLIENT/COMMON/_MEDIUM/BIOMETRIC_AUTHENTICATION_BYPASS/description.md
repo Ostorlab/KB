@@ -44,7 +44,7 @@ This encryption adds an extra layer of protection, making it highly challenging 
 
 Without encryption, an attacker can manipulate the memory to bypass the biometric check and log in successfully to the application. However, they would be unable to interpret or utilize the application data if the encryption is used with the biometric data. This helps to maintain the confidentiality of the application's sensitive information, thereby safeguarding the privacy and security of users' data.
 
-In the example below from DVIA, it is possible to bypass biometric authentication by hooking evaluatePolicy using frida
+In the example below from DVIA, it is possible to bypass biometric authentication by hooking evaluatePolicy using frida:
 
 === "Swift"
 	```Swift
