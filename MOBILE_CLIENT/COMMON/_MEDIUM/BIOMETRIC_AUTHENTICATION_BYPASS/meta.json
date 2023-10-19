@@ -1,12 +1,14 @@
 {
   "risk_rating": "high",
-  "short_description": "Biometric authentication is done without CryptoObject, making it vulnerable to biometric authentication bypass.",
+  "short_description": "Biometric authentication is done without CryptoObject or secretKey, making it vulnerable to biometric authentication bypass.",
   "references": {
+    "Secure Mobile Biometric Authentication": "https://blog.ostorlab.co/secure-mobile-biometric-authentication.html",
     "Bypass Biometric Authentication": "https://book.hacktricks.xyz/mobile-pentesting/android-app-pentesting/bypass-biometric-authentication-android",
     "Using BiometricPrompt with CryptoObject: How and Why": "https://medium.com/androiddevelopers/using-biometricprompt-with-cryptoobject-how-and-why-aace500ccdb7",
-    "Android Biometric API: Getting Started": "https://www.kodeco.com/18782293-android-biometric-api-getting-started"
+    "Android Biometric API: Getting Started": "https://www.kodeco.com/18782293-android-biometric-api-getting-started",
+    "MOBILE PENTESTING 101 – BYPASSING BIOMETRIC AUTHENTICATION": "https://securitycafe.ro/2022/09/05/mobile-pentesting-101-bypassing-biometric-authentication/"
   },
-  "title": "Android Biometric Authentication Bypass",
+  "title": "Biometric Authentication Bypass",
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
