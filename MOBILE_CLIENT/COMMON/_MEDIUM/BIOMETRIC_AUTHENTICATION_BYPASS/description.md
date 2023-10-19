@@ -38,7 +38,7 @@ In the example below, calling the `authenticate` method without `cryptoObject` i
 
 For iOS, A secure implementation of mobile biometric authentication guarantees the need to use Face ID or Touch ID authentication to access the application’s sensitive data.
 
-a secure implementation of biometric authentication goes beyond just verifying the fingerprint or the face to log in. It also includes encrypting the application's sensitive data using the biometric data.
+A secure implementation of biometric authentication goes beyond just verifying the fingerprint or the face to log in. It also includes encrypting the application's sensitive data using the biometric data.
 
 This encryption adds an extra layer of protection, making it highly challenging for unauthorized individuals to access or use sensitive information. Encryption with biometric data becomes crucial in case an unauthorized party gains access to the device, via Malware or physical access.
 
