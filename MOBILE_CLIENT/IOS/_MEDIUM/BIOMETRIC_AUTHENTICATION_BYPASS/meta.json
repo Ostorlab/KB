@@ -1,0 +1,25 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Biometric authentication is done without the secretKey, making it vulnerable to biometric authentication bypass.",
+  "references": {
+    "BYPASSING BIOMETRIC AUTHENTICATION": "https://securitycafe.ro/2022/09/05/mobile-pentesting-101-bypassing-biometric-authentication/#local-authentication-on-ios",
+    "Secure Mobile Biometric Authentication": "https://blog.ostorlab.co/secure-mobile-biometric-authentication.html"
+  },
+  "title": "iOS Biometric Authentication Bypass",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L2": [
+      "MSTG_AUTH_8"
+    ],
+    "GDPR": [
+      "ART_5",
+      "ART_32"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_8_3"
+    ]
+  }
+}
