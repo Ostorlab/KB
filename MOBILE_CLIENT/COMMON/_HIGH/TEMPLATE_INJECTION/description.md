@@ -1,13 +1,7 @@
-Template Injection is a vulnerability that allows an attacker to inject malicious code into a
-template-rendered text, which can then be executed by the server. This can lead to a range of attacks, including data
-theft, privilege escalation, and remote code execution. Template Injection attacks are particularly dangerous because
-they can be
-difficult to detect and can offer dangerous capabilitie to an attacker.
+Template Injection is a vulnerability that allows an attacker to inject malicious code into a template-rendered text, which can then be executed by the server. This can lead to a range of attacks, including data theft, privilege escalation, and remote code execution. Template Injection attacks are particularly dangerous because they can be difficult to detect and can offer dangerous capabilities to an attacker.
 
 
-Here, the code is vulnerable because we're creating the template string using direct concatenation from the user input (
-userName), allowing the user to control the structure of the template. This can lead to template injection if the user
-provides a string that contains Mustache template tags.
+Here, the code is vulnerable because we're creating the template string using direct concatenation from the user input (userName), allowing the user to control the structure of the template. This can lead to template injection if the user provides a string that contains Mustache template tags.
 
 === "Dart"
 	```dart
