@@ -1,1 +1,11 @@
-//TODO.
+The "Insecure Android Network Security Config" vulnerability is an issue where sensitive data could be intercepted as it travels between a mobile application and a server, or even between different parts of an application, due to inadequate security configurations​1​. This vulnerability arises mainly from the use of insecure communication protocols, such as clear-text HTTP, or misconfigured security settings within the Android application.
+
+A practical example of such a vulnerability was seen in a version of the Gmail Android app, which had an insecure Network Security Configuration, potentially allowing for Man-in-the-Middle (MITM) attacks via user-supplied Certificate Authorities (CAs) on certain Android versions​2​. This means that an attacker could intercept and possibly alter communications between the app and the server, or even between different parts of the app, without being detected.
+
+If exploited, this vulnerability could have severe consequences. An attacker gaining control over the communication can leak user data, leading to account theft. The types of data at risk include encryption keys, passwords, private user information, account details, session tokens, documents, metadata, and binaries. Should an admin account be intercepted, the adversary would gain complete control over the site. These incidents can translate to significant business impacts such as fraud, identity theft, and reputational damage, and can also pave the way for phishing and MITM attacks​3​.
+
+The Android Network Security Configuration is supposed to mitigate such risks by allowing app developers to configure security settings for their apps in a more granular and secure manner. From Android 9 (API level 28) and higher, attempts at insecure communication using clear-text HTTP originating from Android applications are intended to be prevented by default​4​​5​.
+
+Although specific real-world examples of compromises stemming from this vulnerability were mentioned in the sources, the details were scant. Nonetheless, the Gmail app vulnerability showcases the potential risks and impacts such a security flaw can have both on individuals and businesses.
+
+https://labs.integrity.pt/articles/Gmail-Android-app-insecure-Network-Security-Configuration/index.html#:~:text=Current%20version%20of%20Gmail%20Android,CAs
