@@ -1,5 +1,5 @@
 {
-    "risk_rating": "info",
+    "risk_rating": "high",
     "short_description": "Report for domain name and IP addresses reputation score using multiple scanning APIs and databases.",
     "references": {
         "UrlScan" : "https://urlscan.io/",
