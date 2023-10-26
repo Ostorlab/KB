@@ -1,6 +1,6 @@
 {
     "risk_rating": "info",
-    "short_description": "Report for domain name and ip addresses reputation score using multiple scanning APIs and databases.",
+    "short_description": "Report for domain name and IP addresses reputation score using multiple scanning APIs and databases.",
     "references": {
         "UrlScan" : "https://urlscan.io/",
         "AbuseIPDB" : "https://www.abuseipdb.com/",
