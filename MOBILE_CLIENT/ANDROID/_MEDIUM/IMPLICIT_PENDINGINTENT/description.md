@@ -1,4 +1,4 @@
- Implicit PendingIntent is a vulnerability which may cause security threats in the form of denial-of-service, private data theft, and privilege escalation. Please review the detailed steps below to fix the issue with your apps. 
+Implicit PendingIntent is a vulnerability which may cause security threats in the form of denial-of-service, private data theft, and privilege escalation. Please review the detailed steps below to fix the issue with your apps. 
  
 === "Java"
 	```java
