@@ -1,5 +1,5 @@
 tenacity
-openai
+openai==0.27.7
 dataclass_csv
 click
 bs4
