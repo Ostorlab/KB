@@ -1,8 +1,12 @@
 Developers can address the vulnerability by applying any (or even better, all) of the following:
 
-- Ensuring that the action, package, and component fields of the base Intent are set; 
+- Ensuring that the action, package, and component fields of the base Intent are set (explicit Intent); 
 - Ensuring that the PendingIntent is only delivered to trusted components; 
 - Using `FLAG_IMMUTABLE` (added in SDK 23) to create `PendingIntents`. This prevents apps that receive the `PendingIntent` from filling in unpopulated properties. In case the app also runs on devices running SDK 22 or older, we recommend developers to apply the previous options while strengthening the PendingIntent creation with the pattern:
+- Being cautious with the data included in the intents.
+- Canceling `PendingIntent`s when they are no longer needed.
+- Keeping your app updated with the latest Android security practices.
+
 
 === "Java"
 	```java
