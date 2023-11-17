@@ -2,7 +2,7 @@ Google recommends that developers fix the vulnerability by applying any (or even
 
 - Ensuring that the action, package, and component fields of the base Intent are set; 
 - Ensuring that the PendingIntent is only delivered to trusted components; 
-- Using FLAG_IMMUTABLE (added in SDK 23) to create PendingIntents. This prevents apps that receive the PendingIntent from filling in unpopulated properties. In case the app also runs on devices running SDK 22 or older, we recommend developers to apply the previous options while strengthening the PendingIntent creation with the pattern:
+- Using `FLAG_IMMUTABLE` (added in SDK 23) to create `PendingIntents`. This prevents apps that receive the `PendingIntent` from filling in unpopulated properties. In case the app also runs on devices running SDK 22 or older, we recommend developers to apply the previous options while strengthening the PendingIntent creation with the pattern:
 
 === "Java"
 	```java
