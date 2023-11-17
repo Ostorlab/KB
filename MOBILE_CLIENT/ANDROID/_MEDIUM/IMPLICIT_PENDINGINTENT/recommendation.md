@@ -1,4 +1,4 @@
-Google recommends that developers fix the vulnerability by applying any (or even better, all) of the following:
+Developers can address the vulnerability by applying any (or even better, all) of the following:
 
 - Ensuring that the action, package, and component fields of the base Intent are set; 
 - Ensuring that the PendingIntent is only delivered to trusted components; 
