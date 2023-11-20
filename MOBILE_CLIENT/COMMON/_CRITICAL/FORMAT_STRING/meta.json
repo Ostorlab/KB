@@ -1,5 +1,5 @@
 {
-    "risk_rating": "high",
+    "risk_rating": "critical",
     "short_description": "Format string vulnerability allows an attacker to exploit a program by manipulating the format string parameter in a function that performs formatted output. This can lead to arbitrary code execution or information disclosure.",
     "references": {
         "CWE-134: Use of Externally-Controlled Format String": "https://cwe.mitre.org/data/definitions/134.html",

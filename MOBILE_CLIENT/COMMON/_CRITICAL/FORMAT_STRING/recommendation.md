@@ -1,11 +1,8 @@
 To mitigate vulnerabilities related to format string attacks, it is crucial to follow certain practices. 
-- First, input validation and sanitization should be implemented to ensure that user-supplied data is properly formatted 
+Input validation and sanitization should be implemented to ensure that user-supplied data is properly formatted 
 and does not contain any malicious code. Additionally, developers should avoid using format string functions that 
 accept user input directly, and instead use safer alternatives like string concatenation or formatted printing 
-functions that do not rely on user-controlled format strings. 
-- It is also recommended to enable compiler warnings 
-and static code analysis tools to detect potential format string vulnerabilities during the development process. 
-Regular security audits and penetration testing can further help identify and address any remaining vulnerabilities.
+functions that do not rely on user-controlled format strings.
 
 # Code Examples:
 
