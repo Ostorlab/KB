@@ -1,6 +1,4 @@
-Format string vulnerability occurs when a program does not properly validate or sanitize user input that is used as a 
-format specifier in a formatted output function. This can allow an attacker to manipulate the format string argument 
-and potentially execute arbitrary code or disclose sensitive information.
+Format string vulnerability occurs when a program does not properly validate or sanitize user input that is used as a format specifier in a formatted output function. This can allow an attacker to manipulate the format string argument and potentially execute arbitrary code or disclose sensitive information.
 
 The impact of format string vulnerabilities can be significant, leading to:
 1. Information Disclosure: Exploiting a format string vulnerability enables an attacker to extract sensitive information from memory. This may include confidential data like passwords, encryption keys, or other critical information.
