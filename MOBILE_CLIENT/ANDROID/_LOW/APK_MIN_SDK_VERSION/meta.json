@@ -1,10 +1,11 @@
 {
   "risk_rating": "low",
-  "short_description": "Application sets the minSdkVersion attribute to allow usage on Android versions earlier than 23.",
+  "short_description": "Application sets the minSdkVersion attribute to allow usage of older versions of Android which may expose users to security vulnerabilities..",
   "references": {
-    "Android API Levels": "https://developer.android.com/guide/topics/manifest/uses-sdk-element#min"
+    "Android API Levels": "https://developer.android.com/guide/topics/manifest/uses-sdk-element#min",
+    "Target API level requirements for Google Play apps" : "https://support.google.com/googleplay/android-developer/answer/11926878?hl=en"
   },
-  "title": "Attribute minSdkVersion set",
+  "title": "Old minSdkVersion",
   "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
   "privacy_issue": false,
   "security_issue": true,
@@ -15,7 +16,7 @@
     ],
     "PCI_STANDARDS":[
       "REQ_6_2",
-      "REQUIREMENT_6_3"
+      "REQ_6_3"
     ]
   }
 }
