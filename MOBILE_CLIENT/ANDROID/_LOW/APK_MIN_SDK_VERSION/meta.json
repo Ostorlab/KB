@@ -1,0 +1,21 @@
+{
+  "risk_rating": "low",
+  "short_description": "Application sets the minSdkVersion attribute to allow usage on Android versions earlier than 23.",
+  "references": {
+    "Android API Levels": "https://developer.android.com/guide/topics/manifest/uses-sdk-element#min"
+  },
+  "title": "Attribute minSdkVersion set",
+  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "GDPR": [
+      "ART_24",
+      "ART_32"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_6_2",
+      "REQUIREMENT_6_3"
+    ]
+  }
+}
