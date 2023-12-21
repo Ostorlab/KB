@@ -10,10 +10,10 @@
     "security_issue": true,
     "categories": {
         "OWASP_MASVS_L1": [
-            "MSTG-PLATFORM-1: Testing for Platform Interaction (OWASP MSTG)"
+            "MSTG_PLATFORM_1: Testing for Platform Interaction (OWASP MSTG)"
         ],
         "OWASP_MASVS_L2": [
-            "MSTG-PLATFORM-1: Testing for Platform Interaction (OWASP MSTG)"
+            "MSTG_PLATFORM_1: Testing for Platform Interaction (OWASP MSTG)"
         ]
     }
 }
