@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "critical",
   "short_description": "The web server application is susceptible to a remote command injection vulnerability.",
   "references": {
     "OWASP":"https://owasp.org/www-community/attacks/Command_Injection"
