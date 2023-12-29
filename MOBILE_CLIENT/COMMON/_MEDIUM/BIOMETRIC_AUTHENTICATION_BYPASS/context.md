@@ -3,7 +3,7 @@ Biometric authentication vulnerabilities arise from the use of biometric authent
 ### Real-world Cases:
 
 - **Chameleon**: a mobile malware with a wide arsenal of capabilities, notably its ability to bypass biometric authentication making it easy to steal personal data such as PINs, passwords, or graphical keys
-- **SharkBot**: an Android banking trojan than  can take over a user’s device and cancel the biometric verification pop-up when they attempt to log in to their mobile banking app.
+- **SharkBot**: an Android banking trojan that can take over a user’s device and cancel the biometric verification pop-up when they attempt to log in to their mobile banking app.
 
 ### Business Impact:
 
