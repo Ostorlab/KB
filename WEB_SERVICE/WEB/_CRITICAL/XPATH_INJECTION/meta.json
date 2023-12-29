@@ -6,7 +6,7 @@
     "Portswigger": "https://portswigger.net/kb/issues/00100600_xpath-injection"
   },
   "title": "XPath Injection",
-  "privacy_issue": false,
+  "privacy_issue": true,
   "security_issue": true,
   "categories": {
     "CWE_TOP_25": [
