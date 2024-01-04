@@ -43,7 +43,7 @@ public class XMLInjectionExample {
 }
 ```
 
-#### Javascript
+#### JavaScript
 
 ```javascript
 const userInput = '<maliciousTag>Payload</maliciousTag>';
