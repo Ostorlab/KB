@@ -5,7 +5,7 @@ Unlike a path traversal attack, where unauthorized access to the file system all
 File inclusion vulnerabilities can be divided into two major categories:
 
 - Local File Inclusion (LFI): In this scenario, an attacker is limited to local files present on the web server, depending on the programming language and the configuration, it may be possible to escalate this attack into a remote code execution using special schemes like `php://`.
-- Remote File Inclusion (RFI): Although not very common in modern web apps, if present, this vulnerability may allow for remote code execution by including malicious
+- Remote File Inclusion (RFI): Although not very common in modern web apps, if present, this vulnerability may allow for remote code execution by including malicious.
 
 
 ### Examples
