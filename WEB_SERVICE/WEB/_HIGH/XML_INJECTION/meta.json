@@ -1,0 +1,27 @@
+{
+  "risk_rating": "high",
+  "short_description": "The web application is susceptible to an XML injection vulnerability.",
+  "references": {
+    "OWASP":"https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection",
+    "scip.ch": "https://www.scip.ch/en/?labs.20231005"
+  },
+  "title": "XML Injection",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_91",
+      "CWE_74",
+      "CWE_652",
+      "CWE-643"
+    ],
+    "GDPR": [
+      "ART_25",
+      "ART_32"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_6_4",
+      "REQ_6_5"
+    ]
+  }
+}
