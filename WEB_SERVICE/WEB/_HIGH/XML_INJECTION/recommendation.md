@@ -51,7 +51,7 @@ public class MitigatedXMLInjectionExample {
     }
 }
 ```
-#### Javascript
+#### JavaScript
 
 ```javascript
 const userInput = '<maliciousTag>Payload</maliciousTag>';
