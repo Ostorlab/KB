@@ -3,6 +3,7 @@ To mitigate the risk of path traversal, consider the following recommendations:
 - __Avoid direct concatenation__: Avoid concatenating user input directly when constructing filesystem paths.
 - __User input sanitization__: Sanitize user input before using it in filesystem path construction, character sequences like `../` should be stripped and the path should be normalized.
 - __Use Robust Path Parsers__: Use well-established and secure path parsing packages, some packages might be inherently vulnerable to path traversal .
+- __Check path containment__: After validating the supplied input, append the input to the base directory and use a platform filesystem API to canonicalize the path. Verify that the canonicalized path is contained within the base directory.
 
 ### Examples
 
