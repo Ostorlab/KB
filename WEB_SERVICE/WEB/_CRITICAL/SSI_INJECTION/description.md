@@ -7,7 +7,7 @@ SSI injection can have multiple injection points such as post forms, http header
 
 - Code Execution:
 
-=== SSI
+=== http
   ```http
   GET / HTTP/1.1
   Host: localhost
@@ -16,7 +16,7 @@ SSI injection can have multiple injection points such as post forms, http header
 
 - File inclusion:
 
-=== SSI
+=== http
   ```http
   POST /contact HTTP/1.1
   Host: localhost
