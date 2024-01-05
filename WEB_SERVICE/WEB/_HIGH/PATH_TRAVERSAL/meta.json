@@ -1,19 +1,20 @@
 {
   "risk_rating": "high",
-  "short_description": "The web application is susceptible to an XML injection vulnerability.",
+  "short_description": "The web application is susceptible to a path traversal vulnerability.",
   "references": {
-    "OWASP":"https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection",
-    "scip.ch": "https://www.scip.ch/en/?labs.20231005"
+    "OWASP":"https://owasp.org/www-community/attacks/Path_Traversal",
+    "Portswigger": "https://portswigger.net/web-security/file-path-traversal"
   },
-  "title": "XML Injection",
-  "privacy_issue": true,
+  "title": "Path Traversal",
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "CWE_TOP_25": [
-      "CWE_91",
-      "CWE_74",
-      "CWE_652",
-      "CWE-643"
+      "CWE_35",
+      "CWE_22",
+      "CWE_23",
+      "CWE-29",
+      "CWE-32"
     ],
     "GDPR": [
       "ART_25",
