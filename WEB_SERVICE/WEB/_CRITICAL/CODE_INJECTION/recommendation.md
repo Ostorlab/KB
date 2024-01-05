@@ -13,52 +13,52 @@ To mitigate code injection vulnerabilities, here are some possible mitigations:
 
 
 === Ruby
-        ```ruby
-        print "Enter math equation: "
-        user_input = gets.chomp
-        
-        # Sanitize user input
-        sanitized_input = user_input.gsub(/[^0-9+\-\/\*]/, '')
-        
-        begin
-          result = eval(sanitized_input)
-          puts "Result: #{result}"
-        rescue StandardError => e
-          puts "Error: #{e.message}"
-        end
-        ```
+  ```ruby
+  print "Enter math equation: "
+  user_input = gets.chomp
+  
+  # Sanitize user input
+  sanitized_input = user_input.gsub(/[^0-9+\-\/\*]/, '')
+  
+  begin
+  result = eval(sanitized_input)
+  puts "Result: #{result}"
+  rescue StandardError => e
+  puts "Error: #{e.message}"
+  end
+  ```
 
 === PHP
-        ```php
-        <?php
-        $userInput = $_POST['expression']; 
-        
-        // Sanitize user input
-        $sanitizedInput = preg_replace("/[^0-9+\-\/\*]/", "", $userInput);
-        
-        $result = null;
-        try {
-            $result = eval("return $sanitizedInput;");
-        } catch (ParseError $e) {
-            echo "Error: Invalid Expression";
-        }
-        
-        echo "Result: " . $result;
-        ?>
-        ```
+  ```php
+  <?php
+  $userInput = $_POST['expression']; 
+  
+  // Sanitize user input
+  $sanitizedInput = preg_replace("/[^0-9+\-\/\*]/", "", $userInput);
+  
+  $result = null;
+  try {
+      $result = eval("return $sanitizedInput;");
+  } catch (ParseError $e) {
+      echo "Error: Invalid Expression";
+  }
+  
+  echo "Result: " . $result;
+  ?>
+  ```
 
 === Python
-        ```python
-        import re
-        
-        try:
-            user_input = input("Enter a Python expression: ")
-        
-            # Sanitize user input
-            sanitized_input = re.sub(r'[^0-9+\-*/]', '', user_input)
-        
-            result = eval(sanitized_input)
-            print("Result:", result)
-        except Exception as e:
-            print("Error:", e)
-        ```
+  ```python
+  import re
+  
+  try:
+      user_input = input("Enter a Python expression: ")
+  
+      # Sanitize user input
+      sanitized_input = re.sub(r'[^0-9+\-*/]', '', user_input)
+  
+      result = eval(sanitized_input)
+      print("Result:", result)
+  except Exception as e:
+      print("Error:", e)
+  ```

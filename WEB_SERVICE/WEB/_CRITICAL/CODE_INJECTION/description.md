@@ -4,42 +4,42 @@ Code Injection sets itself apart from Command Injection by the fact that an atta
 
 
 === Ruby
-        ```ruby
-        print "Enter math equation: "
-        user_input = gets.chomp
-        
-        begin
-          result = eval(user_input)
-          puts "Result: #{result}"
-        rescue StandardError => e
-          puts "Error: #{e.message}"
-        end
-        ```
+  ```ruby
+  print "Enter math equation: "
+  user_input = gets.chomp
+  
+  begin
+    result = eval(user_input)
+    puts "Result: #{result}"
+  rescue StandardError => e
+    puts "Error: #{e.message}"
+  end
+  ```
 
 === PHP
-        ```php
-        <?php
-        $userInput = $_POST['expression']; 
-        
-        $result = null;
-        try {
-            eval("\$result = $userInput;");
-        } catch (ParseError $e) {
-            echo "Error: Invalid Expression";
-        }
-        
-        echo "Result: " . $result;
-        ?>
-        ```
+  ```php
+  <?php
+  $userInput = $_POST['expression']; 
+  
+  $result = null;
+  try {
+      eval("\$result = $userInput;");
+  } catch (ParseError $e) {
+      echo "Error: Invalid Expression";
+  }
+  
+  echo "Result: " . $result;
+  ?>
+  ```
 
 
 === Python
-        ```python
-        try:
-            user_input = input("Enter a math expression: ")
-            result = eval(user_input)
-            print("Result:", result)
-        except Exception as e:
-            print("Error:", e)
-        ```
+  ```python
+  try:
+      user_input = input("Enter a math expression: ")
+      result = eval(user_input)
+      print("Result:", result)
+  except Exception as e:
+      print("Error:", e)
+  ```
 

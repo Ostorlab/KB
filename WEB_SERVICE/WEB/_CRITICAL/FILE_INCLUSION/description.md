@@ -9,37 +9,37 @@ File inclusion vulnerabilities can be divided into two major categories:
 
 
 === PHP
-        ```php
-        <?php
-        
-        $page = $_GET['page'];
-        include($page . '.php');
-        
-        ?>
-        ```
+  ```php
+  <?php
+  
+  $page = $_GET['page'];
+  include($page . '.php');
+  
+  ?>
+  ```
 
 === JSP
-        ```jsp
-        <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-        
-        <%
-        
-        String page = request.getParameter("page");
-        include(page + ".jsp");
-        
-        %>
-        ```
+  ```jsp
+  <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+  
+  <%
+  
+  String page = request.getParameter("page");
+  include(page + ".jsp");
+  
+  %>
+  ```
 
 === SSI
-        ```ssi
-        <!DOCTYPE html>
-        <html>
-        <head>
-        <title>Test file</title>
-        </head>
-        <body>
-        <!--#include file="$USER_LANGUAGE"-->
-        </body>
-        </html>
-        ```
+  ```ssi
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Test file</title>
+  </head>
+  <body>
+  <!--#include file="$USER_LANGUAGE"-->
+  </body>
+  </html>
+  ```
 
