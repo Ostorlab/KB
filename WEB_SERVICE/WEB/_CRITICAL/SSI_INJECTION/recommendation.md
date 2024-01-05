@@ -4,7 +4,7 @@ To mitigate the risk of server-side include injection vulnerabilities, consider 
 
 - __Input Validation and Sanitization__: Sanitize and/or encode user supplied input (notably HTML special characters like <>) before passing it to a page with SSI execution permissions.
 
-- __Use suEXEC__: Use SUExec to restrict the permissions of the user running SSI directives.
+- __Use suEXEC__: Use suEXEC to restrict the permissions of the user running SSI directives.
 
 ### Examples
 
