@@ -83,9 +83,8 @@
         }
         ```
 
-#### PHP
-
-```php
+=== PHP
+        ```php
         <?php
         $userInput = '<maliciousTag>Payload</maliciousTag>';
         
