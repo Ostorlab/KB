@@ -1,7 +1,9 @@
-- Avoid creating templates from user input whenever possible
-- Consider using a simple logic-less template engine such as Mustache 
-- Render templates in a sandbox environment where risky modules and features are disabled.
-- Sanitize user input before passing it into the template
+To address File Inclusion vulnerabilities, consider the following recommendations:
+
+- **Avoid Dynamic File Inclusion from user input:** unless necessary, avoid calling `include()`, `require()` or similar functions with user controlled input.
+- **Input Whitelisting:** Use whitelists to only allow known and expected input values.
+- **Input Validation and Sanitization:** Sanitize user input from special characters that may allow for path traversal like `../`
+- **Use File Mapping Array**: Create an array that assigns unique indexes to allowed files. Each index corresponds to a specific file within your application.
 
 ### Examples
 
