@@ -8,43 +8,38 @@ File inclusion vulnerabilities can be divided into two major categories:
 - Remote File Inclusion (RFI): Although not very common in modern web apps, if present, this vulnerability may allow for remote code execution by including malicious.
 
 
-### Examples
+=== PHP
+  ```php
+  <?php
+  
+  $page = $_GET['page'];
+  include($page . '.php');
+  
+  ?>
+  ```
 
-#### PHP
+=== JSP
+  ```jsp
+  <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+  
+  <%
+  
+  String page = request.getParameter("page");
+  include(page + ".jsp");
+  
+  %>
+  ```
 
-```php
-<?php
-
-$page = $_GET['page'];
-include($page . '.php');
-
-?>
-```
-
-#### JSP
-
-```jsp
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
-<%
-
-String page = request.getParameter("page");
-include(page + ".jsp");
-
-%>
-```
-
-#### SSI
-
-```ssi
-<!DOCTYPE html>
-<html>
-<head>
-<title>Test file</title>
-</head>
-<body>
-<!--#include file="$USER_LANGUAGE"-->
-</body>
-</html>
-```
+=== SSI
+  ```ssi
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Test file</title>
+  </head>
+  <body>
+  <!--#include file="$USER_LANGUAGE"-->
+  </body>
+  </html>
+  ```
 
