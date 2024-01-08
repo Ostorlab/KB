@@ -1,0 +1,25 @@
+{
+  "risk_rating": "high",
+  "short_description": "The web application is vulnerable to an LDAP injection vulnerability.",
+  "references": {
+    "OWASP": "https://owasp.org/www-community/attacks/LDAP_Injection",
+    "OWASP cheatsheets":"https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html",
+    "Hacktricks": "https://book.hacktricks.xyz/pentesting-web/ldap-injection"
+  },
+  "title": "LDAP Injection",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_90"
+    ],
+    "GDPR": [
+      "ART_25",
+      "ART_32"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_6_4",
+      "REQ_6_5"
+    ]
+  }
+}
