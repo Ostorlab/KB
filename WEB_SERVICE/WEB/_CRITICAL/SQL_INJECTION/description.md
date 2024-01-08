@@ -1,4 +1,4 @@
-SQL Injection is a cybersecurity vulnerability where attackers inject malicious SQL queries into input fields, manipulating the behavior of the application's SQL database. By leveraging this vulnerability, attackers can gain unauthorized access to the database, retrieve, modify, or delete sensitive data, or execute administrative operations on the database. SQL Injection typically arises due to improperly sanitized user inputs, allowing attackers to bypass authentication, execute arbitrary SQL commands, and exploit the underlying database.
+SQL Injection is a vulnerability where attackers inject malicious SQL queries into input fields, manipulating the behavior of the application's SQL database. By leveraging this vulnerability, attackers can gain unauthorized access to the database, retrieve, modify, or delete sensitive data, or execute administrative operations on the database. SQL Injection typically arises due to improperly sanitized user inputs, allowing attackers to bypass authentication, execute arbitrary SQL commands, and exploit the underlying database.
 
 ### Examples
 
