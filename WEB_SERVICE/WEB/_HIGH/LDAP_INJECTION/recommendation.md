@@ -1,3 +1,5 @@
+To mitigate the risk of LDAP injection, consider the following recommendations:
+
 - __Parameterized Queries:__ Use parameterized queries instead of direct concatenation to construct LDAP queries.
 
 - __Input Validation / Sanitization__: Implement input validation to ensure that user input adheres to expected formats and does not contain special characters that might alter LDAP queries, also sanitize user input using methods such as `LdapFilterEncode`
