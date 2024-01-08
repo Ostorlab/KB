@@ -11,116 +11,107 @@ To prevent NoSQL injection attacks, consider the following  measures:
 
 ### Examples
 
-#### Java
+=== Java
 
-```java
-import com.mongodb.*;
-import java.util.Arrays;
-
-public class SecureNoSQLInjection {
-    public static void main(String[] args) {
-        String username = sanitizeInput(args[0]);
-        String password = sanitizeInput(args[1]);
-
-        MongoClientURI uri = new MongoClientURI("mongodb://localhost:27017");
-        MongoClient mongoClient = new MongoClient(uri);
-
-        DB database = mongoClient.getDB("test");
-        DBCollection collection = database.getCollection("users");
-
-        BasicDBObject query = new BasicDBObject();
-        query.put("username", username);
-        query.put("password", password);
-
-        DBCursor cursor = collection.find(query);
-
-        while (cursor.hasNext()) {
-            System.out.println(cursor.next());
+  ```java
+    import com.mongodb.*;
+    import java.util.regex.Pattern;
+    
+    public class SecureNoSQLInjection {
+        public static void main(String[] args) {
+            String username = sanitizeInput(args[0]);
+            String password = sanitizeInput(args[1]);
+    
+            MongoClientURI uri = new MongoClientURI("mongodb://localhost:27017");
+            MongoClient mongoClient = new MongoClient(uri);
+    
+            DB database = mongoClient.getDB("test");
+            DBCollection collection = database.getCollection("users");
+    
+            BasicDBObject query = new BasicDBObject();
+            query.put("username", username);
+            query.put("password", password);
+    
+            DBCursor cursor = collection.find(query);
+    
+            while (cursor.hasNext()) {
+                System.out.println(cursor.next());
+            }
+        }
+    
+        // Function to sanitize input (escape special characters)
+        private static String sanitizeInput(String input) {
+            return Pattern.quote(input); // Escapes special characters in the input string
         }
     }
 
-    // Function to sanitize input (example: removing special characters)
-    private static String sanitizeInput(String input) {
-        // Implement your sanitization logic here
- 
-    }
-}
-```
+  ```
 
 
-#### Javascript
+=== Javascript
 
-```javascript
-const MongoClient = require('mongodb').MongoClient;
-const express = require('express');
-const app = express();
+  ```javascript
+    const MongoClient = require('mongodb').MongoClient;
+    const express = require('express');
+    const mongoSanitize = require('mongo-sanitize');
+    const app = express();
+    
+    // Middleware to parse incoming JSON requests
+    app.use(express.json());
+    
+    app.post('/login', async (req, res) => {
+        const username = mongoSanitize.sanitize(req.body.username);
+        const password = mongoSanitize.sanitize(req.body.password);
+    
+        const uri = 'mongodb://localhost:27017';
+        const client = new MongoClient(uri);
+    
+        try {
+            await client.connect();
+            const database = client.db('test');
+            const usersCollection = database.collection('users');
+    
+            // Secure query using parameterization to prevent NoSQL Injection
+            const user = await usersCollection.findOne({ username, password }); // Secure code with input sanitization
+    
+            res.json({ success: user !== null });
+        } finally {
+            await client.close();
+        }
+    });
+    
+    app.listen(3000, () => {
+        console.log('Server started on port 3000');
+    });
+  ```
 
-// Middleware to parse incoming JSON requests
-app.use(express.json());
 
-// Sanitization function to validate and clean user inputs
-function sanitizeInput(input) {
-    // Implement your sanitization logic here
-}
 
-app.post('/login', async (req, res) => {
-    const username = sanitizeInput(req.body.username);
-    const password = sanitizeInput(req.body.password);
+=== Php
 
-    const uri = 'mongodb://localhost:27017';
-    const client = new MongoClient(uri);
-
+  ```php
+    <?php
+    $username = $_POST['username'] ?? null;
+    $password = $_POST['password'] ?? null;
+    
+    $sanitizedUsername = filter_var($username, FILTER_SANITIZE_STRING);
+    
+    $manager = new MongoDB\Driver\Manager('mongodb://localhost:27017');
+    
+    // Using prepared statements for the query
+    $query = new MongoDB\Driver\Query([
+        'username' => $sanitizedUsername,
+        'password' => ['$eq' => $password] // Use an exact match for the password
+    ]);
+    
     try {
-        await client.connect();
-        const database = client.db('test');
-        const usersCollection = database.collection('users');
-
-        // Secure query using parameterization to prevent NoSQL Injection
-        const user = await usersCollection.findOne({ username, password }); // Secure code with input sanitization
-
-        res.json({ success: user !== null });
-    } finally {
-        await client.close();
+        $cursor = $manager->executeQuery('test.users', $query);
+    
+        foreach ($cursor as $document) {
+            var_dump($document);
+        }
+    } catch (MongoDB\Driver\Exception\Exception $e) {
+        echo "Exception: ", $e->getMessage();
     }
-});
-
-app.listen(3000, () => {
-    console.log('Server started on port 3000');
-});
-```
-
-
-
-#### Php
-
-```php
-<?php
-$username = $_POST['username'] ?? null;
-$password = $_POST['password'] ?? null;
-
-function sanitizeInput($input) {
-    // Implement your sanitization logic here
-}
-
-$sanitizedUsername = sanitizeInput($username);
-$sanitizedPassword = sanitizeInput($password);
-
-$manager = new MongoDB\Driver\Manager('mongodb://localhost:27017');
-
-// Constructing a find query
-$filter = ['username' => $sanitizedUsername, 'password' => $sanitizedPassword];
-$options = [];
-
-$query = new MongoDB\Driver\Query($filter, $options);
-
-try {
-    $cursor = $manager->executeQuery('test.users', $query);
-
-    foreach ($cursor as $document) {
-        var_dump($document);
-    }
-} catch (MongoDB\Driver\Exception\Exception $e) {
-    echo "Exception: ", $e->getMessage();
-}
-?>
-```
+    ?>
+  ```
