@@ -17,12 +17,10 @@ To secure the application against Expression Language Injection (EL Injection), 
     if ( hasErrors() ) {
         return "redirect:/error?msg=error.generic";
     } else {
-        return "index";`
+        return "index";
+        }
     }
-    }
-  ```
-=== JSP
-  ```jsp
-   //This is to encode msg as HTML 
-   <c:out value="${param.msg}" />
+    /*In the JSP error file, the following code is used to encode the 'msg' as HTML, preventing interpretation: 
+        <c:out value="${param.msg}" />
+    */
   ```
