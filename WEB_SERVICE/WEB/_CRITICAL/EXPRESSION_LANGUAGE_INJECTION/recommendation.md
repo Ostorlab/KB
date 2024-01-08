@@ -12,15 +12,28 @@ To secure the application against Expression Language Injection (EL Injection), 
 
 === Java
   ```java
-  @RequestMapping(value="/")
-    String index() {
-    if ( hasErrors() ) {
-        return "redirect:/error?msg=error.generic";
-    } else {
-        return "index";
+    @RestController
+    public class MathExpressionController {
+    
+        private final ExpressionParser parser = new SpelExpressionParser();
+    
+        @GetMapping("/evaluate")
+        public String evaluateExpression(@RequestParam String expression) {
+            String sanitizedExpression = sanitizeInput(expression);
+            Expression exp = parser.parseExpression(sanitizedExpression);
+            try {
+                Object result = exp.getValue();
+                return "Result: " + result.toString();
+            } catch (Exception e) {
+                return "Error: Invalid expression";
+            }
+        }
+    
+        private String sanitizeInput(String input) {
+            // Implement your input sanitization logic here
+            // For this example, allow only basic arithmetic operations and numbers
+            input = input.replaceAll("[^0-9\\+\\-\\*/]", ""); // Allow only digits, +, -, *, /
+            return input;
         }
     }
-    /*In the JSP error file, the following code is used to encode the 'msg' as HTML, preventing interpretation: 
-        <c:out value="${param.msg}" />
-    */
   ```
