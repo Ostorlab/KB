@@ -1,9 +1,8 @@
 {
   "risk_rating": "critical",
-  "short_description": "The web application is vulnerable to SQL Injection attacks.",
+  "short_description": "The web application is vulnerable to SQL Injection vulnerability.",
   "references": {
-    "SQL Injection (OWASP)": "https://www.owasp.org/index.php/SQL_Injection",
-    "Security Tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html",
+    "SQL Injection (OWASP)": "https://owasp.org/www-community/attacks/SQL_Injection",
     "Improper Neutralization of Special Elements used in an SQL Command (CWE-89)": "https://cwe.mitre.org/data/definitions/89.html"
   },
   "title": "SQL injection",

@@ -15,7 +15,6 @@ To prevent SQL injection attacks, consider the following  measures:
 ### Examples
 
 === Java
-
   ```java
     import java.sql.Connection;
     import java.sql.DriverManager;
@@ -46,9 +45,7 @@ To prevent SQL injection attacks, consider the following  measures:
     }
   ```
 
-
-=== Javascript
-
+=== JavaScript
   ```javascript
     const mysql = require('mysql2/promise');
     
@@ -75,10 +72,7 @@ To prevent SQL injection attacks, consider the following  measures:
         });
   ```
 
-
-
-=== Php
-
+=== PHP
   ```php
     <?php
         $username = $_POST['username'];
