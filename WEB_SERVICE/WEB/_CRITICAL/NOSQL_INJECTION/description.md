@@ -62,7 +62,8 @@ By injecting the crafted input, attackers aim to alter the logic of database que
             const usersCollection = database.collection('users');
     
             // Vulnerable query susceptible to NoSQL Injection
-            const user = await usersCollection.find({ username, password }); // Vulnerable code - lacks sanitization
+            query = { $where: `this.username == '${username}' && this.password == '${password}'` }
+            const user = await usersCollection.find(query);
     
             res.json({ success: user !== null });
         } finally {
@@ -83,9 +84,11 @@ By injecting the crafted input, attackers aim to alter the logic of database que
     $password = $_POST['password'];
     
     $manager = new MongoDB\Driver\Manager('mongodb://localhost:27017');
-    $query = new MongoDB\Driver\Query(['username' => $username, 'password' => $password]);
     
-    $cursor = $manager->executeQuery('test.users', $query);
+    $query = [ "username" => $username, 'password' => $password ];
+    $testquery = new MongoDB\Driver\Query($query, []);
+    
+    $cursor = $manager->executeQuery('test.users', $testquery);
     
     foreach ($cursor as $document) {
         var_dump($document);
