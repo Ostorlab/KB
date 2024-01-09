@@ -24,8 +24,7 @@ In general, cases, preventing XSS vulnerabilities requires 2-step protection:
       }
   }
   ```
-=== Javascript
-
+=== JavaScript
   ```javascript
   const express = require('express');
   const app = express();
@@ -43,8 +42,7 @@ In general, cases, preventing XSS vulnerabilities requires 2-step protection:
   ```
 
 
-=== Php
-
+=== PHP
   ```php
     <!DOCTYPE html>
     <html>

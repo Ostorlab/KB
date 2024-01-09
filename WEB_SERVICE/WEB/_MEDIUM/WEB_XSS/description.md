@@ -34,8 +34,7 @@ including user session or account information; perform actions on behalf of the 
 
   ```
 
-=== Javascript
-
+=== JavaScript
   ```javascript
   const express = require('express');
   const app = express();
@@ -50,8 +49,7 @@ including user session or account information; perform actions on behalf of the 
   });
   ```
 
-=== Php
-
+=== PHP
   ```php
     <!DOCTYPE html>
     <html>
