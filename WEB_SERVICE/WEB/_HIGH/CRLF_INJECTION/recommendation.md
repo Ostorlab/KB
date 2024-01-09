@@ -1,4 +1,5 @@
 - __Upgrade to the latest software version__: CRLF injection usually impacts the webserver or the reverse proxy itself, therefore it's advised to keep it up to date.
+- __Avoid setting header name from user input__: Allowing users to control http header names can lead to several security issues including CRLF injection.
 - __User input sanitization__: in some cases, it might be possible to achieve CRLF injection if the web application concatenates user input into response headers or cookies, therefore, user input should be sanitized from special characters. 
 
 === Request
