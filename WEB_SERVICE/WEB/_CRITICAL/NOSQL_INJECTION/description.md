@@ -19,20 +19,19 @@ By injecting the crafted input, attackers aim to alter the logic of database que
     public class NoSQLInjectionController {
     
         @PostMapping
-        public void login(@RequestParam String username, @RequestParam String password) {
+        public void login(@RequestParam String userName, @RequestParam String password) {
             MongoClientURI uri = new MongoClientURI("mongodb://localhost:27017");
             MongoClient mongoClient = new MongoClient(uri);
-        
+    
             try {
                 DB database = mongoClient.getDB("test");
                 DBCollection collection = database.getCollection("users");
-        
+    
                 BasicDBObject query = new BasicDBObject();
-                query.put("username", username);
-                query.put("password", password);
-        
+                query.put("$where", "this.sharedWith == \"" + userName + "\" && this.password == \"" + password + "\"");
+    
                 DBCursor cursor = collection.find(query);
-        
+    
                 while (cursor.hasNext()) {
                     System.out.println(cursor.next());
                 }
@@ -41,7 +40,6 @@ By injecting the crafted input, attackers aim to alter the logic of database que
             }
         }
     }
-
   ```
 
 === Javascript
