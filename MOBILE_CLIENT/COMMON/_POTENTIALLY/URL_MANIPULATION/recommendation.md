@@ -1,4 +1,4 @@
-Ut is crucial to take proactive measures to protect your applications from URL manipulation attacks. Consider the following recommendations:
+It is crucial to take proactive measures to protect your applications from URL manipulation attacks. Consider the following recommendations:
 
 * Input Validation: Implement strict input validation mechanisms to ensure that URLs used for content fetching are properly formatted and adhere to expected patterns. This can include checking for valid URL schemes, enforcing expected domain names, and validating query parameters.
 * Whitelist Approach: Maintain a whitelist of trusted domains or sources from which your application fetches content. Only allow requests to these trusted sources to minimize the risk of accessing malicious or unauthorized content.
