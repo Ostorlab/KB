@@ -2,7 +2,7 @@ To mitigate risks associated with exporting receivers in Android applications, e
 
 === "XML"
 	```xml
-    <receiver android:name=".MyReceiver" android:exported="true">
+    <receiver android:name=".MyReceiver" android:exported="true" android:permission="your_permission">
         <intent-filter>
             <action android:name="android.intent.action.ACTION1" />
             <action android:name="android.intent.action.ACTION2" />
