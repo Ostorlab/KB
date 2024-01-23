@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [ "*" ]
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 jobs:
   ruff:
     runs-on: ubuntu-latest
