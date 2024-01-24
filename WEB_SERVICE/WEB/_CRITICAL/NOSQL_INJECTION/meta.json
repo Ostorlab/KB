@@ -9,7 +9,7 @@
   "security_issue": true,
   "categories": {
     "CWE_TOP_25": [
-      "CWE-1286",
+      "CWE_1286",
       "CWE_943"
     ],
     "GDPR": [
