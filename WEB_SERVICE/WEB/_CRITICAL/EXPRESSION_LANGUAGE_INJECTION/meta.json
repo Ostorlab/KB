@@ -9,8 +9,7 @@
   "security_issue": true,
   "categories": {
     "CWE_TOP_25": [
-      "CWE_20",
-      "CWE_917"
+      "CWE_20"
     ],
     "GDPR": [
       "ART_5",

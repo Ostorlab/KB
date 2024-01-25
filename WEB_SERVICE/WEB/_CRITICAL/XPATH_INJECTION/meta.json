@@ -9,9 +9,6 @@
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
-    "CWE_TOP_25": [
-      "CWE_643"
-    ],
     "GDPR": [
       "ART_32"
     ],

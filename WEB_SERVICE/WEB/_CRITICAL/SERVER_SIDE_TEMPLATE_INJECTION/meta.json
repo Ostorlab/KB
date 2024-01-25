@@ -10,8 +10,7 @@
   "security_issue": true,
   "categories": {
     "CWE_TOP_25": [
-      "CWE_94",
-      "CWE_116"
+      "CWE_94"
     ],
     "GDPR": [
       "ART_5",
@@ -19,7 +18,6 @@
     ],
     "PCI_STANDARDS":[
       "REQ_6_5",
-      "REQ_6_6",
       "REQ_11_3"
     ]
   }

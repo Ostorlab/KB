@@ -8,10 +8,6 @@
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
-    "CWE_TOP_25": [
-      "CWE_1286",
-      "CWE_943"
-    ],
     "GDPR": [
       "ART_5",
       "ART_32"
