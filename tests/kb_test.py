@@ -957,6 +957,9 @@ def testJsonFiles_allFilesAreValid_testPasses() -> None:
         ("CWE_TOP_25", CWE_TOP_25),
         ("GDPR", GDPR),
         ("PCI_STANDARDS", PCI_STANDARDS),
+        ("OWASP_ASVS_L1", OWASP_ASVS_L1),
+        ("OWASP_ASVS_L2", OWASP_ASVS_L2),
+        ("OWASP_ASVS_L3", OWASP_ASVS_L3),
     ],
 )
 def testJsonFiles_allFilesHaveCorrectCategories_testPasses(
