@@ -56,3 +56,6 @@ def testKbEntries_always_namesOfTheEntryFolderShouldAllBeUnique() -> None:
     assert "PATH_TRAVERSAL" in entry_names
     assert "XPATH_INJECTION" in entry_names
     assert "XML_INJECTION" in entry_names
+    assert "WEB_PATH_TRAVERSAL" in entry_names
+    assert "WEB_XPATH_INJECTION" in entry_names
+    assert "WEB_XML_INJECTION" in entry_names
