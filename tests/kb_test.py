@@ -41,3 +41,18 @@ def testJsonFiles_allFilesAreValid_testPasses() -> None:
             # Check the format of the references
             references = json_data["references"]
             assert isinstance(references, dict), "references must be a dictionary."
+
+
+def testKbEntries_always_namesOfTheEntryFolderShouldAllBeUnique() -> None:
+    """Ensure all the folders of the KB entries are unique across mobile & web (& potentially any new group)
+    Example of the PATH_TRAVERSAL entry:
+        MOBILE_CLIENT/ANDROID/_MEDIUM/PATH_TRAVERSAL/meta.json
+        WEB_SERVICE/WEB/_HIGH/PATH_TRAVERSAL/meta.json
+    """
+    json_files = glob.glob("**/*.json", recursive=True)
+    entry_names = [f.split("/")[3] for f in json_files]
+
+    assert len(entry_names) == len(set(entry_names))
+    assert "PATH_TRAVERSAL" in entry_names
+    assert "XPATH_INJECTION" in entry_names
+    assert "XML_INJECTION" in entry_names
