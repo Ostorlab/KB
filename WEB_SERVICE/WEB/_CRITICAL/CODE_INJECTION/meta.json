@@ -11,8 +11,7 @@
   "categories": {
     "CWE_TOP_25": [
       "CWE_20",
-      "CWE_94",
-      "CWE_95"
+      "CWE_94"
     ],
     "GDPR": [
       "ART_5",
