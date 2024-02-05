@@ -11,7 +11,7 @@ To prevent NoSQL injection attacks, consider the following  measures:
 
 ### Examples
 
-=== Java
+=== "Java"
 
   ```java
     import com.mongodb.*;
@@ -48,7 +48,7 @@ To prevent NoSQL injection attacks, consider the following  measures:
   ```
 
 
-=== Javascript
+=== "Javascript"
 
   ```javascript
     const MongoClient = require('mongodb').MongoClient;
@@ -87,7 +87,7 @@ To prevent NoSQL injection attacks, consider the following  measures:
 
 
 
-=== Php
+=== "Php"
 
   ```php
     <?php

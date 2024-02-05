@@ -10,7 +10,7 @@ To mitigate the risk of LDAP injection, consider the following recommendations:
 
 - __Least Privilege__: Least Privilege principle is a rule of the thumb advice to minimize the impact of compromised services.
 
-=== Java
+=== "Java"
   ```java
   import java.util.Hashtable;
   import javax.naming.Context;
@@ -64,7 +64,7 @@ To mitigate the risk of LDAP injection, consider the following recommendations:
   }
   ```
 
-=== JavaScript
+=== "JavaScript"
   ```javascript
   // Mitigated JavaScript code with input validation and parameterized query
   const ldap = require('ldapjs');
@@ -100,7 +100,7 @@ To mitigate the risk of LDAP injection, consider the following recommendations:
   }
   ```
 
-=== PHP
+=== "PHP"
   ```php
   <?php
   // Mitigated PHP code with input validation and parameterized query

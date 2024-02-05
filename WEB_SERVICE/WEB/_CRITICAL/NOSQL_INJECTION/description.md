@@ -9,7 +9,7 @@ By injecting the crafted input, attackers aim to alter the logic of database que
 
 ### Examples
 
-=== Java
+=== "Java"
   ```java
     import com.mongodb.*;
     import org.springframework.web.bind.annotation.*;
@@ -42,7 +42,7 @@ By injecting the crafted input, attackers aim to alter the logic of database que
     }
   ```
 
-=== Javascript
+=== "Javascript"
 
   ```javascript
     const MongoClient = require('mongodb').MongoClient;
@@ -76,7 +76,7 @@ By injecting the crafted input, attackers aim to alter the logic of database que
     });
   ```
 
-=== Php
+=== "Php"
 
   ```php
     <?php

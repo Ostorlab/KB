@@ -4,7 +4,7 @@
 - __Disable dangerous XML features__: if not needed, disable external entity expansion to reduce the attack surface and mitigate the risk of XXE vulnerabilities.
 
 
-=== Java
+=== "Java"
   ```java
   import org.w3c.dom.Document;
   import org.w3c.dom.Element;
@@ -50,7 +50,7 @@
   }
   ```
 
-=== JavaScript
+=== "JavaScript"
   ```javascript
   const userInput = '<maliciousTag>Payload</maliciousTag>';
   
@@ -83,7 +83,7 @@
   }
   ```
 
-=== PHP
+=== "PHP"
   ```php
   <?php
   $userInput = '<maliciousTag>Payload</maliciousTag>';

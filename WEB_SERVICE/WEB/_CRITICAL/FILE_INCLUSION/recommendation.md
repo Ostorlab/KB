@@ -6,7 +6,7 @@ To address File Inclusion vulnerabilities, consider the following recommendation
 - **Use File Mapping Array**: Create an array that assigns unique indexes to allowed files. Each index corresponds to a specific file within your application.
 
 
-=== PHP
+=== "PHP"
   ```php
   <?php
   
@@ -28,7 +28,7 @@ To address File Inclusion vulnerabilities, consider the following recommendation
   ?>
   ```
 
-=== JSP
+=== "JSP"
   ```jsp
   <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
   <%@ page import="java.util.List" %>
@@ -51,7 +51,7 @@ To address File Inclusion vulnerabilities, consider the following recommendation
   %>
   ```
 
-=== SSI
+=== "SSI"
   ```ssi
   <!DOCTYPE html>
   <html>

@@ -5,7 +5,7 @@
 
 ### Examples
 
-=== Ruby
+=== "Ruby"
   ```ruby
   # app.rb
   require 'sinatra'
@@ -28,7 +28,7 @@
   end
   ```
 
-=== PHP
+=== "PHP"
   ```php
   <!-- index.php -->
   <?php
@@ -43,7 +43,7 @@
   ?>
   ```
 
-=== Python
+=== "Python"
   ```python
   from flask import Flask, render_template
   from flask import request

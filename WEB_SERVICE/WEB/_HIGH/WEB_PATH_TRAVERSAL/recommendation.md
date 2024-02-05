@@ -6,7 +6,7 @@ To mitigate the risk of path traversal, consider the following recommendations:
 - __Check path containment__: After validating the supplied input, append the input to the base directory and use a platform filesystem API to canonicalize the path. Verify that the canonicalized path is contained within the base directory.
 
 
-=== Java
+=== "Java"
   ```java
   import org.springframework.boot.SpringApplication;
   import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -66,7 +66,7 @@ To mitigate the risk of path traversal, consider the following recommendations:
   }
   ```
 
-=== JavaScript
+=== "JavaScript"
   ```javascript
   const express = require('express');
   const bodyParser = require('body-parser');
@@ -113,7 +113,7 @@ To mitigate the risk of path traversal, consider the following recommendations:
   });
   ```
 
-=== PHP
+=== "PHP"
   ```php
   <?php
   // Save this file as index.php and run it using: php -S localhost:8000

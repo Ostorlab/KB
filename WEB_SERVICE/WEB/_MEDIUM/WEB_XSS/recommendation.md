@@ -7,7 +7,7 @@ In general, cases, preventing XSS vulnerabilities requires 2-step protection:
 
 ### Examples
 
-=== Java
+=== "Java"
   ```java
   import org.apache.commons.text.StringEscapeUtils;
   import javax.servlet.http.*;
@@ -24,7 +24,7 @@ In general, cases, preventing XSS vulnerabilities requires 2-step protection:
       }
   }
   ```
-=== JavaScript
+=== "JavaScript"
   ```javascript
   const express = require('express');
   const app = express();
@@ -42,7 +42,7 @@ In general, cases, preventing XSS vulnerabilities requires 2-step protection:
   ```
 
 
-=== PHP
+=== "PHP"
   ```php
     <!DOCTYPE html>
     <html>

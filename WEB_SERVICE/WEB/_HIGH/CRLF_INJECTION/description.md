@@ -19,7 +19,7 @@ A type of CRLF attack that targets systems utilizing Memcached, a distributed me
 A broader attack that sometimes involves CRLF injection. In this scenario, an attacker tricks the server into making requests to internal resources by injecting malicious input containing CRLF sequences. The attacker may exploit this to access sensitive information, pivot through internal systems, or perform unauthorized actions on behalf of the server.
 
 
-=== Python
+=== "Python"
   ```python
   import flask
   from flask import request
@@ -38,7 +38,7 @@ A broader attack that sometimes involves CRLF injection. In this scenario, an at
   app.run(host="0.0.0.0", port=8080)
   ```
 
-=== Request
+=== "Request"
   ```http
   GET /?header=GET%20/?name=A:a%0a%0dA:d%0d%0d%0a%0dInjected-Header&username=abc HTTP/1.1
   Host: localhost
@@ -46,7 +46,7 @@ A broader attack that sometimes involves CRLF injection. In this scenario, an at
   Referrer: http://localhost/
   ```
 
-=== Response
+=== "Response"
   ```http
   HTTP/1.1 200 OK
   Server: Werkzeug/2.3.7 Python/3.10.12
