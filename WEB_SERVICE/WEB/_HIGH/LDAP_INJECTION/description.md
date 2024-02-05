@@ -1,7 +1,7 @@
 LDAP Injection involves exploiting web-based applications that generate LDAP statements using user input. In cases where an application fails to properly sanitize user input, attackers can manipulate LDAP statements by injecting special keywords into the query, an attack that is similar to SQL Injection.
 
 
-=== Java
+=== "Java"
   ```java
   import java.util.Hashtable;
   import javax.naming.Context;
@@ -54,7 +54,7 @@ LDAP Injection involves exploiting web-based applications that generate LDAP sta
   }
   ```
 
-=== JavaScript
+=== "JavaScript"
   ```javascript
   const ldap = require('ldapjs');
   
@@ -79,7 +79,7 @@ LDAP Injection involves exploiting web-based applications that generate LDAP sta
   });
   ```
 
-=== PHP
+=== "PHP"
   ```php
   <?php
   // Vulnerable PHP code with LDAP Injection

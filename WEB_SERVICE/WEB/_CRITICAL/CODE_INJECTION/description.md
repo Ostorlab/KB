@@ -3,7 +3,7 @@ Code Injection refers to a category of attack methods involving the insertion of
 Code Injection sets itself apart from Command Injection by the fact that an attacker's capabilities are constrained solely by the functionalities inherent in the target programming language. For instance, if an attacker successfully injects PHP code into an application and executes it, their actions are restricted by the capabilities of PHP. On the other hand, Command Injection involves exploiting pre-existing code to execute system commands.
 
 
-=== Ruby
+=== "Ruby"
   ```ruby
   print "Enter math equation: "
   user_input = gets.chomp
@@ -16,7 +16,7 @@ Code Injection sets itself apart from Command Injection by the fact that an atta
   end
   ```
 
-=== PHP
+=== "PHP"
   ```php
   <?php
   $userInput = $_POST['expression']; 
@@ -33,7 +33,7 @@ Code Injection sets itself apart from Command Injection by the fact that an atta
   ```
 
 
-=== Python
+=== "Python"
   ```python
   try:
       user_input = input("Enter a math expression: ")

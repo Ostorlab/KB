@@ -1,7 +1,7 @@
 XML injection vulnerabilities occur when user input is improperly incorporated into a server-side XML document or SOAP message. Exploiting this vulnerability involves manipulating XML metacharacters to potentially alter the XML structure. The impact varies based on the function utilizing the XML document, ranging from disrupting application logic to unauthorized actions or unauthorized access to sensitive data.
 
  
-=== Java
+=== "Java"
   ```java
   import org.w3c.dom.Document;
   import org.w3c.dom.Element;
@@ -40,7 +40,7 @@ XML injection vulnerabilities occur when user input is improperly incorporated i
   }
   ```
 
-=== JavaScript
+=== "JavaScript"
   ```javascript
   const userInput = '<maliciousTag>Payload</maliciousTag>';
   
@@ -65,7 +65,7 @@ XML injection vulnerabilities occur when user input is improperly incorporated i
   }
   ```
 
-=== PHP
+=== "PHP"
   ```php
   <?php
   $userInput = '<maliciousTag>Payload</maliciousTag>';

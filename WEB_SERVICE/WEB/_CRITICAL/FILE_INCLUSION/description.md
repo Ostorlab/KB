@@ -8,7 +8,7 @@ File inclusion vulnerabilities can be divided into two major categories:
 - Remote File Inclusion (RFI): Although not very common in modern web apps, if present, this vulnerability may allow for remote code execution by including malicious.
 
 
-=== PHP
+=== "PHP"
   ```php
   <?php
   
@@ -18,7 +18,7 @@ File inclusion vulnerabilities can be divided into two major categories:
   ?>
   ```
 
-=== JSP
+=== "JSP"
   ```jsp
   <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
   
@@ -30,7 +30,7 @@ File inclusion vulnerabilities can be divided into two major categories:
   %>
   ```
 
-=== SSI
+=== "SSI"
   ```ssi
   <!DOCTYPE html>
   <html>

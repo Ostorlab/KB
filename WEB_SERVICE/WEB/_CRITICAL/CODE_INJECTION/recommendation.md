@@ -12,7 +12,7 @@ To mitigate code injection vulnerabilities, here are some possible mitigations:
 - __Least Privilege Principle__: Although not specifically related to code injection, least privilege principle can help reduce the impact of vulnerabilities by reducing the privilege an attacker might obtain if they manage to successfully compromise the system.
 
 
-=== Ruby
+=== "Ruby"
   ```ruby
   print "Enter math equation: "
   user_input = gets.chomp
@@ -28,7 +28,7 @@ To mitigate code injection vulnerabilities, here are some possible mitigations:
   end
   ```
 
-=== PHP
+=== "PHP"
   ```php
   <?php
   $userInput = $_POST['expression']; 
@@ -47,7 +47,7 @@ To mitigate code injection vulnerabilities, here are some possible mitigations:
   ?>
   ```
 
-=== Python
+=== "Python"
   ```python
   import re
   

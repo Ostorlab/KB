@@ -2,7 +2,7 @@ SQL Injection is a vulnerability where attackers inject malicious SQL queries in
 
 ### Examples
 
-=== Java
+=== "Java"
   ```java
     import java.sql.*;
     
@@ -33,7 +33,7 @@ SQL Injection is a vulnerability where attackers inject malicious SQL queries in
 
   ```
 
-=== JavaScript
+=== "JavaScript"
   ```javascript
     const mysql = require('mysql');
     
@@ -63,7 +63,7 @@ SQL Injection is a vulnerability where attackers inject malicious SQL queries in
     connection.end();
   ```
 
-=== PHP
+=== "PHP"
   ```php
     <?php
     // Vulnerable PHP code prone to SQL Injection

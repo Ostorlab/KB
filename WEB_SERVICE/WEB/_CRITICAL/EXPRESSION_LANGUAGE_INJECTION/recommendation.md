@@ -10,7 +10,7 @@ To secure the application against Expression Language Injection (EL Injection), 
 
 ### Example
 
-=== Java
+=== "Java"
   ```java
     @RestController
     public class MathExpressionController {

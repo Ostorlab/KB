@@ -17,7 +17,7 @@ including user session or account information; perform actions on behalf of the 
 
 ### Examples
 
-=== Java
+=== "Java"
   ```java
   import javax.servlet.http.*;
   import java.io.*;
@@ -34,7 +34,7 @@ including user session or account information; perform actions on behalf of the 
 
   ```
 
-=== JavaScript
+=== "JavaScript"
   ```javascript
   const express = require('express');
   const app = express();
@@ -49,7 +49,7 @@ including user session or account information; perform actions on behalf of the 
   });
   ```
 
-=== PHP
+=== "PHP"
   ```php
     <!DOCTYPE html>
     <html>

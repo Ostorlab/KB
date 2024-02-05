@@ -2,7 +2,7 @@
 - __Avoid setting header name from user input__: Allowing users to control http header names can lead to several security issues including CRLF injection.
 - __User input sanitization__: in some cases, it might be possible to achieve CRLF injection if the web application concatenates user input into response headers or cookies, therefore, user input should be sanitized from special characters. 
 
-=== Request
+=== "Request"
   ```http
   GET /?page=login%0D%0ACustom-Header:%20vulnerable HTTP/1.1
   Host: localhost
@@ -10,7 +10,7 @@
   Referrer: http://localhost/
   ```
 
-=== Response
+=== "Response"
   ```http
   HTTP/1.1 200 OK
   Date: Wed, 05 Jan 2024 12:00:00 GMT

@@ -7,7 +7,7 @@ To mitigate the risk of server-side include injection vulnerabilities, consider 
 - __Use suEXEC__: Use suEXEC to restrict the permissions of the user running SSI directives.
 
 
-=== SSI
+=== "SSI"
   ```ssi
   <!--#if expr="$user_input =~ /^[a-zA-Z0-9_\-]+$/i" -->
      <!--#include virtual="/web/$user_input" -->

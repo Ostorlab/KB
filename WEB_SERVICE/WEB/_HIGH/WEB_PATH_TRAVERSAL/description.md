@@ -3,7 +3,7 @@ Path traversal vulnerabilities occur when user input is improperly handled by a 
 The impact of path traversal vulnerabilities can range from disclosing sensitive information to executing arbitrary code, depending on the context in which the vulnerability is exploited.
 
  
-=== Java
+=== "Java"
   ```java
   import org.springframework.boot.SpringApplication;
   import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -52,7 +52,7 @@ The impact of path traversal vulnerabilities can range from disclosing sensitive
   }
   ```
 
-=== JavaScript
+=== "JavaScript"
   ```javascript
   const express = require('express');
   const bodyParser = require('body-parser');
@@ -87,7 +87,7 @@ The impact of path traversal vulnerabilities can range from disclosing sensitive
   });
   ```
 
-=== PHP
+=== "PHP"
   ```php
   <?php
   // Save this file as index.php and run it using: php -S localhost:8000
