@@ -6,7 +6,7 @@ Developers should instead consider one of the following options:
 - [Android's verifiable AppLinks](https://developer.android.com/training/app-links/verify-android-applinks)  
 - [iOS associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains)
 
-## Kotlin
+### Kotlin
 
 you need to have `/.well-known/assetlinks.json` hosted on your backend with a format like this:
 
@@ -61,7 +61,7 @@ you need to have `/.well-known/assetlinks.json` hosted on your backend with a fo
 	mAuthRequest.set(authRequestBuilder.build())
 	```
 
-## iOS
+### iOS
 
 For iOS, you need to have `/.well-known/apple-app-site-association` hosted on your backend with format like this:
 
@@ -136,7 +136,7 @@ For iOS, you need to have `/.well-known/apple-app-site-association` hosted on yo
     }
 	```
 
-## Multiplatform
+### Multiplatform
 
 === "Gradle"
 	```groovy

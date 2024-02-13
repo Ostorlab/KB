@@ -6,7 +6,7 @@ An example attack scenario is when a malicious app claims the custom scheme used
 
 Attackers can **bypass user interaction** by leveraging certain techniques like express authentication flow or use OAuth parameters that are meant to skip the consent prompt if the user gave their consent before.
 
-## Kotlin
+### Kotlin
 
 === "AndroidManifest.xml"
 	```xml
@@ -36,7 +36,7 @@ Attackers can **bypass user interaction** by leveraging certain techniques like 
 	mAuthRequest.set(authRequestBuilder.build())
 	```
 
-## iOS
+### iOS
 
 === "Info.plist"
 	```xml
@@ -95,7 +95,7 @@ Attackers can **bypass user interaction** by leveraging certain techniques like 
     }
 	```
 
-## Multiplatform
+### Multiplatform
 
 === "Gradle"
 	```groovy
