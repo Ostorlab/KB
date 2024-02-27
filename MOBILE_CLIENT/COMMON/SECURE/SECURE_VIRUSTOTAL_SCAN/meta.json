@@ -1,5 +1,5 @@
 {
-  "risk_rating": "info",
+  "risk_rating": "secure",
   "short_description": "VirusTotal Malware analysis.",
   "references": {
     "Virustotal": "https://www.virustotal.com/"
