@@ -1,1 +1,1 @@
-Malware analysis by multiple Antiviruses using VirusTotal has report .
+Malware analysis by multiple Antiviruses using VirusTotal.
