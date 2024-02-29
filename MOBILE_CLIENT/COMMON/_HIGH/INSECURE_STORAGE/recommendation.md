@@ -7,56 +7,56 @@
 
 === "Kotlin"
   ```kotlin
-import android.content.Context
-import android.os.Bundle
-import android.widget.Button
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.security.crypto.EncryptedSharedPreferences
-import androidx.security.crypto.MasterKeys
-import java.io.IOException
-
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var encryptedSharedPreferences: SharedPreferences
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        // Initialize encrypted shared preferences
-        initializeEncryptedSharedPreferences()
-
-        val loginButton: Button = findViewById(R.id.login_button)
-        loginButton.setOnClickListener {
-            // Dummy authentication process
-            val token = authenticate("username", "password") // authentication logic
-
-            // Store token securely in encrypted shared preferences
-            storeTokenInSharedPreferences(token)
-        }
-    }
-
-    private fun initializeEncryptedSharedPreferences() {
-        try {
-            val masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
-            encryptedSharedPreferences = EncryptedSharedPreferences.create(
-                "secure_preferences",
-                masterKeyAlias,
-                applicationContext,
-                EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-                EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
-            )
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-    }
-
-    private fun storeTokenInSharedPreferences(token: String) {
-        encryptedSharedPreferences.edit().putString("jwt_token", token).apply()
-        Toast.makeText(this, "Token stored securely.", Toast.LENGTH_SHORT).show()
-    }
-}
+  import android.content.Context
+  import android.os.Bundle
+  import android.widget.Button
+  import android.widget.Toast
+  import androidx.appcompat.app.AppCompatActivity
+  import androidx.security.crypto.EncryptedSharedPreferences
+  import androidx.security.crypto.MasterKeys
+  import java.io.IOException
+  
+  class MainActivity : AppCompatActivity() {
+  
+      private lateinit var encryptedSharedPreferences: SharedPreferences
+  
+      override fun onCreate(savedInstanceState: Bundle?) {
+          super.onCreate(savedInstanceState)
+          setContentView(R.layout.activity_main)
+  
+          // Initialize encrypted shared preferences
+          initializeEncryptedSharedPreferences()
+  
+          val loginButton: Button = findViewById(R.id.login_button)
+          loginButton.setOnClickListener {
+              // Dummy authentication process
+              val token = authenticate("username", "password") // authentication logic
+  
+              // Store token securely in encrypted shared preferences
+              storeTokenInSharedPreferences(token)
+          }
+      }
+  
+      private fun initializeEncryptedSharedPreferences() {
+          try {
+              val masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
+              encryptedSharedPreferences = EncryptedSharedPreferences.create(
+                  "secure_preferences",
+                  masterKeyAlias,
+                  applicationContext,
+                  EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                  EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+              )
+          } catch (e: IOException) {
+              e.printStackTrace()
+          }
+      }
+  
+      private fun storeTokenInSharedPreferences(token: String) {
+          encryptedSharedPreferences.edit().putString("jwt_token", token).apply()
+          Toast.makeText(this, "Token stored securely.", Toast.LENGTH_SHORT).show()
+      }
+  }
   ```
 
 

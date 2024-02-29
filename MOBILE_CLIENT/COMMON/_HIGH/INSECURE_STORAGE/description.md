@@ -6,44 +6,44 @@ Insecure storage does not only occur when the application writes to world-readab
 
 === "Kotlin"
   ```kotlin
-import android.os.Bundle
-import android.os.Environment
-import android.widget.Button
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.OutputStreamWriter
-
-class MainActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val loginButton: Button = findViewById(R.id.login_button)
-        loginButton.setOnClickListener {
-            // Dummy authentication process
-            val token = authenticate("username", "password") // authentication logic
-
-            // Store token in public storage
-            storeTokenInPublicStorage(token)
-        }
-    }
-
-    private fun storeTokenInPublicStorage(token: String) {
-        val filePath = "/sdcard/insecure_app/jwt_config.txt"
-        val file = File(filePath)
-        try {
-            val outputStreamWriter = OutputStreamWriter(FileOutputStream(file))
-            outputStreamWriter.write(token)
-            outputStreamWriter.close()
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-    }
-}
+  import android.os.Bundle
+  import android.os.Environment
+  import android.widget.Button
+  import android.widget.Toast
+  import androidx.appcompat.app.AppCompatActivity
+  import java.io.File
+  import java.io.FileOutputStream
+  import java.io.IOException
+  import java.io.OutputStreamWriter
+  
+  class MainActivity : AppCompatActivity() {
+  
+      override fun onCreate(savedInstanceState: Bundle?) {
+          super.onCreate(savedInstanceState)
+          setContentView(R.layout.activity_main)
+  
+          val loginButton: Button = findViewById(R.id.login_button)
+          loginButton.setOnClickListener {
+              // Dummy authentication process
+              val token = authenticate("username", "password") // authentication logic
+  
+              // Store token in public storage
+              storeTokenInPublicStorage(token)
+          }
+      }
+  
+      private fun storeTokenInPublicStorage(token: String) {
+          val filePath = "/sdcard/insecure_app/jwt_config.txt"
+          val file = File(filePath)
+          try {
+              val outputStreamWriter = OutputStreamWriter(FileOutputStream(file))
+              outputStreamWriter.write(token)
+              outputStreamWriter.close()
+          } catch (e: IOException) {
+              e.printStackTrace()
+          }
+      }
+  }
   ```
 
 
