@@ -1,4 +1,5 @@
 """Module responsible for interacting with the OpenAI API to generate KB entries."""
+
 import dataclasses
 import enum
 import json

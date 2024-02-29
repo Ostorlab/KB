@@ -1,4 +1,5 @@
 """Fixtures for KB generator tests."""
+
 import os
 
 
