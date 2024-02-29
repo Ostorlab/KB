@@ -4,7 +4,7 @@
   "references": {
     "Virustotal": "https://www.virustotal.com/"
   },
-  "title": "VirusTotal scan with security vulnerabilities (MD5 based search)",
+  "title": "VirusTotal scan flagged malicious asset(s) (MD5 based search)",
   "privacy_issue": true,
   "security_issue": true
 }
