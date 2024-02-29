@@ -35,7 +35,7 @@ Below are examples of incorrect CORS configuration on different popular framewor
     app.listen(6069);
   ```
 
-=== Spring Boot
+=== "Spring Boot"
    ```java
    
        import org.springframework.boot.autoconfigure.SpringBootApplication
