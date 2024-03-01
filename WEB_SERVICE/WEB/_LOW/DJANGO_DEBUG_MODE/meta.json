@@ -10,7 +10,7 @@
   "security_issue": true,
   "categories": {
     "PCI_STANDARDS":[
-      "REQ_6_5_5"
+      "REQ_6_5"
     ],
     "OWASP_ASVS_L3": [
       "V14_3_2"
