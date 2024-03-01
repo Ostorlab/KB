@@ -1,0 +1,23 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "The application uses a malformed NSExceptionDomains structure.",
+  "references": {
+    "Custom App Transport Security (ATS) configurations for named domains.": "https://developer.apple.com/documentation/bundleresources/information_property_list/nsapptransportsecurity/nsexceptiondomains"
+  },
+  "title": "Non-Conformity with Expected Structure for NSExceptionDomains",
+  "cvss_v3_vector": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:L",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_9"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_9"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_2_2",
+      "REQ_6_2"
+    ]
+  }
+}
