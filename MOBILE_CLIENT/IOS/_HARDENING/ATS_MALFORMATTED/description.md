@@ -1,8 +1,8 @@
-The issue stems from an incorrect or malformed structure within the `NSExceptionDomains` configuration. The `NSExceptionDomains` structure is expected to follow a specific format, which includes a dictionary of domain names or IP addresses, each associated with a dictionary specifying various security-related attributes such as `NSIncludesSubdomains`, `NSExceptionAllowsInsecureHTTPLoads`, `NSExceptionMinimumTLSVersion`, and `NSExceptionRequiresForwardSecrecy`. The non-conformity with this expected structure may lead to security vulnerabilities or unexpected behavior in the application.
+The issue stems from an incorrect or malformed structure within the `NSExceptionDomains` configuration. The `NSExceptionDomains` structure is expected to follow a specific format, which includes a dictionary of domain names or IP addresses, each associated with a dictionary specifying various security-related attributes such as `NSIncludesSubdomains`, `NSExceptionAllowsInsecureHTTPLoads`, `NSExceptionMinimumTLSVersion`, and `NSExceptionRequiresForwardSecrecy`. Failing to conform with this expected structure may lead to security vulnerabilities or unexpected behavior in the application.
 
 #### Correct example : 
 
-=== "Xml"
+=== "XML"
  ```xml
     <dict>
         <key>NSExceptionDomains</key>
@@ -23,7 +23,7 @@ The issue stems from an incorrect or malformed structure within the `NSException
 
 #### Incorrect example : 
 
-=== "Xml"
+=== "XML"
  ```xml
     <dict>
         <key>NSExceptionDomains</key>
