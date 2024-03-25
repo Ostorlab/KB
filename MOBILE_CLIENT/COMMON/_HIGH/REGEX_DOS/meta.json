@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "medium",
   "short_description": "Regular expression denial of service happens when user input is used in the construction of the regex.",
   "references": {
     "OWASP : Regular expression Denial of Service - ReDoS": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
