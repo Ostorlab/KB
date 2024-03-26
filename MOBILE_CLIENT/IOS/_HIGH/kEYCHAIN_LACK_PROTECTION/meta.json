@@ -8,12 +8,5 @@
     "title": "Insecure Storage: Lacking Keychain Protection",
     "privacy_issue": true,
     "security_issue": true,
-    "categories": {
-        "OWASP_MASVS_L1": [
-            "MSTG-PLATFORM-1: 'No sensitive data is stored in the application sandbox'"
-        ],
-        "OWASP_MASVS_L2": [
-            "MSTG-PLATFORM-2: 'Sensitive data is encrypted in storage'"
-        ]
-    }
+    "categories": {}
 }
