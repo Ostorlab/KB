@@ -1,0 +1,19 @@
+{
+    "risk_rating": "high",
+    "short_description": "Insecure Storage: Lacking Keychain Protection vulnerability allows sensitive data stored on the device to be easily accessed by malicious actors.",
+    "references": {
+        "Secure Mobile Biometric Authentication": "https://blog.ostorlab.co/secure-mobile-biometric-authentication.html",
+        "Apple documentation: Restricting keychain item accessibility": "https://developer.apple.com/documentation/security/keychain_services/keychain_items/restricting_keychain_item_accessibility"
+    },
+    "title": "Insecure Storage: Lacking Keychain Protection",
+    "privacy_issue": true,
+    "security_issue": true,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG-PLATFORM-1: 'No sensitive data is stored in the application sandbox'"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG-PLATFORM-2: 'Sensitive data is encrypted in storage'"
+        ]
+    }
+}
