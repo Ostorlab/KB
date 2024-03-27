@@ -2,19 +2,11 @@ Regular Expression Denial of Service (ReDoS) is a security vulnerability that oc
 
 Some examples of evil patterns include:
 
-- (a+)+
-
-
-- ([a-zA-Z]+)*
-
-
-- (a|aa)+
-
-
-- (a|a?)+
-
-
-- (.*a){x} for x > 10
+- `(a+)+`
+- `([a-zA-Z]+)*`
+- `(a|aa)+`
+- `(a|a?)+`
+- `(.*a){x} for x > 10`
 
 And the following code examples are illustrations of incorrect implementations: 
 
