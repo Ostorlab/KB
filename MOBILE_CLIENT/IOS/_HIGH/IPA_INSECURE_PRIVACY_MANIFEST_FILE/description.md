@@ -8,11 +8,11 @@ The file should record the types of data collected by your app or third-party SD
 
 If your application or its third-party SDKs is using one of the APIs listed below (required reason APIs):
 
-File timestamp APIs
-System boot time APIs
-Disk space APIs
-Active keyboard APIs
-User defaults APIs
+- File timestamp APIs
+- System boot time APIs
+- Disk space APIs
+- Active keyboard APIs
+- User defaults APIs
 
 Then you need to declare in the privacy manifest file the approved reasons that accurately reflect your use of each of these APIs and the data derived from their use. 
 These declared reasons must be consistent with your app’s functionality as presented to users, and you may not use the APIs or derived data for tracking.
