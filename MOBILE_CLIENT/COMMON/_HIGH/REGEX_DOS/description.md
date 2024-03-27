@@ -1,5 +1,22 @@
 Regular Expression Denial of Service (ReDoS) is a security vulnerability that occurs when user input is utilized to construct a regular expression. In the presence of a carefully crafted regex pattern, the application may expend a substantial amount of resources, potentially resulting in a denial of service.
 
+Some examples of evil patterns include:
+
+- (a+)+
+
+
+- ([a-zA-Z]+)*
+
+
+- (a|aa)+
+
+
+- (a|a?)+
+
+
+- (.*a){x} for x > 10
+
+And the following code examples are illustrations of incorrect implementations: 
 
 === "Java"
   ```java
