@@ -1,0 +1,17 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Regular expression denial of service happens when user input is used in the construction of the regex.",
+  "references": {
+    "OWASP : Regular expression Denial of Service - ReDoS": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+    "CWE-1333: Inefficient Regular Expression Complexity": "https://cwe.mitre.org/data/definitions/1333.html"
+  },
+  "title": "Regular expression denial of service",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "PCI_STANDARDS":[
+      "REQ_6_2",
+      "REQ_6_4"
+    ]
+  }
+}
