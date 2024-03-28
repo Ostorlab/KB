@@ -1,1 +1,1 @@
-It is recommended that you use secure means of connection and information exchange with Bluetooth, which is possible with the createRfcommSocketToServiceRecord, listenUsingRfcommWithServiceRecord and similar methods.
+It is recommended that you use secure means of connection and information exchange with Bluetooth, which is possible with the `createRfcommSocketToServiceRecord`, `listenUsingRfcommWithServiceRecord` that allow the socket connection to be encrypted to mitigate the risk of MiTM attacks.

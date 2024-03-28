@@ -1,1 +1,1 @@
-Remove unused permissions.
+Remove unused declared permissions from the application's manifest
