@@ -1,6 +1,4 @@
-**Input Validation:** Thoroughly validate user-supplied input to ensure it conforms to the expected format and does
-not contain any malicious characters or sequences. Sanitize and normalize file paths to prevent any 
-unauthorized navigation.
+**Path containment:** Normalize the path and check whether it's contained within the destination directory or not. 
 
 === "Dart"
 	```dart

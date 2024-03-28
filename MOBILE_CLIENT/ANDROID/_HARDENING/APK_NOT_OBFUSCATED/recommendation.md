@@ -1,6 +1,6 @@
-Design the application to add the following protections and slow reverse engineering of the application:
+Design the application with the following protections to make it harder to reverse engineer it:
 
-* Obfuscate Java source code with tools like Proguard.
+#### Obfuscate Java source code with tools like Proguard.
 
 === "Gradle"
 	```gradle
@@ -17,7 +17,7 @@ Design the application to add the following protections and slow reverse enginee
 This tells Gradle to use ProGuard for code obfuscation in the release build. You can then create a "proguard-rules.pro"
 file in the app's "app" directory to configure the obfuscation rules.
 
-* Obfuscate Java source code with tools like Dexguard.
+#### Obfuscate Java source code with tools like Dexguard.
 
 === "Gradle"
 	```gradle
@@ -41,6 +41,8 @@ By default, when you enable code obfuscation using DexGuard, it will use its own
 * Verification application signing certificate during runtime by checking `context.getPackageManager().signature`
 * Check application installer to ensure it matches the Android Market by calling `context.getPackageManager().getInstallerPackageName`
 * Check running environment at runtime
+
+#### Check if the app is running on an emulator
 
 === "Java"
 	```java
@@ -68,7 +70,7 @@ By default, when you enable code obfuscation using DexGuard, it will use its own
 
 
 
-* Check debug flag at runtime
+#### Check debug flag at runtime
 
 === "Java"
 	```java

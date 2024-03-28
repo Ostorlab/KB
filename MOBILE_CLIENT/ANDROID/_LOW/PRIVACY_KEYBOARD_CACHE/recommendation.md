@@ -1,0 +1,1 @@
+Sensitive input fields should be marked as `password` input field to avoid having sensitive data logged into keyboard cache. 
