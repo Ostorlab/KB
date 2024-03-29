@@ -13,32 +13,34 @@ Here's an overview of the steps and an example to guide you in setting up the Pr
 Inside your PrivacyInfo.xcprivacy file, you will need to add key-value pairs that represent the APIs your app or its third-party SDKs use, along with the reasons for their use. The keys should be the names of the APIs, and the values should be strings that describe the purpose of using these APIs in your app.
 
 Here's an example structure of what your PrivacyInfo.xcprivacy might look like. This example assumes the use of "File timestamp APIs" and "User defaults APIs":
-xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-  <dict>
-      <key>NSPrivacyAccessedAPITypes</key>
-      <array>
-          <dict>
-              <key>NSPrivacyAccessedAPIType</key>
-              <string>NSPrivacyAccessedAPICategoryDiskSpace</string>
-              <key>NSPrivacyAccessedAPITypeReasons</key>
-              <array>
-                  <string>E174.1</string>
-              </array>
-          </dict>
-          <dict>
-              <key>NSPrivacyAccessedAPIType</key>
-              <string>NSPrivacyAccessedAPICategoryUserDefaults</string>
-              <key>NSPrivacyAccessedAPITypeReasons</key>
-              <array>
-                  <string>CA92.1</string>
-              </array>
-          </dict>
-      </array>
-  </dict>
-</plist>
+=== "XML"
+	```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+      <dict>
+          <key>NSPrivacyAccessedAPITypes</key>
+          <array>
+              <dict>
+                  <key>NSPrivacyAccessedAPIType</key>
+                  <string>NSPrivacyAccessedAPICategoryDiskSpace</string>
+                  <key>NSPrivacyAccessedAPITypeReasons</key>
+                  <array>
+                      <string>E174.1</string>
+                  </array>
+              </dict>
+              <dict>
+                  <key>NSPrivacyAccessedAPIType</key>
+                  <string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+                  <key>NSPrivacyAccessedAPITypeReasons</key>
+                  <array>
+                      <string>CA92.1</string>
+                  </array>
+              </dict>
+          </array>
+      </dict>
+    </plist>
+	```
 
 ### Step 3: Ensure Accuracy and Compliance
 **Reflect App Functionality:** Ensure that the reasons listed accurately reflect how your app uses the data derived from these APIs.
