@@ -1,6 +1,23 @@
-Android Network Security Configuration enables a declarative setting of the application network security.
+Android Network Security Configuration is an XML file that enables a declarative setting of the application network security.
 
-The features enable configuring:
+### Add Network security configuration to your application:
+
+1- Create a new XML file in your app's res/xml directory. Name it `network_security_config.xml`, or any other suitable name.
+2- Define Security Configurations, see examples below
+3- Apply Configuration to the Manifest:
+
+=== "XML"
+	```xml
+	<application
+			android:networkSecurityConfig="@xml/network_security_config"
+			<!-- Other attributes -->
+			>
+			<!-- Other configurations -->
+	</application>	
+	```
+
+
+### Network security configuration examples
 
 * Custom Certificate Authority with support for debug only settings
 
