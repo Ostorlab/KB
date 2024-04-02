@@ -1,25 +1,79 @@
-* Random numbers play a key role in ensuring unguessable Initialization Vectors generation
-* In Android applications, `SecureRandom` class generates random numbers secure enough for use in encryption
-* There exists multiple providers, which are the internal SecureRandom class implementations, and their role is to
-  provide a hash function
-* A Default provider will be selected if not specified
-* Crypto Provider was deprecated in Android 7.0 (API level 24) and removed in Android 9.0 (API level 28) due to it's
-  unsafe SHA1PRNG algorithm
-* It is recommended not to use Crypto Provider
-* If Crypto Provider is specified and SecureRandom is used, NoSuchProviderException will always occur in devices running
-  Android 9.0
-  and higher, and NoSuchProviderException will occur even in devices running Android 7.0 and higher if targetSdkVersion>
-  =24
-* For this reason, generally, the use of SecureRandom without specifying the provider is recommended
+In order to mitigate IV related cryptographic flaws, consider the following recommendations:
 
-=== "Java"
-	```java
-	import java.security.SecureRandom;
-	[...]
-	    SecureRandom random = new SecureRandom();
-	    byte [] IV = new byte [128];
-	    random.nextBytes(IV);
-	    IvParameterSpec ivParams = new IvParameterSpec(iv)
-	[...]
+- **Unique IV for each encryption:** It's essential to use a unique IV for each encryption operation. Reusing the same IV with the same key can lead to security vulnerabilities, such as exposing patterns in the ciphertext or facilitating attacks like replay attacks.
+- **Randomness:** IVs should be generated using a cryptographically secure random number generator (`SecureRandom` for Java, `SecRandomCopyBytes` for Swift). This randomness ensures that attackers cannot predict the IV, which would weaken the security of the encryption.
+- **IV length:** The length of the IV depends on the encryption algorithm being used. For example, in AES, the IV length is typically 128 bits (16 bytes) for AES-128, 192 bits (24 bytes) for AES-192, and 256 bits (32 bytes) for AES-256. It's important to use IVs of the appropriate length for the encryption algorithm.
+
+
+
+
+
+=== "Kotlin"
+	```kotlin
+	import java.security.SecureRandom
+	import javax.crypto.spec.IvParameterSpec
+	
+	object IVGenerator {
+			fun generateIV(length: Int): ByteArray {
+					val iv = ByteArray(length)
+					val secureRandom = SecureRandom()
+					secureRandom.nextBytes(iv)
+					return iv
+			}
+	}
+	
+	fun main() {
+			val ivLength = 16 // Length of IV in bytes
+			val iv = IVGenerator.generateIV(ivLength)
+			println("Generated IV: ${bytesToHex(iv)}")
+	}
+	
+	fun bytesToHex(bytes: ByteArray): String {
+			return bytes.joinToString("") { "%02x".format(it) }
+	}
 	```
 
+=== "Swift"
+	```swift
+	import CryptoKit
+
+	func generateIV(length: Int) -> Data {
+			var iv = Data(count: length)
+			_ = iv.withUnsafeMutableBytes { ivPtr in
+					guard let ivBaseAddress = ivPtr.baseAddress else { return }
+					_ = SecRandomCopyBytes(kSecRandomDefault, length, ivBaseAddress)
+			}
+			return iv
+	}
+	
+	let ivLength = 16 // Length of IV in bytes
+	let iv = generateIV(length: ivLength)
+	print("Generated IV: \(iv.hexEncodedString())")
+	
+	extension Data {
+			func hexEncodedString() -> String {
+					return map { String(format: "%02hhx", $0) }.joined()
+			}
+	}
+	```
+
+=== "Flutter"
+	```flutter
+	import 'dart:typed_data';
+	import 'dart:math';
+	
+	Uint8List generateIV(int length) {
+		final random = Random.secure();
+		return Uint8List.fromList(List.generate(length, (index) => random.nextInt(256)));
+	}
+	
+	void main() {
+		final ivLength = 16; // Length of IV in bytes
+		final iv = generateIV(ivLength);
+		print('Generated IV: ${bytesToHex(iv)}');
+	}
+	
+	String bytesToHex(Uint8List bytes) {
+		return bytes.map((byte) => byte.toRadixString(16).padLeft(2, '0')).join();
+	}
+	```

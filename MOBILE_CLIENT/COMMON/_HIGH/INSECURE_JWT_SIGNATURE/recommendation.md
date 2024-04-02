@@ -1,4 +1,6 @@
-To mitigate these vulnerabilities, it is crucial to implement robust security measures, including using strong encryption and secure algorithms, practicing secure key management, properly validating and verifying tokens, and following best practices for secure token transmission and storage.
+To mitigate JWT signature vulnerabilities, it is crucial to use standardized JWT libraries, properly set them up and verify signature and expiration of JWT tokens before any operation.  
+
+It's also crucial to securely store the `secret key` as it can render any security mitigations useless if it gets leaked
 
 === "Kotlin"
 	```kotlin

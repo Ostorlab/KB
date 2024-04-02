@@ -1,6 +1,8 @@
-To mitigate Mobile SQL Injection vulnerabilities, it is crucial to implement several measures. Firstly, developers should adopt secure coding practices and input validation techniques to ensure that user inputs are properly sanitized and validated before being used in SQL queries. Additionally, the use of parameterized queries or prepared statements can help prevent SQL Injection attacks by separating SQL code from user input. It is also important to regularly update and patch mobile applications to address any known vulnerabilities. Lastly, implementing a robust web application firewall (WAF) can provide an additional layer of protection by detecting and blocking SQL Injection attempts.
+To mitigate Mobile SQL Injection vulnerabilities, Consider the following: 
 
-### Code Examples:
+- Use parameterized queries or prepared statements to separate SQL code from user input.
+- Sanitize and validate user input before inserting it into database to help mitigate second-order SQL injection.
+- Regularly update SQL driver to address any known vulnerabilities.
 
 
 === "Kotlin"
@@ -8,31 +10,93 @@ To mitigate Mobile SQL Injection vulnerabilities, it is crucial to implement sev
   import java.sql.Connection
   import java.sql.DriverManager
   import java.sql.PreparedStatement
-  import java.sql.ResultSet
   
   fun main() {
-      val input = readLine() ?: ""
-      val connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", "username", "password")
-      val statement = connection.prepareStatement("SELECT * FROM users WHERE username = ?")
-      statement.setString(1, sanitizeInput(input))
-      val resultSet = statement.executeQuery()
+      val url = "jdbc:mysql://localhost:3306/mydatabase"
+      val username = "username"
+      val password = "password"
   
-      while (resultSet.next()) {
-          val username = resultSet.getString("username")
-          val password = resultSet.getString("password")
-          println("Username: $username, Password: $password")
+      var connection: Connection? = null
+      var preparedStatement: PreparedStatement? = null
+  
+      try {
+          connection = DriverManager.getConnection(url, username, password)
+          val sql = "INSERT INTO users (name, email) VALUES (?, ?)"
+          preparedStatement = connection.prepareStatement(sql)
+  
+          // Set values for the parameters
+          preparedStatement.setString(1, "John")
+          preparedStatement.setString(2, "john@example.com")
+  
+          // Execute the prepared statement
+          preparedStatement.executeUpdate()
+      } catch (e: Exception) {
+          e.printStackTrace()
+      } finally {
+          preparedStatement?.close()
+          connection?.close()
+      }
+  }
+  ```
+
+=== "Swift"
+  ```swift
+  import Foundation
+  import SQLite3
+  
+  func insertUser(name: String, email: String) {
+      var db: OpaquePointer?
+      var statement: OpaquePointer?
+  
+      let dbPath = "path_to_your_database_file.db"
+  
+      if sqlite3_open(dbPath, &db) == SQLITE_OK {
+          let insertStatementString = "INSERT INTO users (name, email) VALUES (?, ?)"
+  
+          if sqlite3_prepare_v2(db, insertStatementString, -1, &statement, nil) == SQLITE_OK {
+              sqlite3_bind_text(statement, 1, (name as NSString).utf8String, -1, nil)
+              sqlite3_bind_text(statement, 2, (email as NSString).utf8String, -1, nil)
+  
+              if sqlite3_step(statement) == SQLITE_DONE {
+                  print("Successfully inserted row.")
+              } else {
+                  print("Could not insert row.")
+              }
+          } else {
+              print("INSERT statement could not be prepared.")
+          }
+  
+          sqlite3_finalize(statement)
+      } else {
+          print("Unable to open database.")
       }
   
-      resultSet.close()
-      statement.close()
-      connection.close()
+      sqlite3_close(db)
   }
+  ```
+
+=== "Flutter"
+  ```dart
+  import 'package:sqflite/sqflite.dart';
+  import 'package:path/path.dart';
   
-  fun sanitizeInput(input: String): String {
-      // Implement your input sanitization logic here
-      // For example, you can use prepared statements or input validation libraries
-      // to prevent SQL injection attacks
-      return input
+  void insertUser(String name, String email) async {
+    Database database = await openDatabase(
+      join(await getDatabasesPath(), 'mydatabase.db'),
+      onCreate: (db, version) {
+        return db.execute(
+          "CREATE TABLE users(id INTEGER PRIMARY KEY, name TEXT, email TEXT)",
+        );
+      },
+      version: 1,
+    );
+  
+    await database.transaction((txn) async {
+      await txn.rawInsert(
+        'INSERT INTO users(name, email) VALUES(?, ?)',
+        [name, email],
+      );
+    });
   }
   ```
   

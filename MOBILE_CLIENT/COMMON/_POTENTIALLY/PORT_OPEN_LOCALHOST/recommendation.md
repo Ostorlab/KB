@@ -1,2 +1,6 @@
-Access to the port should be restricted to authorized applications only.
-It is also critical to ensure the server is immune from vulnerabilities and does not expose any critical functionality.
+Before creating a local server for your application, consider the following:
+
+- Avoid exposing sensitive files over the local server.
+- Implement some form of authentication and/or authorization.
+- Consider alternative implementations rather than using a local server.
+- Avoid listening on `0.0.0.0` to prevent other users on the network from accessing the server.

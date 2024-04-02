@@ -1,12 +1,13 @@
-To mitigate the risks associated with HTML injection vulnerabilities, the following recommendations should be implemented:
+To mitigate the risks associated with HTML injection vulnerabilities, consider the following recommendations:
 
-- Sanitize User Input: Perform proper input validation and sanitization on user-supplied data that will be rendered as part of HTML code. Use encoding techniques to ensure that user input is treated as data and not executable code.
+- **Contextual Output Encoding:** Encode user-generated content based on its context. Different contexts, such as HTML attributes, JavaScript code, or CSS styles, require specific encoding techniques to prevent HTML injection attacks. Use appropriate encoding functions or libraries based on the context.
 
-- Use Templating Engines: Utilize secure templating engines or frameworks that automatically escape user input by default, such as Handlebars, Twig, or Django templates. These engines help prevent HTML injection by properly handling user input.
+- **Sanitize User Input:** Perform proper input validation and sanitization on user-supplied data by stripping any special HTML characters before rendering it as part of HTML code. 
 
-- Whitelisting Input: Implement whitelisting or allow listing approaches to validate and restrict input for HTML elements, attributes, and protocols. Only allow specific tags, attributes, and protocols that are necessary for the application's functionality.
+- **Disable Javascript if not needed**: in the context of mobile webviews, disabling Javascript can help significantly reduce the impact of any potential HTML injection.
 
-- Contextual Output Encoding: Encode user-generated content based on its context. Different contexts, such as HTML attributes, JavaScript code, or CSS styles, require specific encoding techniques to prevent HTML injection attacks. Use appropriate encoding functions or libraries based on the context.
+- **Use Logic-less Templating Engines:** Templating engines like `Mustache` can help prevent HTML injection by properly handling user input.
+
 
 === "Dart"
 	```dart
@@ -95,32 +96,31 @@ To mitigate the risks associated with HTML injection vulnerabilities, the follow
 	```Swift
 	import UIKit
 	import WebKit
-	import DOMPurify
 	
 	class ViewController: UIViewController, WKNavigationDelegate {
-	    
-	    private var webView: WKWebView!
-	
-	    override func viewDidLoad() {
-	        super.viewDidLoad()
-	        
-	        webView = WKWebView(frame: view.bounds)
-	        webView.navigationDelegate = self
-	        view.addSubview(webView)
-	        
-	        let name = "John Doe"
-	        let plainText = "Hello, \(name)!"
-	        let sanitizedText = sanitizeHTML(plainText)
-	        let html = "<html><body><h1>\(sanitizedText)</h1></body></html>"
-	        webView.loadHTMLString(html, baseURL: nil)
-	    }
-	    
-	    private func sanitizeHTML(_ html: String) -> String {
-	        guard let sanitized = DOMPurify.sanitize(html) else {
-	            return ""
-	        }
-	        return sanitized
-	    }
+			
+			private var webView: WKWebView!
+			
+			override func viewDidLoad() {
+					super.viewDidLoad()
+					
+					webView = WKWebView(frame: view.bounds)
+					webView.navigationDelegate = self
+					view.addSubview(webView)
+					
+					let name = "John Doe"
+					let plainText = "Hello, \(name)!"
+					let sanitizedText = sanitizeHTML(plainText)
+					let html = "<html><body><h1>\(sanitizedText)</h1></body></html>"
+					webView.loadHTMLString(html, baseURL: nil)
+			}
+			
+			private func sanitizeHTML(_ html: String) -> String {
+					// Replace any '<' and '>' characters with HTML entities
+					let sanitized = html.replacingOccurrences(of: "<", with: "&lt;")
+															.replacingOccurrences(of: ">", with: "&gt;")
+					return sanitized
+			}
 	}
 	```
 

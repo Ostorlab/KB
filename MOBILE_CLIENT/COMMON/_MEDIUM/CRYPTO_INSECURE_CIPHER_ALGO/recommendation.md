@@ -10,15 +10,8 @@ To ensure the utmost security when using any cryptographic algorithm, it is esse
 
 - Cipher Mode: Always employ secure cipher mode settings, such as AES-GCM (Galois/Counter Mode) or AES-CBC (Cipher Block Chaining) with appropriate padding.
 
-- Key Management: Implement a robust key management system to safeguard encryption keys, ensuring they are not compromised.
+- Key Management: Use secure storage mechanisms (Keystore for Android, Keychain for iOS) to safely store cryptographic keys.
 
-- Regular Updates: Stay up-to-date with the latest cryptographic standards and practices to address emerging threats and vulnerabilities.
-
-- Secure Implementation: Pay attention to secure coding practices during algorithm implementation to prevent potential vulnerabilities.
-
-- Secure Transmission: When exchanging encrypted data, ensure secure transmission protocols such as TLS (Transport Layer Security) are used to protect data in transit.
-
-By adhering to these best practices and adopting secure algorithms like AES and ECC, you can significantly enhance the security of your cryptographic operations and safeguard sensitive information from unauthorized access. Avoiding the use of insecure algorithms, such as DES and Triple DES, is crucial to maintaining a strong security posture in today's rapidly evolving threat landscape.
 
 === "Dart"
 	```dart
