@@ -1,6 +1,8 @@
-Design the application to add the following protections and slow reverse engineering of the application:
+Below are steps you can consider to make your application less prone to reverse engineering :
 
-* Obfuscate Java source code with tools like Proguard.
+#### Obfuscate Java source code with Proguard.
+
+To add Proguard to you application, add the following to the `build.gradle` file:
 
 === "Gradle"
 	```gradle
@@ -17,7 +19,55 @@ Design the application to add the following protections and slow reverse enginee
 This tells Gradle to use ProGuard for code obfuscation in the release build. You can then create a "proguard-rules.pro"
 file in the app's "app" directory to configure the obfuscation rules.
 
-* Obfuscate Java source code with tools like Dexguard.
+Example `proguard-rules.pro`:
+
+```
+# Keep the names of classes in this package
+-keep class com.example.myapplication.** { *; }
+
+# Keep all public and protected methods in these classes
+-keepclassmembers class com.example.myapplication.** {
+    public protected *;
+}
+
+# Keep all native method names
+-keepclassmembers class * {
+    native <methods>;
+}
+
+# Keep all fields with the specified name
+-keepclassmembers class * {
+    private int myField;
+}
+
+# Keep all classes that implement Parcelable
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+# Keep all Enum classes
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# Keep all annotations
+-keepattributes *Annotation*
+
+# Preserve all entry points (like main methods)
+-keep public class * {
+    public static void main(java.lang.String[]);
+}
+
+# Keep all Serializable classes
+-keep class * implements java.io.Serializable {
+    *;
+}
+```
+
+#### Obfuscate Java source code with Dexguard.
+
+To enable Dexguard in your application, you can add the following to the `build.gradle` file:
 
 === "Gradle"
 	```gradle
@@ -41,6 +91,10 @@ By default, when you enable code obfuscation using DexGuard, it will use its own
 * Verification application signing certificate during runtime by checking `context.getPackageManager().signature`
 * Check application installer to ensure it matches the Android Market by calling `context.getPackageManager().getInstallerPackageName`
 * Check running environment at runtime
+
+#### Check if the app is running on an emulator
+
+You can add the following check to your application to detect if it's running on an emulator.
 
 === "Java"
 	```java
@@ -68,7 +122,9 @@ By default, when you enable code obfuscation using DexGuard, it will use its own
 
 
 
-* Check debug flag at runtime
+#### Check debug flag at runtime
+
+Similarly, you can check if the application is in debug mode during runtime
 
 === "Java"
 	```java

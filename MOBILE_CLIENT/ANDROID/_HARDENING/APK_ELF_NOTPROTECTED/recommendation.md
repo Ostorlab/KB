@@ -1,5 +1,5 @@
-If `Stack canary` is missing, Compilers such as GCC enable this feature if requested through compiler options:
+To ensure that the stack canary feature is enabled when compiling with GCC, you can specify one of the compiler options:
 
-* `-fstack-protector`: Check for stack smashing in functions with vulnerable objects. This includes functions with buffers larger than 8 bytes or calls to `alloca`.
-* `-fstack-protector-strong`: Like `-fstack-protector`, but also includes functions with local arrays or references to local frame addresses.
-* `-fstack-protector-all`: Check for stack smashing in every function.
+- For basic stack protection, use `-fstack-protector`.
+- For stronger protection including functions with local arrays or references to local frame addresses, use `-fstack-protector-strong`.
+- For comprehensive protection checking in every function, use `-fstack-protector-all`.

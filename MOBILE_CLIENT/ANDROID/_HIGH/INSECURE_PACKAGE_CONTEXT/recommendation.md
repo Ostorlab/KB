@@ -1,8 +1,8 @@
 To mitigate the vulnerability associated with insecure package context creation using createPackageContext with CONTEXT_INCLUDE_CODE and CONTEXT_IGNORE_SECURITY flags, developers should: 
 
-1- Avoid using createPackageContext by baking any necessary components into the app itself rather than using separate apk files.
+1- Avoid using `createPackageContext` by baking any necessary components into the app itself rather than using separate apk files.
 
-2- if using createPackageContext is necessary, avoid using the flags `CONTEXT_INCLUDE_CODE` and `CONTEXT_IGNORE_SECURITY`, instead use `CONTEXT_RESTRICTED` which may disable specific features but makes the application more robust against third party application attacks.
+2- if using `createPackageContext` is necessary, avoid using the flags `CONTEXT_INCLUDE_CODE` and `CONTEXT_IGNORE_SECURITY`, instead use `CONTEXT_RESTRICTED` which may disable specific features but makes the application more robust against third party application attacks.
 
 3- When checking if the package is in the list of installed packages, avoid loose comparisons like `startsWith` or `endsWith`, instead try matching the package name exactly
 
