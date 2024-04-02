@@ -14,7 +14,7 @@ Inside your PrivacyInfo.xcprivacy file, you will need to add key-value pairs tha
 
 Here's an example structure of what your PrivacyInfo.xcprivacy might look like. This example assumes the use of "File timestamp APIs" and "User defaults APIs":
 === "XML"
-    ```xml
+  ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
@@ -40,7 +40,7 @@ Here's an example structure of what your PrivacyInfo.xcprivacy might look like. 
           </array>
       </dict>
     </plist>
-    ```
+  ```
 
 ### Step 3: Ensure Accuracy and Compliance
 **Reflect App Functionality:** Ensure that the reasons listed accurately reflect how your app uses the data derived from these APIs.
