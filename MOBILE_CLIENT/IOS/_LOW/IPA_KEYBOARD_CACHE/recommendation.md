@@ -1,16 +1,18 @@
 Keyboard caching is caused by the `UITextInputTraits` protocol supported by `UITextField`, `UITextView` and `UISearchBar`.
 
-- `var autocorrectionType: UITextAutocorrectionType` determines whether auto-correction is enabled during typing.
-  When auto-correction is enabled, the text object tracks unknown words and suggests suitable replacements, replacing
-  the typed text automatically unless the user overrides the replacement. The default value of this property is
-  `UITextAutocorrectionTypeDefault`, which for most input methods enables auto-correction.
+To prevent keyboard caching from leaking input of sensitive fields, consider:
 
-- `var secureTextEntry: BOOL` determines whether text copying and caching are disabled and hides the text being
+- `autocorrectionType` determines whether auto-correction is enabled during typing. The default value of this property is `UITextAutocorrectionTypeDefault`, which for most input methods enables auto-correction.
+
+```swift
+let textField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+textField.autocorrectionType = .no // Disable autocorrection
+```
+
+- `isSecureTextEntry` determines whether text copying and caching are disabled and hides the text being
   entered for `UITextField`. The default value of this property is `NO`.
 
-=== "C"
-	```c
-	textInput.autocorrectionType = UITextAutocorrectionTypeNo;
-	textInput.secureTextEntry = YES;
-	```
-
+```swift
+let textField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+textField.isSecureTextEntry = true // Enable secure text entry
+```
