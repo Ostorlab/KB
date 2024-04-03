@@ -4,7 +4,7 @@ To mitigate the risks associated with HTML injection vulnerabilities, consider t
 
 - **Sanitize User Input:** Perform proper input validation and sanitization on user-supplied data by stripping any special HTML characters before rendering it as part of HTML code. 
 
-- **Disable Javascript if not needed**: in the context of mobile webviews, disabling Javascript can help significantly reduce the impact of any potential HTML injection.
+- **Disable Javascript if not needed:** in the context of mobile webviews, disabling Javascript can help significantly reduce the impact of any potential HTML injection.
 
 - **Use Logic-less Templating Engines:** Templating engines like `Mustache` can help prevent HTML injection by properly handling user input.
 

@@ -1,7 +1,7 @@
 To safely store account credentials, consider the following recommendations:
 
-- For Android, use `AccountManager` to store account credentials
-- For iOS, use `keychain` to store account credentials
+- For Android, use `AccountManager` to store account credentials.
+- For iOS, use `keychain` to store account credentials.
 
 === "Kotlin"
   ```kotlin
