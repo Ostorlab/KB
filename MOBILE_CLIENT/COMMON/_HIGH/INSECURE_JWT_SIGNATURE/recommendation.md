@@ -1,6 +1,6 @@
 To mitigate JWT signature vulnerabilities, it is crucial to use standardized JWT libraries, properly set them up and verify signature and expiration of JWT tokens before any operation.  
 
-It's also crucial to securely store the `secret key` as it can render any security mitigations useless if it gets leaked
+It's also crucial to securely store the `secret key` as it can render any security mitigations useless if it gets leaked.
 
 === "Kotlin"
 	```kotlin

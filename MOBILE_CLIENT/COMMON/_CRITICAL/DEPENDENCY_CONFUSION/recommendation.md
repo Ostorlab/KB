@@ -1,4 +1,6 @@
-### 1. Create a Scoped Package:
+When managing project dependencies, it's essential to leverage scoped packages for better organization and security. In the case of NPM, follow these steps to create a scoped package, set up a scoped registry, prevent scope takeover, and define dependencies effectively:
+
+#### 1. Create a Scoped Package:
 
 If you haven't already, create a scoped package for your project. You can do this by following the [instructions](https://docs.npmjs.com/creating-an-organization):
 
@@ -11,7 +13,7 @@ On the npm "Sign In" page, enter your account details and click Sign In.
 5. (Optional) On the organization invitation page, type the npm username or email address of a person you would like to add to your organization as a member and select a team to invite them to, then click Invite.
 6. Click Continue.
 
-### 2. Set up Scoped Registry:
+#### 2. Set up Scoped Registry:
 
 Configure your scoped registry by adding the following line to your `.npmrc` file:
 
@@ -19,11 +21,11 @@ Configure your scoped registry by adding the following line to your `.npmrc` fil
 @[ORG]:registry = https://reg.[ORG].internal/
 ```
 
-### 3. Prevent Scope Takeover:
+#### 3. Prevent Scope Takeover:
 
 Ensure that the scope you intend to use (@ORG) is secured and cannot be taken over by an attacker. This includes verifying ownership and maintaining control over the associated organization or user account.
 
-### 4. Define Dependencies:
+#### 4. Define Dependencies:
 
 Define dependencies within your `package.json` file, making sure to use the scope defined earlier. For example:
 
