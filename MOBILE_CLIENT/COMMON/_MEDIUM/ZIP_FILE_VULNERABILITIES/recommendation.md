@@ -1,7 +1,7 @@
+To mitigate the risks associated with zip files, consider the following:
+
+- For each zip entry to extract, standardize the path using a standard library and check if it's contained within the extraction directory.
 - Implement proper input validation and sanitization to prevent user-supplied input from containing directory traversal sequences.
-- Use whitelisting or allowlisting approaches to validate and restrict input for file paths.
-- Ensure that the extracted file paths are constructed based on trusted and validated information rather than relying solely on user-provided data.
-- Restrict the extraction process to a specific directory or set of allowed directories.
 
 === "Dart"
 	```dart

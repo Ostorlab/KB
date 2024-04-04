@@ -1,10 +1,12 @@
-* Securely delete PII when there is no longer a business need for its retention on the device
-* Do not cache sensitive data
-* Minimize the frequency of asking for user credentials.
-* Minimize the use of APIs that access sensitive or personal user data
-* Consider a logical way to hash the user data
+* When saving PII/PHI locally, make sure they're encrypted and encryption keys are stored in the KeyChain.
+* Access to the PII information should be protected by biometric authentication.
+* If applicable, avoid caching PII information locally, instead, query it from the backend servers.
+* Securely delete PII/PHI when there is no longer a business need for its retention on the device.
+* Consider encrypting and/or hashing PHI/PII data before saving it on the device.
+* Provide users with way to withdraw consent for holding their PHI/PII data.
+* Do not cache PII/PHI data.
+* Minimize the use of third party libraries and APIs that access user data.
 * Some jurisdictions may require you to provide a privacy policy for accessing personal information.
-* If saving PII information locally is necessary, consider encrypting it before.
 * If logging PII information is necessary, set the logging level to debug so that PII doesn't in production application logs.
 
 

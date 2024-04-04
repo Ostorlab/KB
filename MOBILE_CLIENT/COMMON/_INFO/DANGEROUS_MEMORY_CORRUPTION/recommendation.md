@@ -1,1 +1,1 @@
-Prefer the use of memory safe functions or higher-level API with indirect memory allocation handling.
+This entry is informative, but no recommendations are applicable.
