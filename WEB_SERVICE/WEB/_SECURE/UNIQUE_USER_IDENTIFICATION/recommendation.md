@@ -1,1 +1,1 @@
-The implementation is secure, no recommendation to apply.
+The implementation is secure, no recommendations apply.
