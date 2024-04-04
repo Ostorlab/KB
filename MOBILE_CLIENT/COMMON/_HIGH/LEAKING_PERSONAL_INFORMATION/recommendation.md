@@ -1,4 +1,6 @@
-* Avoid saving PII/PHI data on the device unless necessary.
+* When saving PII/PHI locally, make sure they're encrypted and encryption keys are stored in the KeyChain.
+* Access to the PII information should be protected by biometric authentication.
+* If applicable, avoid caching PII information locally, instead, query it from the backend servers.
 * Securely delete PII/PHI when there is no longer a business need for its retention on the device.
 * Consider encrypting and/or hashing PHI/PII data before saving it on the device.
 * Provide users with way to withdraw consent for holding their PHI/PII data.
