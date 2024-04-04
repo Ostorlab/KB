@@ -1,7 +1,5 @@
-Heartbleed is a security bug in the OpenSSL cryptography library, a widely used implementation of Transport.
-Layer Security (TLS) protocol. It was introduced into the software in 2012 and publicly disclosed in April 2014.
+To mitigate the risk of heartbleed vulnerability, consider:
 
-Heartbleed may be exploited regardless of whether the vulnerable OpenSSL instance runs as a TLS server or client.
-It results from improper input validation (due to a missing bounds check) in the implementation of the TLS heartbeat
-extension; thus, the bug's name derives from heartbeat. Additionally, the vulnerability is classified as a buffer
-over-read, where more data can be read than should be allowed.
+- **Update OpenSSL:** Ensure that you're using the latest version of OpenSSL that contains the Heartbleed patch. Update your systems, applications, and devices to the patched version.
+- **Replace SSL Certificates:** Generate new SSL certificates for your servers and revoke the old ones. This helps prevent potential exploitation of compromised private keys.
+- **Reset User Credentials:** Encourage users to change their passwords, especially if they've logged into affected services during the period when Heartbleed was present.

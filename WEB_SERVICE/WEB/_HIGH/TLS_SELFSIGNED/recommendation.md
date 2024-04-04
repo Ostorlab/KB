@@ -1,3 +1,5 @@
-An invalid or malicious certificate might allow an attacker to spoof a trusted entity by using a
-man-in-the-middle (MITM) attack. For example, the software might connect to a malicious host while believing it is a
-trusted host, or the software might be deceived into accepting spoofed data that originates from a trusted host.
+By default, SSL certificates are validated, if it's not the case with your application, consider:
+
+1. **Avoid tampering with SSL classes:** Avoid overriding TrustManager or SSLSocketFactory to allow invalid certificates.
+2. **Certificate Pinning:** Implement certificate pinning to ensure that the application only accepts certificates from trusted sources. By hardcoding or storing trusted certificates within the application, it can verify the authenticity of the server's certificate during the SSL/TLS handshake process, thereby preventing MITM attacks using self-signed certificates.
+

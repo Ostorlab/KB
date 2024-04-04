@@ -1,4 +1,6 @@
-- remove the DNS record for the subdomain
-- regularly check your inventory and ensure the subdomain is still in use and you are still in control of everything
-  your subdomains point to.
-- choose your service provider wisely, and ensure they provide enough security measures to protect your subdomains.
+Below are recommendations to mitigate the risk of subdomain takeover attacks:
+
+- **Remove vulnerable subdomain**: Remove the DNS record for the reported vulnerable subdomain
+- **Regularly audit and monitor subdomains:** Routinely review all subdomains to ensure they are actively used and necessary.
+- **Remove unused third-party services:** Eliminate unnecessary third-party services to reduce the risk of subdomain takeover.
+- **Choose your service provider wisely:** Avoid providers with a track record of subdomain takeover issues.

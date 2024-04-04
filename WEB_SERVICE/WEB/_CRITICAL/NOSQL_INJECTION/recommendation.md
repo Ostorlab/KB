@@ -1,13 +1,10 @@
 To prevent NoSQL injection attacks, consider the following  measures:
 
-- __Input Validation and Sanitization__: Implement robust input validation to ensure that user-supplied data meets expected formats. Use sanitization techniques like whitelisting acceptable characters to prevent unwanted input.
-
-
 - __Safe Query Construction__: Construct queries using the database's specific methods or query builders provided by the API. Avoid directly concatenating user inputs into queries. Instead, use the appropriate mechanisms provided by the database API for safe query construction.
 
+- __Input Validation and Sanitization__: Implement robust input validation to ensure that user-supplied data meets expected formats. Use sanitization techniques like whitelisting acceptable characters to prevent unwanted input.
 
-- __Least Privilege Principle__: Limit the permissions granted to the application's database user. Ensure the user has only necessary privileges to reduce potential attack surface.
-
+- __Use whitelist of accepted keys__: To prevent operator injection, use a whitelist of accepted keys to prevent injection of query operators like `$where`, `$in`, `$ne`.
 
 ### Examples
 

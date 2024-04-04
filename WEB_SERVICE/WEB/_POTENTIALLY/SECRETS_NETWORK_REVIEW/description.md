@@ -2,7 +2,7 @@ The application is detected to transmit secret credentials, like SSH keys, priva
 over
 the network.
 
-Secrets can be split into three categories with different risk profiles:
+Secrets can be split into two categories with different risk profiles:
 
 * Over-billing: affects API keys that grant access to services like Google Maps and are billed by a number of requests.
   Attackers will harvest the keys to access the service without paying while the target is paying for the service.

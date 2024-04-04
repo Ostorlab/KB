@@ -1,1 +1,1 @@
-It is recommended to apply proper TLS certificate validation. A compliant solution depends on actual implementation.
+TLS certificate validation is enabled by default in almost all networking libraries, review your code and configuration to make sure you have not explicitly disabled it.

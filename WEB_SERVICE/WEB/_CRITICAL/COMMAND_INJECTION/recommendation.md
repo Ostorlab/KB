@@ -1,15 +1,13 @@
 To mitigate the command injection vulnerability, here are some recommendations:
 
-- __Input Validation and Sanitization__: Always validate and sanitize user inputs. Ensure that any user-supplied data passed to the system shell or command execution functions is sanitized and restricted to expected characters or patterns.
+- __Avoid Executing User-Supplied Input__: Refrain from executing user-supplied data directly within commands or system shells. Validate and use whitelists or predefined options wherever possible.
 
+- __Avoid Concatenation__: Avoid directly concatenating user input into system commands, instead pass it in a separate list of arguments.
+
+- __Input Validation and Sanitization__: Always validate and sanitize user inputs. Ensure that any user-supplied data passed to the system shell or command execution functions is sanitized and restricted to expected characters or patterns.
 
 - __Least Privilege Principle__: Run your application or services with the least possible privileges required to perform necessary actions. Avoid running services with superuser or administrator privileges.
 
-
-- __Avoid Executing User-Supplied Input__: Refrain from executing user-supplied data directly within commands or system shells. Validate and use whitelists or predefined options wherever possible.
-
-
-- __Use Security Libraries__: Employ security-focused libraries or frameworks that handle user inputs and command execution securely. These libraries often provide functions or methods that mitigate common vulnerabilities.
 
 ### Examples
 
