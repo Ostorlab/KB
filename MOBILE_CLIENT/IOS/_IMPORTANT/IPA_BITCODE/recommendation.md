@@ -1,4 +1,4 @@
-Please provide an application where the `Enable Bitcode` option is set to No.
+Please provide an application where the `Enable Bitcode` option is set to `No` for more in-depth scan results.
 
 1. Open Xcode.
 2. Open your project in Xcode.
