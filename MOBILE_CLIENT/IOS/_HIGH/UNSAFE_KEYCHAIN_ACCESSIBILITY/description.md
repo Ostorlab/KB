@@ -1,4 +1,4 @@
-Insecure storage occurs when sensitive data is stored without proper protection mechanisms, such as those provided by the iOS keychain. This exposes the data to potential unauthorized access, posing a significant security risk for iOS apps.
+The platform relies on the keychain for storage, but it's configured with insecure flags.
 
 In this example, the secret password is stored in the keychain with unrestricted accessibility (`kSecAttrAccessibleAlways`), leaving it vulnerable to unauthorized access:
 

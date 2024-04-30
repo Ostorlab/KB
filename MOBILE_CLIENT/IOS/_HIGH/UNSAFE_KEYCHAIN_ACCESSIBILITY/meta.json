@@ -1,11 +1,11 @@
 {
   "risk_rating": "high",
-  "short_description": "Insecure Storage: Unsafe Keychain Accessibility vulnerability allows sensitive data stored on the device to be easily accessed by malicious actors.",
+  "short_description": "The platform uses the keychain for storage, but it's configured with insecure flags.",
   "references": {
     "Apple documentation: Restricting keychain item accessibility": "https://developer.apple.com/documentation/security/keychain_services/keychain_items/restricting_keychain_item_accessibility",
     "Secure Mobile Biometric Authentication": "https://blog.ostorlab.co/secure-mobile-biometric-authentication.html"
   },
-  "title": "Insecure Storage: Unsafe Keychain Accessibility",
+  "title": "Insecure Keychain Storage",
   "privacy_issue": true,
   "security_issue": true,
   "categories": {

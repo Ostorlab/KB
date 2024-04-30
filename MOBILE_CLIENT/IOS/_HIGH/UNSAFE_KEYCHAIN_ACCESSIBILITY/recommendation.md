@@ -1,46 +1,59 @@
-**1. Restrict Keychain Item Accessibility:**
+When simple access control requirements suffice, you can directly specify the accessibility level using `kSecAttrAccessible`. Omitting `kSecAttrAccessControl` is acceptable in these cases.
 
-   Set appropriate conditions for accessing keychain items based on the device state and user preferences.
+| Use Case                                                                         | Protection                                  | 
+|----------------------------------------------------------------------------------|---------------------------------------------|
+| Storing data always accessible                                                   | `kSecAttrAccessibleAlways`                 | 
+| Storing data accessible after first unlock                                       | `kSecAttrAccessibleAfterFirstUnlock`       | 
+| Storing data only accessible when device unlocked                                | `kSecAttrAccessibleWhenUnlocked`           |
 
-   - For sensitive data that should only be accessed when the device is unlocked, use `kSecAttrAccessibleWhenUnlocked`.
-   - If access to the keychain item is required after the user unlocks the device for the first time, use `kSecAttrAccessibleAfterFirstUnlock`.
-   - Avoid using `kSecAttrAccessibleAlways`, as it provides unrestricted access to the keychain item regardless of the device's locked state, which can compromise security.
-
-=== "Swift"
-   ```swift
-   var query: [String: Any] = [kSecClass as String: kSecClassInternetPassword,
-                               kSecAttrAccount as String: account,
-                               kSecAttrServer as String: server,
-                               kSecAttrAccessible as String: kSecAttrAccessibleWhenUnlocked,
-                               kSecValueData as String: password]
-   ```
-
-**2. Demand User Presence:**
-
-   Enhance security by requiring user presence, such as biometric authentication, before accessing sensitive data from the keychain.
-
-   - Use `SecAccessControlCreateWithFlags` to create a `SecAccessControl` instance with appropriate authentication requirements.
-   - Incorporate options such as `kSecAccessControlUserPresence` to ensure user interaction is required for accessing keychain items.
+**Example**:
 
 === "Swift"
-   ```swift
-   let access = SecAccessControlCreateWithFlags(nil,
-                                                kSecAttrAccessibleWhenUnlocked,
-                                                kSecAccessControlUserPresence,
-                                                &error);
-   ```
+	```swift
+	import Foundation
+    import Security
+    
+    func saveSecretToKeychain() {
+        let secretData = "mySecretPassword".data(using: .utf8)!
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: "myAccount",
+            kSecValueData as String: secretData,
+            kSecAttrAccessible as String: kSecAttrAccessibleAlways
+        ]
+        SecItemAdd(query as CFDictionary, nil)
+    }
+    saveSecretToKeychain()
+	```
 
-**3. Require Application-Specific Passwords:**
+For more complex security requirements, such as demanding user presence or implementing application-specific passwords, use `SecAccessControlCreateWithFlags` to create access control with additional flags.
 
-   Implement application-specific passwords to further enhance security for individual keychain items.
+| Use Case                                                                         | Protection                         | Flags                              | 
+|----------------------------------------------------------------------------------|------------------------------------|-------------------------------------|
+| Dealing with sensitive data that requires a user presence                       | `kSecAttrAccessibleWhenUnlocked`                                  | `kSecAccessControlUserPresence`    | 
+| Dealing with sensitive data that requires a specific password for extra security | `kSecAttrAccessibleWhenPasscodeSet` | `kSecAccessControlApplicationPassword` |
 
-   - Utilize `kSecAccessControlApplicationPassword` option when defining access control flags to prompt users for a specific password.
-   - Ensure that the application-specific password is distinct from the device passcode, providing an additional layer of protection for sensitive data.
+**Example**:
 
 === "Swift"
-   ```swift
-   let access = SecAccessControlCreateWithFlags(nil,
-                                                kSecAttrAccessibleWhenPasscodeSet,
-                                                kSecAccessControlBiometryAny | kSecAccessControlApplicationPassword,
-                                                &error);
-   ```
+	```swift
+	import Foundation
+    import Security
+    
+    func saveSecretToKeychain() {
+        let secretData = "mySecretPassword".data(using: .utf8)!
+        let access = SecAccessControlCreateWithFlags(
+            nil,
+            kSecAttrAccessibleWhenUnlocked,
+            kSecAccessControlUserPresence,
+            nil
+        )
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: "myAccount",
+            kSecValueData as String: secretData,
+            kSecAttrAccessControl as String: access!,
+        ]
+        SecItemAdd(query as CFDictionary, nil)
+    }
+    saveSecretToKeychain()
+    ```
