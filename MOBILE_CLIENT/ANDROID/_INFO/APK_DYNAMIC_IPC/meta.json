@@ -20,6 +20,11 @@
     "MSTG_PLATFORM_1",
     "MSTG_PLATFORM_2",
     "MSTG_PLATFORM_3"
+    ],
+  "OWASP_MASVS_v2_1": [
+    "MASVS_PLATFORM_1",
+    "MASVS_PLATFORM_2",
+    "MASVS_PLATFORM_3"
     ]
   }
 }

@@ -15,6 +15,12 @@
     ],
     "PCI_STANDARDS":[
       "REQ_6_2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_PRIVACY_1",
+      "MASVS_PRIVACY_2",
+      "MASVS_PRIVACY_3",
+      "MASVS_PRIVACY_4"
     ]
   }
 }

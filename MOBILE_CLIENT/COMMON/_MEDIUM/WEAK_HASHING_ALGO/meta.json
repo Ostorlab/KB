@@ -19,12 +19,16 @@
         "MSTG_CRYPTO_3",
         "MSTG_CRYPTO_4"
       ],
-    "PCI_STANDARDS":[
-      "REQ_2_2",
-      "REQ_3_6",
-      "REQ_3_7",
-      "REQ_6_2"
-    ]
+      "PCI_STANDARDS":[
+        "REQ_2_2",
+        "REQ_3_6",
+        "REQ_3_7",
+        "REQ_6_2"
+      ],
+      "OWASP_MASVS_v2_1": [
+        "MASVS_CRYPTO_1",
+        "MASVS_CRYPTO_2"
+      ]
     }
   }
   

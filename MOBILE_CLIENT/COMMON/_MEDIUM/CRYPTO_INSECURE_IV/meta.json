@@ -25,6 +25,10 @@
       "REQ_3_7",
       "REQ_4_2",
       "REQ_6_2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_CRYPTO_1",
+      "MASVS_CRYPTO_2"
     ]
   }
 }

@@ -21,6 +21,10 @@
       "REQ_3_3",
       "REQ_3_5",
       "REQ_6_2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_STORAGE_1",
+      "MASVS_STORAGE_2"
     ]
   }
 }

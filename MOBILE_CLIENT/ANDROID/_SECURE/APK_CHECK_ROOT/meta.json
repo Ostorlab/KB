@@ -11,6 +11,9 @@
   "categories": {
     "OWASP_RESILIENCE": [
       "MSTG_RESILIENCE_1"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_1"
     ]
   }
 }
