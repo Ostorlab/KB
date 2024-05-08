@@ -27,7 +27,7 @@
       "REQ_6_3",
       "REQ_11_3"
     ],
-    "OWASP_MASVS_L3": [
+    "OWASP_MASVS_v2_1": [
       "MASVS_PLATFORM_2",
       "MASVS_CODE_4"
     ]

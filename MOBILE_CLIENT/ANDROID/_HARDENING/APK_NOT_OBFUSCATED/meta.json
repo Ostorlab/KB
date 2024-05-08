@@ -17,7 +17,7 @@
     "PCI_STANDARDS":[
       "REQ_2_2"
     ],
-    "OWASP_MASVS_L3": [
+    "OWASP_MASVS_v2_1": [
       "MASVS_RESILIENCE_3"
     ]
   }

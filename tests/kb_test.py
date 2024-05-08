@@ -130,7 +130,7 @@ OWASP_MASVS_L2 = [
     "MSTG_CODE_9",
 ]
 
-OWASP_MASVS_L3 = [
+OWASP_MASVS_v2_1 = [
     "MASVS_PRIVACY_1",
     "MASVS_PRIVACY_2",
     "MASVS_PRIVACY_3",
@@ -999,7 +999,7 @@ def testKbEntries_always_namesOfTheEntryFolderShouldAllBeUnique() -> None:
     [
         ("OWASP_MASVS_L1", OWASP_MASVS_L1),
         ("OWASP_MASVS_L2", OWASP_MASVS_L2),
-        ("OWASP_MASVS_L3", OWASP_MASVS_L3),
+        ("OWASP_MASVS_v2_1", OWASP_MASVS_v2_1),
         ("OWASP_MASVS_RESILIENCE", OWASP_MASVS_RESILIENCE),
         ("CWE_TOP_25", CWE_TOP_25),
         ("GDPR", GDPR),
