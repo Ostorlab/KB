@@ -130,6 +130,33 @@ OWASP_MASVS_L2 = [
     "MSTG_CODE_9",
 ]
 
+OWASP_MASVS_L3 = [
+    "MASVS_PRIVACY_1",
+    "MASVS_PRIVACY_2",
+    "MASVS_PRIVACY_3",
+    "MASVS_PRIVACY_4",
+    "MASVS_CODE_1",
+    "MASVS_CODE_2",
+    "MASVS_CODE_3",
+    "MASVS_CODE_4",
+    "MASVS_RESILIENCE_1",
+    "MASVS_RESILIENCE_2",
+    "MASVS_RESILIENCE_3",
+    "MASVS_RESILIENCE_4",
+    "MASVS_PLATFORM_1",
+    "MASVS_PLATFORM_2",
+    "MASVS_PLATFORM_3",
+    "MASVS_NETWORK_1",
+    "MASVS_NETWORK_2",
+    "MASVS_AUTH_1",
+    "MASVS_AUTH_2",
+    "MASVS_AUTH_3",
+    "MASVS_CRYPTO_1",
+    "MASVS_CRYPTO_2",
+    "MASVS_STORAGE_1",
+    "MASVS_STORAGE_2",
+]
+
 OWASP_MASVS_RESILIENCE = [f"MSTG_RESILIENCE_{i}" for i in range(1, 13)]
 
 CWE_TOP_25 = [
@@ -972,6 +999,7 @@ def testKbEntries_always_namesOfTheEntryFolderShouldAllBeUnique() -> None:
     [
         ("OWASP_MASVS_L1", OWASP_MASVS_L1),
         ("OWASP_MASVS_L2", OWASP_MASVS_L2),
+        ("OWASP_MASVS_L3", OWASP_MASVS_L3),
         ("OWASP_MASVS_RESILIENCE", OWASP_MASVS_RESILIENCE),
         ("CWE_TOP_25", CWE_TOP_25),
         ("GDPR", GDPR),
