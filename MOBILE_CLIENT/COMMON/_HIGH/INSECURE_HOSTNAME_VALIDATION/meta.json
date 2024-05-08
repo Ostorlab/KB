@@ -10,10 +10,10 @@
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [
-      "MSTG_NETWORK_3"
+      "MSTG_PLATFORM_2"
     ],
     "OWASP_MASVS_L2": [
-      "MSTG_NETWORK_3"
+      "MSTG_PLATFORM_2"
     ],
     "CWE_TOP_25": [
       "CWE_20"

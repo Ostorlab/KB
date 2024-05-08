@@ -12,6 +12,15 @@
     "PCI_STANDARDS":[
       "REQ_6_2",
       "REQ_6_4"
+    ],
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L3": [
+      "MASVS_CODE_4"
     ]
   }
 }

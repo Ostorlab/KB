@@ -11,10 +11,12 @@
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [
-      "MSTG_PLATFORM_7"
+      "MSTG_PLATFORM_7",
+      "MSTG_PLATFORM_2"
     ],
     "OWASP_MASVS_L2": [
-      "MSTG_PLATFORM_7"
+      "MSTG_PLATFORM_7",
+      "MSTG_PLATFORM_2"
     ],
     "PCI_STANDARDS":[
       "REQ_2_2",

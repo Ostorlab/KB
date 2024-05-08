@@ -8,9 +8,6 @@
 	"privacy_issue": false,
 	"security_issue": true,
 	"categories": {
-		"OWASP_TOP_10": [
-			"A03:2021-Injection"
-		],
 		"OWASP_MASVS_L1": [
 			"MSTG_PLATFORM_2"
 		],
