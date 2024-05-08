@@ -27,6 +27,9 @@
       "REQ_3_7",
       "REQ_4_2",
       "REQ_6_2"
+    ],
+    "OWASP_MASVS_L3": [
+      "MASVS_NETWORK_1"
     ]
   }
 }

@@ -17,6 +17,10 @@
       "REQ_2_2",
       "REQ_6_2",
       "REQ_10_3"
+    ],
+    "OWASP_MASVS_L3": [
+      "MASVS_RESILIENCE_2",
+      "MASVS_RESILIENCE_3"
     ]
   }
 }

@@ -23,6 +23,12 @@
       "REQ_6_3",
       "REQ_7_3",
       "REQ_11_3"
+    ],
+    "OWASP_MASVS_L3": [
+      "MASVS_STORAGE_1",
+      "MASVS_RESILIENCE_2",
+      "MASVS_RESILIENCE_3",
+      "MASVS_CODE_4"
     ]
   }
 }

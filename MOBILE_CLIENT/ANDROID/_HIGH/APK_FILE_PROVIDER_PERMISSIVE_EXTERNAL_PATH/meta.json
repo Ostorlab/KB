@@ -12,11 +12,9 @@
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [
-      "MSTG_PLATFORM_2",
       "MSTG_PLATFORM_4"
     ],
     "OWASP_MASVS_L2": [
-      "MSTG_PLATFORM_2",
       "MSTG_PLATFORM_4"
     ],
     "CWE_TOP_25": [
@@ -30,6 +28,9 @@
       "REQ_2_2",
       "REQ_6_2",
       "REQ_11_3"
+    ],
+    "OWASP_MASVS_L3": [
+      "MASVS_PLATFORM_1"
     ]
   }
 }

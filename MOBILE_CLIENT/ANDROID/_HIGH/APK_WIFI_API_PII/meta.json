@@ -23,6 +23,9 @@
       "REQ_6_2",
       "REQ_6_3",
       "REQ_7_3"
+    ],
+    "OWASP_MASVS_L3" : [
+      "MASVS_PRIVACY_2"
     ]
   }
 }

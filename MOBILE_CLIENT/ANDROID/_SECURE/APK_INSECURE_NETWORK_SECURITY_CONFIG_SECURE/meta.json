@@ -13,6 +13,9 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_NETWORK_1"
+    ],
+    "OWASP_MASVS_L3": [
+      "MASVS_NETWORK_1"
     ]
   }
 }

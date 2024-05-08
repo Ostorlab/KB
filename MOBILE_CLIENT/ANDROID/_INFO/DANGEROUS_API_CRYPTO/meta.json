@@ -24,6 +24,10 @@
     "MSTG_CRYPTO_4",
     "MSTG_CRYPTO_5",
     "MSTG_CRYPTO_6"
+  ],
+  "OWASP_MASVS_L3": [
+    "MASVS_CRYPTO_1",
+    "MASVS_CRYPTO_2"
   ]
   }
 }

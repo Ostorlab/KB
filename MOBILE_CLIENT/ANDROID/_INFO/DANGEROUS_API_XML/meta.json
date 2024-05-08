@@ -15,6 +15,9 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L3": [
+      "MASVS_CODE_4"
     ]
   }
 }

@@ -8,9 +8,6 @@
     "privacy_issue": true,
     "security_issue": true,
     "categories": {
-      "OWASP_TOP_10":[
-         "A3:2017-Sensitive Data Exposure"
-      ],
       "OWASP_MASVS_L1":[
          "MSTG_PLATFORM_5",
          "MSTG_PLATFORM_7",
@@ -26,6 +23,9 @@
       "REQ_6_3",
       "REQ_6_4",
       "REQ_11_3"
-    ]
+    ],
+      "OWASP_MASVS_L3":[
+         "MASVS_CODE_4"
+      ]
     }
 }

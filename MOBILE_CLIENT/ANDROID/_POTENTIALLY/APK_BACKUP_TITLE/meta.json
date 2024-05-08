@@ -18,6 +18,9 @@
     ],
     "PCI_STANDARDS":[
       "REQ_6_2"
+    ],
+    "OWASP_MASVS_L3": [
+      "MASVS_STORAGE_2"
     ]
   }
 }

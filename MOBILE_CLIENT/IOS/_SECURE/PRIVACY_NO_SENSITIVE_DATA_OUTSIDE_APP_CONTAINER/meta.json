@@ -13,6 +13,10 @@
     ],
     "OWASP_MASVS_L2": [
       "MSTG_STORAGE_2"
+    ],
+    "OWASP_MASVS_L3": [
+      "MASVS_STORAGE_1",
+      "MASVS_STORAGE_2"
     ]
   }
 }
