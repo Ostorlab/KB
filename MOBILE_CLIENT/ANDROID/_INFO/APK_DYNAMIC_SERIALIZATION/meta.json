@@ -10,6 +10,7 @@
       "CWE_502"
     ],
     "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_8"
     ],
     "OWASP_MASVS_L2": [
     ]

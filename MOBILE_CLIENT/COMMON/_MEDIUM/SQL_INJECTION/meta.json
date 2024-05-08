@@ -13,11 +13,13 @@
       ],
       "OWASP_MASVS_L1":[
          "MSTG_PLATFORM_5",
-         "MSTG_PLATFORM_7"
+         "MSTG_PLATFORM_7",
+         "MSTG_PLATFORM_3"
       ],
       "OWASP_MASVS_L2":[
          "MSTG_PLATFORM_5",
-         "MSTG_PLATFORM_7"
+         "MSTG_PLATFORM_7",
+         "MSTG_PLATFORM_3"
       ],
     "PCI_STANDARDS":[
       "REQ_6_2",
