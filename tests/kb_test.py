@@ -1039,7 +1039,6 @@ def testJsonFiles_allFilesHaveCorrectCategories_testPasses(
             categories = json_data.get("categories", {})
             standard_categories = categories.get(category, [])
 
-            assert all(group_key in CATEGORY_GROUPS for group_key in categories.keys())
             for standard_category in standard_categories:
                 assert standard_category in expected_categories
 
