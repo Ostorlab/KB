@@ -19,7 +19,6 @@
     "OWASP_ASVS_L3": [
       "V3_4_2"
     ],
-  "categories": {
     "PCI_STANDARDS":[
       "REQ_2_2",
       "REQ_3_6",
@@ -29,6 +28,5 @@
       "REQ_6_4",
       "REQ_11_3"
     ]
-  }
   }
 }
