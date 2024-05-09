@@ -1044,7 +1044,7 @@ def testJsonFiles_allFilesHaveCorrectCategories_testPasses(
                 assert standard_category in expected_categories
 
 
-def testJsonFiles_allFilesHaveCategories_shouldBeValid() -> None:
+def testJsonFiles_whenFileHasCategories_shouldBeValid() -> None:
     """Test that all JSON files have the correct category groups."""
     path = pathlib.Path(__file__).parent.parent
     json_files = glob.glob(str(path) + "/**/*.json", recursive=True)
@@ -1058,4 +1058,7 @@ def testJsonFiles_allFilesHaveCategories_shouldBeValid() -> None:
 
             categories = json_data.get("categories", {})
 
-            assert all(group_key in CATEGORY_GROUPS for group_key in categories.keys())
+            assert (
+                all(group_key in CATEGORY_GROUPS for group_key in categories.keys())
+                is True
+            )
