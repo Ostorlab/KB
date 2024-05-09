@@ -6,6 +6,19 @@ import pathlib
 
 import pytest
 
+CATEGORY_GROUPS = [
+    "OWASP_MASVS_L1",
+    "OWASP_MASVS_L2",
+    "OWASP_MASVS_v2_1",
+    "OWASP_MASVS_RESILIENCE",
+    "CWE_TOP_25",
+    "GDPR",
+    "PCI_STANDARDS",
+    "OWASP_ASVS_L1",
+    "OWASP_ASVS_L2",
+    "OWASP_ASVS_L3",
+]
+
 OWASP_MASVS_L1 = [
     "MSTG_ARCH_1",
     "MSTG_ARCH_2",
@@ -1028,3 +1041,23 @@ def testJsonFiles_allFilesHaveCorrectCategories_testPasses(
 
             for standard_category in standard_categories:
                 assert standard_category in expected_categories
+
+
+def testJsonFiles_whenFileHasCategories_shouldBeValid() -> None:
+    """Test that all JSON files have the correct category groups."""
+    path = pathlib.Path(__file__).parent.parent
+    json_files = glob.glob(str(path) + "/**/*.json", recursive=True)
+
+    for json_file in json_files:
+        with pathlib.Path(json_file).open(encoding="utf-8") as file:
+            try:
+                json_data = json.load(file)
+            except ValueError as e:
+                pytest.fail(f"Failed to load JSON file '{json_file}': {str(e)}")
+
+            categories = json_data.get("categories", {})
+
+            assert (
+                all(group_key in CATEGORY_GROUPS for group_key in categories.keys())
+                is True
+            )
