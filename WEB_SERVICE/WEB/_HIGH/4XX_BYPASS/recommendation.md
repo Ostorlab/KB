@@ -12,7 +12,7 @@ Here are some recommendations:
 === "Python"
    ```python
    # allow only GET and POST methods for this route
-  @app.route('/limiting_method_usage', methods=['GET', 'POST'])  
+  @app.route('/limiting_method_usage', methods=['GET', 'POST'])
   def limiting_method_usage():
       if request.method == 'GET':
           return jsonify({"message": "This is a GET request"})

@@ -17,3 +17,16 @@ The 4xx-bypass exploits refer to HTTP request fuzzing techniques that allow atta
 
     '''Might get us the resource we want'''
   ```
+
+=== "Python"
+  ```python
+    import flask
+    # example of flask backend of someone who forgot a debug conditional for debugging puposes
+
+    @app.route('/vulnerable_path', methods=['GET', 'POST'])
+    def vulnerable_path():
+    dic = flask.request.args.to_dict(flat=False)
+    if "debug" in dic and dic["debug"] == ["true"]:
+        #logic that would usually require more rights
+
+  ```
