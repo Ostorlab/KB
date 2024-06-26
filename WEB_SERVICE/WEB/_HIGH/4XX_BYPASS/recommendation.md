@@ -1,7 +1,7 @@
 
 # 4XX-Bypass
 
-To mitigate the risk of 4xx-bypass vulnerabilities, organizations should implement proper access controls and authentication mechanisms to ensure that only authorized users can access sensitive resources. Additionally, regularly monitoring and auditing access logs can help detect and respond to any unauthorized access attempts in a timely manner. Regularly updating and patching software and systems can also help prevent known vulnerabilities from being exploited.
+To mitigate the risk of 4xx-bypass vulnerabilities, organizations should implement proper access controls, they need to implement strict control over the format in which they receive HTTP requests, by having robust server side logic, managing rules over the HTTP methods, headers, query parameters and paths they receive.
 
 Here are some recommendations:
   * **HTTP methods limitations**: Limit which HTTP methods can access each of your views/resources.
