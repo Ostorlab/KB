@@ -1,7 +1,7 @@
 
 # 4XX-Bypass
 
-To mitigate the risk of 4xx-bypass vulnerabilities, organizations should implement proper access controls, they need to implement strict control over the format in which they receive HTTP requests, by having robust server side logic, managing rules over the HTTP methods, headers, query parameters and paths they receive.
+To mitigate the risk of 4xx-bypass vulnerabilities, organizations should implement proper access controls, they need to implement strict control over the format in which they receive HTTP requests, by having a robust server side logic, managing rules over the HTTP methods, headers, query parameters and paths they receive.
 
 Here are some recommendations:
   * **HTTP methods limitations**: Limit which HTTP methods can access each of your views/resources.
