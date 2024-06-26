@@ -12,8 +12,8 @@ Here are some recommendations:
 === "Python"
    ```python
    # allow only GET and POST methods for this route
-  @app.route('/path_limiting_method_usage', methods=['GET', 'POST'])  
-  def path_limiting_method_usage():
+  @app.route('/limiting_method_usage', methods=['GET', 'POST'])  
+  def limiting_method_usage():
       if request.method == 'GET':
           return jsonify({"message": "This is a GET request"})
       elif request.method == 'POST':
@@ -22,8 +22,22 @@ Here are some recommendations:
    ```
    ```python
    # only use headers you expect
-   @app.route('/path_limiting_header_values')
-   def path_limiting_header_values():
+   @app.route('/limiting_header_values')
+  def limiting_header_values():
       expected_header = request.headers.get('Expected-Header')
       ### logic depending on the expected header
+   ```
+   ```python
+   @app.route('/sanitize/<path:url_path>', methods=['GET'])
+  def sanitize_url_path(url_path):
+    sanitized_path = sanitize_path(url_path)
+    '''sanitize according to you requirements,
+    for example of there are characters other
+    than alphanumeric characters, abort'''
+    if sanitized_path is None:
+        abort(400, description="Invalid URL path")
+
+    # Continue processing with the sanitized path
+    return jsonify({"message": "Path is sanitized", "sanitized_path": sanitized_path}) 
+
    ```
