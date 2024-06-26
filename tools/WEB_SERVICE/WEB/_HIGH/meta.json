@@ -1,0 +1,19 @@
+{
+    "risk_rating": "high",
+    "short_description": "Access Control Bypass vulnerability allows unauthorized users to gain access to restricted resources or perform actions they are not supposed to.",
+    "references": {
+        "OWASP": "https://owasp.org/www-community/vulnerabilities/Access_Control_Bypass",
+        "CVE": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-12345"
+    },
+    "title": "Access Control Bypass Vulnerability",
+    "privacy_issue": false,
+    "security_issue": true,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG-ARCH-1"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG-ARCH-2"
+        ]
+    }
+}
