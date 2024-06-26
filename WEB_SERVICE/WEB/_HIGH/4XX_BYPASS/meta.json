@@ -1,6 +1,6 @@
 {
     "risk_rating": "high",
-    "short_description": "4xx-bypass vulnerability allows an attacker to bypass access controls by manipulating HTTP status codes in the 4xx range.",
+    "short_description": "4xx-bypass vulnerability allows an attacker to bypass access controls by manipulating HTTP requests to gain access to restricted resources or perform actions they are not supposed to.",
     "references": {
         "Vulnerability (SOURCE)": "[SOURCE LINK]"
     },
