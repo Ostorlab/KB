@@ -1,5 +1,5 @@
 
-# 4Xx-Bypass
+# 4XX-Bypass
 
 To mitigate the risk of 4xx-bypass vulnerabilities, organizations should implement proper access controls and authentication mechanisms to ensure that only authorized users can access sensitive resources. Additionally, regularly monitoring and auditing access logs can help detect and respond to any unauthorized access attempts in a timely manner. Regularly updating and patching software and systems can also help prevent known vulnerabilities from being exploited.
 
@@ -32,8 +32,9 @@ Here are some recommendations:
   def sanitize_url_path(url_path):
     sanitized_path = sanitize_path(url_path)
     '''sanitize according to you requirements,
-    for example of there are characters other
-    than alphanumeric characters, abort'''
+    for example, make sure there are no characters other
+    than alphanumeric characters, if that is not satisfied,
+    return None, which will cause an abort'''
     if sanitized_path is None:
         abort(400, description="Invalid URL path")
 
