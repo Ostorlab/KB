@@ -2,17 +2,10 @@
     "risk_rating": "high",
     "short_description": "4xx-bypass vulnerability allows an attacker to bypass access controls by manipulating HTTP requests to gain access to restricted resources or perform actions they are not supposed to.",
     "references": {
-        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+        "wikipedia": "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_client_errors",
+        "Hacktricks": "https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses"
     },
     "title": "4xx-bypass Vulnerability",
     "privacy_issue": true,
-    "security_issue": true,
-    "categories": {
-        "OWASP_MASVS_L1": [
-            "MSTG reference"
-        ],
-        "OWASP_MASVS_L2": [
-            "MSTG reference"
-        ]
-    }
+    "security_issue": true
 }
