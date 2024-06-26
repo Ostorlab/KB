@@ -17,6 +17,7 @@ CATEGORY_GROUPS = [
     "OWASP_ASVS_L1",
     "OWASP_ASVS_L2",
     "OWASP_ASVS_L3",
+    "SOC2_CONTROLS",
 ]
 
 OWASP_MASVS_L1 = [
@@ -950,6 +951,42 @@ OWASP_ASVS_L3 = [
     "V14_5_4",
 ]
 
+SOC2_CONTROLS = [
+    "CC_1_1",
+    "CC_1_2",
+    "CC_1_3",
+    "CC_1_4",
+    "CC_1_5",
+    "CC_2_1",
+    "CC_2_2",
+    "CC_2_3",
+    "CC_3_1",
+    "CC_3_2",
+    "CC_3_3",
+    "CC_3_4",
+    "CC_4_1",
+    "CC_4_2",
+    "CC_5_1",
+    "CC_5_2",
+    "CC_5_3",
+    "CC_6_1",
+    "CC_6_2",
+    "CC_6_3",
+    "CC_6_4",
+    "CC_6_5",
+    "CC_6_6",
+    "CC_6_7",
+    "CC_6_8",
+    "CC_7_1",
+    "CC_7_2",
+    "CC_7_3",
+    "CC_7_4",
+    "CC_7_5",
+    "CC_8_1",
+    "CC_9_1",
+    "CC_9_2",
+]
+
 
 def testJsonFiles_allFilesAreValid_testPasses() -> None:
     path = pathlib.Path(__file__).parent.parent
@@ -1020,6 +1057,7 @@ def testKbEntries_always_namesOfTheEntryFolderShouldAllBeUnique() -> None:
         ("OWASP_ASVS_L1", OWASP_ASVS_L1),
         ("OWASP_ASVS_L2", OWASP_ASVS_L2),
         ("OWASP_ASVS_L3", OWASP_ASVS_L3),
+        ("SOC2_CONTROLS", SOC2_CONTROLS),
     ],
 )
 def testJsonFiles_allFilesHaveCorrectCategories_testPasses(
