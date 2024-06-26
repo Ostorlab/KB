@@ -1,0 +1,18 @@
+{
+    "risk_rating": "high",
+    "short_description": "4xx-bypass vulnerability allows an attacker to bypass access controls by manipulating HTTP status codes in the 4xx range.",
+    "references": {
+        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+    },
+    "title": "4xx-bypass Vulnerability",
+    "privacy_issue": false,
+    "security_issue": true,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG reference"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG reference"
+        ]
+    }
+}
