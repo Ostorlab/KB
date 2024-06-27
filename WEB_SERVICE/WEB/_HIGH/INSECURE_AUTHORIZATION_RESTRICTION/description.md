@@ -1,7 +1,7 @@
 
 # Insecure Authorization Restriction
 
-Insecure Authorization Restriction refers to a weakness in server-side restrictions that can be exploited through HTTP request manipulation techniques. This vulnerability allows attackers to bypass access controls, leading to unauthorized access to resources, privilege escalation, and giving unauthorized users the ability to retrieve, create, update, or delete sensitive data.
+Insecure Authorization Restriction refers to weaknesses in server-side restrictions that can be exploited through HTTP request manipulation techniques. This vulnerability allows attackers to bypass access controls, leading to unauthorized access to resources, privilege escalation, and giving unauthorized users the ability to retrieve, create, update, or delete sensitive data.
 
 === "Python"
   ```python

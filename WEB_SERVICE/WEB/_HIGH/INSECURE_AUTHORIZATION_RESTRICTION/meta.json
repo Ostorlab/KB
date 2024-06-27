@@ -6,7 +6,7 @@
         "Hacktricks": "https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses",
         "cheatsheetseries.owasp": "https://cheatsheetseries.owasp.org/assets/REST_Security_Cheat_Sheet_Bypassing_VBAAC_with_HTTP_Verb_Tampering.pdf"
     },
-    "title": "Insecure Authorization Restriction Vulnerability",
+    "title": "Insecure Authorization Restriction",
     "privacy_issue": true,
     "security_issue": true,
     "categories": {
