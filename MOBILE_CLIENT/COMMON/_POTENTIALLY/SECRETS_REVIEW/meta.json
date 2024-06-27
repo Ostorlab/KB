@@ -21,6 +21,11 @@
     "CWE_TOP_25": [
       "CWE_798"
     ],
+    "GDPR": [
+      "ART_5",
+      "ART_25",
+      "ART_32"
+    ],
     "PCI_STANDARDS":[
       "REQ_2_2",
       "REQ_3_2",
