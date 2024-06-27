@@ -18,6 +18,11 @@
     "OWASP_MASVS_L2": [
       "MSTG_PLATFORM_9"
     ],
+    "GDPR": [
+      "ART_5",
+      "ART_25",
+      "ART_32"
+    ],
     "PCI_STANDARDS":[
       "REQ_2_2",
       "REQ_6_2",

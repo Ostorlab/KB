@@ -20,6 +20,11 @@
       "REQ_3_5",
       "REQ_6_2"
     ],
+    "GDPR": [
+        "ART_5",
+        "ART_12",
+        "ART_25"
+      ],
     "OWASP_MASVS_v2_1": [
       "MASVS_PRIVACY_4"
     ]
