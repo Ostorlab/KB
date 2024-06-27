@@ -1,5 +1,5 @@
 
-To mitigate the risk of 4xx-bypass vulnerabilities, organizations should implement proper access controls and enforce strict validation of HTTP requests. This involves having robust server-side logic to manage rules over the HTTP methods, headers, query parameters, and paths received.
+To mitigate the risk of Insecure Authorization Restriction vulnerabilities, organizations should implement proper access controls and enforce strict validation of HTTP requests. This involves having robust server-side logic to manage rules over the HTTP methods, headers, query parameters, and paths received.
 
 Here are some recommendations:
   * **HTTP methods limitations**: Limit which HTTP methods can access each of your views/resources.
@@ -90,7 +90,7 @@ Here are some recommendations:
 
 === "Java"
    ```java
-   
+
          import org.springframework.http.ResponseEntity;
          import org.springframework.web.bind.annotation.GetMapping;
          import org.springframework.web.bind.annotation.RequestHeader;

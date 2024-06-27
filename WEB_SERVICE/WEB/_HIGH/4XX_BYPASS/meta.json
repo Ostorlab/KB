@@ -1,12 +1,12 @@
 {
     "risk_rating": "high",
-    "short_description": "4xx-bypass vulnerability allows an attacker to bypass access controls by manipulating HTTP requests to gain access to restricted resources or perform actions they are not supposed to.",
+    "short_description": "Insecure Authorization Restriction vulnerability allows an attacker to bypass access controls by manipulating HTTP requests to gain access to restricted resources or perform actions they are not supposed to.",
     "references": {
         "wikipedia": "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_client_errors",
         "Hacktricks": "https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses",
         "cheatsheetseries.owasp": "https://cheatsheetseries.owasp.org/assets/REST_Security_Cheat_Sheet_Bypassing_VBAAC_with_HTTP_Verb_Tampering.pdf"
     },
-    "title": "4xx-bypass Vulnerability",
+    "title": "Insecure Authorization Restriction Vulnerability",
     "privacy_issue": true,
     "security_issue": true,
     "categories": {
