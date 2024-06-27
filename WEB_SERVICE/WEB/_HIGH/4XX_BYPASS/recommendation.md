@@ -31,33 +31,33 @@ Here are some recommendations:
 
 === "PHP"
    ```php
-   <?php
-   // Assuming you have a framework like Slim or a similar one installed
-   require 'vendor/autoload.php';
+    <?php
+    // Assuming you have a framework like Slim or a similar one installed
+    require 'vendor/autoload.php';
 
-   $app = new \Slim\App;
+    $app = new \Slim\App;
 
-   $app->get('/sanitize/{url_path:.*}', function ($request, $response, $args) {
-       $urlPath = $args['url_path'];
-       $sanitizedPath = sanitizePath($urlPath);
+    $app->get('/sanitize/{url_path:.*}', function ($request, $response, $args) {
+        $urlPath = $args['url_path'];
+        $sanitizedPath = sanitizePath($urlPath);
 
-       if ($sanitizedPath === null) {
-           return $response->withStatus(400)->withJson(["description" => "Invalid URL path"]);
-       }
-   
-       return $response->withJson(["message" => "Path is sanitized", "sanitized_path" => $sanitizedPath]);
-   });
+        if ($sanitizedPath === null) {
+            return $response->withStatus(400)->withJson(["description" => "Invalid URL path"]);
+        }
+    
+        return $response->withJson(["message" => "Path is sanitized", "sanitized_path" => $sanitizedPath]);
+    });
 
-   function sanitizePath($path) {
-       // Implement your sanitization logic here
-       if (preg_match('/^[a-zA-Z0-9]+$/', $path)) {
-           return $path;
-       }
-       return null;
-   }
+    function sanitizePath($path) {
+        // Implement your sanitization logic here
+        if (preg_match('/^[a-zA-Z0-9]+$/', $path)) {
+            return $path;
+        }
+        return null;
+    }
 
-   $app->run();
-   ?>
+    $app->run();
+    ?>
    ```
 
 
@@ -90,4 +90,4 @@ Here are some recommendations:
         app.listen(port, () => {
             console.log(`Server is running on port ${port}`);
         });
-```
+   ```
