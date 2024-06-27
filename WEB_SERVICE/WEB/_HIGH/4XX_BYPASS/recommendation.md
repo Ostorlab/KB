@@ -1,11 +1,11 @@
-
-To mitigate the risk of Insecure Authorization Restriction vulnerabilities, organizations should implement proper access controls and enforce strict validation of HTTP requests. This involves having robust server-side logic to manage rules over the HTTP methods, headers, query parameters, and paths received.
+To mitigate the risk of insecure authorization restriction HTTP vulnerabilities, organizations should implement proper access controls and enforce strict validation of HTTP requests. This involves having robust server-side logic to manage rules over the HTTP methods, headers, query parameters, and paths received.
 
 Here are some recommendations:
-  * **HTTP methods limitations**: Limit which HTTP methods can access each of your views/resources.
-  * **Query parameter sanitization**: Sanitize each request's query parameters and make sure only a limited set of parameters can have an effect on the server's logic.
-  * **Header limitations**: Make sure to limit what headers can effect your code, use strict rules on what header/method combos can make changes on the servers's side, and make sure your logic does not rely on header values that can be found and on the internet (like google's User-Agent).
-  * **Path parsing**: Robust path parsing with strict rules and refuse requests that don't conform to your rules.
+
+  * **Limit HTTP Methods**: Restrict which HTTP methods can access each of your views/resources.
+  * **Sanitize Query Parameters**: Sanitize each request's query parameters and ensure only a limited set of parameters can affect the server's logic.
+  * **Limit Headers**: Restrict which headers can affect your code. Use strict rules on what header/method combinations can make changes on the server side, and ensure your logic does not rely on header values that can be easily found on the internet (like Google's User-Agent).
+  * **Robust Path Parsing**: Implement robust path parsing with strict rules and reject requests that do not conform to your standards.
 
 === "Python"
    ```python
