@@ -1,5 +1,5 @@
 
-# 4XX-Bypass
+# 4xx-bypass Vulnerability
 
 The 4xx-bypass exploits refer to HTTP request fuzzing techniques that allow attackers to bypass server-side restrictions, accessing unauthorized resources or performing malicious actions on a web application. This can lead to unauthorized data access, privilege escalation, and other security risks.
 
