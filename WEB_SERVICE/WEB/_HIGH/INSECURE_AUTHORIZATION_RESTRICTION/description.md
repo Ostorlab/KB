@@ -1,9 +1,6 @@
+Insecure Authorization Restriction refers to weaknesses in server-side restrictions that can be exploited through HTTP request manipulation techniques. This vulnerability allows attackers to bypass access controls, leading to unauthorized access to resources, privilege escalation, and allowing unauthorized users to retrieve, create, update, or delete sensitive data.
 
-# Insecure Authorization Restriction
-
-Insecure Authorization Restriction refers to weaknesses in server-side restrictions that can be exploited through HTTP request manipulation techniques. This vulnerability allows attackers to bypass access controls, leading to unauthorized access to resources, privilege escalation, and giving unauthorized users the ability to retrieve, create, update, or delete sensitive data.
-
-Targeting Insecure Authorization Restriction on a web server, for example, would involve these techniques:
+Targeting Insecure Authorization Restrictions on a web server, for example, would involve these techniques:
 
    * **HTTP Request Method fuzzing**: Testing invalid, malformed, or unexpected HTTP methods on the server.
    * **HTTP Request Path fuzzing**: Manipulating the HTTP request path by deforming it, adding to it, or subtracting from it.
@@ -24,43 +21,4 @@ All these techniques target defects, vulnerabilities, or mistakes in a server's 
 
     response = requests.get("http://www.some-url.com/unauthorized_path?debug=true")
 
-    '''Might get us the resource we want'''
-  ```
-=== "JavaScript"
-   ```javascript
-
-      const express = require('express');
-      const app = express();
-
-      app.get('/vulnerable_path', (req, res) => {
-        const queryParams = req.query;
-
-        if (queryParams.debug && queryParams.debug === 'true') {
-          // Logic that would usually require more rights
-          res.send('Debug mode enabled: Performing privileged actions.');
-        } else {
-          res.send('Normal mode: Limited actions.');
-        }
-      });
-
-      app.listen(3000, () => {
-          console.log('Server is running on port 3000');
-      });
-   ```
-=== "PHP"
-   ```php
-    <?php
-    // Simple example of a PHP backend that forgot a debug conditional for debugging purposes
-
-    if ($_SERVER['REQUEST_METHOD'] === 'GET' || $_SERVER['REQUEST_METHOD'] === 'POST') {
-        $queryParams = $_GET; // Using $_GET to retrieve query parameters from the URL
-
-        if (isset($queryParams['debug']) && $queryParams['debug'] === 'true') {
-            // Logic that would usually require more rights
-            echo 'Debug mode enabled: Performing privileged actions.';
-        } else {
-            echo 'Normal mode: Limited actions.';
-        }
-    }
-    ?>
-   ```
+    '''Might get us the resource we want''
