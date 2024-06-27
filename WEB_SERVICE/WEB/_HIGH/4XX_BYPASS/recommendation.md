@@ -27,18 +27,67 @@ Here are some recommendations:
       expected_header = request.headers.get('Expected-Header')
       ### logic depending on the expected header
    ```
-   ```python
-   @app.route('/sanitize/<path:url_path>', methods=['GET'])
-  def sanitize_url_path(url_path):
-    sanitized_path = sanitize_path(url_path)
-    '''sanitize according to you requirements,
-    for example, make sure there are no characters other
-    than alphanumeric characters, if that is not satisfied,
-    return None, which will cause an abort'''
-    if sanitized_path is None:
-        abort(400, description="Invalid URL path")
 
-    # Continue processing with the sanitized path
-    return jsonify({"message": "Path is sanitized", "sanitized_path": sanitized_path}) 
 
+=== "PHP"
+   ```php
+   <?php
+   // Assuming you have a framework like Slim or a similar one installed
+   require 'vendor/autoload.php';
+
+   $app = new \Slim\App;
+
+   $app->get('/sanitize/{url_path:.*}', function ($request, $response, $args) {
+       $urlPath = $args['url_path'];
+       $sanitizedPath = sanitizePath($urlPath);
+
+       if ($sanitizedPath === null) {
+           return $response->withStatus(400)->withJson(["description" => "Invalid URL path"]);
+       }
+   
+       return $response->withJson(["message" => "Path is sanitized", "sanitized_path" => $sanitizedPath]);
+   });
+
+   function sanitizePath($path) {
+       // Implement your sanitization logic here
+       if (preg_match('/^[a-zA-Z0-9]+$/', $path)) {
+           return $path;
+       }
+       return null;
+   }
+
+   $app->run();
+   ?>
    ```
+
+
+=== "JavaScript"
+   ```javascript
+
+        const express = require('express');
+        const app = express();
+
+        app.get('/sanitize/:url_path(*)', (req, res) => {
+            const urlPath = req.params.url_path;
+            const sanitizedPath = sanitizePath(urlPath);
+
+            if (sanitizedPath === null) {
+                return res.status(400).json({ description: "Invalid URL path" });
+            }
+
+            res.json({ message: "Path is sanitized", sanitized_path: sanitizedPath });
+        });
+
+        function sanitizePath(path) {
+            // Implement your sanitization logic here
+            if (/^[a-zA-Z0-9]+$/.test(path)) {
+                return path;
+            }
+            return null;
+        }
+
+        const port = 3000;
+        app.listen(port, () => {
+            console.log(`Server is running on port ${port}`);
+        });
+```
