@@ -17,8 +17,6 @@ Here are some recommendations:
       elif request.method == 'POST':
           data = request.json
           return jsonify({"message": "This is a POST request", "data": data})
-   ```
-   ```python
    # only use headers you expect
    @app.route('/limiting_header_values')
   def limiting_header_values():
@@ -88,4 +86,31 @@ Here are some recommendations:
         app.listen(port, () => {
             console.log(`Server is running on port ${port}`);
         });
+   ```
+
+=== "Java"
+   ```java
+   
+         import org.springframework.http.ResponseEntity;
+         import org.springframework.web.bind.annotation.GetMapping;
+         import org.springframework.web.bind.annotation.RequestHeader;
+         import org.springframework.web.bind.annotation.RequestMapping;
+         import org.springframework.web.bind.annotation.RestController;
+
+         @RestController
+         @RequestMapping("/api")
+         public class HeaderController {
+
+             @GetMapping("/limiting_header_values")
+             public ResponseEntity<String> limitingHeaderValues(
+                     @RequestHeader(value = "Expected-Header", required = false) String expectedHeader) {
+                    
+                 if (expectedHeader == null) {
+                     return ResponseEntity.badRequest().body("Expected-Header is missing");
+                 }
+
+                 // Logic depending on the expected header
+                 return ResponseEntity.ok("Received expected header: " + expectedHeader);
+             }
+         }
    ```
