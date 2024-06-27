@@ -8,5 +8,40 @@
     },
     "title": "4xx-bypass Vulnerability",
     "privacy_issue": true,
-    "security_issue": true
+    "security_issue": true,
+    "categories": {
+        "OWASP_ASVS_L1": [
+            "V4.1.1",
+            "V4.1.2",
+            "V4.1.3",
+            "V4.1.5",
+            "V5.1.1",
+            "V5.1.2",
+            "V5.1.3",
+            "V5.1.4",
+            "V5.2.2"
+        ],
+        "OWASP_ASVS_L2": [
+            "V4.1.1",
+            "V4.1.2",
+            "V4.1.3",
+            "V4.1.5",
+            "V5.1.1",
+            "V5.1.2",
+            "V5.1.3",
+            "V5.1.4",
+            "V5.2.2"
+        ],
+        "OWASP_ASVS_L3": [
+            "V4.1.1",
+            "V4.1.2",
+            "V4.1.3",
+            "V4.1.5",
+            "V5.1.1",
+            "V5.1.2",
+            "V5.1.3",
+            "V5.1.4",
+            "V5.2.2"
+        ]   
+    }
 }
