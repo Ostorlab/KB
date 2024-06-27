@@ -1,6 +1,6 @@
 {
     "risk_rating": "high",
-    "short_description": "Insecure Authorization Restriction vulnerability allows an attacker to bypass access controls by manipulating HTTP requests to gain access to restricted resources or perform actions they are not supposed to.",
+    "short_description": "Insecure Authorization Restriction http vulnerability allows an attacker to bypass access controls by manipulating HTTP requests to gain access to restricted resources or perform actions they are not supposed to.",
     "references": {
         "wikipedia": "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_client_errors",
         "Hacktricks": "https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses",
