@@ -2,7 +2,7 @@
     "risk_rating": "medium",
     "short_description": "Privacy policy does not mention the legal basis for processing user data",
     "references": {
-        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
     },
     "title": "Missing Legal Basis in Privacy Policy",
     "privacy_issue": true,

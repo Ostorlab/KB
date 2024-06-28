@@ -2,7 +2,7 @@
     "risk_rating": "medium",
     "short_description": "Privacy policy mentions collection of users' crash logs without explicit consent",
     "references": {
-        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
     },
     "title": "Collection of Users' Crash Logs without Consent",
     "privacy_issue": true,

@@ -2,7 +2,7 @@
     "risk_rating": "medium",
     "short_description": "Privacy policy does not mention users' right to correct inaccuracies within their data",
     "references": {
-        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
     },
     "title": "Missing Mention of User Data Correction Rights in Privacy Policy",
     "privacy_issue": true,

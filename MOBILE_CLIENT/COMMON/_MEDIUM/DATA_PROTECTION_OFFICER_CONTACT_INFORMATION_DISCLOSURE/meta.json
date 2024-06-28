@@ -2,7 +2,7 @@
     "risk_rating": "medium",
     "short_description": "Checks if your privacy policy provides the name and contact information for your Data Protection Officer.",
     "references": {
-        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
     },
     "title": "Data Protection Officer Contact Information Disclosure",
     "privacy_issue": true,

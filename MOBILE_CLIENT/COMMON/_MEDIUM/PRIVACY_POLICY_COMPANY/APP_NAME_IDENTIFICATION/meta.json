@@ -2,7 +2,7 @@
     "risk_rating": "medium",
     "short_description": "Privacy policy does not identify company or app name(s)",
     "references": {
-        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
     },
     "title": "Privacy Policy Company/App Name Identification",
     "privacy_issue": true,

@@ -1,10 +1,10 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy mentions collection of users' purchase history without explicit consent",
+    "short_description": "Privacy policy does not mention users' right to know about information sharing",
     "references": {
-        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
     },
-    "title": "Collection of Users' Purchase History in Privacy Policy",
+    "title": "Missing Mention of Users' Right to Know in Privacy Policy",
     "privacy_issue": true,
     "security_issue": false,
     "categories": {

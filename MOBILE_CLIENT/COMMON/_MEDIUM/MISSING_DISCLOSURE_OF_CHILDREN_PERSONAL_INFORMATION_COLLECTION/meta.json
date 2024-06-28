@@ -1,10 +1,10 @@
 {
     "risk_rating": "medium",
-    "short_description": "Checks if your privacy policy references rights under the CCPA",
+    "short_description": "Privacy policy does not mention what personal information is collected from children",
     "references": {
         https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
     },
-    "title": "Privacy Policy CCPA Rights Reference Vulnerability",
+    "title": "Missing Disclosure of Children's Personal Information Collection",
     "privacy_issue": true,
     "security_issue": false,
     "categories": {

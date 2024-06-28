@@ -1,10 +1,10 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention sharing of children's personal information with third parties",
+    "short_description": "Privacy policy does not include information about requirements related to children",
     "references": {
-        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
     },
-    "title": "Missing Disclosure of Children's Personal Information Sharing",
+    "title": "Missing Children's Privacy Requirements in Privacy Policy",
     "privacy_issue": true,
     "security_issue": false,
     "categories": {

@@ -1,10 +1,10 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention what personal information is collected from children",
+    "short_description": "Privacy policy does not mention users' right to lodge a complaint with a supervisory authority",
     "references": {
-        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
     },
-    "title": "Missing Disclosure of Children's Personal Information Collection",
+    "title": "Missing Mention of Users' Right to Lodge Complaint",
     "privacy_issue": true,
     "security_issue": false,
     "categories": {

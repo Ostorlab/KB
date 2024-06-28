@@ -2,7 +2,7 @@
     "risk_rating": "medium",
     "short_description": "Privacy policy does not mention collection of users' fitness info declared in Play Data Safety Section",
     "references": {
-        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
     },
     "title": "Missing Privacy Policy Disclosure for Fitness Info Collection",
     "privacy_issue": true,
