@@ -1,0 +1,18 @@
+{
+    "risk_rating": "low",
+    "short_description": "Missing link to privacy policy in store listing",
+    "references": {
+        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+    },
+    "title": "Missing Privacy Policy Link",
+    "privacy_issue": true,
+    "security_issue": false,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG reference"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG reference"
+        ]
+    }
+}

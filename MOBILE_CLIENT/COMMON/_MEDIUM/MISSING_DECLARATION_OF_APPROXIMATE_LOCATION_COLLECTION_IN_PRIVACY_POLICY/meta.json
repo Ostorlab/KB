@@ -1,0 +1,18 @@
+{
+    "risk_rating": "medium",
+    "short_description": "Privacy policy does not mention collection of users' approximate location data declared in Play Data Safety Section",
+    "references": {
+        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+    },
+    "title": "Missing Declaration of Approximate Location Collection in Privacy Policy",
+    "privacy_issue": true,
+    "security_issue": false,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG reference"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG reference"
+        ]
+    }
+}

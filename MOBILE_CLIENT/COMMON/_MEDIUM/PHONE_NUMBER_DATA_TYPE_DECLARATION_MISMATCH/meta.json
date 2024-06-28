@@ -1,0 +1,18 @@
+{
+    "risk_rating": "medium",
+    "short_description": "Mismatch between Phone Number data type declaration in privacy policy and actual usage",
+    "references": {
+        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+    },
+    "title": "Phone Number Data Type Declaration Mismatch",
+    "privacy_issue": true,
+    "security_issue": false,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG reference"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG reference"
+        ]
+    }
+}

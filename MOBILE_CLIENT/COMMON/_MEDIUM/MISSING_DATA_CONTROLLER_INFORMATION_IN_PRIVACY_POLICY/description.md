@@ -1,0 +1,1 @@
+Failure to include the name and contact information for your data controller in your privacy policy can leave your users unsure of who to contact with questions or concerns about their personal data. This lack of transparency can erode trust and potentially lead to compliance issues with data protection regulations.

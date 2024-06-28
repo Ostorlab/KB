@@ -1,0 +1,18 @@
+{
+    "risk_rating": "medium",
+    "short_description": "Privacy policy does not mention why personal information from children is collected",
+    "references": {
+        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+    },
+    "title": "Missing Explanation in Privacy Policy for Collecting Personal Information from Children",
+    "privacy_issue": true,
+    "security_issue": false,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG reference"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG reference"
+        ]
+    }
+}

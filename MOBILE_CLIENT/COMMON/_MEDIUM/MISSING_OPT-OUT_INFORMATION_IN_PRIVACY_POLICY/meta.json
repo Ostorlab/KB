@@ -1,0 +1,18 @@
+{
+    "risk_rating": "medium",
+    "short_description": "Privacy policy does not explain how users can opt out from the selling or sharing of their data",
+    "references": {
+        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+    },
+    "title": "Missing Opt-out Information in Privacy Policy",
+    "privacy_issue": true,
+    "security_issue": false,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG reference"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG reference"
+        ]
+    }
+}

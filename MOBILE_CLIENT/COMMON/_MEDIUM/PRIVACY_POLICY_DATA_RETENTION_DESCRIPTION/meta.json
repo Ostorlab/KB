@@ -1,0 +1,18 @@
+{
+    "risk_rating": "medium",
+    "short_description": "Checks if your privacy policy describes your data retention practices",
+    "references": {
+        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+    },
+    "title": "Privacy Policy Data Retention Description",
+    "privacy_issue": true,
+    "security_issue": false,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG reference"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG reference"
+        ]
+    }
+}

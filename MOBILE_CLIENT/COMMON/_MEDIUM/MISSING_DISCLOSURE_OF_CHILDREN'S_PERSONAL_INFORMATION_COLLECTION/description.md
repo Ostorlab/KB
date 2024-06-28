@@ -1,0 +1,1 @@
+The vulnerability exists in the failure to mention in the privacy policy what personal information is collected from children, potentially putting their privacy at risk.

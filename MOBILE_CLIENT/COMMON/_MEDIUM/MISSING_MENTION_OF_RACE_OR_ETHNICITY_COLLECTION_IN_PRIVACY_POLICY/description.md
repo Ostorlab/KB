@@ -1,0 +1,1 @@
+The vulnerability exists in the application's privacy policy, as it fails to mention the collection of users' race or ethnicity data, even though this data type is declared in the Play Data Safety Section. This lack of transparency raises concerns about the potential misuse or mishandling of sensitive user information.

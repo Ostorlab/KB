@@ -1,0 +1,1 @@
+The vulnerability exists in the system's failure to check if the privacy policy includes information about third-party sharing of personal data, leaving users unaware of how their information may be shared with external parties.

@@ -1,0 +1,1 @@
+The vulnerability exists when the privacy policy does not clearly identify the company or app name(s), making it difficult for users to understand who is collecting their personal information and how it will be used.

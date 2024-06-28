@@ -1,0 +1,1 @@
+The vulnerability exists in the lack of disclosure in the privacy policy regarding what personal information of children is shared with third parties, potentially putting their privacy at risk.

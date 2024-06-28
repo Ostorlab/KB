@@ -1,0 +1,1 @@
+Failure to include the name and contact information for your Data Protection Officer in your privacy policy could result in a lack of transparency and accountability regarding data protection practices, potentially leading to compliance issues and loss of trust from users.

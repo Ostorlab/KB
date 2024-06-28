@@ -1,0 +1,1 @@
+The vulnerability exists in the privacy policy's failure to mention the specific categories of personal data that are collected, leaving users unaware of the extent of information being gathered about them.

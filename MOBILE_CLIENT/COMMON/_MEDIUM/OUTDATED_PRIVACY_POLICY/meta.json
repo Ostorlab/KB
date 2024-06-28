@@ -1,0 +1,19 @@
+{
+    "risk_rating": "low",
+    "short_description": "Privacy policy has not been updated recently",
+    "references": {
+        "Vulnerability (SOURCE)": "[LINK TO PRIVACY POLICY]",
+        "OWASP Top 10": "[LINK TO OWASP TOP 10]"
+    },
+    "title": "Outdated Privacy Policy",
+    "privacy_issue": true,
+    "security_issue": false,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG-ARCH-1: 'The app's privacy policy is easily accessible from the app stores'"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG-ARCH-1: 'The app's privacy policy is easily accessible from the app stores'"
+        ]
+    }
+}

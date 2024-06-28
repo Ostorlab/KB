@@ -1,0 +1,18 @@
+{
+    "risk_rating": "info",
+    "short_description": "Privacy policy lacks information about third-party sharing of personal data",
+    "references": {
+        "Vulnerability (SOURCE)": "[SOURCE LINK]"
+    },
+    "title": "Missing Third-Party Sharing Information in Privacy Policy",
+    "privacy_issue": true,
+    "security_issue": false,
+    "categories": {
+        "OWASP_MASVS_L1": [
+            "MSTG reference"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG reference"
+        ]
+    }
+}
