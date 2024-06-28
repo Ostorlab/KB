@@ -1,9 +1,7 @@
 {
     "risk_rating": "medium",
     "short_description": "Mismatch between declared and actual usage of Health and Biometric data type in privacy policy",
-    "references": {
-        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
-    },
+    "references": {},
     "title": "Health and Biometric Data Type Declaration Mismatch",
     "privacy_issue": true,
     "security_issue": false,

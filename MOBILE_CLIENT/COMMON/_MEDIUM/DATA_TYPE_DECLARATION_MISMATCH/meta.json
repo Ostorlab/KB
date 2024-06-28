@@ -1,9 +1,7 @@
 {
     "risk_rating": "medium",
     "short_description": "Mismatch between declared data types in privacy policy and actual usage of Apps on Device data",
-    "references": {
-        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
-    },
+    "references": {},
     "title": "Data Type Declaration Mismatch",
     "privacy_issue": true,
     "security_issue": false,

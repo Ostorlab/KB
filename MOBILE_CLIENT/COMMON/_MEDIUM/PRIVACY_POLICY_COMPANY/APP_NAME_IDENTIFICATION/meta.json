@@ -1,9 +1,7 @@
 {
     "risk_rating": "medium",
     "short_description": "Privacy policy does not identify company or app name(s)",
-    "references": {
-        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
-    },
+    "references": {},
     "title": "Privacy Policy Company/App Name Identification",
     "privacy_issue": true,
     "security_issue": false,

@@ -1,9 +1,7 @@
 {
     "risk_rating": "medium",
     "short_description": "Privacy policy does not mention sharing of children's personal information with third parties",
-    "references": {
-        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
-    },
+    "references": {},
     "title": "Missing Disclosure of Children's Personal Information Sharing",
     "privacy_issue": true,
     "security_issue": false,

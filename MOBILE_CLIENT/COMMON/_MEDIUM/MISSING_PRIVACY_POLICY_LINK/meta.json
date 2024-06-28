@@ -1,9 +1,7 @@
 {
     "risk_rating": "low",
     "short_description": "Missing link to privacy policy in store listing",
-    "references": {
-        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
-    },
+    "references": {},
     "title": "Missing Privacy Policy Link",
     "privacy_issue": true,
     "security_issue": false,

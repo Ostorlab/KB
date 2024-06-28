@@ -1,9 +1,7 @@
 {
     "risk_rating": "high",
     "short_description": "Privacy policy mentions collection of users' in-app search history without explicit consent",
-    "references": {
-        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
-    },
+    "references": {},
     "title": "In-App Search History Collection in Privacy Policy",
     "privacy_issue": true,
     "security_issue": false,

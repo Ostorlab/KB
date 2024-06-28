@@ -1,9 +1,7 @@
 {
     "risk_rating": "medium",
     "short_description": "Mismatch between PII Categories data type declaration in privacy policy and actual usage",
-    "references": {
-        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
-    },
+    "references": {},
     "title": "PII Categories Data Type Declaration Mismatch",
     "privacy_issue": true,
     "security_issue": false,

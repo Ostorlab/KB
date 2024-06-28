@@ -1,9 +1,7 @@
 {
     "risk_rating": "medium",
     "short_description": "Privacy policy does not mention collection of users' web browsing history in Play Data Safety Section",
-    "references": {
-        https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
-    },
+    "references": {},
     "title": "Missing Declaration of Web Browsing History Collection in Privacy Policy",
     "privacy_issue": true,
     "security_issue": false,
