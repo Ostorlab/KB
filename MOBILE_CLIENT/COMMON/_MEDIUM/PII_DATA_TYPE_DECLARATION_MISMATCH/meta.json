@@ -2,15 +2,8 @@
     "risk_rating": "medium",
     "short_description": "Checks if the PII data type declaration in your privacy policy matches usage vulnerability",
     "references": {},
-    "title": "PII Data Type Declaration Mismatch Vulnerability",
+    "title": "PII Data Type Declaration Mismatch",
     "privacy_issue": true,
     "security_issue": false,
-    "categories": {
-        "OWASP_MASVS_L1": [
-            "MSTG reference"
-        ],
-        "OWASP_MASVS_L2": [
-            "MSTG reference"
-        ]
-    }
+    "categories": {}
 }

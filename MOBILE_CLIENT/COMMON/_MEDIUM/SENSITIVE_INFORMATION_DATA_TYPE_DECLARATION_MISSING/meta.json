@@ -1,0 +1,10 @@
+{
+    "risk_rating": "medium",
+    "short_description": "Checks if the Sensitive Information data type declaration matches usage vulnerability",
+    "references": {},
+    "title": "Sensitive Information Data Type Declaration missing",
+
+    "privacy_issue": true,
+    "security_issue": true,
+    "categories": {}
+}

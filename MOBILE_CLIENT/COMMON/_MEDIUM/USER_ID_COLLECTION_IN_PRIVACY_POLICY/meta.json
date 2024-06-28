@@ -6,11 +6,5 @@
     "privacy_issue": true,
     "security_issue": false,
     "categories": {
-        "OWASP_MASVS_L1": [
-            "MSTG reference"
-        ],
-        "OWASP_MASVS_L2": [
-            "MSTG reference"
-        ]
     }
 }

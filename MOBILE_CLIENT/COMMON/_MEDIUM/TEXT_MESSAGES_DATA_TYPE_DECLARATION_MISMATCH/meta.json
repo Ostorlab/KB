@@ -1,0 +1,9 @@
+{
+    "risk_rating": "medium",
+    "short_description": "Mismatch between the Text Messages data type declaration in privacy policy and actual usage",
+    "references": {},
+    "title": "Text Messages Data Type Declaration Mismatch",
+    "privacy_issue": true,
+    "security_issue": true,
+    "categories": {}
+}

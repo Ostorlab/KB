@@ -2,15 +2,8 @@
     "risk_rating": "medium",
     "short_description": "Checks if privacy policy mentions collection of users' performance diagnostics when declared in Play Data Safety Section",
     "references": {},
-    "title": "Privacy Policy Data Collection Vulnerability",
+    "title": "Privacy Policy Data Collection mismatch",
     "privacy_issue": true,
     "security_issue": false,
-    "categories": {
-        "OWASP_MASVS_L1": [
-            "MSTG reference"
-        ],
-        "OWASP_MASVS_L2": [
-            "MSTG reference"
-        ]
-    }
+    "categories": {}
 }
