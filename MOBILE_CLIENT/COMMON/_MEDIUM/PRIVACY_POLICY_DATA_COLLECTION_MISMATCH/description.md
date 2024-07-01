@@ -1,1 +1,0 @@
-The vulnerability stems from the application's failure to properly disclose the collection of users' performance diagnostics data in the privacy policy, as required by the Play Data Safety Section. This lack of transparency risks users' sensitive information being collected without their knowledge or consent.

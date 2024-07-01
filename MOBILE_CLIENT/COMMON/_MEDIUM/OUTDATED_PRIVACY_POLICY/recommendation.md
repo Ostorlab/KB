@@ -1,1 +1,0 @@
-It is recommended to regularly review and update the privacy policy to ensure it reflects current data protection practices and complies with the latest legal requirements, thereby protecting users' data effectively.

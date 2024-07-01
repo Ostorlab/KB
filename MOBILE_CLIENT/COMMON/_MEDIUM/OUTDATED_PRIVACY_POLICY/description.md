@@ -1,1 +1,0 @@
-The issue arises from an outdated privacy policy, which may not reflect current data protection practices and legal requirements, potentially leaving users' data unprotected.

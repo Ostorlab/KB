@@ -1,9 +1,0 @@
-{
-    "risk_rating": "medium",
-    "short_description": "Privacy policy does not provide the name and contact information for the data controller.",
-    "references": {},
-    "title": "Missing Data Controller Information in Privacy Policy",
-    "privacy_issue": true,
-    "security_issue": false,
-    "categories": {}
-}

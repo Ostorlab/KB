@@ -1,9 +1,0 @@
-{
-    "risk_rating": "medium",
-    "short_description": "Checks if privacy policy mentions collection of users' performance diagnostics",
-    "references": {},
-    "title": "Privacy Policy Data Collection mismatch",
-    "privacy_issue": true,
-    "security_issue": false,
-    "categories": {}
-}
