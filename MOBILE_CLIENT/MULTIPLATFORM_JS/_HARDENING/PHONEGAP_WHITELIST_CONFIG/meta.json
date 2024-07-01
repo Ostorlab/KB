@@ -29,6 +29,14 @@
       "MASVS_RESILIENCE_2",
       "MASVS_RESILIENCE_3",
       "MASVS_CODE_4"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
     ]
   }
 }
