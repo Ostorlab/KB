@@ -203,6 +203,19 @@ CWE_TOP_25 = [
 
 GDPR = [f"ART_{i}" for i in range(1, 94)]
 
+CCPA = [
+    "CCPA_1798_100",
+    "CCPA_1798_105",
+    "CCPA_1798_110",
+    "CCPA_1798_115",
+    "CCPA_1798_120",
+    "CCPA_1798_125",
+    "CCPA_1798_130",
+    "CCPA_1798_135",
+    "CCPA_1798_140",
+    "CCPA_1798_150",
+]
+
 PCI_STANDARDS = [
     "REQ_1_1",
     "REQ_1_2",
@@ -1053,6 +1066,7 @@ def testKbEntries_always_namesOfTheEntryFolderShouldAllBeUnique() -> None:
         ("OWASP_MASVS_RESILIENCE", OWASP_MASVS_RESILIENCE),
         ("CWE_TOP_25", CWE_TOP_25),
         ("GDPR", GDPR),
+        ("CCPA", CCPA),
         ("PCI_STANDARDS", PCI_STANDARDS),
         ("OWASP_ASVS_L1", OWASP_ASVS_L1),
         ("OWASP_ASVS_L2", OWASP_ASVS_L2),
