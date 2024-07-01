@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' contacts in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' contacts",
     "references": {},
     "title": "Missing Declaration of Contact Collection in Privacy Policy",
     "privacy_issue": true,

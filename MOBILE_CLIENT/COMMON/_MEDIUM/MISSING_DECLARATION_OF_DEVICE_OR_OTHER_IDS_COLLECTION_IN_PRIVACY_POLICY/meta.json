@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' device or other IDs as declared in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' device or other IDs",
     "references": {},
     "title": "Missing Declaration of Device or Other IDs Collection in Privacy Policy",
     "privacy_issue": true,

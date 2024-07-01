@@ -1,1 +1,1 @@
-The vulnerability exists in the system's failure to properly check if the privacy policy accurately describes the data retention practices, potentially leading to misleading or inaccurate information being provided to users.
+The vulnerability arises from the system's failure to verify whether the privacy policy accurately describes data retention practices, potentially leading to the provision of misleading or inaccurate information to users.

@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' web browsing history in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' web browsing history",
     "references": {},
     "title": "Missing Declaration of Web Browsing History Collection in Privacy Policy",
     "privacy_issue": true,

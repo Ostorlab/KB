@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' email addresses in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' email addresses",
     "references": {},
     "title": "Missing Declaration of Email Address Collection in Privacy Policy",
     "privacy_issue": true,

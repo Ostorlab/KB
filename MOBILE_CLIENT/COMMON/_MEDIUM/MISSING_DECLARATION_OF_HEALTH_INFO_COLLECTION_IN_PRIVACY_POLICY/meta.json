@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' health info in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' health info",
     "references": {},
     "title": "Missing Declaration of Health Info Collection in Privacy Policy",
     "privacy_issue": true,

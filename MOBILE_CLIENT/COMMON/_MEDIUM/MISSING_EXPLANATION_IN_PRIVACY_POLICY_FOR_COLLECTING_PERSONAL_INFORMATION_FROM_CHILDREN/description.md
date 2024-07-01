@@ -1,1 +1,0 @@
-The vulnerability exists in the application's failure to check if the privacy policy explicitly mentions the reasons for collecting personal information from children, potentially leaving users unaware of the purpose behind the collection of their data.

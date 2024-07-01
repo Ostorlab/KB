@@ -1,1 +1,0 @@
-To mitigate the vulnerability of collecting users' credit scores, ensure that your privacy policy clearly states the purpose for collecting this sensitive data, obtain explicit consent from users before collecting it, implement strong encryption measures to protect the data, and regularly review and update your privacy policy to stay compliant with data protection regulations.

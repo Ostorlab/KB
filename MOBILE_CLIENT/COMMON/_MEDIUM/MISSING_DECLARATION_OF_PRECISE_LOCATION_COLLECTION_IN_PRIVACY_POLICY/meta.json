@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' precise location when declared in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' precise location",
     "references": {},
     "title": "Missing Declaration of Precise Location Collection in Privacy Policy",
     "privacy_issue": true,

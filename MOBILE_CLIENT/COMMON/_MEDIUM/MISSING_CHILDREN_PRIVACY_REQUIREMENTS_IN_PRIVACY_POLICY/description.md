@@ -1,1 +1,0 @@
-The privacy policy does not include any information about requirements related to children, leaving the company vulnerable to potential legal and ethical issues regarding the collection and protection of children's personal information.

@@ -1,1 +1,0 @@
-The vulnerability exists in the application as it fails to check if the privacy policy mentions users' right to lodge a complaint with a supervisory authority, potentially leaving users unaware of their rights and unable to take necessary actions in case of privacy violations.

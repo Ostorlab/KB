@@ -8,12 +8,5 @@
     "title": "Missing GDPR Rights Reference in Privacy Policy",
     "privacy_issue": true,
     "security_issue": false,
-    "categories": {
-        "OWASP_MASVS_L1": [
-            "MSTG-ARCH-1: 'Data Protection by Design and by Default'"
-        ],
-        "OWASP_MASVS_L2": [
-            "MSTG-ARCH-2: 'Secure Data Storage and Transmission'"
-        ]
-    }
+    "categories": {}
 }

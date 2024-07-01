@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' phone numbers declared in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' phone numbers",
     "references": {},
     "title": "Missing Declaration of Phone Number Collection in Privacy Policy",
     "privacy_issue": true,

@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' installed apps as declared in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' installed apps",
     "references": {},
     "title": "Missing Declaration of Installed Apps Collection in Privacy Policy",
     "privacy_issue": true,

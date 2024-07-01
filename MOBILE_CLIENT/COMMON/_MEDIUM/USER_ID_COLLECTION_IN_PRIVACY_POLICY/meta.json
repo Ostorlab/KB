@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy mentions collection of users' user IDs without explicit consent",
+    "short_description": "Privacy policy mentions collection of users' IDs without explicit consent",
     "references": {},
     "title": "User ID Collection in Privacy Policy",
     "privacy_issue": true,

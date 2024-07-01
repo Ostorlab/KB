@@ -2,7 +2,7 @@
     "risk_rating": "info",
     "short_description": "Checks if privacy policy mentions categories of personal data collected",
     "references": {},
-    "title": "Privacy Policy Personal Data Categories Disclosure",
+    "title": "Privacy Policy Personal Data Categories Disclosure mismatch",
     "privacy_issue": true,
     "security_issue": false,
     "categories": {

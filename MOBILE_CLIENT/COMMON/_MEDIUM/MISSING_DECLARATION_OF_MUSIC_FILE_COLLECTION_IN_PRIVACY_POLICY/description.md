@@ -1,1 +1,0 @@
-If your privacy policy mentions the collection of users' music files in the Play Data Safety Section, there is a risk that users may be concerned about the privacy and security of their personal data, leading to potential trust issues and legal implications.

@@ -1,9 +1,0 @@
-{
-    "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' physical addresses in Play Data Safety Section",
-    "references": {},
-    "title": "Missing Declaration of Physical Address Collection in Privacy Policy",
-    "privacy_issue": true,
-    "security_issue": false,
-    "categories": {}
-}

@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Checks if the Sensitive Information data type declaration matches usage vulnerability",
+    "short_description": "Sensitive Information data type declaration doesn't matches usage declared in Privacy Policy",
     "references": {},
     "title": "Sensitive Information Data Type Declaration missing",
 

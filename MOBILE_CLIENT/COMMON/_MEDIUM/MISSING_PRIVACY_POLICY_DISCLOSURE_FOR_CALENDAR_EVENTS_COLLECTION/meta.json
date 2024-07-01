@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' calendar events declared in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' calendar events",
     "references": {},
     "title": "Missing Privacy Policy Disclosure for Calendar Events Collection",
     "privacy_issue": true,

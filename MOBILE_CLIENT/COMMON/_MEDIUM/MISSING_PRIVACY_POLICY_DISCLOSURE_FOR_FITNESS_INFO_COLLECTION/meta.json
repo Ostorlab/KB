@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' fitness info declared in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' fitness info",
     "references": {},
     "title": "Missing Privacy Policy Disclosure for Fitness Info Collection",
     "privacy_issue": true,

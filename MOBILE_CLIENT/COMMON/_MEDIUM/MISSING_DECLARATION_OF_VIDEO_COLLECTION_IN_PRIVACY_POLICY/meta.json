@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' videos declared in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' videos",
     "references": {},
     "title": "Missing Declaration of Video Collection in Privacy Policy",
     "privacy_issue": true,

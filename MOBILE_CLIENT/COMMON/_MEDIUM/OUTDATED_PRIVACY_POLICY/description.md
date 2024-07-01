@@ -1,1 +1,1 @@
-An attacker could exploit this vulnerability by accessing outdated privacy policies and using them to gather sensitive information from users without their knowledge or consent.
+The issue arises from an outdated privacy policy, which may not reflect current data protection practices and legal requirements, potentially leaving users' data unprotected.

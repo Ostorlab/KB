@@ -1,6 +1,6 @@
 {
     "risk_rating": "medium",
-    "short_description": "Privacy policy does not mention collection of users' voice or sound recordings in Play Data Safety Section",
+    "short_description": "Privacy policy does not mention collection of users' voice or sound recordings",
     "references": {},
     "title": "Missing Declaration of Voice or Sound Recording Collection in Privacy Policy",
     "privacy_issue": true,
