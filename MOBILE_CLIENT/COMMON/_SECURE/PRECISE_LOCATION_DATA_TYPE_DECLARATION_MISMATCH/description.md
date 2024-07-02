@@ -1,1 +1,1 @@
-It has been identified that the Precise Location data type declaration in your privacy policy does not accurately match the actual usage of this data within your application, potentially leading to a discrepancy in user expectations and data handling practices.
+ Precise Location data type declaration in your privacy policy does accurately match the actual usage.

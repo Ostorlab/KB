@@ -1,1 +1,1 @@
-The vulnerability exists in the app's failure to accurately reflect the collection of users' photos in the privacy policy, as required by the Play Data Safety Section. This oversight could lead to potential privacy violations and breaches of user trust.
+The app's privacy policy accurately reflects the collection of users' photos.
