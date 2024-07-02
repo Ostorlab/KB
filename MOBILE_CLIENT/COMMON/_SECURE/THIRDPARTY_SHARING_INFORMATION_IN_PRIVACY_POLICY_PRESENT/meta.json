@@ -1,5 +1,5 @@
 {
-    "risk_rating": "info",
+    "risk_rating": "secure",
     "short_description": "Privacy policy lacks information about third-party sharing of personal data",
     "references": {
         "Android Privacy Guidelines": "https://developer.android.com/privacy-and-security/about",

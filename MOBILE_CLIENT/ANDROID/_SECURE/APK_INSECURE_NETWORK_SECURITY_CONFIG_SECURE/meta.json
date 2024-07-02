@@ -7,15 +7,5 @@
   "title": "Secure Network Configuration Settings",
   "privacy_issue": true,
   "security_issue": true,
-  "categories": {
-    "OWASP_MASVS_L1": [
-      "MSTG_NETWORK_1"
-    ],
-    "OWASP_MASVS_L2": [
-      "MSTG_NETWORK_1"
-    ],
-    "OWASP_MASVS_v2_1": [
-      "MASVS_NETWORK_1"
-    ]
-  }
+  "categories": {}
 }

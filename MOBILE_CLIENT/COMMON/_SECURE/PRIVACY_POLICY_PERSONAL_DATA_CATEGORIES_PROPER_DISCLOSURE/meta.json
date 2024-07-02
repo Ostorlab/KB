@@ -1,5 +1,5 @@
 {
-    "risk_rating": "info",
+    "risk_rating": "secure",
     "short_description": "Checks if privacy policy mentions categories of personal data collected",
     "references": {
         "Android Privacy Guidelines": "https://developer.android.com/privacy-and-security/about",
