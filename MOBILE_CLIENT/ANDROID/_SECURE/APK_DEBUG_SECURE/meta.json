@@ -7,16 +7,5 @@
   "title": "Debug mode disabled",
   "privacy_issue": false,
   "security_issue": true,
-  "categories": {
-    "OWASP_MASVS_L1": [
-      "MSTG_CODE_2"
-    ],
-    "OWASP_MASVS_L2": [
-      "MSTG_CODE_2"
-    ],
-    "OWASP_MASVS_v2_1": [
-      "MASVS_RESILIENCE_3",
-      "MASVS_RESILIENCE_4"
-    ]
-  }
+  "categories": {}
 }
