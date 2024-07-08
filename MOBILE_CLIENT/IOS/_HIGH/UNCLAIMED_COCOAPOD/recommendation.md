@@ -1,6 +1,3 @@
-
-# Unclaimed Cocoapods
-
 Potential Cocoapods changes could affect millions of Apple devices around the world.
 Developers who have released IOS applications should take the following steps to secure their code:
  * Pin the version of all Cocoapods packages, This prevents automatic updates to potentially harmful versions
