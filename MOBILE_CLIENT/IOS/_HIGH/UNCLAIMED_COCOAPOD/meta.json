@@ -1,6 +1,6 @@
 {
     "risk_rating": "high",
-    "short_description": "Unclaimed Cocoapods exposes application to potential dependency injection.",
+    "short_description": "Unclaimed Cocoapods can expose applications to potential dependency injection.",
     "references": {
         "E.V.A Sec article": "https://evasec.webflow.io/blog/eva-discovered-supply-chain-vulnerabities-in-cocoapods"
     },
