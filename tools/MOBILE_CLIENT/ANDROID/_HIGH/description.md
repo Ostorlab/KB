@@ -3,13 +3,6 @@
 
 An information disclosure vulnerability in the Android WiFi API allows an attacker to access sensitive information such as network names and passwords, potentially leading to unauthorized access to WiFi networks and compromising user privacy.
 
-Applications using the `ACESS_WIFI_STATE` interface and calling APIs like `getConnectionInfo` to access sensitive information about the WiFi access point, like `BSSID`, `SSID`, and `RSSI`.
-API's like these can also gran access to more `placeholder` data like:
-
-    * MAC Address which is a unique device identifier
-    * Geolocation data by using surrounding WiFi access points
-    * User movement inference and social links using WiFi acces point repeating patterns
-
 ### Examples
 
 #### Dart

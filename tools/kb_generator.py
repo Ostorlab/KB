@@ -21,7 +21,7 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.getenv("OPEN_API_KEY")
 MODEL_NAME = "gpt-3.5-turbo"
 
 DESCRIPTION_TEMPLATE = """
