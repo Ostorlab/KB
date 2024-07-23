@@ -1,19 +1,20 @@
 
-# Android Wifi Api Information Disclosure Vulnerability
+# Android APK WiFi API PII Access
 
-To mitigate the Android WiFi API Information Disclosure Vulnerability, there are a couple of things both users and developers can do.
-For users:  
-  
-        * Keep the Android system and all apps updated to the latest versions
-        * Be cautious about granting WiFi related persmissons to apps
-        * Use a VPN when connecting to public WiFi networks  
+To mitigate the privacy risks associated with Android WiFi API access to Personal Identifiable Information (PII), both users and developers can take several precautions:
 
-For developers:  
-  
-        * Request explicit user permission for accessing sensitive WiFi information
-        * Implement the principale of 'Least Privilege', only request and use the minimum permissions necessary for the app to function
-        * User the Android Privacy Changes introduced in Android 10 and later versions, restricting access to sensitive information
-        * Use the privacy focused `NetworkCallBack` API instead of `WifiInfo` whenever possible
+For users:
+
+    * Keep the Android system and all apps updated to the latest versions
+    * Be cautious about granting WiFi-related permissions to apps
+    * Use a VPN when connecting to public WiFi networks
+
+For developers:
+
+    * Request explicit user permission for accessing sensitive WiFi information
+    * Implement the principle of 'Least Privilege', only requesting and using the minimum permissions necessary for the app to function
+    * Utilize the Android Privacy Changes introduced in Android 10 and later versions, which restrict access to sensitive information
+    * Use the privacy-focused `NetworkCallback` API instead of `WifiInfo` whenever possible
 
 ### Code Examples for developers:
 

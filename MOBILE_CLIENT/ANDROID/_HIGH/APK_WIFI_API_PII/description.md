@@ -1,10 +1,9 @@
 
-# Android Wifi Api Information Disclosure Vulnerability
+# Android APK WiFi API PII access
 
-An information disclosure vulnerability in the Android WiFi API allows an attacker to access sensitive information such as network names and passwords, potentially leading to unauthorized access to WiFi networks and compromising user privacy.
+Android APK WiFi API allows access to Personal Identifiable Information (PII) such as network names and access points usage history, potentially leading to private data inference.
 
-Applications using the `ACESS_WIFI_STATE` interface and calling APIs like `getConnectionInfo` to access sensitive information about the WiFi access point, like `BSSID`, `SSID`, and `RSSI`,
-can also allow for sensitive data inference:
+Applications using the `ACCESS_WIFI_STATE` permission and calling APIs like `getConnectionInfo` can access sensitive information about WiFi access points (such as BSSID, SSID, and RSSI) and potentially infer:"
 
     * MAC Address which is a unique device identifier
     * Geolocation data by using surrounding WiFi access points
