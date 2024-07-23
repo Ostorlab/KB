@@ -2,9 +2,9 @@ Android APK WiFi API allows access to Personal Identifiable Information (PII) su
 
 Applications using the `ACCESS_WIFI_STATE` permission and calling APIs like `getConnectionInfo` can access sensitive information about WiFi access points (such as `BSSID`, `SSID`, and `RSSI`) and potentially infer:
 
-* MAC Address which is a unique device identifier
-* Geolocation data by using surrounding WiFi access points
-* User movement history and social links inference relying on repeating patterns in WiFi access point usage
+* MAC Address which is a unique device identifier.
+* Geolocation data by using surrounding WiFi access points.
+* User movement history and social links inference relying on repeating patterns in WiFi access point usage.
 
 ### Examples
 
