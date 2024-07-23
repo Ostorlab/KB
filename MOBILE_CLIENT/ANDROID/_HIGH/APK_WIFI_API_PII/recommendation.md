@@ -1,101 +1,54 @@
 
 # Android Wifi Api Information Disclosure Vulnerability
 
-To mitigate the Android WiFi API Information Disclosure Vulnerability, users should ensure their devices are updated with the latest security patches and avoid connecting to unsecured public WiFi networks. Additionally, using a virtual private network (VPN) can help encrypt internet traffic and protect sensitive information from being intercepted by malicious actors.
+To mitigate the Android WiFi API Information Disclosure Vulnerability, there are a couple of things both users and developers can do.
+For users:  
+  
+        * Keep the Android system and all apps updated to the latest versions
+        * Be cautious about granting WiFi related persmissons to apps
+        * Use a VPN when connecting to public WiFi networks  
 
-# Code Examples:
+For developers:  
+  
+        * Request explicit user permission for accessing sensitive WiFi information
+        * Implement the principale of 'Least Privilege', only request and use the minimum permissions necessary for the app to function
+        * User the Android Privacy Changes introduced in Android 10 and later versions, restricting access to sensitive information
+        * Use the privacy focused `NetworkCallBack` API instead of `WifiInfo` whenever possible
 
-### Dart
+### Code Examples for developers:
 
-```dart
-dart
-import 'package:flutter/material.dart';
-import 'package:permission_handler/permission_handler.dart';
 
-void main() {
-  runApp(MyApp());
-}
+=== "Java"
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('WiFi Info Vulnerability Demo'),
-        ),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () async {
-              var status = await Permission.location.status;
-              if (status.isGranted) {
-                var wifiInfo = WifiInfo();
-                print('WiFi SSID: ${wifiInfo.getSSID()}');
-                print('WiFi BSSID: ${wifiInfo.getBSSID()}');
-              } else {
-                await Permission.location.request();
-              }
-            },
-            child: Text('Get WiFi Info'),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class WifiInfo {
-  String getSSID() {
-    // Simulating fetching SSID from WiFi API
-    return 'FakeSSID';
+  ```java
+  
+  // Request FINE_LOCATION permissions
+  if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+      != PackageManager.PERMISSION_GRANTED) {
+  ActivityCompat.requestPermissions(this,
+         new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+         PERMISSION_REQUEST_CODE);
   }
 
-  String getBSSID() {
-    // Simulating fetching BSSID from WiFi API
-    return 'FakeBSSID';
+  // Use Android 10+ methods whenever possible
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+      // Use Android 10+ compliant methods
+      // For example, WifiInfo.getSSID() and getBSSID() return masked values by default
+  } else {
+      // Use methods for earlier Android versions
   }
-}
-```
 
-### Swift
+  // Use privacy focused NetworkCallback API
+  ConnectivityManager connectivityManager = 
+      (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
-```swift
-swift
-import Foundation
+  NetworkRequest.Builder builder = new NetworkRequest.Builder();
+  builder.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);
 
-func main() {
-    let userInput = readLine()
-    print("Connecting to WiFi network: \(userInput ?? "Unknown")")
-    // Patched code to prevent information disclosure vulnerability
-    if let network = userInput, let url = URL(string: "http://example.com/wifi-info?network=\(network)") {
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let data = data, let wifiInfo = String(data: data, encoding: .utf8) {
-                print("WiFi information: \(wifiInfo)")
-            } else {
-                print("Failed to retrieve WiFi information")
-            }
-        }
-        task.resume()
-    } else {
-        print("Invalid input")
-    }
-}
-
-main()
-```
-
-### Kotlin
-
-```kotlin
-kotlin
-import android.content.Context
-import android.net.wifi.WifiManager
-
-fun main() {
-    val context: Context = TODO()
-    val wifiManager = context.getSystemService(Context.WIFI_SERVICE) as WifiManager
-    val wifiInfo = wifiManager.connectionInfo
-    println("SSID: ${wifiInfo.ssid.replace("\"", "")}")
-    println("BSSID: ${wifiInfo.bssid}")
-}
+  connectivityManager.registerNetworkCallback(builder.build(), new ConnectivityManager.NetworkCallback() {
+      @Override
+      public void onAvailable(Network network) {
+          // Handle WiFi connection here
+      }
+  });
 ```

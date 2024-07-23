@@ -22,3 +22,4 @@ Here are some recommendations:
   def limiting_header_values():
       expected_header = request.headers.get('Expected-Header')
       ### logic depending on the expected header
+  ```

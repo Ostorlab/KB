@@ -4,7 +4,7 @@
 An information disclosure vulnerability in the Android WiFi API allows an attacker to access sensitive information such as network names and passwords, potentially leading to unauthorized access to WiFi networks and compromising user privacy.
 
 Applications using the `ACESS_WIFI_STATE` interface and calling APIs like `getConnectionInfo` to access sensitive information about the WiFi access point, like `BSSID`, `SSID`, and `RSSI`,
-can also allow attackers to infer more sensitive data like:
+can also allow for sensitive data inference:
 
     * MAC Address which is a unique device identifier
     * Geolocation data by using surrounding WiFi access points
@@ -12,9 +12,10 @@ can also allow attackers to infer more sensitive data like:
 
 ### Examples
 
-#### JAVA
+=== "Java"
 
-```java
+ ```java
+ 
     import android.content.Context;
     import android.net.wifi.WifiInfo;
     import android.net.wifi.WifiManager;
@@ -50,37 +51,5 @@ can also allow attackers to infer more sensitive data like:
             }
         }
     }
-   ```
+ ```
 
-#### Swift
-
-```swift
-swift
-import Foundation
-
-func main() {
-    let userInput = readLine()
-    print("Connecting to WiFi network: \(userInput ?? "Unknown")")
-    // Vulnerable code that unintentionally leaks WiFi information
-    let wifiInfo = try? String(contentsOf: URL(string: "http://example.com/wifi-info?network=\(userInput ?? "")")!)
-    print("WiFi information: \(wifiInfo ?? "Unknown")")
-}
-
-main()
-```
-
-#### Kotlin
-
-```kotlin
-kotlin
-import android.content.Context
-import android.net.wifi.WifiManager
-
-fun main() {
-    val context: Context = TODO()
-    val wifiManager = context.getSystemService(Context.WIFI_SERVICE) as WifiManager
-    val wifiInfo = wifiManager.connectionInfo
-    println("SSID: ${wifiInfo.ssid}")
-    println("BSSID: ${wifiInfo.bssid}")
-}
-```
