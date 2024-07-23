@@ -22,3 +22,4 @@ All these techniques target defects, vulnerabilities, or mistakes in a server's 
     response = requests.get("http://www.some-url.com/unauthorized_path?debug=true")
 
     '''Might get us the resource we want''
+  ```
