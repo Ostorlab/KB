@@ -10,7 +10,7 @@
     "privacy_issue": true,
     "security_issue": true,
     "categories": {
-        "CCPA_CONTROLS": [
+        "CCPA": [
             "CCPA_1798_100",
             "CCPA_1798_110",
             "CCPA_1798_115",
