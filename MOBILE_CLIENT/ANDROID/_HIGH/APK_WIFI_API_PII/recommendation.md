@@ -1,4 +1,4 @@
-To mitigate the privacy risks associated with Android WiFi API access to Personal Identifiable Information (PII), both users and developers can take several precautions:
+To mitigate the privacy risks associated with Android WiFi API's access to Personal Identifiable Information (PII), both users and developers can take several precautions:
 
 For users:
 
