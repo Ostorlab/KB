@@ -2,16 +2,16 @@ To mitigate the privacy risks associated with Android WiFi API's access to Perso
 
 For users:
 
-* Keep the Android system and all apps updated to the latest versions
-* Be cautious about granting WiFi-related permissions to apps
-* Use a VPN when connecting to public WiFi networks
+* Keep the Android system and all apps updated to the latest versions.
+* Be cautious about granting WiFi-related permissions to apps.
+* Use a VPN when connecting to public WiFi networks.
 
 For developers:
 
-* Request explicit user permission for accessing sensitive WiFi information
-* Implement the principle of 'Least Privilege', only requesting and using the minimum permissions necessary for the app to function
-* Utilize the Android Privacy Changes introduced in Android 10 and later versions, which restrict access to sensitive information
-* Use the privacy-focused `NetworkCallback` API instead of `WifiInfo` whenever possible
+* Request explicit user permission for accessing sensitive WiFi information.
+* Implement the principle of 'Least Privilege', only requesting and using the minimum permissions necessary for the app to function.
+* Utilize the Android Privacy Changes introduced in Android 10 and later versions, which restrict access to sensitive information.
+* Use the privacy-focused `NetworkCallback` API instead of `WifiInfo` whenever possible.
 
 ### Code Examples for developers:
 
