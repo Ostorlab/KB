@@ -1,4 +1,5 @@
 """Utils KB generator tests."""
+
 import dataclasses
 import json
 from typing import Any

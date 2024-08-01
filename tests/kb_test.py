@@ -1,4 +1,5 @@
 """KB json files test"""
+
 import glob
 import json
 import pathlib

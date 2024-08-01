@@ -1,4 +1,5 @@
 """Unittests for KB generator."""
+
 import os.path
 from pytest_mock import plugin
 from pyfakefs import fake_filesystem
