@@ -1,6 +1,6 @@
 {
     "risk_rating": "secure",
-    "short_description": "Privacy policy not referencing rights under GDPR for users in the EU",
+    "short_description": "Privacy policy mentions the rights under GDPR for users in the EU",
     "references": {
         "GDPR": "https://gdpr.eu/",
         "EU Data Protection Authorities": "https://edpb.europa.eu/",
@@ -9,7 +9,7 @@
         "Apple Privacy Manifest": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
         "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "http://cwe.mitre.org/data/definitions/359.html"
     },
-    "title": "Missing GDPR Rights Reference in Privacy Policy",
+    "title": "GDPR Rights Reference Present in Privacy Policy",
     "privacy_issue": true,
     "security_issue": false,
     "categories": {}
