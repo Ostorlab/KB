@@ -7,7 +7,7 @@
         "Apple Privacy Manifest": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
         "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "http://cwe.mitre.org/data/definitions/359.html"
     },
-    "title": "Privacy Policy CCPA Rights Reference missing",
+    "title": "Privacy Policy CCPA Rights Reference are Present",
     "privacy_issue": true,
     "security_issue": false,
     "categories": {}
