@@ -8,4 +8,4 @@ To mitigate risks associated with exporting receivers in Android applications, e
             <action android:name="android.intent.action.ACTION2" />
         </intent-filter>
     </receiver>
-    ```
+  ```
