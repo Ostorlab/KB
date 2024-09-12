@@ -8,7 +8,7 @@ To mitigate the risk of Field Duplication attacks, you can take the following st
    // Configuring for GraphQL Armor
    GraphQLArmorConfig({
            maxFieldDuplicates: {
-                   // Enable or disable the plugin | default: true
+      // Enable or disable the plugin | default: true
                enabled: true,
 
       // Set the maximum number of field duplications allowed per query | default: 10
