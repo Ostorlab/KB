@@ -9,16 +9,15 @@ To mitigate the risks associated with **HTTP Method Manipulation** in GraphQL, f
 4. **Monitor and Test Regularly**: Continuously test GraphQL endpoints for method manipulation vulnerabilities. Ensure that mutation requests can only be executed via the appropriate HTTP method.
 
 === "Python"
-```python
-# Enforce POST-only mutations in a Flask-based GraphQL app
+  ```python
 
-from flask import request, jsonify
-from flask_graphql import GraphQLView
+  from flask import request, jsonify
+  from flask_graphql import GraphQLView
 
-@app.route('/graphql', methods=['POST'])
-def graphql():
-    if request.method != 'POST':
-        return jsonify({"error": "Only POST requests allowed for mutations"}), 405
+  @app.route('/graphql', methods=['POST'])
+  def graphql():
+      if request.method != 'POST':
+          return jsonify({"error": "Only POST requests allowed for mutations"}), 405
 
-    return GraphQLView.as_view('graphql')()
-```
+      return GraphQLView.as_view('graphql')()
+  ```

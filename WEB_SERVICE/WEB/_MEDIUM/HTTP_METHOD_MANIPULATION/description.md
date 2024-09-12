@@ -11,13 +11,13 @@ The security implications of HTTP method manipulation in GraphQL include:
 To check if a GraphQL API is vulnerable to this, you can attempt to execute a mutation using a GET request:
 
 === "Python"
-```python
-import requests
+  ```python
+  import requests
 
-response = requests.get("https://your-graphql-endpoint.com/graphql", 
-    params={
-        'query': 'mutation { MutationName(input: { yourField: "value" }) { resultField } }'
-    })
-```
+  response = requests.get("https://your-graphql-endpoint.com/graphql", 
+      params={
+          'query': 'mutation { MutationName(input: { yourField: "value" }) { resultField } }'
+      })
+  ```
 
 If the mutation is allowed via GET, it indicates a potential vulnerability that needs to be addressed.
