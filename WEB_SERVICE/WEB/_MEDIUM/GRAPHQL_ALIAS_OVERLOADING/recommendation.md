@@ -1,6 +1,6 @@
-To mitigate the risk of Directive Overloading attacks, you can take the following steps:
+To mitigate the risk of Alias Overloading attacks, you can take the following steps:
 
-- **Implement timouts**: Enforce query timeouts to terminate queries that take too long to resolve. By setting a maximum execution time, you can automatically terminate queries that abuse aliases and consume excessive server resources, preventing Denial of Service (DoS) attacks.
+- **Implement timeouts**: Enforce query timeouts to terminate queries that take too long to resolve. By setting a maximum execution time, you can automatically terminate queries that abuse aliases and consume excessive server resources, preventing Denial of Service (DoS) attacks.
 
 - **Limit Aliases**: Configure server-side limits on the number of aliases allowed in a single GraphQL query. You can configure tools like GraphQL Armor to limit aliases and prevent overloading.
 
