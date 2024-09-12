@@ -10,6 +10,7 @@ The security implications of HTTP method manipulation in GraphQL include:
 
 To check if a GraphQL API is vulnerable to this, you can attempt to execute a mutation using a GET request:
 
+=== "Python"
 ```python
 import requests
 
