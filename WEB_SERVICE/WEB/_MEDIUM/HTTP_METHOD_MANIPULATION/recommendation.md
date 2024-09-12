@@ -20,3 +20,4 @@ def graphql():
         return jsonify({"error": "Only POST requests allowed for mutations"}), 405
 
     return GraphQLView.as_view('graphql')()
+```
