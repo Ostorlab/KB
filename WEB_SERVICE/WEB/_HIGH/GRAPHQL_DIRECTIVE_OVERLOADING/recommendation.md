@@ -1,6 +1,6 @@
 To mitigate the risk of Directive Overloading attacks, you can take the following steps:
 
-- **Implement timouts**: Implementing timeouts to `kill` queries that take too long to resolve can be highly effective. By setting a maximum execution time, you can automatically terminate queries that exceed this limit, preventing them from consuming excessive server resources. 
+- **Implement timeouts**: Implementing timeouts to `kill` queries that take too long to resolve can be highly effective. By setting a maximum execution time, you can automatically terminate queries that exceed this limit, preventing them from consuming excessive server resources. 
 
 - **Limit Directives**: Implement server-side limits on the number of directives allowed in a single GraphQL query. You can configure tools like `GraphQL Armor` to limit directives and prevent overloading.
 
