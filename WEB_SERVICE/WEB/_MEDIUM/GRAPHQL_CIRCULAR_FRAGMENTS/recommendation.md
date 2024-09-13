@@ -1,4 +1,4 @@
-To prevent circular fragments in GraphQL, consider the following steps:
+To mitigate the risk of circular fragments in GraphQL, consider the following steps:
 
 ### 1. Circular Fragment Detection via Schema Analysis
 
