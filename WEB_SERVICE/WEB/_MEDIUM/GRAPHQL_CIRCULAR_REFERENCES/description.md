@@ -1,14 +1,14 @@
 GraphQL allows clients to request specific data, and its flexibility can be exploited to create complex or recursive queries. Circular references occur when an object type refers back to itself directly or indirectly through other types.
 
 For example:
-```
- Query CircularReferences:  {
+```graphql
+ query CircularReferences  {
      user {
        friends {
          user {
            friends {
              user {
-               ...
+               __typename
              }
            }
          }
