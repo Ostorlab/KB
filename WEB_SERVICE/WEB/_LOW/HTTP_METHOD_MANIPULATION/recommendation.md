@@ -21,3 +21,14 @@ To mitigate the risks associated with **HTTP Method Manipulation** in GraphQL, f
 
       return GraphQLView.as_view('graphql')()
   ```
+=== "javascript"
+  ```javascript
+  // Example of setting method restrictions in Express.js
+  app.post('/graphql', (req, res) => {
+    // Handle GraphQL mutations here
+  });
+    
+  app.get('/graphql', (req, res) => {
+    res.status(405).send('Method Not Allowed'); // Reject GET requests
+   });
+   ```

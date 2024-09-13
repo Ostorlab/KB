@@ -19,5 +19,14 @@ To check if a GraphQL API is vulnerable to this, you can attempt to execute a mu
           'query': 'mutation { MutationName(input: { yourField: "value" }) { resultField } }'
       })
   ```
+=== "javascript"
+  ```javascript
+  fetch('https://your-graphql-endpoint.com/graphql?query=mutation%20{updateUser(id:%201,name:%20%22Malicious%22)}', {
+    method: 'GET'
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+ ```
 
 If the mutation is allowed via GET, it indicates a potential vulnerability that needs to be addressed.
