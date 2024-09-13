@@ -1,5 +1,4 @@
-### Pseudocode Plan
-
+To mitigate the risk of circular references in GraphQL, you can follow these recommendations:
 1. **Depth Limiting**:
 Implement a middleware to check the depth of the query, and raise an error if it exceeds the limit.
 Example:
