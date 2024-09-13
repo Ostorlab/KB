@@ -4,7 +4,7 @@
   "short_description": "Circular references in GraphQL where a field references itself or another field that references the original field can lead to infinite loops and DoS attacks.",
   "references": {
     "medium@laur.telliskivi": "https://medium.com/@laur.telliskivi/circular-fragment-exploitation-in-graphql-with-burpsuite-42c490ecab98",
-    "imperva": "https://www.imperva.com/blog/graphql-vulnerabilities-common-attacks/#circular-queries",
+    "imperva": "https://www.imperva.com/blog/graphql-vulnerabilities-common-attacks/#circular-queries"
   },
   "privacy_issue": false,
   "security_issue": true,
