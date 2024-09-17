@@ -1,0 +1,36 @@
+{
+  "title": "Circular Fragment in GraphQL",
+  "short_description": "Circular fragment references in GraphQL can lead to server-side resource exhaustion and denial of service.",
+  "risk_rating": "medium",
+  "references": {
+    "Circular Fragment Exploitation in GraphQL with BurpSuite": "https://medium.com/@laur.telliskivi/circular-fragment-exploitation-in-graphql-with-burpsuite-42c490ecab98",
+    "Managing Circular Imports in GraphQL Modules": "https://the-guild.dev/blog/manage-circular-imports-hell-in-graphql-modules"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_400"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_6_2",
+      "REQ_6_4",
+      "REQ_11_3"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_ASVS_L3": [
+      "V13_4_1"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5",
+      "CC_9_1"
+    ]
+  }
+}
