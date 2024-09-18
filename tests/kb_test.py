@@ -200,7 +200,6 @@ CWE_TOP_25 = [
     "CWE_400",
     "CWE_611",
     "CWE_94",
-    "CWE_307",
 ]
 
 GDPR = [f"ART_{i}" for i in range(1, 94)]
