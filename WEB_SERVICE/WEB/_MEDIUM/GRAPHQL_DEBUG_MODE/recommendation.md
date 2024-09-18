@@ -2,15 +2,11 @@ To mitigate the risks associated with GraphQL Debug Mode, consider the following
 
 1. **Disable Debug Mode in Production**: Ensure that GraphQL debug mode is disabled in production environments. Debug information should only be available in development and testing environments.
 
-2. **Use Environment-Specific Configuration**: Implement environment-specific configuration to ensure debug mode is automatically disabled in production deployments.
+2. **Implement Custom Error Handling**: Create a custom error handling mechanism that sanitizes error messages before sending them to clients in production. This should remove any sensitive information while still providing useful feedback.
 
-3. **Implement Custom Error Handling**: Create a custom error handling mechanism that sanitizes error messages before sending them to clients in production. This should remove any sensitive information while still providing useful feedback.
+3. **Use Error Masking**: Implement error masking to replace detailed error messages with generic ones in production environments.
 
-4. **Use Error Masking**: Implement error masking to replace detailed error messages with generic ones in production environments.
-
-5. **Implement Proper Logging**: Instead of relying on debug mode for error tracking, implement proper logging mechanisms that securely store detailed error information for later analysis.
-
-6. **Regular Security Audits**: Conduct regular security audits to ensure that debug mode is not inadvertently enabled in production environments.
+4. **Implement Proper Logging**: Instead of relying on debug mode for error tracking, implement proper logging mechanisms that securely store detailed error information for later analysis.
 
 Example of implementing custom error handling in Apollo Server:
 
