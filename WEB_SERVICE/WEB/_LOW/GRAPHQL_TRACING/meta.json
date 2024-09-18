@@ -1,0 +1,32 @@
+{
+  "risk_rating": "low",
+  "title": "GraphQL Tracing Enabled",
+  "short_description": "If GraphQL tracing is enabled, it may leak sensitive information about query execution.",
+  "references": {
+    "GraphQL": "https://graphql-ruby.org/queries/tracing",
+    "Apollo GraphQL": "https://www.apollographql.com/docs/router/configuration/telemetry/exporters/tracing/overview/"
+  },
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_5",
+      "REQ_11_3"
+
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_ARCH_9"
+    ],
+    "OWASP_ASVS_L3": [
+      "V1_4_4"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_7",
+      "CC_7_1"
+    ]
+  }
+}
