@@ -3,8 +3,8 @@
   "title": "GraphQL Tracing Enabled",
   "short_description": "If GraphQL tracing is enabled, it may leak sensitive information about query execution.",
   "references": {
-    "GraphQL": "https://graphql-ruby.org/queries/tracing",
-    "Apollo GraphQL": "https://www.apollographql.com/docs/router/configuration/telemetry/exporters/tracing/overview/"
+    "GraphQL Vulnerabilities and Common Attacks: What You Need to Know": "https://www.imperva.com/blog/graphql-vulnerabilities-common-attacks/#excessive-errors",
+    "OWASP GraphQL Security Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html#secure-configurations"
   },
   "privacy_issue": true,
   "security_issue": true,
