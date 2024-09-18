@@ -10,8 +10,12 @@
   "security_issue": true,
   "categories": {
     "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3",
       "REQ_6_5",
       "REQ_11_3"
+
     ],
     "OWASP_MASVS_L2": [
       "MSTG_ARCH_9"

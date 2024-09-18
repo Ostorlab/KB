@@ -1,4 +1,4 @@
-# GraphQL Debug Mode Recommendations
+- # GraphQL Debug Mode Recommendations
 
 To mitigate the risks associated with GraphQL Debug Mode, consider the following recommendations:
 

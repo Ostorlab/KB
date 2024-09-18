@@ -1,4 +1,4 @@
-# GraphQL Debug Mode
+- # GraphQL Debug Mode
 
 GraphQL Debug Mode is a feature that, when enabled, provides detailed error messages, stack traces, and additional debugging information in responses. While this is invaluable during development, leaving it enabled in a production environment can potentially expose sensitive information about the server's internal structure and implementation details.
 
