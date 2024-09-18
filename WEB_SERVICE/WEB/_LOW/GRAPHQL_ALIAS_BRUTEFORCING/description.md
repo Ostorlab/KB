@@ -12,8 +12,3 @@ query loginBatch {
   ...
 }
 ```
-
-Security Impact of Brute Force Login Using Alias Batching:
-
-**Bypassing Rate Limits**: By grouping multiple login attempts in a single query, attackers can bypass rate-limiting mechanisms that typically control login attempts based on individual requests.
-**Credential Stuffing**: Attackers can quickly test large volumes of username-password pairs, potentially gaining unauthorized access if valid credentials are found.: If an Alias Overloading attack goes unchecked, it can render the GraphQL API unavailable, disrupting service for all users.
