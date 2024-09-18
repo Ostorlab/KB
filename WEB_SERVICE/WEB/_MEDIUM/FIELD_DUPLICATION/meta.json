@@ -1,5 +1,5 @@
 {
-    "risk_rating": "high",
+    "risk_rating": "medium",
     "title": "Field Duplication in GraphQL API",
     "short_description": "Exploiting a GraphQL server by duplicating fields, potentially leading to Denial of Service attacks.",
     "references": {
