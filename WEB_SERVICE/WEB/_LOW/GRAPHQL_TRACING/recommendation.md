@@ -1,40 +1,42 @@
+# GraphQL Tracing Recommendations
+
 To mitigate the risks associated with GraphQL Tracing, consider the following recommendations:
 
-1. **Disable Tracing in Production**: Ensure that GraphQL tracing is disabled in production environments. Tracing should only be enabled temporarily for debugging purposes and in controlled environments.
+1. **Understand Tracing Implementation**: GraphQL tracing is typically implemented using plugins and often sends data to separate tracing servers (e.g., Jaeger) rather than exposing it directly in GraphQL responses.
 
-2. **Implement Access Controls**: If tracing must be enabled in production for certain scenarios, implement strict access controls to ensure that only authorized personnel can access the tracing data.
+2. **Control Tracing in Production**: Use environment variables or configuration settings to easily enable or disable tracing based on the environment.
 
-3. **Sanitize Tracing Data**: If tracing data must be exposed, implement sanitization mechanisms to remove any potentially sensitive information before sending it to clients.
+3. **Implement Access Controls**: If tracing is enabled in production, implement strict access controls on the tracing server (e.g., Jaeger) to ensure only authorized personnel can access the tracing data.
 
-4. **Use Application Performance Monitoring (APM) Tools**: Instead of relying on GraphQL tracing for performance monitoring in production, consider using dedicated APM tools that provide more secure and comprehensive monitoring capabilities.
+4. **Sanitize Tracing Data**: Ensure that sensitive information is not included in the traced data before it's sent to the tracing server.
 
-Example of disabling tracing in Apollo Server:
+5. **Use Secure APM Tools**: Consider using dedicated Application Performance Monitoring (APM) tools that provide secure and comprehensive monitoring capabilities for production environments.
 
-=== "javascript"
+Example of implementing tracing with environment-based control in Apollo Server:
 
 ```javascript
+const { ApolloServer } = require('apollo-server');
+const { ApolloServerPluginInlineTrace } = require('apollo-server-core');
+
+const isProduction = process.env.NODE_ENV === 'production';
+const plugins = [];
+
+if (!isProduction) {
+  plugins.push(ApolloServerPluginInlineTrace({
+    rewriteError: (err) => {
+      // Optionally rewrite errors before sending to the tracing service
+      return err;
+    },
+  }));
+}
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  tracing: false, // Disable tracing
+  plugins,
 });
 ```
 
-=== "Python"
+This setup allows you to easily control tracing based on the environment, ensuring it's not accidentally enabled in production.
 
-```python
-from graphene import Schema
-from graphql import GraphQLBackend
-
-class CustomBackend(GraphQLBackend):
-    def __init__(self):
-        super().__init__(traceback_enabled=False)
-
-schema = Schema(query=Query, mutation=Mutation)
-result = schema.execute(
-    query,
-    backend=CustomBackend()
-)
-```
-
-For other GraphQL server implementations, consult the specific documentation on how to disable tracing or control its behavior in different environments.
+For other GraphQL server implementations, consult the specific documentation on how to implement and control tracing securely.
