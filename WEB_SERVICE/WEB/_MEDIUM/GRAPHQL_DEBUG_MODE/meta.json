@@ -1,0 +1,28 @@
+{
+  "risk_rating": "medium",
+  "title": "GraphQL Debug Mode Enabled",
+  "short_description": "GraphQL debug mode is enabled, which may expose sensitive information through detailed error messages and stack traces.",
+  "references": {
+    "OWASP": "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html#debug-mode",
+    "Apollo GraphQL": "https://www.apollographql.com/docs/apollo-server/data/errors/"
+  },
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "PCI_STANDARDS": [
+      "REQ_6_5",
+      "REQ_11_3"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_ARCH_9"
+    ],
+    "OWASP_ASVS_L3": [
+      "V7_4_1"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_7",
+      "CC_7_1"
+    ]
+  }
+}
