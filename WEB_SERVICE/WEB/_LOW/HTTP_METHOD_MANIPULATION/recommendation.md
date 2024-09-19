@@ -14,7 +14,7 @@ To mitigate the risks associated with **HTTP Method Manipulation** in GraphQL, f
   def graphql():
       return GraphQLView.as_view('graphql')()
   ```
-=== "javascript"
+=== "javaScript"
   ```javascript
   // Example of setting method restrictions in Express.js
   app.post('/graphql', (req, res) => {
