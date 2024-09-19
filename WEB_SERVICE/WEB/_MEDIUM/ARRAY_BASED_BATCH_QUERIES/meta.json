@@ -9,7 +9,7 @@
     "security_issue": true,
     "categories": {
         "CWE_TOP_25": [
-        "CWE_400"
+        "CWE_400","CWE_20"
         ],
         "PCI_STANDARDS": [
         "REQ_6_2",
