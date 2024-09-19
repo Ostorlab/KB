@@ -1,0 +1,53 @@
+{
+    "risk_rating": "medium",
+    "title": "Field Duplication in GraphQL API",
+    "short_description": "Exploiting a GraphQL server by duplicating fields, potentially leading to Denial of Service attacks.",
+    "references": {
+      "Sylhare": "https://sylhare.github.io/2024/04/19/Graphql-vulnerabilities.html"
+    },
+    "privacy_issue": false,
+    "security_issue": true,
+    "categories": {
+      "CWE_TOP_25": [
+        "CWE_400"
+      ],
+      "PCI_STANDARDS": [
+        "REQ_6_2",
+        "REQ_6_4",
+        "REQ_11_3"
+      ],
+      "OWASP_MASVS_L2": [
+        "MSTG_PLATFORM_2"
+      ],
+      "OWASP_ASVS_L2": [
+      "V4_1_3",
+      "V4_1_5",
+      "V5_3_3",
+      "V5_3_4",
+      "V9_1_1",
+      "V9_1_2",
+      "V12_1_1",
+      "V12_1_2"
+      ],
+      "OWASP_ASVS_L3": [
+        "V4_1_3",
+        "V4_1_5",
+        "V5_3_3",
+        "V5_3_4",
+        "V9_1_1",
+        "V9_1_2",
+        "V12_1_1",
+        "V12_1_2",
+        "V12_1_3"
+      ],
+      "SOC2_CONTROLS": [
+        "CC_2_1",
+        "CC_4_1",
+        "CC_7_1",
+        "CC_7_2",
+        "CC_7_4",
+        "CC_7_5",
+        "CC_9_1"
+      ]
+    }
+  }
