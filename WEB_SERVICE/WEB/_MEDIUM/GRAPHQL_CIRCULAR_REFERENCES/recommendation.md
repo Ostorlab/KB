@@ -34,7 +34,7 @@ Example Of Circular Reference:
             return [User(id=1, name='Alice'), User(id=2, name='Bob')]
     ```
 
-Example Of Redesigned Schema:
+Example of redesigned Schema:
 === "Python"
     ```python
     class FriendProfile(graphene.ObjectType):
