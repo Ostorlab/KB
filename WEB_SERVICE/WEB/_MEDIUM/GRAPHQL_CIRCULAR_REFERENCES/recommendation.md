@@ -2,8 +2,8 @@ To mitigate the risk of circular references in GraphQL, you can follow these rec
 1. **Depth Limiting**:
 Implement a middleware to check the depth of the query, and raise an error if it exceeds the limit.
 Example:
-=== "Python"
-    ```python
+=== "python"
+	```python
     class DepthAnalysisMiddleware:
         def resolve(self, next, root, info, **args):
             if info.operation.selection_set:
@@ -18,13 +18,14 @@ Example:
             if field.selection_set:
                 return 1 + max(self._get_depth(f) for f in field.selection_set.selections)
             return 1
-    ```
+	```
+
 
 2. **Circular Reference Detection**:
 Redesign the schema to avoid circular references.
 Example of Circular Reference:
-=== "Python"
-    ```python
+=== "python"
+	```python
     class User(graphene.ObjectType):
         id = graphene.ID()
         name = graphene.String()
@@ -32,11 +33,11 @@ Example of Circular Reference:
         
         def resolve_friends(self, info):
             return [User(id=1, name='Alice'), User(id=2, name='Bob')]
-    ```
+	```
 
 Example of redesigned Schema:
-=== "Python"
-    ```python
+=== "python"
+  ```python
     class FriendProfile(graphene.ObjectType):
         id = graphene.ID()
         name = graphene.String()
@@ -48,24 +49,25 @@ Example of redesigned Schema:
         
         def resolve_friends(self, info):
             return [FriendProfile(id=1, name='Alice'), FriendProfile(id=2, name='Bob')]
-    ```
+  ```
+
 
 === "JavaScript"
-    ```javascript
-    const FriendProfile = new GraphQLObjectType({
-        name: 'FriendProfile',
-        fields: {
-            id: { type: GraphQLID },
-            name: { type: GraphQLString }
-        }
-    });
-    
-    const User = new GraphQLObjectType({
-        name: 'User',
-        fields: {
-            id: { type: GraphQLID },
-            name: { type: GraphQLString },
-            friends: { type: new GraphQLList(FriendProfile) }
-        }
-    });
-    ```
+  ```javascript
+        const FriendProfile = new GraphQLObjectType({
+            name: 'FriendProfile',
+            fields: {
+                id: { type: GraphQLID },
+                name: { type: GraphQLString }
+            }
+        });
+        
+        const User = new GraphQLObjectType({
+            name: 'User',
+            fields: {
+                id: { type: GraphQLID },
+                name: { type: GraphQLString },
+                friends: { type: new GraphQLList(FriendProfile) }
+            }
+        });  
+  ```
