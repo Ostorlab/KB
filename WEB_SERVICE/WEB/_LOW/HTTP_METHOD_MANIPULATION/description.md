@@ -19,7 +19,7 @@ To check if a GraphQL API is vulnerable to this, you can attempt to execute a mu
           'query': 'mutation { MutationName(input: { yourField: "value" }) { resultField } }'
       })
   ```
-=== "javascript"
+=== "javaScript"
   ```javascript
   fetch('https://your-graphql-endpoint.com/graphql?query=mutation%20{updateUser(id:%201,name:%20%22Malicious%22)}', {
     method: 'GET'
