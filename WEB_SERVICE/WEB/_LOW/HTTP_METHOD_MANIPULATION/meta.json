@@ -1,0 +1,44 @@
+
+{
+  "title": "HTTP Method Manipulation in GraphQL",
+  "short_description": "HTTP method manipulation allows GraphQL mutations to be executed using GET requests, leading to potential exposure of sensitive data.",
+  "risk_rating": "low",
+  "references": {
+  },
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V4_1_3",
+      "V5_3_3"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_3",
+      "V4_1_5",
+      "V5_3_3",
+      "V9_1_2"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_3",
+      "V4_1_5",
+      "V5_3_3",
+      "V9_1_2",
+      "V12_1_1",
+      "V13_4_1"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_4",
+      "REQ_11_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5",
+      "CC_9_1"
+    ]
+  }
+}
