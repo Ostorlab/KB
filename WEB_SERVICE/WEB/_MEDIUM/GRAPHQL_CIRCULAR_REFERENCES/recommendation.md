@@ -49,3 +49,23 @@ Example Of Redesigned Schema:
         def resolve_friends(self, info):
             return [FriendProfile(id=1, name='Alice'), FriendProfile(id=2, name='Bob')]
     ```
+
+=== "Javascript"
+    ```javascript
+    const FriendProfile = new GraphQLObjectType({
+        name: 'FriendProfile',
+        fields: {
+            id: { type: GraphQLID },
+            name: { type: GraphQLString }
+        }
+    });
+    
+    const User = new GraphQLObjectType({
+        name: 'User',
+        fields: {
+            id: { type: GraphQLID },
+            name: { type: GraphQLString },
+            friends: { type: new GraphQLList(FriendProfile) }
+        }
+    });
+    ```

@@ -19,5 +19,5 @@ For example:
 
 Security Impact of Alias Overloading:
 
-- **Denial of Service**: By sending a large query with many nested aliases, an attacker can overwhelm the server, causing it to slow down or crash.
+- **Denial of Service**: By sending a large query with too many nested references, an attacker can overwhelm the server, causing it to slow down or crash.
 - **Resource Exhaustion**: The server may run out of memory or CPU resources while processing the query, leading to performance degradation or service unavailability.
