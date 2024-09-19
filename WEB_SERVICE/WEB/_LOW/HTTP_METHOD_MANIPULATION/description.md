@@ -1,4 +1,4 @@
-HTTP method manipulation involves exploiting inconsistencies in how GraphQL servers handle HTTP methods. In GraphQL, mutations are typically executed using the POST method to prevent sensitive operations from being exposed in the URL. However, if the server incorrectly allows mutations to be executed using GET requests, sensitive data could be exposed in URLs, leading to security vulnerabilities.
+HTTP method manipulation involves exploiting inconsistencies in how GraphQL servers handle HTTP methods. In GraphQL, if the server incorrectly allows mutations to be executed using GET requests, sensitive data could be exposed in URLs, leading to security vulnerabilities.
 
 If a proxy is used to route requests, the risk increases, as proxies may log these URLs, inadvertently storing sensitive information, such as API keys or user data, which could later be compromised if logs are accessed.
 
