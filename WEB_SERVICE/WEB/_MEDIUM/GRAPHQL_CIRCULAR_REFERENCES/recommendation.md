@@ -50,7 +50,7 @@ Example of redesigned Schema:
             return [FriendProfile(id=1, name='Alice'), FriendProfile(id=2, name='Bob')]
     ```
 
-=== "Javascript"
+=== "JavaScript"
     ```javascript
     const FriendProfile = new GraphQLObjectType({
         name: 'FriendProfile',
