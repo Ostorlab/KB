@@ -22,7 +22,7 @@ Example:
 
 2. **Circular Reference Detection**:
 Redesign the schema to avoid circular references.
-Example Of Circular Reference:
+Example of Circular Reference:
 === "Python"
     ```python
     class User(graphene.ObjectType):
