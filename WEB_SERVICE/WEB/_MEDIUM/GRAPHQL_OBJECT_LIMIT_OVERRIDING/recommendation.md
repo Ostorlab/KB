@@ -1,10 +1,10 @@
 To mitigate the risk of object limit overriding in GraphQL, implement the following measures:
 
-- **Query Complexity Analysis:** Use tools or libraries to analyze and limit the complexity of incoming queries. Libraries like `graphql-query-complexity` can help.
+**Query Complexity Analysis:** Use tools or libraries to analyze and limit the complexity of incoming queries. Libraries like `graphql-query-complexity` can help.
 
-- **Rate Limiting:** Implement rate limiting to restrict the number of queries that can be sent by a single user or IP address within a certain timeframe.
+**Rate Limiting:** Implement rate limiting to restrict the number of queries that can be sent by a single user or IP address within a certain timeframe.
 
-- **Pagination and Limits:** Apply limits to the amount of data returned in a single query. Ensure that pagination is used to control the volume of data.
+**Pagination and Limits:** Apply limits to the amount of data returned in a single query. Ensure that pagination is used to control the volume of data.
 
 ### Example Implementation:
 
