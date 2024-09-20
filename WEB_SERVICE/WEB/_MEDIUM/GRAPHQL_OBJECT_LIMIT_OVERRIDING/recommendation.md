@@ -6,8 +6,6 @@ To mitigate the risk of object limit overriding in GraphQL, implement the follow
 
 - **Pagination and Limits:** Apply limits to the amount of data returned in a single query. Ensure that pagination is used to control the volume of data.
 
-- **Introspection Control:** Restrict introspection queries in production environments to limit the ability of attackers to discover the full schema and potential limits.
-
 ### Example Implementation:
 
 === "JavaScript"
