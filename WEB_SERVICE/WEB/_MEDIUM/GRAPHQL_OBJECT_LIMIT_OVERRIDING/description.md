@@ -1,19 +1,25 @@
-Object Limit Overriding in GraphQL refers to a vulnerability where an attacker can manipulate the request to exceed the intended limits of an API, leading to potential denial-of-service (DoS) attacks or excessive resource consumption. This is particularly concerning in GraphQL, where complex queries can result in extensive data retrieval and processing if not properly restricted.
+Object Limit Overriding in GraphQL refers to a vulnerability where an attacker can manipulate query arguments to exceed the intended limits of an API. This often involves passing extremely large values to pagination or limit parameters, potentially leading to denial-of-service (DoS) attacks or excessive resource consumption.
 
 ### Potential Risks:
 
-**Denial of Service (DoS):** Attackers may send overly complex queries that consume excessive server resources, causing performance degradation or outages.
+**Denial of Service (DoS):** By requesting an excessive number of objects, attackers can overwhelm the server, causing performance degradation or outages.
 
-**Resource Exhaustion:** Large queries or mutations can overload the server’s memory and processing capabilities.
+**Resource Exhaustion:** Queries requesting a vast number of objects can overload the server's memory and processing capabilities.
 
-**Increased Costs:** For cloud-based services, complex queries may result in unexpected costs due to high resource usage.
+**Data Exposure:** In some cases, bypassing limits could lead to unauthorized access to large amounts of data.
 
-### How to Check:
+**Increased Costs:** For cloud-based services, processing queries with extremely large limits may result in unexpected costs due to high resource usage.
 
-To determine if an application is vulnerable to object limit overriding, review the following:
+### Code Samples:
 
-**Query Complexity:** Analyze if the API has controls to limit the complexity of queries.
+Vulnerable Query Example:
 
-**Depth Limiting:** Check if there are restrictions on the depth of nested queries.
-
-**Rate Limiting:** Ensure there are rate limits applied to API requests to prevent abuse.
+```graphql
+query {
+  users(first: 1000000) {
+    id
+    name
+    email
+  }
+}
+```
