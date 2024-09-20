@@ -6,7 +6,7 @@ To mitigate the risk of object limit overriding in GraphQL, implement the follow
 
 **Pagination and Limits:** Apply limits to the amount of data returned in a single query. Ensure that pagination is used to control the volume of data.
 
-### Example Implementation:
+Example Implementation:
 
 === "JavaScript"
   ```javascript
