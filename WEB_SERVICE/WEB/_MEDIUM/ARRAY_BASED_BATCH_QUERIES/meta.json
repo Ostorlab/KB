@@ -1,0 +1,46 @@
+{
+    "risk_rating": "medium",
+    "title": "Array-Based Batch Queries",
+    "short_description": "Exploiting a GraphQL server by sending array-based batch queries, potentially leading to Denial of Service attacks.",
+    "references": {
+      "Inigo": "https://inigo.io/blog/defeating_controls_with_array-based_query_batching"
+    },
+    "privacy_issue": false,
+    "security_issue": true,
+    "categories": {
+        "CWE_TOP_25": [
+            "CWE_20"
+        ],
+        "PCI_STANDARDS": [
+            "REQ_6_2",
+            "REQ_6_4",
+            "REQ_11_3"
+        ],
+        "OWASP_MASVS_L2": [
+            "MSTG_PLATFORM_2"
+        ],
+        "OWASP_ASVS_L2": [
+            "V5_3_3",
+            "V5_3_4",
+            "V9_1_1",
+            "V12_1_1",
+            "V12_1_2"
+        ],
+        "OWASP_ASVS_L3": [
+            "V5_3_3",
+            "V5_3_4",
+            "V12_1_1",
+            "V12_1_2",
+            "V12_1_3"
+        ],
+        "SOC2_CONTROLS": [
+            "CC_2_1",
+            "CC_4_1",
+            "CC_7_1",
+            "CC_7_2",
+            "CC_7_4",
+            "CC_7_5",
+            "CC_9_1"
+        ]
+    }
+}
