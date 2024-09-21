@@ -1,0 +1,36 @@
+{
+  "title": "Object Limit Overriding in GraphQL",
+  "short_description": "Vulnerability in GraphQL where attackers can exploit insufficient query limits to cause DoS or excessive resource consumption.",
+  "risk_rating": "medium",
+  "references": {
+    "GraphQL Vulnerabilities and Common Attacks: What You Need to Know": "https://www.imperva.com/blog/graphql-vulnerabilities-common-attacks/#pagination-limit-bypass",
+    "OWASP GraphQL Security Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html#batching-attacks"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_20",
+      "CWE_400"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_6_1",
+      "REQ_6_2",
+      "REQ_6_4",
+      "REQ_11_3"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_ASVS_L3": [
+      "V13_4_1"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5",
+      "CC_9_1"
+    ]
+  }
+}
