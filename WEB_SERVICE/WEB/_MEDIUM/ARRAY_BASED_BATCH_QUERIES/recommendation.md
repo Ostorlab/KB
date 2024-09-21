@@ -1,6 +1,6 @@
 To mitigate the risk of array-based batch queries attacks in GraphQL, where multiple queries are bundled into a single request, you can apply the following strategies:
 
-* Implement Query Complexity Limits: Set rules that account for the number of queries being processed in a single request. This helps limit the load on the server and prevents attackers from sending excessively large batches of queries.
+- **Implement Query Complexity Limits**: Set rules that account for the number of queries being processed in a single request. This helps limit the load on the server and prevents attackers from sending excessively large batches of queries.
 * Limit the Number of Queries Per Request: Enforce server-side restrictions on how many queries can be sent in a single batch. Tools like GraphQL Armor can help impose limits and prevent resource overloading through array-based batch queries.
 
 === "JavaScript"
