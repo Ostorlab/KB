@@ -1,10 +1,6 @@
 **HTTP Strict Transport Security (HSTS) Overview**
 
-HTTP Strict Transport Security (HSTS) is a web security policy mechanism that ensures users interact with the web server only through secure (HTTPS) connections. This is achieved by the server communicating the HSTS policy to user agents (such as web browsers) via the "Strict-Transport-Security" HTTP response header. The HSTS policy specifies a duration during which the user agent is required to access the server securely.
-
-**Secure HSTS Implementation**
-
-The application has implemented a secure HSTS policy to enforce the use of HTTPS and protect against man-in-the-middle attacks. This configuration ensures that all communications between the client and the server are encrypted, enhancing overall security.
+HTTP Strict Transport Security (HSTS) is a web security policy that enforces secure (HTTPS) connections between users and the web server by communicating the policy via the "Strict-Transport-Security" HTTP response header. The application has implemented a secure HSTS policy to protect against man-in-the-middle attacks, ensuring all communications are encrypted and enhancing overall security.
 
 **Key Features of the HSTS Implementation:**
 
@@ -16,6 +12,18 @@ The application has implemented a secure HSTS policy to enforce the use of HTTPS
 
 4. **Subdomain Support**: If applicable, the HSTS policy includes the "includeSubDomains" directive, extending security to all subdomains.
 
-5. **Ongoing Monitoring**: Continuous monitoring is in place to ensure that the HSTS settings are correctly enforced and that the security of TLS certificates is maintained.
+5. **Preload List**: Websites can submit their domains to a preload list built into browsers, ensuring HSTS is enforced from the first visit, protecting against attacks on the initial connection.
+
+6. **Max-Age Setting**: The max-age directive lets sites specify how long browsers should enforce HTTPS, with options to set it for long periods, like years.
+
+7. **No Mixed Content**: HSTS ensures all resources, including images and scripts, are loaded over HTTPS, preventing insecure content on secure pages.
+
+8. **Error Handling**: When an HSTS error occurs, such as an invalid certificate, browsers block access without allowing users to bypass the warning, improving security.
+
+9. **Header-Only Implementation**: HSTS is implemented via a simple HTTP header, making it easy to configure without changing site content.
+
+10. **Automatic HTTPS Rewrites**: Some browsers automatically rewrite URLs to HTTPS before making a request, even if the user types HTTP in the address bar.
+
+11. **Non-Secureable Port Blocking**: HSTS prevents connections to insecure ports, such as port 80, for the specified domain.
 
 This secure implementation of HSTS ensures that users can safely interact with the application, protecting sensitive data from interception and misuse.
