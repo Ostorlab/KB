@@ -1,0 +1,10 @@
+{
+  "risk_rating": "secure",
+  "short_description": "The Referrer Policy is set securely, protecting user information.",
+  "references": {
+    "Referrer-Policy": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy"
+  },
+  "title": "Secure HTTP Header Setting: Secure Referrer Policy",
+  "privacy_issue": false,
+  "security_issue": false
+}
