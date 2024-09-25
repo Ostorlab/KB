@@ -3,7 +3,7 @@
 A secure CSP might look like this:
 
 ```http request
-Content-Security-Policy: default-src 'self'; script-src 'self' https://trustedscripts.example.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+Content-Security-Policy: default-src 'self'; script-src 'self' https://trustedscripts.example.com 'nonce-abcdef'; style-src 'self' 'sha256-xyz'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';
 ```
 
 This policy allows content only from the same origin and a trusted source while disallowing any embedded objects and framing.
