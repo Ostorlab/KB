@@ -1,0 +1,11 @@
+{
+  "risk_rating": "secure",
+  "short_description": "The backend application implements a secure Cross-Origin Resource Sharing (CORS) policy, allowing access only from trusted domains.",
+  "references": {
+    "Cross-Origin Resource Sharing (Mozilla Developer)": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+    "OWASP: Cross-Origin Resource Sharing": "https://owasp.org/www-community/attacks/Cross-Origin_Resource_Sharing"
+  },
+  "title": "Secure Cross-Origin Resource Sharing (CORS) Policy",
+  "privacy_issue": false,
+  "security_issue": false
+}
