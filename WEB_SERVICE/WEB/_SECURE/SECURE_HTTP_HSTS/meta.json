@@ -1,0 +1,11 @@
+{
+  "risk_rating": "secure",
+  "short_description": "The backend application implements a secure HTTP Strict Transport Security (HSTS) policy, enforcing HTTPS connections.",
+  "references": {
+    "Strict-Transport-Security": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security",
+    "OWASP: HTTP Strict Transport Security": "https://owasp.org/www-community/OWASP_HTTP_Strict_Transport_Security_Cheat_Sheet"
+  },
+  "title": "Secure HTTP Strict Transport Security (HSTS) Implementation",
+  "privacy_issue": false,
+  "security_issue": false
+}
