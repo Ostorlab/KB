@@ -1,0 +1,11 @@
+{
+  "risk_rating": "secure",
+  "short_description": "The cookie has the necessary security attributes, such as HttpOnly and Secure.",
+  "references": {
+    "Secure Flag (OWASP)": "https://owasp.org/www-community/controls/SecureCookieAttribute",
+    "HttpOnly Flag (OWASP)": "https://owasp.org/www-community/HttpOnly"
+  },
+  "title": "Secure Cookie Implementation",
+  "privacy_issue": false,
+  "security_issue": false
+}
