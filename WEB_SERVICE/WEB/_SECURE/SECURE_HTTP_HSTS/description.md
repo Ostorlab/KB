@@ -1,5 +1,3 @@
-**HTTP Strict Transport Security (HSTS) Overview**
-
 HTTP Strict Transport Security (HSTS) is a web security policy that enforces secure (HTTPS) connections between users and the web server by communicating the policy via the "Strict-Transport-Security" HTTP response header. The application has implemented a secure HSTS policy to protect against man-in-the-middle attacks, ensuring all communications are encrypted and enhancing overall security.
 
 **Key Features of the HSTS Implementation:**
