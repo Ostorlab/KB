@@ -1,5 +1,3 @@
-**Cross-Origin Resource Sharing (CORS) Overview**
-
 Cross-Origin Resource Sharing (CORS) is a security feature enforced through HTTP headers that enables a web client to securely request resources from a server on a different domain. To maintain strict security standards, the application implements a secure CORS policy by allowing requests only from trusted origins. This is achieved by specifying a whitelist of approved domains, effectively mitigating the risk of unauthorized access and potential attacks.
 
 **Key Features of the CORS Implementation:**
