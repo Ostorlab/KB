@@ -22,6 +22,6 @@ HTTP Strict Transport Security (HSTS) is a web security policy that enforces sec
 
 10. **Automatic HTTPS Rewrites**: Some browsers automatically rewrite URLs to HTTPS before making a request, even if the user types HTTP in the address bar.
 
-11. **Non-Secureable Port Blocking**: HSTS prevents connections to insecure ports, such as port 80, for the specified domain.
+11. **Non Secureable Port Blocking**: HSTS prevents connections to insecure ports, such as port 80, for the specified domain.
 
 This secure implementation of HSTS ensures that users can safely interact with the application, protecting sensitive data from interception and misuse.

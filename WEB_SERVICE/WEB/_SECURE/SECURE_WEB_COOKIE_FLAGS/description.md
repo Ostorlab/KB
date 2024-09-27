@@ -15,3 +15,4 @@ Here’s an example of a secure cookie configuration:
 
 ```http request
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+```
