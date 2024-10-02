@@ -2,7 +2,7 @@
   "risk_rating": "potentially",
   "short_description": "Vulnerability in SSL/TLS extension handling can lead to sensitive data exposure.",
   "references": {
-    "CWE-200: Data Exposure": "https://heartbleed.com/",
+    "Heartbleed": "https://heartbleed.com/",
     "SSL Bleed Vulnerability": "https://en.wikipedia.org/wiki/Heartbleed"
   },
   "title": "SSL Extension Bleed Vulnerability",
