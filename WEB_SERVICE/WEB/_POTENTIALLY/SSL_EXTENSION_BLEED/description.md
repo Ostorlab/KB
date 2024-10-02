@@ -1,7 +1,7 @@
-The application is detected to be vulnerable to SSL Extension Bleed, a type of vulnerability that exploits improper handling of SSL/TLS extensions during the handshake process.
+SSL Extension Bleed is a vulnerability that exploits improper handling of SSL/TLS extensions during the handshake process. It can lead to the exposure of sensitive information, such as plaintext data from previous connections, session keys, or even private keys.
 
-SSL Extension Bleed can lead to the exposure of sensitive information, including plaintext data from previous connections, session keys, or even private keys. Attackers can exploit this vulnerability in the following ways:
+This vulnerability allows attackers to:
 
-- **Information Disclosure:** An attacker can extract sensitive information from memory, such as SSL session keys or plaintext data previously transmitted over the same SSL connection. This poses a significant risk, especially if sensitive user data is exposed.
+- **Extract Sensitive Information:** Attackers can access data stored in memory, potentially revealing SSL session keys or plaintext data transmitted over earlier SSL connections.
 
-- **Session Hijacking:** If session keys are disclosed, attackers can potentially hijack existing SSL sessions, gaining unauthorized access to user accounts or sensitive data.
+- **Hijack Sessions:** If session keys are disclosed, attackers may gain unauthorized access to existing SSL sessions, allowing them to access user accounts or sensitive information without permission.
