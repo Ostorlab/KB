@@ -1,0 +1,28 @@
+{
+  "risk_rating": "high",
+  "short_description": "The server supports outdated SSL/TLS protocols, which have known security vulnerabilities.",
+  "references": {
+    "NIST Guidelines for TLS Implementations": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf",
+    "OWASP Transport Layer Protection Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html"
+  },
+  "title": "Outdated SSL/TLS Protocols Supported",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_3",
+      "REQ_4_1",
+      "REQ_6_5"
+    ]
+  }
+}
