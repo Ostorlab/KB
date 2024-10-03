@@ -19,7 +19,7 @@
     "GDPR": [
       "ART_32"
     ],
-    "PCI_DSS": [
+    "PCI_STANDARDS": [
       "REQ_2_3",
       "REQ_4_1",
       "REQ_6_5"
