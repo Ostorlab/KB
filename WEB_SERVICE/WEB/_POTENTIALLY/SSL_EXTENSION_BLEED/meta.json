@@ -1,0 +1,33 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "Vulnerability in SSL/TLS extension handling can lead to sensitive data exposure.",
+  "references": {
+    "Heartbleed": "https://heartbleed.com/",
+    "SSL Bleed Vulnerability": "https://en.wikipedia.org/wiki/Heartbleed"
+  },
+  "title": "SSL Extension Bleed Vulnerability",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_6_1",
+      "CC_7_1",
+      "CC_7_4"
+    ],
+    "CCPA": [
+      "CCPA_1798_150",
+      "CCPA_1798_150"
+    ],
+    "CWE_TOP_25": [
+      "CWE_20",
+      "CWE_125"
+    ],
+    "GDPR": [
+      "ART_5",
+      "ART_12",
+      "ART_25"
+    ]
+  }
+}
