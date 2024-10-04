@@ -1,0 +1,27 @@
+{
+  "risk_rating": "high",
+  "short_description": "The SSL/TLS certificate's hostname does not match the server's actual hostname, potentially exposing users to man-in-the-middle attacks.",
+  "references": {
+    "OWASP Transport Layer Protection Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html",
+    "Mozilla SSL Configuration Generator": "https://ssl-config.mozilla.org/"
+  },
+  "title": "SSL/TLS Certificate Hostname Mismatch",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2"
+    ]
+  }
+}

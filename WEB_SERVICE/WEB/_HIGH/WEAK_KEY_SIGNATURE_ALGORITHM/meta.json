@@ -1,0 +1,28 @@
+{
+  "risk_rating": "high",
+  "short_description": "The SSL/TLS certificate uses both a weak cryptographic key and a weak signature algorithm, potentially compromising the security of encrypted connections and allowing certificate forgery or other cryptographic attacks.",
+  "references": {
+    "NIST Recommendation for Key Management": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final",
+    "Baseline Requirements for TLS Server Certificates": "https://cabforum.org/working-groups/server/baseline-requirements/documents/",
+    "SSL Labs Best Practices": "https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices"
+  },
+  "title": "Weak Cryptographic Key and Signature Algorithm in SSL/TLS Certificate",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2"
+    ]
+  }
+}
