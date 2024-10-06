@@ -1,0 +1,63 @@
+{
+  "title": "ALPACA Attack in SSL/TLS",
+  "short_description": "Cross-protocol confusion attack in SSL/TLS allowing for man-in-the-middle and service impersonation attacks by redirecting traffic between different protocols.",
+  "risk_rating": "high",
+  "references": {
+    "ALPACA Research Paper": "https://alpaca-attack.com/ALPACA.pdf",
+    "Cross-Protocol MITM Attack": "https://var.thejh.net/http_ftp_cross_protocol_mitm_attacks.pdf",
+    "ALPACA Code": "https://github.com/RUB-NDS/alpaca-code"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_3_2",
+      "CC_3_3",
+      "CC_5_1",
+      "CC_5_2",
+      "CC_6_1",
+      "CC_6_8",
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_3_2",
+      "REQ_3_3",
+      "REQ_3_4",
+      "REQ_3_5",
+      "REQ_3_6",
+      "REQ_4_1",
+      "REQ_4_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_7_1",
+      "REQ_7_2",
+      "REQ_7_3",
+      "REQ_11_3",
+      "REQ_11_4",
+      "REQ_12_1",
+      "REQ_12_3"
+    ],
+    "CCPA": [
+      "CCPA_1798_100",
+      "CCPA_1798_105",
+      "CCPA_1798_110",
+      "CCPA_1798_115",
+      "CCPA_1798_120",
+      "CCPA_1798_125",
+      "CCPA_1798_130",
+      "CCPA_1798_135",
+      "CCPA_1798_140",
+      "CCPA_1798_150"
+    ],
+    "CWE_TOP_25" : [
+      "CWE_287",
+      "CWE_798",
+      "CWE_79",
+      "CWE_352",
+      "CWE_20",
+      "CWE_306",
+      "CWE_119"
+    ]
+  }
+}
