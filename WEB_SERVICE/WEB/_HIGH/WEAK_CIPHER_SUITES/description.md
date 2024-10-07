@@ -1,13 +1,13 @@
 This vulnerability indicates that the server supports one or more weak cipher suites. Weak cipher suites are cryptographic algorithms that are considered insecure due to known vulnerabilities or insufficient key lengths.
 
 Weak cipher suites may include:
-- RC4
-- 3DES
-- Ciphers using MD5 for message authentication
-- NULL ciphers (no encryption)
-- EXPORT grade ciphers
-- DES (Data Encryption Standard)
-- Anonymous Diffie-Hellman (ADH) or Anonymous Elliptic Curve Diffie-Hellman (AECDH)
+- `RC4`
+- `3DES`
+- Ciphers using `MD5` for message authentication
+- `NULL` ciphers (no encryption)
+- `EXPORT` grade ciphers
+- `DES` (Data Encryption Standard)
+- Anonymous Diffie-Hellman (`ADH`) or Anonymous Elliptic Curve Diffie-Hellman (`AECDH`)
 
 These weak cipher suites can lead to various security risks, including:
 
