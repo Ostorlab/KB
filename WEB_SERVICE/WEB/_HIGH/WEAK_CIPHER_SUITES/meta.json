@@ -1,0 +1,29 @@
+{
+  "risk_rating": "high",
+  "short_description": "The server supports weak cipher suites, which may compromise the security of encrypted communications.",
+  "references": {
+    "NIST Guidelines for TLS Implementations": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf",
+    "OWASP Transport Layer Protection Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html",
+    "SSL Labs: SSL and TLS Deployment Best Practices": "https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices"
+  },
+  "title": "Weak Cipher Suites Supported",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_3",
+      "REQ_4_1",
+      "REQ_6_5"
+    ]
+  }
+}
