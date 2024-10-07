@@ -1,0 +1,27 @@
+{
+  "risk_rating": "high",
+  "short_description": "An expired SSL/TLS certificate is no longer trusted by browsers and clients, leading to security warnings, service disruptions, and potential security vulnerabilities, including man-in-the-middle attacks.",
+  "references": {
+    "NIST Guidelines for Key Management": "https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final",
+    "SSL Labs Best Practices": "https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices"
+  },
+  "title": "CERTIFICATE_EXPIRED",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2"
+    ]
+  }
+}

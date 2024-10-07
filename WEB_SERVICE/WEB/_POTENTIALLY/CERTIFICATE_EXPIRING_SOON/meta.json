@@ -1,0 +1,27 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "SSL/TLS certificates nearing their expiration date pose a moderate risk to service continuity and security. Certificates expiring within 30 days require attention to prevent disruptions and maintain user trust.",
+  "references": {
+    "NIST Guidelines for Key Management": "https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final",
+    "SSL Labs Best Practices": "https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices"
+  },
+  "title": "CERTIFICATE_EXPIRING_SOON",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2"
+    ]
+  }
+}
