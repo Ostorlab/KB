@@ -1,0 +1,54 @@
+{
+  "title": "Lucky Thirteen Vulnerability in SSL/TLS",
+  "short_description": "Timing attack exploiting vulnerabilities in padding handling of TLS cipher modes, leading to potential plaintext recovery.",
+  "risk_rating": "potentially",
+  "references": {
+    "Veracode Lucky Thirteen Prevention": "https://docs.veracode.com/r/prevent-ssl-lucky13",
+    "Wikipedia - Lucky Thirteen Attack": "https://en.wikipedia.org/wiki/Lucky_Thirteen_attack",
+    "Beagle Security Lucky Thirteen Overview": "https://beaglesecurity.com/blog/vulnerability/lucky-thirteen-attack-against-implementations-of-the-transport-layer-security.html",
+    "BrandSek Lucky Thirteen Vulnerability": "https://brandsek.com/kb/books/ssl-vulnerability/page/lucky-13-vulnerability/revisions/21"
+  },
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_3_2",
+      "CC_5_1",
+      "CC_6_1",
+      "CC_7_1",
+      "CC_9_1"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_4_2",
+      "REQ_6_4",
+      "REQ_10_1",
+      "REQ_10_2",
+      "REQ_10_4",
+      "REQ_10_5",
+      "REQ_11_3",
+      "REQ_11_4"
+    ],
+    "CCPA": [
+      "CCPA_1798_100",
+      "CCPA_1798_105",
+      "CCPA_1798_110",
+      "CCPA_1798_115",
+      "CCPA_1798_120",
+      "CCPA_1798_125",
+      "CCPA_1798_130",
+      "CCPA_1798_135",
+      "CCPA_1798_140",
+      "CCPA_1798_150"
+    ],
+    "CWE_TOP_25": [
+      "CWE_787",
+      "CWE_79",
+      "CWE_89",
+      "CWE_20",
+      "CWE_125",
+      "CWE_78",
+      "CWE_416"
+    ]
+  }
+}
