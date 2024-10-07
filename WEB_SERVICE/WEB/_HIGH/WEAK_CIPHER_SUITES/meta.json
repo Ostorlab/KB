@@ -24,10 +24,6 @@
       "REQ_2_3",
       "REQ_4_1",
       "REQ_6_5"
-    ],
-    "HIPAA": [
-      "SECURITY_RULE_164_312_A_2_IV",
-      "SECURITY_RULE_164_312_E_1"
     ]
   }
 }
