@@ -1,0 +1,29 @@
+{
+  "risk_rating": "high",
+  "short_description": "The server does not support TLS_FALLBACK_SCSV, leaving it vulnerable to protocol downgrade attacks.",
+  "references": {
+    "RFC 7507 - TLS Fallback Signaling Cipher Suite Value (SCSV) for Preventing Protocol Downgrade Attacks": "https://tools.ietf.org/html/rfc7507",
+    "OWASP TLS Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html",
+    "NIST Guidelines for TLS Implementations": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf"
+  },
+  "title": "TLS_FALLBACK_SCSV Not Supported",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_3",
+      "REQ_4_1",
+      "REQ_6_5"
+    ]
+  }
+}
