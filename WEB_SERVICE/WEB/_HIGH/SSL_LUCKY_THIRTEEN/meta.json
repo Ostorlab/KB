@@ -1,7 +1,7 @@
 {
   "title": "Lucky Thirteen Vulnerability in SSL/TLS",
   "short_description": "Timing attack exploiting vulnerabilities in padding handling of TLS cipher modes, leading to potential plaintext recovery.",
-  "risk_rating": "potentially",
+  "risk_rating": "high",
   "references": {
     "Veracode Lucky Thirteen Prevention": "https://docs.veracode.com/r/prevent-ssl-lucky13",
     "Wikipedia - Lucky Thirteen Attack": "https://en.wikipedia.org/wiki/Lucky_Thirteen_attack",
