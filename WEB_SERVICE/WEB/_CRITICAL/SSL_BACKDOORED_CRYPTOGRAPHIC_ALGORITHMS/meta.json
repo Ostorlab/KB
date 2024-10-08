@@ -1,0 +1,56 @@
+{
+  "title": "Backdoored Cryptographic Algorithms in SSL",
+  "short_description": "Intentional vulnerabilities in cryptographic algorithms used in SSL/TLS that allow unauthorized access and data manipulation.",
+  "risk_rating": "critical",
+  "references": {
+    "All About Encryption Backdoors": "https://www.thesslstore.com/blog/all-about-encryption-backdoors"
+  },
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_3_1",
+      "CC_3_2",
+      "CC_3_3",
+      "CC_3_4",
+      "CC_5_1",
+      "CC_5_2",
+      "CC_5_3",
+      "CC_6_1",
+      "CC_6_7",
+      "CC_6_8",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_3",
+      "CC_9_1",
+      "CC_9_2"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_1_1",
+      "REQ_4_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150",
+      "CCPA_1798_130",
+      "CCPA_1798_140"
+    ],
+    "GDPR": [
+      "ART_5",
+      "ART_6",
+      "ART_32",
+      "ART_33",
+      "ART_35",
+      "ART_47",
+      "ART_12",
+      "ART_24"
+    ],
+    "CWE_TOP_25": [
+      "CWE_287",
+      "CWE_798",
+      "CWE_502",
+      "CWE_119",
+      "CWE_400",
+      "CWE_611"
+    ]
+  }
+}
