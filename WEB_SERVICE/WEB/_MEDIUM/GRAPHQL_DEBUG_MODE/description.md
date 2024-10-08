@@ -1,5 +1,3 @@
-- # GraphQL Debug Mode
-
 GraphQL Debug Mode is a feature that, when enabled, provides detailed error messages, stack traces, and additional debugging information in responses. While this is invaluable during development, leaving it enabled in a production environment can potentially expose sensitive information about the server's internal structure and implementation details.
 
 In Django Graphene, debug mode is typically controlled by the Django `DEBUG` setting and the inclusion of `DjangoDebugMiddleware` in the Graphene configuration.

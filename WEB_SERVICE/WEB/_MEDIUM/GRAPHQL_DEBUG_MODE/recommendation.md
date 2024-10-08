@@ -1,5 +1,3 @@
-- # GraphQL Debug Mode Recommendations
-
 To mitigate the risks associated with GraphQL Debug Mode, consider the following recommendations:
 
 1. **Disable Debug Mode in Production**: Ensure that GraphQL debug mode is disabled in production environments. Debug information should only be available in development and testing environments.
