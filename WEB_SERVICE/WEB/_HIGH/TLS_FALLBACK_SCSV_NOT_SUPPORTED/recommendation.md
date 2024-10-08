@@ -52,7 +52,7 @@ This command attempts to establish a TLS 1.2 connection. If successful, it indic
 
 **Monitoring for Downgrade Attempts**
 
-### Using fail2ban
+- Using fail2ban
 
 You can use `fail2ban` to monitor logs for potential downgrade attempts:
 
