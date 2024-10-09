@@ -1,5 +1,5 @@
 {
-    "risk_rating": "high",
+    "risk_rating": "medium",
     "short_description": "Privacy policy mentions collection of users' text messages without explicit consent",
     "references": {
         "Android Privacy Guidelines": "https://developer.android.com/privacy-and-security/about",
