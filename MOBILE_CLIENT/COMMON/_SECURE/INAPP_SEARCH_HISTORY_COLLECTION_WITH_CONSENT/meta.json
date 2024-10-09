@@ -1,5 +1,5 @@
 {
-    "risk_rating": "high",
+    "risk_rating": "secure",
     "short_description": "Privacy policy mentions collection of users' in-app search history with consent",
     "references": {
         "Android Privacy Guidelines": "https://developer.android.com/privacy-and-security/about",
@@ -7,7 +7,7 @@
         "Apple Privacy Manifest": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
         "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "http://cwe.mitre.org/data/definitions/359.html"
     },
-    "title": "In-App Search History Collection in Privacy Policy",
+    "title": "Secure In-App Search History Collection in Privacy Policy",
     "privacy_issue": true,
     "security_issue": false,
     "categories": {}
