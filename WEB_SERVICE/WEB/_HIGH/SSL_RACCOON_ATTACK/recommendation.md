@@ -8,6 +8,6 @@ To mitigate the risks associated with the Raccoon Attack, organizations should i
 
 4. **Reduce Timing Discrepancies:** Implement constant-time cryptographic operations for key exchanges to minimize timing variations that could be exploited in side-channel attacks.
 
-5. **Patch and Update SSL/TLS Implementations:** Regularly update cryptographic libraries, such as OpenSSL, to the latest versions where the Raccoon vulnerability is patched or mitigated.
+5. **Patch and Update SSL/TLS Implementations:** Regularly update cryptographic libraries, such as OpenSSL, to the latest stable versions (e.g., OpenSSL 1.1.1 or later) where the Raccoon vulnerability has been patched or mitigated. Also, ensure that TLS stacks and software components are updated to the latest releases that address this and other potential vulnerabilities.
 
 By following these steps, organizations can significantly reduce their exposure to the Raccoon Attack and strengthen the security of their SSL/TLS implementations.
