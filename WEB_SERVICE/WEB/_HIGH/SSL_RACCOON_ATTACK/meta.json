@@ -5,15 +5,14 @@
   "references": {
     "Raccoon Attack Research Paper": "https://raccoon-attack.com"
   },
-  "privacy_issue": false,
+  "privacy_issue": true,
   "security_issue": true,
   "categories": {
     "SOC2_CONTROLS": [
       "CC_6_1",
       "CC_6_7",
       "CC_7_1",
-      "CC_7_2",
-      "CC_7_3"
+      "CC_7_2"
     ],
     "PCI_STANDARDS": [
       "REQ_4_1",
