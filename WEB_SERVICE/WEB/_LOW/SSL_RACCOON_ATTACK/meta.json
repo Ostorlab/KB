@@ -42,6 +42,16 @@
       "CWE_119",
       "CWE_287",
       "CWE_400"
+    ],
+    "OWASP_MASVS_L1": [
+      "MSTG_CRYPTO_4"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CRYPTO_4"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_CRYPTO_1",
+      "MASVS_CRYPTO_2"
     ]
   }
 }
