@@ -8,6 +8,6 @@ The Raccoon Attack (Racoon vulnerability) is a timing vulnerability that affects
 
 ### Example Scenario:
 
-- An attacker eavesdrops on SSL/TLS connections over time and measures the slight variations in response times when the server handles key exchange computations. By using statistical analysis on the gathered timing data, they manage to recover part of the Diffie-Hellman key, which eventually allows them to decrypt sensitive data such as login credentials or financial transactions.
+- An attacker eavesdrops on SSL/TLS connections over time and measures the slight variations in response times when the server handles key exchange computations. By using statistical analysis of the gathered timing data, they manage to recover part of the Diffie-Hellman key, which eventually allows them to decrypt sensitive data such as login credentials or financial transactions.
 
 This vulnerability affects SSL/TLS implementations that reuse Diffie-Hellman key shares and do not have sufficient defenses against timing attacks.
