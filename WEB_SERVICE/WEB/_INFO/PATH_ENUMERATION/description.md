@@ -1,1 +1,1 @@
-This entry provides a clear overview of the structure and how different types in the GraphQL schema are related and can be traversed.
+This entry provides a comprehensive catalog of traversal paths within the GraphQL schema, organized by type. It outlines how each type can be navigated to related entities, offering a detailed map of possible query routes and possible unintended pitfalls.
