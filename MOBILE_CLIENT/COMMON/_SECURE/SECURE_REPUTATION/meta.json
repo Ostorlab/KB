@@ -6,7 +6,7 @@
         "AbuseIPDB" : "https://www.abuseipdb.com/",
         "GoogleSaveBrowsing" : "https://safebrowsing.google.com/"
     },
-    "title": "Domain name and IP address reputation report",
+    "title": "Secure domain name and IP address reputation report",
     "privacy_issue": false,
     "security_issue": false
 }
