@@ -1,0 +1,1 @@
+This entry provides a clear overview of the structure and how different types in the GraphQL schema are related and can be traversed.
