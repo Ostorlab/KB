@@ -1,7 +1,7 @@
 {
   "title": "Raccoon Attack on SSL/TLS",
   "short_description": "A timing vulnerability in the Diffie-Hellman key exchange that allows attackers to recover sensitive data through precise measurement of server response times.",
-  "risk_rating": "high",
+  "risk_rating": "low",
   "references": {
     "Raccoon Attack Research Paper": "https://raccoon-attack.com"
   },
