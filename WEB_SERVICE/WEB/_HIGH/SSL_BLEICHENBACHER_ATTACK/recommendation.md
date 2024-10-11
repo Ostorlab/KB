@@ -1,0 +1,7 @@
+To effectively mitigate the risks associated with the Bleichenbacher Attack, organizations should adopt the following recommendations:
+
+- **Migrate to Stronger Padding Schemes:** The primary vulnerability highlighted by Bleichenbacher's attack lies in RSA key transport mechanisms, particularly when paired with the PKCS#1 v1.5 padding scheme. Organizations should migrate from using RSA encryption to safer alternatives, such as Diffie-Hellman or Elliptic Curve key exchanges, or at least implement RSA-OAEP (Optimal Asymmetric Encryption Padding), which is more resistant to such attacks.
+
+- **Upgrade to TLS 1.3:** The TLS 1.3 protocol includes significant improvements, including eliminating the error messages that could act as an oracle for this attack. It also incorporates additional cryptographic countermeasures, such as better padding schemes. NIST mandates that U.S. government systems must support TLS 1.3 by 2024, which is a strong recommendation for the private sector to follow as well.
+
+- **Regularly Patch and Audit Systems:** A key issue in mitigating Bleichenbacher-style attacks is that many systems remain vulnerable long after patches are available. Ensuring timely patches for libraries like OpenSSL is essential, as many businesses fail to secure systems in time. Vulnerability scanning and patch management tools should be part of routine security audits.
