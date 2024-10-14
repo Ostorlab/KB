@@ -7,5 +7,5 @@
   },
   "title": "GraphQL Schema Traversal Paths",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": false
 }
