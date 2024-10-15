@@ -51,5 +51,3 @@ To mitigate the risks associated with unrestricted DNS zone transfers, consider 
        allow-transfer { key example-transfer-key; };
    };
    ```
-
-By implementing these recommendations and regularly checking for unrestricted zone transfers, you can significantly reduce the risk of unauthorized information disclosure and potential security breaches related to your DNS infrastructure.
