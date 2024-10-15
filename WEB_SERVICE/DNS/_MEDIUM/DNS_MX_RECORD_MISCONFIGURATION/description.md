@@ -2,11 +2,11 @@
 
 MX (Mail Exchanger) records in DNS are critical for email routing and delivery. Misconfigurations in MX records can lead to email delivery failures, increased vulnerability to email spoofing, and inefficient mail routing. The following areas are key concerns in MX record configuration:
 
-1. **Record Format**: MX records must adhere to the standard format of 'priority hostname.domain.tld'. Incorrect formatting can lead to misinterpretation by email servers and DNS resolvers. Priority values should be valid integers, and hostnames must be properly formatted.
+1. **Record Format**: MX records must adhere to the standard format of 'priority fully-qualified-hostname.domain.tld'. Incorrect formatting can lead to misinterpretation by email servers and DNS resolvers. Priority values should be valid integers, and hostnames must be properly formatted.
 
-2. **Priority Values**: MX record priorities should be unique and within the valid range of 0-65535. The lowest value indicates the most preferred mail server. Improperly ordered or invalid priorities can cause inefficient email routing.
+2. **Priority Values**: MX record priorities should be within the valid range of 0-65535. The lowest value indicates the most preferred mail server. Improperly configured priorities can lead to inefficient email routing.
 
-3. **Duplicate Records**: There should be no duplicate MX records with the same priority value pointing to different hostnames. Such duplicates can cause ambiguity in email routing decisions and potential delivery problems.
+3. **Duplicate Records**: Unintentional duplicate MX records (identical priority and hostname) should be avoided. Such duplicates are redundant, can cause confusion in DNS resolution, and may lead to unnecessary processing by mail servers. It's important to regularly audit MX records to ensure no unintended duplicates exist.
 
 4. **Hostname Validity**: The hostnames specified in MX records must be valid and resolvable to IP addresses. Non-existent or unreachable hostnames can cause email delivery failures. It's crucial to ensure that these hostnames point to active mail servers through A or AAAA record lookups.
 
