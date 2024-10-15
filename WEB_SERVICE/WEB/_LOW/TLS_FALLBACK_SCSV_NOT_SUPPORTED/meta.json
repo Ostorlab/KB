@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "low",
   "short_description": "The server does not support TLS_FALLBACK_SCSV, leaving it vulnerable to protocol downgrade attacks.",
   "references": {
     "RFC 7507 - TLS Fallback Signaling Cipher Suite Value (SCSV) for Preventing Protocol Downgrade Attacks": "https://tools.ietf.org/html/rfc7507",

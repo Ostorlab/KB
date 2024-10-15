@@ -1,5 +1,5 @@
 {
-  "risk_rating": "low",
+  "risk_rating": "high",
   "short_description": "The server supports weak or deprecated Message Authentication Code (MAC) algorithms, which have known security vulnerabilities.",
   "references": {
     "NIST Guidelines for TLS Implementations": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf",
