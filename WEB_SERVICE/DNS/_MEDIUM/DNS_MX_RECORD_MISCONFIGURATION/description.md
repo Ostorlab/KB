@@ -6,7 +6,7 @@ MX (Mail Exchanger) records in DNS are critical for email routing and delivery. 
 
 2. **Priority Values**: MX record priorities should be within the valid range of 0-65535. The lowest value indicates the most preferred mail server. Improperly configured priorities can lead to inefficient email routing.
 
-3. **Duplicate Records**: Unintentional duplicate MX records (identical priority and hostname) should be avoided. Such duplicates are redundant, can cause confusion in DNS resolution, and may lead to unnecessary processing by mail servers. It's important to regularly audit MX records to ensure no unintended duplicates exist.
+3. **Duplicate Records**: Duplicate MX records should be avoided. They can cause confusion in DNS resolution, and may lead to unnecessary processing by mail servers. It's important to regularly audit MX records to ensure no duplicates exist.
 
 4. **Hostname Validity**: The hostnames specified in MX records must be valid and resolvable to IP addresses. Non-existent or unreachable hostnames can cause email delivery failures. It's crucial to ensure that these hostnames point to active mail servers through A or AAAA record lookups.
 

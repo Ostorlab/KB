@@ -4,7 +4,7 @@ To address MX record misconfigurations, implement the following:
 
 * **Validate Priority Values**: Set integer priorities within the 0-65535 range, with lower values for preferred servers.
 
-* **Manage Duplicate Records**: Remove any unintentional duplicate MX records (identical priority and hostname).
+* **Manage Duplicate Records**: Ensure there are no duplicate records.
 
 * **Verify Hostname Resolvability**: Confirm all MX hostnames resolve to valid IP addresses of active mail servers.
 
