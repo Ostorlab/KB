@@ -1,3 +1,12 @@
-The Provided endpoint is detected to have a potential GraphQL authentication misconfiguration where two different queries return the same object type, but one of them might lack proper authorization controls.
-This affects sensitive information that should be restricted to authorized users.
-Attackers can exploit the unprotected query to access data they shouldn't have permission to view, potentially leading to exposure of personal information, business secrets, or other confidential data.
+A GraphQL Authorization Misconfiguration is a security vulnerability where the GraphQL API fails to properly enforce access controls on certain operations or data.
+This allows unauthorized users to access or modify information they shouldn't have permission for.
+
+Implications:
+- Unauthorized data access and manipulation
+- Potential privilege escalation
+- Compromised system integrity
+
+Root causes:
+- Over-reliance on client-side checks
+- Insufficient granularity in access controls
+- Neglecting authorization for nested queries/mutations
