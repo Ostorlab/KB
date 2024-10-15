@@ -1,0 +1,27 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Absence of DNSSEC leaves domain vulnerable to DNS spoofing and cache poisoning attacks.",
+  "references": {
+    "Demonstrate DNSSEC in a Test Lab (Microsoft Learn)": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831411%28v=ws.11%29",
+    "How DNSSEC Works (CloudFlare)": "https://www.cloudflare.com/dns/dnssec/how-dnssec-works/",
+    "DNSSEC explained": "https://www.csoonline.com/article/569685/dnssec-explained-why-you-might-want-to-implement-it-on-your-domain.html",
+    "feedbackDNS Security Extensions (DNSSEC) overview (Google Cloud)": "https://cloud.google.com/dns/docs/dnssec"
+  },
+  "title": "Missing or misconfigured DNSSEC",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_6",
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ]
+  }
+}
