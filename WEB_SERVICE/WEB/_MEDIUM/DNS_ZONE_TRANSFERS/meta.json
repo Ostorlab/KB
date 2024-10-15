@@ -6,7 +6,7 @@
     "DNS Zone Transfer": "https://developers.cloudflare.com/dns/zone-setups/zone-transfers/",
     "DNS Security": "https://www.ietf.org/rfc/rfc2845.txt"
   },
-  "title": "DNS Zone Transfers Checks",
+  "title": "Unrestricted DNS Zone Transfers",
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
