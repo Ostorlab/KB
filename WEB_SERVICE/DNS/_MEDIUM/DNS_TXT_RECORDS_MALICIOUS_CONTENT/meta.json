@@ -7,7 +7,7 @@
     "AhnLab Security Blog": "https://asec.ahnlab.com/en/54916/",
     "ProSec Networks": "https://www.prosec-networks.com/en/blog/dns-tunneling-erkennen/"
   },
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "SOC2_CONTROLS": [
@@ -17,7 +17,6 @@
       "CC_7_1",
       "CC_7_2",
       "CC_7_3",
-      "CC_7_4",
       "CC_8_1",
       "CC_9_1",
       "CC_9_2"
