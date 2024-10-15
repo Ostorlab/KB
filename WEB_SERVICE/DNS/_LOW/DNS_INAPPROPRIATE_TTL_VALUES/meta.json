@@ -10,11 +10,6 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "PCI_STANDARDS": [
-      "REQ_2_2",
-      "REQ_6_3",
-      "REQ_11_3"
-    ],
     "SOC2_CONTROLS": [
       "CC_3_4",
       "CC_4_1",
