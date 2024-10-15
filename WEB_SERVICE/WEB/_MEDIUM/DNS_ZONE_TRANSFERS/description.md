@@ -2,16 +2,16 @@ DNS Zone Transfers are a mechanism that allows a secondary DNS server to receive
 
 Key points about DNS Zone Transfers:
 
-1. **Purpose**: Zone transfers are used to replicate DNS data across multiple name servers, ensuring consistency and providing redundancy.
+-  **Purpose**: Zone transfers are used to replicate DNS data across multiple name servers, ensuring consistency and providing redundancy.
 
-2. **Security Risk**: If not properly restricted, zone transfers can be exploited by attackers to gather information about an organization's network topology, including internal IP addresses, hostnames, and other sensitive data.
+- **Security Risk**: If not properly restricted, zone transfers can be exploited by attackers to gather information about an organization's network topology, including internal IP addresses, hostnames, and other sensitive data.
 
-3. **Information Disclosure**: Successful unauthorized zone transfers can reveal:
+-  **Information Disclosure**: Successful unauthorized zone transfers can reveal:
    - Internal network structure
    - Naming conventions
    - IP addressing schemes
    - Potential targets for further attacks
 
-4. **AXFR Protocol**: The primary method for zone transfers is the AXFR (Authoritative Transfer) protocol, which transfers the entire zone file.
+-  **AXFR Protocol**: The primary method for zone transfers is the AXFR (Authoritative Transfer) protocol, which transfers the entire zone file.
 
-5. **IXFR Protocol**: An alternative is the IXFR (Incremental Zone Transfer) protocol, which only transfers changes made since the last update.
+- **IXFR Protocol**: An alternative is the IXFR (Incremental Zone Transfer) protocol, which only transfers changes made since the last update.
