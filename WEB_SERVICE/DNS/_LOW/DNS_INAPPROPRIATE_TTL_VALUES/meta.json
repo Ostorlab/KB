@@ -1,0 +1,26 @@
+{
+  "risk_rating": "low",
+  "short_description": "Inappropriate TTL values in DNS records can cause performance issues and delays in DNS updates.",
+  "references": {
+    "Understanding DNS TTL": "https://convesio.com/knowledgebase/article/understanding-dns-time-to-live-a-comprehensive-guide/",
+    "DNS TTL Monitoring Guide": "https://www.catchpoint.com/dns-monitoring/dns-ttl",
+    "Best Practices for DNS TTL": "https://www.varonis.com/blog/dns-ttl"
+  },
+  "title": "DNS Inappropriate TTL Values",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_3_4",
+      "CC_4_1",
+      "CC_6_1",
+      "CC_7_2"
+    ],
+    "CWE_TOP_25": [
+      "CWE_400"
+    ],
+    "GDPR": [
+      "ART_32"
+    ]
+  }
+}
