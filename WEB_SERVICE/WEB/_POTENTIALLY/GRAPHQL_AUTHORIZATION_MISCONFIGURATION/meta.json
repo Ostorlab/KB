@@ -10,10 +10,10 @@
   "security_issue": true,
   "categories": {
     "CCPA": [
-        "CCPA_1798_150"
+      "CCPA_1798_150"
     ],
     "CWE_TOP_25": [
-        "CWE_862"
+      "CWE_862"
     ],
     "OWASP_ASVS_L3": [
       "V1_2_4",
@@ -22,7 +22,7 @@
       "V13_4_2"
     ],
     "SOC2_CONTROLS": [
-        "CC_6_3"
+      "CC_6_3"
     ]
   }
 }
