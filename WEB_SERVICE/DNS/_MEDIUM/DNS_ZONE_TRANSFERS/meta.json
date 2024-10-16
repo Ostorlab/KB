@@ -1,0 +1,26 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Unrestricted DNS zone transfers can expose sensitive network information to potential attackers.",
+  "references": {
+    "OWASP Testing Guide": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/10-Test_for_Subdomain_Takeover",
+    "DNS Zone Transfer": "https://developers.cloudflare.com/dns/zone-setups/zone-transfers/",
+    "DNS Security": "https://www.ietf.org/rfc/rfc2845.txt"
+  },
+  "title": "Unrestricted DNS Zone Transfers",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_6",
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ]
+  }
+}

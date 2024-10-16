@@ -1,0 +1,57 @@
+{
+  "title": "Raccoon Attack on SSL/TLS",
+  "short_description": "A timing vulnerability in the Diffie-Hellman key exchange that allows attackers to recover sensitive data through precise measurement of server response times.",
+  "risk_rating": "low",
+  "references": {
+    "Raccoon Attack Research Paper": "https://raccoon-attack.com"
+  },
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_7",
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_4_2",
+      "REQ_6_3",
+      "REQ_10_1",
+      "REQ_10_4",
+      "REQ_11_3",
+      "REQ_11_4"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_24",
+      "ART_28",
+      "ART_32",
+      "ART_33",
+      "ART_34",
+      "ART_35",
+      "ART_77",
+      "ART_83",
+      "ART_82"
+    ],
+    "CWE_TOP_25": [
+      "CWE_20",
+      "CWE_119",
+      "CWE_287",
+      "CWE_400"
+    ],
+    "OWASP_MASVS_L1": [
+      "MSTG_CRYPTO_4"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CRYPTO_4"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_CRYPTO_1",
+      "MASVS_CRYPTO_2"
+    ]
+  }
+}

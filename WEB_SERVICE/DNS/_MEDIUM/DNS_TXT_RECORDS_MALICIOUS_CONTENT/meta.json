@@ -1,0 +1,39 @@
+{
+  "title": "DNS Vulnerability: Malicious Content in TXT Records",
+  "short_description": "A vulnerability where DNS TXT records are used for malicious purposes such as data exfiltration, malware command execution, or DNS tunneling.",
+  "risk_rating": "medium",
+  "references": {
+    "Splunk Deep Learning Blog": "https://www.splunk.com/en_us/blog/security/ml-in-security-detect-suspicious-txt-records-using-deep-learning.html",
+    "AhnLab Security Blog": "https://asec.ahnlab.com/en/54916/",
+    "ProSec Networks": "https://www.prosec-networks.com/en/blog/dns-tunneling-erkennen/"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_7",
+      "CC_6_8",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_3",
+      "CC_8_1",
+      "CC_9_1",
+      "CC_9_2"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32",
+      "ART_33",
+      "ART_34",
+      "ART_35"
+    ],
+    "CWE_TOP_25": [
+      "CWE_20",
+      "CWE_287",
+      "CWE_918"
+    ]
+  }
+}
