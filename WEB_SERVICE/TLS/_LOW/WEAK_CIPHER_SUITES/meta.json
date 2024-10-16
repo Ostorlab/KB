@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "low",
   "short_description": "The server supports weak cipher suites, which may compromise the security of encrypted communications.",
   "references": {
     "NIST Guidelines for TLS Implementations": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf",

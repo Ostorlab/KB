@@ -1,7 +1,7 @@
 {
   "title": "ALPACA Attack in SSL/TLS",
   "short_description": "Cross-protocol confusion attack in SSL/TLS allowing for man-in-the-middle and service impersonation attacks by redirecting traffic between different protocols.",
-  "risk_rating": "high",
+  "risk_rating": "medium",
   "references": {
     "ALPACA Research Paper": "https://alpaca-attack.com/ALPACA.pdf",
     "Cross-Protocol MITM Attack": "https://var.thejh.net/http_ftp_cross_protocol_mitm_attacks.pdf",

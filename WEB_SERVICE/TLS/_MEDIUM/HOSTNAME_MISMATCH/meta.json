@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "medium",
   "short_description": "The SSL/TLS certificate's hostname does not match the server's actual hostname, potentially exposing users to man-in-the-middle attacks.",
   "references": {
     "OWASP Transport Layer Protection Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html",

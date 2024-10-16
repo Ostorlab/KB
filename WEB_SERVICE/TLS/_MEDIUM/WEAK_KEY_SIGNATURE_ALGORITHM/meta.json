@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "medium",
   "short_description": "The SSL/TLS certificate uses both a weak cryptographic key and a weak signature algorithm, potentially compromising the security of encrypted connections and allowing certificate forgery or other cryptographic attacks.",
   "references": {
     "NIST Recommendation for Key Management": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final",
