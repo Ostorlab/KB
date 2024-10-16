@@ -1,0 +1,29 @@
+{
+    "risk_rating": "low",
+    "short_description": "MX record misconfigurations can lead to email delivery failures, increased vulnerability to email spoofing, and inefficient mail routing.",
+    "references": {
+      "Understanding MX Records": "https://www.cloudflare.com/learning/dns/dns-records/dns-mx-record/",
+      "MX Record Best Practices": "https://www.rfc-editor.org/rfc/rfc5321#section-5"
+    },
+    "title": "DNS MX Record Misconfiguration",
+    "privacy_issue": false,
+    "security_issue": true,
+    "categories": {
+      "PCI_STANDARDS": [
+        "REQ_1_3",
+        "REQ_4_1",
+        "REQ_12_2"
+      ],
+      "GDPR": [
+        "ART_25",
+        "ART_32"
+      ],
+      "SOC2_CONTROLS": [
+        "CC_4_1",
+        "CC_6_1",
+        "CC_6_6",
+        "CC_7_1",
+        "CC_7_2"
+      ]
+    }
+  }
