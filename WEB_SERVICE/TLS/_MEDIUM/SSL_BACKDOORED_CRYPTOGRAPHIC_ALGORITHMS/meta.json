@@ -1,7 +1,7 @@
 {
   "title": "Backdoored Cryptographic Algorithms in SSL",
   "short_description": "Intentional vulnerabilities in cryptographic algorithms used in SSL/TLS that allow unauthorized access and data manipulation.",
-  "risk_rating": "critical",
+  "risk_rating": "medium",
   "references": {
     "All About Encryption Backdoors": "https://www.thesslstore.com/blog/all-about-encryption-backdoors"
   },

@@ -1,11 +1,11 @@
 {
-  "risk_rating": "high",
-  "short_description": "The server supports outdated SSL/TLS protocols, which have known security vulnerabilities.",
+  "risk_rating": "low",
+  "short_description": "The server supports weak or deprecated Message Authentication Code (MAC) algorithms, which have known security vulnerabilities.",
   "references": {
     "NIST Guidelines for TLS Implementations": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf",
     "OWASP Transport Layer Protection Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html"
   },
-  "title": "Outdated SSL/TLS Protocols Supported",
+  "title": "Weak Message Authentication Code (MAC) Algorithms Supported",
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
