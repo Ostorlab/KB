@@ -5,7 +5,7 @@
     "NIST Guidelines for Key Management": "https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final",
     "SSL Labs Best Practices": "https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices"
   },
-  "title": "CERTIFICATE_EXPIRING_SOON",
+  "title": "SSL/TLS Certificates Expiring Soon",
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
