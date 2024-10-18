@@ -1,5 +1,5 @@
 {
-  "risk_rating": "medium",
+  "risk_rating": "potentially",
   "short_description": "The Bleichenbacher Attack targets vulnerabilities in RSA PKCS #1 v1.5 padding, allowing attackers to decrypt messages without needing the private key.",
   "references": {
     "Bleichenbacher Attack Explained": "https://medium.com/@c0D3M/bleichenbacher-attack-explained-bc630f88ff25",
