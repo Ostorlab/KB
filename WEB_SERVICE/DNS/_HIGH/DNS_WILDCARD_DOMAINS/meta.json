@@ -1,0 +1,48 @@
+{
+  "title": "DNS Wildcard Domains",
+  "short_description": "The security risks associated with DNS wildcard domains, including phishing attacks, subdomain takeover, and the bypass of security policies.",
+  "risk_rating": "high",
+  "references": {
+    "Subdomain Enumeration: Filter Wildcard Domains": "https://0xpatrik.com/wildcard-domains/",
+    "Wildcard DNS Abuse Detection": "https://live.paloaltonetworks.com/t5/community-blogs/new-wildcard-dns-abuse-detection-for-dns-security/ba-p/459632"
+  },
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_6_8",
+      "CC_7_1",
+      "CC_9_1"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_1_3",
+      "REQ_4_1",
+      "REQ_6_4",
+      "REQ_10_2",
+      "REQ_11_3"
+    ],
+    "CCPA": [
+      "CCPA_1798_100",
+      "CCPA_1798_120",
+      "CCPA_1798_130",
+      "CCPA_1798_140",
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32",
+      "ART_24",
+      "ART_5",
+      "ART_12",
+      "ART_33",
+      "ART_34"
+    ],
+    "CWE_TOP_25": [
+      "CWE_79",
+      "CWE_287",
+      "CWE_918",
+      "CWE_77",
+      "CWE_400"
+    ]
+  }
+}
