@@ -12,8 +12,7 @@
     "SOC2_CONTROLS": [
       "CC_6_7",
       "CC_6_8",
-      "CC_7_1",
-      "CC_9_1"
+      "CC_7_1"
     ],
     "PCI_STANDARDS":[
       "REQ_1_3",
