@@ -1,0 +1,43 @@
+{
+  "risk_rating": "high",
+  "short_description": "Misconfigured or missing DNS records (SPF, DKIM, DMARC, and BIMI) can lead to spoofing, phishing, and reduced email deliverability.",
+  "references": {
+    "SPF and DKIM Email Security Guide (Red Sift)": "https://redsift.com/guides/email-security-guide/spf-and-dkim"
+  },
+  "title": "DNS Check: SPF, DKIM, DMARC, and BIMI Validation",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_6",
+      "CC_6_7",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_3",
+      "CC_7_4",
+      "CC_8_1",
+      "CC_9_1",
+      "CC_9_2"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_12_3",
+      "REQ_12_10"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_24",
+      "ART_32",
+      "ART_33",
+      "ART_34"
+    ],
+    "CWE_TOP_25": [
+      "CWE_787",
+      "CWE_125",
+      "CWE_416",
+      "CWE_119"
+    ]
+  }
+}
