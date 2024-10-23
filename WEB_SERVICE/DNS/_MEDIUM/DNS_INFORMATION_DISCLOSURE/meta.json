@@ -2,7 +2,6 @@
   "risk_rating": "medium",
   "short_description": "DNS records expose sensitive information, potentially aiding attackers in gathering intelligence or executing attacks.",
   "references": {
-    "DNS Information Disclosure": "https://owasp.org/www-community/vulnerabilities/DNS_Zone_Transfer",
     "Sensitive Data Exposure": "https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure"
   },
   "title": "DNS Information Disclosure",
