@@ -1,0 +1,61 @@
+{
+  "risk_rating": "medium",
+  "short_description": "DNS records expose sensitive information, potentially aiding attackers in gathering intelligence or executing attacks.",
+  "references": {
+    "Sensitive Data Exposure": "https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure"
+  },
+  "title": "DNS Information Disclosure",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_3_4",
+      "CC_4_1",
+      "CC_6_1",
+      "CC_6_6",
+      "CC_6_7",
+      "CC_6_8",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_3",
+      "CC_7_5"
+    ],
+    "OWASP_MASVS_L1": [
+      "MSTG_STORAGE_1",
+      "MSTG_STORAGE_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_STORAGE_1",
+      "MSTG_STORAGE_2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_STORAGE_1",
+      "MASVS_STORAGE_1"
+    ],
+    "GDPR": [
+      "ART_1",
+      "ART_5",
+      "ART_25",
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_1",
+      "REQ_2_2",
+      "REQ_3_1",
+      "REQ_3_2",
+      "REQ_3_3",
+      "REQ_5_1",
+      "REQ_6_1",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_6_5",
+      "REQ_7_1",
+      "REQ_7_2",
+      "REQ_8_3",
+      "REQ_8_6",
+      "REQ_11_3",
+      "REQ_11_4"
+    ]
+  }
+}
