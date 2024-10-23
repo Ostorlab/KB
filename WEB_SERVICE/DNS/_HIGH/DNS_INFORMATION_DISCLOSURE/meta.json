@@ -30,8 +30,8 @@
       "MSTG_STORAGE_2"
     ],
     "OWASP_MASVS_v2_1": [
-      "MSTG_STORAGE_1",
-      "MSTG_STORAGE_2"
+      "MASVS_STORAGE_1",
+      "MASVS_STORAGE_1"
     ],
     "GDPR": [
       "ART_1",
