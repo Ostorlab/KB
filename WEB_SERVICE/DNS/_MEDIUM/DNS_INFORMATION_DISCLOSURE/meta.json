@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "medium",
   "short_description": "DNS records expose sensitive information, potentially aiding attackers in gathering intelligence or executing attacks.",
   "references": {
     "DNS Information Disclosure": "https://owasp.org/www-community/vulnerabilities/DNS_Zone_Transfer",
