@@ -1,5 +1,5 @@
 {
-  "risk_rating": "high",
+  "risk_rating": "medium",
   "short_description": "Misconfigured MTA-STS policy can lead to email security vulnerabilities and message delivery issues.",
   "references": {
     "MTA-STS Overview and Configuration Guide": "https://www.hardenize.com/blog/mta-sts",
