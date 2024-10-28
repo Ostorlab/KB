@@ -8,13 +8,7 @@ To mitigate the risks associated with MTA-STS misconfigurations, consider the fo
   mx: mail1.example.com
   ```
 
-- **Implement Progressive Max Age Values:** Use shorter max_age values initially and increase gradually:
-  | Phase                | Max Age     | Reason                          |
-  |---------------------|-------------|----------------------------------|
-  | Initial Testing     | 3600        | Quick policy updates if needed   |
-  | Extended Testing    | 86400       | Daily refresh during testing     |
-  | Production         | 172800      | Balance security and overhead    |
-  | Established Setup  | 604800      | Weekly refresh for stable setup  |
+- **Implement Progressive Max Age Values:** Use shorter max_age values initially and increase gradually, the recommended value is 1-2 weeks.
 
 - **Regular Policy Monitoring:**
   * Monitor MTA-STS reporting data for policy failures

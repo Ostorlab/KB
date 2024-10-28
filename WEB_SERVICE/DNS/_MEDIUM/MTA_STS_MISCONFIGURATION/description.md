@@ -9,7 +9,7 @@ MTA-STS policies must be served over HTTPS and located at `.well-known/mta-sts.t
 # Correct Format
 version: STSv1
 mode: enforce
-max_age: 86400
+max_age: 604800
 mx: mail.example.com
 mx: backup-mail.example.com
 ```
@@ -38,8 +38,8 @@ Inappropriate `max_age` values can impact security and operational efficiency:
 * Too high (e.g., 31536000 seconds): Difficulty in policy updates during incidents
 
 ```bash
-# Recommended range: 1-2 days (86400-172800 seconds)
-max_age: 86400
+# Recommended range: 1-2 weeks (604800-1209600 seconds)
+max_age: 604800
 ```
 
 #### 5. MX Pattern Matching
