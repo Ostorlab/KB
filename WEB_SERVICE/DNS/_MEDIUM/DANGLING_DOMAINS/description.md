@@ -1,6 +1,6 @@
 Dangling domains occur when DNS records point to resources that are no longer active or under the organization's control. These misconfigurations can lead to domain hijacking, data leakage, and reputation damage. The following areas are key concerns in dangling domain management:
 
-## 1. Cloud Resource References
+#### 1. Cloud Resource References
 DNS records pointing to deprovisioned cloud resources pose significant risks. Common misconfigurations include:
 * Orphaned CNAME records pointing to terminated cloud services
 * A records targeting released IP addresses
@@ -15,7 +15,7 @@ api.example.com.    IN A       203.0.113.0   # Released IP
 app.example.com.    IN CNAME   service-offline.example.com.
 ```
 
-## 2. Third-Party Service Integration
+#### 2. Third-Party Service Integration
 Records pointing to discontinued third-party services create security vulnerabilities:
 * Abandoned subdomain delegations
 * Expired service endpoints
@@ -29,7 +29,7 @@ track.example.com.      IN CNAME   example.abandoned-tracker.com.        # Compa
 analytics.example.com.   IN CNAME   active-client.current-service.com.
 ```
 
-## 3. Subdomain Management
+#### 3. Subdomain Management
 Improper subdomain cleanup leads to potential takeover scenarios:
 * Forgotten development/staging environments
 * Legacy application subdomains
@@ -46,7 +46,7 @@ dev.example.com.        IN A       203.0.113.10                 # Internal devel
 staging.example.com.    IN CNAME   current-stage.example.com.   # Active staging environment
 ```
 
-## 4. Mail Server Records
+#### 4. Mail Server Records
 Abandoned mail-related records can lead to email spoofing and phishing:
 * Outdated MX records
 * Deprecated mail server references
@@ -60,7 +60,7 @@ example.com.    IN MX    10 primary-mail.example.com.
 example.com.    IN MX    20 backup-mail.example.com.
 ```
 
-## 5. Certificate Validation Records
+#### 5. Certificate Validation Records
 Abandoned domain validation records pose security risks:
 * Outdated ACME challenge records
 * Forgotten domain validation CNAME records
@@ -74,7 +74,7 @@ validate.example.com.          IN CNAME   validate.oldcertprovider.com.
 # Use automated certificate management
 ```
 
-## 6. Service Discovery Records
+#### 6. Service Discovery Records
 Obsolete service discovery entries can expose internal infrastructure:
 * SRV records for discontinued services
 * Legacy service endpoint references
