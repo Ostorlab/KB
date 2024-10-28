@@ -1,0 +1,35 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Misconfigured MTA-STS policy can lead to email security vulnerabilities and message delivery issues.",
+  "references": {
+    "MTA-STS Overview and Configuration Guide": "https://www.hardenize.com/blog/mta-sts",
+    "About MTA-STS and TLS reporting": "https://support.google.com/a/answer/9261504?hl=en",
+    "What is MTA-STS? Setup the Right MTA STS Policy": "https://powerdmarc.com/what-is-mta-sts-and-why-do-you-need-it/"
+  },
+  "title": "MTA-STS Misconfiguration",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_5_3",
+      "CC_6_1",
+      "CC_6_6",
+      "CC_6_7",
+      "CC_8_1",
+      "CC_9_1"
+    ],
+    "GDPR": [
+      "ART_25",
+      "ART_32"
+    ],
+    "OWASP_ASVS_L3": [
+      "V10_3_3",
+      "V1_1_5"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_1_3",
+      "REQ_4_1",
+      "REQ_12_2"
+    ]
+  }
+}
