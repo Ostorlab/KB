@@ -1,0 +1,30 @@
+{
+  "risk_rating": "medium",
+  "short_description": "A vulnerability where DNS records point to deprovisioned cloud resources, terminated services, or inactive endpoints, enabling potential domain hijacking and unauthorized control of subdomains.",
+  "references": {
+    "Dangling Domains: Security Threats, Detection and Prevalence": "https://unit42.paloaltonetworks.com/dangling-domains/",
+    "Dangling DNS and the dangers of subdomain hijacking": "https://www.spamhaus.org/resource-hub/dns/dangling-dns-and-the-dangers-of-subdomain-hijacking/#exploiting-spf-in-txt-records-for-hijacked-domains",
+    "Dangling DNS Record": "https://attaxion.com/glossary/dangling-dns-record/"
+  },
+  "title": "DNS Vulnerability: Dangling Domain Records",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_6",
+      "CC_6_7",
+      "CC_6_8",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_8_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_25",
+      "ART_32"
+    ]
+  }
+}
