@@ -6,12 +6,6 @@ MTA-STS policies must be served over HTTPS and located at `.well-known/mta-sts.t
 * Invalid syntax in the policy file
 
 ```bash
-# Incorrect Format (Incorrect version)
-version: invalid
-mode: enforcing
-max_age: abc
-mx: *.example.com
-
 # Correct Format
 version: STSv1
 mode: enforce
@@ -26,9 +20,6 @@ The `_mta-sts` TXT record must be properly formatted. Misconfigurations include:
 * Missing or incorrect version field
 
 ```bash
-# Incorrect Format
-_mta-sts.example.com. IN TXT "v=invalid; id=12345678"
-
 # Correct Format
 _mta-sts.example.com. IN TXT "v=STSv1; id=20230101T123456"
 ```
