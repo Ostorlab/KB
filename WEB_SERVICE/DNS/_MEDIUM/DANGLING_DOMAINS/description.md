@@ -10,7 +10,7 @@ app.example.com.    IN CNAME   terminated-app.cloudservice.com.
 api.example.com.    IN A       203.0.113.0   # Released IP
 
 # Proper Decommissioning
-# 1. Remove DNS record before releasing resource
+# 1. Remove DNS record before releasing the resource
 # 2. Or replace with controlled placeholder
 app.example.com.    IN CNAME   service-offline.example.com.
 ```
