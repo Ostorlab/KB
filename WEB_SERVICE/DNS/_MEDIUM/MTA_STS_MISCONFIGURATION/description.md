@@ -3,7 +3,7 @@ MTA-STS is a security protocol that enables mail servers to declare their abilit
 #### 1. Policy File Format
 MTA-STS policies must be served over HTTPS and located at `.well-known/mta-sts.txt`. Common misconfigurations include:
 * Incorrect MIME type (must be `text/plain`)
-* Invalid syntax in policy file
+* Invalid syntax in the policy file
 
 ```bash
 # Incorrect Format (Incorrect version)
