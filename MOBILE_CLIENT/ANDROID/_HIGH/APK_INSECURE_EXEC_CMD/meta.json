@@ -3,7 +3,7 @@
   "short_description": "A remote command execution vulnerability affects the application.",
   "references": {
   },
-  "title": "Command Injection",
+  "title": "Remote Command Execution",
   "privacy_issue": false,
   "security_issue": true,
   "categories": {

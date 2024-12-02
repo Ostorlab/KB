@@ -1046,8 +1046,9 @@ def testKbEntries_always_namesOfTheEntryFolderShouldAllBeUnique() -> None:
         MOBILE_CLIENT/ANDROID/_MEDIUM/PATH_TRAVERSAL/meta.json
         WEB_SERVICE/WEB/_HIGH/PATH_TRAVERSAL/meta.json
     """
-    json_files = glob.glob("**/*.json", recursive=True)
-    entry_names = [f.split("/")[3] for f in json_files]
+    path = pathlib.Path(__file__).parent.parent
+    json_files = glob.glob(str(path / "**/*.json"), recursive=True)
+    entry_names = [pathlib.Path(f).parent.name for f in json_files]
 
     assert len(entry_names) == len(set(entry_names))
     assert "PATH_TRAVERSAL" in entry_names
@@ -1056,6 +1057,24 @@ def testKbEntries_always_namesOfTheEntryFolderShouldAllBeUnique() -> None:
     assert "WEB_PATH_TRAVERSAL" in entry_names
     assert "WEB_XPATH_INJECTION" in entry_names
     assert "WEB_XML_INJECTION" in entry_names
+
+
+def testMetaFiles_always_namesOfTheTitlesShouldAllBeUnique() -> None:
+    """Ensure all the titles of the meta jsons are unique across all groups"""
+    path = pathlib.Path(__file__).parent.parent
+    json_files = glob.glob(str(path / "**/*.json"), recursive=True)
+    titles = []
+    for file_path in json_files:
+        with open(file_path, "r", encoding="utf-8") as file:
+            data = json.load(file)
+            if "title" in data:
+                titles.append(data["title"])
+
+    duplicates = [title for title in set(titles) if titles.count(title) > 1]
+
+    assert (
+        len(duplicates) == 0
+    ), f"Duplicate titles found in meta.json files: {duplicates}"
 
 
 @pytest.mark.parametrize(
