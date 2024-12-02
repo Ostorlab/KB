@@ -1142,4 +1142,4 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
                     except requests.RequestException as e:
                         invalid_references.append((file_path, name, url, str(e)))
 
-    assert not invalid_references, f"Invalid URLs found: {invalid_references}"
+    assert len(invalid_references) == 0, f"Invalid URLs found: {invalid_references}"

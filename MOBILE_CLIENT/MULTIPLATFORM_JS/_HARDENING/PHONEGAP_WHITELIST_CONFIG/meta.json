@@ -2,7 +2,6 @@
   "risk_rating": "hardening",
   "short_description": "Insecure whitelist configuration authorizing access to all resources.\n",
   "references": {
-    "Cordova Security Whitelist and Content Security Policy Guide": "https://taco.visualstudio.com/en-us/docs/cordova-security-whitlists/",
     "Apache Cordova CVE-2015-5256": "https://cordova.apache.org/announcements/2015/11/20/security.html",
     "Apache Cordova CVE-2015-1835": "http://cordova.apache.org/announcements/2015/05/26/android-402.html"
   },
