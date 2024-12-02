@@ -2,7 +2,6 @@
   "risk_rating": "hardening",
   "short_description": "Application is compiled with `DevSettingsActivity` developer activity exposed.",
   "references": {
-    "Facebook SDK Debug Logs": "https://www.appsloveworld.com/react-native/100/11/react-native-whats-com-facebook-react-devsupport-devsettingsactivity"
   },
   "title": "Facebook React development settings exposed",
   "cvss_v3_vector": "",

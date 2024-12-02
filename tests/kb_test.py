@@ -1146,4 +1146,4 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
                 if is_valid is False:
                     invalid_urls.add(url)
 
-    assert len(invalid_urls) == 0, f"Invalid URLs found:{len(invalid_urls)} {invalid_urls}"
+    assert len(invalid_urls) == 0, f"Invalid URLs found: {invalid_urls}"

@@ -2,8 +2,7 @@
   "risk_rating": "medium",
   "short_description": "Use of an insecure Bluetooth connection.",
   "references": {
-    "CWE-319: Cleartext Transmission of Sensitive Information": "https://cwe.mitre.org/data/definitions/319.html",
-    "BLE Security: Bridging the gap": "https://medium.com/@kbabcockuf/bridging-the-gap-bluetooth-le-security-aab27232a767"
+    "CWE-319: Cleartext Transmission of Sensitive Information": "https://cwe.mitre.org/data/definitions/319.html"
   },
   "title": "Use of an insecure Bluetooth connection",
   "privacy_issue": true,
