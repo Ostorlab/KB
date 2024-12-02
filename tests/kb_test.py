@@ -1126,7 +1126,7 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
     base_path = pathlib.Path(__file__).parent.parent
     json_files = glob.glob(str(base_path / "**/meta.json"), recursive=True)
     invalid_urls = set()
-    checked_urls = {}
+    checked_urls: dict[str, bool] = {}
 
     for meta_file in json_files:
         with open(meta_file, "r", encoding="utf-8") as file:
@@ -1146,4 +1146,4 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
                 if is_valid is False:
                     invalid_urls.add(url)
 
-    assert len(invalid_urls) == 0, f"Invalid URLs found: {invalid_urls}"
+    assert len(invalid_urls) == 0, f"Invalid URLs found:{len(invalid_urls)} {invalid_urls}"
