@@ -1120,22 +1120,25 @@ def testJsonFiles_whenFileHasCategories_shouldBeValid() -> None:
                 if group_key not in CATEGORY_GROUPS
             ]
 
+
 def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
     """Ensure all URLs in the `references` field of meta.json files are valid across all groups"""
     path = pathlib.Path(__file__).parent.parent
     json_files = glob.glob(str(path / "**/*.json"), recursive=True)
-    invalid_references = []
+    invalid_references: list[tuple[str, str, str, int | str]] = []
 
     for file_path in json_files:
-        with open(file_path, 'r', encoding='utf-8') as file:
+        with open(file_path, "r", encoding="utf-8") as file:
             data = json.load(file)
-            if 'references' in data:
-                references = data['references']
+            if "references" in data:
+                references = data["references"]
                 for name, url in references.items():
                     try:
                         response = requests.head(url, timeout=5)
                         if response.status_code >= 400:
-                            invalid_references.append((file_path, name, url, response.status_code))
+                            invalid_references.append(
+                                (file_path, name, url, response.status_code)
+                            )
                     except requests.RequestException as e:
                         invalid_references.append((file_path, name, url, str(e)))
 
