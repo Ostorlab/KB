@@ -7,7 +7,7 @@
         "Apple Privacy Manifest": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
         "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "http://cwe.mitre.org/data/definitions/359.html"
     },
-    "title": "Privacy Policy Data Retention Description",
+    "title": "Proper Privacy Policy Data Retention Description",
     "privacy_issue": true,
     "security_issue": false,
     "categories": {}
