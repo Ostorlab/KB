@@ -3,7 +3,7 @@
   "short_description": "The application does not enforce Automatic Reference Counting (ARC) binary protection.",
   "references": {
     "Automatic Reference Counting (Wikipedia) ": "https://en.wikipedia.org/wiki/Automatic_Reference_Counting",
-    "Automatic Reference Counting (LLVM)": "http://clang.llvm.org/docs/AutomaticReferenceCounting.html",
+    "Automatic Reference Counting (LLVM)": "https://clang.llvm.org/docs/AutomaticReferenceCounting.html",
     "Automatic Reference Counting for Swift (Apple developer)": "https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html"
   },
   "title": "Automatic Reference Counting (ARC) not enforced",

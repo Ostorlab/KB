@@ -2,7 +2,7 @@
   "risk_rating": "info",
   "short_description": "Strings of all Plist files shipped in the application.",
   "references": {
-    "The plist manual page": "https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man5/plist.5.html"
+    "Plist Files: Configuration and Data Storage in Swift": "https://vikramios.medium.com/what-is-plist-file-in-ios-73384c01dd1d"
   },
   "title": "Strings Bplist files",
   "privacy_issue": false,

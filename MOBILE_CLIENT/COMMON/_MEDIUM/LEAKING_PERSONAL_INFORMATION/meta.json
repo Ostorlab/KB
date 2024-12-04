@@ -2,9 +2,9 @@
   "risk_rating": "medium",
   "short_description": "Personally Identifiable Information were detected leaked in a world-readable file.",
   "references": {
-    "Practices for Protecting Electronic Restricted Data: A Quick Reference": "http://its.ucsc.edu/policies/rdpp.html",
-    "CWE-200: Information Exposure": "http://cwe.mitre.org/data/definitions/200.html",
-    "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "http://cwe.mitre.org/data/definitions/359.html"
+    "Practices for Protecting Electronic Restricted Data: A Quick Reference": "https://its.ucsc.edu/policies/rdpp.html",
+    "CWE-200: Information Exposure": "https://cwe.mitre.org/data/definitions/200.html",
+    "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
   },
   "title": "Personally Identifiable Information (PII) Leakage",
   "privacy_issue": true,

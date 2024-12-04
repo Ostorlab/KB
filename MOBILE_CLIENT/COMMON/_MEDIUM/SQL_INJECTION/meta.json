@@ -2,7 +2,7 @@
     "risk_rating": "medium",
     "short_description": "Mobile SQL Injection vulnerability allows an attacker to execute malicious SQL queries on a mobile application's database, potentially leading to unauthorized access, data leakage, or data manipulation.",
     "references": {
-        "OWASP Mobile Security Testing Guide (MSTG)": "https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05a-Testing-Data-Storage.md#testing-for-sql-injection-mstg-storage-3"
+        "OWASP Mobile Security Testing Guide (MSTG)": "https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md"
     },
     "title": "Mobile SQL Injection Vulnerability",
     "privacy_issue": true,

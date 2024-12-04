@@ -4,7 +4,7 @@
   "short_description": "Insecure permissive whitelist configuration.",
   "references": {
     "Apache Cordova CVE-2015-5256": "https://cordova.apache.org/announcements/2015/11/20/security.html",
-    "Apache Cordova CVE-2015-1835": "http://cordova.apache.org/announcements/2015/05/26/android-402.html"
+    "Apache Cordova CVE-2015-1835": "https://cordova.apache.org/announcements/2015/05/26/android-402.html"
   },
   "privacy_issue": false,
   "security_issue": true,
