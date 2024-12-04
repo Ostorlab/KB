@@ -2,7 +2,7 @@
   "risk_rating": "info",
   "short_description": "Expansion files are added to the APK",
   "references": {
-    "APK Expansion Files": "http://developer.android.com/google/play/expansion-files.html"
+    "APK Expansion Files": "https://developer.android.com/google/play/expansion-files.html"
   },
   "title": "Expansion APK enabled",
   "privacy_issue": false,

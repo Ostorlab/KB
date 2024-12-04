@@ -3,7 +3,6 @@
   "short_description": "Inadequate input validation on user input and output encoding enables Cross-Site Scripting attacks to be performed. This can ultimately allow an attacker to gain access to native resources and functionalities on the phone which could lead to full application compromise.",
   "risk_rating": "medium",
   "references": {
-    "Why Cordova XSS is your worst enemy ?": "http://blog.zuehlke.com/en/why-is-xss-apache-cordovas-worst-enemy/",
     "Cordova Security Guide": "https://cordova.apache.org/docs/en/latest/guide/appdev/security/",
     "OWASP Cross-Site Scripting (XSS)": "https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)"
   },

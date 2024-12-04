@@ -3,7 +3,7 @@
   "short_description": "List of SQLite query API calls",
   "references": {
     "SQL Injection (OWASP)": "https://www.owasp.org/index.php/SQL_Injection",
-    "Security Tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html",
+    "Security Tips (Android developer)": "https://developer.android.com/training/articles/security-tips.html",
     "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')": "https://cwe.mitre.org/data/definitions/89.html"
   },
   "title": "Call to SQLite query API",

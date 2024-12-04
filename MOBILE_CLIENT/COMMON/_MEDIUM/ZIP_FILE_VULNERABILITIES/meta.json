@@ -4,7 +4,7 @@
    "references":{
       "Path Traversal (OWASP)":"https://owasp.org/www-community/attacks/Path_Traversal",
       "Symbolic Link (Cybrary)":"https://www.cybrary.it/blog/symlink-attacks",
-      "Zip Slip (Rapid7)":"https://blog.rapid7.com/2018/07/27/zip-slip-attacks-are-now-25-years-old-and-more-dangerous-than-ever/"
+      "Zip Slip Vulnerability":"https://security.snyk.io/research/zip-slip-vulnerability/"
    },
    "title":"ZIP Vulnerabilities: Path Traversal, Zip Symbolic Link, and Zip Extension Spoofing",
    "privacy_issue":false,

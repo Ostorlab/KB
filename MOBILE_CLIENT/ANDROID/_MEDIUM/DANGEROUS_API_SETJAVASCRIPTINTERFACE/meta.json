@@ -2,9 +2,9 @@
   "risk_rating": "medium",
   "short_description": "WebView addJavaScriptInterface Remote Code Execution (CVE-2013-4710).",
   "references": {
-    "DRD13. Do not provide addJavascriptInterface method access in a WebView which could contain untrusted content. (API level JELLY_BEAN or below)": "https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=129859614",
-    "CVE-2013-4710": "http://www.cvedetails.com/cve/CVE-2013-4710/",
-    "MWR Labs Advisory": "https://labs.mwrinfosecurity.com/advisories/webview-addjavascriptinterface-remote-code-execution/",
+    "DRD13. Do not provide addJavascriptInterface method access in a WebView which could contain untrusted content. (API level JELLY_BEAN or below)": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-8.html",
+    "CVE-2013-4710": "https://www.cvedetails.com/cve/CVE-2013-4710/",
+    "WithSecure Labs": "https://labs.withsecure.com/publications/webview-addjavascriptinterface-remote-code-execution",
     "Metasploit Public Exploit": "https://www.exploit-db.com/exploits/31519/"
   },
   "title": "addJavaScriptInterface Remote Code Execution.",

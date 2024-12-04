@@ -2,7 +2,7 @@
   "risk_rating": "info",
   "short_description": "List of FileObserver implementation",
   "references": {
-    "Security tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html#IPC"
+    "Security tips (Android developer)": "https://developer.android.com/training/articles/security-tips.html#IPC"
   },
   "title": "Implementation of a FileObserver",
   "privacy_issue": false,

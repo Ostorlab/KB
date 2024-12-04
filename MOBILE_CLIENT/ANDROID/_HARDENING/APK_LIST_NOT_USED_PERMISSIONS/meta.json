@@ -2,7 +2,7 @@
   "risk_rating": "hardening",
   "short_description": "List of unused permissions based on API calls.",
   "references": {
-    "Android InSecurity: Understanding Permissions": "https://www.infsec.cs.uni-saarland.de/wp-content/uploads/sites/2/2014/10/04_AndroidInsecurity.pdf",
+    "Permissions on Android": "https://medium.com/@zorbeytorunoglu/permissions-on-android-e75b7da3fc8f",
     "Underestimated Privacy Implications of the ACCESS_WIFI_STATE": "https://hal.inria.fr/hal-00994926v2/document"
   },
   "title": "Unused permissions (overprivileged)",

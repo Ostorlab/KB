@@ -4,7 +4,7 @@
   "references": {
     "CWE-922: Insecure Storage of Sensitive Information": "https://cwe.mitre.org/data/definitions/922.html",
     "CWE-312: Cleartext Storage of Sensitive Information": "https://cwe.mitre.org/data/definitions/312.html",
-    "Security tips (Android developer)": "http://developer.android.com/training/articles/security-tips.html#StoringData",
+    "Security tips (Android developer)": "https://developer.android.com/training/articles/security-tips.html#StoringData",
     "Insecure Data Storage (OWASP)": "https://www.owasp.org/index.php/Mobile_Top_10_2014-M2"
   },
   "title": "Call to External Storage API",

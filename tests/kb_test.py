@@ -4,6 +4,7 @@ import glob
 import json
 import pathlib
 
+import requests
 import pytest
 
 CATEGORY_GROUPS = [
@@ -1137,3 +1138,31 @@ def testJsonFiles_whenFileHasCategories_shouldBeValid() -> None:
                 for group_key in categories.keys()
                 if group_key not in CATEGORY_GROUPS
             ]
+
+
+def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
+    """Ensure all URLs in the `references` field of meta.json files are valid across all groups"""
+    base_path = pathlib.Path(__file__).parent.parent
+    json_files = glob.glob(str(base_path / "**/meta.json"), recursive=True)
+    invalid_urls = set()
+    checked_urls: dict[str, bool] = {}
+
+    for meta_file in json_files:
+        with open(meta_file, "r", encoding="utf-8") as file:
+            data = json.load(file)
+        references = data.get("references", {})
+        for url in references.values():
+            if url in checked_urls:
+                if checked_urls[url] is False:
+                    invalid_urls.add(url)
+            else:
+                try:
+                    response = requests.get(url, timeout=5)
+                    is_valid = response.status_code < 404
+                except requests.RequestException:
+                    is_valid = False
+                checked_urls[url] = is_valid
+                if is_valid is False:
+                    invalid_urls.add(url)
+
+    assert len(invalid_urls) == 0, f"Invalid URLs found: {invalid_urls}"

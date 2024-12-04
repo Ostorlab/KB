@@ -3,7 +3,7 @@
   "short_description": "List of WebView API calls",
   "references": {
     "DRD02-J. Do not allow WebView to access sensitive local resource through file scheme (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/display/android/DRD02-J.+Do+not+allow+WebView+to+access+sensitive+local+resource+through+file+scheme",
-    "DRD13. Do not provide addJavascriptInterface method access in a WebView which could contain untrusted content (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=129859614"
+    "DRD13. Do not provide addJavascriptInterface method access in a WebView which could contain untrusted content (CERT Secure Coding)": "https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=87150717"
   },
   "title": "Call to dangerous WebView settings API",
   "privacy_issue": false,

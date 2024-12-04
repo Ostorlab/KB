@@ -2,7 +2,7 @@
   "risk_rating": "info",
   "short_description": "List of Server Socket API calls",
   "references": {
-    "ServerSocket (Android developer)": "http://developer.android.com/reference/java/net/ServerSocket.html"
+    "ServerSocket (Android developer)": "https://developer.android.com/reference/java/net/ServerSocket.html"
   },
   "title": "Call to Socket API",
   "privacy_issue": false,
