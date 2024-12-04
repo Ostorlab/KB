@@ -2,6 +2,7 @@
   "risk_rating": "high",
   "short_description": "Template Injection is a vulnerability that allows an attacker to inject malicious code into a template-rendered text, which can lead to remote code execution, data leakage, and other security issues.",
   "references": {
+    "OWASP": "https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/18-Testing_for_Server_Side_Template_Injection",
     "PortSwigger": "https://portswigger.net/knowledgebase/issues/Details/00600500_server-side-template-injection-(ssti)"
   },
   "title": "Template Injection",

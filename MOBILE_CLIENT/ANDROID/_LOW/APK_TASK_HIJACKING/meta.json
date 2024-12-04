@@ -4,7 +4,8 @@
   "references": {
     "Understand Tasks and Back Stack - Android Documentation": "https://developer.android.com/guide/components/activities/tasks-and-back-stack",
     "Towards Discovering and Understanding Task Hijacking in Android": "https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-ren-chuangang.pdf",
-    "StandHogg Attack 2.0": "https://promon.co/strandhogg-2-0/",
+    "StrandHogg Attack": "https://promon.co/security-news/the-strandhogg-vulnerability",
+    "StandHogg Attack 2.0": "https://promon.co/resources/downloads/strandhogg-2-0-new-serious-android-vulnerability",
     "Task Hijacking exploited by Mobile Banking Malware": "https://arstechnica.com/information-technology/2019/12/vulnerability-in-fully-patched-android-phones-under-active-attack-by-bank-thieves/",
     "CVE-2020-0267: WindowManager Confused Deputy": "https://www.incibe-cert.es/en/early-warning/vulnerabilities/cve-2020-0267"
   },
