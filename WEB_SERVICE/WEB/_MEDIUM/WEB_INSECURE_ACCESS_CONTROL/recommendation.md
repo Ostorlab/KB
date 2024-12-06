@@ -2,7 +2,7 @@ Access control is only effective if enforced in trusted server-side code or serv
 modify the access control check or metadata.
 
 * Except for public resources, deny by default.
-* Implement access control mechanisms once and re-use them throughout the application, including minimizing CORS
+* Implement access control mechanisms once and reuse them throughout the application, including minimizing CORS
   usage.
 * Model access controls should enforce record ownership rather than accepting that the user can create, read, update,
   or delete any record.

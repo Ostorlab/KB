@@ -15,7 +15,7 @@ Examples of vulnerable implementations:
 	  // Dynamically load the library without sanitizing the input
 	  final dylib = DynamicLibrary.open(unsanitized_user_input);
 	
-	  // Resolve and call a function from the loaded library that contains malicous code
+	  // Resolve and call a function from the loaded library that contains malicious code
 	  final libraryMethod =
 	      dylib.lookupFunction<Pointer<Utf8> Function(), Pointer<Utf8> Function()>(
 	          'getSensitiveData');
@@ -31,7 +31,7 @@ Examples of vulnerable implementations:
 	
 	    // Attempt to dynamically load the library without sanitizing user input 
 	    if let libraryHandle = dlopen(unsanitized_user_input, RTLD_NOW) {
-	        // Library loaded successfully, resolve a function that could contain malicous code
+	        // Library loaded successfully, resolve a function that could contain malicious code
 	        if let method = dlsym(libraryHandle, "libraryMethod") {
 	            typealias FunctionType = @convention(c) () -> String
 	            let function = unsafeBitCast(libraryMethod, to: FunctionType.self)

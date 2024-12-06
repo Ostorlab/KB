@@ -9,7 +9,7 @@ The recommended TLS configuration should enforce the following recommendations:
 * Remove `RC4` support
 * Remove `DES` support
 * Remove `MD5` support
-* Prefere `SHA256` over `SHA1`
+* Prefer `SHA256` over `SHA1`
 * Prefer `AES128` over `AES256` as 256 offers little security advantages and is less robust to timing attacks
 * Disable Client-Initiated Renegotiation
 * Disable TLS compression

@@ -1,6 +1,6 @@
-List of componenets potentially accepting user input:
+List of components potentially accepting user input:
 
 * `service`: Service.
 * `activity`: Activity.
-* `reciver`: Broadcast Receiver
+* `receiver`: Broadcast Receiver
 * `provider`: Content Provider

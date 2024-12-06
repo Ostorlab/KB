@@ -1,4 +1,4 @@
-A hash function is a function that is used to encode data and return a -fixed size- hash value with the purpose of minimizing the chance of colision (two different inputs having the exact same hash value is incredibly small), these functions could be used for verifying the integrity of a message or files, identifying a file or data or checking a secret or password.
+A hash function is a function that is used to encode data and return a -fixed size- hash value with the purpose of minimizing the chance of collision (two different inputs having the exact same hash value is incredibly small), these functions could be used for verifying the integrity of a message or files, identifying a file or data or checking a secret or password.
 
 
 Common hashing algorithms:

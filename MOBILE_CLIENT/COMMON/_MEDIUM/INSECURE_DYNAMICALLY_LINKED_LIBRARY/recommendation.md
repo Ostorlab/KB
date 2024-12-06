@@ -22,7 +22,7 @@ Examples of secure implementations :
 	        return false; // Invalid file checksum
 	    }
 	
-	    if (/* checks for .. paterns */ )
+	    if (/* checks for .. patterns */ )
 	        return false; // Invalid path
 	  
 	    // Add additional validation checks specific to your implementation
@@ -61,7 +61,7 @@ Examples of secure implementations :
 	    if fileDigest != expectedChecksum {
 	        return false // Invalid file checksum
 	
-	    if (/* checks for .. paterns */ )
+	    if (/* checks for .. patterns */ )
 	        return false; // Invalid path
 	  
 	    // Add additional validation checks specific to your implementation
@@ -78,7 +78,7 @@ Examples of secure implementations :
 	
 	    // Attempt to dynamically load the library with validated user input 
 	    if let libraryHandle = dlopen(unsanitized_user_input, RTLD_NOW) {
-	        // Library loaded successfully, resolve a function that could contain malicous code
+	        // Library loaded successfully, resolve a function that could contain malicious code
 	        if let method = dlsym(libraryHandle, "libraryMethod") {
 	            typealias FunctionType = @convention(c) () -> String
 	            let function = unsafeBitCast(libraryMethod, to: FunctionType.self)
@@ -104,7 +104,7 @@ Examples of secure implementations :
 	        return false
 	    }
 	
-	    if (/* checks for .. paterns */ )
+	    if (/* checks for .. patterns */ )
 	        return false  // Invalid path
 	
 	    // Add additional validation checks specific to your implementation

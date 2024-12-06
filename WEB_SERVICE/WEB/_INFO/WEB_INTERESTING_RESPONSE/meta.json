@@ -1,6 +1,6 @@
 {
   "risk_rating": "info",
-  "short_description": "Detected an intersting response.",
+  "short_description": "Detected an interesting response.",
   "references": {
   },
   "title": "Interesting response",

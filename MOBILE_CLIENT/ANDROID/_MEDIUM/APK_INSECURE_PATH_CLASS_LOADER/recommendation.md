@@ -1,7 +1,7 @@
 If you use DexClassLoader to load and execute additional DEX code:
 
 * Do NOT use a world-writable directory (such as the SD card) for the dexPath
-* Do NOT use a world-writable directory (such as the SD card) for the ODEX (optimized DEX which is the second paramter of the DexClassLoader constructor)
+* Do NOT use a world-writable directory (such as the SD card) for the ODEX (optimized DEX which is the second parameter of the DexClassLoader constructor)
 
 If you use PathClassLoader to load and execute additional jar/resources:
 

@@ -9,7 +9,7 @@ To mitigate the risk of Directive Overloading attacks, you can take the followin
   // Configuring for GraphQL Armor
   GraphQLArmorConfig({
     maxDirectives: {
-      // Toogle the plugin | default: true
+      // Toggle the plugin | default: true
       enabled?: boolean,
     
       // Directives threshold | default: 50

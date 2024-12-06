@@ -8,7 +8,7 @@ $adb forward tcp:7777 jdwp:$(adb shell ps | grep "package-id")
 $jdb -attach localhost:7777
 ```
 
-To access the applicatin filesystem:
+To access the application filesystem:
 
 ```bash
 $adb shell
@@ -17,4 +17,4 @@ $...insert malicious action...
 ```  
 
 Attacker can debug the application without access to source code and leverage it to perform malicious actions on behalf
-ot the user, modify the application behavior or access sensitive data like credentials and session cookies.
+of the user, modify the application behavior or access sensitive data like credentials and session cookies.
