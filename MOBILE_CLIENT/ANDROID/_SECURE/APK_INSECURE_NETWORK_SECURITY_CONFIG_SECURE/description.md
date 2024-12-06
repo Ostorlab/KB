@@ -32,7 +32,7 @@ The features enable configuring:
 
 
 
-* Declartive setting of certificate pinning keys
+* Declarative setting of certificate pinning keys
 
 === "XML"
 	```xml

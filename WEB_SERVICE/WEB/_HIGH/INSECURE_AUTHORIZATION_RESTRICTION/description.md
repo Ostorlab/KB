@@ -4,7 +4,7 @@ Targeting Insecure Authorization Restrictions on a web server, for example, woul
 
    * **HTTP Request Method fuzzing**: Testing invalid, malformed, or unexpected HTTP methods on the server.
    * **HTTP Request Path fuzzing**: Manipulating the HTTP request path by deforming it, adding to it, or subtracting from it.
-   * **HTTP Request Query Paramete**r fuzzing: Adding, removing, or changing the original query parameters.
+   * **HTTP Request Query Parameter**r fuzzing: Adding, removing, or changing the original query parameters.
    * **HTTP Request Header fuzzing**: Adding familiar headers, removing headers, or adding proxy headers.
 
 All these techniques target defects, vulnerabilities, or mistakes in a server's logic.

@@ -156,7 +156,7 @@ static func redBioProtectedEntry(entryName: String) {
 
 For Flutter (both Android and iOS), `biometric_storage` is a plugin that allows using biometric authentication to write and read encrypted data to the device.
 
-The underhood implementation applies the best practices and uses a SecAccessControl with the right SecAccessControlCreateFlags to constraint access with Touch ID fo Face ID.
+The underhood implementation applies the best practices and uses a SecAccessControl with the right SecAccessControlCreateFlags to constraint access with Touch ID or Face ID.
 
 - The first step is to create the access object where we will write and read the data after the biometric authentication:
 
