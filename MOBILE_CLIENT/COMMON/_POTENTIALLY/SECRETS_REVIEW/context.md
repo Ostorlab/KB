@@ -9,4 +9,3 @@ A translation app with a Google Cloud backend experienced a catastrophic API key
 - Google Cloud refused to provide a full refund, offering only $50k in credits
 - The actual cost to Google for the resources used was estimated at 1-20% of the charged amount
 
-Source: [Reddit Post](https://www.reddit.com/r/googlecloud/comments/1i21otu/450000_charge_from_google_cloud_no_refund/)
