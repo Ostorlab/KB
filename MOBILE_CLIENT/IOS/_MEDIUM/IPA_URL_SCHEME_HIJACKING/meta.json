@@ -3,7 +3,7 @@
   "short_description": "Application registers a customer URL scheme vulnerable to scheme hijacking",
   "references": {
     "MITRE ATT&CK - URI Hijacking": "https://attack.mitre.org/techniques/T1416/",
-    "IOS URL Scheme Susceptible to Hijacking": "https://howtoinswift.tech/blog/2024/URL-Scheme-Hijacking-in-iOS-Apps-Understanding-and-Preventing-the-Vulnerability/"
+    "Prevent iOS URL Scheme Hijack": "https://stackoverflow.com/questions/33919058/prevent-ios-url-scheme-hijack"
   },
   "title": "iOS URL Scheme Hijacking",
   "privacy_issue": false,
