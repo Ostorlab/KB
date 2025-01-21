@@ -1020,20 +1020,20 @@ def testJsonFiles_allFilesAreValid_testPasses() -> None:
             # Check if the required keys are present
             required_keys = ["risk_rating", "short_description", "references", "title"]
             for key in required_keys:
-                assert (
-                    key in json_data
-                ), f"Required key '{key}' is missing in JSON data."
+                assert key in json_data, (
+                    f"Required key '{key}' is missing in JSON data."
+                )
 
             # Check the data types and formats of the keys
-            assert isinstance(
-                json_data["risk_rating"], str
-            ), "risk_rating must be a string."
-            assert isinstance(
-                json_data["short_description"], str
-            ), "short_description must be a string."
-            assert isinstance(
-                json_data["references"], dict
-            ), "references must be a dictionary."
+            assert isinstance(json_data["risk_rating"], str), (
+                "risk_rating must be a string."
+            )
+            assert isinstance(json_data["short_description"], str), (
+                "short_description must be a string."
+            )
+            assert isinstance(json_data["references"], dict), (
+                "references must be a dictionary."
+            )
             assert isinstance(json_data["title"], str), "title must be a string."
 
             # Check the format of the references
@@ -1073,9 +1073,9 @@ def testMetaFiles_always_namesOfTheTitlesShouldAllBeUnique() -> None:
 
     duplicates = [title for title in set(titles) if titles.count(title) > 1]
 
-    assert (
-        len(duplicates) == 0
-    ), f"Duplicate titles found in meta.json files: {duplicates}"
+    assert len(duplicates) == 0, (
+        f"Duplicate titles found in meta.json files: {duplicates}"
+    )
 
 
 @pytest.mark.parametrize(
