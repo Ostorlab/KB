@@ -6,6 +6,7 @@
     "Best practices for securely using API keys": "https://support.google.com/googleapi/answer/6310037?hl=en",
     "CWE-200: Data Exposure": "https://cwe.mitre.org/data/definitions/200.html",
     "CWE-259: Use of Hard-coded Password": "https://cwe.mitre.org/data/definitions/259.html",
+    "What Is AWS Secrets Manager?": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html",
     "$450k Google Cloud API Key Compromise": "https://www.reddit.com/r/googlecloud/comments/1i21otu/450000_charge_from_google_cloud_no_refund/"
   },
   "title": "Secret information stored in the application",
