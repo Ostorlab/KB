@@ -1,6 +1,7 @@
 """Unittests for KB generator."""
 
 import os.path
+
 from pytest_mock import plugin
 from pyfakefs import fake_filesystem
 
@@ -16,7 +17,7 @@ def testGenerateKB_whenVulnerabilityProvided_returnsKBEntry(
     representing a KB entry
     """
     mocker.patch(
-        "openai.api_resources.chat_completion.ChatCompletion.create",
+        "tools.kb_generator._ask_gpt",
         side_effect=utils.mock_chat_completion_create,
     )
     vulnerability = kb_generator.Vulnerability(
