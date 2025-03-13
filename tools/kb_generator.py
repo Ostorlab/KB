@@ -10,10 +10,13 @@ import re
 from typing import Any
 
 import click
-import openai
 import tenacity
-from openai import openai_object
-from openai.api_resources import chat_completion
+from openai import OpenAI
+from openai.types.chat import (
+    ChatCompletionMessageParam,
+    ChatCompletionUserMessageParam,
+    ChatCompletionSystemMessageParam,
+)
 
 DEMO_LANGS = ["Flutter", "Swift", "Kotlin"]
 
@@ -185,20 +188,25 @@ def dump_kb(kbentry: KBEntry) -> None:
 
 
 def _ask_gpt(
-    prompts: list[dict[str, str]], temperature: float = 0.0, max_tokens: int = 3200
-) -> openai_object.OpenAIObject:
-    """Send a prompt to OpenAI API."""
+    prompts: list[ChatCompletionMessageParam],
+    temperature: float = 0.0,
+    max_tokens: int = 3200,
+) -> Any:
+    """Send a prompt to OpenAI API using OpenRouter."""
     if OPENAI_API_KEY is None:
-        raise ValueError
+        raise ValueError("OPENAI_API_KEY environment variable is not set")
 
-    openai.api_key = OPENAI_API_KEY
-    gpt_response: openai_object.OpenAIObject = chat_completion.ChatCompletion.create(
+    client = OpenAI(
+        api_key=OPENAI_API_KEY,
+        base_url="https://openrouter.ai/api/v1",
+    )
+
+    return client.chat.completions.create(
         model=MODEL_NAME,
         temperature=temperature,
         max_tokens=max_tokens,
         messages=prompts,
     )
-    return gpt_response
 
 
 @tenacity.retry(
@@ -222,14 +230,14 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
         f"Vulnerability description for {vulnerability.name}, reply as one short paragraph without "
         f"mitigation details "
     )
-    prompts = [
-        {
-            "role": "user",
-            "content": prompt_message,
-        },
+    prompts: list[ChatCompletionMessageParam] = [
+        ChatCompletionUserMessageParam(
+            role="user",
+            content=prompt_message,
+        ),
     ]
     gpt_response = _ask_gpt(prompts=prompts)
-    content = gpt_response.choices[0].message["content"]
+    content = gpt_response.choices[0].message.content
     description_md = description_md.replace("%%VULNERABILITY_DESCRIPTION%%", content)
 
     recommendation_md = RECOMMENDATION_TEMPLATE.replace(
@@ -237,13 +245,13 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     )
     prompt_message = f"Vulnerability mitigation for {vulnerability.name}, reply as one short paragraph"
     prompts = [
-        {
-            "role": "user",
-            "content": prompt_message,
-        },
+        ChatCompletionUserMessageParam(
+            role="user",
+            content=prompt_message,
+        ),
     ]
     gpt_response = _ask_gpt(prompts=prompts)
-    content = gpt_response.choices[0].message["content"]
+    content = gpt_response.choices[0].message.content
     recommendation_md = recommendation_md.replace("%%RECOMMENDATION%%", content)
 
     for language in DEMO_LANGS:
@@ -254,17 +262,17 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
             "your response need to consist of the code alone without any extra text"
         )
         prompts = [
-            {
-                "role": "system",
-                "content": "act as a code generator, only reply with code, nothing else",
-            },
-            {
-                "role": "user",
-                "content": prompt_message,
-            },
+            ChatCompletionSystemMessageParam(
+                role="system",
+                content="act as a code generator, only reply with code, nothing else",
+            ),
+            ChatCompletionUserMessageParam(
+                role="user",
+                content=prompt_message,
+            ),
         ]
         gpt_response = _ask_gpt(prompts=prompts)
-        content = gpt_response.choices[0].message["content"]
+        content = gpt_response.choices[0].message.content
         match = re.search(PATTERN, content, re.DOTALL | re.MULTILINE)
         code = match.group(1).strip() if match else "[TODO]"
         description_md = description_md.replace(f"%%{language.upper()}_CODE%%", code)
@@ -274,17 +282,17 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
             f"{content}"
         )
         prompts = [
-            {
-                "role": "system",
-                "content": "act as a code generator, only reply with code, nothing else",
-            },
-            {
-                "role": "user",
-                "content": prompt_message,
-            },
+            ChatCompletionSystemMessageParam(
+                role="system",
+                content="act as a code generator, only reply with code, nothing else",
+            ),
+            ChatCompletionUserMessageParam(
+                role="user",
+                content=prompt_message,
+            ),
         ]
         gpt_response = _ask_gpt(prompts=prompts)
-        content = gpt_response.choices[0].message["content"]
+        content = gpt_response.choices[0].message.content
         match = re.search(PATTERN, content, re.DOTALL | re.MULTILINE)
         code = match.group(1).strip() if match else "[TODO]"
         recommendation_md = recommendation_md.replace(
@@ -296,17 +304,17 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
         f"{META_TEMPLATE}"
     )
     prompts = [
-        {
-            "role": "system",
-            "content": "act as a json metadata generator, only reply with json, nothing else",
-        },
-        {
-            "role": "user",
-            "content": prompt_message,
-        },
+        ChatCompletionSystemMessageParam(
+            role="system",
+            content="act as a json metadata generator, only reply with json, nothing else",
+        ),
+        ChatCompletionUserMessageParam(
+            role="user",
+            content=prompt_message,
+        ),
     ]
     gpt_response = _ask_gpt(prompts=prompts)
-    content = gpt_response.choices[0].message["content"]
+    content = gpt_response.choices[0].message.content
     meta = json.loads(content)
 
     kbentry = KBEntry(description_md, recommendation_md, meta, vulnerability)
