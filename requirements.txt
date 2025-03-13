@@ -4,3 +4,4 @@ dataclass_csv
 click
 bs4
 lxml
+requests
