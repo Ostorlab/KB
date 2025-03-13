@@ -6,13 +6,18 @@ from typing import Any
 
 
 @dataclasses.dataclass
-class Message:
-    message: dict[str, Any]
+class MockMessage:
+    content: str
 
 
 @dataclasses.dataclass
-class GptResponse:
-    choices: list[Message]
+class MockChoice:
+    message: MockMessage
+
+
+@dataclasses.dataclass
+class MockResponse:
+    choices: list[MockChoice]
 
 
 DESCRIPTION = (
@@ -227,18 +232,28 @@ META = {
 }
 
 
-def mock_chat_completion_create(**kwargs: Any) -> GptResponse:
-    prompt = kwargs["messages"][-1]["content"]
+def mock_chat_completion_create(**kwargs: Any) -> MockResponse:
+    prompt = kwargs["prompts"][-1]["content"]
 
     if "Vulnerability description for" in prompt:
-        return GptResponse(choices=[Message({"content": DESCRIPTION})])
+        return MockResponse(
+            choices=[MockChoice(message=MockMessage(content=DESCRIPTION))]
+        )
     elif "Vulnerability mitigation for" in prompt:
-        return GptResponse(choices=[Message({"content": RECOMMENDATION})])
+        return MockResponse(
+            choices=[MockChoice(message=MockMessage(content=RECOMMENDATION))]
+        )
     elif "application that is vulnerable to" in prompt:
-        return GptResponse(choices=[Message({"content": DART_VULNERABLE_CODE})])
+        return MockResponse(
+            choices=[MockChoice(message=MockMessage(content=DART_VULNERABLE_CODE))]
+        )
     elif "code below is vulnerable to" in prompt:
-        return GptResponse(choices=[Message({"content": DART_PATCHED_CODE})])
+        return MockResponse(
+            choices=[MockChoice(message=MockMessage(content=DART_PATCHED_CODE))]
+        )
     elif "Generate a metadata" in prompt:
-        return GptResponse(choices=[Message({"content": json.dumps(META)})])
+        return MockResponse(
+            choices=[MockChoice(message=MockMessage(content=json.dumps(META)))]
+        )
     else:
         raise ValueError("Invalid Prompt")
