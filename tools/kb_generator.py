@@ -12,11 +12,7 @@ from typing import Any
 import click
 import tenacity
 from openai import OpenAI
-from openai.types.chat import (
-    ChatCompletionMessageParam,
-    ChatCompletionUserMessageParam,
-    ChatCompletionSystemMessageParam,
-)
+from openai.types import chat
 
 DEMO_LANGS = ["Flutter", "Swift", "Kotlin"]
 
@@ -188,7 +184,7 @@ def dump_kb(kbentry: KBEntry) -> None:
 
 
 def _ask_gpt(
-    prompts: list[ChatCompletionMessageParam],
+    prompts: list[chat.ChatCompletionMessageParam],
     temperature: float = 0.0,
     max_tokens: int = 3200,
 ) -> Any:
@@ -230,8 +226,8 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
         f"Vulnerability description for {vulnerability.name}, reply as one short paragraph without "
         f"mitigation details "
     )
-    prompts: list[ChatCompletionMessageParam] = [
-        ChatCompletionUserMessageParam(
+    prompts: list[chat.ChatCompletionMessageParam] = [
+        chat.ChatCompletionUserMessageParam(
             role="user",
             content=prompt_message,
         ),
@@ -245,7 +241,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     )
     prompt_message = f"Vulnerability mitigation for {vulnerability.name}, reply as one short paragraph"
     prompts = [
-        ChatCompletionUserMessageParam(
+        chat.ChatCompletionUserMessageParam(
             role="user",
             content=prompt_message,
         ),
@@ -262,11 +258,11 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
             "your response need to consist of the code alone without any extra text"
         )
         prompts = [
-            ChatCompletionSystemMessageParam(
+            chat.ChatCompletionSystemMessageParam(
                 role="system",
                 content="act as a code generator, only reply with code, nothing else",
             ),
-            ChatCompletionUserMessageParam(
+            chat.ChatCompletionUserMessageParam(
                 role="user",
                 content=prompt_message,
             ),
@@ -282,11 +278,11 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
             f"{content}"
         )
         prompts = [
-            ChatCompletionSystemMessageParam(
+            chat.ChatCompletionSystemMessageParam(
                 role="system",
                 content="act as a code generator, only reply with code, nothing else",
             ),
-            ChatCompletionUserMessageParam(
+            chat.ChatCompletionUserMessageParam(
                 role="user",
                 content=prompt_message,
             ),
@@ -304,11 +300,11 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
         f"{META_TEMPLATE}"
     )
     prompts = [
-        ChatCompletionSystemMessageParam(
+        chat.ChatCompletionSystemMessageParam(
             role="system",
             content="act as a json metadata generator, only reply with json, nothing else",
         ),
-        ChatCompletionUserMessageParam(
+        chat.ChatCompletionUserMessageParam(
             role="user",
             content=prompt_message,
         ),
