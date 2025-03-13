@@ -1,6 +1,7 @@
 tenacity
-openai==0.27.7
+openai
 dataclass_csv
 click
 bs4
 lxml
+requests
