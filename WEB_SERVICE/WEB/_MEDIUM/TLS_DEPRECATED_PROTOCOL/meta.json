@@ -6,7 +6,7 @@
     "SSL and TLS deployment best practices": "https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices"
   },
   "title": "Use of deprecated TLS/SSL protocol version",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "OWASP_ASVS_L1": [

@@ -6,7 +6,7 @@
     "Apple Developer documentation": "https://developer.apple.com/documentation/bundleresources/information_property_list/uifilesharingenabled"
   },
   "title": "iTunes UI File Sharing Enabled",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": false,
   "categories": {
     "OWASP_MASVS_L1": [

@@ -8,7 +8,7 @@
     "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
   },
   "title": "Insecure Storage of Application Data",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [

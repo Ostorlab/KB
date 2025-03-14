@@ -6,7 +6,7 @@
     "CWE-16": "https://cwe.mitre.org/data/definitions/16.html"
   },
   "title": "Subdomain Takeover",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "PCI_STANDARDS":[

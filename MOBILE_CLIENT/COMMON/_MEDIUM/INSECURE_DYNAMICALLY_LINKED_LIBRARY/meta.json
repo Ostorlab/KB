@@ -6,7 +6,7 @@
     "WIN00-C. Be specific when dynamically loading libraries":"https://wiki.sei.cmu.edu/confluence/display/c/WIN00-C.+Be+specific+when+dynamically+loading+libraries"
   },
   "title": "Insecure Dynamic Library Loading",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [

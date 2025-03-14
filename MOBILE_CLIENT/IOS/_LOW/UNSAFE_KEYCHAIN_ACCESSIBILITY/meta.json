@@ -6,7 +6,7 @@
     "Secure Mobile Biometric Authentication": "https://blog.ostorlab.co/secure-mobile-biometric-authentication.html"
   },
   "title": "Insecure Keychain Storage",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L2": [

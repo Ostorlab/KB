@@ -6,7 +6,7 @@
   },
   "title": "Insecure Filesystem Access",
   "cvss_v3_vector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [
