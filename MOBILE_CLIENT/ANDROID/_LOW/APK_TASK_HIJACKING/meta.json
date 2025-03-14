@@ -10,7 +10,7 @@
     "CVE-2020-0267: WindowManager Confused Deputy": "https://www.incibe-cert.es/en/early-warning/vulnerabilities/cve-2020-0267"
   },
   "title": "Task Hijacking",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "targeted_by_malware": true,
   "has_public_exploit": true,

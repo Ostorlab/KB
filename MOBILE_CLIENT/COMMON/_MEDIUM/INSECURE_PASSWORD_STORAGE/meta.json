@@ -9,7 +9,7 @@
     "CWE-312 Cleartext Storage of Sensitive Information": "https://cwe.mitre.org/data/definitions/312.html",
     "CWE-256 Plaintext Storage of a Password": "https://cwe.mitre.org/data/definitions/256.html"
   },
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": false,
   "categories": {
     "OWASP_MASVS_L1": [

@@ -8,7 +8,7 @@
   },
   "title": "Insecure App Transport Security (ATS) Settings",
   "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [

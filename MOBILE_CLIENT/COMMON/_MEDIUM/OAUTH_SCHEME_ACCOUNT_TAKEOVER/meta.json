@@ -9,7 +9,7 @@
     "Google Developer": "https://developers.googleblog.com/2023/10/enhancing-oauth-app-impersonation-protections.html"
   },
   "title": "OAuth Account Takeover by hijacking custom schemes",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L1": [

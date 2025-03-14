@@ -5,7 +5,7 @@
     "Improper Certificate Validation - CWE": "https://cwe.mitre.org/data/definitions/297.html"
   },
   "title": "Insecure TLS certificate validation (accept self-signed certificate)",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "PCI_STANDARDS":[

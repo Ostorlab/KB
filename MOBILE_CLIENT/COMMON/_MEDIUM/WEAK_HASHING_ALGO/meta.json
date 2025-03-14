@@ -6,7 +6,7 @@
       "Deprecation of SHA-1 (NIST)": "https://www.nist.gov/news-events/news/2022/12/nist-retires-sha-1-cryptographic-algorithm"
     },
     "title": "Cryptographic Vulnerability: Weak Hashing Algorithm",
-    "privacy_issue": true,
+    "privacy_issue": false,
     "security_issue": true,
     "categories": {
       "OWASP_MASVS_L1": [

@@ -9,7 +9,7 @@
     "MOBILE PENTESTING 101 – BYPASSING BIOMETRIC AUTHENTICATION": "https://securitycafe.ro/2022/09/05/mobile-pentesting-101-bypassing-biometric-authentication/"
   },
   "title": "Biometric Authentication Bypass",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "OWASP_MASVS_L2": [

@@ -7,7 +7,7 @@
     "Mozilla Secure TLS/SSL Configuration": "https://wiki.mozilla.org/Security/Server_Side_TLS"
   },
   "title": "Insecure TLS Ciphers supported",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "OWASP_ASVS_L2": [

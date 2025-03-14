@@ -5,7 +5,7 @@
         "OWASP Mobile Security Testing Guide (MSTG)": "https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md"
     },
     "title": "Mobile SQL Injection Vulnerability",
-    "privacy_issue": true,
+    "privacy_issue": false,
     "security_issue": true,
     "categories": {
       "OWASP_MASVS_L1":[

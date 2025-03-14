@@ -6,7 +6,7 @@
     "scip.ch": "https://www.scip.ch/en/?labs.20231005"
   },
   "title": "Web XML Injection",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "GDPR": [

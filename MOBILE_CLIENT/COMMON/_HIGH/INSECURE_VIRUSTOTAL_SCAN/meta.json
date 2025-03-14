@@ -5,7 +5,7 @@
     "Virustotal": "https://www.virustotal.com/"
   },
   "title": "VirusTotal scan flagged malicious asset(s) (MD5 based search)",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
       "categories": {
         "SOC2_CONTROLS": [

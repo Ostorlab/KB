@@ -6,7 +6,7 @@
     "HackTricks": "https://book.hacktricks.xyz/pentesting-web/crlf-0d-0a"
   },
   "title": "CRLF Injection",
-  "privacy_issue": true,
+  "privacy_issue": false,
   "security_issue": true,
   "categories": {
     "GDPR": [
