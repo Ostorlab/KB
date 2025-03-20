@@ -2,8 +2,8 @@
   "risk_rating": "medium",
   "short_description": "The application or third-party SDK does not have a privacy manifest file.",
   "references": {
-        "Privacy manifest files": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
-        "Describing use of required reason API": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api"
+    "Privacy manifest files": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
+    "Describing use of required reason API": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api"
   },
   "title": "Missing privacy manifest file",
   "privacy_issue": true,
@@ -21,7 +21,7 @@
       "ART_32",
       "ART_35"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2",
       "REQ_6_3",
@@ -29,6 +29,12 @@
     ],
     "OWASP_MASVS_v2_1": [
       "MASVS_PRIVACY_3"
+    ],
+    "CNIL_FOR_EDITORS": [
+      "EDITORS_1_1_1",
+      "EDITORS_1_4_1",
+      "EDITORS_2_2_1",
+      "EDITORS_2_2_2"
     ]
   }
 }

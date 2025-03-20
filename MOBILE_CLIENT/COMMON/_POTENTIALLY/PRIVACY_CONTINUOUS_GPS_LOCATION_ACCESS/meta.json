@@ -2,8 +2,7 @@
   "title": "Continuous collection of GPS location",
   "short_description": "The application continuously collects the device's GPS location.\n",
   "risk_rating": "potentially",
-  "references": {
-  },
+  "references": {},
   "privacy_issue": true,
   "security_issue": false,
   "categories": {
@@ -13,7 +12,7 @@
     "OWASP_MASVS_L2": [
       "MSTG_NETWORK_1"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_6_2"
     ],
     "OWASP_MASVS_v2_1": [
@@ -21,6 +20,10 @@
       "MASVS_PRIVACY_2",
       "MASVS_PRIVACY_3",
       "MASVS_PRIVACY_4"
+    ],
+    "CNIL_FOR_EDITORS": [
+      "EDITORS_1_1_1",
+      "EDITORS_1_2_3"
     ]
   }
 }
