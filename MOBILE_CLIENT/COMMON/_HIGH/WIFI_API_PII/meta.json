@@ -60,7 +60,9 @@
     "CNIL_FOR_EDITORS": [
       "EDITORS_1_1_1",
       "EDITORS_1_2_3",
-      "EDITORS_5_1_5",
+      "EDITORS_5_1_5"
+    ],
+    "CNIL_FOR_DEVELOPERS": [
       "DEVELOPERS_2_2_4"
     ]
   }
