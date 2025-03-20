@@ -1039,7 +1039,7 @@ CNIL_FOR_EDITORS = [
     "EDITORS_5_1_2",
     "EDITORS_5_1_3",
     "EDITORS_5_1_4",
-    "EDITORS_5_1_5"
+    "EDITORS_5_1_5",
 ]
 
 CNIL_FOR_DEVELOPERS = [
@@ -1081,7 +1081,7 @@ CNIL_FOR_DEVELOPERS = [
     "DEVELOPERS_4_3_1",
     "DEVELOPERS_4_3_2",
     "DEVELOPERS_4_3_3",
-    "DEVELOPERS_4_3_4"
+    "DEVELOPERS_4_3_4",
 ]
 
 CNIL_FOR_SDKS = [
@@ -1116,8 +1116,9 @@ CNIL_FOR_SDKS = [
     "SDKS_4_2_1",
     "SDKS_4_2_2",
     "SDKS_4_3_1",
-    "SDKS_4_3_2"
+    "SDKS_4_3_2",
 ]
+
 
 def testJsonFiles_allFilesAreValid_testPasses() -> None:
     path = pathlib.Path(__file__).parent.parent
