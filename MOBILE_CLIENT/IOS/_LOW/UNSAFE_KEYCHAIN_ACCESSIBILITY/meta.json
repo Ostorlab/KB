@@ -31,6 +31,10 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "CNIL_FOR_EDITORS": [
+      "EDITORS_1_3_1",
+      "EDITORS_4_1_1"
     ]
   }
 }

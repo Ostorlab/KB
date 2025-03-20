@@ -18,12 +18,15 @@
     "CWE_TOP_25": [
       "CWE_276"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_6_2",
       "REQ_7_3"
     ],
     "OWASP_MASVS_v2_1": [
       "MASVS_PRIVACY_1"
+    ],
+    "CNIL_FOR_EDITORS": [
+      "EDITORS_5_1_1"
     ]
   }
 }
