@@ -1210,6 +1210,9 @@ def testMetaFiles_always_namesOfTheTitlesShouldAllBeUnique() -> None:
         ("OWASP_ASVS_L2", OWASP_ASVS_L2),
         ("OWASP_ASVS_L3", OWASP_ASVS_L3),
         ("SOC2_CONTROLS", SOC2_CONTROLS),
+        ("CNIL_FOR_EDITORS", CNIL_FOR_EDITORS),
+        ("CNIL_FOR_DEVELOPERS", CNIL_FOR_DEVELOPERS),
+        ("CNIL_FOR_SDKS", CNIL_FOR_SDKS),
     ],
 )
 def testJsonFiles_allFilesHaveCorrectCategories_testPasses(
