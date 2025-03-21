@@ -15,7 +15,7 @@
     "OWASP_MASVS_L2": [
       "MSTG_NETWORK_1"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_3_6",
       "REQ_3_7",
@@ -34,6 +34,9 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "CNIL_FOR_DEVELOPERS": [
+      "DEVELOPERS_4_1_4"
     ]
   }
 }
