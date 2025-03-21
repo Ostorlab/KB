@@ -40,8 +40,10 @@
       "CC_7_4",
       "CC_7_5"
     ],
+    "CNIL_FOR_EDITORS": [
+      "EDITORS_4_1_1"
+    ],
     "CNIL_FOR_DEVELOPERS": [
-      "EDITORS_4_1_1",
       "DEVELOPERS_4_1_1"
     ]
   }
