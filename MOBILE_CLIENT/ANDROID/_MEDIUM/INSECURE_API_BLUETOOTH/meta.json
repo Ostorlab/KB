@@ -15,11 +15,11 @@
     "OWASP_MASVS_L2": [
       "MSTG_NETWORK_1"
     ],
-      "GDPR": [
-        "ART_5",
-        "ART_32"
-      ],
-    "PCI_STANDARDS":[
+    "GDPR": [
+      "ART_5",
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_4_2",
       "REQ_6_2"
@@ -35,6 +35,9 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "CNIL_FOR_DEVELOPERS": [
+      "DEVELOPERS_4_1_1"
     ]
   }
 }

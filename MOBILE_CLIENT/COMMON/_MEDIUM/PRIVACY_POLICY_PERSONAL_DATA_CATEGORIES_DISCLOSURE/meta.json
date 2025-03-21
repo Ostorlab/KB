@@ -1,17 +1,17 @@
 {
-    "risk_rating": "info",
-    "short_description": "Checks if privacy policy mentions categories of personal data collected",
-    "references": {
-        "Android Privacy Guidelines": "https://developer.android.com/privacy-and-security/about",
-        "Privacy Policies for Mobile Apps": "https://www.privacypolicies.com/blog/mobile-apps-privacy-policy/",
-        "Apple Privacy Manifest": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
-        "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
-    },
-    "title": "Privacy Policy Personal Data Categories Disclosure mismatch",
-    "privacy_issue": true,
-    "security_issue": false,
-    "categories": {
-         "OWASP_MASVS_L1": [],
+  "risk_rating": "info",
+  "short_description": "Checks if privacy policy mentions categories of personal data collected",
+  "references": {
+    "Android Privacy Guidelines": "https://developer.android.com/privacy-and-security/about",
+    "Privacy Policies for Mobile Apps": "https://www.privacypolicies.com/blog/mobile-apps-privacy-policy/",
+    "Apple Privacy Manifest": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
+    "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Privacy Policy Personal Data Categories Disclosure mismatch",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {
+    "OWASP_MASVS_L1": [],
     "OWASP_MASVS_L2": [],
     "OWASP_MASVS_RESILIENCE": [],
     "CWE_TOP_25": [],
@@ -52,6 +52,9 @@
     "SOC2_CONTROLS": [
       "CC_2_3",
       "CC_5_3"
+    ],
+    "CNIL_FOR_EDITORS": [
+      "EDITORS_3_1_1"
     ]
-    }
+  }
 }
