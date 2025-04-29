@@ -1,0 +1,22 @@
+{
+  "risk_rating": "high",
+  "short_description":"The application uses biometric authentication without cryptographically binding it to sensitive data or operations, allowing attackers to bypass the security mechanism by directly accessing the data storage.",
+  "references":{
+    "OWASP Mobile Top 10":"https://owasp.org/www-project-mobile-top-10/",
+    "Android Keystore System":"https://developer.android.com/training/articles/keystore",
+    "iOS Secure Enclave":"https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web"
+  },
+  "title":"Biometric Authentication Without Cryptographic Binding",
+  "privacy_issue":true,
+  "security_issue":true,
+  "categories":{
+      "OWASP_MASVS_L1":[
+        "MSTG_STORAGE_1",
+        "MSTG_CRYPTO_1"
+    ],
+    "OWASP_MASVS_L2":[
+        "MSTG_AUTH_8",
+        "MSTG_AUTH_10"
+    ]
+  }
+}
