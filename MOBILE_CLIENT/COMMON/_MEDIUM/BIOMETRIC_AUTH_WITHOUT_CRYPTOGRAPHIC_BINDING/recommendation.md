@@ -1,8 +1,8 @@
 To securely implement biometric authentication, cryptographically bind the biometric verification to the sensitive data or authentication process. Use the device's secure hardware (such as Keystore/Keychain) to generate and store cryptographic keys that can only be accessed after successful biometric authentication. This ensures that even if an attacker bypasses the UI layer or gains access to stored preferences, they cannot access the protected data without passing the biometric check, as the decryption keys remain hardware-protected and biometric-gated.
 
-# Code Examples:
+### Code Examples:
 
-### Dart
+#### Dart
 
 ```dart
 import 'package:flutter/material.dart';
