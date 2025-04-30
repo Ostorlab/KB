@@ -2,8 +2,7 @@
   "risk_rating": "high",
   "short_description": "XPath Injection allows an attacker to modify the intended query of an application, leading to unauthorized access to sensitive data or functionality.",
   "references": {
-    "OWASP": "https://owasp.org/www-community/attacks/XPATH_Injection",
-    "NIST": "https://nvd.nist.gov/vuln/detail/CVE-2016-6272"
+    "OWASP": "https://owasp.org/www-community/attacks/XPATH_Injection"
   },
   "title": "XPath Injection Vulnerability",
   "privacy_issue": false,

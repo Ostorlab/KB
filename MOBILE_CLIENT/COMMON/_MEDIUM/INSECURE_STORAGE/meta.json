@@ -3,7 +3,6 @@
   "short_description": "Insecure storage of application data allowing other apps to read it and/or tamper with it.",
   "references": {
     "OWASP Mobile Top 10": "https://owasp.org/www-project-mobile-top-10/2023-risks/m9-insecure-data-storage",
-    "Practices for Protecting Electronic Restricted Data: A Quick Reference": "https://its.ucsc.edu/policies/rdpp.html",
     "CWE-200: Information Exposure": "https://cwe.mitre.org/data/definitions/200.html",
     "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
   },
