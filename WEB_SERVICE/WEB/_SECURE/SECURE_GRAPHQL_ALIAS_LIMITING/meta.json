@@ -9,10 +9,5 @@
   "privacy_issue": false,
   "security_issue": false,
   "categories": {
-    "CWE_TOP_25": [],
-    "PCI_STANDARDS": [],
-    "OWASP_MASVS_L2": [],
-    "OWASP_ASVS_L3": [],
-    "SOC2_CONTROLS": []
   }
 }
