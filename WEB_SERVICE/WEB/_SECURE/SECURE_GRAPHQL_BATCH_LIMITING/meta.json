@@ -1,0 +1,11 @@
+{
+  "risk_rating": "secure",
+  "title": "Protected Against GraphQL Batch Query Attacks",
+  "short_description": "The GraphQL API enforces batch query limits, preventing Denial of Service (DoS) via array-based query batching.",
+  "references": {
+    "Inigo": "https://inigo.io/blog/defeating_controls_with_array-based_query_batching"
+  },
+  "privacy_issue": false,
+  "security_issue": false,
+  "categories": {}
+}
