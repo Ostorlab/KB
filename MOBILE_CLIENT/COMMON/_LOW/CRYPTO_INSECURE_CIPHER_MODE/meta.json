@@ -4,7 +4,6 @@
   "references": {
     "Cryptographic Vulnerability (OWASP)": "https://www.owasp.org/index.php/Category:Cryptographic_Vulnerability",
     "CWE-327: Use of a Broken or Risky Cryptographic Algorithm": "https://cwe.mitre.org/data/definitions/327.html",
-    "5 Common Encryption Algorithms and the Unbreakables of the Future": "https://www.storagecraft.com/blog/5-common-encryption-algorithms/",
     "AES Default mode discussion": "https://security.stackexchange.com/questions/54848/what-is-default-mode-for-aes-encryption"
   },
   "title": "Cryptographic Vulnerability: Insecure mode",
