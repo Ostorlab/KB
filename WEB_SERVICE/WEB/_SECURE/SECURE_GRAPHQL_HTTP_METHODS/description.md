@@ -1,0 +1,1 @@
+The GraphQL API is protected against HTTP method manipulation by enforcing POST-only mutations and rejecting GET-based operations, eliminating risks of sensitive data exposure in URLs.
