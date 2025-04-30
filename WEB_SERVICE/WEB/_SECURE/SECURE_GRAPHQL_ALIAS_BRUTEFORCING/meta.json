@@ -1,7 +1,7 @@
 {
   "risk_rating": "secure",
   "title": "Protected Against GraphQL Alias Brute Forcing",
-  "short_description": "The GraphQL API enforces alias limits, login attempt rate limiting, and CAPTCHA challenges, preventing credential brute-forcing via aliases.",
+  "short_description": "The GraphQL API enforces alias limits, and login attempt rate limiting, preventing credential brute-forcing via aliases.",
   "references": {
     "Inigo": "https://inigo.io/blog/defeating_controls_with_alias-based_query_batching",
     "OWASP Authentication Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
