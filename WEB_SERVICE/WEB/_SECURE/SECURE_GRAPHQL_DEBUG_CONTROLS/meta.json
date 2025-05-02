@@ -8,6 +8,6 @@
     "Django Security Settings": "https://docs.djangoproject.com/en/stable/topics/security/"
   },
   "privacy_issue": false,
-  "security_issue": false,
+  "security_issue": true,
   "categories": {}
 }

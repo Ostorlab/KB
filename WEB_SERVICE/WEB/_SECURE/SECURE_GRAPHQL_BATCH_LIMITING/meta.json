@@ -6,6 +6,6 @@
     "Inigo": "https://inigo.io/blog/defeating_controls_with_array-based_query_batching"
   },
   "privacy_issue": false,
-  "security_issue": false,
+  "security_issue": true,
   "categories": {}
 }
