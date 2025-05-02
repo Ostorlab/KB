@@ -7,6 +7,6 @@
     "Apollo Tracing Best Practices": "https://www.apollographql.com/docs/apollo-server/monitoring/metrics/"
   },
   "privacy_issue": false,
-  "security_issue": false,
+  "security_issue": true,
   "categories": {}
 }

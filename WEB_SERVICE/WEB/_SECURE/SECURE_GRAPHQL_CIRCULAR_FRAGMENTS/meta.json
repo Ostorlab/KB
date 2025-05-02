@@ -7,6 +7,6 @@
     "Managing Circular Imports in GraphQL Modules": "https://the-guild.dev/blog/manage-circular-imports-hell-in-graphql-modules"
   },
   "privacy_issue": false,
-  "security_issue": false,
+  "security_issue": true,
   "categories": {}
 }

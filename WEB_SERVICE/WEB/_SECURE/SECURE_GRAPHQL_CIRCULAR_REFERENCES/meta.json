@@ -6,6 +6,6 @@
     "imperva": "https://www.imperva.com/blog/graphql-vulnerabilities-common-attacks/#circular-queries"
   },
   "privacy_issue": false,
-  "security_issue": false,
+  "security_issue": true,
   "categories": {}
 }

@@ -7,6 +7,6 @@
     "OWASP Authentication Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
   },
   "privacy_issue": false,
-  "security_issue": false,
+  "security_issue": true,
   "categories": {}
 }
