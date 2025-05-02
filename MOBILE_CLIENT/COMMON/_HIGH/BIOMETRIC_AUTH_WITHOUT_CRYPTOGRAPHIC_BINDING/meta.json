@@ -7,7 +7,7 @@
     "iOS Secure Enclave":"https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web"
   },
   "title":"Biometric Authentication Without Cryptographic Binding",
-  "privacy_issue":true,
+  "privacy_issue":false,
   "security_issue":true,
   "categories":{
       "OWASP_MASVS_L1":[
