@@ -4,7 +4,7 @@
   "references": {
       "GDPR Article 4 - Definitions (Online Identifiers)": "https://gdpr-info.eu/art-4-gdpr/",
       "Apple Developer - User Privacy and Data Use": "https://developer.apple.com/app-store/user-privacy-and-data-use/",
-      "Android Developer - Privacy Best Practices": "https://developer.android.com/topic/security/privacy",
+      "Android Developer - Privacy": "https://developer.android.com/privacy",
       "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
   },
   "title": "Device and Network Information Collection Disclosed in Privacy Policy",
