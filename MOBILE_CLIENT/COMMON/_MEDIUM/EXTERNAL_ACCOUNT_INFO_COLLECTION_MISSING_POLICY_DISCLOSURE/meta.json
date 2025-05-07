@@ -26,8 +26,7 @@
       ],
       "OWASP_MASVS_v2_1": [
       "MASVS_PRIVACY_1",
-      "MASVS_PRIVACY_2",
-      "MASVS_PRIVACY_5"
+      "MASVS_PRIVACY_2"
       ],
       "SOC2_CONTROLS": [
       "CC_2_3",
