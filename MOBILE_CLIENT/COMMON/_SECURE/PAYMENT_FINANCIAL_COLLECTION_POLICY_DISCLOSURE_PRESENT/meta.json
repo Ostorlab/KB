@@ -1,0 +1,13 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Privacy policy mentions the collection of payment or financial information.",
+  "references": {
+      "PCI Security Standards Council": "https://www.pcisecuritystandards.org/",
+      "GDPR Article 32 - Security of Processing": "https://gdpr-info.eu/art-32-gdpr/",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Payment and Financial Information Collection Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {}
+}

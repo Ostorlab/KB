@@ -1,0 +1,14 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Privacy policy mentions the collection and storage of location history.",
+  "references": {
+      "GDPR - Recital 49 (Location Data)": "https://gdpr-info.eu/recitals/no-49/",
+      "Apple Developer - User Privacy and Data Use": "https://developer.apple.com/app-store/user-privacy-and-data-use/",
+      "Android Developer - Location and SENSORS": "https://developer.android.com/training/location",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Location History Collection Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {}
+}

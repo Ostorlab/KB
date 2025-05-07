@@ -1,0 +1,13 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Privacy policy mentions the collection of in-app search queries.",
+  "references": {
+      "GDPR - Personal Data Definition": "https://gdpr-info.eu/art-4-gdpr/",
+      "CCPA - Definition of Personal Information": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV§ionNum=1798.140",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "In-App Search Queries Collection Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {}
+}

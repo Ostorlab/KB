@@ -1,0 +1,1 @@
+The application collects information about users' religious beliefs, but the privacy policy does not disclose this. Religious beliefs are considered a special category of personal data under regulations like GDPR. Failure to inform users about this collection is a significant issue and likely violates legal requirements for explicit consent and stringent data protection measures.

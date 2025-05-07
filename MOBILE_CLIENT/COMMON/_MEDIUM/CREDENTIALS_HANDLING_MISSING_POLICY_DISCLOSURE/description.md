@@ -1,0 +1,1 @@
+The application processes user credentials, but the privacy policy does not clearly describe how this sensitive information is protected and managed. Proper handling of credentials is vital for account security, and lack of clarity in the policy can obscure important security practices.

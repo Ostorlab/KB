@@ -1,0 +1,1 @@
+Update your application's privacy policy to explicitly state that in-app search queries are collected. Clearly describe the purposes for this collection, how the data is used (e.g., to improve search results, for analytics), how it is stored, its retention period, and any de-identification or aggregation practices applied.
