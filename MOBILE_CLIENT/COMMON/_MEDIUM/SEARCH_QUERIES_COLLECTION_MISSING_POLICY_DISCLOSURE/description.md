@@ -1,0 +1,1 @@
+The application collects users' in-app search queries, but the privacy policy does not clearly disclose this. Search queries can reveal user interests, intentions, and potentially sensitive information. Failure to inform users about the collection and use of their search history can be misleading and may violate privacy regulations.

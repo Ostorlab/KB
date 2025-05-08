@@ -1,0 +1,42 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Privacy policy does not clearly mention the collection of device or network information (e.g., IP address, device identifiers, OS version), while the app processes such data.",
+  "references": {
+      "GDPR Article 4 - Definitions (Online Identifiers)": "https://gdpr-info.eu/art-4-gdpr/",
+      "Apple Developer - User Privacy and Data Use": "https://developer.apple.com/app-store/user-privacy-and-data-use/",
+      "Android Developer - Privacy": "https://developer.android.com/privacy",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Device and Network Information Collection Not Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {
+      "GDPR": [
+      "ART_5",
+      "ART_6",
+      "ART_7",
+      "ART_12",
+      "ART_13",
+      "ART_25",
+      "ART_32"
+      ],
+      "CCPA": [
+      "CCPA_1798_100",
+      "CCPA_1798_110",
+      "CCPA_1798_150"
+      ],
+      "OWASP_MASVS_v2_1": [
+      "MASVS_PRIVACY_1",
+      "MASVS_PRIVACY_2"
+      ],
+      "SOC2_CONTROLS": [
+      "CC_2_3",
+      "CC_5_3",
+      "CC_6_1"
+      ],
+      "CNIL_FOR_EDITORS": [
+      "EDITORS_3_1_1",
+      "EDITORS_3_1_2"
+      ]
+  }
+}

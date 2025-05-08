@@ -1,0 +1,1 @@
+The application's privacy policy adequately mentions the collection of email addresses.

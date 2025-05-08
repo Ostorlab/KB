@@ -1,0 +1,13 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Privacy policy mentions the collection of identity verification information.",
+  "references": {
+      "GDPR Article 32 - Security of Processing": "https://gdpr-info.eu/art-32-gdpr/",
+      "NIST Special Publication 800-63A - Digital Identity Guidelines: Enrollment and Identity Proofing": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63a.pdf",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Identity Verification Information Collection Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {}
+}

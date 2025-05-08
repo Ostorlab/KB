@@ -1,0 +1,1 @@
+Update your application's privacy policy to explicitly state that location history is collected and stored. Clearly describe the purposes for this collection, how the data is used, how long it is retained, and the security measures in place to protect it. Ensure users are provided with transparent information and appropriate controls regarding their location history.

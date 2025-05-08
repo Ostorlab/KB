@@ -1,0 +1,46 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Privacy policy does not mention the collection of payment or financial information, while this data is collected by the app.",
+  "references": {
+      "PCI Security Standards Council": "https://www.pcisecuritystandards.org/",
+      "GDPR Article 32 - Security of Processing": "https://gdpr-info.eu/art-32-gdpr/",
+      "GDPR Article 35 - Data Protection Impact Assessment": "https://gdpr-info.eu/art-35-gdpr/",
+      "CWE-311: Missing Encryption of Sensitive Data": "https://cwe.mitre.org/data/definitions/311.html",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Payment and Financial Information Collection Not Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {
+      "GDPR": [
+      "ART_5",
+      "ART_6",
+      "ART_7",
+      "ART_12",
+      "ART_13",
+      "ART_25",
+      "ART_32",
+      "ART_35"
+      ],
+      "CCPA": [
+      "CCPA_1798_100",
+      "CCPA_1798_110",
+      "CCPA_1798_150"
+      ],
+      "OWASP_MASVS_v2_1": [
+      "MASVS_PRIVACY_1",
+      "MASVS_PRIVACY_2"
+      ],
+      "SOC2_CONTROLS": [
+      "CC_2_3",
+      "CC_5_3",
+      "CC_6_1",
+      "CC_6_7"
+      ],
+      "CNIL_FOR_EDITORS": [
+      "EDITORS_3_1_1",
+      "EDITORS_3_1_2",
+      "EDITORS_4_1_1"
+      ]
+  }
+}

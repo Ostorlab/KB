@@ -1,0 +1,14 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Privacy policy mentions the collection or access of user photos and other media files.",
+  "references": {
+      "GDPR - Personal Data Definition (includes images)": "https://gdpr-info.eu/art-4-gdpr/",
+      "Apple Developer - Accessing Protected Resources (Photo Library)": "https://developer.apple.com/documentation/photokit",
+      "Android Developer - Storage Access Framework": "https://developer.android.com/guide/topics/providers/document-provider",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "User Photos and Media Collection Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {}
+}

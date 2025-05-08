@@ -1,0 +1,12 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Privacy policy mentions the collection of criminal record information.",
+  "references": {
+      "GDPR Article 10 - Processing of personal data relating to criminal convictions and offences": "https://gdpr-info.eu/art-10-gdpr/",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Criminal Record Information Collection Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {}
+}

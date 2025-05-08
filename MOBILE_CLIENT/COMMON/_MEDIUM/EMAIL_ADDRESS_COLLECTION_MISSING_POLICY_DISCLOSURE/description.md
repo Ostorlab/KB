@@ -1,0 +1,1 @@
+The application collects email addresses, but the privacy policy fails to mention this data collection. This lack of disclosure can mislead users about how their personal information is handled and may violate transparency requirements under various privacy regulations like GDPR and CCPA.

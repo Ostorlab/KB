@@ -1,0 +1,13 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Privacy policy mentions the collection of biometric data.",
+  "references": {
+      "GDPR Article 9 - Processing of Special Categories of Personal Data": "https://gdpr-info.eu/art-9-gdpr/",
+      "ISO/IEC 24745 - Biometric Information Protection": "https://www.iso.org/standard/74048.html",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Biometric Data Collection Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {}
+}

@@ -1,0 +1,1 @@
+Update your application's privacy policy to explicitly state that email addresses are collected. Clearly describe the purposes for which email addresses are collected, how they are used, processed, stored, and for how long they are retained. Ensure users are provided with transparent information and that the collection complies with applicable data protection laws.

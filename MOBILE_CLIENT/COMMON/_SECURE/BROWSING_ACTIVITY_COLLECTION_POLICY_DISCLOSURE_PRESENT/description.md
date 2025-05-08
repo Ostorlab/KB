@@ -1,0 +1,1 @@
+The application's privacy policy states that it collects user browsing activity.

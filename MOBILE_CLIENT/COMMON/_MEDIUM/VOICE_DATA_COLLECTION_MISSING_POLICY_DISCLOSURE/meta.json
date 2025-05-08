@@ -1,0 +1,46 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Privacy policy does not mention the collection of voice data or recordings, while this data is collected by the app.",
+  "references": {
+      "GDPR Article 9 - Processing of Special Categories of Personal Data (if used for biometric identification)": "https://gdpr-info.eu/art-9-gdpr/",
+      "GDPR Article 4 - Definitions (Personal Data - can include voice)": "https://gdpr-info.eu/art-4-gdpr/",
+      "Apple Developer - Speech Recognition": "https://developer.apple.com/documentation/speech",
+      "Android Developer - Speech To Text": "https://developer.android.com/reference/android/speech/SpeechRecognizer",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Voice Data Collection Not Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {
+      "GDPR": [
+      "ART_5",
+      "ART_6",
+      "ART_7",
+      "ART_9",
+      "ART_12",
+      "ART_13",
+      "ART_25",
+      "ART_32",
+      "ART_35"
+      ],
+      "CCPA": [
+      "CCPA_1798_100",
+      "CCPA_1798_110",
+      "CCPA_1798_150"
+      ],
+      "OWASP_MASVS_v2_1": [
+      "MASVS_PRIVACY_1",
+      "MASVS_PRIVACY_2"
+      ],
+      "SOC2_CONTROLS": [
+      "CC_2_3",
+      "CC_5_3",
+      "CC_6_1"
+      ],
+      "CNIL_FOR_EDITORS": [
+      "EDITORS_1_2_5",
+      "EDITORS_3_1_1",
+      "EDITORS_3_1_2"
+      ]
+  }
+}

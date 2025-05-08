@@ -1,0 +1,13 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Privacy policy describes the handling of user credentials.",
+  "references": {
+      "OWASP Application Security Verification Standard (ASVS) - V2 Authentication": "https://owasp.org/www-project-application-security-verification-standard/",
+      "NIST Special Publication 800-63B - Digital Identity Guidelines": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf",
+      "GDPR Article 32 - Security of Processing": "https://gdpr-info.eu/art-32-gdpr/"
+  },
+  "title": "User Credentials Handling Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {}
+}

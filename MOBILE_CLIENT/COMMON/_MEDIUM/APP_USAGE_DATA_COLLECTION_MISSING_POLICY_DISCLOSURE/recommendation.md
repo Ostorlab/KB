@@ -1,0 +1,1 @@
+Update your application's privacy policy to explicitly state that app usage data is collected. Clearly describe the types of usage data collected, the purposes for its collection, how the data is used, stored, its retention period, and whether it is anonymized or aggregated.

@@ -1,0 +1,14 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Privacy policy mentions the collection of app usage data.",
+  "references": {
+      "GDPR - Personal Data Definition": "https://gdpr-info.eu/art-4-gdpr/",
+      "Apple Developer - User Privacy and Data Use (Diagnostics)": "https://developer.apple.com/app-store/user-privacy-and-data-use/",
+      "Android Developer - App Usage Data": "https://developer.android.com/reference/android/app/usage/UsageStatsManager",
+      "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "App Usage Data Collection Disclosed in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {}
+}
