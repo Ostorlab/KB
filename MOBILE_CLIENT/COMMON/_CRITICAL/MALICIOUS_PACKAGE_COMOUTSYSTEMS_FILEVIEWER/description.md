@@ -1,7 +1,18 @@
-The package `com.outsystems.plugins.fileviewer` version `1.0.6` has been identified as malicious. This specific version, tracked under the identifier `MAL-2022-2047`, poses a severe security risk.
+Malicious packages are software components intentionally designed or compromised to perform harmful actions on a system where they are installed or executed. Unlike legitimate software with unintentional vulnerabilities, these packages harbor malicious intent.
 
-The presence of this package in an application, particularly in environments like Cordova where it might be included via `cordova_plugins.js`, implies that the build environment, developer workstation, or the resulting application itself could be compromised.
+**Key Characteristics of Malicious Packages:**
 
-According to the advisory associated with `MAL-2022-2047` (source: `ghsa-malware`), any computer that has this package installed or running should be considered fully compromised. This suggests the package likely contains malware designed for remote access, data exfiltration, or other malicious activities.
+*   **Intent:** Designed to steal data, gain unauthorized access, disrupt operations, or cause other harm.
+*   **Deception:** Often masquerade as useful utilities, popular libraries (sometimes through typosquatting – using names very similar to legitimate packages), or appear as benign, unmaintained packages that an attacker takes over.
+*   **Distribution:** Commonly distributed through public software repositories (e.g., npm, PyPI, Maven Central, RubyGems, NuGet), relying on developers to unwittingly include them in their projects. They can also be injected into legitimate packages if an attacker gains control of the package owner's account or the build infrastructure.
+*   **Payloads:** Can include various types of malware such as spyware, ransomware, credential stealers, crypto miners, backdoors, or code that facilitates further attacks.
 
-The attack vector is the inclusion of a compromised third-party dependency into the software supply chain.
+**Common Objectives:**
+
+*   **Data Exfiltration:** Stealing sensitive information like user credentials, API keys, financial data, personal identifiable information (PII), or intellectual property.
+*   **System Compromise:** Gaining unauthorized control over developer machines, build servers, or end-user devices.
+*   **Resource Abuse:** Using compromised systems for activities like cryptocurrency mining or participating in DDoS botnets.
+*   **Lateral Movement:** Using an initial foothold to move deeper into an organization's network.
+*   **Financial Theft:** Directly stealing funds or facilitating financial fraud.
+
+Identifying and mitigating the threat from malicious packages is a critical aspect of modern software supply chain security.
