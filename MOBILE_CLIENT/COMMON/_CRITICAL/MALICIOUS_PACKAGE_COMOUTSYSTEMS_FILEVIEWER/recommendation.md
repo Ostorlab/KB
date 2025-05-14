@@ -22,7 +22,7 @@
         *   Version control system credentials
 
 4.  **System Investigation and Sanitization:**
-    *   Because full control may have been achieved by an attacker, simply removing the package is often insufficient.
+    *   Because an attacker may have achieved full control, simply removing the package is often insufficient.
     *   Conduct a thorough forensic investigation on affected systems to identify the extent of the compromise, any persistence mechanisms, and other malicious tools that may have been installed.
     *   Consider re-imaging affected developer workstations and build servers from a known good state.
 
