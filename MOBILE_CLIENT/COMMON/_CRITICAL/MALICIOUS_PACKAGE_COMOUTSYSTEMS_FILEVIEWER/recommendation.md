@@ -5,7 +5,7 @@
     *   If deployed in an application, assess the scope of affected end-user devices if possible.
 
 2.  **Remove the Malicious Package:**
-    *   Identify all projects and applications that include `com.outsystems.plugins.fileviewer:1.0.6`.
+    *   Identify all projects and applications that include `com.outsystems.plugins.fileviewer`.
     *   For Cordova projects, check `package.json`, `config.xml`, and inspect `assets/www/cordova_plugins.js` and related platform build files (e.g., in `platforms/android` or `platforms/ios`).
     *   Remove the dependency from your project's configuration (`package.json`, `config.xml`, etc.).
     *   Rebuild your application from a known clean environment after ensuring the package is no longer present.
