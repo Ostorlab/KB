@@ -3,7 +3,7 @@
   "short_description": "The package com.outsystems.plugins.fileviewer v1.0.6 (MAL-2022-2047) is malicious and can lead to full system compromise.",
   "references": {
     "MAL-2022-2047 Malicious code in com.outsystems.plugins.fileviewer (npm)": "https://vulners.com/osv/OSV:MAL-2022-2047",
-    "Understanding Software Supply Chain Security": "https://www.cisa.gov/sites/default/files/publications/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_DEVELOPERS.PDF"
+    "Exploring the Threat of Malicious\nPackages in the npm Ecosystem": "https://www.blackduck.com/content/dam/black-duck/en-us/ebooks/eb-exploring-malicious-packages.pdf"
   },
   "title": "Malicious Package: com.outsystems.plugins.fileviewer v1.0.6",
   "privacy_issue": true,
