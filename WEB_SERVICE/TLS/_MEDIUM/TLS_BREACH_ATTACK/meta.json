@@ -1,0 +1,28 @@
+{
+  "risk_rating": "medium",
+  "short_description": "HTTP compression vulnerability allowing extraction of sensitive data from encrypted responses through compression oracle attacks.",
+  "references": {
+    "BREACH Attack Official Site": "https://breachattack.com/",
+    "CVE-2013-3587": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3587"
+  },
+  "title": "BREACH Attack on HTTP Compression",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_5",
+      "REQ_11_3"
+    ]
+  }
+}
