@@ -2,8 +2,9 @@
   "risk_rating": "medium",
   "short_description": "HTTP compression vulnerability allowing extraction of sensitive data from encrypted responses through compression oracle attacks.",
   "references": {
-    "BREACH Attack Paper": "https://breachattack.com/resources/BREACH%20-%20SSL,%20gone%20in%2030%20seconds.pdf",
-    "CVE-2013-3587": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3587"
+    "BREACH Attack Official Site": "https://breachattack.com/",
+    "CVE-2013-3587": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3587",
+    "OWASP Transport Layer Protection": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html"
   },
   "title": "BREACH Attack on HTTP Compression",
   "privacy_issue": true,
@@ -23,10 +24,6 @@
       "REQ_4_1",
       "REQ_6_5",
       "REQ_11_3"
-    ],
-    "CWE_TOP_25": [
-      "CWE_200",
-      "CWE_310"
     ]
   }
 }
