@@ -4,7 +4,6 @@
   "risk_rating": "medium",
   "references": {
     "ALPACA Research Paper": "https://alpaca-attack.com/ALPACA.pdf",
-    "Cross-Protocol MITM Attack": "https://var.thejh.net/http_ftp_cross_protocol_mitm_attacks.pdf",
     "ALPACA Code": "https://github.com/RUB-NDS/alpaca-code"
   },
   "privacy_issue": false,
