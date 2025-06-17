@@ -1,0 +1,29 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Predictable initialization vector vulnerability in TLS 1.0/SSL 3.0 CBC mode allowing plaintext recovery through blockwise chosen boundary attacks.",
+  "references": {
+    "CVE-2011-3389": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3389",
+    "BEAST Attack Research": "https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art027",
+    "Microsoft Security Bulletin": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2012/ms12-006"
+  },
+  "title": "BEAST Attack on TLS 1.0/SSL 3.0",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2",
+      "REQ_11_3"
+    ]
+  }
+}
