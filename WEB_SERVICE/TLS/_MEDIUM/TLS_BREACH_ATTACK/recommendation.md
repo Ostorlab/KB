@@ -14,3 +14,16 @@ To mitigate BREACH attacks, implement the following strategies:
 # Disable compression for sensitive endpoints
 location /api/csrf { gzip off; }
 location /user/ { gzip off; }
+```
+
+```python
+# Disable compression in application
+response.headers['Content-Encoding'] = 'identity'
+```
+
+**Additional Defenses:**
+
+* Add random padding to responses containing secrets
+* Implement rate limiting (10 requests per minute for user input endpoints)
+* Monitor for suspicious request patterns indicating potential attacks
+* Use double-submit cookie CSRF protection methods
