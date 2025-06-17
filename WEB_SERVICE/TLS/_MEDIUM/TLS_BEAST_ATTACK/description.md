@@ -11,8 +11,8 @@ BEAST (Browser Exploit Against SSL/TLS) occurs when TLS 1.0 or SSL 3.0 implement
 ### Requirements:
 - TLS 1.0 or SSL 3.0 with CBC cipher suites
 - Man-in-the-middle network access
-- JavaScript execution capability in victim's browser
-- Same-origin requests to target application
+- JavaScript execution capability in the victim's browser
+- Same-origin requests to the target application
 
 **Example Scenario:**
 A web application uses TLS 1.0 with AES-CBC encryption. An attacker on the same network injects JavaScript that makes thousands of crafted HTTPS requests, exploiting predictable IVs to guess session cookie values one byte at a time. The extracted session cookie allows complete account impersonation.
