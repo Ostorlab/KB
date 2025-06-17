@@ -3,8 +3,7 @@
   "short_description": "HTTP compression vulnerability allowing extraction of sensitive data from encrypted responses through compression oracle attacks.",
   "references": {
     "BREACH Attack Official Site": "https://breachattack.com/",
-    "CVE-2013-3587": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3587",
-    "OWASP Transport Layer Protection": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html"
+    "CVE-2013-3587": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3587"
   },
   "title": "BREACH Attack on HTTP Compression",
   "privacy_issue": true,
