@@ -1,0 +1,28 @@
+{
+  "risk_rating": "high",
+  "short_description": "OpenSSL ChangeCipherSpec injection vulnerability allowing man-in-the-middle attacks through forced use of weak encryption keys.",
+  "references": {
+    "CVE-2014-0224": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224",
+    "Technical Analysis": "https://www.imperialviolet.org/2014/06/05/earlyccs.html"
+  },
+  "title": "CCS Injection Attack on OpenSSL",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2",
+      "REQ_11_3"
+    ]
+  }
+}
