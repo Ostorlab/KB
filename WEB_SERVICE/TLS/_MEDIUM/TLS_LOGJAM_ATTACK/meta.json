@@ -1,0 +1,29 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Downgrade attack exploiting weak Diffie-Hellman parameters to break TLS connections through export-grade cryptography.",
+  "references": {
+    "CVE-2015-4000": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000",
+    "Weak DH Research": "https://weakdh.org/",
+    "Technical Paper": "https://weakdh.org/imperfect-forward-secrecy-ccs15.pdf"
+  },
+  "title": "LOGJAM Attack on Diffie-Hellman",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2",
+      "REQ_11_3"
+    ]
+  }
+}
