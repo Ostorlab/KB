@@ -1,0 +1,29 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Cross-protocol attack exploiting SSLv2 support to decrypt modern TLS connections through Bleichenbacher padding oracle attacks.",
+  "references": {
+    "CVE-2016-0800": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0800",
+    "DROWN Attack Site": "https://drownattack.com/",
+    "Technical Paper": "https://drownattack.com/drown-attack-paper.pdf"
+  },
+  "title": "DROWN Attack on SSLv2/TLS",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2",
+      "REQ_11_3"
+    ]
+  }
+}
