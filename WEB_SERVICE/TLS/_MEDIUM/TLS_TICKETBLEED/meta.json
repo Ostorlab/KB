@@ -1,0 +1,29 @@
+{
+  "risk_rating": "medium",
+  "short_description": "F5 BIG-IP session ticket vulnerability allowing extraction of uninitialized memory through improper session ID padding.",
+  "references": {
+    "CVE-2016-9244": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9244",
+    "Ticketbleed Official Site": "https://filippo.io/Ticketbleed/",
+    "F5 Security Advisory": "https://support.f5.com/csp/article/K05121675"
+  },
+  "title": "Ticketbleed Memory Disclosure in F5 BIG-IP",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2",
+      "REQ_11_3"
+    ]
+  }
+}
