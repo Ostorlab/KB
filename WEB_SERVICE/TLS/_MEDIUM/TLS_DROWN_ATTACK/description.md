@@ -1,6 +1,6 @@
 This vulnerability indicates that the server is susceptible to DROWN attacks, which exploit SSLv2 support to decrypt modern TLS connections through cross-protocol Bleichenbacher padding oracle attacks.
 
-DROWN (Decrypting RSA with Obsolete and Weakened eNcryption) occurs when servers support the obsolete SSLv2 protocol alongside modern TLS. Even if clients never use SSLv2, attackers can exploit SSLv2's weak RSA padding implementation to decrypt captured TLS sessions that share the same private key.
+DROWN (Decrypting RSA with Obsolete and Weakened encryption) occurs when servers support the obsolete SSLv2 protocol alongside modern TLS. Even if clients never use SSLv2, attackers can exploit SSLv2's weak RSA padding implementation to decrypt captured TLS sessions that share the same private key.
 
 ### How It Works:
 1. Attacker captures hundreds of TLS connections between client and server
