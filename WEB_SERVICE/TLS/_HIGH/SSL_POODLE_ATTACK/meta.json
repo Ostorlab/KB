@@ -1,0 +1,29 @@
+{
+  "risk_rating": "high",
+  "short_description": "SSL 3.0 padding oracle vulnerability allowing plaintext recovery through protocol downgrade and padding manipulation attacks.",
+  "references": {
+    "CVE-2014-3566": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566",
+    "POODLE Research Paper": "https://www.openssl.org/~bodo/ssl-poodle.pdf",
+    "US-CERT Advisory": "https://www.cisa.gov/news-events/alerts/2014/10/17/ssl-30-protocol-vulnerability-and-poodle-attack"
+  },
+  "title": "POODLE Attack on SSL 3.0",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2",
+      "REQ_11_3"
+    ]
+  }
+}

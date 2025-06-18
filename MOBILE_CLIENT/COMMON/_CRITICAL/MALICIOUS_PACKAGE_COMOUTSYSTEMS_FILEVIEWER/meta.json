@@ -2,7 +2,6 @@
   "risk_rating": "critical",
   "short_description": "The package com.outsystems.plugins.fileviewer (MAL-2022-2047) is malicious and can lead to full system compromise.",
   "references": {
-    "MAL-2022-2047 Malicious code in com.outsystems.plugins.fileviewer (npm)": "https://vulners.com/osv/OSV:MAL-2022-2047",
     "Exploring the Threat of Malicious\nPackages in the npm Ecosystem": "https://www.blackduck.com/content/dam/black-duck/en-us/ebooks/eb-exploring-malicious-packages.pdf"
   },
   "title": "Malicious Package: com.outsystems.plugins.fileviewer",
