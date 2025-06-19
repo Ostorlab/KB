@@ -1,0 +1,29 @@
+{
+  "risk_rating": "medium",
+  "short_description": "TLS compression vulnerability allowing extraction of sensitive cookies through compression ratio analysis and timing attacks.",
+  "references": {
+    "CVE-2012-4929": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4929",
+    "CRIME Attack Details": "https://github.com/mpgn/CRIME-poc",
+    "SSL Labs Analysis": "https://blog.qualys.com/product-tech/2012/09/14/crime-information-leakage-attack-against-ssltls"
+  },
+  "title": "CRIME Attack on TLS Compression",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2",
+      "REQ_11_3"
+    ]
+  }
+}
