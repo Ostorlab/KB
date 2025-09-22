@@ -1,4 +1,4 @@
-## To Mitigate Dangerous WebView API Usage
+To Mitigate Dangerous WebView API Usage:
 
 ### Primary Defense – Disable Mixed Content:
 ```java
