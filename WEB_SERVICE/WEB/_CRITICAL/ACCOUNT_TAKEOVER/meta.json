@@ -3,7 +3,7 @@
   "short_description": "Application is vulnerable to technical vulnerabilities leading unauthorized control over user accounts.",
   "risk_rating": "critical",
   "references": {
-    "Rapid7: Account Takeover": "https://docs.rapid7.com/tcell/account-takeover/"
+    "Rapid7: Account Takeover": "https://www.rapid7.com/blog/post/2017/05/10/simplifying-account-takeover-protection/"
   },
   "privacy_issue": false,
   "security_issue": true,

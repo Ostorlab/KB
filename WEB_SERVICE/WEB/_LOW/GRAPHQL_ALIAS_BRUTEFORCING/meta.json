@@ -3,7 +3,7 @@
   "title": "Brute Force Login Using Alias Batching in GraphQL API",
   "short_description": "An attacker leverages GraphQL query aliases to batch multiple login attempts in a single query, potentially bypassing rate limits and overwhelming the authentication system.",
   "references": {
-    "Inigo": "https://inigo.io/blog/defeating_controls_with_alias-based_query_batching"
+    "Wallarm": "https://lab.wallarm.com/graphql-batching-attack/"
   },
   "privacy_issue": false,
   "security_issue": true,

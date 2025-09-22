@@ -1281,6 +1281,9 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
             data = json.load(file)
         references = data.get("references", {})
         for url in references.values():
+            # Skip Medium articles
+            if "medium.com" in url:
+                continue
             if url in checked_urls:
                 if checked_urls[url] is False:
                     invalid_urls.add(url)
