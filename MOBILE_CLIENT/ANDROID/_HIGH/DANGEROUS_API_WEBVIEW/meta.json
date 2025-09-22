@@ -1,5 +1,5 @@
 {
-  "risk_rating": "info",
+  "risk_rating": "high",
   "short_description": "List of WebView API calls",
   "references": {
     "DRD02-J. Do not allow WebView to access sensitive local resource through file scheme (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/display/android/DRD02-J.+Do+not+allow+WebView+to+access+sensitive+local+resource+through+file+scheme",
