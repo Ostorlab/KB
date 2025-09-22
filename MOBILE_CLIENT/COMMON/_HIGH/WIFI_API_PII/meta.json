@@ -3,7 +3,6 @@
   "short_description": "Mobile WiFi APIs expose Personal Identifiable Information (PII), potentially allowing applications with appropriate permissions to access sensitive information through WiFi-related APIs on mobile devices.",
   "references": {
     "Android Docs": "https://source.android.com/docs/security/bulletin/2015-12-01#information_disclosure_vulnerability_in_wi-fi",
-    "Vuldb": "https://vuldb.com/?id.221977"
   },
   "title": "Mobile WiFi API Personal Identifiable Information concerns",
   "privacy_issue": true,
