@@ -1,4 +1,4 @@
-The application specifies a deprecated minimum iOS version in its `MinimumOSVersion` property within the Info.plist file. Supporting outdated iOS versions can expose the application and its users to security vulnerabilities that have been addressed in newer iOS releases.
+The application specifies a **deprecated minimum iOS version** in its `MinimumOSVersion` property within the `Info.plist` file. Supporting outdated iOS versions can expose the application and its users to security vulnerabilities that have been addressed in newer iOS releases.
 
 Older iOS versions may contain:
 - Known security vulnerabilities that have been patched in newer versions
