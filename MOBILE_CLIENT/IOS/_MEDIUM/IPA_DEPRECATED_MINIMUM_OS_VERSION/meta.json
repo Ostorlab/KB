@@ -1,0 +1,36 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The application specifies a deprecated minimum iOS version.",
+  "references": {
+    "iOS Release Info": "https://developer.apple.com/documentation/ios-ipados-release-notes",
+    "EndOfLife: Apple iOS": "https://endoflife.date/ios",
+    "Apple security releases": "https://support.apple.com/en-us/100100"
+  },
+  "title": "Deprecated Minimum iOS Version",
+  "privacy_issue": false,
+  "security_issue": true,
+  "has_public_exploit": false,
+  "targeted_by_malware": false,
+  "targeted_by_ransomware": false,
+  "targeted_by_nation_state": false,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_5"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_5"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_1",
+      "MASVS_CODE_3"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_11_3"
+    ],
+    "CNIL_FOR_DEVELOPERS": [
+      "DEVELOPERS_4_3_1"
+    ]
+  }
+}
