@@ -1,4 +1,4 @@
-Update the minimum iOS version requirement in your application's Info.plist file to latest supported versions to enhance security and reduce exposure to vulnerabilities associated with deprecated iOS versions.
+Update the minimum iOS version requirement in your application's `Info.plist` file to latest supported versions to enhance security and reduce exposure to vulnerabilities associated with deprecated iOS versions.
 
 1. **Update Info.plist**: Modify the `MinimumOSVersion` key in your Info.plist file to specify a minimum iOS version that is not deprecated.
 
