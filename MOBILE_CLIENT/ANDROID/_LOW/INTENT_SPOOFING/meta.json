@@ -15,6 +15,11 @@
     "CWE_TOP_25": [
       "CWE_276"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213"
+    ],
     "PCI_STANDARDS":[
       "REQ_6_2",
       "REQ_6_3",

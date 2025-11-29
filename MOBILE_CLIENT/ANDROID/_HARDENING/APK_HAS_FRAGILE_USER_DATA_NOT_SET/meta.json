@@ -20,6 +20,11 @@
       "REQ_3_5",
       "REQ_6_2"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY251",
+      "SECURITY212",
+      "SECURITY213"
+    ],
     "GDPR": [
         "ART_5",
         "ART_12",

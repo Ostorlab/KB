@@ -20,6 +20,11 @@
 		  "REQ_6_3",
 		  "REQ_11_3"
 		],
+		"HIPAA_CONTROLS": [
+			"SECURITY221",
+			"SECURITY212",
+			"SECURITY213"
+		],
 		"OWASP_MASVS_v2_1": [
 			"MASVS_CODE_4"
 		],

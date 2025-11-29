@@ -35,6 +35,12 @@
       "REQ_6_4",
       "REQ_11_3"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255",
+      "SECURITY258"
+    ],
     "SOC2_CONTROLS": [
       "CC_2_1",
       "CC_4_1",
