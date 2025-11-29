@@ -27,6 +27,11 @@
       "ART_25",
       "ART_32"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY251",
+      "SECURITY212",
+      "SECURITY213"
+    ],
     "PCI_STANDARDS":[
       "REQ_2_2",
       "REQ_3_2",
