@@ -1,7 +1,11 @@
 {
   "risk_rating": "low",
   "short_description": "The application collects a device identifier that can be used to track users across sessions and applications.",
-  "references": {},
+  "references": {
+    "Android Developers - Identifiers": "https://developer.android.com/training/articles/user-data-ids",
+    "Android Developers - App Set ID": "https://developer.android.com/training/articles/app-set-id",
+    "Apple Developer - Identifier for Vendor (IDFV)": "https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor",
+  },
   "title": "Collection of Device Identifier",
   "cvss_v3_vector": "",
   "privacy_issue": true,
