@@ -1,0 +1,10 @@
+{
+  "risk_rating": "low",
+  "short_description": "The application collects a device identifier that can be used to track users across sessions and applications.",
+  "references": {},
+  "title": "Collection of Device Identifier",
+  "cvss_v3_vector": "",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {}
+}
