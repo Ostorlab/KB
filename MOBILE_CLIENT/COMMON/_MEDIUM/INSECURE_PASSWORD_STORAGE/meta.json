@@ -4,7 +4,7 @@
   "risk_rating": "medium",
   "references": {
     "OWASP Insecure Cryptographic Storage": "https://www.owasp.org/index.php/Top_10_2010-A7-Insecure_Cryptographic_Storage",
-    "OWASP Insecure Storage": "https://www.owasp.org/index.php/Insecure_Storage",
+    "OWASP Insecure Data Storage": "https://owasp.org/www-project-mobile-top-10/2023-risks/m9-insecure-data-storage",
     "CWE-522 Insufficiently Protected Credentials": "https://cwe.mitre.org/data/definitions/522.html",
     "CWE-312 Cleartext Storage of Sensitive Information": "https://cwe.mitre.org/data/definitions/312.html",
     "CWE-256 Plaintext Storage of a Password": "https://cwe.mitre.org/data/definitions/256.html"
