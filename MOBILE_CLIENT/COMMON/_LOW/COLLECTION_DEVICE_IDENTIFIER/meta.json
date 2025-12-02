@@ -4,7 +4,7 @@
   "references": {
     "Android Developers - Identifiers": "https://developer.android.com/training/articles/user-data-ids",
     "Android Developers - App Set ID": "https://developer.android.com/training/articles/app-set-id",
-    "Apple Developer - Identifier for Vendor (IDFV)": "https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor",
+    "Apple Developer - Identifier for Vendor (IDFV)": "https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor"
   },
   "title": "Collection of Device Identifier",
   "cvss_v3_vector": "",
