@@ -15,7 +15,7 @@
     "OWASP_MASVS_L2": [
       "MSTG_STORAGE_5"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_3_2",
       "REQ_3_3",
@@ -25,6 +25,11 @@
     "OWASP_MASVS_v2_1": [
       "MASVS_STORAGE_1",
       "MASVS_STORAGE_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY251",
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

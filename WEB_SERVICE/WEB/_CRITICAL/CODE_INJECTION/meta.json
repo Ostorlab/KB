@@ -2,7 +2,7 @@
   "risk_rating": "critical",
   "short_description": "The web server application is susceptible to a code injection vulnerability.",
   "references": {
-    "OWASP":"https://owasp.org/www-community/attacks/Code_Injection",
+    "OWASP": "https://owasp.org/www-community/attacks/Code_Injection",
     "Acunetix": "https://www.acunetix.com/blog/articles/code-injection/"
   },
   "title": "Code Injection",
@@ -17,7 +17,7 @@
       "ART_5",
       "ART_32"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_6_2",
       "REQ_6_3",
       "REQ_11_3"
@@ -30,6 +30,11 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
     ]
   }
 }

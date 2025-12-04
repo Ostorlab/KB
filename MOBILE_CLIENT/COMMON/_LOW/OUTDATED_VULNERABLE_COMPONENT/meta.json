@@ -14,7 +14,7 @@
     "OWASP_MASVS_L2": [
       "MSTG_CODE_5"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2",
       "REQ_6_3",
@@ -33,6 +33,12 @@
       "CC_7_5",
       "CC_8_1",
       "CC_9_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255",
+      "SECURITY258"
     ]
   }
 }

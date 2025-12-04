@@ -27,6 +27,11 @@
     ],
     "CNIL_FOR_EDITORS": [
       "EDITORS_5_1_1"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

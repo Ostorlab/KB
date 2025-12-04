@@ -2,7 +2,7 @@
   "risk_rating": "critical",
   "short_description": "The database interaction in the application is susceptible to a NoSQL injection vulnerability.",
   "references": {
-    "OWASP":"https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection"
+    "OWASP": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection"
   },
   "title": "NoSQL Injection",
   "privacy_issue": false,
@@ -26,6 +26,11 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
     ]
   }
 }

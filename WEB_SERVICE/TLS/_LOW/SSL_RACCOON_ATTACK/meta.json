@@ -52,6 +52,11 @@
     "OWASP_MASVS_v2_1": [
       "MASVS_CRYPTO_1",
       "MASVS_CRYPTO_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

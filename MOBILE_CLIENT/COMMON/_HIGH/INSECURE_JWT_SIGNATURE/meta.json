@@ -19,13 +19,12 @@
       "MSTG_CRYPTO_3",
       "MSTG_CRYPTO_4"
     ],
-    "CWE_TOP_25": [
+    "CWE_TOP_25": [],
+    "GDPR": [
+      "ART_5",
+      "ART_32"
     ],
-      "GDPR": [
-        "ART_5",
-        "ART_32"
-      ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_3_6",
       "REQ_3_7",
@@ -50,6 +49,11 @@
     ],
     "CNIL_FOR_DEVELOPERS": [
       "DEVELOPERS_4_1_4"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY251",
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

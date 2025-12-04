@@ -9,7 +9,7 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_3",
       "REQ_11_3"
@@ -21,6 +21,10 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

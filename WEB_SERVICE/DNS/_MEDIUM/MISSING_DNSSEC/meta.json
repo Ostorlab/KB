@@ -22,6 +22,10 @@
     ],
     "CCPA": [
       "CCPA_1798_150"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

@@ -9,7 +9,7 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_6_5"
     ],
     "OWASP_ASVS_L3": [
@@ -20,6 +20,11 @@
     ],
     "OWASP_ASVS_L1": [
       "V14_3_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
     ]
   }
 }

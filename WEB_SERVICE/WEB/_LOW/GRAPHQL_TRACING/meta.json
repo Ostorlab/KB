@@ -15,7 +15,6 @@
       "REQ_6_3",
       "REQ_6_5",
       "REQ_11_3"
-
     ],
     "OWASP_MASVS_L2": [
       "MSTG_ARCH_9"
@@ -27,6 +26,11 @@
       "CC_6_1",
       "CC_6_7",
       "CC_7_1"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
     ]
   }
 }

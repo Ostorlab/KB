@@ -23,6 +23,11 @@
       "CC_6_1",
       "CC_6_7",
       "CC_7_1"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
     ]
   }
 }

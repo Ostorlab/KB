@@ -12,6 +12,7 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
+
     "OWASP_MASVS_L2": [
       "MSTG_AUTH_8"
     ],

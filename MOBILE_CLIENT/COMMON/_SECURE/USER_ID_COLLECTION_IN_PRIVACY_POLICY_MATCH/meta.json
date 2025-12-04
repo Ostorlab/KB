@@ -10,5 +10,10 @@
   "title": "Secure User ID Collection in Privacy Policy",
   "privacy_issue": true,
   "security_issue": false,
-  "categories": {}
+  "categories": {
+    "HIPAA_CONTROLS": [
+      "PRIVACY114",
+      "PRIVACY121"
+    ]
+  }
 }

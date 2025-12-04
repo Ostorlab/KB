@@ -16,7 +16,7 @@
     "OWASP_MASVS_L2": [
       "MSTG_CRYPTO_6"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2"
     ],
@@ -34,6 +34,11 @@
     ],
     "CNIL_FOR_DEVELOPERS": [
       "DEVELOPERS_4_1_4"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY251",
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

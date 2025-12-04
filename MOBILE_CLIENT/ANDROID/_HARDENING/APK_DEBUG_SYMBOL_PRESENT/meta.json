@@ -1,8 +1,7 @@
 {
   "risk_rating": "hardening",
   "short_description": "Debug Symbols were found in the application, which can help with reverse engineering the application or leaking internal information.",
-  "references": {
-  },
+  "references": {},
   "title": "Debug Symbols Present in the Android Application",
   "privacy_issue": false,
   "security_issue": true,
@@ -13,12 +12,16 @@
     "OWASP_MASVS_L2": [
       "MSTG_CODE_3"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2"
     ],
     "OWASP_MASVS_v2_1": [
       "MASVS_RESILIENCE_3"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

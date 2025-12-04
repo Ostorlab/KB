@@ -17,6 +17,11 @@
     "CCPA": [
       "CCPA_1798_150"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
+    ],
     "GDPR": [
       "ART_32"
     ],

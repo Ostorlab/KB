@@ -19,6 +19,13 @@
     "GDPR": [
       "ART_32"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255",
+      "SECURITY258"
+    ],
     "PCI_STANDARDS": [
       "REQ_2_3",
       "REQ_4_1",

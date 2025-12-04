@@ -7,5 +7,11 @@
   },
   "privacy_issue": true,
   "security_issue": false,
-  "categories": {}
+  "categories": {
+    "HIPAA_CONTROLS": [
+      "SECURITY251",
+      "SECURITY212",
+      "SECURITY213"
+    ]
+  }
 }
