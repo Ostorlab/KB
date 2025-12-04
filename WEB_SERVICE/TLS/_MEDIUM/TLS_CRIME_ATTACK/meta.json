@@ -14,6 +14,11 @@
       "CC_6_7",
       "CC_7_1"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
+    ],
     "CCPA": [
       "CCPA_1798_150"
     ],

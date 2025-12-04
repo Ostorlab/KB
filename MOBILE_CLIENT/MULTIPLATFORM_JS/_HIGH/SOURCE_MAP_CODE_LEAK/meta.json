@@ -1,8 +1,7 @@
 {
   "risk_rating": "high",
   "short_description": "Application source code leaks through the source map, exposing sensitive information about the application internals.",
-  "references": {
-  },
+  "references": {},
   "title": "Source Map Code Leak",
   "privacy_issue": false,
   "security_issue": true,
@@ -13,7 +12,7 @@
     "OWASP_MASVS_L2": [
       "MSTG_CODE_3"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2",
       "REQ_6_3",
@@ -31,6 +30,10 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

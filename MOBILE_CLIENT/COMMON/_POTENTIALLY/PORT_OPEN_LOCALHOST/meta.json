@@ -1,8 +1,7 @@
 {
   "risk_rating": "potentially",
   "short_description": "The application binds sockets that are listening to incoming traffic and are accessible externally or to other apps on the phone.",
-  "references": {
-  },
+  "references": {},
   "title": "Port open on device",
   "privacy_issue": false,
   "security_issue": true,
@@ -15,7 +14,7 @@
       "MSTG_NETWORK_1",
       "MSTG_NETWORK_2"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_1_2",
       "REQ_2_2",
       "REQ_6_2",
@@ -32,6 +31,11 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY259",
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

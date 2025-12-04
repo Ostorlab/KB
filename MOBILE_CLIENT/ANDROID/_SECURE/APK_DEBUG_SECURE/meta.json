@@ -7,5 +7,10 @@
   "title": "Debug mode disabled",
   "privacy_issue": false,
   "security_issue": true,
-  "categories": {}
+  "categories": {
+    "HIPAA_CONTROLS": [
+      "SECURITY215",
+      "SECURITY212"
+    ]
+  }
 }

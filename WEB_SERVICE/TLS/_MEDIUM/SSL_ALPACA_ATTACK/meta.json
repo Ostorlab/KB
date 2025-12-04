@@ -37,6 +37,11 @@
       "REQ_12_1",
       "REQ_12_3"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
+    ],
     "CCPA": [
       "CCPA_1798_100",
       "CCPA_1798_105",

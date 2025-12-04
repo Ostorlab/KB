@@ -20,7 +20,7 @@
       "CC_9_1",
       "CC_9_2"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_12_3",
       "REQ_12_10"
     ],
@@ -38,6 +38,10 @@
       "CWE_125",
       "CWE_416",
       "CWE_119"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

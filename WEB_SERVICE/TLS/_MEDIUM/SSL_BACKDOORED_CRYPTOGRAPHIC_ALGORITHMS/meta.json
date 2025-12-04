@@ -51,6 +51,12 @@
       "CWE_119",
       "CWE_400",
       "CWE_611"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
     ]
   }
 }

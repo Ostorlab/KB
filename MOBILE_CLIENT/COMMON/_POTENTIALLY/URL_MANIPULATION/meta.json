@@ -1,8 +1,7 @@
 {
   "risk_rating": "potentially",
   "short_description": "An attack can control the URL used by an application to fetch content, it poses a security risk as the attacker can manipulate the content, leading to the execution of malicious code or the theft of sensitive information.",
-  "references": {
-  },
+  "references": {},
   "title": "URL Manipulation",
   "privacy_issue": false,
   "security_issue": true,
@@ -10,12 +9,11 @@
     "OWASP_MASVS_L2": [
       "MSTG_NETWORK_5"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_6_2",
       "REQ_6_3",
       "REQ_11_3"
     ],
-
     "OWASP_MASVS_v2_1": [
       "MASVS_CODE_3"
     ],
@@ -26,6 +24,11 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY221"
     ]
   }
 }

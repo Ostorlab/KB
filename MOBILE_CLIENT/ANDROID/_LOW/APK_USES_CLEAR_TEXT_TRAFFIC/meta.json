@@ -37,6 +37,11 @@
     ],
     "CNIL_FOR_DEVELOPERS": [
       "DEVELOPERS_4_1_4"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

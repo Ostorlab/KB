@@ -1,14 +1,20 @@
 {
-    "risk_rating": "secure",
-    "short_description": "Privacy policy mentions the collection of users' precise location",
-    "references": {
-        "Android Privacy Guidelines": "https://developer.android.com/privacy-and-security/about",
-        "Privacy Policies for Mobile Apps": "https://www.privacypolicies.com/blog/mobile-apps-privacy-policy/",
-        "Apple Privacy Manifest": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
-        "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
-    },
-    "title": "Declaration of Precise Location Collection in Privacy Policy",
-    "privacy_issue": true,
-    "security_issue": false,
-    "categories": {}
+  "risk_rating": "secure",
+  "short_description": "Privacy policy mentions the collection of users' precise location",
+  "references": {
+    "Android Privacy Guidelines": "https://developer.android.com/privacy-and-security/about",
+    "Privacy Policies for Mobile Apps": "https://www.privacypolicies.com/blog/mobile-apps-privacy-policy/",
+    "Apple Privacy Manifest": "https://developer.apple.com/documentation/bundleresources/privacy_manifest_files",
+    "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html"
+  },
+  "title": "Declaration of Precise Location Collection in Privacy Policy",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {
+    "HIPAA_CONTROLS": [
+      "PRIVACY114",
+      "PRIVACY121",
+      "PRIVACY122"
+    ]
+  }
 }

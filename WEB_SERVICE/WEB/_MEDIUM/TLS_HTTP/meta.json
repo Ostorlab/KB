@@ -24,7 +24,7 @@
       "V1_9_1",
       "V9_1_1"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_4_2",
       "REQ_6_2",
@@ -40,6 +40,11 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

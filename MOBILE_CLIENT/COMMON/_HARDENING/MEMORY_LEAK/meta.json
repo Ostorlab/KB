@@ -1,8 +1,7 @@
 {
   "risk_rating": "hardening",
   "short_description": "The application suffers from unintentional memory leak that may cause a DoS or Malicious Code Execution.",
-  "references": {
-  },
+  "references": {},
   "title": "Memory Leak",
   "privacy_issue": false,
   "security_issue": true,
@@ -16,7 +15,7 @@
     "CWE_TOP_25": [
       "CWE_400"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_6_2"
     ],
     "OWASP_MASVS_v2_1": [
@@ -30,6 +29,11 @@
       "CC_7_4",
       "CC_7_5",
       "CC_9_1"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
     ]
   }
 }

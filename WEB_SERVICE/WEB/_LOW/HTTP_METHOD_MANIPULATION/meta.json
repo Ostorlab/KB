@@ -1,10 +1,8 @@
-
 {
   "title": "HTTP Method Manipulation in GraphQL",
   "short_description": "HTTP method manipulation allows GraphQL mutations to be executed using GET requests, leading to potential exposure of sensitive data.",
   "risk_rating": "low",
-  "references": {
-  },
+  "references": {},
   "privacy_issue": true,
   "security_issue": true,
   "categories": {
@@ -39,6 +37,10 @@
       "CC_7_4",
       "CC_7_5",
       "CC_9_1"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

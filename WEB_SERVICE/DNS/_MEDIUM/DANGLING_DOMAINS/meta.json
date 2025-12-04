@@ -25,6 +25,10 @@
     "GDPR": [
       "ART_25",
       "ART_32"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

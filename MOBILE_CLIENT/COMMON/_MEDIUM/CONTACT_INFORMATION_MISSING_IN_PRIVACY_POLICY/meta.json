@@ -55,6 +55,10 @@
     ],
     "CNIL_FOR_EDITORS": [
       "EDITORS_3_1_1"
+    ],
+    "HIPAA_CONTROLS": [
+      "PRIVACY122",
+      "PRIVACY123"
     ]
   }
 }

@@ -3,7 +3,7 @@
   "short_description": "The web application is vulnerable to an LDAP injection vulnerability.",
   "references": {
     "OWASP": "https://owasp.org/www-community/attacks/LDAP_Injection",
-    "OWASP cheatsheets":"https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html",
+    "OWASP cheatsheets": "https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html",
     "Hacktricks": "https://book.hacktricks.xyz/pentesting-web/ldap-injection"
   },
   "title": "LDAP Injection",
@@ -14,7 +14,7 @@
       "ART_25",
       "ART_32"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_6_2",
       "REQ_6_3",
       "REQ_6_4",
@@ -27,6 +27,11 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
     ]
   }
 }

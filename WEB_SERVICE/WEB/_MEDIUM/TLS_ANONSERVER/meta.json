@@ -1,8 +1,7 @@
 {
   "risk_rating": "medium",
   "short_description": "Server accepts anonymous authentication.",
-  "references": {
-  },
+  "references": {},
   "title": "Anonymous unauthenticated server accepted",
   "privacy_issue": false,
   "security_issue": true,
@@ -10,7 +9,7 @@
     "CWE_TOP_25": [
       "CWE_287"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_1_2",
       "REQ_2_2",
       "REQ_4_2",
@@ -26,6 +25,11 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

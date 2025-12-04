@@ -10,5 +10,10 @@
   "title": "Secure Collection of Users' Crash Logs without Consent",
   "privacy_issue": true,
   "security_issue": false,
-  "categories": {}
+  "categories": {
+    "HIPAA_CONTROLS": [
+      "PRIVACY114",
+      "PRIVACY121"
+    ]
+  }
 }

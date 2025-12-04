@@ -30,6 +30,10 @@
       "REQ_1_3",
       "REQ_4_1",
       "REQ_12_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

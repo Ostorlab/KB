@@ -56,6 +56,10 @@
       "REQ_8_6",
       "REQ_11_3",
       "REQ_11_4"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
     ]
   }
 }

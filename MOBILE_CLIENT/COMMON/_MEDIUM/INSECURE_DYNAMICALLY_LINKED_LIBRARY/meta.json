@@ -2,8 +2,8 @@
   "risk_rating": "medium",
   "short_description": "Loading Dynamic Libraries without proper input sanitization and verifications.",
   "references": {
-    "CWE-426: Untrusted Search Path":"https://cwe.mitre.org/data/definitions/426.html",
-    "WIN00-C. Be specific when dynamically loading libraries":"https://wiki.sei.cmu.edu/confluence/display/c/WIN00-C.+Be+specific+when+dynamically+loading+libraries"
+    "CWE-426: Untrusted Search Path": "https://cwe.mitre.org/data/definitions/426.html",
+    "WIN00-C. Be specific when dynamically loading libraries": "https://wiki.sei.cmu.edu/confluence/display/c/WIN00-C.+Be+specific+when+dynamically+loading+libraries"
   },
   "title": "Insecure Dynamic Library Loading",
   "privacy_issue": false,
@@ -15,7 +15,7 @@
     "OWASP_MASVS_L2": [
       "MSTG_PLATFORM_3"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_6_2",
       "REQ_6_3",
       "REQ_11_3"
@@ -30,6 +30,11 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
     ]
   }
 }
