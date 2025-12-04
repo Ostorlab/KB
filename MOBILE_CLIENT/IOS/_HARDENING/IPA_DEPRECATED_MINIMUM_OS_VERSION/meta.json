@@ -1,5 +1,5 @@
 {
-  "risk_rating": "medium",
+  "risk_rating": "hardening",
   "short_description": "The application specifies a deprecated minimum iOS version.",
   "references": {
     "iOS Release Info": "https://developer.apple.com/documentation/ios-ipados-release-notes",
