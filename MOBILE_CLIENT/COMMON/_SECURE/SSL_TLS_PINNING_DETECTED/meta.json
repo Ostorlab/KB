@@ -1,0 +1,15 @@
+{
+    "risk_rating": "secure",
+    "short_description": "SSL/TLS certificate pinning detected for backend connections",
+    "references": {
+        "OWASP Mobile Application Security: Android Certificate Pinning": "https://mas.owasp.org/MASTG/knowledge/android/MASVS-NETWORK/MASTG-KNOW-0015/",
+        "OWASP Mobile Top 10: Insecure Communication": "https://owasp.org/www-project-mobile-top-10/2023-risks/m5-insecure-communication.html",
+        "Android Network Security Configuration: Pin certificates": "https://developer.android.com/privacy-and-security/security-config#CertificatePinning",
+        "Apple App Transport Security": "https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity",
+        "Apple App Pinned Domains": "https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity/nspinneddomains"
+    },
+    "title": "SSL/TLS Pinning Detected",
+    "privacy_issue": false,
+    "security_issue": true,
+    "categories": {}
+}
