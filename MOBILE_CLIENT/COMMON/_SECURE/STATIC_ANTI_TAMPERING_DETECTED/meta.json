@@ -2,9 +2,6 @@
     "risk_rating": "secure",
     "short_description": "Static anti-tampering mechanisms (e.g., file integrity checks, signature verification) detected",
     "references": {
-        "OWASP Mobile Application Security: Android File Integrity Checks": "https://mas.owasp.org/MASTG-TEST-0047/",
-        "OWASP Mobile Application Security: iOS File Integrity Checks": "https://mas.owasp.org/MASTG-TEST-0090/",
-        "OWASP MASVS-RESILIENCE Standard": "https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/",
         "OWASP Mobile Top 10: Code Tampering": "https://owasp.org/www-project-mobile-top-10/2016-risks/m8-code-tampering",
         "Android Developers: App Signing": "https://developer.android.com/studio/publish/app-signing",
         "Apple Developer: Code Signing": "https://developer.apple.com/support/code-signing/"
