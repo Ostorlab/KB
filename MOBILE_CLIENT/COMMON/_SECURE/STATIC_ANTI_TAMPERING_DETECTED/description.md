@@ -1,0 +1,1 @@
+Static anti-tampering techniques are security measures applied directly to an application's binary, configuration, or resource files to prevent or detect unauthorized modifications (tampering) while the application is "at rest" (on disk).
