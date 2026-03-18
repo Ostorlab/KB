@@ -1258,7 +1258,7 @@ def testJsonFiles_whenFileHasCategories_shouldBeValid() -> None:
                 all(group_key in CATEGORY_GROUPS for group_key in categories.keys())
                 is True
             ), [
-                group_key in CATEGORY_GROUPS
+                group_key
                 for group_key in categories.keys()
                 if group_key not in CATEGORY_GROUPS
             ]
