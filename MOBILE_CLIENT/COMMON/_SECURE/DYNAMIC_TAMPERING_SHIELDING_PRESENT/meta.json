@@ -13,9 +13,6 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "OWASP_MASVS_RESILIENCE": [
-      "MASVS_RESILIENCE_2", 
-      "MASVS_RESILIENCE_4"
-    ]
+    "OWASP_MASVS_RESILIENCE_4": ["MSTG_RESILIENCE_2", "MSTG_RESILIENCE_4"]
   }
 }
