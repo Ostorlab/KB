@@ -1,18 +1,14 @@
 {
     "risk_rating": "secure",
-    "short_description": "Static anti-tampering mechanisms (e.g., file integrity checks, signature verification) detected",
+    "short_description": "SSL/TLS certificate pinning detected for backend connections",
     "references": {
-        "OWASP MASVS: Resilience Against Reverse Engineering and Tampering": "https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/",
-        "OWASP MASTG: Android Anti-Reversing Defenses": "https://mas.owasp.org/MASTG/0x05j-Testing-Resiliency-Against-Reverse-Engineering/",
-        "OWASP MASTG-TEST-0047: Testing File Integrity Checks (Android)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0047/",
-        "OWASP MASTG-TEST-0090: Testing File Integrity Checks (iOS)": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0090/",
-        "OWASP MASTG-TEST-0038: Making Sure the App is Properly Signed (Android)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0038/",
-        "Android APK Signature Scheme v2": "https://source.android.com/docs/security/features/apksigning/v2",
-        "Android App Signing: Sign Your App": "https://developer.android.com/studio/publish/app-signing",
-        "Apple: App Code Signing Process (iOS/iPadOS)": "https://support.apple.com/guide/security/app-code-signing-process-sec7c917bf14/web",
-        "Apple Developer: Code Signing Services": "https://developer.apple.com/documentation/security/code-signing-services"
+        "OWASP Mobile Application Security: Android Certificate Pinning": "https://mas.owasp.org/MASTG/knowledge/android/MASVS-NETWORK/MASTG-KNOW-0015/",
+        "OWASP Mobile Top 10: Insecure Communication": "https://owasp.org/www-project-mobile-top-10/2023-risks/m5-insecure-communication.html",
+        "Android Network Security Configuration: Pin certificates": "https://developer.android.com/privacy-and-security/security-config#CertificatePinning",
+        "Apple App Transport Security": "https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity",
+        "Apple App Pinned Domains": "https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity/nspinneddomains"
     },
-    "title": "Static Anti-Tampering Mechanisms Detected",
+    "title": "SSL/TLS Pinning Detected",
     "privacy_issue": false,
     "security_issue": true,
     "categories": {}
