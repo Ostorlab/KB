@@ -1,0 +1,21 @@
+{
+  "risk_rating": "secure",
+  "short_description": "The application implements dynamic tampering detection mechanisms, protecting against runtime instrumentation.",
+  "references": {
+    "Darvin Thomas - Detect Frida for Android": "https://darvincitech.wordpress.com/2019/12/23/detect-frida-for-android/",
+    "OWASP MASTG - Testing Anti-Debugging Detection (MASTG-TEST-0046)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0046/",
+    "Frida - Dynamic Instrumentation Toolkit": "https://frida.re/docs/home/",
+    "Guardsquare - Anti-Tamper Security in Mobile Apps": "https://www.guardsquare.com/blog/anti-tamper-security-in-mobile-apps-guardsquare",
+    "Promon - App Threat Report: Hooking Framework Frida": "https://promon.io/security-news/app-threat-report-hooking-frida",
+    "Talsec - How to Detect Hooking (Frida) on Android": "https://docs.talsec.app/appsec-articles/articles/how-to-detect-hooking-frida-using-kotlin"
+  },
+  "title": "Anti-Hooking and Frida Detection Implemented",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS": [
+      "MASVS-RESILIENCE-2", 
+      "MASVS-RESILIENCE-4"
+    ]
+  }
+}

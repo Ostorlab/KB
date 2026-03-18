@@ -1,0 +1,1 @@
+The application implements mechanisms to prevent dynamic tampering.
