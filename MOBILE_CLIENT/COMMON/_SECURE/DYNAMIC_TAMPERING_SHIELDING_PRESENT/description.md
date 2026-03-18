@@ -1,1 +1,1 @@
-The application implements mechanisms to prevent dynamic tampering.
+The application implements runtime instrumentation detection mechanisms. Specifically, the application actively detects the presence or activity of hooking frameworks and responds by terminating the session or blocking further execution.
