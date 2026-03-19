@@ -9,6 +9,6 @@
     },
     "title": "Static Anti-Tampering Mechanisms Detected",
     "privacy_issue": false,
-    "security_issue": true,
+    "security_issue": false,
     "categories": {}
 }

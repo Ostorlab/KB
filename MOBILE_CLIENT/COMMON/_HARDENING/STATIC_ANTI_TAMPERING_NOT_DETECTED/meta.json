@@ -1,0 +1,34 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "The application does not implement static anti-tampering protections, allowing attackers to modify the application code or resources without detection while at rest.",
+  "references": {
+    "ASEE: What is Mobile Application Hardening": "https://cybersecurity.asee.io/mobile-application-hardening/",
+    "Digital.ai Mobile App Hardening": "https://cybersecurity.asee.io/mobile-application-hardening/",
+    "Guardsquare Code Hardening: Mobile Code Protection": "https://www.guardsquare.com/code-hardening"
+  },
+  "title": "Static Anti-Tampering Techniques Not Implemented",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MSTG_TESTS": [
+      "MSTG-RESILIENCE-1.1",
+      "MSTG-RESILIENCE-1.2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS-RESILIENCE-1"
+    ],
+    "CWE": [
+      "CWE-693"
+    ],
+    "PCI_DSS": [
+      "REQ_6_5"
+    ],
+    "SOC2": [
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "HIPAA": [
+      "164.308(a)(1)(ii)(B)"
+    ]
+  }
+}
