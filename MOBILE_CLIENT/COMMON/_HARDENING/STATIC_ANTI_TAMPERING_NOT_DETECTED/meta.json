@@ -1,33 +1,29 @@
 {
   "risk_rating": "hardening",
-  "short_description": "The application does not implement static anti-tampering protections, allowing attackers to modify the application code or resources without detection while at rest.",
+  "short_description": "The application does not implement static anti-tampering protections, allowing attackers to modify the application while it is at rest and bypass integrity controls.",
   "references": {
-    "ASEE: What is Mobile Application Hardening": "https://cybersecurity.asee.io/mobile-application-hardening/",
-    "Digital.ai Mobile App Hardening": "https://cybersecurity.asee.io/mobile-application-hardening/",
-    "Guardsquare Code Hardening: Mobile Code Protection": "https://www.guardsquare.com/code-hardening"
+    "ASEE: Mobile Application Hardening": "https://cybersecurity.asee.io/mobile-application-hardening/",
+    "Guardsquare Code Hardening": "https://www.guardsquare.com/code-hardening",
+    "OWASP MASVS Overview": "https://mas.owasp.org/MASVS/"
   },
   "title": "Static Anti-Tampering Techniques Not Implemented",
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "OWASP_MSTG_TESTS": [
-      "MSTG-RESILIENCE-1.1",
-      "MSTG-RESILIENCE-1.2"
-    ],
     "OWASP_MASVS_v2_1": [
-      "MASVS-RESILIENCE-1"
+      "MASVS_CODE_1"
     ],
-    "CWE": [
-      "CWE-693"
+    "CWE_TOP_25": [
+      "CWE_693"
     ],
-    "PCI_DSS": [
+    "PCI_STANDARDS": [
       "REQ_6_5"
     ],
-    "SOC2": [
+    "SOC2_CONTROLS": [
       "CC_7_1",
       "CC_7_2"
     ],
-    "HIPAA": [
+    "HIPAA_CONTROLS": [
       "164.308(a)(1)(ii)(B)"
     ]
   }
