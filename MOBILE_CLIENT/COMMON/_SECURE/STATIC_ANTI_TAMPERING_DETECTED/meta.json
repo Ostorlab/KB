@@ -1,0 +1,14 @@
+{
+    "risk_rating": "secure",
+    "short_description": "Static anti-tampering mechanisms (e.g., file integrity checks, signature verification) detected",
+    "references": {
+        "OWASP MASTG-TEST-0090: Testing File Integrity Checks (iOS)": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0090/",
+        "OWASP MASTG-TEST-0038: Making Sure the App is Properly Signed (Android)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0038/",
+        "Android APK Signature Scheme v2": "https://source.android.com/docs/security/features/apksigning/v2",
+        "Android App Signing: Sign Your App": "https://developer.android.com/studio/publish/app-signing"
+    },
+    "title": "Static Anti-Tampering Mechanisms Detected",
+    "privacy_issue": false,
+    "security_issue": false,
+    "categories": {}
+}
