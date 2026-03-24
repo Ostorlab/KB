@@ -1,16 +1,16 @@
-# Static Anti-Tampering Hardening (Enterprise-Grade)
+# Static Anti-Tampering Hardening (Open-Source)
 
-To mitigate the absence of static anti-tampering protections, mobile applications should implement a **defense-in-depth strategy at build time**, combining **advanced obfuscation, commercial-grade packers, and integrity enforcement mechanisms**.
+To mitigate the absence of static anti-tampering protections, mobile applications should implement a **defense-in-depth strategy at build time**, combining **open-source obfuscation, integrity enforcement mechanisms, and secure build practices**.
 
 ---
 
 ## 1. Advanced Code Obfuscation & Transformation
 
-Obfuscation should go beyond renaming and include **control-flow obfuscation, string encryption, and class repackaging**.
+Obfuscation should go beyond renaming and include **control-flow obfuscation, string encryption, and class repackaging** using open-source tooling.
 
-### Android (R8 / ProGuard + Hardening)
+### Android (R8 / ProGuard)
 
-R8 is the baseline and should be configured aggressively.
+R8 (default in Android builds) should be configured aggressively.
 
 #### Configuration (`build.gradle`)
 ```groovy
@@ -54,13 +54,12 @@ android {
 
 ### iOS (Swift / Objective-C Obfuscation)
 
-iOS requires third-party tooling for real protection.
+iOS lacks built-in obfuscation, but open-source tools can be integrated.
 
-#### Enterprise Tools
-- iXGuard (Guardsquare)
-- Arxan (Digital.ai)
-- Appdome
-- SwiftShield (open-source baseline)
+#### Open-Source Tools
+- SwiftShield (symbol obfuscation)
+- llvm-obfuscator (Obfuscator-LLVM for control-flow obfuscation)
+- strip / dsymutil (symbol stripping)
 
 #### Example: SwiftShield Integration
 ```bash
@@ -130,62 +129,40 @@ func verifyAppIntegrity() -> Bool {
 
 ---
 
-## 3. Commercial Packers & Application Protectors
+## 3. Open-Source Packing & Binary Hardening Techniques
 
-These provide **binary encryption, anti-reversing, and anti-tampering protections** beyond standard obfuscation.
+While fully featured packers are mostly commercial, several **open-source techniques** can approximate packing and hardening.
 
-### Android (Enterprise Protectors)
+### Android
 
-#### Recommended Tools
-- DexGuard (Guardsquare)
-- Allatori
-- SecNeo
-- Tencent Jiagu
+#### Techniques
+- APK repacking with zipalign + apksigner
+- DEX encryption (custom loader approach)
+- Native library protection via NDK (move sensitive logic to C/C++)
+- String encryption via custom utilities
 
-#### DexGuard Example
-```groovy
-buildTypes {
-    release {
-        minifyEnabled true
-        proguardFiles getDefaultProguardFile('proguard-android.txt'),
-                      'dexguard-project.txt'
+#### Example: Basic String Encryption (Kotlin)
+```kotlin
+object StringObfuscator {
+    fun xor(input: String, key: Char): String {
+        return input.map { it.code.xor(key.code).toChar() }.joinToString("")
     }
 }
 ```
 
-#### DexGuard Rules (`dexguard-project.txt`)
-```proguard
-# Enable string encryption
--encryptstrings class com.yourapp.**
-
-# Class encryption
--encryptclasses class com.yourapp.secure.**
-
-# Tamper detection
--checktamper
-
-# Hide access
--obfuscatecode
-```
-
 ---
 
-### iOS (Enterprise Protectors)
+### iOS
 
-#### Recommended Tools
-- iXGuard (Guardsquare)
-- Arxan (Digital.ai)
-- Appdome
+#### Techniques
+- LLVM-based obfuscation (Obfuscator-LLVM)
+- Binary stripping
+- Splitting sensitive logic into dynamic libraries
+- Manual function inlining / control-flow flattening
 
-#### Example: iXGuard Configuration (Conceptual)
+#### Example: Strip Symbols
 ```bash
-ixguard \
-  --input YourApp.ipa \
-  --output ProtectedApp.ipa \
-  --obfuscate-control-flow \
-  --encrypt-strings \
-  --anti-tamper \
-  --anti-debug
+strip -S -x YourAppBinary
 ```
 
 ---
@@ -242,10 +219,11 @@ fi
 
 ## Key Takeaways
 
-- Combine **R8 + enterprise packers** (DexGuard / iXGuard) for strong protection
-- Apply **string, class, and control-flow obfuscation**
-- Encrypt **sensitive assets and constants**
-- Enforce **signature and integrity checks**
+- Use **R8 / ProGuard with aggressive rules**
+- Apply **open-source obfuscation tools (SwiftShield, Obfuscator-LLVM)**
+- Implement **custom string and asset encryption**
+- Enforce **signature and integrity verification**
+- Harden binaries with **stripping, native code, and build-time transformations**
 - Integrate protections into **CI/CD pipelines**
 
-> No single control is sufficient—effective anti-tampering requires **layered protections applied statically at build time**.
+> No single control is sufficient—effective anti-tampering requires **layered protections applied statically at build time** using open and auditable tooling.
