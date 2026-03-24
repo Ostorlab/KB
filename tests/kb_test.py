@@ -3,9 +3,12 @@
 import glob
 import json
 import pathlib
+import datetime
 
 import requests
 import pytest
+
+TIMEOUT = datetime.timedelta(seconds=60)
 
 CATEGORY_GROUPS = [
     "OWASP_MASVS_L1",
@@ -1290,7 +1293,9 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
                     invalid_urls.add(url)
             else:
                 try:
-                    response = requests.get(url, headers=headers, timeout=30)
+                    response = requests.get(
+                        url, headers=headers, timeout=TIMEOUT.total_seconds()
+                    )
                     is_valid = response.status_code < 404
                 except requests.RequestException:
                     is_valid = False
