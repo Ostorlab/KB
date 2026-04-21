@@ -4,7 +4,6 @@
   "risk_rating": "medium",
   "references": {
     "Splunk Deep Learning Blog": "https://www.splunk.com/en_us/blog/security/ml-in-security-detect-suspicious-txt-records-using-deep-learning.html",
-    "AhnLab Security Blog": "https://asec.ahnlab.com/en/54916/",
     "ProSec Networks": "https://www.prosec-networks.com/en/blog/dns-tunneling-erkennen/"
   },
   "privacy_issue": false,

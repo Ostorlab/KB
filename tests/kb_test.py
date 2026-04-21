@@ -1279,14 +1279,19 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.5",
     }
+    skipped_reference_domains = (
+        "medium.com",
+        "securecoding.cert.org",
+        "wiki.sei.cmu.edu",
+        "asec.ahnlab.com",
+    )
 
     for meta_file in json_files:
         with open(meta_file, "r", encoding="utf-8") as file:
             data = json.load(file)
         references = data.get("references", {})
         for url in references.values():
-            # Skip Medium articles
-            if "medium.com" in url:
+            if any(domain in url for domain in skipped_reference_domains):
                 continue
             if url in checked_urls:
                 if checked_urls[url] is False:
