@@ -2,8 +2,8 @@
   "risk_rating": "info",
   "short_description": "List of crypto API calls",
   "references": {
-    "SER03-J. Do not serialize unencrypted sensitive data (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/display/java/SER03-J.+Do+not+serialize+unencrypted+sensitive+data",
-    "DRD18. Do not use the default behavior in a cryptographic library if it does not use recommended practices (CERT Secure Coding)": "https://www.securecoding.cert.org/confluence/display/android/DRD18.+Do+not+use+the+default+behavior+in+a+cryptographic+library+if+it+does+not+use+recommended+practices"
+    "SER03-J. Do not serialize unencrypted sensitive data (CERT Secure Coding)": "https://owasp.org/www-project-mobile-top-10/2016-risks/m2-insecure-data-storage",
+    "DRD18. Do not use the default behavior in a cryptographic library if it does not use recommended practices (CERT Secure Coding)": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html"
   },
   "title": "Call to Crypto API",
   "privacy_issue": false,
