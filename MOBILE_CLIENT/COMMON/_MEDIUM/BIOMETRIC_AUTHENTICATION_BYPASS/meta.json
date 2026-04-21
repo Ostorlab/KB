@@ -6,7 +6,7 @@
     "Bypass Biometric Authentication": "https://book.hacktricks.xyz/mobile-pentesting/android-app-pentesting/bypass-biometric-authentication-android",
     "Using BiometricPrompt with CryptoObject: How and Why": "https://medium.com/androiddevelopers/using-biometricprompt-with-cryptoobject-how-and-why-aace500ccdb7",
     "Android Biometric API: Getting Started": "https://www.kodeco.com/18782293-android-biometric-api-getting-started",
-    "MOBILE PENTESTING 101 – BYPASSING BIOMETRIC AUTHENTICATION": "https://securitycafe.ro/2022/09/05/mobile-pentesting-101-bypassing-biometric-authentication/"
+    "Android Biometric Authentication": "https://developer.android.com/identity/sign-in/biometric-auth"
   },
   "title": "Biometric Authentication Bypass",
   "privacy_issue": false,
