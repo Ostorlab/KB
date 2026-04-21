@@ -3,7 +3,7 @@
   "title": "Protected Against GraphQL Batch Query Attacks",
   "short_description": "The GraphQL API enforces batch query limits, preventing Denial of Service (DoS) via array-based query batching.",
   "references": {
-    "Wallarm": "https://lab.wallarm.com/graphql-batching-attack/"
+    "Wallarm": "https://medium.com/@instatunnel/graphql-batching-attacks-how-100-queries-become-10-000-database-calls-156fb3b2da1c"
   },
   "privacy_issue": false,
   "security_issue": true,

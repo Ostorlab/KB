@@ -3,7 +3,7 @@
   "title": "Protected Against GraphQL Alias Brute Forcing",
   "short_description": "The GraphQL API enforces alias limits, preventing credential brute-forcing via aliases.",
   "references": {
-    "Wallarm": "https://lab.wallarm.com/graphql-batching-attack/",
+    "Wallarm": "https://medium.com/@instatunnel/graphql-batching-attacks-how-100-queries-become-10-000-database-calls-156fb3b2da1c",
     "OWASP Authentication Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
   },
   "privacy_issue": false,
