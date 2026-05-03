@@ -1,1 +1,0 @@
-The GraphQL API implements secure debug practices with production-environment controls and sanitized error handling, preventing sensitive information leakage while maintaining debuggability in development environments.

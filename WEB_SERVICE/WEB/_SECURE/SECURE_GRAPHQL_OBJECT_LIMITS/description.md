@@ -1,1 +1,0 @@
-The GraphQL API is protected against object limit overriding through strict query complexity analysis and pagination enforcement, preventing resource exhaustion attacks.

@@ -1,5 +1,0 @@
-pytest
-pytest-cov
-pytest-mock
-pyfakefs
-types-requests

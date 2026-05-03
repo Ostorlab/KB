@@ -1,1 +1,0 @@
-The application collects and stores users' location history over time, but the privacy policy does not clearly disclose this. Collection of location history can create a detailed profile of users' movements, activities, and routines, making it highly sensitive. Failure to inform users about this practice can be misleading and may violate privacy regulations.

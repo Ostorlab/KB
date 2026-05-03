@@ -1,1 +1,0 @@
-The application's privacy policy adequately mentions the collection of relevant personal identifiers (such as User IDs, Device IDs, IP addresses, or Advertising IDs).

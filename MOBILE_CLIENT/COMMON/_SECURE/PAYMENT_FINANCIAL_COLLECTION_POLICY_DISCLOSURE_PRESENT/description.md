@@ -1,1 +1,0 @@
-The application's privacy policy states that it collects payment or financial information.

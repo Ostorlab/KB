@@ -1,1 +1,0 @@
-The GraphQL API is protected against Circular Fragment attacks through depth limits and static analysis, preventing infinite recursion and server resource exhaustion.

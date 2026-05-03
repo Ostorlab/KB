@@ -1,1 +1,0 @@
-The GraphQL API implements secure tracing practices with production-environment controls, preventing sensitive information leakage while maintaining debuggability in development environments.

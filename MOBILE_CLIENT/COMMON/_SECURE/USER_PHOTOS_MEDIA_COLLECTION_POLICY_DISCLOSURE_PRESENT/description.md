@@ -1,1 +1,0 @@
-The application's privacy policy states that it accesses or collects user media.

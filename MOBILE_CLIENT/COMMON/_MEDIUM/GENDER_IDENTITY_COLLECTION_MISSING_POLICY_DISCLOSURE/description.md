@@ -1,1 +1,0 @@
-The application collects gender identity information, but the privacy policy fails to disclose this. Gender identity can be sensitive personal information. Not informing users about this collection can be misleading and may violate privacy regulations that often require specific consent and safeguards for such data.
