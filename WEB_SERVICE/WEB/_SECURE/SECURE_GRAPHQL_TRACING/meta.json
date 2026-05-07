@@ -1,0 +1,12 @@
+{
+  "risk_rating": "secure",
+  "title": "Protected Against GraphQL Tracing Risks",
+  "short_description": "The GraphQL API implements production-safe tracing controls and secure monitoring practices, preventing information leakage.",
+  "references": {
+    "GraphQL": "https://graphql-ruby.org/queries/tracing",
+    "Apollo Tracing Best Practices": "https://www.apollographql.com/docs/apollo-server/monitoring/metrics/"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {}
+}

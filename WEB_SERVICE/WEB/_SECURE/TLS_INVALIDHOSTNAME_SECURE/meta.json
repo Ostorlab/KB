@@ -1,0 +1,10 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Application performs proper server certificate validation.",
+  "references": {
+    "Properly verify server certificate on SSL/TLS (CERT Secure Coding)": "https://www.keyfactor.com/education-center/how-to-check-ssl-certificate/"
+  },
+  "title": "Secure TLS certificate validation",
+  "privacy_issue": false,
+  "security_issue": true
+}

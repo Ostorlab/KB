@@ -1,0 +1,12 @@
+{
+  "risk_rating": "secure",
+  "title": "Protected Against HTTP Method Manipulation",
+  "short_description": "The GraphQL API strictly enforces POST-only mutations and rejects GET-based operations, preventing sensitive data exposure.",
+  "references": {
+    "OWASP GraphQL Security": "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html",
+    "RFC 9110 (HTTP Semantics)": "https://www.rfc-editor.org/rfc/rfc9110.html"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {}
+}

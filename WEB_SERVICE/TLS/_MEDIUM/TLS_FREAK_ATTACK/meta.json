@@ -1,0 +1,29 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Support for export-grade RSA encryption allowing downgrade attacks and cryptographic factoring of weak 512-bit keys.",
+  "references": {
+    "CVE-2015-0204": "https://nvd.nist.gov/vuln/detail/CVE-2015-0204",
+    "FREAK Attack Site": "https://freakattack.com/",
+    "Technical Analysis": "https://blog.cryptographyengineering.com/2015/03/attack-of-week-freak-or-factoring-nsa.html"
+  },
+  "title": "FREAK Attack on Export-Grade RSA",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_1",
+      "REQ_6_2",
+      "REQ_11_3"
+    ]
+  }
+}

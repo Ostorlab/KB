@@ -1,0 +1,43 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "The Bleichenbacher Attack targets vulnerabilities in RSA PKCS #1 v1.5 padding, allowing attackers to decrypt messages without needing the private key.",
+  "references": {
+    "Bleichenbacher Attack Explained": "https://medium.com/@c0D3M/bleichenbacher-attack-explained-bc630f88ff25",
+    "Bleichenbacher's Oracle Threat": "https://robotattack.org/"
+  },
+  "title": "Bleichenbacher Attack on RSA Encryption",
+  "privacy_issue": true,
+  "security_issue": true,
+    "categories": {
+    "SOC2_CONTROLS": [
+      "CC_3_4",
+      "CC_6_7",
+      "CC_7_1"
+    ],
+    "OWASP_MASVS_L1": [
+      "MSTG_CRYPTO_4"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CRYPTO_4"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_CRYPTO_1",
+      "MASVS_CRYPTO_2"
+    ],
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "GDPR": [
+      "ART_25",
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_3_7",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_11_3"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+An expired SSL/TLS certificate is no longer trusted by modern browsers and clients, resulting in broken trust chains, security warnings, and exposure to several potential security vulnerabilities, such as man-in-the-middle (MitM) attacks.
+
+When a certificate expires, browsers display prominent security warnings like "Your connection is not private" or "Certificate has expired." These warnings disrupt secure communication between the client and the server, directly affecting user trust and business continuity. In e-commerce and other sensitive environments, this often leads to user abandonment, financial losses, and reputational harm.
+
+The security risks of an expired certificate extend beyond user impact. Attackers can exploit the absence of a valid certificate to perform MitM attacks, intercepting or altering sensitive data during transmission. Without a valid certificate to authenticate the server, encrypted communications lose their protection, leaving data vulnerable to interception, modification, or forgery.
+
+For example, a website with an expired certificate can no longer ensure the confidentiality and integrity of user data. An attacker may impersonate the website and intercept login credentials or payment information by spoofing the connection, leading to unauthorized access or financial fraud.
+
+Expired certificates also represent non-compliance with several security standards, including PCI DSS, HIPAA, and GDPR. These regulations require valid SSL/TLS certificates to protect sensitive data. Failure to comply could lead to legal penalties and further reputational damage.

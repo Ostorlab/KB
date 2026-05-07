@@ -1,0 +1,32 @@
+
+{
+"risk_rating": "medium",
+"short_description": "The application is vulnerable to insecure TLS certificate validation, which could lead to man-in-the-middle (MITM) attacks and sensitive information exposure. This includes accepting certificates with expired dates, self-signed certificates, invalid hostnames, untrusted root certificates, and revoked certificates.",
+"references": {
+  "Properly verify server certificate on SSL/TLS (CERT Secure Coding)": "https://www.keyfactor.com/education-center/how-to-check-ssl-certificate/",
+  "OWASP: Testing for SSL-TLS OWASP": "https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/01-Testing_for_Weak_SSL_TLS_Ciphers_Insufficient_Transport_Layer_Protection"
+},
+"title": "Insecure TLS Certificate Validation",
+"cvss_v3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+"privacy_issue": false,
+"security_issue": true,
+"categories": {
+    "PCI_STANDARDS":[
+      "REQ_2_2",
+      "REQ_4_2",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_11_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_6_7",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ]
+  }
+}

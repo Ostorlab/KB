@@ -1,0 +1,1 @@
+Update your application's privacy policy to clearly explain how user credentials and authentication-related data are handled. Specify the security measures in place to protect this information, such as password hashing and salting, secure storage of tokens, and use of HTTPS.

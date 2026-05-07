@@ -1,0 +1,1 @@
+The application's privacy policy states that it collects and stores users' location history.

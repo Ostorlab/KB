@@ -1,0 +1,1 @@
+The application collects data about how users interact with it, such as features used, session duration, crash reports, or performance metrics, but the privacy policy does not clearly disclose this. If this usage data can be linked to an individual, it is considered personal information. Failure to inform users can be misleading and may violate privacy regulations.

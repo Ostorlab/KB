@@ -1,0 +1,1 @@
+The application collects information relating to criminal convictions or offences, but the privacy policy does not disclose this. This type of data is subject to very strict controls under privacy regulations like GDPR Article 10. Failure to inform users and adhere to specific legal grounds for processing this data is a serious violation and can have severe consequences.

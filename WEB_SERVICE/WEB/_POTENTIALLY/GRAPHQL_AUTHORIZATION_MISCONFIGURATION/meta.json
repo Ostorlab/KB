@@ -1,0 +1,27 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "Broken graphQl authorization allowing attackers to query sensitive data.",
+  "references": {
+    "Exploiting a broken access control vulnerability on GraphQL (Vaadata Blog)": "https://www.vaadata.com/blog/exploiting-a-broken-access-control-vulnerability-on-graphql/"
+  },
+  "title": "GraphQL Authorization Misconfiguration",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "CCPA": [
+      "CCPA_1798_150"
+    ],
+    "CWE_TOP_25": [
+      "CWE_862"
+    ],
+    "OWASP_ASVS_L3": [
+      "V1_2_4",
+      "V4_1_3",
+      "V13_4_1",
+      "V13_4_2"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_6_3"
+    ]
+  }
+}

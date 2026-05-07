@@ -1,0 +1,11 @@
+{
+  "risk_rating": "info",
+  "short_description": "Detailed roadmap of GraphQL schema navigation, showcasing types potential paths.",
+  "references": {
+    "Exploiting a broken access control vulnerability on GraphQL (Vaadata Blog)": "https://www.vaadata.com/blog/exploiting-a-broken-access-control-vulnerability-on-graphql/",
+    "GraphQL API vulnerabilities (PortSwigger)": "https://portswigger.net/web-security/graphql"
+  },
+  "title": "GraphQL Schema Traversal Paths",
+  "privacy_issue": false,
+  "security_issue": false
+}

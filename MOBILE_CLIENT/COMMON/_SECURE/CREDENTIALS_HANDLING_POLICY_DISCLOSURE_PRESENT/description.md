@@ -1,0 +1,1 @@
+The application's privacy policy describes how user credentials are handled.

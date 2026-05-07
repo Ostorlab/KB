@@ -1,0 +1,1 @@
+The application collects information about users' browsing activity, such as websites visited or content viewed, but the privacy policy does not clearly disclose this. Browsing activity can reveal personal interests and habits, and if linked to an individual, is considered personal information. Failure to inform users can be misleading and may violate privacy regulations.

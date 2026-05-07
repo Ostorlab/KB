@@ -1,0 +1,11 @@
+{
+  "risk_rating": "secure",
+  "title": "Protected Against GraphQL Field Duplication",
+  "short_description": "The GraphQL API enforces field duplication limits and query complexity analysis, preventing Denial of Service (DoS) attacks.",
+  "references": {
+    "Sylhare": "https://sylhare.github.io/2024/04/19/Graphql-vulnerabilities.html"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {}
+}

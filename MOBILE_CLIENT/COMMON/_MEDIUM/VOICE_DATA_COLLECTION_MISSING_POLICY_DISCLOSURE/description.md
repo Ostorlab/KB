@@ -1,0 +1,1 @@
+The application collects voice data or audio recordings from users, but the privacy policy does not clearly disclose this. Voice data can be personal and, if used for unique identification, may be considered biometric data. Failure to inform users about this collection can be misleading and may violate privacy regulations that require transparency and consent.

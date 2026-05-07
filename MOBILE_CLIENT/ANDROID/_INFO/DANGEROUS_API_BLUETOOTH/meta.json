@@ -1,0 +1,10 @@
+{
+  "risk_rating": "info",
+  "short_description": "List of Bluetooth and BLE API calls",
+  "references": {
+    "Guide to Android Bluetooth Low Energy": "https://punchthrough.com/android-ble-guide/"
+  },
+  "title": "Call to Bluetooth and BLE API",
+  "privacy_issue": false,
+  "security_issue": true
+}

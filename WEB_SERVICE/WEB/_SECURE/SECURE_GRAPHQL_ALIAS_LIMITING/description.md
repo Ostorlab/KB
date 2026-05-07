@@ -1,0 +1,1 @@
+The GraphQL API is protected against Alias Overloading attacks through the use of strict alias limits and query execution timeouts, ensuring that malicious or overly complex queries cannot exhaust server resources.

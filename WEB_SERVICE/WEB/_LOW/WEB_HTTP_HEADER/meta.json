@@ -1,0 +1,30 @@
+{
+  "risk_rating": "low",
+  "short_description": "The application header setting is either missing or setting insecure or unsafe header values.",
+  "references": {
+    "OWASP HTTP Header Security": "https://owasp.org/www-project-secure-headers/",
+    "Content Security Policy (MDN)": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
+    "X-Frame-Options (MDN)": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
+  },
+  "title": "Insecure HTTP Header Setting",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V5_1_3",
+      "V14_5_3"
+    ],
+    "OWASP_ASVS_L2": [
+      "V5_1_3",
+      "V14_5_3"
+    ],
+    "OWASP_ASVS_L3": [
+      "V5_1_3",
+      "V14_5_3"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
+    ]
+  }
+}

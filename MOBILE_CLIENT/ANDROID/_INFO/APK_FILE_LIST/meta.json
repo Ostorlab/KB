@@ -1,0 +1,11 @@
+{
+  "risk_rating": "info",
+  "short_description": "List of all files shipped in the application.",
+  "references": {
+    "Guide to app architecture (Android Developer)": "https://developer.android.com/topic/architecture",
+    "Android Application Package (Wikipedia)": "https://en.wikipedia.org/wiki/Android_application_package"
+  },
+  "title": "APK files list",
+  "privacy_issue": false,
+  "security_issue": false
+}

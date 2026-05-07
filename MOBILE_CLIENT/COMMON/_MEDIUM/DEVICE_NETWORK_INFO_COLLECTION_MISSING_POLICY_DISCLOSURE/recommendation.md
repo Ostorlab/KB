@@ -1,0 +1,1 @@
+Update your application's privacy policy to explicitly state the types of device and network information collected. Clearly describe the purposes for this collection (e.g., app functionality, security, analytics, personalization), how the data is used, stored, and its retention period. Ensure transparency with users regarding this data collection.

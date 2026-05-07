@@ -1,0 +1,1 @@
+The application accesses or collects user photos, videos, or other media files, but the privacy policy does not clearly disclose this. User media can be highly personal and sensitive. Failure to inform users about how their media files are accessed or collected can be misleading and may violate privacy regulations that require transparency and user consent for such processing.

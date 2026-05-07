@@ -1,0 +1,1 @@
+The GraphQL API is protected against circular reference attacks through strict depth limiting and schema design, preventing infinite recursion and server resource exhaustion.

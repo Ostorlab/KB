@@ -1,0 +1,1 @@
+The GraphQL API is protected against Field Duplication attacks through strict limits on repeated fields and query complexity checks, preventing server resource exhaustion.

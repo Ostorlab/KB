@@ -1,0 +1,28 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "Application is compiled with `DevSettingsActivity` developer activity exposed.",
+  "references": {
+    "Integration with Existing Apps": "https://michalchudziak.dev/blog/integration-with-existing-apps-android"
+  },
+  "title": "Facebook React development settings exposed",
+  "cvss_v3_vector": "",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_ARCH_1",
+      "MSTG_CODE_4"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_ARCH_1",
+      "MSTG_CODE_4"
+    ],
+    "PCI_STANDARDS":[
+      "REQ_2_2",
+      "REQ_6_2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_3"
+    ]
+  }
+}

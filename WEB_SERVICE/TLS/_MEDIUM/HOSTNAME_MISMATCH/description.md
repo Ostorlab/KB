@@ -1,0 +1,10 @@
+A hostname mismatch occurs when the domain name specified in an SSL/TLS certificate does not match the actual hostname of the server it is protecting. This mismatch leads to security warnings in browsers and can expose the connection to potential vulnerabilities, including man-in-the-middle (MitM) attacks.
+
+When a browser or client connects to a website, it checks whether the domain name matches the Common Name (CN) or any of the Subject Alternative Name (SAN) fields in the certificate. If there is a mismatch between the hostname and the certificate, browsers issue security warnings like “Your connection is not private,” which can discourage users from proceeding and damage user trust. These warnings, if ignored, put users at risk of connecting to a malicious site.
+
+One critical security risk of a hostname mismatch is the potential for MitM attacks. In this scenario, an attacker could present a valid certificate for a different domain, creating the illusion of a secure connection while intercepting or tampering with the communication. Such attacks are particularly problematic when users overlook security warnings and continue to the site despite the mismatch.
+
+Hostname mismatches can also result from improper configuration of wildcard certificates or failing to include relevant subdomains in the certificate. For example, if a wildcard certificate for *.example.com is used on a subdomain not covered by the wildcard (such as sub.example.org), this would trigger a mismatch and security warnings.
+
+**Real-World Implications:**
+Consider a corporate intranet that uses a certificate issued for a different domain name. Employees attempting to access the site would be met with security warnings in their browsers, potentially hindering productivity. Over time, repeated exposure to these warnings might lead users to become desensitized to such alerts, increasing the risk of future security breaches.

@@ -1,0 +1,1 @@
+The application's privacy policy states that it accesses or collects information from users' external accounts.

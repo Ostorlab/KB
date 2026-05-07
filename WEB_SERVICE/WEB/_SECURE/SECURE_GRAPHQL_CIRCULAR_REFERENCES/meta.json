@@ -1,0 +1,11 @@
+{
+  "risk_rating": "secure",
+  "title": "Protected Against GraphQL Circular References",
+  "short_description": "The GraphQL API implements query depth limits and circular reference prevention, mitigating Denial of Service (DoS) risks.",
+  "references": {
+    "imperva": "https://www.imperva.com/blog/graphql-vulnerabilities-common-attacks/#circular-queries"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {}
+}

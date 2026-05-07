@@ -1,0 +1,1 @@
+The GraphQL API is protected against Directive Overloading attacks through strict limits on directives per query and execution timeouts, preventing server resource exhaustion.

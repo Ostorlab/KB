@@ -1,0 +1,11 @@
+{
+  "risk_rating": "secure",
+  "title": "Protected Against GraphQL Object Limit Overriding",
+  "short_description": "The GraphQL API enforces strict query complexity analysis and object limits, preventing DoS via limit manipulation.",
+  "references": {
+    "OWASP GraphQL Security Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {}
+}

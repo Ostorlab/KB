@@ -1,0 +1,13 @@
+{
+  "risk_rating": "secure",
+  "title": "Protected Against GraphQL Alias Overloading",
+  "short_description": "The GraphQL API enforces alias limits and query timeouts, preventing Denial of Service (DoS) via alias overloading.",
+  "references": {
+    "Beagle Security": "https://beaglesecurity.com/blog/article/graphql-attacks-vulnerabilities.html",
+    "Sylhare": "https://sylhare.github.io/2024/04/19/Graphql-vulnerabilities.html"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+  }
+}

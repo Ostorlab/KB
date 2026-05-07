@@ -1,0 +1,12 @@
+{
+  "risk_rating": "secure",
+  "title": "Protected Against GraphQL Circular Fragments",
+  "short_description": "The GraphQL API implements fragment depth limits and circular reference detection, preventing Denial of Service (DoS) via circular fragments.",
+  "references": {
+    "Circular Fragment Exploitation in GraphQL with BurpSuite": "https://medium.com/@laur.telliskivi/circular-fragment-exploitation-in-graphql-with-burpsuite-42c490ecab98",
+    "Managing Circular Imports in GraphQL Modules": "https://the-guild.dev/blog/manage-circular-imports-hell-in-graphql-modules"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {}
+}

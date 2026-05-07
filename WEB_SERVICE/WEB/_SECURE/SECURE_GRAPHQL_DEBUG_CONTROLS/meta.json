@@ -1,0 +1,13 @@
+{
+  "risk_rating": "secure",
+  "title": "Protected Against GraphQL Debug Mode Risks",
+  "short_description": "The GraphQL API implements production-safe error handling and debug controls, preventing sensitive information leakage.",
+  "references": {
+    "OWASP Error Handling": "https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html",
+    "Apollo Production Error Handling": "https://www.apollographql.com/docs/apollo-server/data/errors/#masking-and-logging-errors",
+    "Django Security Settings": "https://docs.djangoproject.com/en/stable/topics/security/"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {}
+}
