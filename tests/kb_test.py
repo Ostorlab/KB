@@ -6,6 +6,8 @@ import pathlib
 import datetime
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 import pytest
 
 TIMEOUT = datetime.timedelta(seconds=60)
@@ -1280,6 +1282,17 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
         "Accept-Language": "en-US,en;q=0.5",
     }
 
+    session = requests.Session()
+    retry_strategy = Retry(
+        total=3,
+        backoff_factor=1,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["GET"],
+    )
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+
     for meta_file in json_files:
         with open(meta_file, "r", encoding="utf-8") as file:
             data = json.load(file)
@@ -1293,7 +1306,7 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
                     invalid_urls.add(url)
             else:
                 try:
-                    response = requests.get(
+                    response = session.get(
                         url, headers=headers, timeout=TIMEOUT.total_seconds()
                     )
                     is_valid = response.status_code < 404
