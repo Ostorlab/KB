@@ -21,7 +21,9 @@
       "CC_7_2"
     ],
     "HIPAA_CONTROLS": [
-      "164.308(a)(1)(ii)(B)"
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
     ]
   }
 }
