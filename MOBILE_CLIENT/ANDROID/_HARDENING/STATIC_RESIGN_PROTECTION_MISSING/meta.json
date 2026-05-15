@@ -1,13 +1,9 @@
 {
-  "risk_rating": "medium",
+  "risk_rating": "hardening",
   "short_description": "The application does not verify its signing certificate at runtime.",
   "title": "Missing Signature Verification",
   "privacy_issue": false,
   "security_issue": true,
-  "targeted_by_malware": true,
-  "targeted_by_ransomware": false,
-  "targeted_by_nation_state": false,
-  "has_public_exploit": false,
   "references": {
     "OWASP MASTG - Testing File Integrity Checks (MASTG-TEST-0047)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0047/",
     "OWASP MASVS - MASVS-RESILIENCE-1": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-1/"
