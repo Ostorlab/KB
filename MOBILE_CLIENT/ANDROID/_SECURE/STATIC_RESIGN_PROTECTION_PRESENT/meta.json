@@ -1,0 +1,35 @@
+{
+  "risk_rating": "secure",
+  "short_description": "The application correctly detects re-signing with a different certificate.",
+  "title": "Signature Verification Implemented",
+  "privacy_issue": false,
+  "security_issue": true,
+  "targeted_by_malware": false,
+  "targeted_by_ransomware": false,
+  "targeted_by_nation_state": false,
+  "has_public_exploit": false,
+  "references": {
+    "OWASP MASTG - Testing File Integrity Checks (MASTG-TEST-0047)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0047/",
+    "OWASP MASVS - MASVS-RESILIENCE-1": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-1/"
+  },
+  "categories": {
+    "OWASP_MASVS_RESILIENCE": [
+      "MSTG_RESILIENCE_3"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_1"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
+    ]
+  }
+}

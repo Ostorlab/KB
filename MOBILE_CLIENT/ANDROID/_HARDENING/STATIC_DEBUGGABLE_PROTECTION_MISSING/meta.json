@@ -1,0 +1,32 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "The application does not detect or respond to the android:debuggable flag being enabled.",
+  "title": "Missing Debuggable Flag Detection",
+  "privacy_issue": false,
+  "security_issue": true,
+  "references": {
+    "OWASP MASTG - Testing whether the App is Debuggable (MASTG-TEST-0039)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0039/",
+    "OWASP MASVS - MASVS-RESILIENCE-2": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-2/",
+    "Android Developers - android:debuggable security risks": "https://developer.android.com/privacy-and-security/risks/android-debuggable"
+  },
+  "categories": {
+    "OWASP_MASVS_RESILIENCE": [
+      "MSTG_RESILIENCE_2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_2"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
+    ]
+  }
+}
