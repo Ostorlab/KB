@@ -21,8 +21,7 @@
     ],
     "PCI_STANDARDS": [
       "REQ_6_2",
-      "REQ_6_3",
-      "REQ_6_5"
+      "REQ_6_3"
     ],
     "SOC2_CONTROLS": [
       "CC_7_1",
