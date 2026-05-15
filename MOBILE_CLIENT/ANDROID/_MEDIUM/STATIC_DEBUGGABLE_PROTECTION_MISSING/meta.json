@@ -9,9 +9,9 @@
   "targeted_by_nation_state": false,
   "has_public_exploit": false,
   "references": {
-    "OWASP MASTG - Testing Anti-Debugging Detection (MASTG-TEST-0046)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0046/",
+    "OWASP MASTG - Testing whether the App is Debuggable (MASTG-TEST-0039)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0039/",
     "OWASP MASVS - MASVS-RESILIENCE-2": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-2/",
-    "Android Developers - Debug your app": "https://developer.android.com/studio/debug"
+    "Android Developers - android:debuggable security risks": "https://developer.android.com/privacy-and-security/risks/android-debuggable"
   },
   "categories": {
     "OWASP_MASVS_RESILIENCE": [
