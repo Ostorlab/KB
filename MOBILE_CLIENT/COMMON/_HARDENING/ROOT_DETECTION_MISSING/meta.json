@@ -1,0 +1,36 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "The application does not detect or respond to execution on a rooted/jailbroken device.",
+  "title": "Missing Root/Jailbreak Detection",
+  "privacy_issue": false,
+  "security_issue": true,
+  "references": {
+    "OWASP MASWE - Root/Jailbreak Detection Not Implemented (MASWE-0097)": "https://mas.owasp.org/MASWE/MASVS-RESILIENCE/MASWE-0097/",
+    "OWASP MASTG - Testing Root Detection (MASTG-TEST-0045)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0045/",
+    "OWASP MASTG - Testing Jailbreak Detection (MASTG-TEST-0088)": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0088/",
+    "OWASP MASTG - Implementing Root Detection (MASTG-BEST-0030)": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0030/",
+    "OWASP MASVS - MASVS-RESILIENCE-1": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-1/",
+    "Android Developers - Play Integrity API": "https://developer.android.com/google/play/integrity/overview",
+    "Apple Developer - Establishing your app's integrity (DeviceCheck / App Attest)": "https://developer.apple.com/documentation/devicecheck/establishing-your-app-s-integrity"
+  },
+  "categories": {
+    "OWASP_MASVS_RESILIENCE": [
+      "MSTG_RESILIENCE_1"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_1"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
+    ]
+  }
+}
