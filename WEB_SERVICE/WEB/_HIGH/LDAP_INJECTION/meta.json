@@ -4,7 +4,7 @@
   "references": {
     "OWASP": "https://owasp.org/www-community/attacks/LDAP_Injection",
     "OWASP cheatsheets": "https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html",
-    "Hacktricks": "https://book.hacktricks.xyz/pentesting-web/ldap-injection"
+    "Hacktricks": "https://hacktricks.wiki/en/pentesting-web/ldap-injection.html"
   },
   "title": "LDAP Injection",
   "privacy_issue": false,
