@@ -60,6 +60,9 @@
     "HIPAA_CONTROLS": [
       "PRIVACY114",
       "PRIVACY121"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M6_2024"
     ]
   }
 }

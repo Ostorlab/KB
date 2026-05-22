@@ -1,6 +1,6 @@
 {
   "risk_rating": "critical",
-  "short_description": "Dependency confusion is a new attack type that can lead to a full compromise of the application building environment, CI/CD pipelines, or developers’ workstations.",
+  "short_description": "Dependency confusion is a new attack type that can lead to a full compromise of the application building environment, CI/CD pipelines, or developers\u2019 workstations.",
   "references": {
     "Microsoft warns enterprises of new 'dependency confusion' attack technique": "https://www.zdnet.com/article/microsoft-warns-enterprises-of-new-dependency-confusion-attack-technique/",
     "Dependency Confusion: How I Hacked Into Apple, Microsoft and Dozens of Other Companies": "https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610",
@@ -16,7 +16,7 @@
     "OWASP_MASVS_L2": [
       "MSTG_CODE_5"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2",
       "REQ_6_3",
@@ -36,6 +36,9 @@
       "CC_7_5",
       "CC_8_1",
       "CC_9_1"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M2_2024"
     ]
   }
 }

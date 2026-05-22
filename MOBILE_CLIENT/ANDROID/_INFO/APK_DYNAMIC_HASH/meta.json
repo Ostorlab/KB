@@ -4,5 +4,10 @@
   "references": {},
   "title": "Recorded calls to Hash API",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M10_2024"
+    ]
+  }
 }

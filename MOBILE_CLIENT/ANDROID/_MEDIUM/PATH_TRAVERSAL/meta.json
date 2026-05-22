@@ -18,7 +18,7 @@
       "ART_5",
       "ART_32"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2",
       "REQ_6_3",
@@ -35,6 +35,9 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M9_2024"
     ]
   }
 }

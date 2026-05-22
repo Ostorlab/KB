@@ -9,5 +9,10 @@
   },
   "title": "APK attack surface",
   "privacy_issue": false,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M7_2024"
+    ]
+  }
 }

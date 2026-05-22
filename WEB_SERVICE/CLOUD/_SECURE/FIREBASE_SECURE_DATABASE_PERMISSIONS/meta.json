@@ -7,5 +7,10 @@
   },
   "title": "Secure Firebase Database Permissions",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_TOP_10": [
+      "A01_2021"
+    ]
+  }
 }

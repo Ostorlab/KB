@@ -8,5 +8,9 @@
   },
   "privacy_issue": false,
   "security_issue": true,
-  "categories": {}
+  "categories": {
+    "OWASP_TOP_10": [
+      "A05_2021"
+    ]
+  }
 }

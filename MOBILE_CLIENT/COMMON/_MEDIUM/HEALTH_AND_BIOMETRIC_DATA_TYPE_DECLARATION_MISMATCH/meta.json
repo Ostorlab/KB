@@ -55,6 +55,9 @@
     ],
     "CNIL_FOR_EDITORS": [
       "EDITORS_1_2_5"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M6_2024"
     ]
   }
 }

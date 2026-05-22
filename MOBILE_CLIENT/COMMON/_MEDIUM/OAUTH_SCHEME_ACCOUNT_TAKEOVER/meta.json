@@ -23,7 +23,7 @@
       "MSTG_NETWORK_5",
       "MSTG_STORAGE_6"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2",
       "REQ_6_3",
@@ -34,10 +34,10 @@
       "MASVS_PLATFORM_1"
     ],
     "HIPAA_CONTROLS": [
-        "SECURITY221",
-        "SECURITY212",
-        "SECURITY213",
-        "SECURITY252"
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY252"
     ],
     "SOC2_CONTROLS": [
       "CC_2_1",
@@ -47,6 +47,9 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M3_2024"
     ]
   }
 }

@@ -41,6 +41,9 @@
     "HIPAA_CONTROLS": [
       "SECURITY212",
       "SECURITY213"
+    ],
+    "OWASP_TOP_10": [
+      "A05_2021"
     ]
   }
 }
