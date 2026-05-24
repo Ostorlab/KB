@@ -29,6 +29,8 @@ CATEGORY_GROUPS = [
     "CNIL_FOR_DEVELOPERS",
     "CNIL_FOR_SDKS",
     "HIPAA_CONTROLS",
+    "OWASP_TOP_10",
+    "OWASP_MOBILE_TOP_10",
 ]
 
 OWASP_MASVS_L1 = [
@@ -1128,6 +1130,32 @@ CNIL_FOR_SDKS = [
     "SDKS_4_3_2",
 ]
 
+OWASP_TOP_10 = [
+    "A01_2021",
+    "A02_2021",
+    "A03_2021",
+    "A04_2021",
+    "A05_2021",
+    "A06_2021",
+    "A07_2021",
+    "A08_2021",
+    "A09_2021",
+    "A10_2021",
+]
+
+OWASP_MOBILE_TOP_10 = [
+    "M1_2024",
+    "M2_2024",
+    "M3_2024",
+    "M4_2024",
+    "M5_2024",
+    "M6_2024",
+    "M7_2024",
+    "M8_2024",
+    "M9_2024",
+    "M10_2024",
+]
+
 
 def testJsonFiles_allFilesAreValid_testPasses() -> None:
     path = pathlib.Path(__file__).parent.parent
@@ -1222,6 +1250,8 @@ def testMetaFiles_always_namesOfTheTitlesShouldAllBeUnique() -> None:
         ("CNIL_FOR_EDITORS", CNIL_FOR_EDITORS),
         ("CNIL_FOR_DEVELOPERS", CNIL_FOR_DEVELOPERS),
         ("CNIL_FOR_SDKS", CNIL_FOR_SDKS),
+        ("OWASP_TOP_10", OWASP_TOP_10),
+        ("OWASP_MOBILE_TOP_10", OWASP_MOBILE_TOP_10),
     ],
 )
 def testJsonFiles_allFilesHaveCorrectCategories_testPasses(

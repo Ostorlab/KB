@@ -15,6 +15,9 @@
       "PRIVACY114",
       "PRIVACY121",
       "PRIVACY122"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M6_2024"
     ]
   }
 }

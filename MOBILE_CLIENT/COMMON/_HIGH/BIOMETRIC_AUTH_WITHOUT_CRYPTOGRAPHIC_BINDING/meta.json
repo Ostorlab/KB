@@ -23,6 +23,9 @@
       "SECURITY212",
       "SECURITY213",
       "SECURITY251"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M3_2024"
     ]
   }
 }

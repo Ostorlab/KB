@@ -22,6 +22,9 @@
     "HIPAA_CONTROLS": [
       "SECURITY212",
       "SECURITY215"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M6_2024"
     ]
   }
 }

@@ -31,6 +31,9 @@
     ],
     "CNIL_FOR_DEVELOPERS": [
       "DEVELOPERS_4_3_1"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M2_2024"
     ]
   }
 }

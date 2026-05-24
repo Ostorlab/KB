@@ -29,6 +29,9 @@
     ],
     "CNIL_FOR_DEVELOPERS": [
       "DEVELOPERS_4_1_4"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M8_2024"
     ]
   }
 }

@@ -4,5 +4,10 @@
   "references": {},
   "title": "Calls to Privacy API",
   "privacy_issue": true,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M6_2024"
+    ]
+  }
 }

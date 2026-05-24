@@ -29,6 +29,9 @@
     "PCI_STANDARDS": [
       "REQ_4_1",
       "REQ_6_2"
+    ],
+    "OWASP_TOP_10": [
+      "A02_2021"
     ]
   }
 }

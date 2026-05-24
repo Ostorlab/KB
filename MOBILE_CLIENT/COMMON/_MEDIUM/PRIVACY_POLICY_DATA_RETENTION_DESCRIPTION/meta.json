@@ -60,6 +60,9 @@
     "HIPAA_CONTROLS": [
       "DOCUMENTATION512",
       "PRIVACY122"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M6_2024"
     ]
   }
 }

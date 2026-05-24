@@ -2,7 +2,7 @@
   "risk_rating": "secure",
   "short_description": "Privacy policy mentions the rights under GDPR for users in the EU",
   "references": {
-    "GDPR": "https://gdpr.eu/",
+    "GDPR": "https://gdpr-info.eu/",
     "EU Data Protection Authorities": "https://edpb.europa.eu/",
     "Android Privacy Guidelines": "https://developer.android.com/privacy-and-security/about",
     "Privacy Policies for Mobile Apps": "https://www.privacypolicies.com/blog/mobile-apps-privacy-policy/",
@@ -16,6 +16,9 @@
     "HIPAA_CONTROLS": [
       "PRIVACY121",
       "PRIVACY122"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M6_2024"
     ]
   }
 }

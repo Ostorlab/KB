@@ -10,5 +10,9 @@
   "cvss_v3_vector": "",
   "privacy_issue": true,
   "security_issue": false,
-  "categories": {}
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M6_2024"
+    ]
+  }
 }

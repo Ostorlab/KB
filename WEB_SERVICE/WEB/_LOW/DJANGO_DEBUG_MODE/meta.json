@@ -25,6 +25,9 @@
       "SECURITY212",
       "SECURITY213",
       "SECURITY255"
+    ],
+    "OWASP_TOP_10": [
+      "A05_2021"
     ]
   }
 }

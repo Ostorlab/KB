@@ -6,5 +6,10 @@
   },
   "title": "Secure Virustotal malware analysis (MD5 based search)",
   "privacy_issue": false,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M10_2024"
+    ]
+  }
 }

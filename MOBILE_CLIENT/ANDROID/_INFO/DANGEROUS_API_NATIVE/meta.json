@@ -7,5 +7,10 @@
   },
   "title": "Call to native methods",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M7_2024"
+    ]
+  }
 }

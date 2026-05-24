@@ -7,5 +7,10 @@
   },
   "title": "Secure Cookie Implementation",
   "privacy_issue": false,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_TOP_10": [
+      "A05_2021"
+    ]
+  }
 }

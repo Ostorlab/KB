@@ -1,9 +1,13 @@
 {
   "risk_rating": "info",
   "short_description": "List of TLS API calls",
-  "references": {
-  },
+  "references": {},
   "title": "Call to TLS API",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M5_2024"
+    ]
+  }
 }
