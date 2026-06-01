@@ -22,7 +22,7 @@
       "MASVS_RESILIENCE_3",
       "MASVS_RESILIENCE_4"
     ],
-    "OWASP_ASVS_L2": [
+    "OWASP_ASVS_L3": [
       "V10_1_1",
       "V10_2_3"
     ]
