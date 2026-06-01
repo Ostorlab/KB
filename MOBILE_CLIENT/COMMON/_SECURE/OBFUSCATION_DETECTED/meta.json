@@ -3,7 +3,7 @@
   "short_description": "Code or resource obfuscation signals were detected in the application package.",
   "title": "Application Obfuscation Detected",
   "privacy_issue": false,
-  "security_issue": true,
+  "security_issue": false,
   "references": {
     "OWASP MASVS - MASVS-RESILIENCE-3": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-3/",
     "OWASP MASVS - Resilience Against Reverse Engineering and Tampering": "https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/",
