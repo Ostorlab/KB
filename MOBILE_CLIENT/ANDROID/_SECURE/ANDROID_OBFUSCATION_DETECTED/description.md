@@ -1,0 +1,3 @@
+Code obfuscation has been detected in the Android application. Obfuscation makes static analysis and reverse engineering more difficult by reducing the readability of classes, methods, strings, resources, and other implementation details that would otherwise help an attacker understand the application internals quickly.
+
+This is a resilience control rather than a guarantee of security. Obfuscation increases the effort required to analyze or modify the APK, but it should be combined with stronger protections such as signature validation, anti-tampering, anti-debugging, root detection, and server-side authorization checks.

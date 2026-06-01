@@ -1,0 +1,30 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "No obfuscation signals were detected in the iOS application package.",
+  "title": "iOS Obfuscation Not Detected",
+  "privacy_issue": false,
+  "security_issue": true,
+  "references": {
+    "OWASP MASTG - iOS Obfuscation (MASTG-KNOW-0089)": "https://mas.owasp.org/MASTG/knowledge/ios/MASVS-RESILIENCE/MASTG-KNOW-0089/",
+    "OWASP MASTG - Testing Obfuscation (MASTG-TEST-0093)": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0093/",
+    "OWASP MASVS - MASVS-RESILIENCE-3": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-3/",
+    "Apple Developer - Reducing Your App's Size": "https://developer.apple.com/documentation/xcode/reducing-your-app-s-size"
+  },
+  "categories": {
+    "OWASP_MASVS_RESILIENCE": [
+      "MSTG_RESILIENCE_4",
+      "MSTG_RESILIENCE_9",
+      "MSTG_RESILIENCE_11",
+      "MSTG_RESILIENCE_12"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_2",
+      "MASVS_RESILIENCE_3",
+      "MASVS_RESILIENCE_4"
+    ],
+    "OWASP_ASVS_L3": [
+      "V10_1_1",
+      "V10_2_3"
+    ]
+  }
+}
