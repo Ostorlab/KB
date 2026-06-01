@@ -1,0 +1,38 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Code or resource obfuscation signals were detected in the application package.",
+  "title": "Application Obfuscation Detected",
+  "privacy_issue": false,
+  "security_issue": true,
+  "references": {
+    "OWASP MASVS - MASVS-RESILIENCE-3": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-3/",
+    "OWASP MASVS - Resilience Against Reverse Engineering and Tampering": "https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/",
+    "OWASP MASTG - Testing Obfuscation (MASTG-TEST-0051)": "https://mas.owasp.org/MASTG-TEST-0051/",
+    "OWASP MASTG - Android Obfuscation (MASTG-KNOW-0033)": "https://mas.owasp.org/MASTG/knowledge/android/MASVS-RESILIENCE/MASTG-KNOW-0033/",
+    "OWASP MASTG - iOS Obfuscation (MASTG-KNOW-0089)": "https://mas.owasp.org/MASTG/knowledge/ios/MASVS-RESILIENCE/MASTG-KNOW-0089/"
+  },
+  "categories": {
+    "OWASP_MASVS_RESILIENCE": [
+      "MSTG_RESILIENCE_9",
+      "MSTG_RESILIENCE_12"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_3"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M7_2024"
+    ]
+  }
+}

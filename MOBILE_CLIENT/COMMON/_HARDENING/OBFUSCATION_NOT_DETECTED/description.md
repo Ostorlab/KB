@@ -1,0 +1,3 @@
+No application obfuscation signals were detected in the package. This means the app may expose readable class names, method names, strings, resources, or structural metadata that make static analysis and reverse engineering materially easier for an attacker.
+
+When obfuscation is absent, adversaries can more quickly understand business logic, identify sensitive code paths, recover hardcoded constants, patch client-side checks, and repackage the application with malicious changes. This is primarily a resilience weakness: it does not by itself prove exploitable business impact, but it lowers the effort required to analyze and tamper with the app.

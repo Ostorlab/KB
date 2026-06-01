@@ -1,0 +1,3 @@
+Application obfuscation has been detected in the package. Obfuscation makes static analysis and reverse engineering more difficult by reducing the readability of symbols, control flow, strings, resources, or other implementation details that would otherwise help an attacker understand the application internals quickly.
+
+This is a resilience control rather than a standalone guarantee of security. Obfuscation raises the cost of reverse engineering and repackaging, but it should be combined with stronger protections such as signature validation, anti-tampering, root or jailbreak detection, backend-side authorization checks, and sound cryptographic design.
