@@ -12,11 +12,19 @@
   },
   "categories": {
     "OWASP_MASVS_RESILIENCE": [
+      "MSTG_RESILIENCE_4",
       "MSTG_RESILIENCE_9",
+      "MSTG_RESILIENCE_11",
       "MSTG_RESILIENCE_12"
     ],
     "OWASP_MASVS_v2_1": [
-      "MASVS_RESILIENCE_3"
+      "MASVS_RESILIENCE_2",
+      "MASVS_RESILIENCE_3",
+      "MASVS_RESILIENCE_4"
+    ],
+    "OWASP_ASVS_L2": [
+      "V10_1_1",
+      "V10_2_3"
     ]
   }
 }
