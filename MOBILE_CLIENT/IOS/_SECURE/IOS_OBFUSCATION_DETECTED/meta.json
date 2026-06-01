@@ -6,7 +6,7 @@
   "security_issue": false,
   "references": {
     "OWASP MASTG - iOS Obfuscation (MASTG-KNOW-0089)": "https://mas.owasp.org/MASTG/knowledge/ios/MASVS-RESILIENCE/MASTG-KNOW-0089/",
-    "OWASP MASTG - Testing Obfuscation (MASTG-TEST-0051)": "https://mas.owasp.org/MASTG-TEST-0051/",
+    "OWASP MASTG - Testing Obfuscation (MASTG-TEST-0093)": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0093/",
     "OWASP MASVS - MASVS-RESILIENCE-3": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-3/",
     "Apple Developer - Reducing Your App's Size": "https://developer.apple.com/documentation/xcode/reducing-your-app-s-size"
   },

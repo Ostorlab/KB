@@ -6,7 +6,7 @@
   "security_issue": false,
   "references": {
     "OWASP MASTG - Android Obfuscation (MASTG-KNOW-0033)": "https://mas.owasp.org/MASTG/knowledge/android/MASVS-RESILIENCE/MASTG-KNOW-0033/",
-    "OWASP MASTG - Testing Obfuscation (MASTG-TEST-0051)": "https://mas.owasp.org/MASTG-TEST-0051/",
+    "OWASP MASTG - Testing Obfuscation (MASTG-TEST-0051)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0051/",
     "OWASP MASVS - MASVS-RESILIENCE-3": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-3/",
     "Android Developers - Shrink, obfuscate, and optimize your app": "https://developer.android.com/build/shrink-code"
   },
