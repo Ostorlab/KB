@@ -1299,6 +1299,7 @@ def testJsonFiles_whenFileHasCategories_shouldBeValid() -> None:
             ]
 
 
+@pytest.mark.flaky(reruns=3, reruns_delay=2)
 def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
     """Ensure all URLs in the `references` field of meta.json files are valid across all groups"""
     base_path = pathlib.Path(__file__).parent.parent
