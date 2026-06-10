@@ -7,7 +7,9 @@
   "references": {
     "OWASP MASTG - Testing Reverse Engineering Tools Detection (MASTG-TEST-0048)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0048/",
     "OWASP MASVS - MASVS-RESILIENCE-4": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-4/",
-    "Frida - Dynamic Instrumentation Framework": "https://frida.re/"
+    "Frida - Dynamic Instrumentation Framework": "https://frida.re/",
+    "DetectFrida - Memory-to-disk comparison reference implementation": "https://github.com/darvincisec/DetectFrida",
+    "Frida Detection & Prevention (Approov)": "https://approov.io/knowledge/frida-detection-prevention"
   },
   "categories": {
     "OWASP_MASVS_RESILIENCE": [
