@@ -1,7 +1,7 @@
 {
   "risk_rating": "secure",
   "short_description": "The application detects and responds to Frida-based dynamic instrumentation on iOS.",
-  "title": "Frida Instrumentation Detection Implemented",
+  "title": "iOS Frida Instrumentation Detection Implemented",
   "privacy_issue": false,
   "security_issue": true,
   "references": {

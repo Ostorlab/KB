@@ -1,7 +1,7 @@
 {
   "risk_rating": "hardening",
   "short_description": "The application does not detect or respond to Frida-based dynamic instrumentation on iOS.",
-  "title": "Missing Frida Instrumentation Detection",
+  "title": "Missing iOS Frida Instrumentation Detection",
   "privacy_issue": false,
   "security_issue": true,
   "references": {
