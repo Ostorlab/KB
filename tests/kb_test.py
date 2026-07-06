@@ -31,6 +31,8 @@ CATEGORY_GROUPS = [
     "HIPAA_CONTROLS",
     "OWASP_TOP_10",
     "OWASP_MOBILE_TOP_10",
+    "OWASP_TOP_10_2025",
+    "OWASP_API_TOP_10",
 ]
 
 OWASP_MASVS_L1 = [
@@ -1156,6 +1158,32 @@ OWASP_MOBILE_TOP_10 = [
     "M10_2024",
 ]
 
+OWASP_TOP_10_2025 = [
+    "A01_2025",
+    "A02_2025",
+    "A03_2025",
+    "A04_2025",
+    "A05_2025",
+    "A06_2025",
+    "A07_2025",
+    "A08_2025",
+    "A09_2025",
+    "A10_2025",
+]
+
+OWASP_API_TOP_10 = [
+    "API1_2023",
+    "API2_2023",
+    "API3_2023",
+    "API4_2023",
+    "API5_2023",
+    "API6_2023",
+    "API7_2023",
+    "API8_2023",
+    "API9_2023",
+    "API10_2023",
+]
+
 
 def testJsonFiles_allFilesAreValid_testPasses() -> None:
     path = pathlib.Path(__file__).parent.parent
@@ -1252,6 +1280,8 @@ def testMetaFiles_always_namesOfTheTitlesShouldAllBeUnique() -> None:
         ("CNIL_FOR_SDKS", CNIL_FOR_SDKS),
         ("OWASP_TOP_10", OWASP_TOP_10),
         ("OWASP_MOBILE_TOP_10", OWASP_MOBILE_TOP_10),
+        ("OWASP_TOP_10_2025", OWASP_TOP_10_2025),
+        ("OWASP_API_TOP_10", OWASP_API_TOP_10),
     ],
 )
 def testJsonFiles_allFilesHaveCorrectCategories_testPasses(
