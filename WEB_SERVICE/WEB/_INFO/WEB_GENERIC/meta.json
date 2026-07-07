@@ -8,6 +8,9 @@
   "categories": {
     "OWASP_TOP_10": [
       "A04_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A04_2025"
     ]
   }
 }

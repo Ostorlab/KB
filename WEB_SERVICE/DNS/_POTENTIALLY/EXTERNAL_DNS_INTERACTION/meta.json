@@ -22,6 +22,12 @@
     ],
     "OWASP_TOP_10": [
       "A10_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A10_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API7_2023"
     ]
   },
   "SOC2_CONTROLS": [
