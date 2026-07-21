@@ -1,0 +1,64 @@
+{
+  "risk_rating": "high",
+  "short_description": "Credential secrets (passwords, TOTP seeds, TLS private keys, credit-card PAN/CVV, API keys and bearer tokens) are stored in plaintext at rest with no encryption layer, making them recoverable with zero cryptographic effort.",
+  "references": {
+    "CWE-312: Cleartext Storage of Sensitive Information": "https://cwe.mitre.org/data/definitions/312.html",
+    "CWE-313: Cleartext Storage in a File or on Disk": "https://cwe.mitre.org/data/definitions/313.html",
+    "CWE-256: Plaintext Storage of a Password": "https://cwe.mitre.org/data/definitions/256.html",
+    "OWASP Top 10 - A02:2021 Cryptographic Failures": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/",
+    "OWASP Cryptographic Storage Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html",
+    "OWASP Key Management Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html",
+    "PCI DSS Requirement 3 - Protect stored cardholder data": "https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard",
+    "NIST SP 800-132 - Password-Based Key Derivation": "https://csrc.nist.gov/publications/detail/sp/800-132/final"
+  },
+  "title": "Plaintext Credential Storage at Rest",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V8_2_1",
+      "V8_2_2",
+      "V8_2_3"
+    ],
+    "OWASP_ASVS_L2": [
+      "V1_5_2",
+      "V6_2_1",
+      "V6_2_2",
+      "V6_2_3"
+    ],
+    "OWASP_ASVS_L3": [
+      "V1_5_2",
+      "V6_2_1",
+      "V6_2_2",
+      "V6_2_3"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_3_1",
+      "REQ_3_2",
+      "REQ_3_4",
+      "REQ_3_5",
+      "REQ_3_6",
+      "REQ_3_7"
+    ],
+    "OWASP_TOP_10": [
+      "A02_2021",
+      "A04_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A02_2025",
+      "A04_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API8_2023"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_6_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ]
+  }
+}
