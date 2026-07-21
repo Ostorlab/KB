@@ -1,0 +1,47 @@
+{
+  "risk_rating": "medium",
+  "short_description": "A custom authentication header (e.g. X-API-Token, X-Api-Key) is attached to an outbound HTTP request that follows redirects, and is forwarded verbatim to every redirect target, including across host-change and https to http downgrade.",
+  "references": {
+    "CWE-200: Information Exposure": "https://cwe.mitre.org/data/definitions/200.html",
+    "CWE-918: Server-Side Request Forgery (SSRF)": "https://cwe.mitre.org/data/definitions/918.html",
+    "CVE-2018-18074: urllib redirects can disclose credentials": "https://nvd.nist.gov/vuln/detail/CVE-2018-18074",
+    "OWASP Server-Side Request Forgery": "https://owasp.org/www-community/attacks/Server_Side_Request_Forgery",
+    "requests: Redirection and History": "https://docs.python-requests.org/en/latest/user/quickstart/"
+  },
+  "title": "Credential Header Replay Across HTTP Redirects",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_918"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_6_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY251"
+    ],
+    "OWASP_TOP_10": [
+      "A05_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A10_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API7_2023"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_6",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ]
+  }
+}
