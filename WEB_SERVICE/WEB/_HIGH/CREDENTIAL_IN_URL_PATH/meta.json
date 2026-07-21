@@ -1,0 +1,46 @@
+{
+  "risk_rating": "high",
+  "short_description": "The application uses a URL path segment as the sole authentication credential, exposing it to interception via access logs, caches, browser history and the Referer header.",
+  "references": {
+    "CWE-598: Use of GET Request Method With Sensitive Query Strings": "https://cwe.mitre.org/data/definitions/598.html",
+    "CWE-287: Improper Authentication": "https://cwe.mitre.org/data/definitions/287.html",
+    "OWASP Top 10 A07:2021 - Identification and Authentication Failures": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/"
+  },
+  "title": "Sensitive Authentication Credential Passed in URL Path",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_287",
+      "CWE_306"
+    ],
+    "GDPR": [
+      "ART_25",
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_5",
+      "REQ_8_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_6",
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
+    ],
+    "OWASP_TOP_10": [
+      "A07_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A07_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API2_2023"
+    ]
+  }
+}
