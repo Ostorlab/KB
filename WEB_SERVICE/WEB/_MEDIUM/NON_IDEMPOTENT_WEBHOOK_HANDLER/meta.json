@@ -1,0 +1,51 @@
+{
+  "title": "Non-idempotent Webhook Handler",
+  "short_description": "A webhook handler mutates authorization-relevant state (such as an entitlement clock or paid-until timestamp) on every verified delivery without event-ID deduplication, allowing a captured or legitimately redelivered signed event to be replayed and re-extend the protected state.",
+  "risk_rating": "medium",
+  "references": {
+    "CWE-837: Improper Enforcement of a Single, Unique Action": "https://cwe.mitre.org/data/definitions/837.html",
+    "CWE-294: Authentication Bypass by Capture-replay": "https://cwe.mitre.org/data/definitions/294.html",
+    "Stripe Webhooks: Handle duplicate events": "https://stripe.com/docs/webhooks"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_TOP_10": [
+      "A08_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A08_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API4_2023",
+      "API8_2023"
+    ],
+    "OWASP_ASVS_L1": [
+      "V5_3_3",
+      "V5_3_4"
+    ],
+    "OWASP_ASVS_L2": [
+      "V5_3_3",
+      "V5_3_4",
+      "V12_1_1",
+      "V12_1_2"
+    ],
+    "OWASP_ASVS_L3": [
+      "V5_3_3",
+      "V5_3_4",
+      "V12_1_1",
+      "V12_1_2"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_4",
+      "REQ_11_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2"
+    ]
+  }
+}
