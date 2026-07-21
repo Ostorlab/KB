@@ -1,0 +1,63 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The SAML Service Provider does not bind the assertion consumer response to an outstanding AuthnRequest (`InResponseTo`) nor reject unsolicited or replayed SAML responses, allowing a captured legitimate SAML response to be replayed against the ACS endpoint to authenticate as the victim.",
+  "references": {
+    "CWE-294: Authentication Bypass by Capture-relay": "https://cwe.mitre.org/data/definitions/294.html",
+    "CWE-345: Insufficient Verification of Data Authenticity": "https://cwe.mitre.org/data/definitions/345.html",
+    "CWE-287: Improper Authentication": "https://cwe.mitre.org/data/definitions/287.html",
+    "CVE-2017-11427 - python3-saml SAML response replay": "https://nvd.nist.gov/vuln/detail/CVE-2017-11427",
+    "CVE-2017-11428 - python3-saml authentication bypass": "https://nvd.nist.gov/vuln/detail/CVE-2017-11428",
+    "OWASP Top 10: A07 Identification and Authentication Failures": "https://owasp.org/www-project-top-ten/",
+    "SAML 2.0": "https://en.wikipedia.org/wiki/SAML_2.0"
+  },
+  "title": "Missing SAML InResponseTo Binding and Replay Protection",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_287"
+    ],
+    "OWASP_ASVS_L1": [
+      "V3_4_1",
+      "V3_4_2"
+    ],
+    "OWASP_ASVS_L2": [
+      "V3_4_1",
+      "V3_4_2",
+      "V3_4_3"
+    ],
+    "OWASP_ASVS_L3": [
+      "V3_4_1",
+      "V3_4_2",
+      "V3_4_3"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_8_3",
+      "REQ_11_3"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_6_6",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A07_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A07_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API2_2023"
+    ]
+  }
+}
