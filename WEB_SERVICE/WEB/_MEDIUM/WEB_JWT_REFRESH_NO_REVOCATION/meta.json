@@ -1,0 +1,58 @@
+{
+  "risk_rating": "medium",
+  "short_description": "A stateless JWT refresh endpoint mints new tokens without revoking or rotating the original token, so a stolen or forged JWT stays valid until its expiry and can be refreshed repeatedly.",
+  "references": {
+    "OWASP Authentication Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+    "OWASP Session Management Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+    "OWASP API Security Top 10 - API2:2023 Broken Authentication": "https://owasp.org/API-Security/editions/2023/en/0xa2-broken-authentication/",
+    "CWE-287: Improper Authentication": "https://cwe.mitre.org/data/definitions/287.html",
+    "JWT Attacks explained": "https://portswigger.net/web-security/jwt"
+  },
+  "title": "Stateless JWT Refresh Endpoint Lacks Token Revocation and Rotation",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_287"
+    ],
+    "GDPR": [
+      "ART_5",
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_7_3",
+      "REQ_8_2",
+      "REQ_8_3",
+      "REQ_11_3"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY251"
+    ],
+    "OWASP_TOP_10": [
+      "A07_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A07_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API2_2023"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_6_1",
+      "CC_6_2",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "CNIL_FOR_DEVELOPERS": [
+      "DEVELOPERS_4_1_4"
+    ]
+  }
+}
