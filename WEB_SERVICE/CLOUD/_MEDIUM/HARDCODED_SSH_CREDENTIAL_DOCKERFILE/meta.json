@@ -1,0 +1,44 @@
+{
+  "risk_rating": "medium",
+  "short_description": "A hardcoded root (or administrative) password and an explicit PermitRootLogin yes are committed in a Dockerfile, giving anyone with repository read access the credentials of the built image.",
+  "references": {
+    "CWE-798: Use of Hard-coded Credentials": "https://cwe.mitre.org/data/definitions/798.html",
+    "CWE-269: Improper Privilege Management": "https://cwe.mitre.org/data/definitions/269.html",
+    "CWE-522: Insufficiently Protected Credentials": "https://cwe.mitre.org/data/definitions/522.html",
+    "Dockerfile best practices - secrets": "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/"
+  },
+  "title": "Hardcoded SSH root credential with PermitRootLogin yes in Dockerfile",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_798"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_8_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_6_1",
+      "CC_6_6",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A07_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A07_2025"
+    ],
+    "OWASP_ASVS_L2": [
+      "V2_5_1"
+    ],
+    "OWASP_ASVS_L3": [
+      "V2_5_1"
+    ]
+  }
+}
