@@ -1,0 +1,41 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The web application redirects to an attacker-controlled URL derived from unvalidated user input, enabling phishing and session-laundering of an authenticated session.",
+  "references": {
+    "OWASP Unvalidated Redirects and Forwards Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html",
+    "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')": "https://cwe.mitre.org/data/definitions/601.html",
+    "PortSwigger Web Security Academy - DOM-based Open Redirect": "https://portswigger.net/web-security/dom-based"
+  },
+  "title": "Open Redirect",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_11_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_TOP_10": [
+      "A01_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A01_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API8_2023"
+    ]
+  }
+}
