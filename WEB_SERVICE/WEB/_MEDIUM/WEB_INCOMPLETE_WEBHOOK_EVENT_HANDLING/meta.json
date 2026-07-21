@@ -1,0 +1,51 @@
+{
+  "risk_rating": "medium",
+  "short_description": "The webhook handler reconciles only a subset of provider lifecycle events and silently ignores cancellation, refund and payment-failure events, leaving entitlement active until natural expiry.",
+  "references": {
+    "CWE-862: Missing Authorization": "https://cwe.mitre.org/data/definitions/862.html",
+    "CWE-639: Authorization Bypass Through User-Controlled Key": "https://cwe.mitre.org/data/definitions/639.html",
+    "OWASP Top 10 2021 - A01: Broken Access Control": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
+    "OWASP API Security Top 10 2023 - API5: Broken Function Level Authorization": "https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization/",
+    "Stripe Webhooks documentation": "https://docs.stripe.com/webhooks"
+  },
+  "title": "Incomplete Webhook Event Handling",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_862"
+    ],
+    "OWASP_ASVS_L1": [
+      "V4_1_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_5",
+      "V1_4_4",
+      "V1_10_1"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_5",
+      "V1_4_4",
+      "V1_10_1"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_7_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_6_1",
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "OWASP_TOP_10": [
+      "A01_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A01_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API5_2023"
+    ]
+  }
+}
