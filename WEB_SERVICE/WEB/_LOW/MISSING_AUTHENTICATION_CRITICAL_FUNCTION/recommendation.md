@@ -1,44 +1,84 @@
 Require and verify an authenticator proving the caller's identity on every inbound request to a critical function before any state-mutating operation, and reject requests that are missing or fail verification with `403 Forbidden`. A CSRF exemption (`@csrf.csrf_exempt`) only neutralizes Django's CSRF token check; it does not preclude — and must not replace — an independent signature or authentication check.
 
-For a third-party provider webhook (e.g. an SMS provider such as Vonage), verify the provider's documented HMAC signature header in constant time before persisting anything:
+For a third-party provider webhook (e.g. an SMS provider such as Vonage), enforce cheap structural checks first, then verify the provider's documented HMAC signature header in constant time before persisting anything:
 
-```python
-import base64
-import hashlib
-import hmac
+=== "Django"
 
-from django.conf import settings
-from django import http
-from django.views.decorators import csrf
+    ```python
+    import base64
+    import hashlib
+    import hmac
 
-from webhooks import models
+    from django.conf import settings
+    from django import http
+    from django.views.decorators import csrf
+
+    from webhooks import models
 
 
-@csrf.csrf_exempt
-def sms_webhook_view(request):
-    secret = getattr(settings, "VONAGE_SIGNATURE_SECRET", "")
-    signature = request.headers.get("vonage-signature") or request.headers.get(
-        "x-vonage-signature"
-    )
-    if not secret or not signature:
-        return http.HttpResponseForbidden()
-    body = request.body
-    expected = base64.b64encode(
-        hmac.new(secret.encode(), body, hashlib.sha256).digest()
-    ).decode()
-    if not hmac.compare_digest(expected, signature):
-        return http.HttpResponseForbidden()
+    @csrf.csrf_exempt
+    def sms_webhook_view(request):
+        if request.method != "POST":
+            return http.HttpResponseNotAllowed(["POST"])
 
-    if request.method != "POST":
-        return http.HttpResponseNotAllowed(["POST"])
+        secret = getattr(settings, "VONAGE_SIGNATURE_SECRET", "")
+        signature = request.headers.get("vonage-signature") or request.headers.get(
+            "x-vonage-signature"
+        )
+        if not secret or not signature:
+            return http.HttpResponseForbidden()
+        expected = base64.b64encode(
+            hmac.new(secret.encode(), request.body, hashlib.sha256).digest()
+        ).decode()
+        if not hmac.compare_digest(expected, signature):
+            return http.HttpResponseForbidden()
 
-    sender = request.POST.get("msisdn") or request.POST.get("From")
-    receiver = request.POST.get("to") or request.POST.get("To")
-    message = request.POST.get("text") or request.POST.get("Body")
-    if sender and message:
-        models.SMS.objects.create(sender=sender, receiver=receiver, message=message)
-    return http.HttpResponse("OK")
-```
+        sender = request.POST.get("msisdn") or request.POST.get("From")
+        receiver = request.POST.get("to") or request.POST.get("To")
+        message = request.POST.get("text") or request.POST.get("Body")
+        if sender and message:
+            models.SMS.objects.create(sender=sender, receiver=receiver, message=message)
+        return http.HttpResponse("OK")
+    ```
+
+=== "NodeJs"
+
+    ```javascript
+    const crypto = require("node:crypto");
+    const express = require("express");
+
+    const app = express();
+
+    app.post("/webhooks/sms", express.raw({ type: "*/*" }), (req, res) => {
+      if (req.method !== "POST") {
+        return res.status(405).set("Allow", "POST").end();
+      }
+
+      const secret = process.env.VONAGE_SIGNATURE_SECRET;
+      const signature =
+        req.get("vonage-signature") || req.get("x-vonage-signature");
+      if (!secret || !signature) {
+        return res.status(403).end();
+      }
+
+      const expected = crypto
+        .createHmac("sha256", secret)
+        .update(req.body)
+        .digest("base64");
+      if (!crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(signature))) {
+        return res.status(403).end();
+      }
+
+      const params = new URLSearchParams(req.body.toString("utf8"));
+      const sender = params.get("msisdn") || params.get("From");
+      const receiver = params.get("to") || params.get("To");
+      const message = params.get("text") || params.get("Body");
+      if (sender && message) {
+        // Persist sender/receiver/message in your data store here.
+      }
+      res.status(200).send("OK");
+    });
+    ```
 
 Defense in depth:
 
