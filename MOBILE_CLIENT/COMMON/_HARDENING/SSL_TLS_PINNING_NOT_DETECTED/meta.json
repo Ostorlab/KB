@@ -10,7 +10,7 @@
     "OWASP MASVS - MASVS-NETWORK-2": "https://mas.owasp.org/MASVS/controls/MASVS-NETWORK-2/",
     "Android Network Security Configuration: Pin certificates": "https://developer.android.com/privacy-and-security/security-config#CertificatePinning",
     "Apple App Pinned Domains": "https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity/nspinneddomains",
-    "OkHttp Certificate Pinning": "https://square.github.io/okhttp/features/https/#certificate-pinning"
+    "Certificate and Public Key Pinning (OWASP)": "https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning"
   },
   "categories": {
     "OWASP_MASVS_v2_1": [
