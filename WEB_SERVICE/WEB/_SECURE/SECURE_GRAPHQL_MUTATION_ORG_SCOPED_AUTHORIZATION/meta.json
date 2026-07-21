@@ -1,0 +1,27 @@
+{
+  "risk_rating": "secure",
+  "title": "Protected Against GraphQL Mutation Organization-Scoped Authorization IDOR",
+  "short_description": "GraphQL mutations that accept attacker-supplied object identifiers derive the tenant/organization from the authenticated principal and scope every object-resolution queryset by it before reaching any state-changing sink, preventing cross-tenant Insecure Direct Object Reference (IDOR).",
+  "references": {
+    "OWASP GraphQL Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html",
+    "CWE-639: Authorization Bypass Through User-Controlled Key": "https://cwe.mitre.org/data/definitions/639.html",
+    "PortSwigger: Insecure Direct Object Reference (IDOR)": "https://portswigger.net/web-security/access-control/idor"
+  },
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_862"
+    ],
+    "OWASP_TOP_10": [
+      "A01_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A01_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API1_2023",
+      "API5_2023"
+    ]
+  }
+}
