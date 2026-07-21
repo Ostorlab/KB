@@ -2,7 +2,7 @@
   "risk_rating": "info",
   "short_description": "List of open network ports.",
   "references": {
-    "Port Scanner": "https://en.wikipedia.org/wiki/Port_scanner"
+    "Port Scanner": "https://nmap.org/book/man-port-scanning-techniques.html"
   },
   "title": "Network Port Scan",
   "privacy_issue": false,
