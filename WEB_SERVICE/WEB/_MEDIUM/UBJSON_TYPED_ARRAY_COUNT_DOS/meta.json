@@ -1,0 +1,43 @@
+{
+    "risk_rating": "medium",
+    "title": "UBJSON Typed-Array Count Marker Amplification Denial of Service",
+    "short_description": "An endpoint that decodes attacker-supplied UBJSON with no count or size guard can be driven into CPU or memory exhaustion because the typed-array count marker `[$<type>#<count>]` lets a tiny payload declare an arbitrarily large element count.",
+    "references": {
+        "OWASP - Denial of Service": "https://owasp.org/www-community/attacks/Denial_of_Service",
+        "CWE-400 - Uncontrolled Resource Consumption": "https://cwe.mitre.org/data/definitions/400.html",
+        "UBJSON Type Specification": "https://ubjson.org/type-specification/",
+        "py-ubjson (PyPI)": "https://pypi.org/project/py-ubjson/",
+        "PortSwigger - GraphQL": "https://portswigger.net/web-security/graphql"
+    },
+    "privacy_issue": false,
+    "security_issue": true,
+    "categories": {
+        "CWE_TOP_25": [
+            "CWE_400"
+        ],
+        "PCI_STANDARDS": [
+            "REQ_6_2",
+            "REQ_6_4",
+            "REQ_11_3"
+        ],
+        "OWASP_ASVS_L3": [
+            "V13_4_1"
+        ],
+        "SOC2_CONTROLS": [
+            "CC_7_1",
+            "CC_7_2",
+            "CC_7_4",
+            "CC_7_5",
+            "CC_9_1"
+        ],
+        "OWASP_TOP_10": [
+            "A05_2021"
+        ],
+        "OWASP_TOP_10_2025": [
+            "A05_2025"
+        ],
+        "OWASP_API_TOP_10": [
+            "API4_2023"
+        ]
+    }
+}
