@@ -1,0 +1,117 @@
+{
+  "risk_rating": "high",
+  "short_description": "Sensitive credential and secret model fields are registered in Django admin list_display/search_fields without field-level protection or tenant-scoped querysets, exposing plaintext secrets across all tenants to any staff user with view permission.",
+  "references": {
+    "CWE-200: Information Exposure": "https://cwe.mitre.org/data/definitions/200.html",
+    "CWE-312: Cleartext Storage of Sensitive Information": "https://cwe.mitre.org/data/definitions/312.html",
+    "CWE-522: Insufficiently Protected Credentials": "https://cwe.mitre.org/data/definitions/522.html",
+    "CWE-639: Authorization Bypass Through User-Controlled Key": "https://cwe.mitre.org/data/definitions/639.html",
+    "CWE-862: Missing Authorization": "https://cwe.mitre.org/data/definitions/862.html",
+    "Django ModelAdmin.list_display documentation": "https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display",
+    "OWASP ASVS - Access Control Definitions": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+  },
+  "title": "Django Admin Exposes Plaintext Secrets in list_display",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5",
+      "V6_2_1",
+      "V8_3_1",
+      "V8_3_2",
+      "V8_3_3",
+      "V8_3_4"
+    ],
+    "OWASP_ASVS_L2": [
+      "V1_5_4",
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5",
+      "V4_3_1",
+      "V4_3_2",
+      "V6_2_1",
+      "V6_3_1",
+      "V6_3_2",
+      "V6_4_1",
+      "V6_4_2",
+      "V8_3_1",
+      "V8_3_2",
+      "V8_3_3",
+      "V8_3_4"
+    ],
+    "OWASP_ASVS_L3": [
+      "V1_5_4",
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_4",
+      "V4_1_5",
+      "V4_3_1",
+      "V4_3_2",
+      "V4_3_3",
+      "V6_2_1",
+      "V6_3_1",
+      "V6_3_2",
+      "V6_4_1",
+      "V6_4_2",
+      "V8_3_1",
+      "V8_3_2",
+      "V8_3_3",
+      "V8_3_4"
+    ],
+    "CWE_TOP_25": [
+      "CWE_862"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_3_3",
+      "REQ_3_4",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_6_5",
+      "REQ_7_1",
+      "REQ_7_2",
+      "REQ_7_3",
+      "REQ_8_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_6_1",
+      "CC_6_2",
+      "CC_6_3",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
+    ],
+    "OWASP_TOP_10": [
+      "A01_2021",
+      "A02_2021",
+      "A04_2021",
+      "A05_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A01_2025",
+      "A02_2025",
+      "A04_2025",
+      "A05_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API1_2023",
+      "API3_2023",
+      "API8_2023"
+    ]
+  }
+}
