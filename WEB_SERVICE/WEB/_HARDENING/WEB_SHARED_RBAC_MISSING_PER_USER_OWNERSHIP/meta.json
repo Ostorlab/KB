@@ -1,0 +1,49 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "Multi-tenant resources are scoped only by organisation with no per-user ownership predicate, allowing any same-organisation write-role principal to update or delete records authored by another principal.",
+  "references": {
+    "CWE-284: Improper Access Control": "https://cwe.mitre.org/data/definitions/284.html",
+    "CWE-285: Improper Authorization": "https://cwe.mitre.org/data/definitions/285.html",
+    "CWE-639: Authorization Bypass Through User-Controlled Key": "https://cwe.mitre.org/data/definitions/639.html",
+    "Insecure Direct Object Reference Prevention (OWASP)": "https://www.owasp.org/index.php/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet"
+  },
+  "title": "Shared RBAC Without Per-User Ownership Boundary",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_862"
+    ],
+    "OWASP_ASVS_L1": [
+      "V4_1_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_5",
+      "V1_4_4",
+      "V1_10_1"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_5",
+      "V1_4_4",
+      "V1_10_1"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_3",
+      "REQ_7_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_6_3"
+    ],
+    "OWASP_TOP_10": [
+      "A01_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A01_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API1_2023",
+      "API5_2023"
+    ]
+  }
+}
