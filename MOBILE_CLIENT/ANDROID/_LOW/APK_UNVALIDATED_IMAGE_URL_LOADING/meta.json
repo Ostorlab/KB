@@ -1,0 +1,49 @@
+{
+  "risk_rating": "low",
+  "short_description": "Server-controlled image URLs are passed directly to image loading libraries without scheme, host or private-IP validation, enabling client-side request forgery from the device.",
+  "references": {
+    "Coil - Image loading library for Android": "https://github.com/coil-kt/coil",
+    "Android Network Security Configuration": "https://developer.android.com/training/articles/security-config",
+    "CWE-918: Server-Side Request Forgery": "https://cwe.mitre.org/data/definitions/918.html",
+    "OWASP Mobile Top 10": "https://owasp.org/www-project-mobile-top-10/"
+  },
+  "title": "Unvalidated server-controlled image URL loading",
+  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_4",
+      "MSTG_NETWORK_1"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_4",
+      "MSTG_NETWORK_1"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_CODE_4",
+      "MASVS_NETWORK_1"
+    ],
+    "CWE_TOP_25": [
+      "CWE_918"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_5"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_6_7",
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M4_2024",
+      "M5_2024"
+    ]
+  }
+}
