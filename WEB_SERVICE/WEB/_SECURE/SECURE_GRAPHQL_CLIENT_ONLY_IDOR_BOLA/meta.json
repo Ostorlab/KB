@@ -1,0 +1,29 @@
+{
+  "risk_rating": "secure",
+  "title": "No Confirmed GraphQL IDOR/BOLA In Client-Only Repository",
+  "short_description": "Static analysis of a client-only GraphQL repository found no confirmable IDOR/BOLA vulnerability because the server-side object-level authorization enforcement is absent from the source tree.",
+  "references": {
+    "OWASP Top 10 - A01:2021 Broken Access Control": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
+    "OWASP API Security Top 10 - API1:2023 Broken Object Level Authorization": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/",
+    "PortSwigger - Insecure Direct Object Reference (IDOR)": "https://portswigger.net/web-security/access-control/idor",
+    "GraphQL - Authorization": "https://graphql.org/learn/authorization/",
+    "CWE-639 - Authorization Bypass Through User-Controlled Key": "https://cwe.mitre.org/data/definitions/639.html"
+  },
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_TOP_10": [
+      "A01_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A01_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API1_2023",
+      "API5_2023"
+    ],
+    "CWE_TOP_25": [
+      "CWE_862"
+    ]
+  }
+}
