@@ -1,0 +1,48 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "The Datadog OkHttp interceptor records the full request URL (including query strings) as a RUM resource without any URL redaction configured.",
+  "references": {
+    "Datadog - Android Advanced Configuration": "https://docs.datadoghq.com/real_user_monitoring/application_monitoring/android/advanced_configuration/",
+    "Datadog dd-sdk-android source": "https://github.com/DataDog/dd-sdk-android",
+    "CWE-200: Information Exposure": "https://cwe.mitre.org/data/definitions/200.html",
+    "CWE-359: Exposure of Private Information (\"Privacy Violation\")": "https://cwe.mitre.org/data/definitions/359.html",
+    "CWE-598: Information Exposure Through Query Strings in GET Request": "https://cwe.mitre.org/data/definitions/598.html"
+  },
+  "title": "Datadog OkHttp RUM Captures Request URLs Without Redaction",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_NETWORK_1"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_NETWORK_1"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_NETWORK_1",
+      "MASVS_PRIVACY_3"
+    ],
+    "GDPR": [
+      "ART_25",
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_7_1",
+      "CC_7_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M8_2024"
+    ],
+    "CNIL_FOR_DEVELOPERS": [
+      "DEVELOPERS_4_3_1"
+    ]
+  }
+}
