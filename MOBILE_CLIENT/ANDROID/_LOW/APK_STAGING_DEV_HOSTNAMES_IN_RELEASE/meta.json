@@ -1,0 +1,30 @@
+{
+  "risk_rating": "low",
+  "short_description": "Staging or development internal hostnames are compiled into the production application package.",
+  "references": {
+    "Android build variants and source sets": "https://developer.android.com/build/build-variants",
+    "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor": "https://cwe.mitre.org/data/definitions/200.html",
+    "CWE-489: Active Debug Code in Production": "https://cwe.mitre.org/data/definitions/489.html"
+  },
+  "title": "Staging or development internal hostnames compiled into release build",
+  "cvss_v3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_2"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_6_7"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M8_2024"
+    ]
+  }
+}
