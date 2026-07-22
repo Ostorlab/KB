@@ -1,0 +1,60 @@
+{
+  "risk_rating": "high",
+  "short_description": "A debuggable Android application ships Flipper debugging instrumentation, allowing anyone with local USB/ADB access to capture live network traffic (including Authorization headers), inspect SQLite databases and shared preferences (including decrypted credentials and PII), and bypass screen-capture protections without root.",
+  "references": {
+    "CWE-489: Active Debug Code": "https://cwe.mitre.org/data/definitions/489.html",
+    "CWE-215: Insertion of Sensitive Information Into Debugging Code": "https://cwe.mitre.org/data/definitions/215.html",
+    "Flipper: Getting started on Android": "https://fbflipper.com/docs/getting-started/android-native/",
+    "Android Studio Debug documentation": "https://developer.android.com/studio/debug"
+  },
+  "title": "Debuggable application ships Flipper instrumentation exposing sensitive data",
+  "cvss_v3_vector": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_2",
+      "MSTG_STORAGE_1",
+      "MSTG_STORAGE_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_2",
+      "MSTG_STORAGE_1",
+      "MSTG_STORAGE_2"
+    ],
+    "CWE_TOP_25": [],
+    "GDPR": [
+      "ART_5",
+      "ART_25",
+      "ART_32",
+      "ART_35"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_11_3"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_CODE_4",
+      "MASVS_RESILIENCE_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M8_2024"
+    ]
+  }
+}
