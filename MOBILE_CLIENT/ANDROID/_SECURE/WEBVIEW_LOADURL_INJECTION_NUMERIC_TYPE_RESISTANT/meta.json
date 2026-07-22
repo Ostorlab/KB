@@ -1,0 +1,48 @@
+{
+  "risk_rating": "secure",
+  "short_description": "WebView URL query parameters are interpolated from numeric-typed values, making script-delimiting characters unreachable and the loadUrl path resistant to XSS.",
+  "references": {
+    "DRD02-J. Do not allow WebView to access sensitive local resource through file scheme (CERT Secure Coding)": "https://cmu-sei.github.io/secure-coding-standards/android-secure-coding-standard/rules/webview-wbv",
+    "Webview loadUrl (Android documentation)": "https://developer.android.com/reference/android/webkit/WebView#loadUrl(java.lang.String)",
+    "WebSettings (Android documentation)": "https://developer.android.com/reference/android/webkit/WebSettings"
+  },
+  "title": "Webview loadurl injection resistant to XSS (numeric type constraint)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "targeted_by_malware": false,
+  "targeted_by_ransomware": false,
+  "targeted_by_nation_state": false,
+  "has_public_exploit": false,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_7",
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_7",
+      "MSTG_PLATFORM_2"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_11_3"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_CODE_4",
+      "MASVS_PLATFORM_2"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_3_4",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M4_2024"
+    ]
+  }
+}
