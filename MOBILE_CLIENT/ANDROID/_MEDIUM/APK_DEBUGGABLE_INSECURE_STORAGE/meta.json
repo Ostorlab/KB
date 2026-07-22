@@ -1,0 +1,60 @@
+{
+  "risk_rating": "medium",
+  "short_description": "Production-oriented build types are shipped with debug mode enabled, exposing the application's cleartext private storage to non-root extraction via `adb shell run-as`.",
+  "references": {
+    "CWE-489: Active Debug Code": "https://cwe.mitre.org/data/definitions/489.html",
+    "CWE-922: Insecure Storage of Sensitive Information": "https://cwe.mitre.org/data/definitions/922.html",
+    "OWASP M9: Insecure Data Storage": "https://owasp.org/www-project-mobile-top-10/2023-risks/m9-insecure-data-storage"
+  },
+  "title": "Debuggable Build Type Exposes Insecure Private Storage",
+  "cvss_v3_vector": "CVSS:3.0/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_2",
+      "MSTG_STORAGE_1"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_2",
+      "MSTG_STORAGE_1"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_STORAGE_1",
+      "MASVS_STORAGE_2"
+    ],
+    "GDPR": [
+      "ART_5",
+      "ART_25",
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_3_2",
+      "REQ_3_3",
+      "REQ_3_5",
+      "REQ_3_6",
+      "REQ_3_7",
+      "REQ_4_2",
+      "REQ_6_2"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_6_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY251",
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M8_2024",
+      "M9_2024"
+    ]
+  }
+}
