@@ -1,0 +1,23 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Static analysis of the mounted client source could not confirm whether the server trusts client-supplied application version values for security decisions, because the server-side decision sink is absent from the mounted client source.",
+  "references": {
+    "OWASP Mobile Top 10: Insecure Communication": "https://owasp.org/www-project-mobile-top-10/2023-risks/m5-insecure-communication.html",
+    "OWASP MASVS - MASVS-NETWORK-1": "https://mas.owasp.org/MASVS/controls/MASVS-NETWORK-1/",
+    "CWE-862: Missing Authorization": "https://cwe.mitre.org/data/definitions/862.html"
+  },
+  "title": "Client-Supplied App Version Trust Not Confirmable",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M5_2024"
+    ],
+    "OWASP_API_TOP_10": [
+      "API5_2023"
+    ],
+    "CWE_TOP_25": [
+      "CWE_862"
+    ]
+  }
+}
