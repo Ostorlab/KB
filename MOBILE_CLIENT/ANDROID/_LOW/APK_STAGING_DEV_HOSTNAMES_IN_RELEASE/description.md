@@ -1,0 +1,3 @@
+Staging, development or other non-production internal hostnames (for example `msk-staging.example.com`, `login.staging.example.net`, `dev-speech.example.com`, `localhost` or private IP ranges) are compiled into the production application package as recoverable string resources or literals.
+
+Anyone with access to the released APK/IPA can extract these internal hostnames, which discloses the topology and naming of internal, non-production infrastructure. In addition to information disclosure, hostnames that are actively consumed as fallback defaults (for example Remote Config / feature-flag defaults embedded in the release resources) may route production users to a non-production endpoint whenever the remote configuration value is unset or its fetch fails.
