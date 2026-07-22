@@ -1,0 +1,46 @@
+{
+  "risk_rating": "medium",
+  "short_description": "A required or PHI/consent survey question can be silently skipped because the survey engine enforces required fields only over the visibility-filtered element set, and a server-controlled visibleIf expression that evaluates to a constant boolean deterministically drops the element before the required-field gate runs.",
+  "references": {
+    "CWE-20: Improper Input Validation": "https://cwe.mitre.org/data/definitions/20.html",
+    "CWE-1284: Improper Validation of Specified Quantity in Input": "https://cwe.mitre.org/data/definitions/1284.html",
+    "OWASP MASVS": "https://mas.owasp.org/",
+    "OWASP Mobile Top 10": "https://owasp.org/www-project-mobile-top-10/"
+  },
+  "title": "Survey Required Field Bypass via Constant visibleIf Expression",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_4"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_4"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_CODE_4",
+      "MASVS_PRIVACY_2"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M4_2024"
+    ],
+    "GDPR": [
+      "ART_25",
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_5"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_7_1"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY251"
+    ]
+  }
+}
