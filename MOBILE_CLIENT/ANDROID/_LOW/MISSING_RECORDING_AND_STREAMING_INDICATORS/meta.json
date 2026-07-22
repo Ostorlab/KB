@@ -1,0 +1,34 @@
+{
+  "risk_rating": "low",
+  "short_description": "The application does not surface in-app recording/streaming indicators and uses a low-importance foreground notification with no content text while the camera and microphone are actively streaming, reducing user awareness and recording-consent transparency.",
+  "references": {
+    "CWE-451: User Interface (UI) Misrepresentation of Critical Information": "https://cwe.mitre.org/data/definitions/451.html",
+    "Android Foreground Services": "https://developer.android.com/develop/background-work/services/foreground-services",
+    "Android Notification Channels": "https://developer.android.com/develop/ui/views/notifications/channels",
+    "OWASP Mobile Top 10": "https://owasp.org/www-project-mobile-top-10/"
+  },
+  "title": "Missing Recording and Streaming Indicators and Unclear Foreground Notification",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_PRIVACY_1",
+      "MASVS_PRIVACY_2",
+      "MASVS_PLATFORM_2"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M9_2024"
+    ]
+  }
+}
