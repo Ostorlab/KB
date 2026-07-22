@@ -1,0 +1,33 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "Client-side passcode (PIN) validation is performed without any client-side brute-force protection such as an attempt counter, lockout, cooldown, backoff or rate limiting.",
+  "references": {
+    "CWE-307: Improper Restriction of Excessive Authentication Attempts": "https://cwe.mitre.org/data/definitions/307.html",
+    "OWASP MASVS: Authentication": "https://mobile-security.gitbook.io/masvs/security-requirements/0x07-v2-authentication-requirements"
+  },
+  "title": "No client-side brute-force protection on passcode validation",
+  "privacy_issue": false,
+  "security_issue": true,
+  "cvss_v3_vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_AUTH_3"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_AUTH_3"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_AUTH_2"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_8_3"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M3_2024"
+    ]
+  }
+}
