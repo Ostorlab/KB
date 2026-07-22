@@ -1,0 +1,37 @@
+{
+  "risk_rating": "low",
+  "short_description": "The application handles user accounts or personal data but does not provide any account deletion or data erasure mechanism, preventing data subjects from exercising their right to erasure.",
+  "references": {
+    "GDPR Article 17 - Right to erasure": "https://gdpr-info.eu/art-17-gdpr/",
+    "CCPA Civil Code 1798.105 - Right to delete": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1798.105.&lawCode=CIV",
+    "CWE-459: Incomplete Cleanup": "https://cwe.mitre.org/data/definitions/459.html",
+    "OWASP Top 10 A04:2021 - Insecure Design": "https://owasp.org/Top10/A04_2021-Insecure_Design/",
+    "California Attorney General - CCPA": "https://oag.ca.gov/privacy/ccpa"
+  },
+  "title": "Missing Right to Erasure and Account Deletion Mechanism",
+  "privacy_issue": true,
+  "security_issue": false,
+  "categories": {
+    "GDPR": [
+      "ART_5",
+      "ART_17"
+    ],
+    "CCPA": [
+      "CCPA_1798_105",
+      "CCPA_1798_130"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_PRIVACY_1",
+      "MASVS_PRIVACY_2",
+      "MASVS_PRIVACY_3",
+      "MASVS_PRIVACY_4"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M6_2024"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_3",
+      "CC_5_3"
+    ]
+  }
+}
