@@ -1,0 +1,29 @@
+{
+  "risk_rating": "medium",
+  "short_description": "A single SharedPreferences.Editor instance is reused across threads without synchronization, allowing commit()/apply() to flush values staged by other threads and causing a TOCTOU race condition on sensitive token/session writes.",
+  "references": {
+    "SharedPreferences.Editor (Android Developer)": "https://developer.android.com/reference/android/content/SharedPreferences.Editor.html",
+    "CWE-362 Race Condition (Concurrent Execution using Shared Resource)": "https://cwe.mitre.org/data/definitions/362.html"
+  },
+  "title": "Shared Preferences Editor Race Condition",
+  "cvss_v3_vector": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_STORAGE_1"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_STORAGE_1"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_STORAGE_1"
+    ],
+    "CWE_TOP_25": [
+      "CWE_362"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M9_2024"
+    ]
+  }
+}
