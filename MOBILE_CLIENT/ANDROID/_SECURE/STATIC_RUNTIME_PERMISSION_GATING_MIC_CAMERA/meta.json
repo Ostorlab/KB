@@ -1,0 +1,24 @@
+{
+  "risk_rating": "secure",
+  "short_description": "Microphone and camera capture is gated by runtime permission checks before any capture or camera|microphone foreground service starts.",
+  "title": "Effective Runtime Permission Gating on Mic/Camera Capture",
+  "privacy_issue": true,
+  "security_issue": true,
+  "references": {
+    "Android Developers - App permissions": "https://developer.android.com/training/permissions",
+    "Android Developers - Foreground services": "https://developer.android.com/develop/background-work/services/foreground-services",
+    "OWASP MASVS - MASVS-PLATFORM-2": "https://mas.owasp.org/MASVS/controls/MASVS-PLATFORM-2/"
+  },
+  "categories": {
+    "OWASP_MASVS_v2_1": [
+      "MASVS_PLATFORM_2"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M8_2024"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY215"
+    ]
+  }
+}
