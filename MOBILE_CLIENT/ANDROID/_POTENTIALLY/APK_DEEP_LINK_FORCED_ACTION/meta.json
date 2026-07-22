@@ -1,0 +1,55 @@
+{
+  "risk_rating": "potentially",
+  "short_description": "The application registers exported deep-link entry points (intent-filters with a custom scheme and the BROWSABLE category). A crafted deep link can force navigation into sensitive screens or, when the deep-link parameters are consumed by state-mutating sinks, trigger forced actions without explicit user interaction.",
+  "references": {
+    "Android App Links and deep links": "https://developer.android.com/training/app-links",
+    "Improper Input Validation (CWE-20)": "https://cwe.mitre.org/data/definitions/20.html",
+    "Improper Access Control (CWE-284)": "https://cwe.mitre.org/data/definitions/284.html",
+    "Intent Spoof (CAPEC-502)": "https://capec.mitre.org/data/definitions/502.html",
+    "OWASP Mobile Top 10": "https://owasp.org/www-project-mobile-top-10/",
+    "OWASP Mass Assignment Cheat Sheet": "https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html"
+  },
+  "title": "Android Deep Link Forced Action",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_PLATFORM_2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_PLATFORM_2"
+    ],
+    "CWE_TOP_25": [
+      "CWE_20",
+      "CWE_276"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M4_2024"
+    ],
+    "OWASP_API_TOP_10": [
+      "API3_2023"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_7_3",
+      "REQ_11_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213"
+    ]
+  }
+}
