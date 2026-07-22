@@ -1,0 +1,29 @@
+{
+  "risk_rating": "low",
+  "short_description": "The application renders server-authored error messages verbatim to the user, which may disclose internal field names, enum values, exception class names, or validation/database-derived details that aid reconnaissance.",
+  "references": {
+    "CWE-209: Information Exposure Through an Error Message": "https://cwe.mitre.org/data/definitions/209.html",
+    "CWE-215: Information Exposure Through Debug Information": "https://cwe.mitre.org/data/definitions/215.html"
+  },
+  "title": "Unredacted Server Error Messages Rendered Verbatim to End Users",
+  "cvss_v3_vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_CODE_6"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_CODE_6"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_4"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M4_2024"
+    ]
+  }
+}
