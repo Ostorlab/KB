@@ -9,3 +9,8 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 # Learn more about Git LFS for large files:
 #     https://www.atlassian.com/git/tutorials/git-lfs
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
