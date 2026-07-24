@@ -2,8 +2,8 @@
 
 import os.path
 
-from pytest_mock import plugin
 from pyfakefs import fake_filesystem
+from pytest_mock import plugin
 
 from tests import utils
 from tools import kb_generator

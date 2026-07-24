@@ -19,6 +19,7 @@ DEMO_LANGS = ["Flutter", "Swift", "Kotlin"]
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
+logger = logging.getLogger(__name__)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL_NAME = "gpt-3.5-turbo"
@@ -100,7 +101,6 @@ META_TEMPLATE = """
 PATTERN = "```(.*)```"
 
 
-@dataclasses.dataclass
 class RiskRating(enum.Enum):
     """RiskRating dataclass"""
 
@@ -111,7 +111,6 @@ class RiskRating(enum.Enum):
     HIGH = "HIGH"
 
 
-@dataclasses.dataclass
 class Platform(enum.Enum):
     """Platform dataclass"""
 
@@ -163,7 +162,7 @@ def dump_kb(kbentry: KBEntry) -> None:
         f"_{kbentry.vulnerability.risk_rating.value}",
     )
 
-    logging.info("KB generated successfully, path is %s", path_prefix)
+    logger.info("KB generated successfully, path is %s", path_prefix)
 
     path_prefix.mkdir(exist_ok=True, parents=True)
 
