@@ -6,5 +6,10 @@
   },
   "title": "Implementation of a FileObserver",
   "privacy_issue": false,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M9_2024"
+    ]
+  }
 }

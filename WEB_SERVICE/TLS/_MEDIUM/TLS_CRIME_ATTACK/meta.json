@@ -14,6 +14,11 @@
       "CC_6_7",
       "CC_7_1"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
+    ],
     "CCPA": [
       "CCPA_1798_150"
     ],
@@ -24,6 +29,12 @@
       "REQ_4_1",
       "REQ_6_2",
       "REQ_11_3"
+    ],
+    "OWASP_TOP_10": [
+      "A02_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A02_2025"
     ]
   }
 }

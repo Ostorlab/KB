@@ -55,6 +55,13 @@
     ],
     "CNIL_FOR_EDITORS": [
       "EDITORS_3_1_1"
+    ],
+    "HIPAA_CONTROLS": [
+      "PRIVACY121",
+      "PRIVACY122"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M6_2024"
     ]
   }
 }

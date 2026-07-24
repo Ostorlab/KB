@@ -11,7 +11,7 @@
     "CWE_TOP_25": [
       "CWE_434"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2",
       "REQ_6_3",
@@ -27,6 +27,21 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_TOP_10": [
+      "A03_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API3_2023",
+      "API8_2023"
     ]
   }
 }

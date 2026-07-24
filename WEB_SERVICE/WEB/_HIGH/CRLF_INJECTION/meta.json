@@ -2,8 +2,8 @@
   "risk_rating": "high",
   "short_description": "The web application is susceptible to CRLF injection vulnerability.",
   "references": {
-    "OWASP":"https://owasp.org/www-community/vulnerabilities/CRLF_Injection",
-    "HackTricks": "https://book.hacktricks.xyz/pentesting-web/crlf-0d-0a"
+    "OWASP": "https://owasp.org/www-community/vulnerabilities/CRLF_Injection",
+    "HackTricks": "https://hacktricks.wiki/en/pentesting-web/crlf-0d-0a.html"
   },
   "title": "CRLF Injection",
   "privacy_issue": false,
@@ -13,7 +13,7 @@
       "ART_25",
       "ART_32"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_6_4",
       "REQ_6_5"
     ],
@@ -25,6 +25,21 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
+    ],
+    "OWASP_TOP_10": [
+      "A03_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API3_2023",
+      "API8_2023"
     ]
   }
 }

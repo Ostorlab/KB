@@ -23,6 +23,17 @@
       "REQ_4_1",
       "REQ_6_5",
       "REQ_11_3"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_TOP_10": [
+      "A02_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A02_2025"
     ]
   }
 }

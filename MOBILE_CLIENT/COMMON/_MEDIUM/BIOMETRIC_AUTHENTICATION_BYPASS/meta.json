@@ -3,10 +3,10 @@
   "short_description": "Biometric authentication is done without CryptoObject or secretKey, making it vulnerable to biometric authentication bypass.",
   "references": {
     "Secure Mobile Biometric Authentication": "https://blog.ostorlab.co/secure-mobile-biometric-authentication.html",
-    "Bypass Biometric Authentication": "https://book.hacktricks.xyz/mobile-pentesting/android-app-pentesting/bypass-biometric-authentication-android",
+    "Bypass Biometric Authentication": "https://hacktricks.wiki/en/mobile-pentesting/android-app-pentesting/bypass-biometric-authentication-android.html",
     "Using BiometricPrompt with CryptoObject: How and Why": "https://medium.com/androiddevelopers/using-biometricprompt-with-cryptoobject-how-and-why-aace500ccdb7",
     "Android Biometric API: Getting Started": "https://www.kodeco.com/18782293-android-biometric-api-getting-started",
-    "MOBILE PENTESTING 101 – BYPASSING BIOMETRIC AUTHENTICATION": "https://securitycafe.ro/2022/09/05/mobile-pentesting-101-bypassing-biometric-authentication/"
+    "MOBILE PENTESTING 101 \u2013 BYPASSING BIOMETRIC AUTHENTICATION": "https://securitycafe.ro/2022/09/05/mobile-pentesting-101-bypassing-biometric-authentication/"
   },
   "title": "Biometric Authentication Bypass",
   "privacy_issue": false,
@@ -27,6 +27,12 @@
     "OWASP_MASVS_v2_1": [
       "MASVS_AUTH_2"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY251"
+    ],
     "SOC2_CONTROLS": [
       "CC_2_1",
       "CC_4_1",
@@ -38,6 +44,9 @@
     ],
     "CNIL_FOR_DEVELOPERS": [
       "DEVELOPERS_4_1_2"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M3_2024"
     ]
   }
 }

@@ -27,7 +27,12 @@
       "ART_25",
       "ART_32"
     ],
-    "PCI_STANDARDS":[
+    "HIPAA_CONTROLS": [
+      "SECURITY251",
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_3_2",
       "REQ_3_3",
@@ -47,6 +52,9 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M9_2024"
     ]
   }
 }

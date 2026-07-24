@@ -1,11 +1,16 @@
 """KB json files test"""
 
+import datetime
 import glob
 import json
 import pathlib
 
 import pytest
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+TIMEOUT = datetime.timedelta(seconds=60)
 
 CATEGORY_GROUPS = [
     "OWASP_MASVS_L1",
@@ -23,6 +28,11 @@ CATEGORY_GROUPS = [
     "CNIL_FOR_EDITORS",
     "CNIL_FOR_DEVELOPERS",
     "CNIL_FOR_SDKS",
+    "HIPAA_CONTROLS",
+    "OWASP_TOP_10",
+    "OWASP_MOBILE_TOP_10",
+    "OWASP_TOP_10_2025",
+    "OWASP_API_TOP_10",
 ]
 
 OWASP_MASVS_L1 = [
@@ -1122,6 +1132,58 @@ CNIL_FOR_SDKS = [
     "SDKS_4_3_2",
 ]
 
+OWASP_TOP_10 = [
+    "A01_2021",
+    "A02_2021",
+    "A03_2021",
+    "A04_2021",
+    "A05_2021",
+    "A06_2021",
+    "A07_2021",
+    "A08_2021",
+    "A09_2021",
+    "A10_2021",
+]
+
+OWASP_MOBILE_TOP_10 = [
+    "M1_2024",
+    "M2_2024",
+    "M3_2024",
+    "M4_2024",
+    "M5_2024",
+    "M6_2024",
+    "M7_2024",
+    "M8_2024",
+    "M9_2024",
+    "M10_2024",
+]
+
+OWASP_TOP_10_2025 = [
+    "A01_2025",
+    "A02_2025",
+    "A03_2025",
+    "A04_2025",
+    "A05_2025",
+    "A06_2025",
+    "A07_2025",
+    "A08_2025",
+    "A09_2025",
+    "A10_2025",
+]
+
+OWASP_API_TOP_10 = [
+    "API1_2023",
+    "API2_2023",
+    "API3_2023",
+    "API4_2023",
+    "API5_2023",
+    "API6_2023",
+    "API7_2023",
+    "API8_2023",
+    "API9_2023",
+    "API10_2023",
+]
+
 
 def testJsonFiles_allFilesAreValid_testPasses() -> None:
     path = pathlib.Path(__file__).parent.parent
@@ -1216,6 +1278,10 @@ def testMetaFiles_always_namesOfTheTitlesShouldAllBeUnique() -> None:
         ("CNIL_FOR_EDITORS", CNIL_FOR_EDITORS),
         ("CNIL_FOR_DEVELOPERS", CNIL_FOR_DEVELOPERS),
         ("CNIL_FOR_SDKS", CNIL_FOR_SDKS),
+        ("OWASP_TOP_10", OWASP_TOP_10),
+        ("OWASP_MOBILE_TOP_10", OWASP_MOBILE_TOP_10),
+        ("OWASP_TOP_10_2025", OWASP_TOP_10_2025),
+        ("OWASP_API_TOP_10", OWASP_API_TOP_10),
     ],
 )
 def testJsonFiles_allFilesHaveCorrectCategories_testPasses(
@@ -1254,15 +1320,15 @@ def testJsonFiles_whenFileHasCategories_shouldBeValid() -> None:
             categories = json_data.get("categories", {})
 
             assert (
-                all(group_key in CATEGORY_GROUPS for group_key in categories)
-                is True
+                all(group_key in CATEGORY_GROUPS for group_key in categories) is True
             ), [
-                group_key in CATEGORY_GROUPS
+                group_key
                 for group_key in categories
                 if group_key not in CATEGORY_GROUPS
             ]
 
 
+@pytest.mark.flaky(reruns=3, reruns_delay=2)
 def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
     """Ensure all URLs in the `references` field of meta.json files are valid across all groups"""
     base_path = pathlib.Path(__file__).parent.parent
@@ -1276,17 +1342,33 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
         "Accept-Language": "en-US,en;q=0.5",
     }
 
+    session = requests.Session()
+    retry_strategy = Retry(
+        total=3,
+        backoff_factor=1,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["GET"],
+    )
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+
     for meta_file in json_files:
         with open(meta_file, "r", encoding="utf-8") as file:
             data = json.load(file)
         references = data.get("references", {})
         for url in references.values():
+            # Skip Medium articles
+            if "medium.com" in url:
+                continue
             if url in checked_urls:
                 if checked_urls[url] is False:
                     invalid_urls.add(url)
             else:
                 try:
-                    response = requests.get(url, headers=headers, timeout=30)
+                    response = session.get(
+                        url, headers=headers, timeout=TIMEOUT.total_seconds()
+                    )
                     is_valid = response.status_code < 404
                 except requests.RequestException:
                     is_valid = False

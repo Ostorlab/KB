@@ -25,6 +25,16 @@
     "GDPR": [
       "ART_25",
       "ART_32"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_TOP_10": [
+      "A05_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A05_2025"
     ]
   }
 }

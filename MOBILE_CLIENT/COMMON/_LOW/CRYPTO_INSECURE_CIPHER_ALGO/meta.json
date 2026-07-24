@@ -2,7 +2,6 @@
   "risk_rating": "low",
   "short_description": "The client supports combinations of cipher suites that suffer from known cryptographic weaknesses.",
   "references": {
-    "Cryptographic Vulnerability (OWASP)": "https://www.owasp.org/index.php/Category:Cryptographic_Vulnerability",
     "CWE-327: Use of a Broken or Risky Cryptographic Algorithm": "https://cwe.mitre.org/data/definitions/327.html"
   },
   "title": "Cryptographic Vulnerability: Insecure Algorithm",
@@ -20,7 +19,7 @@
       "MSTG_CRYPTO_3",
       "MSTG_CRYPTO_4"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_3_6",
       "REQ_3_7",
       "REQ_4_2",
@@ -41,6 +40,14 @@
     ],
     "CNIL_FOR_DEVELOPERS": [
       "DEVELOPERS_4_1_4"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M10_2024"
     ]
   }
 }

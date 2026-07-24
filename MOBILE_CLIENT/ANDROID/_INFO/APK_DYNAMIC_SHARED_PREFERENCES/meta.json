@@ -4,5 +4,10 @@
   "references": {},
   "title": "Recorded calls to Shared Preferences API",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M9_2024"
+    ]
+  }
 }

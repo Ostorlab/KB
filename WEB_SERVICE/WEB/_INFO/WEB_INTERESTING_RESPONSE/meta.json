@@ -1,9 +1,16 @@
 {
   "risk_rating": "info",
   "short_description": "Detected an interesting response.",
-  "references": {
-  },
+  "references": {},
   "title": "Interesting response",
   "privacy_issue": false,
-  "security_issue": true
+  "security_issue": true,
+  "categories": {
+    "OWASP_TOP_10": [
+      "A04_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A04_2025"
+    ]
+  }
 }

@@ -51,6 +51,18 @@
       "CWE_119",
       "CWE_400",
       "CWE_611"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
+    ],
+    "OWASP_TOP_10": [
+      "A02_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A02_2025"
     ]
   }
 }

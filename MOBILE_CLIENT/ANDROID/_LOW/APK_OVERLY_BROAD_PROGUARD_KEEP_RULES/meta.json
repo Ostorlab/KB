@@ -1,0 +1,30 @@
+{
+  "risk_rating": "low",
+  "short_description": "Overly broad ProGuard/R8 -keep rules retain model class and field names unobfuscated in the obfuscated release build, exposing sensitive schema identifiers.",
+  "references": {
+    "Android Developers - Shrink, obfuscate, and optimize your app": "https://developer.android.com/build/shrink-code",
+    "OWASP MASTG - Testing Obfuscation (MASTG-TEST-0051)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0051/",
+    "OWASP MASVS - MASVS-RESILIENCE-3": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-3/"
+  },
+  "title": "Overly broad ProGuard keep rules retain sensitive model field names unobfuscated",
+  "cvss_v3_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+  "privacy_issue": true,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_RESILIENCE": [
+      "MSTG_RESILIENCE_9",
+      "MSTG_RESILIENCE_11",
+      "MSTG_RESILIENCE_12"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_RESILIENCE_3"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M7_2024"
+    ]
+  }
+}

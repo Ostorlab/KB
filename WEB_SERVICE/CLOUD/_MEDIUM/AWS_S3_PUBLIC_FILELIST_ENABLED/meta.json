@@ -8,7 +8,7 @@
   "privacy_issue": false,
   "security_issue": true,
   "categories": {
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_7_3"
     ],
@@ -17,10 +17,16 @@
       "CC_4_1",
       "CC_6_1",
       "CC_7_1",
-      "CC_7_2",  
+      "CC_7_2",
       "CC_7_4",
       "CC_7_5",
       "CC_8_1"
+    ],
+    "OWASP_TOP_10": [
+      "A05_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A05_2025"
     ]
   }
 }

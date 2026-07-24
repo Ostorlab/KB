@@ -7,5 +7,16 @@
   },
   "title": "Enforcer proper authentication",
   "privacy_issue": false,
-  "security_issue": false
+  "security_issue": false,
+  "categories": {
+    "OWASP_TOP_10": [
+      "A07_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A07_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API2_2023"
+    ]
+  }
 }

@@ -16,7 +16,7 @@
     "OWASP_ASVS_L3": [
       "V6_2_3"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_4_2",
       "REQ_6_2",
@@ -32,6 +32,17 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_TOP_10": [
+      "A02_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A02_2025"
     ]
   }
 }

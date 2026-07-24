@@ -7,5 +7,9 @@
   "title": "Secure Network Configuration Settings",
   "privacy_issue": true,
   "security_issue": true,
-  "categories": {}
+  "categories": {
+    "OWASP_MOBILE_TOP_10": [
+      "M8_2024"
+    ]
+  }
 }

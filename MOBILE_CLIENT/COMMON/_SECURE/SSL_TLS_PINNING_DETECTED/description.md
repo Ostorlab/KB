@@ -1,0 +1,1 @@
+SSL/TLS certificate pinning has been detected in the mobile application for one or more backend connections. This mechanism ensures that the application only trusts specific certificates or public keys when establishing secure connections, helping protect against Man-in-the-Middle (MITM) attacks.

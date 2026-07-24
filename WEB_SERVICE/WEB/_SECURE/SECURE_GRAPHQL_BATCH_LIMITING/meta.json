@@ -3,9 +3,19 @@
   "title": "Protected Against GraphQL Batch Query Attacks",
   "short_description": "The GraphQL API enforces batch query limits, preventing Denial of Service (DoS) via array-based query batching.",
   "references": {
-    "Inigo": "https://inigo.io/blog/defeating_controls_with_array-based_query_batching"
+    "Imperva: GraphQL Batching Attacks": "https://www.imperva.com/blog/graphql-vulnerabilities-common-attacks/#batching-attacks"
   },
   "privacy_issue": false,
   "security_issue": true,
-  "categories": {}
+  "categories": {
+    "OWASP_TOP_10": [
+      "A03_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API4_2023"
+    ]
+  }
 }

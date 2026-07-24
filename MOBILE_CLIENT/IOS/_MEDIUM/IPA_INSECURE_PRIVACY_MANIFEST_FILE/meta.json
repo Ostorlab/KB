@@ -34,6 +34,9 @@
       "EDITORS_1_1_1",
       "EDITORS_2_2_1",
       "EDITORS_2_2_2"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M8_2024"
     ]
   }
 }

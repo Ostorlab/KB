@@ -16,7 +16,7 @@
       "MSTG_CODE_5",
       "MSTG_PLATFORM_2"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_5_1",
       "REQ_5_2",
@@ -36,6 +36,9 @@
       "CC_7_2",
       "CC_7_4",
       "CC_8_1"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M2_2024"
     ]
   }
 }

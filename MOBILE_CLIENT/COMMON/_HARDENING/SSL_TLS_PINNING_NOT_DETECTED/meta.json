@@ -1,0 +1,35 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "The application does not implement SSL/TLS certificate pinning, leaving backend connections vulnerable to interception by a proxy or Man-in-the-Middle attacker.",
+  "title": "SSL/TLS Certificate Pinning Not Implemented",
+  "privacy_issue": false,
+  "security_issue": true,
+  "references": {
+    "OWASP MASWE - Missing Certificate Pinning (MASWE-0047)": "https://mas.owasp.org/MASWE/MASVS-NETWORK/MASWE-0047/",
+    "OWASP MASTG - Testing Custom Certificate Stores and Certificate Pinning (MASTG-TEST-0021)": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0021/",
+    "OWASP MASVS - MASVS-NETWORK-2": "https://mas.owasp.org/MASVS/controls/MASVS-NETWORK-2/",
+    "Android Network Security Configuration: Pin certificates": "https://developer.android.com/privacy-and-security/security-config#CertificatePinning",
+    "Apple App Pinned Domains": "https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity/nspinneddomains",
+    "OkHttp Certificate Pinning": "https://github.com/square/okhttp#certificate-pinning"
+  },
+  "categories": {
+    "OWASP_MASVS_v2_1": [
+      "MASVS_NETWORK_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_NETWORK_4"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_4_2"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_6_7"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M5_2024"
+    ]
+  }
+}

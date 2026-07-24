@@ -19,7 +19,7 @@
       "CC_7_1",
       "CC_7_2"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_3_2",
       "REQ_3_3",
       "REQ_3_4",
@@ -37,6 +37,11 @@
       "REQ_12_1",
       "REQ_12_3"
     ],
+    "HIPAA_CONTROLS": [
+      "SECURITY252",
+      "SECURITY212",
+      "SECURITY213"
+    ],
     "CCPA": [
       "CCPA_1798_100",
       "CCPA_1798_105",
@@ -49,7 +54,7 @@
       "CCPA_1798_140",
       "CCPA_1798_150"
     ],
-    "CWE_TOP_25" : [
+    "CWE_TOP_25": [
       "CWE_287",
       "CWE_798",
       "CWE_79",
@@ -57,6 +62,12 @@
       "CWE_20",
       "CWE_306",
       "CWE_119"
+    ],
+    "OWASP_TOP_10": [
+      "A02_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A02_2025"
     ]
   }
 }

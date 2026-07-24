@@ -1,0 +1,13 @@
+The application ships a root/jailbreak detection routine, but the implementation is too weak to act as an effective anti-tamper control: it relies on one or two single points of failure, is trivially bypassable by standard instrumentation, and/or is invoked only once at process start so a single spawn-time hook defeats it for the entire process lifetime.
+
+**Common weak implementations:**
+
+- **Single point of failure on the `su` lookup:** the detector walks `System.getenv("PATH")` and returns `true` only if `File(pathDir, "su").exists()` for any directory. Renaming or hiding `su` (e.g. via Magisk Hide / Zygisk DenyList) makes the check return `false` without ever spawning a process. There is no `which su`/busybox fallback and no second independent indicator (root-app package scan, `Build.TAGS` test-keys, Magisk-file/SELinux introspection).
+- **Stdout-substring predicate instead of exit code:** the detector spawns `su -c id`, reads exactly one `readLine()`, and decides success solely on `output.contains("uid=0")`. The process exit code is never consulted (`waitFor()`/`exitValue()` absent), so a Frida hook on `Runtime.exec(String[])` returning a stub `Process` with a non-root stdout line is sufficient.
+- **Swallowed exceptions:** any `Exception` thrown by the `exec` path is silently caught and treated as "not rooted", so a DenyList that makes `su` throw `IOException` yields a clean `false`.
+- **Single, non-repeated gate:** `isDeviceRooted()` is called exactly once, in `Activity.onCreate`, and is never re-verified in `onStart`/`onResume`/`onNewIntent`. A single spawn-time hook (Frida `Java.perform` at spawn, or a `Runtime.exec`/`isDeviceRooted` hook) therefore defeats detection for the whole process lifetime; there is no periodic re-evaluation across foreground/background transitions.
+- **No compensating controls:** the detector is the sole client-side anti-tamper gate. There is no SafetyNet/Play Integrity attestation, no signature self-verification, no RootBeer/libsuperuser, no debugger/Xposed/Frida detection, and no TLS pinning, so bypassing the one detector removes the entire barrier.
+
+**Impact and rating rationale:**
+
+This is a defense-in-depth gap, not a directly exploitable data-exposure bug. Every downstream impact (recoverable credentials, plaintext local caches, unpinned network interception) is only reachable by an attacker who **already holds root** — at which point the Android/iOS sandbox is already compromised regardless of this detector. The realistic, standalone impact is therefore limited and the finding is correctly rated **Low**. The risk escalates only when the weak detector is the sole barrier in front of high-value client-side assets.

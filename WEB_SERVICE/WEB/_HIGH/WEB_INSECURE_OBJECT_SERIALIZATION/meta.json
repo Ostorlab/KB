@@ -28,12 +28,18 @@
       "V5_5_1",
       "V5_5_3"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2",
       "REQ_6_3",
       "REQ_6_4",
       "REQ_11_3"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255",
+      "SECURITY258"
     ],
     "SOC2_CONTROLS": [
       "CC_2_1",
@@ -42,6 +48,15 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A08_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A08_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API8_2023"
     ]
   }
 }

@@ -12,10 +12,10 @@
     "OWASP_MASVS_L1": [
       "MSTG_STORAGE_6"
     ],
-        "OWASP_MASVS_L2": [
+    "OWASP_MASVS_L2": [
       "MSTG_STORAGE_6"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_3_5",
       "REQ_6_2"
@@ -30,8 +30,9 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M9_2024"
     ]
-
   }
 }
-

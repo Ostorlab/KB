@@ -3,7 +3,7 @@
   "short_description": "Application is vulnerable to technical vulnerabilities leading unauthorized control over user accounts.",
   "risk_rating": "critical",
   "references": {
-    "Rapid7: Account Takeover": "https://docs.rapid7.com/tcell/account-takeover/"
+    "Rapid7: Account Takeover": "https://www.rapid7.com/blog/post/2017/05/10/simplifying-account-takeover-protection/"
   },
   "privacy_issue": false,
   "security_issue": true,
@@ -11,7 +11,7 @@
     "CWE_TOP_25": [
       "CWE_862"
     ],
-    "PCI_STANDARDS":[
+    "PCI_STANDARDS": [
       "REQ_2_2",
       "REQ_6_2",
       "REQ_6_3",
@@ -25,6 +25,20 @@
       "CC_7_2",
       "CC_7_4",
       "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY221",
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_TOP_10": [
+      "A07_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A07_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API2_2023"
     ]
   }
 }

@@ -8,5 +8,13 @@
   "title": "Application checks rooted device",
   "privacy_issue": false,
   "security_issue": false,
-  "categories": {}
+  "categories": {
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY215"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M7_2024"
+    ]
+  }
 }
