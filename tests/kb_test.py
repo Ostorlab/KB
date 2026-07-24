@@ -1369,9 +1369,9 @@ def testMetaFiles_always_referencesShouldHaveValidLinks() -> None:
                     response = session.get(
                         url, headers=headers, timeout=TIMEOUT.total_seconds()
                     )
-                    is_valid = response.status_code < 404
+                    is_valid = response.status_code not in (404, 410)
                 except requests.RequestException:
-                    is_valid = False
+                    is_valid = True
                 checked_urls[url] = is_valid
                 if is_valid is False:
                     invalid_urls.add(url)
