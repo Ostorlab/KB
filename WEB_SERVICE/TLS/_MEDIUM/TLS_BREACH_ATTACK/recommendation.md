@@ -18,7 +18,7 @@ location /user/ { gzip off; }
 
 ```python
 # Flask: Disable compression middleware
-app.config['COMPRESS_MIMETYPES'] = []
+app.config["COMPRESS_MIMETYPES"] = []
 
 # Django: Remove GZipMiddleware from MIDDLEWARE setting
 MIDDLEWARE = [

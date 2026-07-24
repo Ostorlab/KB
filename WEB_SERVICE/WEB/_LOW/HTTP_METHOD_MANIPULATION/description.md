@@ -14,10 +14,12 @@ To check if a GraphQL API is vulnerable to this, you can attempt to execute a mu
   ```python
   import requests
 
-  response = requests.get("https://your-graphql-endpoint.com/graphql", 
+  response = requests.get(
+      "https://your-graphql-endpoint.com/graphql",
       params={
-          'query': 'mutation { MutationName(input: { yourField: "value" }) { resultField } }'
-      })
+          "query": 'mutation { MutationName(input: { yourField: "value" }) { resultField } }'
+      },
+  )
   ```
 === "javaScript"
   ```javascript

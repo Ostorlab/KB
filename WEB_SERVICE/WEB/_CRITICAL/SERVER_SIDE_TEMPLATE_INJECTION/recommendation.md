@@ -48,9 +48,9 @@
   from flask import Flask, render_template
   from flask import request
   import pystache
-  
+
   app = Flask(__name__)
-  
+
   # Define a simple Mustache template
   template = """
   <html>
@@ -62,21 +62,23 @@
   </body>
   </html>
   """
-  
+
   # Create a Mustache renderer
   mustache_renderer = pystache.Renderer()
-  
-  @app.route('/')
+
+
+  @app.route("/")
   def greet_user():
       # Get the 'name' query parameter from the URL
-      user_name = request.args.get('name', 'Guest')
-  
+      user_name = request.args.get("name", "Guest")
+
       # Render the template with the user's name
-      rendered_template = mustache_renderer.render(template, {'name': user_name})
-  
+      rendered_template = mustache_renderer.render(template, {"name": user_name})
+
       # Return the rendered HTML
       return rendered_template
-  
-  if __name__ == '__main__':
+
+
+  if __name__ == "__main__":
       app.run(debug=True)
   ```

@@ -1,14 +1,14 @@
 """KB json files test"""
 
+import datetime
 import glob
 import json
 import pathlib
-import datetime
 
+import pytest
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-import pytest
 
 TIMEOUT = datetime.timedelta(seconds=60)
 
@@ -1194,7 +1194,7 @@ def testJsonFiles_allFilesAreValid_testPasses() -> None:
             try:
                 json_data = json.load(file)
             except ValueError as e:
-                pytest.fail(f"Failed to load JSON file '{json_file}': {str(e)}")
+                pytest.fail(f"Failed to load JSON file '{json_file}': {e!s}")
 
             # Check if the JSON data is a dictionary
             assert isinstance(json_data, dict), "JSON data must be a dictionary."
@@ -1296,7 +1296,7 @@ def testJsonFiles_allFilesHaveCorrectCategories_testPasses(
             try:
                 json_data = json.load(file)
             except ValueError as e:
-                pytest.fail(f"Failed to load JSON file '{json_file}': {str(e)}")
+                pytest.fail(f"Failed to load JSON file '{json_file}': {e!s}")
 
             categories = json_data.get("categories", {})
             standard_categories = categories.get(category, [])
@@ -1315,16 +1315,15 @@ def testJsonFiles_whenFileHasCategories_shouldBeValid() -> None:
             try:
                 json_data = json.load(file)
             except ValueError as e:
-                pytest.fail(f"Failed to load JSON file '{json_file}': {str(e)}")
+                pytest.fail(f"Failed to load JSON file '{json_file}': {e!s}")
 
             categories = json_data.get("categories", {})
 
             assert (
-                all(group_key in CATEGORY_GROUPS for group_key in categories.keys())
-                is True
+                all(group_key in CATEGORY_GROUPS for group_key in categories) is True
             ), [
                 group_key
-                for group_key in categories.keys()
+                for group_key in categories
                 if group_key not in CATEGORY_GROUPS
             ]
 

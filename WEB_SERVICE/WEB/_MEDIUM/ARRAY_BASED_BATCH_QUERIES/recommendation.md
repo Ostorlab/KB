@@ -27,26 +27,28 @@ To mitigate the risk of array-based batch queries attacks in GraphQL, where mult
   ```
 === "Python"
   ```Python
-    import graphql
-    from graphql.language import ast
-    from graphql.language import parser
-    from settings import api
+  import graphql
+  from graphql.language import ast
+  from graphql.language import parser
+  from settings import api
 
-    def validate_batch_queries(query: str) -> None:
-        """
-        This validation prevents the execution of requests containing excessive
-        batch queries to avoid overloading the server.
-        """
-        class BatchQueryParser(parser.Parser):
-            def parse_batch_queries(self) -> list[ast.OperationDefinitionNode]:
-                query_count = 0
-                while self.peek(graphql.TokenKind.BRACKET_L):
-                    self.parse_operation_definition()
-                    query_count += 1
-                    if query_count > api.API_MAX_BATCH_QUERIES:
-                        raise graphql.GraphQLError("Exception - Max batch queries exceeded")
-                return []
 
-        ast_parser = BatchQueryParser(query)
-        ast_parser.parse_document()
+  def validate_batch_queries(query: str) -> None:
+      """
+      This validation prevents the execution of requests containing excessive
+      batch queries to avoid overloading the server.
+      """
+
+      class BatchQueryParser(parser.Parser):
+          def parse_batch_queries(self) -> list[ast.OperationDefinitionNode]:
+              query_count = 0
+              while self.peek(graphql.TokenKind.BRACKET_L):
+                  self.parse_operation_definition()
+                  query_count += 1
+                  if query_count > api.API_MAX_BATCH_QUERIES:
+                      raise graphql.GraphQLError("Exception - Max batch queries exceeded")
+              return []
+
+      ast_parser = BatchQueryParser(query)
+      ast_parser.parse_document()
   ```

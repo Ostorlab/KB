@@ -4,18 +4,18 @@ Below are examples of secure settings of CORS:
 
 === "Django"
    ```Python
-       CORS_ALLOWED_ORIGINS = [
+   CORS_ALLOWED_ORIGINS = [
        "https://cross-origin-website.com",
        "https://sub.cross-origin-website.com",
-       ]
-       CORS_ALLOW_METHODS = [
-           "DELETE",
-           "GET",
-           "OPTIONS",
-           "PATCH",
-           "POST",
-           "PUT",
-       ]
+   ]
+   CORS_ALLOW_METHODS = [
+       "DELETE",
+       "GET",
+       "OPTIONS",
+       "PATCH",
+       "POST",
+       "PUT",
+   ]
    ```
 
 === "NodeJs"

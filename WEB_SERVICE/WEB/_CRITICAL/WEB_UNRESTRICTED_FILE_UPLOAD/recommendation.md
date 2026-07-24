@@ -62,20 +62,21 @@ To mitigate the risks associated with unrestricted files upload, consider the fo
   from django.views.decorators.http import require_POST
   import os
   from uuid import uuid4
-  
+
+
   @require_POST
   def upload_file(request):
-      if request.method == 'POST' and request.FILES['file']:
-          file = request.FILES['file']
-          allowed_extensions = ['.jpg', '.jpeg', '.png']
+      if request.method == "POST" and request.FILES["file"]:
+          file = request.FILES["file"]
+          allowed_extensions = [".jpg", ".jpeg", ".png"]
           ext = os.path.splitext(file.name)[1]
           if ext.lower() not in allowed_extensions:
-              return HttpResponseBadRequest('File type not allowed!')
+              return HttpResponseBadRequest("File type not allowed!")
           fs = FileSystemStorage()
           filename = fs.save(str(uuid4()) + ext, file)
-          return HttpResponse('File uploaded successfully!')
+          return HttpResponse("File uploaded successfully!")
       else:
-          return HttpResponseBadRequest('No file found!')
+          return HttpResponseBadRequest("No file found!")
   ```
 
 === "PHP"

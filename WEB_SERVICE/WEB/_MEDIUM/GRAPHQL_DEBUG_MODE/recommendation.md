@@ -16,15 +16,18 @@ Example of controlling debug mode in Django Graphene:
 DEBUG = False  # Set to True only in development
 
 GRAPHENE = {
-    'MIDDLEWARE': [
-        'graphene_django.debug.DjangoDebugMiddleware',
-    ] if DEBUG else []
+    "MIDDLEWARE": [
+        "graphene_django.debug.DjangoDebugMiddleware",
+    ]
+    if DEBUG
+    else []
 }
 
 # Custom error handling
 from graphene_django.views import GraphQLView
 from django.http import JsonResponse
 from django.conf import settings
+
 
 class CustomGraphQLView(GraphQLView):
     @staticmethod
@@ -39,6 +42,7 @@ class CustomGraphQLView(GraphQLView):
             errors = [self.format_error(e) for e in result.errors]
             return JsonResponse({"errors": errors})
         return result
+
 
 # Use CustomGraphQLView in your urls.py
 ```

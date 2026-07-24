@@ -39,25 +39,27 @@ To mitigate the security risks associated with Cross-Origin Resource Sharing (CO
   ```python
   from flask import Flask, jsonify, request
   from flask_cors import CORS
-  
+
   app = Flask(__name__)
-  
+
   # Define a list of allowed origins
   allowed_origins = [
-      'http://example.com',
-      'https://example.com',
+      "http://example.com",
+      "https://example.com",
       # Add more origins as needed
-  ]  
+  ]
 
   # Initialize CORS with the whitelist
-  CORS(app, origins=allowed_origins) 
-  
+  CORS(app, origins=allowed_origins)
+
+
   # Define routes
-  @app.route('/')
+  @app.route("/")
   def hello_world():
-      return jsonify(message='Hello World!')
-  
-  if __name__ == '__main__':
+      return jsonify(message="Hello World!")
+
+
+  if __name__ == "__main__":
       app.run(debug=True)
   ```
 

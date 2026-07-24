@@ -24,9 +24,10 @@ A broader attack that sometimes involves CRLF injection. In this scenario, an at
   import flask
   from flask import request
   from flask import make_response
-  
+
   app = flask.Flask(__name__)
-  
+
+
   @app.route("/")
   def index():
       header = request.args.get("header")
@@ -34,7 +35,8 @@ A broader attack that sometimes involves CRLF injection. In this scenario, an at
       resp = make_response("Hello: %s" % username)
       resp.headers.set(header, username)
       return resp
-  
+
+
   app.run(host="0.0.0.0", port=8080)
   ```
 
