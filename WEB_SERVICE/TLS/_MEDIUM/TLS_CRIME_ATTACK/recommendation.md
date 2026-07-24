@@ -13,6 +13,7 @@ SSLCompression off
 ```python
 # Python applications
 import ssl
+
 context = ssl.create_default_context()
 context.options |= ssl.OP_NO_COMPRESSION
 ```

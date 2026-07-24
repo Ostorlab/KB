@@ -38,8 +38,11 @@ curl "https://api.ssllabs.com/api/v3/analyze?host=example.com"
 ```python
 # Python - disable export ciphers
 import ssl
+
 context = ssl.create_default_context()
-context.set_ciphers('ECDHE+AESGCM:ECDHE+CHACHA20:DHE+AESGCM:DHE+CHACHA20:!aNULL:!MD5:!DSS:!EXPORT')
+context.set_ciphers(
+    "ECDHE+AESGCM:ECDHE+CHACHA20:DHE+AESGCM:DHE+CHACHA20:!aNULL:!MD5:!DSS:!EXPORT"
+)
 ```
 
 **Additional Mitigations:**

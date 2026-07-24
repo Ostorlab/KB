@@ -25,13 +25,14 @@ SSTI, or Server-Side Template Injection, is a security vulnerability that occurs
   ```python
   # Vulnerable Python code using Jinja2
   from flask import Flask, render_template, request
-  
+
   app = Flask(__name__)
-  
-  @app.route('/greet')
+
+
+  @app.route("/greet")
   def greet():
       # Injecting user input directly into the template
-      username = request.args.get('username')
-      return render_template('greet.html', username=username)
+      username = request.args.get("username")
+      return render_template("greet.html", username=username)
   ```
 

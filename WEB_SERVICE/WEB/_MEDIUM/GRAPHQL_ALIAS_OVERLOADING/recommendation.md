@@ -30,27 +30,28 @@ To mitigate the risk of Alias Overloading attacks, you can take the following st
 
 === "Python"
   ```python
-    import graphql
-    from graphql.language import ast
-    from graphql.language import parser
-    from settings import api
-    
-    def validate_aliases(query: str) -> None:
-        """
-        This validation prevents the execution of queries containing an excessive
-        number of aliases to prevent server overload.
-        """
-    
-        class AliasesParser(parser.Parser):
-            def parse_aliases(self) -> list[ast.FieldNode]:
-                aliases = 0
-                while self.peek(graphql.TokenKind.NAME):
-                    aliases += 1
-                    if aliases > api.API_MAX_ALIASES:
-                        raise graphql.GraphQLError("Exception - Max aliases exceeded")
-                    self.parse_field()
-                return []
-    
-        ast_parser = AliasesParser(query)
-        ast_parser.parse_document()
+  import graphql
+  from graphql.language import ast
+  from graphql.language import parser
+  from settings import api
+
+
+  def validate_aliases(query: str) -> None:
+      """
+      This validation prevents the execution of queries containing an excessive
+      number of aliases to prevent server overload.
+      """
+
+      class AliasesParser(parser.Parser):
+          def parse_aliases(self) -> list[ast.FieldNode]:
+              aliases = 0
+              while self.peek(graphql.TokenKind.NAME):
+                  aliases += 1
+                  if aliases > api.API_MAX_ALIASES:
+                      raise graphql.GraphQLError("Exception - Max aliases exceeded")
+                  self.parse_field()
+              return []
+
+      ast_parser = AliasesParser(query)
+      ast_parser.parse_document()
   ```

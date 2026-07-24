@@ -35,6 +35,7 @@ To mitigate the risk of Directive Overloading attacks, you can take the followin
   from graphql.language import parser
   from settings import api
 
+
   def validate_directives(query: str) -> None:
       """
       This validation prevents the execution of queries containing an excessive
