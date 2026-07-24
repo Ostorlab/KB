@@ -50,13 +50,13 @@ To mitigate code injection vulnerabilities, here are some possible mitigations:
 === "Python"
   ```python
   import re
-  
+
   try:
       user_input = input("Enter a Python expression: ")
-  
+
       # Sanitize user input
-      sanitized_input = re.sub(r'[^0-9+\-*/]', '', user_input)
-  
+      sanitized_input = re.sub(r"[^0-9+\-*/]", "", user_input)
+
       result = eval(sanitized_input)
       print("Result:", result)
   except Exception as e:

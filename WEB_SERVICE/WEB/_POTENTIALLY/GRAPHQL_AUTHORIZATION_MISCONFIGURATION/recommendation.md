@@ -5,7 +5,7 @@
    - Use middleware or decorators to enforce access controls uniformly.
    - Example:
      ```python
-     @require_permission('admin')
+     @require_permission("admin")
      def resolve_sensitive_data(self, info):
          # Only admins can access this resolver
          pass
@@ -18,11 +18,11 @@
      class UserType(DjangoObjectType):
          class Meta:
              model = User
-             fields = ('id', 'username', 'email')
-         
+             fields = ("id", "username", "email")
+
          @staticmethod
          def resolve_email(parent, info):
-             if info.context.user.has_permission('view_email'):
+             if info.context.user.has_permission("view_email"):
                  return parent.email
              return None
      ```

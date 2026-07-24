@@ -6,27 +6,26 @@ Source code can be fully retrieved with the following sample script:
 
 === "Python"
 	```python
-	
 	import sys
 	import json
 	import os
-	
+
 	filename = sys.argv[1]
-	
-	map = json.load(open(filename, 'r'))
-	
-	files = map['sources']
-	content = map['sourcesContent']
-	
+
+	map = json.load(open(filename, "r"))
+
+	files = map["sources"]
+	content = map["sourcesContent"]
+
 	if len(files) != len(content):
-	    raise ValueError('not same lengths')
-	
+	    raise ValueError("not same lengths")
+
 	for f, c in zip(files, content):
-	    f = f.replace('../', '')
+	    f = f.replace("../", "")
 	    print(f)
-	    if '/' in f:
+	    if "/" in f:
 	        os.makedirs(os.path.dirname(f), exist_ok=True)
-	    with open(f, 'w') as o:
+	    with open(f, "w") as o:
 	        o.write(c)
 	```
 

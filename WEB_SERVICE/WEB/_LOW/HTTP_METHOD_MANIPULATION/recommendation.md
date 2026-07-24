@@ -6,13 +6,13 @@ To mitigate the risks associated with **HTTP Method Manipulation** in GraphQL, f
 
 === "Python"
   ```python
-
   from flask import request, jsonify
   from flask_graphql import GraphQLView
 
-  @app.route('/graphql', methods=['POST'])
+
+  @app.route("/graphql", methods=["POST"])
   def graphql():
-      return GraphQLView.as_view('graphql')()
+      return GraphQLView.as_view("graphql")()
   ```
 === "javaScript"
   ```javascript

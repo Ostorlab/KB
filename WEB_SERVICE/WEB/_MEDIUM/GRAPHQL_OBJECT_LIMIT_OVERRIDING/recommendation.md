@@ -83,6 +83,7 @@ Example Implementation:
   from graphql import parse, execute, validate, GraphQLError
   from graphql.language.visitor import visit, Visitor
 
+
   class ComplexityVisitor(Visitor):
       def __init__(self):
           self.complexity = 0
@@ -92,7 +93,10 @@ Example Implementation:
           complexity = 1  # Base complexity for each field
           self.complexity += complexity
           if self.complexity > self.max_complexity:
-              raise GraphQLError(f"Query complexity exceeds maximum allowed complexity of {self.max_complexity}")
+              raise GraphQLError(
+                  f"Query complexity exceeds maximum allowed complexity of {self.max_complexity}"
+              )
+
 
   def complexity_middleware(schema, query):
       document = parse(query)
@@ -100,10 +104,13 @@ Example Implementation:
       visit(document, visitor)
       return visitor.complexity
 
+
   def execute_with_complexity_check(schema, query, variables=None):
       complexity = complexity_middleware(schema, query)
       if complexity > 100:
-          raise GraphQLError(f"Query complexity exceeds maximum allowed complexity of 100")
+          raise GraphQLError(
+              f"Query complexity exceeds maximum allowed complexity of 100"
+          )
       result = execute(schema, parse(query), variable_values=variables)
       return result
   ```
