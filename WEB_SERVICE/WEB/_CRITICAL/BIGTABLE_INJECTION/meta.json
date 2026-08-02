@@ -1,0 +1,48 @@
+{
+  "risk_rating": "critical",
+  "short_description": "The application builds Bigtable row-key prefixes, key ranges, or row filters from untrusted user input, allowing an attacker to read rows outside their intended scope.",
+  "references": {
+    "OWASP": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection",
+    "Google Cloud Bigtable Overview": "https://cloud.google.com/bigtable/docs/overview",
+    "Google Cloud Bigtable Schema Design": "https://cloud.google.com/bigtable/docs/schema-design-time-series"
+  },
+  "title": "Google Bigtable Injection",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "GDPR": [
+      "ART_5",
+      "ART_32"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_5",
+      "REQ_8_6"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_3_4",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
+    ],
+    "OWASP_TOP_10": [
+      "A03_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API3_2023",
+      "API8_2023"
+    ]
+  }
+}
