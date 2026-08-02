@@ -1,0 +1,59 @@
+{
+  "risk_rating": "critical",
+  "short_description": "The application is vulnerable to Google Cloud Spanner injection when user-controlled input is concatenated into Spanner SQL statements instead of being passed as a parameterized query parameter.",
+  "references": {
+    "SQL Injection (OWASP)": "https://owasp.org/www-community/attacks/SQL_Injection",
+    "Improper Neutralization of Special Elements used in an SQL Command (CWE-89)": "https://cwe.mitre.org/data/definitions/89.html",
+    "Google Cloud Spanner - Query syntax": "https://cloud.google.com/spanner/docs/query-syntax"
+  },
+  "title": "Google Spanner Injection",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_89"
+    ],
+    "OWASP_ASVS_L1": [
+      "V5_3_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V5_3_5"
+    ],
+    "OWASP_ASVS_L3": [
+      "V5_3_5"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_3_5",
+      "REQ_4_2",
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_11_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_3_4",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213",
+      "SECURITY255"
+    ],
+    "OWASP_TOP_10": [
+      "A03_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API3_2023",
+      "API8_2023"
+    ]
+  }
+}
