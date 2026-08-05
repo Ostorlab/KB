@@ -5,7 +5,7 @@
   "privacy_issue": false,
   "security_issue": true,
   "references": {
-    "OWASP MASWE - Missing Certificate Pinning (MASWE-0047)": "https://mas.owasp.org/MASWE/MASVS-NETWORK/MASWE-0047/",
+    "OWASP MASWE - Insecure Identity Pinning (MASWE-0028)": "https://mas.owasp.org/MASWE/MASVS-NETWORK/MASWE-0028/",
     "OWASP MASTG - Testing Custom Certificate Stores and Certificate Pinning (MASTG-TEST-0021)": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0021/",
     "OWASP MASVS - MASVS-NETWORK-2": "https://mas.owasp.org/MASVS/controls/MASVS-NETWORK-2/",
     "Android Network Security Configuration: Pin certificates": "https://developer.android.com/privacy-and-security/security-config#CertificatePinning",
