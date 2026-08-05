@@ -2,7 +2,7 @@
   "risk_rating": "low",
   "short_description": "The application implements a root/jailbreak detection mechanism that is weak, trivially bypassable, or invoked only once, leaving runtime instrumentation and tampering effectively unimpeded.",
   "references": {
-    "OWASP MASWE - Root/Jailbreak Detection Not Implemented (MASWE-0097)": "https://mas.owasp.org/MASWE/MASVS-RESILIENCE/MASWE-0097/",
+    "OWASP MASWE - Root/Jailbreak Detection Not Implemented (MASWE-0051)": "https://mas.owasp.org/MASWE/MASVS-RESILIENCE/MASWE-0051/",
     "OWASP MASTG - Testing Root Detection (MASTG-TEST-0045)": "https://mas.owasp.org/MASTG/tests/android/MASVS-RESILIENCE/MASTG-TEST-0045/",
     "OWASP MASTG - Testing Jailbreak Detection (MASTG-TEST-0088)": "https://mas.owasp.org/MASTG/tests/ios/MASVS-RESILIENCE/MASTG-TEST-0088/",
     "OWASP MASTG - Implementing Root Detection (MASTG-BEST-0030)": "https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0030/",
