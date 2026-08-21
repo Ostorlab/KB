@@ -1,12 +1,20 @@
 """Unittests for KB generator."""
 
 import os.path
+from typing import Any
 
+import pytest
+import tenacity
 from pyfakefs import fake_filesystem
 from pytest_mock import plugin
 
 from tests import utils
 from tools import kb_generator
+
+
+def _mock_create(**kwargs: Any) -> utils.MockResponse:
+    """Adapt the chat completion create kwargs to the shared prompt mock."""
+    return utils.mock_chat_completion_create(prompts=kwargs["messages"])
 
 
 def testGenerateKB_whenVulnerabilityProvided_returnsKBEntry(
@@ -60,6 +68,71 @@ def testGenerateKB_whenVulnerabilityProvided_returnsKBEntry(
         ],
         "OWASP_MASVS_L2": ["V7: Data Protection", "V8: Resilience Against Attack"],
     }
+
+
+def testGenerateKB_whenFireworksProviderProvided_generatesKBEntryUsingFireworks(
+    mocker: plugin.MockerFixture,
+) -> None:
+    """generate_kb with the fireworks provider calls the Fireworks inference endpoint."""
+    openai_client_mock = mocker.patch("tools.kb_generator.OpenAI")
+    openai_client_mock.return_value.chat.completions.create.side_effect = _mock_create
+    mocker.patch.dict(os.environ, {"FIREWORKS_API_KEY": "fw-test-key"})
+    vulnerability = kb_generator.Vulnerability(
+        "Sql Injection", kb_generator.RiskRating.HIGH, kb_generator.Platform.WEB
+    )
+
+    kbentry = kb_generator.generate_kb(
+        vulnerability, kb_generator.LLMProvider.FIREWORKS
+    )
+
+    _, client_kwargs = openai_client_mock.call_args
+    assert client_kwargs["api_key"] == "fw-test-key"
+    assert client_kwargs["base_url"] == "https://api.fireworks.ai/inference/v1"
+
+    _, create_kwargs = openai_client_mock.return_value.chat.completions.create.call_args
+    assert create_kwargs["model"] == "accounts/fireworks/models/llama-v3p3-70b-instruct"
+    assert kbentry.meta["risk_rating"] == "high"
+    assert kbentry.meta["title"] == "SQL Injection Vulnerability"
+
+
+def testGenerateKB_whenDefaultProviderProvided_generatesKBEntryUsingOpenRouter(
+    mocker: plugin.MockerFixture,
+) -> None:
+    """generate_kb with the default provider calls the OpenRouter endpoint."""
+    openai_client_mock = mocker.patch("tools.kb_generator.OpenAI")
+    openai_client_mock.return_value.chat.completions.create.side_effect = _mock_create
+    vulnerability = kb_generator.Vulnerability(
+        "Sql Injection", kb_generator.RiskRating.HIGH, kb_generator.Platform.WEB
+    )
+
+    kbentry = kb_generator.generate_kb(vulnerability)
+
+    _, client_kwargs = openai_client_mock.call_args
+    assert client_kwargs["base_url"] == "https://openrouter.ai/api/v1"
+
+    _, create_kwargs = openai_client_mock.return_value.chat.completions.create.call_args
+    assert create_kwargs["model"] == "gpt-3.5-turbo"
+    assert kbentry.meta["risk_rating"] == "high"
+
+
+def testGenerateKB_whenFireworksApiKeyIsMissing_raisesValueError(
+    mocker: plugin.MockerFixture,
+) -> None:
+    """generate_kb with the fireworks provider and no API key raises a ValueError."""
+    mocker.patch("tools.kb_generator.OpenAI")
+    mocker.patch("tenacity.nap.sleep")
+    mocker.patch.dict(os.environ, {}, clear=False)
+    os.environ.pop("FIREWORKS_API_KEY", None)
+    vulnerability = kb_generator.Vulnerability(
+        "Sql Injection", kb_generator.RiskRating.HIGH, kb_generator.Platform.WEB
+    )
+
+    with pytest.raises(tenacity.RetryError) as excinfo:
+        kb_generator.generate_kb(vulnerability, kb_generator.LLMProvider.FIREWORKS)
+
+    last_exception = excinfo.value.last_attempt.exception()
+    assert isinstance(last_exception, ValueError) is True
+    assert "FIREWORKS_API_KEY" in str(last_exception)
 
 
 def testDumpKB_whenPathIsValid_writesFiles(

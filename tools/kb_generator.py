@@ -1,4 +1,4 @@
-"""Module responsible for interacting with the OpenAI API to generate KB entries."""
+"""Module responsible for interacting with the LLM API to generate KB entries."""
 
 import dataclasses
 import enum
@@ -21,8 +21,18 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL_NAME = "gpt-3.5-turbo"
+FIREWORKS_MODEL_NAME = "accounts/fireworks/models/llama-v3p3-70b-instruct"
+FIREWORKS_BASE_URL = "https://api.fireworks.ai/inference/v1"
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+
+
+class LLMProvider(enum.Enum):
+    """LLM inference provider used to generate the KB entries."""
+
+    OPENROUTER = "openrouter"
+    FIREWORKS = "fireworks"
+
 
 DESCRIPTION_TEMPLATE = """
 # %%VULNERABILITY_NAME%%
@@ -186,18 +196,30 @@ def _ask_gpt(
     prompts: list[chat.ChatCompletionMessageParam],
     temperature: float = 0.0,
     max_tokens: int = 3200,
+    provider: LLMProvider = LLMProvider.OPENROUTER,
 ) -> Any:
-    """Send a prompt to OpenAI API using OpenRouter."""
-    if OPENAI_API_KEY is None:
-        raise ValueError("OPENAI_API_KEY environment variable is not set")
-
-    client = OpenAI(
-        api_key=OPENAI_API_KEY,
-        base_url="https://openrouter.ai/api/v1",
-    )
+    """Send a prompt to the configured LLM provider using the OpenAI client."""
+    if provider == LLMProvider.FIREWORKS:
+        api_key = os.getenv("FIREWORKS_API_KEY")
+        if api_key is None:
+            raise ValueError("FIREWORKS_API_KEY environment variable is not set")
+        client = OpenAI(
+            api_key=api_key,
+            base_url=FIREWORKS_BASE_URL,
+        )
+        model_name = FIREWORKS_MODEL_NAME
+    else:
+        api_key = os.getenv("OPENAI_API_KEY")
+        if api_key is None:
+            raise ValueError("OPENAI_API_KEY environment variable is not set")
+        client = OpenAI(
+            api_key=api_key,
+            base_url=OPENROUTER_BASE_URL,
+        )
+        model_name = MODEL_NAME
 
     return client.chat.completions.create(
-        model=MODEL_NAME,
+        model=model_name,
         temperature=temperature,
         max_tokens=max_tokens,
         messages=prompts,
@@ -209,11 +231,14 @@ def _ask_gpt(
     wait=tenacity.wait_fixed(2),
     retry=tenacity.retry_if_exception_type(),
 )
-def generate_kb(vulnerability: Vulnerability) -> KBEntry:
-    """Send a prompt to the OpenAI API and generate KB.
+def generate_kb(
+    vulnerability: Vulnerability, provider: LLMProvider = LLMProvider.OPENROUTER
+) -> KBEntry:
+    """Send a prompt to the LLM API and generate KB.
 
     Args:
         vulnerability: a vulnerability object
+        provider: the LLM inference provider used to generate the KB entry
     Returns:
         KB entry
 
@@ -231,7 +256,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
             content=prompt_message,
         ),
     ]
-    gpt_response = _ask_gpt(prompts=prompts)
+    gpt_response = _ask_gpt(prompts=prompts, provider=provider)
     content = gpt_response.choices[0].message.content
     description_md = description_md.replace("%%VULNERABILITY_DESCRIPTION%%", content)
 
@@ -245,7 +270,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
             content=prompt_message,
         ),
     ]
-    gpt_response = _ask_gpt(prompts=prompts)
+    gpt_response = _ask_gpt(prompts=prompts, provider=provider)
     content = gpt_response.choices[0].message.content
     recommendation_md = recommendation_md.replace("%%RECOMMENDATION%%", content)
 
@@ -266,7 +291,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
                 content=prompt_message,
             ),
         ]
-        gpt_response = _ask_gpt(prompts=prompts)
+        gpt_response = _ask_gpt(prompts=prompts, provider=provider)
         content = gpt_response.choices[0].message.content
         match = re.search(PATTERN, content, re.DOTALL | re.MULTILINE)
         code = match.group(1).strip() if match else "[TODO]"
@@ -286,7 +311,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
                 content=prompt_message,
             ),
         ]
-        gpt_response = _ask_gpt(prompts=prompts)
+        gpt_response = _ask_gpt(prompts=prompts, provider=provider)
         content = gpt_response.choices[0].message.content
         match = re.search(PATTERN, content, re.DOTALL | re.MULTILINE)
         code = match.group(1).strip() if match else "[TODO]"
@@ -308,7 +333,7 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
             content=prompt_message,
         ),
     ]
-    gpt_response = _ask_gpt(prompts=prompts)
+    gpt_response = _ask_gpt(prompts=prompts, provider=provider)
     content = gpt_response.choices[0].message.content
     meta = json.loads(content)
 
@@ -331,7 +356,16 @@ def generate_kb(vulnerability: Vulnerability) -> KBEntry:
     help="Platform",
     type=click.Choice([platform.value for platform in Platform], case_sensitive=False),
 )
-def main(name: str, risk: str, platform: str) -> None:
+@click.option(
+    "--provider",
+    help="LLM inference provider",
+    type=click.Choice(
+        [provider.value for provider in LLMProvider], case_sensitive=False
+    ),
+    default=LLMProvider.OPENROUTER.value,
+    show_default=True,
+)
+def main(name: str, risk: str, platform: str, provider: str) -> None:
     """
     Entry point of the program.
 
@@ -343,11 +377,12 @@ def main(name: str, risk: str, platform: str) -> None:
         name: vulnerability name
         risk: vulnerability risk rating
         platform: vulnerability target platform
+        provider: LLM inference provider
     Returns:
 
     """
     vulnerability = Vulnerability(name, RiskRating(risk), Platform(platform))
-    kbentry = generate_kb(vulnerability)
+    kbentry = generate_kb(vulnerability, LLMProvider(provider))
     dump_kb(kbentry)
 
 
