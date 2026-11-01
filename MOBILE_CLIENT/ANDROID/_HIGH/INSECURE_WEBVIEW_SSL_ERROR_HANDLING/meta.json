@@ -1,0 +1,31 @@
+{
+  "risk_rating": "high",
+  "short_description": "A WebView client overrides onReceivedSslError and proceeds on SSL/TLS certificate errors, disabling certificate validation for the WebView and exposing the app to MITM attacks.",
+  "references": {
+    "OWASP MASWE-0027: Insecure Certificate Validation": "https://mas.owasp.org/MASWE/MASVS-NETWORK/MASWE-0027/",
+    "OWASP MASTG-TEST-0284: Incorrect SSL Error Handling in WebViews (static test)": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0284/",
+    "Android WebViewClient.onReceivedSslError reference": "https://developer.android.com/reference/android/webkit/WebViewClient#onReceivedSslError(android.webkit.WebView,%20android.webkit.SslErrorHandler,%20android.net.http.SslError)",
+    "Android SslErrorHandler.proceed reference": "https://developer.android.com/reference/android/webkit/SslErrorHandler#proceed%28%29",
+    "CWE-295: Improper Certificate Validation": "https://cwe.mitre.org/data/definitions/295.html"
+  },
+  "title": "Insecure WebView SSL error handling",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_NETWORK_1",
+      "MSTG_NETWORK_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_NETWORK_1",
+      "MSTG_NETWORK_2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_NETWORK_1",
+      "MASVS_NETWORK_2"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M5_2024"
+    ]
+  }
+}
