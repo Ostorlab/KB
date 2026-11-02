@@ -1,0 +1,70 @@
+{
+  "risk_rating": "critical",
+  "short_description": "Plex Media Server before 1.43.3.10861 contains a four-CVE unauthenticated RCE chain (plex2shell, CVE-2026-96652, CVE-2026-96654, CVE-2026-96655, CVE-2026-96656): a companion-protocol SSRF pivots the server into its loopback-only plugin API, steals the owner admin token, and turns the transcoder into an arbitrary file write plus unsigned code execution from the Codecs directory. Exploited actively and widely against internet-facing servers.",
+  "references": {
+    "Plex: Important Security Update for Plex Media Server v1.43.2 and earlier (CVE details and exploitation update, October 19, 2026)": "https://forums.plex.tv/t/important-security-update-for-plex-media-server-v1-43-2-and-earlier/942319",
+    "Researcher disclosure: Plex2Shell - unauthenticated RCE in Plex Media Server (zmain.info)": "https://zmain.info/blog/plex2shell",
+    "Public proof of concept and detection artifacts: code-zm/plex2shell": "https://github.com/code-zm/plex2shell",
+    "CISA CSAF VA-26-266-01: Plex Media Server (CVE-2026-96651, 96652, 96654, 96655, 96656)": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json",
+    "NVD: CVE-2026-96651": "https://nvd.nist.gov/vuln/detail/CVE-2026-96651",
+    "NVD: CVE-2026-96652": "https://nvd.nist.gov/vuln/detail/CVE-2026-96652",
+    "NVD: CVE-2026-96654": "https://nvd.nist.gov/vuln/detail/CVE-2026-96654",
+    "NVD: CVE-2026-96655": "https://nvd.nist.gov/vuln/detail/CVE-2026-96655",
+    "NVD: CVE-2026-96656": "https://nvd.nist.gov/vuln/detail/CVE-2026-96656",
+    "CISA KEV: CVE-2026-96652 (with 96654, 96655 and 96656 added the same day)": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96652",
+    "python-plexapi Identity object (server version returned by /identity)": "https://python-plexapi.readthedocs.io/en/latest/modules/server.html"
+  },
+  "title": "Plex Media Server plex2shell unauthenticated RCE chain (CVE-2026-96652, CVE-2026-96654, CVE-2026-96655, CVE-2026-96656)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5",
+      "V12_6_1"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5",
+      "V12_6_1"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5",
+      "V12_6_1"
+    ],
+    "CWE_TOP_25": [
+      "CWE_918",
+      "CWE_94"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A03_2021",
+      "A10_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025",
+      "A10_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API7_2023"
+    ]
+  }
+}

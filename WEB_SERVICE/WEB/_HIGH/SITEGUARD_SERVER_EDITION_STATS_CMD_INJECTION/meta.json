@@ -1,0 +1,55 @@
+{
+  "risk_rating": "high",
+  "short_description": "EG Secure Solutions SiteGuard Server Edition, a host-based WAF integrated into Apache httpd, Nginx and IIS, contains an OS command injection in its statistics feature (CVE-2026-106931). On installations with statistics enabled (the default), it runs with root or SYSTEM privileges, so an attacker with a limited foothold on the host can escalate to arbitrary root/SYSTEM command execution. Exploitation in the wild is confirmed.",
+  "references": {
+    "EG Secure Solutions alert (Japanese): OS command injection in SiteGuard Server Edition (CVE-2026-106931)": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1",
+    "JVN#88474777: SiteGuard Server Edition vulnerable to OS command injection": "https://jvn.jp/en/jp/JVN88474777/",
+    "JPCERT Alert JPCERT-AT-2026-0032 (Japanese)": "https://www.jpcert.or.jp/at/2026/at260032.html",
+    "NVD: CVE-2026-106931": "https://nvd.nist.gov/vuln/detail/CVE-2026-106931",
+    "CISA KEV: CVE-2026-106931": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-106931"
+  },
+  "title": "SiteGuard Server Edition statistics OS command injection (CVE-2026-106931)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "CWE_TOP_25": [
+      "CWE_78"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A03_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025"
+    ]
+  }
+}

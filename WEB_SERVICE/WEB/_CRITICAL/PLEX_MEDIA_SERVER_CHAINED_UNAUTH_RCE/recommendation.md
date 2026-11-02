@@ -1,0 +1,11 @@
+Plex Media Server 1.43.3.10861 fixes all five CVEs of the plex2shell disclosure, and the vendor reports the chain is being actively and widely exploited against internet-facing servers that have not updated. Any server below that build should be treated as an exposure first and remediated immediately.
+
+* **Update every Plex Media Server to 1.43.3.10861 or later.** On NAS devices the updated package may lag in the vendor's package manager; install the package manually (the vendor publishes per-platform update guides and the packages on its downloads page). Keep automatic updates enabled where the platform supports them.
+* **Reduce exposure.** If remote access is not needed, turn it off under Settings → Remote Access. Avoid forwarding port 32400 directly to the internet; when remote access is required, prefer the vendor's relay/remote-access mechanism or restrict the port to a VPN.
+* **Assume compromise for pre-1.43.3.10861 servers that were internet-reachable**, per the vendor's guidance, and respond accordingly:
+  1. Rebuild the server from a clean installation rather than reusing the old Plex data directory.
+  2. At minimum, delete everything in the Codecs folder and check `Preferences.xml` for transcoder options you did not set (in particular `TranscoderH264Options`).
+  3. Sign out of all devices from your Plex account settings and change your Plex password.
+  4. Treat anything the Plex service account could reach as potentially exposed — mounted shares, credentials stored on the same machine or VM, and other services bound to loopback.
+* **Hunt for the published compromise indicators**: unknown processes spawned by the Plex Media Server process (the observed campaign used the names `myawesomeproxy`, `mylovelyminer` and `x12345`), unexpected `.so`/`.dll` files in the Codecs directory, outbound connections to `proxystream.st`, and sustained CPU use while nothing is playing. The public PoC repository ships YARA rules and hunt scripts for this.
+* **Never run the public PoC against a server you do not own.** The chain writes a shared object to disk and executes it; verification of patch level needs only the unauthenticated `/identity` version fingerprint, not the exploit.
