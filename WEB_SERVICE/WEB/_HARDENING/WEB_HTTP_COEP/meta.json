@@ -1,0 +1,39 @@
+{
+  "risk_rating": "hardening",
+  "short_description": "The application does not send a valid Cross-Origin-Embedder-Policy (COEP) header on document responses, so the document can load cross-origin resources that have not opted in to being embedded, and the site cannot achieve cross-origin isolation.",
+  "references": {
+    "MDN: Cross-Origin-Embedder-Policy (COEP) header": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy",
+    "MDN: Cross-Origin-Embedder-Policy-Report-Only header": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy-Report-Only",
+    "MDN: Cross-Origin-Opener-Policy (COOP) header": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy",
+    "MDN: Cross-Origin-Resource-Policy (CORP) header": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy",
+    "OWASP Secure Headers Project": "https://owasp.org/www-project-secure-headers/",
+    "web.dev: COOP and COEP explained": "https://web.dev/coop-coep/"
+  },
+  "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L3": [
+      "V2_2_5"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3",
+      "REQ_6_4",
+      "REQ_11_3"
+    ],
+    "HIPAA_CONTROLS": [
+      "SECURITY212",
+      "SECURITY213"
+    ],
+    "OWASP_TOP_10": [
+      "A05_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A05_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API8_2023"
+    ]
+  }
+}
