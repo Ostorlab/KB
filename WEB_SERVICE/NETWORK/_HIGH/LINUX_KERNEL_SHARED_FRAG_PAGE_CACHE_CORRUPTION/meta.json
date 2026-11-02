@@ -1,0 +1,38 @@
+{
+  "risk_rating": "high",
+  "short_description": "Linux kernels before 5.15.208 / 6.1.174 / 6.6.141 / 6.12.91 / 6.18.33 / 7.0.10 lose the SKBFL_SHARED_FRAG marker when TCP receive coalescing merges paged fragments, so ESP (IPsec) input processing can decrypt in place over page-cache-backed fragments and silently modify page-cache data (CVE-2026-46300); exploited in the wild chained with the PHP2Shell RCEs to implant PHP webshells and run commands as root.",
+  "references": {
+    "Kernel commit (upstream): net: skbuff: preserve shared-frag marker during coalescing": "https://git.kernel.org/stable/c/f84eca5817390257cef78013d0112481c503b4a3",
+    "Kernel commit (stable backport): net: skbuff: preserve shared-frag marker during coalescing": "https://git.kernel.org/stable/c/3599e6b3cc1ada96883d496a50a210d3afbb6987",
+    "oss-security: upstream discussion of the skb shared-frag ESP issue": "http://www.openwall.com/lists/oss-security/2026/05/13/5",
+    "Red Hat CVE database: CVE-2026-46300": "https://access.redhat.com/security/cve/CVE-2026-46300",
+    "Red Hat Bugzilla: CVE-2026-46300 bug tracker": "https://bugzilla.redhat.com/show_bug.cgi?id=2477015",
+    "NVD: CVE-2026-46300": "https://nvd.nist.gov/vuln/detail/CVE-2026-46300"
+  },
+  "title": "Linux kernel page-cache corruption via lost shared-fragment marker in skb coalescing (CVE-2026-46300)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_787"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A06_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A06_2025"
+    ]
+  }
+}

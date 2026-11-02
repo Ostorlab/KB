@@ -1,0 +1,40 @@
+{
+  "risk_rating": "critical",
+  "short_description": "PHP versions below 8.2.35 / 8.3.36 / 8.4.27 / 8.5.12 contain two remotely triggerable memory-corruption weaknesses — an early-exit out-of-memory path that leaves request memory invalid (CVE-2026-109618) and a use-after-free of worker-retained global state (CVE-2026-109619) — that let unauthenticated attackers achieve remote code execution (tracked as PHP2Shell), and that are chained in the wild with Linux kernel CVE-2026-46300 to implant webshells and run commands as root.",
+  "references": {
+    "PHP: RCE via OOM corruption (GHSA-w8hw-w9fx-j79w, CVE-2026-109618)": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+    "PHP: RCE via stale global state (GHSA-6wmf-4rv5-p3rp, CVE-2026-109619)": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+    "CISA Alert: Critical Vulnerabilities in PHP Require Immediate Patching (October 21, 2026)": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
+    "Wiz: PHP2Shell — Critical PHP Vulnerabilities Enable Unauthenticated RCE": "https://www.wiz.io/blog/php2shell-php-rce",
+    "Arctic Wolf: PHP2Shell — Critical PHP Vulnerabilities Enable Unauthenticated Remote Code Execution": "https://arcticwolf.com/resources/blog/php2shell-critical-php-vulnerabilities-enable-unauthenticated-remote-code-execution/",
+    "PHP: PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12 releases": "https://www.php.net/",
+    "NVD: CVE-2026-109618": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
+    "NVD: CVE-2026-109619": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619"
+  },
+  "title": "PHP unauthenticated RCE via OOM corruption and stale request state — PHP2Shell (CVE-2026-109618, CVE-2026-109619)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_416"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A06_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A06_2025"
+    ]
+  }
+}
