@@ -1,0 +1,9 @@
+Upgrade the Collabora Online – Built-in CODE Server app (`richdocumentscode`) to **26.4.303** or later in the Nextcloud apps administration page, or remove the app if the deployment does not use the built-in CODE server.
+
+* **Do not treat "the app is disabled" or "the CODE server is running" as mitigation.** The vulnerable window reopens on every container restart, upgrade and crash, and disabling the app does not close it — only upgrading to 26.4.303+ or removing the app does. If the deployment uses a standalone Collabora Online server instead of the built-in one, removing the built-in app both closes this CVE and simplifies the attack surface.
+* **Nextcloud releases at end of life (29 and earlier) cannot install the fixed app version.** Upgrade Nextcloud to a supported release first, then the app — or remove the app now to close the exposure while the platform upgrade is planned.
+* **After patching, check for prior exploitation before closing the finding:**
+  1. Review web-server access logs for requests to `/apps/richdocumentscode/proxy.php` whose path contains `$(...)`, backticks, or an unexpected prefix followed by `..`/`%2e%2e` traversal — the observed exploit shape — with extra attention on upgrade and restart windows.
+  2. Search the Nextcloud document root for `.php` files created by the web server user around those log entries; any unexpected PHP file is a suspected webshell.
+  3. Check the web server for outbound callbacks to per-instance webhook URLs, and rotate credentials and API tokens reachable by the web server user if any indicator is present.
+* **Restart cleanly after the upgrade**: since the vulnerability is reachable exactly when the built-in CODE server is down, perform the upgrade promptly and confirm the CODE server comes back up (the `?status` check in the app), so the vulnerable window stays short.

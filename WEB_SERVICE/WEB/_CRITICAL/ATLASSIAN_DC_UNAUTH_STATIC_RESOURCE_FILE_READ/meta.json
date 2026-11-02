@@ -1,0 +1,54 @@
+{
+  "risk_rating": "critical",
+  "short_description": "Unauthenticated arbitrary file read through the static-resource download endpoints of Atlassian Data Center products (CVE-2026-21589): traversal segments written with the plugin separator (..::) escape the resource directory and expose files inside the web application root to an attacker who knows their exact name and path.",
+  "references": {
+    "Atlassian Security Advisory: CVE-2026-21589 Arbitrary File Access Vulnerability impacts Multiple Products": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html",
+    "watchTowr: CVE-2026-21589 detection artifacts": "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589",
+    "NVD: CVE-2026-21589": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589",
+    "CISA: Known Exploited Vulnerabilities Catalog, CVE-2026-21589": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-21589"
+  },
+  "title": "Atlassian Data Center unauthenticated static-resource arbitrary file read (CVE-2026-21589)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "CWE_TOP_25": [
+      "CWE_22"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A01_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A01_2025"
+    ]
+  }
+}

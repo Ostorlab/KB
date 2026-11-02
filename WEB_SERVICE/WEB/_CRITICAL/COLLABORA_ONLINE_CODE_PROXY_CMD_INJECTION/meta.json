@@ -1,0 +1,51 @@
+{
+  "risk_rating": "critical",
+  "short_description": "The Collabora Online Built-in CODE Server app for Nextcloud (richdocumentscode) below 26.4.303 contains an unauthenticated OS command injection in proxy.php, reachable while the built-in CODE server is not running, that executes commands as the web server user (CVE-2026-110447).",
+  "references": {
+    "Collabora Online GHSA-g3vx-3m76-fghh: Unauthenticated OS command injection in the richdocumentscode proxy": "https://github.com/CollaboraOnline/online/security/advisories/GHSA-g3vx-3m76-fghh",
+    "Collabora richdocumentscode issue #354 (in-the-wild exploitation logs)": "https://github.com/CollaboraOnline/richdocumentscode/issues/354",
+    "Nextcloud forum: To Collabora Built-in users - update ASAP": "https://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516",
+    "NVD: CVE-2026-110447": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447",
+    "CISA: Known Exploited Vulnerabilities Catalog, CVE-2026-110447": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-110447"
+  },
+  "title": "Collabora Online Built-in CODE Server proxy.php OS command injection (CVE-2026-110447)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V5_3_1",
+      "V5_3_4",
+      "V5_3_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V5_3_1",
+      "V5_3_4",
+      "V5_3_5"
+    ],
+    "OWASP_ASVS_L3": [
+      "V5_3_1",
+      "V5_3_4",
+      "V5_3_5"
+    ],
+    "CWE_TOP_25": [
+      "CWE_78"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A03_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025"
+    ]
+  }
+}
