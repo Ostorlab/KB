@@ -1,0 +1,12 @@
+Ivanti released fixes for the authentication bypass and RCE (CVE-2026-104935) on October 13, 2026, and for the privilege escalation (CVE-2026-111357) on October 29, 2026. Because the chain combines three weaknesses, an appliance must run a version that includes **all** of the fixes to be considered patched.
+
+* **Upgrade immediately** to the latest version outlined in Ivanti's security advisory. Ivanti Connect Secure 22.8 reaches end of life on January 31, 2027, so appliances on that track should migrate to a supported release rather than patch in place; review the Ivanti Connect Secure 25.x Upgrade and Migration Compatibility Guide before upgrading hardware or virtual deployments.
+* **Verify patch level on every internet-facing appliance.** The victim observed by Volexity was considered fully patched at the time of compromise; confirm that the running build includes both the October 13 and October 29 fixes.
+* **Assume compromise until proven otherwise** for appliances that were exposed while unpatched. Recommended response, following CISA and Ivanti guidance:
+  1. Back up the appliance configuration.
+  2. Factory reset the appliance and upgrade it to the latest version (for cloud and virtual systems, rebuild the virtual instance and upgrade).
+  3. Restore the configuration from the backup.
+  4. Reset passwords for all accounts — domain, administrator and local — revoke and reissue stored certificates, and reset stored API keys and license server credentials.
+* **Do not rely on the on-disk Integrity Checker Tool (ICT) to rule out compromise.** The exploit chain executes commands in memory, restores patched library code and configuration data after use, and deletes evidence from debug and audit logs. Use network and memory forensics to identify exploitation instead.
+* **Monitor for exploitation attempts**: alert on mismatches between the request URL and the `X-DSCGI-PATH` header, on bursts of requests to `/dana-na/auth/url_default/welcome.cgi`, and on requests whose `X-DSCGI-PATH` points into `/home/runtime/tmp/`. Investigate unexpected files in `/tmp/` and the hidden `/data/.icscap/` directory.
+* **Restrict management access** to the appliance so that administration is only possible from a management network or VPN, and treat the appliance as a tier-0 asset given the credential theft (LAPS passwords, BitLocker recovery keys, LDAP captures) observed in post-exploitation.

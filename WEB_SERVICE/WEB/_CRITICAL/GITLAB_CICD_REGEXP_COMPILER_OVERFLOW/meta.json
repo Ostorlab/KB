@@ -1,0 +1,53 @@
+{
+  "risk_rating": "critical",
+  "short_description": "GitLab CE/EE allows an unauthenticated attacker to execute arbitrary code on the server via a specially crafted regular expression in a CI/CD configuration (CVE-2026-97229), caused by an integer overflow in Ruby's Onigmo regular expression compiler.",
+  "references": {
+    "GitLab Critical Patch Release 19.4.2, 19.3.5, 19.2.8": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/",
+    "Ruby: Regexp compilation fixes related to GitLab's CVEs": "https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves",
+    "ruby/ruby pull request #19020 (integer overflow in the size of a compiled pattern)": "https://github.com/ruby/ruby/pull/19020",
+    "GitLab Critical Patch Release 19.4.1 (related CVE-2026-89078, CVE-2026-93577)": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-1-released/",
+    "GitLab Critical Patch Release 19.5.1 (related CVE-2026-110264)": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+    "NVD: CVE-2026-97229": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229",
+    "GitLab security detections for CVE-2026-97229": "https://gitlab.com/gitlab-security-oss/tldr/-/blob/main/Detections/platforms/GitLab/Vulnerability%20Detections/onigmo_native_worker_crash.md"
+  },
+  "title": "GitLab CE/EE CI/CD regular expression compiler integer overflow (CVE-2026-97229)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V5_3_1",
+      "V5_3_4",
+      "V5_3_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V5_3_1",
+      "V5_3_4",
+      "V5_3_5"
+    ],
+    "OWASP_ASVS_L3": [
+      "V5_3_1",
+      "V5_3_4",
+      "V5_3_5"
+    ],
+    "CWE_TOP_25": [
+      "CWE_190"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A03_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025"
+    ]
+  }
+}

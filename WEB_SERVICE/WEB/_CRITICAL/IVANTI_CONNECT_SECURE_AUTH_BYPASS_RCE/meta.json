@@ -1,0 +1,57 @@
+{
+  "risk_rating": "critical",
+  "short_description": "Ivanti Connect Secure contains an authentication bypass in the CGI request-routing layer (CVE-2026-104935) that lets a remote unauthenticated attacker reach protected endpoints and, chained with CVE-2026-118527 and CVE-2026-111357, achieve unauthenticated root-level code execution.",
+  "references": {
+    "Volexity: A Series of Unauthenticated Events (Chained Exploitation of Ivanti Connect Secure Zero-Days)": "https://www.volexity.com/blog/2026/10/13/a-series-of-unauthenticated-events-chained-exploitation-of-ivanti-connect-secure-zero-days/",
+    "CISA Alert: CISA Urges Patching Newly Exploited Vulnerabilities in Ivanti Connect Secure": "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
+    "Ivanti Security Advisory CVE-2026-104935": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US",
+    "NVD: CVE-2026-104935": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
+    "NVD: CVE-2026-111357": "https://nvd.nist.gov/vuln/detail/CVE-2026-111357",
+    "NVD: CVE-2026-118527": "https://nvd.nist.gov/vuln/detail/CVE-2026-118527",
+    "Volexity indicators (GitHub)": "https://github.com/volexity/threat-intel/tree/main/2026/2026-10-13%20Ivanti"
+  },
+  "title": "Ivanti Connect Secure authentication bypass and RCE chain (CVE-2026-104935)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "CWE_TOP_25": [
+      "CWE_306"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A01_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A01_2025"
+    ]
+  }
+}
