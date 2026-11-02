@@ -1,0 +1,47 @@
+{
+  "risk_rating": "critical",
+  "short_description": "Adobe Commerce and Magento's REST API cart-item custom-options upload path writes attacker-supplied files to pub/media/custom_options/quote/ without option ID validation, option type gating or extension restrictions, so unauthenticated attackers upload polyglot files (PHP code disguised as images) via the guest-cart routes (CVE-2026-48356, tracked as PolyShell); all versions since the first Magento 2 release up to 2.4.9-alpha2 are affected, fixed in 2.4.9 final and backported to supported lines via APSB26-73, and it is exploited in mass.",
+  "references": {
+    "Adobe Security Bulletin APSB26-73 (CVE-2026-48356)": "https://helpx.adobe.com/security/products/magento/apsb26-73.html",
+    "Sansec: PolyShell — unrestricted file upload in Magento and Adobe Commerce": "https://sansec.io/research/magento-polyshell",
+    "Sansec: Mass PolyShell attack wave hits 471 stores in one hour": "https://sansec.io/research/polyshell-mass-attack-wave",
+    "Sansec: deepveindrilling.com — Magento CMS block loader hits 953 stores (indicators of compromise)": "https://sansec.io/research/magento-cms-block-loader-deepveindrilling",
+    "NVD: CVE-2026-48356": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
+  },
+  "title": "Adobe Commerce and Magento PolyShell unrestricted file upload (CVE-2026-48356)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_434"
+    ],
+    "OWASP_ASVS_L2": [
+      "V12_5_1"
+    ],
+    "OWASP_ASVS_L3": [
+      "V12_5_1"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A01_2021",
+      "A04_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A01_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API1_2023"
+    ]
+  }
+}

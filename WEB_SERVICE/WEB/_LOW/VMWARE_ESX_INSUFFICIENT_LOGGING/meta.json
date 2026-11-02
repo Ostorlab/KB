@@ -1,0 +1,32 @@
+{
+  "risk_rating": "low",
+  "short_description": "VMware ESX contains an insufficient logging vulnerability (CVE-2026-41709, CVSS 2.7): a malicious administrator can perform certain operations without them being logged, letting an intruder who has reached admin level hide activity; fixed in ESXi-9.1.0.0-25370933, ESXi-9.0.2.0100-25595025 and ESXi80U3j-25429389 per the VMSA-2026-0006.2 response matrix.",
+  "references": {
+    "Broadcom VMSA-2026-0006.2: VMware ESX, vCenter, Workstation and Fusion updates (CVE-2026-41709 response matrix)": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017",
+    "NVD: CVE-2026-41709": "https://nvd.nist.gov/vuln/detail/CVE-2026-41709",
+    "CISA KEV catalog: CVE-2026-41709": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41709"
+  },
+  "title": "VMware ESX insufficient logging (CVE-2026-41709)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_10_2",
+      "REQ_10_3",
+      "REQ_10_5",
+      "REQ_10_6"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_2",
+      "CC_7_4"
+    ],
+    "OWASP_TOP_10": [
+      "A09_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A09_2025"
+    ]
+  }
+}

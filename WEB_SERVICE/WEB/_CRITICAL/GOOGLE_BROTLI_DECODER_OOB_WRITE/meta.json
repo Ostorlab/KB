@@ -1,0 +1,44 @@
+{
+  "risk_rating": "critical",
+  "short_description": "The Google Brotli decoder between 1.0.3 and 1.2.0 misreports an invalid block switch as a temporary need for more input and keeps appending bytes to an eight-byte internal buffer, writing out of bounds (CVE-2026-111497, CVSS 9.8, tracked as Node2Shell); anything that decompresses attacker-controlled Brotli streams — web servers and runtimes accepting Content-Encoding: br request bodies, Node.js, .NET, and embedded copies in Go, Python, Rust and mobile native libraries — must move to 1.0.10 / 1.1.1 / 1.2.1 (or the fixed runtime).",
+  "references": {
+    "NVD: CVE-2026-111497": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497",
+    "GitHub Advisory GHSA-9v8h-qqgm-4m35: Out-of-bounds write in the Brotli decoder (Node2Shell), also affects the PyPI Brotli package": "https://github.com/advisories/GHSA-9v8h-qqgm-4m35",
+    "Google Brotli release v1.0.10 (fix for the 1.0.x branch)": "https://github.com/google/brotli/releases/tag/v1.0.10",
+    "Google Brotli release v1.1.1 (fix for the 1.1.x branch)": "https://github.com/google/brotli/releases/tag/v1.1.1",
+    "Google Brotli release v1.2.1 (fix for the 1.2.x branch)": "https://github.com/google/brotli/releases/tag/v1.2.1",
+    "Node.js October 2026 Security Releases (Node.js Brotli decoder out-of-bounds write permits RCE)": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+    ".NET announcement: .NET October 2026 updates including the Brotli decoder fix": "https://github.com/dotnet/announcements/issues/494",
+    "andybalholm/brotli (Go) release v1.2.7": "https://github.com/andybalholm/brotli/releases/tag/v1.2.7"
+  },
+  "title": "Google Brotli decoder out-of-bounds write — Node2Shell (CVE-2026-111497)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "CWE_TOP_25": [
+      "CWE_787"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_4_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A06_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A06_2025"
+    ],
+    "OWASP_API_TOP_10": [
+      "API8_2023"
+    ]
+  }
+}
