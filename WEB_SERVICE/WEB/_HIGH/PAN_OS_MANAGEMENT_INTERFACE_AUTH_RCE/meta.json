@@ -1,0 +1,51 @@
+{
+  "risk_rating": "high",
+  "short_description": "Palo Alto Networks PAN-OS contains a code-injection vulnerability (CVE-2026-0322, CWE-94) in the management interface that lets an authenticated attacker with network access to the interface execute arbitrary code with root privileges on the firewall or Panorama appliance. The risk is highest when the management interface is reachable from the internet, and very limited exploitation has already been observed.",
+  "references": {
+    "Palo Alto Networks advisory: CVE-2026-0322 PAN-OS authenticated RCE in the management interface": "https://security.paloaltonetworks.com/CVE-2026-0322",
+    "NVD: CVE-2026-0322": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322",
+    "CISA Known Exploited Vulnerabilities Catalog: CVE-2026-0322": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0322",
+    "Palo Alto Networks: how to secure the management access of your PAN-OS appliance": "https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431"
+  },
+  "title": "PAN-OS management interface authenticated RCE (CVE-2026-0322)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V5_3_1",
+      "V5_3_4",
+      "V5_3_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V5_3_1",
+      "V5_3_4",
+      "V5_3_5"
+    ],
+    "OWASP_ASVS_L3": [
+      "V5_3_1",
+      "V5_3_4",
+      "V5_3_5"
+    ],
+    "CWE_TOP_25": [
+      "CWE_94"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A03_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025"
+    ]
+  }
+}

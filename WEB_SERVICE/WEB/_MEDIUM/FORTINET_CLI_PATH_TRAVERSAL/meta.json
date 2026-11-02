@@ -1,0 +1,52 @@
+{
+  "risk_rating": "medium",
+  "short_description": "FortiOS, FortiPAM, FortiProxy and FortiSwitchManager contain a path-traversal vulnerability (CVE-2025-61624, CWE-22) in the command line interpreter: an authenticated attacker with an admin profile and at least read-write permissions can write or delete arbitrary files via specifically crafted arguments to existing commands, escalating privileges on the device. Fortinet and CISA both confirm exploitation in the wild.",
+  "references": {
+    "Fortinet PSIRT advisory FG-IR-26-122: Path Traversal in CLI": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122",
+    "NVD: CVE-2025-61624": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624",
+    "CISA Known Exploited Vulnerabilities Catalog: CVE-2025-61624": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61624",
+    "Siemens SSA-975644: Multiple Vulnerabilities in Fortigate NGFW on RUGGEDCOM APE1808 Devices": "https://cert-portal.siemens.com/productcert/html/ssa-975644.html",
+    "Fortinet upgrade path tool": "https://docs.fortinet.com/upgrade-tool"
+  },
+  "title": "Fortinet CLI path traversal arbitrary file write and delete (CVE-2025-61624)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3"
+    ],
+    "CWE_TOP_25": [
+      "CWE_22"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A01_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A01_2025"
+    ]
+  }
+}

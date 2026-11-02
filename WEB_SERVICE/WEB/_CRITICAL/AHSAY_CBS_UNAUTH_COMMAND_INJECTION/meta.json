@@ -1,0 +1,57 @@
+{
+  "risk_rating": "critical",
+  "short_description": "AhsayCBS backup servers contain two remotely exploitable unauthenticated flaws (CVE-2026-105133, CVE-2026-105134): an authentication bypass in the system-password check of the API and an operating-system command injection in the Replication Receiver API, which together allow unauthenticated remote code execution. The first patch round did not fully fix either flaw, so appliances patched once remain vulnerable.",
+  "references": {
+    "Ahsay security announcement: hotfix update for CVE-2026-105133 and CVE-2026-105134": "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update",
+    "NVD: CVE-2026-105134": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134",
+    "NVD: CVE-2026-105133": "https://nvd.nist.gov/vuln/detail/CVE-2026-105133",
+    "CISA Known Exploited Vulnerabilities Catalog: CVE-2026-105134": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-105134",
+    "CISA Known Exploited Vulnerabilities Catalog: CVE-2026-105133": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-105133",
+    "Huntress: analysis of the AhsayCBS flaws and their exploitation": "https://www.huntress.com/blog/ahsaycbs-flaws-exploit"
+  },
+  "title": "AhsayCBS unauthenticated API command injection (CVE-2026-105134, CVE-2026-105133)",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_ASVS_L1": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "OWASP_ASVS_L2": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "OWASP_ASVS_L3": [
+      "V4_1_1",
+      "V4_1_2",
+      "V4_1_3",
+      "V4_1_5"
+    ],
+    "CWE_TOP_25": [
+      "CWE_78",
+      "CWE_287"
+    ],
+    "PCI_STANDARDS": [
+      "REQ_2_2",
+      "REQ_6_2",
+      "REQ_6_3"
+    ],
+    "SOC2_CONTROLS": [
+      "CC_2_1",
+      "CC_7_1",
+      "CC_7_2",
+      "CC_7_4",
+      "CC_7_5"
+    ],
+    "OWASP_TOP_10": [
+      "A03_2021"
+    ],
+    "OWASP_TOP_10_2025": [
+      "A03_2025"
+    ]
+  }
+}
