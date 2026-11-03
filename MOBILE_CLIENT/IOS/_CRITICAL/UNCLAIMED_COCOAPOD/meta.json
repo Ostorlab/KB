@@ -2,7 +2,7 @@
   "risk_rating": "critical",
   "short_description": "Unclaimed Cocoapods can expose applications to potential dependency injection.",
   "references": {
-    "CocoaPods security advisory": "https://github.com/CocoaPods/CocoaPods/security/advisories/GHSA-j483-qm5c-7hqx"
+    "CocoaPods security advisory (CVE-2024-38368)": "https://github.com/CocoaPods/CocoaPods/security/advisories/GHSA-j483-qm5c-7hqx"
   },
   "title": "Unclaimed Cocoapods Vulnerability",
   "privacy_issue": false,
