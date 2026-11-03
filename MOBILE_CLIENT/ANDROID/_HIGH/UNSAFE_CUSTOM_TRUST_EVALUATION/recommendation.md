@@ -35,7 +35,7 @@ public class PinningTrustManager implements X509TrustManager {
 }
 ```
 
-- **Prefer the Android Network Security Configuration** over custom code when you need to trust an additional CA or to pin certificates for specific domains. Configure private CAs as explicit trust anchors rather than delegating their chains to the unmodified platform default: Network Security Configuration is declarative and is parsed and enforced by the Android platform's TLS stack.
+- **Prefer the Android Network Security Configuration** over custom code when you need to trust an additional CA or to pin certificates for specific domains. Configure private CAs as explicit trust anchors rather than delegating their chains to the unmodified platform default. The Android platform's TLS stack parses and enforces this declarative configuration.
 
 - **Never ship a trust-all manager for debugging.** Development-only trust managers frequently reach release builds. If local testing against self-signed certificates is unavoidable, gate the branch behind a debug-only flag and never enable `android:debuggable` in a released build.
 
