@@ -1,0 +1,33 @@
+{
+  "risk_rating": "high",
+  "short_description": "A custom X509TrustManager cannot reject server certificates, disabling TLS server certificate validation and exposing the app to MITM attacks.",
+  "references": {
+    "OWASP MASTG-TEST-0282: Unsafe Custom Trust Evaluation (static test)": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0282/",
+    "OWASP MASWE-0027: Insecure Certificate Validation": "https://mas.owasp.org/MASWE/MASVS-NETWORK/MASWE-0027/",
+    "OWASP MASTG-DEMO-0054: Use of a TrustManager that Does Not Validate Certificate Chains": "https://mas.owasp.org/MASTG/demos/android/MASVS-NETWORK/MASTG-DEMO-0054/MASTG-DEMO-0054/",
+    "Android X509TrustManager.checkServerTrusted reference": "https://developer.android.com/reference/javax/net/ssl/X509TrustManager#checkServerTrusted(java.security.cert.X509Certificate[],%20java.lang.String)",
+    "Android unsafe TrustManager risk guidance": "https://developer.android.com/privacy-and-security/risks/unsafe-trustmanager",
+    "Google FAQ: Improper Validation of Certificate with Hostname": "https://support.google.com/faqs/answer/6346016",
+    "CWE-295: Improper Certificate Validation": "https://cwe.mitre.org/data/definitions/295.html"
+  },
+  "title": "Unsafe custom TLS trust evaluation",
+  "privacy_issue": false,
+  "security_issue": true,
+  "categories": {
+    "OWASP_MASVS_L1": [
+      "MSTG_NETWORK_1",
+      "MSTG_NETWORK_2"
+    ],
+    "OWASP_MASVS_L2": [
+      "MSTG_NETWORK_1",
+      "MSTG_NETWORK_2"
+    ],
+    "OWASP_MASVS_v2_1": [
+      "MASVS_NETWORK_1",
+      "MASVS_NETWORK_2"
+    ],
+    "OWASP_MOBILE_TOP_10": [
+      "M5_2024"
+    ]
+  }
+}
