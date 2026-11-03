@@ -7,8 +7,6 @@ The report targets the class defining the unsafe override. When only a subclass 
 
 Descendants that replace an unsafe `checkServerTrusted` signature are excluded from the report for the original body. This includes descendants inheriting a replacement from an intermediate class. If a descendant replaces only some `X509ExtendedTrustManager` overloads, such as the variants with `Socket` or `SSLEngine` parameters, the report covers only the unsafe overloads still inherited by instantiated descendants.
 
-The coverage gap was in risk generation: before this rule, the static scanner had no detection for the weakness class, so an app shipping a trust-all manager was not reported at all.
-
 **Suppressed shapes** (not reported, each covered by a regression fixture):
 
 - the override throws (`throw`) or invokes any method outside the non-validating helper list — pinning managers and managers delegating to the platform default trust manager are skipped because the invoked code can reject;
@@ -22,4 +20,6 @@ The coverage gap was in risk generation: before this rule, the static scanner ha
 - certificate-getter logging bodies are not reported: getters such as `getSubjectDN()`, `getIssuerDN()`, and `getPublicKey()` are outside the helper allowlist. Any future expansion must use exact method targets and account for getters such as `getEncoded()` that can throw;
 - trust managers used only through reflection are not reported.
 
-Detection is static, at the DEX bytecode level, mirroring OWASP MASTG-TEST-0282. The MASTG demo rule that flags every `checkServerTrusted` override is deliberately not reproduced as-is: it cannot distinguish a trust-all body from a validating one, which is exactly the review burden this rule removes.
+Detection is static, at the DEX bytecode level, mirroring OWASP MASTG-TEST-0282. Before this rule, the static scanner did not detect trust-all managers, so apps shipping them produced no finding for this weakness.
+
+The MASTG demo rule that flags every `checkServerTrusted` override is deliberately not reproduced as-is: it cannot distinguish a trust-all body from a validating one, which is exactly the review burden this rule removes.
