@@ -5,7 +5,7 @@ The rule reports a class implementing `javax.net.ssl.X509TrustManager` (directly
 
 The report targets the class defining the unsafe override. When only a subclass is instantiated and it inherits the empty override without redefining it, the defining class is still reported: the inherited body is what runs for those instances.
 
-Descendants that replace an unsafe `checkServerTrusted` signature are excluded from the report for the original body. This includes descendants inheriting a replacement from an intermediate class. If a descendant replaces only some `X509ExtendedTrustManager` overloads, such as the variants with `Socket` or `SSLEngine` parameters, the report covers only the unsafe overloads still inherited by instantiated descendants.
+Descendants that override an unsafe `checkServerTrusted` method are excluded from the report for the original body. This includes descendants inheriting a replacement from an intermediate class. If a descendant replaces only some `X509ExtendedTrustManager` overloads, such as the variants with `Socket` or `SSLEngine` parameters, the report covers only the unsafe overloads still inherited by instantiated descendants.
 
 **Suppressed shapes** (not reported, each covered by a regression fixture):
 
@@ -20,6 +20,6 @@ Descendants that replace an unsafe `checkServerTrusted` signature are excluded f
 - certificate-getter logging bodies are not reported: getters such as `getSubjectDN()`, `getIssuerDN()`, and `getPublicKey()` are outside the helper allowlist. Any future expansion must use exact method targets and account for getters such as `getEncoded()` that can throw;
 - trust managers used only through reflection are not reported.
 
-Detection is static, at the DEX bytecode level, mirroring OWASP MASTG-TEST-0282. Before this rule, the static scanner did not detect trust-all managers, so apps shipping them produced no finding for this weakness.
+Detection is static, at the DEX bytecode level, mirroring OWASP MASTG-TEST-0282. Before this rule, the static scanner produced no finding for this weakness in apps shipping a trust-all manager.
 
 The MASTG demo rule that flags every `checkServerTrusted` override is deliberately not reproduced as-is: it cannot distinguish a trust-all body from a validating one, which is exactly the review burden this rule removes.
