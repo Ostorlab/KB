@@ -8,16 +8,25 @@ sslContext.init(null, null, null); // platform default trust manager
 connection.setSSLSocketFactory(sslContext.getSocketFactory());
 ```
 
-- **If you need a custom trust manager, delegate to the platform default and only add restrictions.** A custom manager that needs to pin certificates or to add a private CA must still be able to reject a certificate: keep the delegating call to the platform's `checkServerTrusted` (which throws `CertificateException` on failure) or throw your own exception when the presented certificate does not match.
+- **If you need a custom trust manager, delegate to the platform default and only add restrictions.** A custom manager that pins certificates must first delegate to the platform's `checkServerTrusted` to validate the chain and then reject certificates that do not match the expected pin. Let `CertificateException` propagate from either check.
 
 ```java
 public class PinningTrustManager implements X509TrustManager {
+    private final X509TrustManager platformTrustManager;
+
+    // Pass the default X509TrustManager from a TrustManagerFactory
+    // initialized with (KeyStore) null.
+    public PinningTrustManager(X509TrustManager platformTrustManager) {
+        this.platformTrustManager = platformTrustManager;
+    }
+
     @Override
     public void checkServerTrusted(X509Certificate[] chain, String authType)
             throws CertificateException {
         if (chain == null || chain.length == 0) {
             throw new CertificateException("empty certificate chain");
         }
+        platformTrustManager.checkServerTrusted(chain, authType);
         if (!matchesExpectedPin(chain[0])) {
             throw new CertificateException("certificate pin mismatch");
         }
@@ -26,7 +35,7 @@ public class PinningTrustManager implements X509TrustManager {
 }
 ```
 
-- **Prefer the Android Network Security Configuration** over custom code when you need to trust an additional CA or to pin certificates for specific domains: it is declarative, reviewed by the platform, and cannot accidentally disable validation for every connection.
+- **Prefer the Android Network Security Configuration** over custom code when you need to trust an additional CA or to pin certificates for specific domains. Configure private CAs as explicit trust anchors rather than delegating their chains to the unmodified platform default: it is declarative, reviewed by the platform, and cannot accidentally disable validation for every connection.
 
 - **Never ship a trust-all manager for debugging.** Development-only trust managers frequently reach release builds. If local testing against self-signed certificates is unavoidable, gate the branch behind a debug-only flag and never enable `android:debuggable` in a released build.
 
